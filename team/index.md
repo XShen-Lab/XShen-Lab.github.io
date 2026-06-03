@@ -2,14 +2,19 @@
 title: Member
 nav:
   order: 3
-  tooltip: About XShen Lab
+  tooltip: Members of the XShen Lab
 ---
 
-# {% include icon.html icon="fa-solid fa-users" %}Team
+# Member
 
-The XShen Lab brings together researchers with backgrounds in molecular cell biology, genomics, bioinformatics, biophysics, and computational biology.
+The XShen Lab brings together researchers with backgrounds in molecular cell biology, genomics, bioinformatics, biophysics, mathematics, and computational biology.
 
-Our team studies the noncoding genome, nuclear RNA, chromatin organization, transcriptional regulation, and cell fate determination through both experimental and computational approaches.
+[Principal Investigator](#principal-investigator) ·
+[Administrative Assistant](#administrative-assistant) ·
+[Post Docs](#post-docs) ·
+[Graduate Students](#graduate-students) ·
+[Undergraduate Students](#undergraduate-students) ·
+[Alumni](#alumni)
 
 {% include section.html %}
 
@@ -19,28 +24,30 @@ Our team studies the noncoding genome, nuclear RNA, chromatin organization, tran
 
 {% include section.html %}
 
-## Current Members
+## Administrative Assistant
 
-{% include list.html data="members" component="portrait" filter="role != 'pi'" %}
-
-{% include section.html background="images/background.jpg" dark=true %}
-
-## Lab Life
-
-We value rigorous science, open discussion, quantitative thinking, and close collaboration across molecular biology, genomics, computation, and theory.
+{% include list.html data="members" component="portrait" filter="role == 'admin'" %}
 
 {% include section.html %}
 
-## Photos
+## Post Docs
 
-{% capture content %}
+{% include list.html data="members" component="portrait" filter="role == 'postdoc'" %}
 
-{% include figure.html image="images/team/lab-photo-1.jpg" caption="XShen Lab" %}
+{% include section.html %}
 
-{% include figure.html image="images/team/lab-photo-2.jpg" caption="Lab members" %}
+## Graduate Students
 
-{% include figure.html image="images/team/lab-photo-3.jpg" caption="Research and discussion" %}
+{% include list.html data="members" component="portrait" filter="role == 'grad'" %}
 
-{% endcapture %}
+{% include section.html %}
 
-{% include grid.html style="square" content=content %}
+## Undergraduate Students
+
+{% include list.html data="members" component="portrait" filter="role == 'undergrad'" %}
+
+{% include section.html %}
+
+## Alumni
+
+{% include list.html data="members" component="portrait" filter="role == 'alumni'" %}
