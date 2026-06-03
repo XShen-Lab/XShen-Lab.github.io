@@ -12,11 +12,19 @@ postdoc:
 
 phd:
   icon: fa-solid fa-graduation-cap
-  description: PhD Student
+  description: Graduate Student
 
 undergrad:
   icon: fa-solid fa-user-graduate
   description: Undergraduate Student
+
+admin:
+  icon: fa-solid fa-user-tie
+  description: Administrative Assistant
+
+alumni:
+  icon: fa-solid fa-user-group
+  description: Alumni
 
 programmer:
   icon: fa-solid fa-code
