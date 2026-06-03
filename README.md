@@ -5,6 +5,6 @@
 
   # XShen-Lab's Website
 
-  Visit **[website url](#)** 🚀
+  Visit **[xshen-lab.github.io](https://xshen-lab.github.io)** 🚀
 
   _Built with [Lab Website Template](https://greene-lab.gitbook.io/lab-website-template-docs)_
