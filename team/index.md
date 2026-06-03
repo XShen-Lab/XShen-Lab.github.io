@@ -20,7 +20,7 @@ The XShen Lab brings together researchers with backgrounds in molecular cell bio
 
 ## Principal Investigator
 
-{% include list.html data="members" component="portrait" filter="role == 'pi'" %}
+{% include list.html data="members" component="portrait" filter="role == 'principal-investigator'" %}
 
 {% include section.html %}
 
@@ -38,7 +38,7 @@ The XShen Lab brings together researchers with backgrounds in molecular cell bio
 
 ## Graduate Students
 
-{% include list.html data="members" component="portrait" filter="role == 'grad'" %}
+{% include list.html data="members" component="portrait" filter="role == 'phd'" %}
 
 {% include section.html %}
 
