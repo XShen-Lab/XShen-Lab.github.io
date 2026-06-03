@@ -1,20 +1,14 @@
 ---
-name: Jane Smith
-image: images/photo.jpg
+name: Xiaohua Shen 沈晓骅
 role: principal-investigator
-affiliation: University of Colorado
-aliases:
-  - J. Smith
-  - J Smith
+image: images/members/xiaohua-shen.jpg
+description: Principal Investigator
+affiliation: School of Basic Medicine, Tsinghua University
 links:
-  home-page: https://janesmith.com
-  orcid: 0000-0001-8713-9213
+  email: xshen@tsinghua.edu.cn
+  google-scholar: qvzcBRcAAAAJ
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Faucibus purus in massa tempor nec feugiat nisl pretium fusce.
-Elit at imperdiet dui accumsan.
-Duis tristique sollicitudin nibh sit amet commodo nulla facilisi.
-Vitae elementum curabitur vitae nunc sed velit dignissim sodales.
-Lacinia at quis risus sed vulputate odio ut.
-Magna eget est lorem ipsum.
+Xiaohua Shen is a tenured professor at the School of Basic Medicine, Tsinghua University, and a senior investigator of the Tsinghua-Peking Center for Life Sciences.
+
+Her research focuses on the noncoding genome, nuclear RNA, transcription, chromatin organization, nuclear architecture, and cell fate determination.
