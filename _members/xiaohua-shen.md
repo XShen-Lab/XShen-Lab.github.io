@@ -28,6 +28,7 @@ Xiaohua Shen is a Professor at the School of Basic Medicine, Tsinghua University
 ## Research Interests
 
 - Physics of nuclear structure and function
+- In silico modeling of the cell nucleus
 - Genome organization
 - Transcription
 - Noncoding RNA
@@ -35,9 +36,9 @@ Xiaohua Shen is a Professor at the School of Basic Medicine, Tsinghua University
 
 ## Research Summary
 
-The Shen Lab seeks to understand how genomes generate diverse cellular identities through probabilistic molecular processes. The lab studies how noncoding genomic elements, RNA networks, and chromatin organization regulate nuclear function and transcription.
+The X-Shen Lab seeks to understand how genomes generate diverse cellular identities through probabilistic molecular processes. The lab studies how noncoding genomic elements, RNA networks, and chromatin organization regulate nuclear function and transcription.
 
-Since establishing her laboratory at Tsinghua University, Xiaohua Shen has focused on the noncoding genome and the organizing principles of nuclear function. Her group has shown that repetitive DNA sequences encode structural rules for chromatin organization, that noncoding RNAs regulate nearby gene transcription and chromatin states in cis, and that RNA-binding proteins and RNA networks organize transcriptional machinery through phase separation.
+Since establishing her laboratory at Tsinghua University, Xiaohua Shen has focused on the noncoding genome and the organizing principles of nuclear function. Our group has shown that repetitive DNA sequences encode structural rules for chromatin organization, that noncoding RNAs regulate nearby gene transcription and chromatin states in cis, and that RNA-binding proteins and RNA networks organize transcriptional machinery through phase separation.
 
 The lab also developed scFLUENT-seq, a single-cell nascent RNA sequencing method that revealed sparse and probabilistic genome usage in individual cells, suggesting that stable cellular states can emerge from collective patterns of stochastic transcription.
 
