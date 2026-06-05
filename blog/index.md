@@ -7,7 +7,7 @@ nav:
 
 # Blogs
 
-The XShen Lab blog shares lab updates, research notes, technical documentation, protocol summaries, and perspectives on genome organization, nuclear RNA, transcription, and cell fate.
+The XShen Lab blog shares lab news, publications, awards, events, member updates, activities, and perspectives from the lab.
 
 {% include section.html %}
 
