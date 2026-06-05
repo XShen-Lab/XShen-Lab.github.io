@@ -1,7 +1,7 @@
 ---
-name: Huang,Mengyuan 黄梦元
+name: Huang, Mengyuan 黄梦元
 role: postdoc
-image: images/members/default.jpg
+image: images/members/huangmengyuan.jpg
 description: Postdoctoral Fellow
 affiliation: School of Basic Medicine, Tsinghua University
 links:
