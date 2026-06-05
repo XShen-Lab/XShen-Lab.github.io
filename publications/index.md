@@ -7,11 +7,11 @@ nav:
 
 # Publications
 
-Selected publications from the XShen Lab are listed below. A complete publication list will be updated progressively.
+Selected publications from the XShen Lab are listed below. A complete publication list will be organized by year and research theme in a future update. For now, this page provides a selected list of representative and recent publications from the lab.
 
 {% include section.html %}
 
-## Representative Publications
+## Selected Publications
 
 1. Ma S\*, Hong Y, Chen J, Xu J, Shen X\*. **Single-cell nascent transcription reveals sparse genome usage and plasticity.** *Cell*. 2025.  
    *Single-cell nascent transcription / scFLUENT-seq / probabilistic genome usage*
