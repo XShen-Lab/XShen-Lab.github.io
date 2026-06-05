@@ -9,7 +9,7 @@ nav:
 
 The XShen Lab welcomes motivated students and researchers interested in nuclear organization, genome regulation, transcription, noncoding RNA, single-cell genomics, and cell fate.
 
-Our research investigates the physics of nuclear structure and function, genome organization, transcription, ncRNA, and cell fate, using molecular and cellular biology, single-cell genomics, imaging, biochemical approaches, computational analysis, and theoretical modeling. :contentReference[oaicite:0]{index=0}
+Our research investigates the physics of nuclear structure and function, genome organization, transcription, ncRNA, and cell fate, using molecular and cellular biology, single-cell genomics, imaging, biochemical approaches, computational analysis, and theoretical modeling.
 
 {% include section.html %}
 
