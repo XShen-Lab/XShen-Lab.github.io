@@ -1,15 +1,15 @@
 ---
 title: Research
 nav:
-  order: 1
+  order: 2
   tooltip: Research directions
 ---
 
 # Research
 
-The XShen Lab studies how genomes generate diverse cellular identities through probabilistic molecular processes. We investigate the physics of nuclear structure and function, genome organization, transcription, noncoding RNA, and cell fate.
+The XShen Lab studies how genomes generate diverse cellular identities through probabilistic molecular processes, with a focus on the physics of nuclear structure and function, genome organization, transcription, noncoding RNA, and cell fate.
 
-Our research integrates molecular and cellular biology, single-cell genomics, imaging, biochemical reconstitution, computational analysis, and theoretical modeling to uncover the organizing principles of nuclear function and genome information flow.
+Our research integrates molecular and cellular biology, single-cell genomics, advanced imaging, biochemical reconstitution, computational analysis, and theoretical modeling to uncover the organizing principles of nuclear function and genome information flow.
 
 {% include section.html %}
 
