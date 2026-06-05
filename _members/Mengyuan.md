@@ -12,13 +12,13 @@ Postdoctoral Fellow in the XShen Lab.
 
 ## Research Interests
 
--Noncoding genome
--Transcriptional regulation
--Non-canonical translation
--Dark matter in immune system and disease
+- Noncoding genome
+- Transcriptional regulation
+- Non-canonical translation
+- Dark matter in immune system and disease
 
 
 ## Education
 
--Ph.D., Tsinghua University, 2020-2026
--M.S, Sichuan University, 2016-2020
+- Ph.D., Tsinghua University, 2020-2026
+- M.S, Sichuan University, 2016-2020
