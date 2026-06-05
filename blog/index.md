@@ -1,21 +1,14 @@
 ---
-title: Blog
+title: Blogs
 nav:
-  order: 4
-  tooltip: Musings and miscellany
+  order: 6
+  tooltip: Lab updates, notes, and perspectives
 ---
 
-# {% include icon.html icon="fa-solid fa-feather-pointed" %}Blog
+# Blogs
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+The XShen Lab blog shares lab updates, research notes, technical documentation, protocol summaries, and perspectives on genome organization, nuclear RNA, transcription, and cell fate.
 
 {% include section.html %}
-
-{% include search-box.html %}
-
-{% include tags.html tags=site.tags %}
-
-{% include search-info.html %}
 
 {% include list.html data="posts" component="post-excerpt" %}
