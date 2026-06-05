@@ -15,7 +15,7 @@ Our resources focus on reproducible workflows rather than standalone software pa
 
 ## Analysis Pipelines
 
-### Single-cell nascent transcription analysis
+### scFLUENT-seq analysis
 
 Pipelines for analyzing single-cell nascent RNA sequencing data, including scFLUENT-seq-related workflows for studying sparse and probabilistic genome usage in individual cells.
 
@@ -47,7 +47,7 @@ Protocols will be organized for major experimental directions in the lab, includ
 
 ## Documentation and Tutorials
 
-This section will include practical documentation for lab members and collaborators, such as:
+This section will include public-facing documentation and tutorials for reproducible analysis, such as:
 
 - Pipeline usage notes
 - Data organization conventions
@@ -65,6 +65,10 @@ Selected public repositories from the XShen Lab will be listed here.
 
 {% include section.html %}
 
+## Internal Lab Resources
+
+Internal onboarding materials, unpublished protocols, server usage notes, project-specific documentation, and lab management resources are maintained in private lab spaces and are accessible only to current lab members.
+
 ## Availability
 
-Resources are being organized and will be updated progressively. For questions about specific pipelines or protocols, please contact the lab.
+Public resources are being organized and will be updated progressively. For questions about published-study workflows, public protocols, or collaboration-related resources, please contact the lab.
