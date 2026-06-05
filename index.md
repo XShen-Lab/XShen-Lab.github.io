@@ -5,7 +5,7 @@ nav:
   tooltip: Home
 ---
 
-# Welcome to XShen Lab
+# Welcome to XShen Lab！
 
 The XShen Lab at Tsinghua University studies how genomes generate diverse cellular identities through probabilistic molecular processes.
 
