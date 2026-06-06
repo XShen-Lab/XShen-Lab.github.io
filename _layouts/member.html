@@ -2,7 +2,38 @@
 layout: default
 ---
 
-{% capture floatcontent %}
+<style>
+  .member-profile-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .member-profile-sidebar {
+    text-align: center;
+  }
+
+  .member-profile-main {
+    min-width: 0;
+  }
+
+  .member-profile-main ul {
+    margin-left: 1.2rem;
+  }
+
+  @media (max-width: 800px) {
+    .member-profile-layout {
+      display: block;
+    }
+
+    .member-profile-sidebar {
+      margin-bottom: 2rem;
+    }
+  }
+</style>
+
+{% capture sidebar_content %}
 
 {% include portrait.html lookup=page.slug %}
 
@@ -16,36 +47,42 @@ layout: default
 
 {% endcapture %}
 
-{% include float.html content=floatcontent %}
+<div class="member-profile-layout">
+  <aside class="member-profile-sidebar">
+    {{ sidebar_content }}
+  </aside>
 
-{{ content }}
+  <main class="member-profile-main">
+    {{ content }}
 
-{% assign aliases = page.aliases
-  | default: page.name
-  | default: page.title
-  | join: ","
-  | split: ","
-  | array_filter
-%}
+    {% assign aliases = page.aliases
+      | default: page.name
+      | default: page.title
+      | join: ","
+      | split: ","
+      | array_filter
+    %}
 
-{% capture search -%}
-  research/?search={% for alias in aliases %}"{{ alias }}" {% endfor %}
-{%- endcapture %}
+    {% capture search -%}
+      research/?search={% for alias in aliases %}"{{ alias }}" {% endfor %}
+    {%- endcapture %}
 
-<p class="center">
-  <a href="{{ search | relative_url | uri_escape }}">
-    Search for {{ page.name | default: page.title }}'s papers on the Research page
-  </a>
-</p>
+    <p class="center">
+      <a href="{{ search | relative_url | uri_escape }}">
+        Search for {{ page.name | default: page.title }}'s papers on the Research page
+      </a>
+    </p>
 
-{% capture search -%}
-  blog/?search={{ page.name }}
-{%- endcapture %}
+    {% capture search -%}
+      blog/?search={{ page.name }}
+    {%- endcapture %}
 
-<!--
-<p class="center">
-  <a href="{{ search | relative_url | uri_escape }}">
-    See {{ page.name | default: page.title }}'s posts on the Blog page
-  </a>
-</p>
--->
+    <!--
+    <p class="center">
+      <a href="{{ search | relative_url | uri_escape }}">
+        See {{ page.name | default: page.title }}'s posts on the Blog page
+      </a>
+    </p>
+    -->
+  </main>
+</div>
