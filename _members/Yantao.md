@@ -1,6 +1,7 @@
+---
 name: Yantao Hong 洪彦涛
 role: postdoc
-image: images/members/default.jpg
+image: images/members/hongyantao.jpg
 description: Postdoctoral Fellow
 affiliation: School of Basic Medicine, Tsinghua University
 links:
