@@ -5,7 +5,7 @@ image: images/members/hongyantao.jpg
 description: Postdoctoral Fellow
 affiliation: School of Basic Medicine, Tsinghua University
 links:
-email: hongyt15@tsinghua.org.cn
+  email: hongyt15@tsinghua.org.cn
 ---
 
 Postdoctoral Fellow in the XShen Lab.
