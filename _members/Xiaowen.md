@@ -5,7 +5,7 @@ image: images/members/haoxiaowen.jpg
 description: Postdoctoral Fellow
 affiliation: School of Basic Medicine, Tsinghua University
 links:
-email: haoxw9206@163.com
+  email: haoxw9206@163.com
 ---
 
 Postdoctoral Fellow in the XShen Lab.
