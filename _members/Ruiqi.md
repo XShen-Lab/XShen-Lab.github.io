@@ -1,7 +1,7 @@
 ---
 name: Deng,ruiqi 邓睿琦
 role: undergrad
-image: images/members/default.jpg
+image: images/members/dengruiqi.jpg
 description: Undergraduate Student
 affiliation: Tsinghua University
 ---
