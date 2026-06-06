@@ -38,7 +38,7 @@ The XShen Lab brings together researchers with backgrounds in molecular cell bio
 
 ## Graduate Students
 
-{% include list.html data="members" component="portrait" filter="role == 'phd candidate'" %}
+{% include list.html data="members" component="portrait" filter="role == 'phd'" %}
 
 {% include section.html %}
 
