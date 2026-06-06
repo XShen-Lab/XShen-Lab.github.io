@@ -5,7 +5,7 @@ image: images/members/huxinyun.jpg
 description: Graduate Student
 affiliation: School of Basic Medicine, Tsinghua University
 links:
-email: hu-xy22@mails.tsinghua.edu.cn
+  email: hu-xy22@mails.tsinghua.edu.cn
 ---
 
 Graduate Student in the XShen Lab.
