@@ -1,5 +1,5 @@
 ---
-name: 郝晓文
+name: Hao,Xiaowen 郝晓文
 role: postdoc
 image: images/members/haoxiaowen.jpg
 description: Postdoctoral Fellow
