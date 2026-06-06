@@ -471,8 +471,47 @@
   
 
   <section class="background" data-size="page">
-    <div class="float">
-  
+    <style>
+  .member-profile-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .member-profile-sidebar {
+    text-align: center;
+  }
+
+  .member-profile-main {
+    min-width: 0;
+  }
+
+  .member-profile-main ul {
+    margin-left: 1.2rem;
+  }
+
+  @media (max-width: 800px) {
+    .member-profile-layout {
+      display: block;
+    }
+
+    .member-profile-sidebar {
+      margin-bottom: 2rem;
+    }
+  }
+</style>
+
+
+
+<div class="member-profile-layout">
+  <aside class="member-profile-sidebar">
+    
+
+
+
+
+
 <div class="portrait-wrapper">
   <a class="portrait" data-style="" aria-label="Huang, Mengyuan 黄梦元">
     
@@ -501,6 +540,7 @@
   </a>
 </div>
 
+
 <div>
   
     
@@ -523,10 +563,10 @@
 </div>
 
 
-</div>
+  </aside>
 
-
-<p>Postdoctoral Fellow in the XShen Lab.</p>
+  <main class="member-profile-main">
+    <p>Postdoctoral Fellow in the XShen Lab.</p>
 
 <h2 id="research-interests">Research Interests</h2>
 
@@ -545,25 +585,27 @@
 </ul>
 
 
+    
 
+    
 
+    <p class="center">
+      <a href="/research/?search=%22Huang%22%20%22Mengyuan%20%E9%BB%84%E6%A2%A6%E5%85%83%22%20">
+        Search for Huang, Mengyuan 黄梦元's papers on the Research page
+      </a>
+    </p>
 
+    
 
-<p class="center">
-  <a href="/research/?search=%22Huang%22%20%22Mengyuan%20%E9%BB%84%E6%A2%A6%E5%85%83%22%20">
-    Search for Huang, Mengyuan 黄梦元's papers on the Research page
-  </a>
-</p>
-
-
-
-<!--
-<p class="center">
-  <a href="/blog/?search=Huang,%20Mengyuan%20%E9%BB%84%E6%A2%A6%E5%85%83">
-    See Huang, Mengyuan 黄梦元's posts on the Blog page
-  </a>
-</p>
--->
+    <!--
+    <p class="center">
+      <a href="/blog/?search=Huang,%20Mengyuan%20%E9%BB%84%E6%A2%A6%E5%85%83">
+        See Huang, Mengyuan 黄梦元's posts on the Blog page
+      </a>
+    </p>
+    -->
+  </main>
+</div>
   </section>
 
 

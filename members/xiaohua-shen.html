@@ -471,8 +471,47 @@
   
 
   <section class="background" data-size="page">
-    <div class="float">
-  
+    <style>
+  .member-profile-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .member-profile-sidebar {
+    text-align: center;
+  }
+
+  .member-profile-main {
+    min-width: 0;
+  }
+
+  .member-profile-main ul {
+    margin-left: 1.2rem;
+  }
+
+  @media (max-width: 800px) {
+    .member-profile-layout {
+      display: block;
+    }
+
+    .member-profile-sidebar {
+      margin-bottom: 2rem;
+    }
+  }
+</style>
+
+
+
+<div class="member-profile-layout">
+  <aside class="member-profile-sidebar">
+    
+
+
+
+
+
 <div class="portrait-wrapper">
   <a class="portrait" data-style="" aria-label="Xiaohua Shen 沈晓骅">
     
@@ -500,6 +539,7 @@
     
   </a>
 </div>
+
 
 <div>
   
@@ -540,10 +580,10 @@
 </div>
 
 
-</div>
+  </aside>
 
-
-<p>Xiaohua Shen is a Professor at the School of Basic Medicine, Tsinghua University, and an Investigator at the Tsinghua-Peking Center for Life Sciences. Her research focuses on the physics of nuclear structure and function, genome organization, transcription, noncoding RNA, and cell fate.</p>
+  <main class="member-profile-main">
+    <p>Xiaohua Shen is a Professor at the School of Basic Medicine, Tsinghua University, and an Investigator at the Tsinghua-Peking Center for Life Sciences. Her research focuses on the physics of nuclear structure and function, genome organization, transcription, noncoding RNA, and cell fate.</p>
 
 <h2 id="education">Education</h2>
 
@@ -635,25 +675,27 @@ Advisor: Randal Kaufman</li>
 </ol>
 
 
+    
 
+    
 
+    <p class="center">
+      <a href="/research/?search=%22Xiaohua%20Shen%20%E6%B2%88%E6%99%93%E9%AA%85%22%20">
+        Search for Xiaohua Shen 沈晓骅's papers on the Research page
+      </a>
+    </p>
 
+    
 
-<p class="center">
-  <a href="/research/?search=%22Xiaohua%20Shen%20%E6%B2%88%E6%99%93%E9%AA%85%22%20">
-    Search for Xiaohua Shen 沈晓骅's papers on the Research page
-  </a>
-</p>
-
-
-
-<!--
-<p class="center">
-  <a href="/blog/?search=Xiaohua%20Shen%20%E6%B2%88%E6%99%93%E9%AA%85">
-    See Xiaohua Shen 沈晓骅's posts on the Blog page
-  </a>
-</p>
--->
+    <!--
+    <p class="center">
+      <a href="/blog/?search=Xiaohua%20Shen%20%E6%B2%88%E6%99%93%E9%AA%85">
+        See Xiaohua Shen 沈晓骅's posts on the Blog page
+      </a>
+    </p>
+    -->
+  </main>
+</div>
   </section>
 
 

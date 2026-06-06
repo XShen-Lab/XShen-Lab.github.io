@@ -471,8 +471,47 @@
   
 
   <section class="background" data-size="page">
-    <div class="float">
-  
+    <style>
+  .member-profile-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .member-profile-sidebar {
+    text-align: center;
+  }
+
+  .member-profile-main {
+    min-width: 0;
+  }
+
+  .member-profile-main ul {
+    margin-left: 1.2rem;
+  }
+
+  @media (max-width: 800px) {
+    .member-profile-layout {
+      display: block;
+    }
+
+    .member-profile-sidebar {
+      margin-bottom: 2rem;
+    }
+  }
+</style>
+
+
+
+<div class="member-profile-layout">
+  <aside class="member-profile-sidebar">
+    
+
+
+
+
+
 <div class="portrait-wrapper">
   <a class="portrait" data-style="" aria-label="Name 中文名">
     
@@ -501,6 +540,7 @@
   </a>
 </div>
 
+
 <div>
   
     
@@ -523,10 +563,10 @@
 </div>
 
 
-</div>
+  </aside>
 
-
-<p>Administrative Assistant, XShen Lab.</p>
+  <main class="member-profile-main">
+    <p>Administrative Assistant, XShen Lab.</p>
 
 <h2 id="role">Role</h2>
 
@@ -537,25 +577,27 @@
 </ul>
 
 
+    
 
+    
 
+    <p class="center">
+      <a href="/research/?search=%22Name%20%E4%B8%AD%E6%96%87%E5%90%8D%22%20">
+        Search for Name 中文名's papers on the Research page
+      </a>
+    </p>
 
+    
 
-<p class="center">
-  <a href="/research/?search=%22Name%20%E4%B8%AD%E6%96%87%E5%90%8D%22%20">
-    Search for Name 中文名's papers on the Research page
-  </a>
-</p>
-
-
-
-<!--
-<p class="center">
-  <a href="/blog/?search=Name%20%E4%B8%AD%E6%96%87%E5%90%8D">
-    See Name 中文名's posts on the Blog page
-  </a>
-</p>
--->
+    <!--
+    <p class="center">
+      <a href="/blog/?search=Name%20%E4%B8%AD%E6%96%87%E5%90%8D">
+        See Name 中文名's posts on the Blog page
+      </a>
+    </p>
+    -->
+  </main>
+</div>
   </section>
 
 
