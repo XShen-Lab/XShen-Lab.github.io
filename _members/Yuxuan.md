@@ -5,7 +5,7 @@ image: images/members/zhouyuxuan.jpg
 description: PhD Student
 affiliation: School of Basic Medicine, Tsinghua University
 links:
-  email:yx-zhou25@mails.tsinghua.edu.cn
+  email: yx-zhou25@mails.tsinghua.edu.cn
 ---
 
 Graduate Student in the XShen Lab.
