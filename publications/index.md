@@ -14,8 +14,8 @@ Selected and full publications from the XShen Lab are listed below. Publications
 ## Quick Navigation
 
 [Selected Publications](#selected-publications) ·
-[Full Publications](#full-publications) ·
-[Research Themes](#research-themes)
+[Publications by Research Theme](#publications-by-research-theme) ·
+[Full Publications by Year](#full-publications-by-year)
 
 {% include section.html %}
 
@@ -56,7 +56,44 @@ Selected and full publications from the XShen Lab are listed below. Publications
 
 {% include section.html %}
 
-## Full Publications
+## Publications by Research Theme
+
+### Nuclear RNA and Noncoding RNA
+
+- Yin Y*, Lu J.Y., ..., Shen X*. **U1 snRNP regulates chromatin retention of noncoding RNAs.** *Nature*. 2020.
+- Han X, Xing L, ..., Shen X*. **Nuclear RNA homeostasis promotes systems-level coordination for cell fate and vitality.** *Cell Stem Cell*. 2024.
+- Luo S, Lu J, ..., Shen X. **Divergent lncRNAs regulate gene expression and lineage differentiation in pluripotent cells.** *Cell Stem Cell*. 2016.
+
+### Genomic Repeats and 3D Genome Organization
+
+- Lu J.Y.#, Chang L#, Li T#, ..., Shen X*. **Homotypic clustering of L1 and B1/Alu repeats compartmentalizes the 3D genome.** *Cell Research*. 2021.
+- Li S, Shen X. **Long interspersed nuclear element 1 and B1/Alu repeats blueprint genome compartmentalization.** *Current Opinion in Genetics & Development*. 2023.
+- Lu J.Y., Shao W, ..., Shen X. **Genomic repeats categorize genes with distinct functions for orchestrated regulation.** *Cell Reports*. 2020.
+
+### RNA-Binding Proteins, Phase Separation, and Transcription
+
+- Shao W, Bi X, ..., Shen X*. **Phase separation of RNA-binding protein promotes polymerase engagement and transcription.** *Nature Chemical Biology*. 2022.
+- Bi X, Xu Y, ..., Shen X. **RNA targets ribosome biogenesis factor WDR43 to chromatin for transcription and pluripotency control.** *Molecular Cell*. 2019.
+- Liu L, Li T, ..., Shen X*. **Insight into novel RNA-binding activities via large-scale analysis of lncRNA-bound proteome and IDH1-bound transcriptome.** *Nucleic Acids Research*. 2019.
+
+### Single-cell Nascent Transcription and Probabilistic Genome Usage
+
+- Ma S*, Hong Y, Chen J, Xu J, Shen X*. **Single-cell nascent transcription reveals sparse genome usage and plasticity.** *Cell*. 2025.
+
+### Cell Fate, Pluripotency, and Development
+
+- Yin Y, Yan P, ..., Shen X. **Opposing roles for the lncRNA Haunt and its genomic locus in regulating HOXA gene activation during embryonic stem cell differentiation.** *Cell Stem Cell*. 2015.
+- Shen X, Kim W, ..., Orkin S.H. **Jumonji modulates Polycomb activity and self-renewal versus differentiation of stem cells.** *Cell*. 2009.
+- Shen X, Liu Y, ..., Orkin S.H. **EZH1 mediates methylation on histone H3 lysine 27 and complements EZH2 in maintaining stem cell identity and executing pluripotency.** *Molecular Cell*. 2008.
+
+### Early Work: UPR and Epigenetic Regulation
+
+- Shen X, Ellis R.E., Lee K, ..., Kaufman R.J. **Complementary signaling pathways regulate the unfolded protein response and are required for C. elegans development.** *Cell*. 2001.
+- Lee K, Tirasophon W, Shen X, ..., Mori K. **IRE1-mediated unconventional mRNA splicing and S2P-mediated ATF6 cleavage merge to regulate XBP1 in signaling the unfolded protein response.** *Genes & Development*. 2002.
+
+{% include section.html %}
+
+## Full Publications by Year
 
 ### 2025
 
