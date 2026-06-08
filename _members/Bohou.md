@@ -1,5 +1,5 @@
 ---
-name: Name 武博厚
+name: Wu,Bohou 武博厚
 role: postdoc
 image: images/members/wubohou.jpg
 description: Postdoctoral Fellow
