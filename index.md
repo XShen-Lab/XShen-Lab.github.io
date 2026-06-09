@@ -5,52 +5,122 @@ nav:
   tooltip: Home
 ---
 
-# Welcome to XShen Lab
+<div class="home-hero">
+  <div>
+    <div class="home-kicker">XShen Lab · Tsinghua University</div>
 
-The XShen Lab at Tsinghua University studies how genomes generate diverse cellular identities through probabilistic molecular processes.
+    <h1>Genome organization, nuclear RNA, transcription, and cell fate</h1>
 
-Our research focuses on the physics of nuclear structure and function, genome organization, transcription, noncoding RNA, and cell fate. We aim to uncover how genome information is organized, interpreted, and coordinated within the three-dimensional nuclear environment.
+    <p>
+      The XShen Lab studies how genomes generate diverse cellular identities through probabilistic molecular processes. We investigate the physics of nuclear structure and function, genome organization, transcription, noncoding RNA, and cell fate.
+    </p>
 
-{% include section.html %}
+    <div class="home-actions">
+      <a class="home-button primary" href="research/">Research</a>
+      <a class="home-button" href="publications/">Publications</a>
+      <a class="home-button" href="team/">Members</a>
+      <a class="home-button" href="join-us/">Join Us</a>
+    </div>
+  </div>
 
-## About Us
-
-The XShen Lab is based in the School of Basic Medicine, Tsinghua University. We investigate the organizing principles of nuclear function by integrating molecular and cellular biology, single-cell genomics, advanced imaging, biochemical approaches, computational analysis, and theoretical modeling.
-
-A central goal of the lab is to understand how DNA, RNA, proteins, chromatin, and nuclear architecture collectively shape transcriptional regulation and cellular identity. Our recent work explores how nuclear RNA homeostasis, repetitive DNA elements, RNA-binding proteins, phase separation, and single-cell nascent transcription contribute to robust biological states.
-
-{% include section.html %}
-
-## Research Focus
-
-- **Physics of nuclear structure and function**  
-  We study how nuclear organization emerges from molecular interactions among DNA, RNA, proteins, and chromatin.
-
-- **Genome organization and chromatin architecture**  
-  We investigate how repetitive DNA elements and genomic sequence features encode structural rules for three-dimensional genome organization.
-
-- **Nuclear RNA and noncoding RNA regulation**  
-  We study how nuclear RNA and noncoding RNAs regulate transcription, chromatin states, and genome function.
-
-- **Transcriptional regulation and phase separation**  
-  We examine how RNA-binding proteins, RNA networks, and biomolecular condensates organize transcriptional machinery and shape regulatory output.
-
-- **Single-cell nascent transcription and probabilistic genome usage**  
-  We develop and apply single-cell nascent RNA sequencing approaches, including scFLUENT-seq, to investigate sparse and probabilistic genome usage in individual cells.
-
-- **Cell fate and cellular identity**  
-  We seek to understand how stable cellular states emerge from dynamic and stochastic molecular processes.
+  <div class="home-hero-card">
+    <h3>Research Focus</h3>
+    <p>
+      We integrate molecular and cellular biology, single-cell genomics, advanced imaging, biochemical approaches, computational analysis, and theoretical modeling to uncover the organizing principles of nuclear function and genome information flow.
+    </p>
+  </div>
+</div>
 
 {% include section.html %}
 
-## Representative Themes
+## Research Highlights
 
-- DNA-instructed chromatin organization
-- Nuclear RNA homeostasis
-- Noncoding RNA-mediated transcriptional regulation
-- RNA-binding proteins and phase separation
-- Single-cell nascent transcription
-- Genome information flow from DNA to RNA, proteins, and cellular phenotypes
+<div class="home-grid">
+  <div class="home-card">
+    <h3>Nuclear structure and genome organization</h3>
+    <p>We study how DNA, RNA, proteins, chromatin, and nuclear architecture collectively shape three-dimensional genome organization.</p>
+  </div>
+
+  <div class="home-card">
+    <h3>Nuclear RNA and noncoding RNA</h3>
+    <p>We investigate how nuclear RNA and noncoding RNAs regulate transcription, chromatin states, genome function, and cellular identity.</p>
+  </div>
+
+  <div class="home-card">
+    <h3>Transcription and phase separation</h3>
+    <p>We examine how RNA-binding proteins, RNA networks, and biomolecular condensates organize transcriptional machinery.</p>
+  </div>
+
+  <div class="home-card">
+    <h3>Single-cell nascent transcription</h3>
+    <p>We develop and apply single-cell nascent RNA sequencing approaches, including scFLUENT-seq, to study sparse and probabilistic genome usage.</p>
+  </div>
+
+  <div class="home-card">
+    <h3>Cell fate and cellular identity</h3>
+    <p>We seek to understand how stable cellular states emerge from dynamic and stochastic molecular processes.</p>
+  </div>
+
+  <div class="home-card">
+    <h3>Genome information flow</h3>
+    <p>We aim to understand how information flows from DNA to RNA, proteins, nuclear organization, and cellular phenotypes.</p>
+  </div>
+</div>
+
+{% include section.html %}
+
+## Recent Highlights
+
+<div class="home-highlight">
+  <strong>Single-cell nascent transcription</strong>
+  <p>Our recent work develops scFLUENT-seq to reveal sparse genome usage and transcriptional plasticity in individual cells.</p>
+</div>
+
+<div class="home-highlight">
+  <strong>Nuclear RNA homeostasis</strong>
+  <p>We study how nuclear RNA homeostasis coordinates cell fate, vitality, transcription, and genome organization at the systems level.</p>
+</div>
+
+<div class="home-highlight">
+  <strong>Repetitive elements and 3D genome organization</strong>
+  <p>We investigate how L1 and B1/Alu repeats encode structural principles for chromatin compartmentalization.</p>
+</div>
+
+{% include section.html %}
+
+## Explore XShen Lab
+
+<div class="home-grid">
+  <div class="home-card">
+    <h3><a href="research/">Research</a></h3>
+    <p>Learn about our major research directions.</p>
+  </div>
+
+  <div class="home-card">
+    <h3><a href="publications/">Publications</a></h3>
+    <p>Browse selected publications and the full publication list by year and research theme.</p>
+  </div>
+
+  <div class="home-card">
+    <h3><a href="team/">Members</a></h3>
+    <p>Meet current lab members and alumni.</p>
+  </div>
+
+  <div class="home-card">
+    <h3><a href="projects/">Resources</a></h3>
+    <p>Access public pipelines, protocols, and reproducible workflows.</p>
+  </div>
+
+  <div class="home-card">
+    <h3><a href="blog/">Blogs</a></h3>
+    <p>Read lab news, updates, activities, and perspectives.</p>
+  </div>
+
+  <div class="home-card">
+    <h3><a href="join-us/">Join Us</a></h3>
+    <p>Find opportunities to join the lab and contact us.</p>
+  </div>
+</div>
 
 {% include section.html %}
 
@@ -58,15 +128,4 @@ A central goal of the lab is to understand how DNA, RNA, proteins, chromatin, an
 
 We welcome motivated students and researchers with backgrounds in molecular biology, genomics, RNA biology, chromatin biology, single-cell technologies, bioinformatics, biophysics, mathematics, and computational biology.
 
-If you are interested in joining the lab, please visit the [Join Us](join-us/) page or contact us by email.
-
-{% include section.html %}
-
-## Contact
-
-**XShen Lab**  
-School of Basic Medicine, Tsinghua University  
-Medical Science Building D108  
-Beijing 100084, China  
-
-Email: [xshen@tsinghua.edu.cn](mailto:xshen@tsinghua.edu.cn)
+For inquiries and opportunities to join the lab, please visit the [Join Us](join-us/) page.
