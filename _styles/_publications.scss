@@ -89,4 +89,65 @@
   .pub-theme-grid {
     grid-template-columns: 1fr;
   }
+
+  .pub-year-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.2rem 0 1.5rem;
+}
+
+.pub-year-filter button {
+  border: 1px solid var(--light-gray);
+  background: var(--background-alt);
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  font-weight: var(--semi-bold);
+  cursor: pointer;
+}
+
+.pub-year-filter button.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.pub-year-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.pub-year-card {
+  border: 1px solid var(--light-gray);
+  border-radius: 14px;
+  padding: 1rem;
+  background: var(--background);
+  box-shadow: var(--shadow);
+}
+
+.pub-year-card h3 {
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+.pub-year-card .year {
+  color: var(--primary);
+  font-weight: var(--bold);
+  margin-bottom: 0.35rem;
+}
+
+.pub-year-card .meta {
+  color: var(--dark-gray);
+  font-size: 0.95rem;
+}
+
+.pub-year-card[hidden] {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .pub-year-card-grid {
+    grid-template-columns: 1fr;
+  }
 }
