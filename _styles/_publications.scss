@@ -1,0 +1,92 @@
+.pub-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1.2rem 0 0;
+}
+
+.pub-nav a {
+  display: inline-block;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: var(--semi-bold);
+  background: var(--background-alt);
+}
+
+.pub-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.pub-card {
+  border: 1px solid var(--light-gray);
+  border-radius: 14px;
+  padding: 1.2rem;
+  background: var(--background);
+  box-shadow: var(--shadow);
+}
+
+.pub-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.55rem;
+  font-size: 1.1rem;
+}
+
+.pub-meta {
+  color: var(--dark-gray);
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+.pub-tags {
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: var(--semi-bold);
+}
+
+.pub-theme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.pub-theme {
+  border-left: 4px solid var(--primary);
+  padding: 1rem 1.1rem;
+  background: var(--background-alt);
+  border-radius: 0 12px 12px 0;
+}
+
+.pub-theme h3 {
+  margin-top: 0;
+}
+
+.pub-theme ul {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+.pub-year-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.pub-year-nav a {
+  font-size: 0.9rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: var(--background-alt);
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .pub-feature-grid,
+  .pub-theme-grid {
+    grid-template-columns: 1fr;
+  }
+}
