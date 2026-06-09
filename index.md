@@ -9,7 +9,7 @@ nav:
   <div>
     <div class="home-kicker">XShen Lab · Tsinghua University</div>
 
-    <h1>Genome organization, nuclear RNA, transcription, and cell fate</h1>
+    <h1>Decoding genome organization and nuclear RNA regulation</h1>
 
     <p>
       The XShen Lab studies how genomes generate diverse cellular identities through probabilistic molecular processes. We investigate the physics of nuclear structure and function, genome organization, transcription, noncoding RNA, and cell fate.
@@ -128,4 +128,4 @@ nav:
 
 We welcome motivated students and researchers with backgrounds in molecular biology, genomics, RNA biology, chromatin biology, single-cell technologies, bioinformatics, biophysics, mathematics, and computational biology.
 
-For inquiries and opportunities to join the lab, please visit the [Join Us](join-us/) page.
+[Explore opportunities to join the lab](join-us/).
