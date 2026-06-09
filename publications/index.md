@@ -13,13 +13,31 @@ Selected and full publications from the XShen Lab are listed below. Publications
 
 ## Quick Navigation
 
-[Selected Publications](#selected-publications) ·
-[Publications by Research Theme](#publications-by-research-theme) ·
-[Full Publications by Year](#full-publications-by-year)
+<div class="pub-nav">
+  <a href="#selected-publications">Selected Publications</a>
+  <a href="#publications-by-research-theme">Publications by Research Theme</a>
+  <a href="#full-publications-by-year">Full Publications by Year</a>
+</div>
 
 {% include section.html %}
 
 ## Selected Publications
+
+<div class="pub-feature-grid">
+
+  <div class="pub-card">
+    <h3>Single-cell nascent transcription reveals sparse genome usage and plasticity</h3>
+    <div class="pub-meta">Ma S*, Hong Y, Chen J, Xu J, Shen X*. <em>Cell</em>. 2025.</div>
+    <div class="pub-tags">Single-cell nascent transcription / scFLUENT-seq / probabilistic genome usage</div>
+  </div>
+
+  <div class="pub-card">
+    <h3>Nuclear RNA homeostasis promotes systems-level coordination for cell fate and vitality</h3>
+    <div class="pub-meta">Han X, Xing L, Hong Y, ..., Shen X*. <em>Cell Stem Cell</em>. 2024.</div>
+    <div class="pub-tags">Nuclear RNA homeostasis / cell fate / systems-level coordination</div>
+  </div>
+
+</div>
 
 1. Ma S\*, Hong Y, Chen J, Xu J, Shen X\*. **Single-cell nascent transcription reveals sparse genome usage and plasticity.** *Cell*. 2025.  
    *Single-cell nascent transcription / scFLUENT-seq / probabilistic genome usage*
@@ -57,6 +75,28 @@ Selected and full publications from the XShen Lab are listed below. Publications
 {% include section.html %}
 
 ## Publications by Research Theme
+
+<div class="pub-theme-grid">
+
+  <div class="pub-theme">
+    <h3>Nuclear RNA and Noncoding RNA</h3>
+    <ul>
+      <li>Yin Y*, Lu J.Y., ..., Shen X*. <strong>U1 snRNP regulates chromatin retention of noncoding RNAs.</strong> <em>Nature</em>. 2020.</li>
+      <li>Han X, Xing L, ..., Shen X*. <strong>Nuclear RNA homeostasis promotes systems-level coordination for cell fate and vitality.</strong> <em>Cell Stem Cell</em>. 2024.</li>
+      <li>Luo S, Lu J, ..., Shen X. <strong>Divergent lncRNAs regulate gene expression and lineage differentiation in pluripotent cells.</strong> <em>Cell Stem Cell</em>. 2016.</li>
+    </ul>
+  </div>
+
+  <div class="pub-theme">
+    <h3>Genomic Repeats and 3D Genome Organization</h3>
+    <ul>
+      <li>Lu J.Y.#, Chang L#, Li T#, ..., Shen X*. <strong>Homotypic clustering of L1 and B1/Alu repeats compartmentalizes the 3D genome.</strong> <em>Cell Research</em>. 2021.</li>
+      <li>Li S, Shen X. <strong>Long interspersed nuclear element 1 and B1/Alu repeats blueprint genome compartmentalization.</strong> <em>Current Opinion in Genetics & Development</em>. 2023.</li>
+      <li>Lu J.Y., Shao W, ..., Shen X. <strong>Genomic repeats categorize genes with distinct functions for orchestrated regulation.</strong> <em>Cell Reports</em>. 2020.</li>
+    </ul>
+  </div>
+
+</div>
 
 ### Nuclear RNA and Noncoding RNA
 
