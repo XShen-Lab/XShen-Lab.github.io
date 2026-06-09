@@ -133,6 +133,91 @@ Selected and full publications from the XShen Lab are listed below. Publications
 
 {% include section.html %}
 
+## Publication Timeline
+
+Click a year to view publications from that year.
+
+<div class="pub-year-filter">
+  <button class="active" data-year="all" type="button">All</button>
+  <button data-year="2025" type="button">2025</button>
+  <button data-year="2024" type="button">2024</button>
+  <button data-year="2023" type="button">2023</button>
+  <button data-year="2022" type="button">2022</button>
+  <button data-year="2021" type="button">2021</button>
+  <button data-year="2020" type="button">2020</button>
+  <button data-year="2019" type="button">2019</button>
+  <button data-year="2018" type="button">2018</button>
+  <button data-year="2017" type="button">2017</button>
+  <button data-year="2016" type="button">2016</button>
+  <button data-year="2015" type="button">2015</button>
+  <button data-year="2009" type="button">2009</button>
+  <button data-year="2008" type="button">2008</button>
+  <button data-year="2001" type="button">2001</button>
+</div>
+
+<div class="pub-year-card-grid">
+
+  <div class="pub-year-card" data-year="2025">
+    <div class="year">2025</div>
+    <h3>Single-cell nascent transcription reveals sparse genome usage and plasticity</h3>
+    <div class="meta">Ma S*, Hong Y, Chen J, Xu J, Shen X*. <em>Cell</em>. 2025.</div>
+  </div>
+
+  <div class="pub-year-card" data-year="2025">
+    <div class="year">2025</div>
+    <h3>Transposon exonization generates new protein-coding sequences</h3>
+    <div class="meta">Hong Y, Shen X. <em>Molecular Cell</em>. 2025.</div>
+  </div>
+
+  <div class="pub-year-card" data-year="2024">
+    <div class="year">2024</div>
+    <h3>Nuclear RNA homeostasis promotes systems-level coordination for cell fate and vitality</h3>
+    <div class="meta">Han X, Xing L, Hong Y, ..., Shen X*. <em>Cell Stem Cell</em>. 2024.</div>
+  </div>
+
+  <div class="pub-year-card" data-year="2022">
+    <div class="year">2022</div>
+    <h3>Phase separation of RNA-binding protein promotes polymerase engagement and transcription</h3>
+    <div class="meta">Shao W, Bi X, ..., Shen X*. <em>Nature Chemical Biology</em>. 2022.</div>
+  </div>
+
+  <div class="pub-year-card" data-year="2021">
+    <div class="year">2021</div>
+    <h3>Homotypic clustering of L1 and B1/Alu repeats compartmentalizes the 3D genome</h3>
+    <div class="meta">Lu J.Y.#, Chang L#, Li T#, ..., Shen X*. <em>Cell Research</em>. 2021.</div>
+  </div>
+
+  <div class="pub-year-card" data-year="2020">
+    <div class="year">2020</div>
+    <h3>U1 snRNP regulates chromatin retention of noncoding RNAs</h3>
+    <div class="meta">Yin Y*, Lu J.Y., ..., Shen X*. <em>Nature</em>. 2020.</div>
+  </div>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".pub-year-filter button");
+    const cards = document.querySelectorAll(".pub-year-card");
+
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        const selectedYear = button.getAttribute("data-year");
+
+        buttons.forEach(function (b) {
+          b.classList.remove("active");
+        });
+        button.classList.add("active");
+
+        cards.forEach(function (card) {
+          const cardYear = card.getAttribute("data-year");
+          card.hidden = selectedYear !== "all" && cardYear !== selectedYear;
+        });
+      });
+    });
+  });
+</script>
+
 ## Full Publications by Year
 
 ### 2025
