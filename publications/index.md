@@ -136,6 +136,8 @@ Selected and full publications from the XShen Lab are listed below. Publications
 
 ## Publication Timeline
 
+The timeline highlights representative milestones in the lab's publication history. A complete publication list is provided below.
+
 Click a year to view publications from that year.
 
 <div class="pub-year-filter">
