@@ -16,6 +16,7 @@ Selected and full publications from the XShen Lab are listed below. Publications
 <div class="pub-nav">
   <a href="#selected-publications">Selected Publications</a>
   <a href="#publications-by-research-theme">Publications by Research Theme</a>
+  <a href="#publication-timeline">Publication Timeline</a>
   <a href="#full-publications-by-year">Full Publications by Year</a>
 </div>
 
