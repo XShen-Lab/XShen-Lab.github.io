@@ -20,3 +20,4 @@ Postdoctoral Fellow in the XShen Lab.
 ## Education
 
 - Ph.D., the University of Chicago, 2024
+- M.D, Tsinghua University, 2017
