@@ -107,7 +107,7 @@ nav:
   </div>
 
   <div class="home-card">
-    <h3><a href="projects/">Resources</a></h3>
+    <h3><a href="software/">Software</a></h3>
     <p>Access public pipelines, protocols, and reproducible workflows.</p>
   </div>
 
