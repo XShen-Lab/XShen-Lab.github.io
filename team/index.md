@@ -1,5 +1,5 @@
 ---
-title: Member
+title: People
 nav:
   order: 3
   tooltip: Members of the XShen Lab
