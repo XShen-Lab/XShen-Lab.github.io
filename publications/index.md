@@ -1,3 +1,16 @@
+---
+title: Publications
+nav:
+  order: 4
+  tooltip: Selected and full publications
+---
+
+# Publications
+
+Selected and full publications from the XShen Lab are listed below. Publications are organized by year in reverse chronological order.
+
+{% include section.html %}
+
 {% assign papers = site.publications | sort: "date" | reverse %}
 
 <div class="publication-grid">
@@ -53,19 +66,6 @@
     </article>
   {% endfor %}
 </div>
-
----
-title: Publications
-nav:
-  order: 4
-  tooltip: Selected and full publications
----
-
-# Publications
-
-Selected and full publications from the XShen Lab are listed below. Publications are organized by year in reverse chronological order.
-
-{% include section.html %}
 
 ## Quick Navigation
 
