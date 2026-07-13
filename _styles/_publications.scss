@@ -89,8 +89,9 @@
   .pub-theme-grid {
     grid-template-columns: 1fr;
   }
+}
 
-  .pub-year-filter {
+.pub-year-filter {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
