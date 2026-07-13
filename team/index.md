@@ -5,7 +5,7 @@ nav:
   tooltip: Members of the XShen Lab
 ---
 
-# Member
+# People
 
 The XShen Lab brings together researchers with backgrounds in molecular cell biology, genomics, bioinformatics, biophysics, mathematics, and computational biology.
 
