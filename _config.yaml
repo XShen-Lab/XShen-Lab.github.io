@@ -22,11 +22,19 @@ defaults:
       path: ""
     values:
       layout: default
+      
   # markdown files in /_members
   - scope:
       type: "members"
     values:
       layout: member
+  
+  - scope:
+      type: "publications"
+    values:
+      layout: default
+
+      
   # markdown files in /_posts
   - scope:
       type: "posts"
@@ -37,6 +45,11 @@ collections:
   # generate page for each member
   members:
     output: true
+
+  publications:
+    output: true
+    permalink: /publications/:name/
+    
   # generate page for each post
   posts:
     output: true
