@@ -1,3 +1,59 @@
+{% assign papers = site.publications | sort: "date" | reverse %}
+
+<div class="publication-grid">
+  {% for paper in papers %}
+    <article class="publication-entry">
+
+      <a class="publication-entry-image" href="{{ paper.url | relative_url }}">
+        <img
+          src="{{ paper.image | relative_url }}"
+          alt="Graphical abstract for {{ paper.title | escape }}"
+          loading="lazy"
+        >
+      </a>
+
+      <div class="publication-entry-content">
+
+        <div class="publication-entry-meta">
+          {{ paper.journal }} · {{ paper.year }}
+        </div>
+
+        <h3>
+          <a href="{{ paper.url | relative_url }}">
+            {{ paper.title }}
+          </a>
+        </h3>
+
+        <p class="publication-entry-authors">
+          {{ paper.authors }}
+        </p>
+
+        <p>
+          {{ paper.summary }}
+        </p>
+
+        {% if paper.metric %}
+          <div class="publication-entry-metric">
+            {{ paper.metric }}
+          </div>
+        {% endif %}
+
+        <div class="publication-entry-tags">
+          {% for tag in paper.tags %}
+            <span>{{ tag }}</span>
+          {% endfor %}
+        </div>
+
+        <div class="publication-entry-actions">
+          <a href="{{ paper.url | relative_url }}">Read summary</a>
+          <a href="{{ paper.doi }}">View article</a>
+        </div>
+
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
 ---
 title: Publications
 nav:
