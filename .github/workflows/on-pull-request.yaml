@@ -1,23 +1,28 @@
 name: on-pull-request
-run-name: on pull request activity
+run-name: check pull request build
 
 on:
-  pull_request_target:
-    types:
-      - opened
-      - reopened
-      - synchronize
-      - closed
+  pull_request:
+    branches:
+      - main
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 jobs:
-  update-citations:
-    uses: ./.github/workflows/update-citations.yaml
-    secrets: inherit
+  build-check:
+    runs-on: ubuntu-latest
 
-  build-preview:
-    needs: update-citations
-    uses: ./.github/workflows/build-preview.yaml
+    steps:
+      - name: Checkout branch contents
+        uses: actions/checkout@v4
+
+      - name: Install Ruby packages
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
+
+      - name: Build site
+        run: |
+          JEKYLL_ENV=production bundle exec jekyll build
