@@ -1,0 +1,25 @@
+zh:
+  - title: 首页
+    url: /zh/
+    tooltip: 中文首页
+  - title: 研究方向
+    url: /zh/research/
+    tooltip: 实验室研究方向
+  - title: 团队成员
+    url: /zh/people/
+    tooltip: 实验室团队成员
+  - title: 论文发表
+    url: /zh/publications/
+    tooltip: 代表性论文与完整论文目录
+  - title: 资源
+    url: /zh/resources/
+    tooltip: 分析流程、实验方案与实验室资源
+  - title: 软件与流程
+    url: /zh/software/
+    tooltip: 软件、实验方案与分析流程
+  - title: 加入我们
+    url: /zh/join-us/
+    tooltip: 加入实验室的机会
+  - title: 联系方式
+    url: /zh/contact/
+    tooltip: 联系实验室
