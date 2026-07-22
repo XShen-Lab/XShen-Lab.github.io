@@ -5,127 +5,90 @@ nav:
   tooltip: Home
 ---
 
+<p class="right"><small><a href="{{ '/zh/' | relative_url }}">中文</a></small></p>
+
 <div class="home-hero">
   <div>
     <div class="home-kicker">XShen Lab · Tsinghua University</div>
 
-    <h1>Decoding genome organization and nuclear RNA regulation</h1>
+    <h1>Biological Information Flow</h1>
+
+    <p><strong>From Genome to Cell Fate</strong></p>
 
     <p>
-      The XShen Lab studies how genomes generate diverse cellular identities through probabilistic molecular processes. We investigate the physics of nuclear structure and function, genome organization, transcription, noncoding RNA, and cell fate.
+      How do stable and diverse cell identities arise when genome activity is sparse, dynamic, and stochastic? We study how biological information is organized, processed, selected, and stabilized across the genome, nucleus, and cell.
     </p>
 
     <div class="home-actions">
-      <a class="home-button primary" href="research/">Research</a>
-      <a class="home-button" href="publications/">Publications</a>
-      <a class="home-button" href="team/">Members</a>
-      <a class="home-button" href="join-us/">Join Us</a>
+      <a class="home-button primary" href="{{ '/research/' | relative_url }}">Research</a>
+      <a class="home-button" href="{{ '/publications/' | relative_url }}">Publications</a>
+      <a class="home-button" href="{{ '/team/' | relative_url }}">People</a>
+      <a class="home-button" href="{{ '/join-us/' | relative_url }}">Join Us</a>
     </div>
   </div>
 
   <div class="home-hero-card">
-    <h3>Research Focus</h3>
+    <h3>Our Central Question</h3>
     <p>
-      We integrate molecular and cellular biology, single-cell genomics, advanced imaging, biochemical approaches, computational analysis, and theoretical modeling to uncover the organizing principles of nuclear function and genome information flow.
+      Cells share essentially the same genome, yet establish remarkably different and stable identities. We seek the principles that transform fluctuating molecular activity into reproducible cellular states.
     </p>
   </div>
 </div>
+{% include section.html %}
+
+## Laboratory Mission
+
+The XShen Lab treats the nucleus as a dynamic information-processing system rather than a passive container for DNA. We investigate how chromatin and RNA–protein networks organize access to the genome, how nuclear environments process its activity, how surveillance selects productive outputs, and how these outputs become stable cell-fate programs.
 
 {% include section.html %}
 
-## Research Highlights
+## Four Research Programs
 
 <div class="home-grid">
   <div class="home-card">
-    <h3>Nuclear structure and genome organization</h3>
-    <p>We study how DNA, RNA, proteins, chromatin, and nuclear architecture collectively shape three-dimensional genome organization.</p>
+    <h3>Genome Organization</h3>
+    <p><strong>Organization.</strong> How genome sequence, repetitive elements, and their RNA products encode nuclear architecture and spatial positioning.</p>
   </div>
 
   <div class="home-card">
-    <h3>Nuclear RNA and noncoding RNA</h3>
-    <p>We investigate how nuclear RNA and noncoding RNAs regulate transcription, chromatin states, genome function, and cellular identity.</p>
+    <h3>RNA Networks</h3>
+    <p><strong>Processing.</strong> How nascent RNA, RNA-binding proteins, and RNA-processing factors form nuclear environments that coordinate genome function.</p>
   </div>
 
   <div class="home-card">
-    <h3>Transcription and phase separation</h3>
-    <p>We examine how RNA-binding proteins, RNA networks, and biomolecular condensates organize transcriptional machinery.</p>
+    <h3>Transcriptional Surveillance</h3>
+    <p><strong>Selection.</strong> How RNA Polymerase II and RNA-processing and degradation pathways channel pervasive transcription toward productive biological information.</p>
   </div>
 
   <div class="home-card">
-    <h3>Single-cell nascent transcription</h3>
-    <p>We develop and apply single-cell nascent RNA sequencing approaches, including scFLUENT-seq, to study sparse and probabilistic genome usage.</p>
-  </div>
-
-  <div class="home-card">
-    <h3>Cell fate and cellular identity</h3>
-    <p>We seek to understand how stable cellular states emerge from dynamic and stochastic molecular processes.</p>
-  </div>
-
-  <div class="home-card">
-    <h3>Genome information flow</h3>
-    <p>We aim to understand how information flows from DNA to RNA, proteins, nuclear organization, and cellular phenotypes.</p>
+    <h3>Cell Fate Dynamics</h3>
+    <p><strong>Stabilization.</strong> How coordinated, probabilistic genome activities generate stable cellular identities across populations.</p>
   </div>
 </div>
 
 {% include section.html %}
 
-## Recent Highlights
+## Technology Platforms
 
-<div class="home-highlight">
-  <strong>Single-cell nascent transcription</strong>
-  <p>Our recent work develops scFLUENT-seq to reveal sparse genome usage and transcriptional plasticity in individual cells.</p>
-</div>
+We integrate complementary methods across molecular, spatial, cellular, and theoretical scales:
 
-<div class="home-highlight">
-  <strong>Nuclear RNA homeostasis</strong>
-  <p>We study how nuclear RNA homeostasis coordinates cell fate, vitality, transcription, and genome organization at the systems level.</p>
-</div>
-
-<div class="home-highlight">
-  <strong>Repetitive elements and 3D genome organization</strong>
-  <p>We investigate how L1 and B1/Alu repeats encode structural principles for chromatin compartmentalization.</p>
-</div>
+- single-cell genomics;
+- live-cell and super-resolution imaging;
+- electron microscopy;
+- biochemical reconstitution;
+- CRISPR genome engineering;
+- computational analysis;
+- artificial intelligence;
+- theoretical modeling.
 
 {% include section.html %}
 
-## Explore XShen Lab
+## Selected Recent Highlight
 
-<div class="home-grid">
-  <div class="home-card">
-    <h3><a href="research/">Research</a></h3>
-    <p>Learn about our major research directions.</p>
-  </div>
-
-  <div class="home-card">
-    <h3><a href="publications/">Publications</a></h3>
-    <p>Browse selected publications and the full publication list by year and research theme.</p>
-  </div>
-
-  <div class="home-card">
-    <h3><a href="team/">Members</a></h3>
-    <p>Meet current lab members and alumni.</p>
-  </div>
-
-  <div class="home-card">
-    <h3><a href="software/">Software</a></h3>
-    <p>Access public pipelines, protocols, and reproducible workflows.</p>
-  </div>
-
-  <div class="home-card">
-    <h3><a href="blog/">Blogs</a></h3>
-    <p>Read lab news, updates, activities, and perspectives.</p>
-  </div>
-
-  <div class="home-card">
-    <h3><a href="join-us/">Join Us</a></h3>
-    <p>Find opportunities to join the lab and contact us.</p>
-  </div>
+<div class="home-highlight">
+  <strong>scFLUENT-seq reveals sparse and probabilistic genome usage</strong>
+  <p>
+    scFLUENT-seq directly measures real-time genome usage in individual cells. The 2025 study found that each cell actively transcribes a cell-type-dependent fraction of approximately 0.02%–3.1% of the genome, while cell populations collectively explore broader genomic landscapes. This work connects stochastic transcriptional diversity with cellular plasticity and the stabilization of cell fate.
+  </p>
+  <p><a href="{{ '/publications/2025-scfluent-seq/' | relative_url }}">Explore the scFLUENT-seq publication</a></p>
 </div>
-
-{% include section.html %}
-
-## Join Us
-
-We welcome motivated students and researchers with backgrounds in molecular biology, genomics, RNA biology, chromatin biology, single-cell technologies, bioinformatics, biophysics, mathematics, and computational biology.
-
-[Explore opportunities to join the lab](join-us/).

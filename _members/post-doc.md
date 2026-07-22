@@ -1,7 +1,7 @@
 ---
 name: Name 中文名
 role: postdoc
-image: images/members/default.jpg
+image: images/fallback.svg
 description: Postdoctoral Fellow
 affiliation: School of Basic Medicine, Tsinghua University
 links:

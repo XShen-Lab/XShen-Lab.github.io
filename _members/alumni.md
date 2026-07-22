@@ -1,7 +1,7 @@
 ---
 name: Name 中文名
 role: alumni
-image: images/members/default.jpg
+image: images/fallback.svg
 description: Alumni
 affiliation: Former member, XShen Lab
 ---

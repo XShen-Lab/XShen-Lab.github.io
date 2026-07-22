@@ -5,6 +5,8 @@ nav:
   tooltip: Members of the XShen Lab
 ---
 
+<p class="right"><small><a href="{{ '/zh/people/' | relative_url }}">中文</a></small></p>
+
 # People
 
 The XShen Lab brings together researchers with backgrounds in molecular cell biology, genomics, bioinformatics, biophysics, mathematics, and computational biology.

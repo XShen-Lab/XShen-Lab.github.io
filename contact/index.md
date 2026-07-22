@@ -2,6 +2,8 @@
 title: Contact
 ---
 
+<p class="right"><small><a href="{{ '/zh/contact/' | relative_url }}">中文</a></small></p>
+
 # {% include icon.html icon="fa-regular fa-envelope" %}Contact
 
 **XShen Lab**  

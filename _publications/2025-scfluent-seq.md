@@ -32,3 +32,22 @@ data:
 
 featured: true
 ---
+
+# {{ page.title }}
+
+**{{ page.authors }}**<br>
+*{{ page.journal }}* {{ page.volume }} ({{ page.year }}): {{ page.pages }}
+
+<img src="{{ page.image | relative_url }}" alt="Graphical abstract for {{ page.title | escape }}">
+
+{{ page.summary }} The reported genome-usage range is cell-type dependent.
+
+> **Key measurement:** {{ page.metric }}
+
+- [View article]({{ page.doi }})
+
+## Data
+
+{% for dataset in page.data %}
+- [{{ dataset.label }}]({{ dataset.url }})
+{% endfor %}
