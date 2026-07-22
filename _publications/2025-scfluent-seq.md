@@ -9,9 +9,8 @@ year: 2025
 date: 2025-09-26
 doi: "https://doi.org/10.1016/j.cell.2025.09.003"
 
-thumbnail: "/assets/publications/2025-scfluent-seq/thumbnail.webp"
-graphical_abstract: "/assets/publications/2025-scfluent-seq/graphical-abstract.webp"
-pdf: "/assets/publications/2025-scfluent-seq/scfluent-seq-cell-2025.pdf"
+image: "/images/publications/2025-scfluent-seq/graphical-abstract.webp"
+pdf: "/files/publications/2025-scfluent-seq/scfluent-seq-cell-2025.pdf"
 
 summary: "scFLUENT-seq reveals sparse and stochastic genome usage in individual cells and links transcriptional diversity to cellular plasticity."
 
