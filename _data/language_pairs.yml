@@ -1,0 +1,44 @@
+- en_page: /
+  zh_page: /zh/
+  en_href: /
+  zh_href: /zh/
+
+- en_page: /research/
+  zh_page: /zh/research/
+  en_href: /research/
+  zh_href: /zh/research/
+
+- en_page: /team/
+  zh_page: /zh/people/
+  en_href: /team/
+  zh_href: /zh/people/
+
+- en_page: /publications/
+  zh_page: /zh/publications/
+  en_href: /publications/
+  zh_href: /zh/publications/
+
+- en_page: /Resources/
+  zh_page: /zh/resources/
+  en_href: /Resources/
+  zh_href: /zh/resources/
+
+- en_page: /software/
+  zh_page: /zh/software/
+  en_href: /software/
+  zh_href: /zh/software/
+
+- en_page: /join-us/
+  zh_page: /zh/join-us/
+  en_href: /join-us/
+  zh_href: /zh/join-us/
+
+- en_page: /contact/
+  zh_page: /zh/contact/
+  en_href: /contact/
+  zh_href: /zh/contact/
+
+- en_page: /members/xiaohua-shen.html
+  zh_page: /zh/people/xiaohua-shen.html
+  en_href: /members/xiaohua-shen.html
+  zh_href: /zh/people/xiaohua-shen/

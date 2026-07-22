@@ -44,6 +44,10 @@
 {% assign updated = page.last_modified_at | date_to_xmlschema %}
 
 {% assign feed = "feed.xml" | absolute_url %}
+{% assign og_locale = "en_US" %}
+{% if page.lang == "zh-CN" %}
+  {% assign og_locale = "zh_CN" %}
+{% endif %}
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -59,7 +63,7 @@
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ url }}">
 <meta property="og:image" content="{{ share }}">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="{{ og_locale }}">
 
 <meta property="twitter:title" content="{{ title }}">
 <meta property="twitter:description" content="{{ description }}">

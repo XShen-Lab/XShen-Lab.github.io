@@ -1,0 +1,12 @@
+{% assign language_pair = nil %}
+{% for pair in site.data.language_pairs %}
+  {% if pair.en_page == page.url or pair.zh_page == page.url %}
+    {% assign language_pair = pair %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if language_pair %}
+  <link rel="alternate" hreflang="en" href="{{ language_pair.en_href | absolute_url }}">
+  <link rel="alternate" hreflang="zh-CN" href="{{ language_pair.zh_href | absolute_url }}">
+{% endif %}
