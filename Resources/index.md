@@ -5,6 +5,8 @@ nav:
   tooltip: Pipelines, protocols, and lab resources
 ---
 
+<p class="right"><small><a href="{{ '/zh/resources/' | relative_url }}">中文</a></small></p>
+
 # Resources
 
 The XShen Lab develops and maintains analysis pipelines, experimental protocols, and documentation for studying nuclear RNA, genome organization, transcriptional regulation, and cell fate.

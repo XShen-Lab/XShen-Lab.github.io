@@ -5,6 +5,8 @@ nav:
   tooltip: Software, protocols, and workflows
 ---
 
+<p class="right"><small><a href="{{ '/zh/software/' | relative_url }}">中文</a></small></p>
+
 # Software
 
 We develop and maintain computational workflows for genomics, transcriptomics, single-cell genomics, and multi-omics analysis.

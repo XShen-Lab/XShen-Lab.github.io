@@ -5,6 +5,8 @@ nav:
   tooltip: Opportunities to join the XShen Lab
 ---
 
+<p class="right"><small><a href="{{ '/zh/join-us/' | relative_url }}">中文</a></small></p>
+
 # Join Us
 
 The XShen Lab welcomes motivated students and researchers interested in nuclear organization, genome regulation, transcription, noncoding RNA, single-cell genomics, and cell fate.

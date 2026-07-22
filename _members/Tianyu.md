@@ -1,7 +1,7 @@
 ---
 name: 黄天羽
 role: undergrad
-image: images/members/huangtianyu.jpg
+image: images/fallback.svg
 description: Undergraduate Student
 affiliation: School of Life Sciences, Tsinghua University
 ---

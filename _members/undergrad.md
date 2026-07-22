@@ -1,7 +1,7 @@
 ---
 name: Name 中文名
 role: undergrad
-image: images/members/default.jpg
+image: images/fallback.svg
 description: Undergraduate Student
 affiliation: Tsinghua University
 ---

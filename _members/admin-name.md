@@ -1,7 +1,7 @@
 ---
 name: Name 中文名
 role: admin
-image: images/members/default.jpg
+image: images/fallback.svg
 description: Administrative Assistant
 affiliation: XShen Lab, Tsinghua University
 links:

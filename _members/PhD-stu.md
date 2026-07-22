@@ -1,7 +1,7 @@
 ---
 name: Name 中文名
 role: phd
-image: images/members/default.jpg
+image: images/fallback.svg
 description: Graduate Student
 affiliation: School of Basic Medicine, Tsinghua University
 links:
