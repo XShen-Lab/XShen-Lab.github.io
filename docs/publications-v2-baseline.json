@@ -1,0 +1,278 @@
+{
+  "schema_version": 2,
+  "source_file": "_includes/full-publications.html",
+  "record_count": 52,
+  "entity_decoding": "CGI.unescapeHTML; no whitespace normalization",
+  "checksum": {
+    "algorithm": "SHA-256",
+    "sequence_serialization": "UTF-8 citations joined by LF with no trailing LF",
+    "full_sequence_sha256": "2526131b41eae70abd0d7e1d4509543c590e9b9246771471e193cbe6b7bcde52"
+  },
+  "current_public_urls": [
+    "/publications/",
+    "/zh/publications/",
+    "/publications/2025-scfluent-seq/"
+  ],
+  "records": [
+    {
+      "current_index": 1,
+      "citation": "Ma S*, Hong Y, Chen J, Xu J, Shen X*. Single-cell nascent transcription reveals sparse genome usage and plasticity. Cell. 2025. doi: 10.1016/j.cell.2025.09.003. (* co-corresponding).",
+      "sha256": "e57d457c41a2b49837cb6cf7a8a9962ae8e375d04c336214a39d8e28201b476a"
+    },
+    {
+      "current_index": 2,
+      "citation": "Hong Y, Shen X. Transposon exonization generates new protein-coding sequences. Mol Cell. 2025. doi: 10.1016/j.molcel.2024.12.009.",
+      "sha256": "d0e3d2e497475761c30716eb61c9c2734a2557e0b3fbcdbfb19fb01e0e9917b4"
+    },
+    {
+      "current_index": 3,
+      "citation": "Y Zhou, C Tong, Z Shi, Y Zhang, X Xiong, X Shen, X Li, Y Yin. Condensation of ZFP207 and U1 snRNP promotes spliceosome assembly. Nature Structural & Molecular Biology 2025. 32 (6), 1038-1049",
+      "sha256": "81ed1aad7f959b7457e15dcb46bbd4c2194f2c652b688a4d06f0434ef4dd35d3"
+    },
+    {
+      "current_index": 4,
+      "citation": "New eyes and new landscapes. Cell. 2024 Aug; 187(17): 4434. Shen X featured her voice alongside several other scientists.",
+      "sha256": "413f36dc85cb0a36f01ddbc333c55db329dd2a9c64bc73ecd97dd1b6535a3c33"
+    },
+    {
+      "current_index": 5,
+      "citation": "Han X, Xing L, Hong Y, Zhang X, Hao B, Lu J.Y, Huang M, Wang Z, Ma S, Zhan G, Li T, Hao X, Tao Y, Li G, Zhou S, Shao W, Zeng Y, Ma D, Zhang W, Xie Z, Deng H, Yan J, Deng W, and Shen X*. Nuclear RNA homeostasis promotes systems-level coordination for cell fate and vitality. Cell Stem Cell. 2024. doi: 10.1016/j.stem.2024.03.015",
+      "sha256": "ec8ebf360cda718fce9173f3abfc81efbe6d2335a63db7a7bffbbc504579e1c0"
+    },
+    {
+      "current_index": 6,
+      "citation": "Xiufeng Li, Luyao Bie, Yang Wang, Yaqiang Hong, Ziqiang Zhou, Yiming Fan, Xiaohan Yan, Yibing Tao, Chunyi Huang, Yongyan Zhang, Xueyan Sun, John Xiao He Li, Jing Zhang, Zai Chang, Qiaoran Xi, Anming Meng, Xiaohua Shen, Wei Xie, Nian Liu. LINE-1 transcription activates long-range gene expression. NATURE GENETICS 2024. 56 (7), 1494-1502",
+      "sha256": "e8942ba32b4b08dd6bb9589ae28f63dca021968f2cbf5d6a361fb8a0ff18abcf"
+    },
+    {
+      "current_index": 7,
+      "citation": "Yaqiang Hong, Luyao Bie, Tao Zhang, Xiaohan Yan, Guangpu Jin, Zhuo Chen, Yang Wang, Xiufeng Li, Gaofeng Pei, Yongyan Zhang, Yantao Hong, Liang Gong, Pilong Li, Wei Xie, Yanfen Zhu, Xiaohua Shen, Nian Liu. SAFB restricts contact domain boundaries associated with L1 chimeric transcription. Molecular cell 2024. 84 (9), 1637-1650. e10",
+      "sha256": "8972c9a40bf76a4968137ac30af4c5ea887d4ebb6a9659d3b3745a6ee36c330b"
+    },
+    {
+      "current_index": 8,
+      "citation": "Li S, Shen X. Long interspersed nuclear element 1 and B1/Alu repeats blueprint genome compartmentalization. Curr Opin Genet Dev. 2023. doi: 10.1016/j.gde.2023.102049. ",
+      "sha256": "ae479cd337be974d0703d2443788b7150cab5ebe775350aa24679f15e379c403"
+    },
+    {
+      "current_index": 9,
+      "citation": "Y Yin, X Shen. Noncoding RNA-chromatin association: Functions and mechanisms. Fundamental Research 2023. 3 (5), 665-675",
+      "sha256": "b046491624af62b0e1c8fc570ff4a8f7be3615c9941786610667fe857cde01e6"
+    },
+    {
+      "current_index": 10,
+      "citation": "Shao W, Bi X, Pan Y, Gao B, Wu J, Yin Y, Liu Z, Zhang W, Jiang X, Ren W, Xu Y, Wu Z, Wang K, Zhan G, Lu Y, Han X, Li T, Wang J, Li G, Deng H, Li B*, Shen X*. Phase separation of RNA-binding protein promotes polymerase engagement and transcription. Nature Chemical Biology. 2022 Jan;18(1):70-80. (* co-corresponding).",
+      "sha256": "e2d84d30868fdd263ba837ca35c83463dc390d839055fd05d76b318f44fb4ee2"
+    },
+    {
+      "current_index": 11,
+      "citation": "Xin Huang, Nazym Bashkenova, Yantao Hong, Cong Lyu, Diana Guallar, Zhe Hu, Vikas Malik, Dan Li, Hailin Wang, Xiaohua Shen, Hongwei Zhou, Jianlong Wang. A TET1-PSPC1-Neat1 molecular axis modulates PRC2 functions in controlling stem cell bivalency. Cell reports 2022. 39 (10)",
+      "sha256": "54d6d906e80eeb0971c9c73fc6f7ec44df1cf4d85aa490a0368e9706cdcb4764"
+    },
+    {
+      "current_index": 12,
+      "citation": "Zhen Sun, Hua Yu, Jing Zhao, Tianyu Tan, Hongru Pan, Yuqing Zhu, Lang Chen, Cheng Zhang, Li Zhang, Anhua Lei, Yuyan Xu, Xianju Bi, Xin Huang, Bo Gao, Longfei Wang, Cristina Correia, Ming Chen, Qiming Sun, Yu Feng, Li Shen, Hao Wu, Jianlong Wang, Xiaohua Shen, George Q Daley, Hu Li, Jin Zhang.  LIN28 coordinately promotes nucleolar/ribosomal functions and represses the 2C-like transcriptional program in pluripotent stem cells. Protein & cell 2022. 13 (7), 490-512.",
+      "sha256": "14bc2c2da9def90af1be85bcb35b95f94dc13796372fca6ca537ffc6d0fbaa77"
+    },
+    {
+      "current_index": 13,
+      "citation": "Lu J.Y.#, Chang L#, Li T#, Wang T, Yin Y, Zhan G, Han X, Zhang K, Tao Y, Percharde M, Wang L, Peng Q, Yan P, Zhang H, Bi X, Shao W, Hong Y, Wu Z, Ma R, Wang P, Li W, Zhang J, Chang Z, Hou Y, Zhu B, Ramalho-Santos M, Li P, Xie W, Na J, Sun Y*, Shen X*.  Homotypic clustering of L1 and B1/Alu repeats compartmentalizes the 3D genome. Cell Research. 2021 Jun;31(6):613-630. doi: 10.1038/s41422-020-00466-6. (* co-corresponding).",
+      "sha256": "b739cfb25aa9a481c01069e16a783ea2a4bf5e1c4b3df8071d26345278a5403d"
+    },
+    {
+      "current_index": 14,
+      "citation": "Yan P, Lu JY, Niu J, Gao J, Zhang MQ, Yin Y, Shen X. LncRNA Platr22 promotes super-enhancer activity and stem cell pluripotency. J Mol Cell Biol. 2021 Aug 4;13(4):295-313.",
+      "sha256": "841d83ac952fa4fe57a515122b412ac437f9c3b17a3d93e2df7d76fe8644cade"
+    },
+    {
+      "current_index": 15,
+      "citation": "Yin Y*, Lu JY, Zhang X, Shao W, Xu Y, Li P, Hong Y, Cui L, Shan G, Tian B, Zhang Q, Shen X*. (2020) U1 snRNP regulates chromatin retention of noncoding RNAs. Nature. 580(7801):147-150. (* co-corresponding)",
+      "sha256": "7993c9fd9883b80b1550fea6aaab6080f5ae434b272086d30c43a60766b53a6f"
+    },
+    {
+      "current_index": 16,
+      "citation": "Lu JY, Shao W, Chang L, Yin Y, Li T, Zhang H, Hong Y, Percharde M, Guo L, Wu Z, Liu L, Liu W, Yan P, Ramalho-Santos M, Sun Y, Shen X. (2020) Genomic repeats categorize genes with distinct functions for orchestrated regulation. Cell Reports. 30(10):3296-3311. doi: 10.1016/j.celrep.2020.02.048.",
+      "sha256": "d575d8cb4dd765f347b075a60e12324977353f483c84a5e94ec3875e1681906a"
+    },
+    {
+      "current_index": 17,
+      "citation": "Zhang H*, Wu Z, Lu JY, Huang B, Zhou H, Xie W, Wang J, Shen X*. (2020) DEAD-box helicase 18 counteracts PRC2 to safeguard ribosomal DNA in pluripotency regulation. Cell Reports. 2020. 30(1):81-97. (* co-corresponding)",
+      "sha256": "1cf5b32b2c311cbcbe87160e0a1ffd571422d47181c8f62d1c1d26cd8b0b00e7"
+    },
+    {
+      "current_index": 18,
+      "citation": "Bi X., Shen X. (2020) Transcriptome-Wide Mapping of Protein–RNA Interactions. In: Ørom U. (eds) RNA-Chromatin Interactions. Methods in Molecular Biology, vol 2161. Humana, New York, NY.",
+      "sha256": "63fd93b96409ac66a777cdae7a53aae1d797eaa2afcf1eb9f0e97514e2ee8c4c"
+    },
+    {
+      "current_index": 19,
+      "citation": "Yin Y., Shen X. (2020) Identification of cis-Elements for RNA Subcellular Localization Through REL-seq. In: Ørom U. (eds) RNA-Chromatin Interactions. Methods in Molecular Biology, vol 2161. Humana, New York, NY.",
+      "sha256": "5e7ff704b33bd1b2f02409d09fe7fb0b128a93df24c2b3255ee3647b370397d1"
+    },
+    {
+      "current_index": 20,
+      "citation": "Bi X*, Zhang X, Shen X*. (2020) Transcriptome-Wide Profiling of Protein-RNA Interactions by Cross-Linking and Immunoprecipitation Mediated by FLAG-Biotin Tandem Purification. J. Vis. Exp. (159), e60730, doi:10.3791/60730 (2020). (* co-corresponding)",
+      "sha256": "f2cf4b8b4c11d1588424e82ccdb4833b81d6febd6931a8f652602a1af5afd7ca"
+    },
+    {
+      "current_index": 21,
+      "citation": "Zhao J., Wang M., Chang L., Yu J., Song A., Liu C., Huang W., Zhang T., Wu X., Shen X., Zhu B., Li G. (2020) RYBP/YAF2-PRC1 Complexes and Histone H1-dependent Chromatin Compaction Mediate Propagation of H2AK119ub1 During Cell Division. Nat Cell Biol. 2020 Apr;22(4):439-452.",
+      "sha256": "cb88fa08bc7cd48819709893b20b1c8db6854add9aecbdbd03a65b49d7be0f68"
+    },
+    {
+      "current_index": 22,
+      "citation": "Jing Niu, Xu Zhang, Guipeng Li, Pixi Yan, Qing Yan, Qionghai Dai, Dayong Jin, Xiaohua Shen, Jichang Wang, Michael Q Zhang, Juntao Gao. A novel cytogenetic method to image chromatin interactions at subkilobase resolution: Tn5 transposase-based fluorescence in situ hybridization. Journal of genetics and genomics 2020. 47 (12), 727-735",
+      "sha256": "018b2abc88281f1a1b98adee3714a2ff639665498648be4ff79c3205831f5665"
+    },
+    {
+      "current_index": 23,
+      "citation": "Liu L, Lu J.Y, Xing X, Li T, Li F, Yang X, Shen X. (2019) IDH1 fine-tunes cap-dependent translation initiation. J Mol Cell Biol. 11(10):816-828.",
+      "sha256": "a3421f50ba7c45abecb073b4ad7c2f0d5124f9fadbeb3cba5bff7abb0f030baf"
+    },
+    {
+      "current_index": 24,
+      "citation": "Han X, Zhang J, Liu Y, Fan X, Ai S, Luo Y, Li X, Jin H, Luo S, Zheng H, Yue Y, Chang Z, Yang Z, Tang F, He A*, Shen X*. (2019) The lncRNA Hand2os1/Uph locus orchestrates heart development through regulation of precise expression HAND2. Development. 2019. 146, dev176198. (* co-corresponding)",
+      "sha256": "67769f1f5c269a6f0be69830e9572873a346c9e7ebe260bb7ab2c53f545133b1"
+    },
+    {
+      "current_index": 25,
+      "citation": "Bi X, Xu Y, Li T, Li X, Li W, Shao W, Wang K, Zhan G, Wu Z, Liu W, Yin Y, Lu J.Y., Wang L, Zhao J, Wu J, Na J, Li G, Li P, Shen X. (2019) RNA targets ribosome biogenesis factor WDR43 to chromatin for transcription and pluripotency control. Mol Cell. 75: 102-116.",
+      "sha256": "490f6dd5bc0ac1fe574b51768cb201e78c37a1778954048194718b5369c13f20"
+    },
+    {
+      "current_index": 26,
+      "citation": "Liu L, Li T, Song G, He Q, Yin Y, Lu J.Y., Bi X, Wang K, Luo S, Chen YS, Yang Y, Sun BF, Yang YG, Wu J, Zhu H*, Shen X*. (2019) Insight into novel RNA-binding activities via large-scale analysis of lncRNA-bound proteome and IDH1-bound transcriptome. Nucleic Acids Res. 47(5): 2244-2262. (*co-corresponding)",
+      "sha256": "85c720c0b5701c4ce985041a02add64b488e60225b16eb64c73acb4b52685b4c"
+    },
+    {
+      "current_index": 27,
+      "citation": "Percharde M, Lin CJ, Yin Y, Guan J, Peixoto GA, Bulut-Karslioglu A, Biechele S, Huang B, Shen X, Ramalho-Santos M. (2018) A LINE1-Nucleolin Partnership Regulates Early Development and ESC Identity. Cell. 174(2):391-405.",
+      "sha256": "e128fe9a0fbc1454b8f7ba3cb6dd907c3104b62ff2f6d87e23259dedbaab2145"
+    },
+    {
+      "current_index": 28,
+      "citation": "Han X, Luo S, Peng G, Lu JY, Cui G, Liu L, Yan P, Yin Y, Liu W, Wang R, Chang Z, Na J, Jing N*, Shen X*. (2018) Mouse knockout models reveal largely dispensable but context-dependent functions of lncRNAs during development. J Mol Cell Biol. 10(2):175-178. (* co-corresponding)",
+      "sha256": "8255e25c2afbc41e87eea9e355ff20abe9e158d87f5edd22c2e1d071f02bf877"
+    },
+    {
+      "current_index": 29,
+      "citation": "Guallar D, Bi X, Pardavila JA, Huang X, Saenz C, Shi X, Zhou H, Faiola F, Ding J, Haruehanroengra P, Yang F, Li D, Sanchez-Priego C, Saunders A, Pan F, Valdes VJ, Kelley K, Blanco MG, Chen L, Wang H, Sheng J, Xu M, Fidalgo M, Shen X, Wang J. (2018) RNA-dependent chromatin targeting of TET2 for endogenous retrovirus control in pluripotent stem cells. Nat Genet. 50(3):443-451. ",
+      "sha256": "b2d81321a7229bb3ff9288f24ea785e74e277530afd989d4383c139b547ef896"
+    },
+    {
+      "current_index": 30,
+      "citation": "Yan P, Luo S, Lu JY, Shen X. (2017) Cis- and trans-acting lncRNAs in pluripotency and reprogramming. Current Opinion in Genetics & Development. 46:170-178. ",
+      "sha256": "1f19aeadfc4d28eaee2645042d5a91006c30015f5fd62e78621e67f1553c3cdb"
+    },
+    {
+      "current_index": 31,
+      "citation": "Luo S, Lu J, Liu L, Yin Y, Han X, Xu R, Wu B, Liu W, Yan P, Shao W, Chen C, Lu Z, Na J, Tang F, Wang J, Zhang Y.E. and Shen X. (2016) Divergent lncRNAs regulate gene expression and lineage differentiation in pluripotent cells. Cell Stem Cell. 18(5):637-52.",
+      "sha256": "6b7284f9b1f58df0054421a11b847cfcd108a8d42c1a836bb70b8a06fce0ec46"
+    },
+    {
+      "current_index": 32,
+      "citation": "Yin Y, Yan P, Lu J, Song G, Zhu Y, Li Z, Zhao Y, Shen B, Huang X, Zhu H, Orkin SH, Shen X. (2015) Opposing roles for the lncRNA Haunt and its genomic locus in regulating HOXA gene activation during embryonic stem cell differentiation. Cell Stem Cell. 16(5):504-16.",
+      "sha256": "6a4cdf0060823863d3e141eff3e55ae3c495231905f8d8cf64a865e5eb194ba6"
+    },
+    {
+      "current_index": 33,
+      "citation": "Ding J, Huang X, Shao N, Zhou H, Lee D, Faiola F, Fidalgo M, Guallar D, Saunders A, Shliaha P, Wang H, Waghray A, Papatsenko D, Sánchez-Priego C, Li D, Yuan Y, Lesmischka I, Shen L, Kelley K, Deng H, Shen X, Wang J. (2015) Tex10 coordinates epigenetic control of the super-enhancer activity in pluripotency and reprogramming. Cell Stem Cell. 16(6):653-68.",
+      "sha256": "bf29f5ae85ae53a72582dc47abbdb721dc0554c4e2bf6b5abd1a5104bdb14fc3"
+    },
+    {
+      "current_index": 34,
+      "citation": "Das PP, Hendrix DA, Apostolou E, Buchner AH, Canver MC, Beyaz S, Ljuboja D, Kuintzle R, Kim W, Karnik R, Shao Z, Xie H, Xu J, De Los Angeles A, Zhang Y, Choe J, Jun DL, Shen X, Gregory RI, Daley GQ, Meissner A, Kellis M, Hochedlinger K, Kim J, Orkin SH. (2015) PRC2 Is Required to Maintain Expression of the Maternal Gtl2-Rian-Mirg Locus by Preventing De Novo DNA Methylation in Mouse Embryonic Stem Cells. Cell Rep. 12(9):1456-70.",
+      "sha256": "6921bcc64eb5313b0ee1db9e75754fcc8fa00373ca8232d1ca9ca253f6558d2d"
+    },
+    {
+      "current_index": 35,
+      "citation": "Yuan G, Ma B, Yuan W, Zhang Z, Chen P, Ding X, Feng L, Shen X, Chen S, Li G, Zhu B. (2013) Histone H2A ubiquitination inhibits the enzymatic activity of H3 lysine 36 methyltransferases. J Biol Chem. 288(43):30382-42.",
+      "sha256": "e1ffe8bc1a9e504edec3728621080854f2a0fee634eb6dd5970272938626e826"
+    },
+    {
+      "current_index": 36,
+      "citation": "Sakaki K, Yoshina S, Shen X, Han J, DeSantis MR, Xiong M, Mitani S, Kaufman RJ. (2012) RNA surveillance is   required for endoplasmic reticulum homeostasis. Proc Natl Acad Sci USA. 109(21):8079-84.",
+      "sha256": "2cbd0b62f978b0f6fcf829d8bb5f322e53160aab8d4f8dc73a8751604f5aa8e0"
+    },
+    {
+      "current_index": 37,
+      "citation": "He A, Shen X, Ma Q, Cao J, Gise AV, Zhou P, Wang G, Marquez VE, Orkin SH, Pu WT. (2012) PRC2 directly       methylates GATA4 and represses its transcriptional activity. Genes & Development.  26: 37-42.",
+      "sha256": "538aa31d0026897069d36925916f8b74b1548462c175a69893814d177903c3ce"
+    },
+    {
+      "current_index": 38,
+      "citation": "Lin W, Cao J, Liu J, Beshiri ML, Fujiwara Y, Francis J, Cherniack AD, Geisen C, Blair LP, Zou MR, Shen X, Kawamori D, Liu Z, Grisanzio C, Watanabe H, Minamishima YA, Zhang Q, Kulkarni RN, Signoretti S, Rodig SJ, Bronson RT, Orkin SH, Tuck DP, Benevolenskaya EV, Meyerson M, Kaelin WG Jr, Yan Q. (2011) Loss of the retinoblastoma binding protein 2 (RBP2) histone demethylase suppresses tumorigenesis in mice lacking Rb1 or Men1. Proc Natl Acad Sci USA. 108(33):13379-86.",
+      "sha256": "78f5764d8ac785fa952dc44b3c79a77562cc328b36e36bbe1a9c2576cbc2ca64"
+    },
+    {
+      "current_index": 39,
+      "citation": "Wilson BG, Wang X, Shen X, McKenna ES, Lemieux ME, Cho Y, Koellhoffer EC, Pomeroy SL, Orkin SH, Roberts CWM. (2010) Epigenetic antagonism between Polycomb and SWI/SNF complexes during oncogenic transformation. Cancer Cell. 18(4):316-28. ",
+      "sha256": "7d6cad48250340443c208b8b9922c37aa456157583d01b1d5b626a0ceb872c8d"
+    },
+    {
+      "current_index": 40,
+      "citation": "Shen X, Kim W, Fujiwara Y, Simon MD, Liu Y, Mysliwiec MR, Yuan G, Lee Y, Orkin SH. (2009) Jumonji modulates Polycomb activity and self-renewal versus differentiation of stem cells. Cell. 2009. 139(7): 1303-1314. ",
+      "sha256": "ce23ac28520209f789606f937c4c24f0d1706cacaa1d8ef9a69724077ccece77"
+    },
+    {
+      "current_index": 41,
+      "citation": "Shen X, Orkin SH. (2009) Glimpses of the epigenetic landscape. Cell Stem Cell.  4(1): 1-2.  ",
+      "sha256": "b9048107863d9db0d6434a2f2a5e2ad98aeebf7d48c7961049c4e03785cd6671"
+    },
+    {
+      "current_index": 42,
+      "citation": "Orkin SH, Wang J, Kim J, Chu J, Rao S, Theunissen TW, Shen X, Levasseur DN. (2008) The transcriptional network controlling pluripotency in ES cells. Cold Spring Harb Symp Quant Biol. 73: 195-202. ",
+      "sha256": "8250c4cbb821c7ad85ce1cfa0e9b65cdd1359b1d6a6061d9c7967a232439c7f9"
+    },
+    {
+      "current_index": 43,
+      "citation": "Shen X, Liu Y, Hsu Y, Fujiwara Y, Kim J, Mao X, Yuan G, and Orkin SH. (2008) EZH1 mediates methylation on histone H3 lysine 27 and complements EZH2 in maintaining stem cell identity and executing pluripotency. Mol Cell. 32(4):491-502. ",
+      "sha256": "493238125d14b24a8d48e73fcc85b9fec2ec2ceb4676f0de8c8c7c99451f7595"
+    },
+    {
+      "current_index": 44,
+      "citation": "Kim J, Chu J, Shen X, Wang J, Orkin SH. (2008) An extended transcriptional network for pluripotency of embryonic stem cells. Cell. 132(6): 1049-61. ",
+      "sha256": "e66d40f20439dd93b600a39589c34cf2c6f1bc8eb1ee1952d805b26f03860828"
+    },
+    {
+      "current_index": 45,
+      "citation": "Wang J, Rao S, Chu J, Shen X, Levasseur DN, Theunissen TW, Orkin SH. (2006) A protein interaction network for pluripotency of embryonic stem cells. Nature. 444(7117):364-8. ",
+      "sha256": "0a5be391b7884ba7081a9550099010c68cc166f9b4fdcc897f3ac80f2323f319"
+    },
+    {
+      "current_index": 46,
+      "citation": "Zhang K, Shen X, Wu J, Sakaki K, Saunders T, Rutkowski DT, Back SH, Kaufman RJ. (2006) Endoplasmic reticulum stress activates cleavage of CREBh to induce a systemic inflammatory response. Cell. 124(3): 587-99. ",
+      "sha256": "d0a34f8594f243051bc9445212c166059257930eabb3ad0b82631b2c639921ae"
+    },
+    {
+      "current_index": 47,
+      "citation": "Shen X, Ellis RE, Sakaki K and Kaufman RJ. (2005) Genetic interactions due to constitutive and inducible gene regulation mediated by the unfolded protein response in C. elegans. PLoS Genetics. 1(3): e37.",
+      "sha256": "f0718427ae79353c68699b3c9931ed3613629a33601a87bcb97834a581ca4f99"
+    },
+    {
+      "current_index": 48,
+      "citation": "Shen X, Zhang K, and Kaufman RJ. (2004) The unfolded protein response - a stress signaling pathway of the endoplasmic reticulum. J Chem Neuroanat. 28(1-2):79-92. ",
+      "sha256": "70b2f57c01281f0c6b31848ff21b8bc11b4ea0d3f42b2060f960a08d6fec5ccf"
+    },
+    {
+      "current_index": 49,
+      "citation": "Lee K, Tirasophon W, Shen X, Michalak M, Prywes R, Okada T, Yoshida H, Mori K, and Kaufman RJ. (2002) IRE1-mediated unconventional mRNA splicing and S2P-mediated ATF6 cleavage merge to regulate XBP1 in signaling the unfolded protein response. Genes Dev. 16: 452-466. ",
+      "sha256": "b020920263471842857e6634ad98673c1bdf230c65fd92b4b8b9baa856a8cce0"
+    },
+    {
+      "current_index": 50,
+      "citation": "Kaufman RJ, Scheuner D, Schroder M, Shen X, Lee K, Liu C and Arnold SM. (2002) The unfolded protein response in nutrient sensing and differentiation. Nat Rev Mol Cell Biol. 3(6):411-21.",
+      "sha256": "e8ec179f7494f50fb51a14943ce2f425e54a75ddb8be06337fe52f0ad6274263"
+    },
+    {
+      "current_index": 51,
+      "citation": "Shen X, Ellis RE, Lee K, Liu C, Yang K, Solomon A, Yoshida H, Morimoto R, Kurnit DM, Mori K, and Kaufman RJ. (2001) Complementary signaling pathways regulate the unfolded protein response and are required for C. elegans development. Cell. 107: 893-903. ",
+      "sha256": "438a1a43ad030930496807bdbcc94204e43a2110e160da5ceb6d6ffd32b0692a"
+    },
+    {
+      "current_index": 52,
+      "citation": "Norris SR, Shen X, and DellaPenna D. (1998) Complementation of the Arabidopsis pds1 mutation with the gene encoding p-Hydroxyphenylpyruvate Dioxygenase. Plant Physiol. 117(4): 1317 –1323. ",
+      "sha256": "02236b20f370dc346b142a828ed26b300ebb40beb8b6e6b481c5d8b11a1e856a"
+    }
+  ]
+}
