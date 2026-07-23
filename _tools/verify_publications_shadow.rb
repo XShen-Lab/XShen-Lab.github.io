@@ -12,6 +12,7 @@ LEGACY_PATH = File.join(ROOT, "_includes", "full-publications.html")
 BASELINE_PATH = File.join(ROOT, "docs", "publications-v2-baseline.json")
 DATA_PATH = File.join(ROOT, "_data", "publications.yml")
 DETAIL_PATH = File.join(ROOT, "_publications", "2025-scfluent-seq.md")
+APPROVED_SEQUENCE_SHA256 = "2526131b41eae70abd0d7e1d4509543c590e9b9246771471e193cbe6b7bcde52".freeze
 
 EXPECTED_URLS = [
   "/publications/",
@@ -61,6 +62,12 @@ end
 
 def sequence_sha256(citations)
   Digest::SHA256.hexdigest(citations.join("\n"))
+end
+
+def verify_approved_sequence!(label, citations)
+  actual = sequence_sha256(citations)
+  fail_unless(actual == APPROVED_SEQUENCE_SHA256,
+              "#{label} full-sequence checksum #{actual} does not match approved checksum")
 end
 
 def explicit_doi(citation)
@@ -165,7 +172,10 @@ def shadow_document(citations)
 end
 
 def generate!
+  fail_unless(ENV["ALLOW_PUBLICATION_BASELINE_REGEN"] == "1",
+              "baseline regeneration refused; set ALLOW_PUBLICATION_BASELINE_REGEN=1 explicitly")
   citations = legacy_citations
+  verify_approved_sequence!("legacy bibliography", citations)
   File.write(BASELINE_PATH, JSON.pretty_generate(baseline_document(citations)) + "\n")
   File.write(DATA_PATH, YAML.dump(shadow_document(citations)), encoding: "UTF-8")
   puts "Generated publications v2 baseline and 52-record shadow dataset."
@@ -195,12 +205,15 @@ def verify_baseline!(baseline, citations)
               "baseline public URL assertions changed")
   fail_unless(baseline.dig("checksum", "algorithm") == "SHA-256",
               "baseline checksum algorithm must be SHA-256")
+  fail_unless(baseline.dig("checksum", "full_sequence_sha256") == APPROVED_SEQUENCE_SHA256,
+              "baseline approved full-sequence checksum changed")
   fail_unless(baseline.dig("checksum", "full_sequence_sha256") == sequence_sha256(citations),
               "baseline full-sequence checksum mismatch")
 
   records = baseline["records"]
   fail_unless(records.is_a?(Array) && records.length == 52,
               "baseline must contain exactly 52 records")
+  verify_approved_sequence!("JSON baseline", records.map { |record| record["citation"] })
   records.each_with_index do |record, index|
     order = index + 1
     citation = citations[index]
@@ -227,6 +240,8 @@ def verify_shadow!(shadow, citations)
   records = shadow["records"]
   fail_unless(records.is_a?(Array) && records.length == 52,
               "shadow dataset must contain exactly 52 records")
+  verify_approved_sequence!("canonical shadow dataset",
+                            records.map { |record| record["citation"] })
 
   expected_data = detail_front_matter.fetch("data")
   ids = []
@@ -323,6 +338,7 @@ end
 
 def verify!
   citations = legacy_citations
+  verify_approved_sequence!("legacy bibliography", citations)
   baseline = load_json(BASELINE_PATH)
   shadow = load_yaml(DATA_PATH)
   verify_baseline!(baseline, citations)

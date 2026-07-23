@@ -23,6 +23,9 @@ jobs:
           ruby-version: "3.1"
           bundler-cache: true
 
+      - name: Verify Publications v2 shadow data
+        run: ruby _tools/verify_publications_shadow.rb
+
       - name: Build site
         run: |
           JEKYLL_ENV=production bundle exec jekyll build
