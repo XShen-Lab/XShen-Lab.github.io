@@ -1,4 +1,4 @@
-# Publications v2 Stage A/B Shadow Review
+# Publications v2 Stage A/B Shadow Review and Stage C1 CI Enforcement
 
 ## Scope and result
 
@@ -10,6 +10,10 @@ public URL or rendered publication page is changed.
 The migration preserves all 52 CV records in their existing order. Each
 canonical `citation` is the corresponding legacy `<li>` text after deterministic
 HTML entity decoding only; whitespace and punctuation are not normalized.
+
+Stage C1 makes this existing shadow verification mandatory in both pull-request
+checks and production deployment builds. It does not add a Jekyll plugin or
+change publication rendering.
 
 ## Metadata inventory
 
@@ -83,9 +87,16 @@ deferred until each value has an approved source or explicit editorial decision.
 ## Reproducibility and validation
 
 The baseline records per-citation SHA-256 values and one checksum for the full
-ordered sequence. The verifier regenerates the expected legacy sequence in
-memory, decodes entities deterministically, and checks the JSON baseline and
-YAML shadow data against it.
+ordered sequence. The approved sequence checksum is also embedded in the
+verifier as an independent trust anchor. The verifier regenerates the expected
+legacy sequence in memory, decodes entities deterministically, and requires the
+legacy bibliography, JSON baseline, and YAML shadow data each to match the
+approved checksum.
+
+Both `.github/workflows/on-pull-request.yaml` and
+`.github/workflows/build-site.yaml` run the verifier after Ruby setup and before
+the Jekyll build. A parity failure therefore blocks pull-request validation and
+production deployment.
 
 Run:
 
@@ -98,10 +109,11 @@ git status --short
 ```
 
 The optional generation mode is deterministic and is intended only for
-rebuilding the two derived artifacts from the unchanged approved sources:
+deliberately rebuilding the two derived artifacts from unchanged approved
+sources. It refuses to run unless the maintainer explicitly opts in:
 
 ```bash
-ruby _tools/verify_publications_shadow.rb --generate
+ALLOW_PUBLICATION_BASELINE_REGEN=1 ruby _tools/verify_publications_shadow.rb --generate
 ```
 
 After generation, the verifier must be run normally. Production rendering must
@@ -115,5 +127,8 @@ must remain unused until a separately reviewed implementation stage.
 - `_tools/verify_publications_shadow.rb`
 - `docs/PUBLICATIONS_V2_SHADOW_REVIEW.md`
 
-No existing website, collection, style, layout, configuration, dependency,
-asset, workflow, or deployment file is modified.
+Stage A/B modified no existing website, collection, style, layout,
+configuration, dependency, asset, workflow, or deployment file. Stage C1
+modifies only the verifier, this review document, and the two workflow files
+that gate pull-request and production builds; it does not modify rendering or
+publication metadata.
