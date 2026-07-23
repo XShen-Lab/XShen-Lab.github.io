@@ -1,0 +1,2120 @@
+---
+schema_version: 2
+source:
+  name: X.Shen CV FULL PUBLICATIONS
+  record_count: 52
+  policy: preserve-verbatim-citation
+records:
+- id: pub-2025-scfluent-seq
+  cv_order: 1
+  citation: 'Ma S*, Hong Y, Chen J, Xu J, Shen X*. Single-cell nascent transcription
+    reveals sparse genome usage and plasticity. Cell. 2025. doi: 10.1016/j.cell.2025.09.003.
+    (* co-corresponding).'
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi: 10.1016/j.cell.2025.09.003
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article: https://doi.org/10.1016/j.cell.2025.09.003
+    pdf:
+    data:
+    - label: GSE278775
+      url: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE278775
+    - label: GSE278776
+      url: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE278776
+    - label: GSE278777
+      url: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE278777
+    code: []
+    supplementary: []
+  presentation:
+    featured: true
+    selected: true
+    detail_slug: 2025-scfluent-seq
+  provenance:
+    source_record: 1
+    citation_verbatim: true
+    structured_fields_status: partially-verified
+    notes: []
+- id: pub-cv-002
+  cv_order: 2
+  citation: 'Hong Y, Shen X. Transposon exonization generates new protein-coding sequences.
+    Mol Cell. 2025. doi: 10.1016/j.molcel.2024.12.009.'
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi: 10.1016/j.molcel.2024.12.009
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article: https://doi.org/10.1016/j.molcel.2024.12.009
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 2
+    citation_verbatim: true
+    structured_fields_status: partially-verified
+    notes: []
+- id: pub-cv-003
+  cv_order: 3
+  citation: Y Zhou, C Tong, Z Shi, Y Zhang, X Xiong, X Shen, X Li, Y Yin. Condensation
+    of ZFP207 and U1 snRNP promotes spliceosome assembly. Nature Structural & Molecular
+    Biology 2025. 32 (6), 1038-1049
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 3
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-004
+  cv_order: 4
+  citation: 'New eyes and new landscapes. Cell. 2024 Aug; 187(17): 4434. Shen X featured
+    her voice alongside several other scientists.'
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 4
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-005
+  cv_order: 5
+  citation: 'Han X, Xing L, Hong Y, Zhang X, Hao B, Lu J.Y, Huang M, Wang Z, Ma S,
+    Zhan G, Li T, Hao X, Tao Y, Li G, Zhou S, Shao W, Zeng Y, Ma D, Zhang W, Xie Z,
+    Deng H, Yan J, Deng W, and Shen X*. Nuclear RNA homeostasis promotes systems-level
+    coordination for cell fate and vitality. Cell Stem Cell. 2024. doi: 10.1016/j.stem.2024.03.015'
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi: 10.1016/j.stem.2024.03.015
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article: https://doi.org/10.1016/j.stem.2024.03.015
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 5
+    citation_verbatim: true
+    structured_fields_status: partially-verified
+    notes: []
+- id: pub-cv-006
+  cv_order: 6
+  citation: Xiufeng Li, Luyao Bie, Yang Wang, Yaqiang Hong, Ziqiang Zhou, Yiming Fan,
+    Xiaohan Yan, Yibing Tao, Chunyi Huang, Yongyan Zhang, Xueyan Sun, John Xiao He
+    Li, Jing Zhang, Zai Chang, Qiaoran Xi, Anming Meng, Xiaohua Shen, Wei Xie, Nian
+    Liu. LINE-1 transcription activates long-range gene expression. NATURE GENETICS
+    2024. 56 (7), 1494-1502
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 6
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-007
+  cv_order: 7
+  citation: Yaqiang Hong, Luyao Bie, Tao Zhang, Xiaohan Yan, Guangpu Jin, Zhuo Chen,
+    Yang Wang, Xiufeng Li, Gaofeng Pei, Yongyan Zhang, Yantao Hong, Liang Gong, Pilong
+    Li, Wei Xie, Yanfen Zhu, Xiaohua Shen, Nian Liu. SAFB restricts contact domain
+    boundaries associated with L1 chimeric transcription. Molecular cell 2024. 84
+    (9), 1637-1650. e10
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 7
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-008
+  cv_order: 8
+  citation: 'Li S, Shen X. Long interspersed nuclear element 1 and B1/Alu repeats
+    blueprint genome compartmentalization. Curr Opin Genet Dev. 2023. doi: 10.1016/j.gde.2023.102049. '
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi: 10.1016/j.gde.2023.102049
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article: https://doi.org/10.1016/j.gde.2023.102049
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 8
+    citation_verbatim: true
+    structured_fields_status: partially-verified
+    notes: []
+- id: pub-cv-009
+  cv_order: 9
+  citation: 'Y Yin, X Shen. Noncoding RNA-chromatin association: Functions and mechanisms.
+    Fundamental Research 2023. 3 (5), 665-675'
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 9
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-010
+  cv_order: 10
+  citation: Shao W, Bi X, Pan Y, Gao B, Wu J, Yin Y, Liu Z, Zhang W, Jiang X, Ren
+    W, Xu Y, Wu Z, Wang K, Zhan G, Lu Y, Han X, Li T, Wang J, Li G, Deng H, Li B*,
+    Shen X*. Phase separation of RNA-binding protein promotes polymerase engagement
+    and transcription. Nature Chemical Biology. 2022 Jan;18(1):70-80. (* co-corresponding).
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 10
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-011
+  cv_order: 11
+  citation: Xin Huang, Nazym Bashkenova, Yantao Hong, Cong Lyu, Diana Guallar, Zhe
+    Hu, Vikas Malik, Dan Li, Hailin Wang, Xiaohua Shen, Hongwei Zhou, Jianlong Wang.
+    A TET1-PSPC1-Neat1 molecular axis modulates PRC2 functions in controlling stem
+    cell bivalency. Cell reports 2022. 39 (10)
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 11
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-012
+  cv_order: 12
+  citation: Zhen Sun, Hua Yu, Jing Zhao, Tianyu Tan, Hongru Pan, Yuqing Zhu, Lang
+    Chen, Cheng Zhang, Li Zhang, Anhua Lei, Yuyan Xu, Xianju Bi, Xin Huang, Bo Gao,
+    Longfei Wang, Cristina Correia, Ming Chen, Qiming Sun, Yu Feng, Li Shen, Hao Wu,
+    Jianlong Wang, Xiaohua Shen, George Q Daley, Hu Li, Jin Zhang.  LIN28 coordinately
+    promotes nucleolar/ribosomal functions and represses the 2C-like transcriptional
+    program in pluripotent stem cells. Protein & cell 2022. 13 (7), 490-512.
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 12
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-013
+  cv_order: 13
+  citation: 'Lu J.Y.#, Chang L#, Li T#, Wang T, Yin Y, Zhan G, Han X, Zhang K, Tao
+    Y, Percharde M, Wang L, Peng Q, Yan P, Zhang H, Bi X, Shao W, Hong Y, Wu Z, Ma
+    R, Wang P, Li W, Zhang J, Chang Z, Hou Y, Zhu B, Ramalho-Santos M, Li P, Xie W,
+    Na J, Sun Y*, Shen X*.  Homotypic clustering of L1 and B1/Alu repeats compartmentalizes
+    the 3D genome. Cell Research. 2021 Jun;31(6):613-630. doi: 10.1038/s41422-020-00466-6.
+    (* co-corresponding).'
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi: 10.1038/s41422-020-00466-6
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article: https://doi.org/10.1038/s41422-020-00466-6
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 13
+    citation_verbatim: true
+    structured_fields_status: partially-verified
+    notes: []
+- id: pub-cv-014
+  cv_order: 14
+  citation: Yan P, Lu JY, Niu J, Gao J, Zhang MQ, Yin Y, Shen X. LncRNA Platr22 promotes
+    super-enhancer activity and stem cell pluripotency. J Mol Cell Biol. 2021 Aug
+    4;13(4):295-313.
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 14
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-015
+  cv_order: 15
+  citation: Yin Y*, Lu JY, Zhang X, Shao W, Xu Y, Li P, Hong Y, Cui L, Shan G, Tian
+    B, Zhang Q, Shen X*. (2020) U1 snRNP regulates chromatin retention of noncoding
+    RNAs. Nature. 580(7801):147-150. (* co-corresponding)
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 15
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-016
+  cv_order: 16
+  citation: 'Lu JY, Shao W, Chang L, Yin Y, Li T, Zhang H, Hong Y, Percharde M, Guo
+    L, Wu Z, Liu L, Liu W, Yan P, Ramalho-Santos M, Sun Y, Shen X. (2020) Genomic
+    repeats categorize genes with distinct functions for orchestrated regulation.
+    Cell Reports. 30(10):3296-3311. doi: 10.1016/j.celrep.2020.02.048.'
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi: 10.1016/j.celrep.2020.02.048
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article: https://doi.org/10.1016/j.celrep.2020.02.048
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 16
+    citation_verbatim: true
+    structured_fields_status: partially-verified
+    notes: []
+- id: pub-cv-017
+  cv_order: 17
+  citation: Zhang H*, Wu Z, Lu JY, Huang B, Zhou H, Xie W, Wang J, Shen X*. (2020)
+    DEAD-box helicase 18 counteracts PRC2 to safeguard ribosomal DNA in pluripotency
+    regulation. Cell Reports. 2020. 30(1):81-97. (* co-corresponding)
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 17
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-018
+  cv_order: 18
+  citation: 'Bi X., Shen X. (2020) Transcriptome-Wide Mapping of Protein–RNA Interactions.
+    In: Ørom U. (eds) RNA-Chromatin Interactions. Methods in Molecular Biology, vol
+    2161. Humana, New York, NY.'
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 18
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-019
+  cv_order: 19
+  citation: 'Yin Y., Shen X. (2020) Identification of cis-Elements for RNA Subcellular
+    Localization Through REL-seq. In: Ørom U. (eds) RNA-Chromatin Interactions. Methods
+    in Molecular Biology, vol 2161. Humana, New York, NY.'
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 19
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-020
+  cv_order: 20
+  citation: Bi X*, Zhang X, Shen X*. (2020) Transcriptome-Wide Profiling of Protein-RNA
+    Interactions by Cross-Linking and Immunoprecipitation Mediated by FLAG-Biotin
+    Tandem Purification. J. Vis. Exp. (159), e60730, doi:10.3791/60730 (2020). (*
+    co-corresponding)
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi: 10.3791/60730
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article: https://doi.org/10.3791/60730
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 20
+    citation_verbatim: true
+    structured_fields_status: partially-verified
+    notes: []
+- id: pub-cv-021
+  cv_order: 21
+  citation: Zhao J., Wang M., Chang L., Yu J., Song A., Liu C., Huang W., Zhang T.,
+    Wu X., Shen X., Zhu B., Li G. (2020) RYBP/YAF2-PRC1 Complexes and Histone H1-dependent
+    Chromatin Compaction Mediate Propagation of H2AK119ub1 During Cell Division. Nat
+    Cell Biol. 2020 Apr;22(4):439-452.
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 21
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-022
+  cv_order: 22
+  citation: 'Jing Niu, Xu Zhang, Guipeng Li, Pixi Yan, Qing Yan, Qionghai Dai, Dayong
+    Jin, Xiaohua Shen, Jichang Wang, Michael Q Zhang, Juntao Gao. A novel cytogenetic
+    method to image chromatin interactions at subkilobase resolution: Tn5 transposase-based
+    fluorescence in situ hybridization. Journal of genetics and genomics 2020. 47
+    (12), 727-735'
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 22
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-023
+  cv_order: 23
+  citation: Liu L, Lu J.Y, Xing X, Li T, Li F, Yang X, Shen X. (2019) IDH1 fine-tunes
+    cap-dependent translation initiation. J Mol Cell Biol. 11(10):816-828.
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 23
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-024
+  cv_order: 24
+  citation: Han X, Zhang J, Liu Y, Fan X, Ai S, Luo Y, Li X, Jin H, Luo S, Zheng H,
+    Yue Y, Chang Z, Yang Z, Tang F, He A*, Shen X*. (2019) The lncRNA Hand2os1/Uph
+    locus orchestrates heart development through regulation of precise expression
+    HAND2. Development. 2019. 146, dev176198. (* co-corresponding)
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 24
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-025
+  cv_order: 25
+  citation: 'Bi X, Xu Y, Li T, Li X, Li W, Shao W, Wang K, Zhan G, Wu Z, Liu W, Yin
+    Y, Lu J.Y., Wang L, Zhao J, Wu J, Na J, Li G, Li P, Shen X. (2019) RNA targets
+    ribosome biogenesis factor WDR43 to chromatin for transcription and pluripotency
+    control. Mol Cell. 75: 102-116.'
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 25
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-026
+  cv_order: 26
+  citation: 'Liu L, Li T, Song G, He Q, Yin Y, Lu J.Y., Bi X, Wang K, Luo S, Chen
+    YS, Yang Y, Sun BF, Yang YG, Wu J, Zhu H*, Shen X*. (2019) Insight into novel
+    RNA-binding activities via large-scale analysis of lncRNA-bound proteome and IDH1-bound
+    transcriptome. Nucleic Acids Res. 47(5): 2244-2262. (*co-corresponding)'
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 26
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-027
+  cv_order: 27
+  citation: Percharde M, Lin CJ, Yin Y, Guan J, Peixoto GA, Bulut-Karslioglu A, Biechele
+    S, Huang B, Shen X, Ramalho-Santos M. (2018) A LINE1-Nucleolin Partnership Regulates
+    Early Development and ESC Identity. Cell. 174(2):391-405.
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 27
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-028
+  cv_order: 28
+  citation: Han X, Luo S, Peng G, Lu JY, Cui G, Liu L, Yan P, Yin Y, Liu W, Wang R,
+    Chang Z, Na J, Jing N*, Shen X*. (2018) Mouse knockout models reveal largely dispensable
+    but context-dependent functions of lncRNAs during development. J Mol Cell Biol.
+    10(2):175-178. (* co-corresponding)
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 28
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-029
+  cv_order: 29
+  citation: 'Guallar D, Bi X, Pardavila JA, Huang X, Saenz C, Shi X, Zhou H, Faiola
+    F, Ding J, Haruehanroengra P, Yang F, Li D, Sanchez-Priego C, Saunders A, Pan
+    F, Valdes VJ, Kelley K, Blanco MG, Chen L, Wang H, Sheng J, Xu M, Fidalgo M, Shen
+    X, Wang J. (2018) RNA-dependent chromatin targeting of TET2 for endogenous retrovirus
+    control in pluripotent stem cells. Nat Genet. 50(3):443-451. '
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 29
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-030
+  cv_order: 30
+  citation: 'Yan P, Luo S, Lu JY, Shen X. (2017) Cis- and trans-acting lncRNAs in
+    pluripotency and reprogramming. Current Opinion in Genetics & Development. 46:170-178. '
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 30
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-031
+  cv_order: 31
+  citation: Luo S, Lu J, Liu L, Yin Y, Han X, Xu R, Wu B, Liu W, Yan P, Shao W, Chen
+    C, Lu Z, Na J, Tang F, Wang J, Zhang Y.E. and Shen X. (2016) Divergent lncRNAs
+    regulate gene expression and lineage differentiation in pluripotent cells. Cell
+    Stem Cell. 18(5):637-52.
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 31
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-032
+  cv_order: 32
+  citation: Yin Y, Yan P, Lu J, Song G, Zhu Y, Li Z, Zhao Y, Shen B, Huang X, Zhu
+    H, Orkin SH, Shen X. (2015) Opposing roles for the lncRNA Haunt and its genomic
+    locus in regulating HOXA gene activation during embryonic stem cell differentiation.
+    Cell Stem Cell. 16(5):504-16.
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 32
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-033
+  cv_order: 33
+  citation: Ding J, Huang X, Shao N, Zhou H, Lee D, Faiola F, Fidalgo M, Guallar D,
+    Saunders A, Shliaha P, Wang H, Waghray A, Papatsenko D, Sánchez-Priego C, Li D,
+    Yuan Y, Lesmischka I, Shen L, Kelley K, Deng H, Shen X, Wang J. (2015) Tex10 coordinates
+    epigenetic control of the super-enhancer activity in pluripotency and reprogramming.
+    Cell Stem Cell. 16(6):653-68.
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 33
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-034
+  cv_order: 34
+  citation: Das PP, Hendrix DA, Apostolou E, Buchner AH, Canver MC, Beyaz S, Ljuboja
+    D, Kuintzle R, Kim W, Karnik R, Shao Z, Xie H, Xu J, De Los Angeles A, Zhang Y,
+    Choe J, Jun DL, Shen X, Gregory RI, Daley GQ, Meissner A, Kellis M, Hochedlinger
+    K, Kim J, Orkin SH. (2015) PRC2 Is Required to Maintain Expression of the Maternal
+    Gtl2-Rian-Mirg Locus by Preventing De Novo DNA Methylation in Mouse Embryonic
+    Stem Cells. Cell Rep. 12(9):1456-70.
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 34
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-035
+  cv_order: 35
+  citation: Yuan G, Ma B, Yuan W, Zhang Z, Chen P, Ding X, Feng L, Shen X, Chen S,
+    Li G, Zhu B. (2013) Histone H2A ubiquitination inhibits the enzymatic activity
+    of H3 lysine 36 methyltransferases. J Biol Chem. 288(43):30382-42.
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 35
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-036
+  cv_order: 36
+  citation: Sakaki K, Yoshina S, Shen X, Han J, DeSantis MR, Xiong M, Mitani S, Kaufman
+    RJ. (2012) RNA surveillance is   required for endoplasmic reticulum homeostasis.
+    Proc Natl Acad Sci USA. 109(21):8079-84.
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 36
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-037
+  cv_order: 37
+  citation: 'He A, Shen X, Ma Q, Cao J, Gise AV, Zhou P, Wang G, Marquez VE, Orkin
+    SH, Pu WT. (2012) PRC2 directly       methylates GATA4 and represses its transcriptional
+    activity. Genes & Development.  26: 37-42.'
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 37
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-038
+  cv_order: 38
+  citation: Lin W, Cao J, Liu J, Beshiri ML, Fujiwara Y, Francis J, Cherniack AD,
+    Geisen C, Blair LP, Zou MR, Shen X, Kawamori D, Liu Z, Grisanzio C, Watanabe H,
+    Minamishima YA, Zhang Q, Kulkarni RN, Signoretti S, Rodig SJ, Bronson RT, Orkin
+    SH, Tuck DP, Benevolenskaya EV, Meyerson M, Kaelin WG Jr, Yan Q. (2011) Loss of
+    the retinoblastoma binding protein 2 (RBP2) histone demethylase suppresses tumorigenesis
+    in mice lacking Rb1 or Men1. Proc Natl Acad Sci USA. 108(33):13379-86.
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 38
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-039
+  cv_order: 39
+  citation: 'Wilson BG, Wang X, Shen X, McKenna ES, Lemieux ME, Cho Y, Koellhoffer
+    EC, Pomeroy SL, Orkin SH, Roberts CWM. (2010) Epigenetic antagonism between Polycomb
+    and SWI/SNF complexes during oncogenic transformation. Cancer Cell. 18(4):316-28. '
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 39
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-040
+  cv_order: 40
+  citation: 'Shen X, Kim W, Fujiwara Y, Simon MD, Liu Y, Mysliwiec MR, Yuan G, Lee
+    Y, Orkin SH. (2009) Jumonji modulates Polycomb activity and self-renewal versus
+    differentiation of stem cells. Cell. 2009. 139(7): 1303-1314. '
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 40
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-041
+  cv_order: 41
+  citation: 'Shen X, Orkin SH. (2009) Glimpses of the epigenetic landscape. Cell Stem
+    Cell.  4(1): 1-2.  '
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 41
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-042
+  cv_order: 42
+  citation: 'Orkin SH, Wang J, Kim J, Chu J, Rao S, Theunissen TW, Shen X, Levasseur
+    DN. (2008) The transcriptional network controlling pluripotency in ES cells. Cold
+    Spring Harb Symp Quant Biol. 73: 195-202. '
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 42
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-043
+  cv_order: 43
+  citation: 'Shen X, Liu Y, Hsu Y, Fujiwara Y, Kim J, Mao X, Yuan G, and Orkin SH.
+    (2008) EZH1 mediates methylation on histone H3 lysine 27 and complements EZH2
+    in maintaining stem cell identity and executing pluripotency. Mol Cell. 32(4):491-502. '
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 43
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-044
+  cv_order: 44
+  citation: 'Kim J, Chu J, Shen X, Wang J, Orkin SH. (2008) An extended transcriptional
+    network for pluripotency of embryonic stem cells. Cell. 132(6): 1049-61. '
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 44
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-045
+  cv_order: 45
+  citation: 'Wang J, Rao S, Chu J, Shen X, Levasseur DN, Theunissen TW, Orkin SH.
+    (2006) A protein interaction network for pluripotency of embryonic stem cells.
+    Nature. 444(7117):364-8. '
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 45
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-046
+  cv_order: 46
+  citation: 'Zhang K, Shen X, Wu J, Sakaki K, Saunders T, Rutkowski DT, Back SH, Kaufman
+    RJ. (2006) Endoplasmic reticulum stress activates cleavage of CREBh to induce
+    a systemic inflammatory response. Cell. 124(3): 587-99. '
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 46
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-047
+  cv_order: 47
+  citation: 'Shen X, Ellis RE, Sakaki K and Kaufman RJ. (2005) Genetic interactions
+    due to constitutive and inducible gene regulation mediated by the unfolded protein
+    response in C. elegans. PLoS Genetics. 1(3): e37.'
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 47
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-048
+  cv_order: 48
+  citation: 'Shen X, Zhang K, and Kaufman RJ. (2004) The unfolded protein response
+    - a stress signaling pathway of the endoplasmic reticulum. J Chem Neuroanat. 28(1-2):79-92. '
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 48
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-049
+  cv_order: 49
+  citation: 'Lee K, Tirasophon W, Shen X, Michalak M, Prywes R, Okada T, Yoshida H,
+    Mori K, and Kaufman RJ. (2002) IRE1-mediated unconventional mRNA splicing and
+    S2P-mediated ATF6 cleavage merge to regulate XBP1 in signaling the unfolded protein
+    response. Genes Dev. 16: 452-466. '
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 49
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-050
+  cv_order: 50
+  citation: Kaufman RJ, Scheuner D, Schroder M, Shen X, Lee K, Liu C and Arnold SM.
+    (2002) The unfolded protein response in nutrient sensing and differentiation.
+    Nat Rev Mol Cell Biol. 3(6):411-21.
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 50
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-051
+  cv_order: 51
+  citation: 'Shen X, Ellis RE, Lee K, Liu C, Yang K, Solomon A, Yoshida H, Morimoto
+    R, Kurnit DM, Mori K, and Kaufman RJ. (2001) Complementary signaling pathways
+    regulate the unfolded protein response and are required for C. elegans development.
+    Cell. 107: 893-903. '
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 51
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
+- id: pub-cv-052
+  cv_order: 52
+  citation: 'Norris SR, Shen X, and DellaPenna D. (1998) Complementation of the Arabidopsis
+    pds1 mutation with the gene encoding p-Hydroxyphenylpyruvate Dioxygenase. Plant
+    Physiol. 117(4): 1317 –1323. '
+  title:
+  authors:
+    display:
+    parsed: []
+  venue:
+    name:
+    volume:
+    issue:
+    pages:
+    article_number:
+  year:
+  date:
+  date_precision:
+  publication_type: unknown
+  identifiers:
+    doi:
+    pmid:
+    isbn:
+  research_programs: []
+  keywords: []
+  links:
+    article:
+    pdf:
+    data: []
+    code: []
+    supplementary: []
+  presentation:
+    featured: false
+    selected: false
+    detail_slug:
+  provenance:
+    source_record: 52
+    citation_verbatim: true
+    structured_fields_status: unparsed
+    notes: []
