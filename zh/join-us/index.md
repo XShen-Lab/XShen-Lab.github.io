@@ -104,7 +104,7 @@ XShen Lab 欢迎对细胞核组织、基因组调控、转录、非编码 RNA、
 
 **XShen Lab**<br>
 清华大学基础医学院<br>
-医学科学楼 D108<br>
+清华大学郑裕彤医学楼 D108<br>
 中国北京 100084
 
 电子邮箱：[xshen@tsinghua.edu.cn](mailto:xshen@tsinghua.edu.cn)
