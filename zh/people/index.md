@@ -38,7 +38,12 @@ XShen Lab 汇聚了具有分子细胞生物学、基因组学、生物信息学�
 ## 行政助理
 
 <div class="member-section member-grid">
-{% include list.html data="members" component="portrait" filter="role == 'admin'" %}
+  <div class="portrait-wrapper">
+    <div class="member-placeholder" aria-label="行政助理">
+      <span class="portrait-name">行政助理</span>
+      <span class="portrait-description">信息待更新</span>
+    </div>
+  </div>
 </div>
 
 {% include section.html %}

@@ -107,7 +107,7 @@ Potential applicants are encouraged to briefly explain why they are interested i
 
 **XShen Lab**  
 School of Basic Medicine, Tsinghua University  
-Medical Science Building D108  
+Zheng Yutong Medical Building, Room D108<br>
 Beijing 100084, China  
 
 Email: [xshen@tsinghua.edu.cn](mailto:xshen@tsinghua.edu.cn)

@@ -33,7 +33,12 @@ The XShen Lab brings together researchers with backgrounds in molecular cell bio
 ## Administrative Assistant
 
 <div class="member-section member-grid">
-{% include list.html data="members" component="portrait" filter="role == 'admin'" %}
+  <div class="portrait-wrapper">
+    <div class="member-placeholder" aria-label="Administrative Assistant">
+      <span class="portrait-name">Administrative Assistant</span>
+      <span class="portrait-description">Information forthcoming</span>
+    </div>
+  </div>
 </div>
 
 {% include section.html %}

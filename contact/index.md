@@ -1,5 +1,8 @@
 ---
 title: Contact
+nav:
+  order: 8
+  tooltip: Contact the XShen Lab
 ---
 
 <p class="right"><small><a href="{{ '/zh/contact/' | relative_url }}">中文</a></small></p>
@@ -8,7 +11,7 @@ title: Contact
 
 **XShen Lab**  
 School of Basic Medicine, Tsinghua University  
-Zheng Yutong Medical Building D108  
+Zheng Yutong Medical Building, Room D108<br>
 Tsinghua University  
 Haidian District, Beijing, China  
 
@@ -18,7 +21,7 @@ Email: [xshen@tsinghua.edu.cn](mailto:xshen@tsinghua.edu.cn)
 
 ## Address
 
-Zheng Yutong Medical Building D108  
+Zheng Yutong Medical Building, Room D108<br>
 School of Basic Medicine  
 Tsinghua University  
 Haidian District, Beijing 100084  

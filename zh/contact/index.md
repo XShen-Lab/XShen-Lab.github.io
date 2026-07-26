@@ -8,8 +8,7 @@ title: 联系方式
 
 **XShen Lab**<br>
 清华大学基础医学院<br>
-郑裕彤医学楼 D108<br>
-清华大学<br>
+清华大学郑裕彤医学楼 D108<br>
 中国北京市海淀区
 
 电子邮箱：[xshen@tsinghua.edu.cn](mailto:xshen@tsinghua.edu.cn)
@@ -20,7 +19,7 @@ title: 联系方式
 
 中国北京市海淀区清华大学<br>
 清华大学基础医学院<br>
-郑裕彤医学楼 D108<br>
+清华大学郑裕彤医学楼 D108<br>
 邮编：100084
 
 {% include section.html %}
