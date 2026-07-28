@@ -157,4 +157,4 @@ The newest formal records are reproduced below in the CV’s order within each y
 
 The 52 records below preserve the order, content, and incomplete fields of the formal FULL PUBLICATIONS section in the supplied CV. Missing information has not been inferred.
 
-{% include full-publications.html %}
+{% if site.publications_v2.enabled %}{% include publications/list.html %}{% else %}{% include full-publications.html %}{% endif %}

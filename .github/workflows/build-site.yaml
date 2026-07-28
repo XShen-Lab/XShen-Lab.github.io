@@ -36,6 +36,9 @@ jobs:
       - name: Verify Publications v2 shadow data
         run: ruby _tools/verify_publications_shadow.rb
 
+      - name: Verify Publications v2 shadow renderer
+        run: ruby _tools/verify_publications_renderer.rb
+
       - name: Get Pages url
         id: pages
         uses: actions/configure-pages@v4

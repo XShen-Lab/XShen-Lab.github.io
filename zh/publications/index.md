@@ -136,4 +136,4 @@ scFLUENT-seq 揭示了单细胞基因组活动的稀疏性和概率性。论文�
 
 以下 52 条记录严格保留所提供英文简历正式 FULL PUBLICATIONS 部分的顺序、内容和不完整字段；未推断或补充缺失信息。
 
-{% include full-publications.html %}
+{% if site.publications_v2.enabled %}{% include publications/list.html %}{% else %}{% include full-publications.html %}{% endif %}
