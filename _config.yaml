@@ -7,7 +7,7 @@ footer: images/background.jpg
 proofer: false
 
 publications_v2:
-  enabled: false
+  enabled: true
 
 # site social media and other links
 links:
