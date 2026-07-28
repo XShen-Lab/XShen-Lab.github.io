@@ -1,0 +1,6 @@
+{% assign publication_records = site.data.publications.records | sort: "cv_order" %}
+<ol class="full-publications">
+{% for publication in publication_records %}
+  {% include publications/citation.html publication=publication %}
+{% endfor %}
+</ol>

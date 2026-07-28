@@ -6,6 +6,9 @@ header: images/background.jpg
 footer: images/background.jpg
 proofer: false
 
+publications_v2:
+  enabled: false
+
 # site social media and other links
 links:
   email: xshen@tsinghua.edu.cn
