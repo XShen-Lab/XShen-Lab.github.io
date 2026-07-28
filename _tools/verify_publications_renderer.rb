@@ -12,7 +12,19 @@ require "yaml"
 ROOT = File.expand_path("..", __dir__)
 CONFIG_PATH = File.join(ROOT, "_config.yaml")
 LEGACY_PATH = File.join(ROOT, "_includes", "full-publications.html")
+LIST_PATH = File.join(ROOT, "_includes", "publications", "list.html")
 DATA_PATH = File.join(ROOT, "_data", "publications.yml")
+PAGE_PATHS = {
+  "English" => File.join("publications", "index.html"),
+  "Chinese" => File.join("zh", "publications", "index.html")
+}.freeze
+PAGE_SOURCE_PATHS = [
+  File.join(ROOT, "publications", "index.md"),
+  File.join(ROOT, "zh", "publications", "index.md")
+].freeze
+DETAIL_PATH = File.join("publications", "2025-scfluent-seq", "index.html")
+EXPECTED_SWITCH = "{% if site.publications_v2.enabled %}{% include publications/list.html %}" \
+                  "{% else %}{% include full-publications.html %}{% endif %}"
 APPROVED_SEQUENCE_SHA256 = "2526131b41eae70abd0d7e1d4509543c590e9b9246771471e193cbe6b7bcde52".freeze
 EXPECTED_COUNT = 52
 
@@ -74,75 +86,147 @@ end
 
 def verify_default_configuration!
   config = load_yaml(CONFIG_PATH)
-  fail_unless(config.dig("publications_v2", "enabled") == false,
-              "publications_v2.enabled must remain false in the default configuration")
+  fail_unless(config.dig("publications_v2", "enabled") == true,
+              "production publications_v2.enabled must be true")
 end
 
-def build_shadow_pages
-  Dir.mktmpdir("publications-v2-renderer-") do |destination|
-    Tempfile.create(["publications-v2-enabled", ".yml"]) do |override|
-      override.write(YAML.dump("publications_v2" => { "enabled" => true }))
+def verify_renderer_wiring!
+  list_source = File.read(LIST_PATH, encoding: "UTF-8")
+  fail_unless(list_source.include?("site.data.publications.records"),
+              "data-driven list no longer reads site.data.publications.records")
+  fail_unless(list_source.include?('sort: "cv_order"'),
+              "data-driven list no longer sorts by cv_order")
+  fail_unless(list_source.include?("publications/citation.html"),
+              "data-driven list no longer uses the canonical citation include")
+  fail_unless(!list_source.include?("full-publications.html"),
+              "data-driven list unexpectedly delegates to the legacy include")
+
+  PAGE_SOURCE_PATHS.each do |path|
+    source = File.read(path, encoding: "UTF-8")
+    fail_unless(source.include?(EXPECTED_SWITCH),
+                "#{path.delete_prefix(ROOT + "/")} does not preserve the verified feature-flag switch")
+  end
+end
+
+def read_built_pages(destination, mode)
+  pages = PAGE_PATHS.to_h do |language, relative_path|
+    path = File.join(destination, relative_path)
+    fail_unless(File.file?(path),
+                "#{mode} #{language} page is missing at /#{relative_path.delete_suffix("index.html")}")
+    [language, File.read(path, encoding: "UTF-8")]
+  end
+
+  detail = File.join(destination, DETAIL_PATH)
+  fail_unless(File.file?(detail),
+              "#{mode} scFLUENT-seq detail URL /publications/2025-scfluent-seq/ is missing")
+  pages["Detail"] = File.read(detail, encoding: "UTF-8")
+  pages
+end
+
+def run_build(destination, mode, config_argument)
+  command = [
+    "bundle", "exec", "jekyll", "build",
+    "--config", config_argument,
+    "--destination", destination
+  ]
+  stdout, stderr, status = Open3.capture3(
+    { "JEKYLL_ENV" => "production" },
+    *command,
+    chdir: ROOT
+  )
+  fail_unless(status.success?, "#{mode} Jekyll build failed:\n#{stdout}#{stderr}")
+  read_built_pages(destination, mode)
+end
+
+def build_production_pages
+  Dir.mktmpdir("publications-v2-production-") do |destination|
+    return run_build(destination, "production mode", CONFIG_PATH)
+  end
+end
+
+def build_rollback_pages
+  Dir.mktmpdir("publications-v2-rollback-") do |destination|
+    Tempfile.create(["publications-v2-disabled", ".yml"]) do |override|
+      override.write(YAML.dump("publications_v2" => { "enabled" => false }))
       override.flush
-
-      command = [
-        "bundle", "exec", "jekyll", "build",
-        "--config", "#{CONFIG_PATH},#{override.path}",
-        "--destination", destination
-      ]
-      stdout, stderr, status = Open3.capture3(
-        { "JEKYLL_ENV" => "production" },
-        *command,
-        chdir: ROOT
-      )
-      fail_unless(status.success?,
-                  "shadow Jekyll build failed:\n#{stdout}#{stderr}")
-
-      english_path = File.join(destination, "publications", "index.html")
-      chinese_path = File.join(destination, "zh", "publications", "index.html")
-      fail_unless(File.file?(english_path), "shadow English publication page was not generated")
-      fail_unless(File.file?(chinese_path), "shadow Chinese publication page was not generated")
-
-      return {
-        "English" => File.read(english_path, encoding: "UTF-8"),
-        "Chinese" => File.read(chinese_path, encoding: "UTF-8")
-      }
+      return run_build(destination, "rollback mode", "#{CONFIG_PATH},#{override.path}")
     end
   end
 end
 
-def extract_shadow_citations(html, label)
-  lists = html.scan(/<ol\b([^>]*)>(.*?)<\/ol>/mi).select do |attributes, _content|
+def extract_publication_list(html, label)
+  matches = html.to_enum(:scan, /<ol\b([^>]*)>(.*?)<\/ol>/mi).map do
+    [Regexp.last_match(0), Regexp.last_match(1), Regexp.last_match(2)]
+  end
+  lists = matches.select do |_full_html, attributes, _content|
     attributes.match?(/\bclass\s*=\s*["'][^"']*\bfull-publications\b[^"']*["']/i)
   end
   fail_unless(lists.length == 1,
-              "#{label} shadow output contains #{lists.length} full-publications lists, expected 1")
+              "#{label} contains #{lists.length} full-publications lists, expected 1")
 
-  list_content = lists.first[1]
+  full_html, attributes, list_content = lists.first
+  fail_unless(attributes.strip == 'class="full-publications"',
+              "#{label} full-publications list has unexpected attributes or metadata")
   fail_unless(list_content !~ /<(?:a|button|img)\b/i,
-              "#{label} shadow list contains a link, button, or image")
+              "#{label} list contains a link, button, or image")
 
   items = list_content.scan(/<li\b([^>]*)>(.*?)<\/li>/mi)
   fail_unless(items.length == EXPECTED_COUNT,
-              "#{label} shadow count is #{items.length}, expected #{EXPECTED_COUNT}")
+              "#{label} count is #{items.length}, expected #{EXPECTED_COUNT}")
 
-  citations = items.each_with_index.map do |(attributes, content), index|
-    fail_unless(attributes.strip.empty?,
-                "#{label} shadow item #{index + 1} has attributes or metadata")
+  citations = items.each_with_index.map do |(item_attributes, content), index|
+    fail_unless(item_attributes.strip.empty?,
+                "#{label} item #{index + 1} has attributes or metadata")
     fail_unless(content !~ /<[^>]+>/,
-                "#{label} shadow item #{index + 1} contains nested markup or metadata")
+                "#{label} item #{index + 1} contains nested markup or metadata")
     citation = CGI.unescapeHTML(content)
-    fail_unless(!citation.strip.empty?, "#{label} shadow item #{index + 1} is empty")
+    fail_unless(!citation.strip.empty?, "#{label} item #{index + 1} is empty")
     citation
   end
 
   remainder = list_content.gsub(/<li\b[^>]*>.*?<\/li>/mi, "")
   fail_unless(remainder.strip.empty?,
-              "#{label} shadow list contains content outside its citation items")
-  citations
+              "#{label} list contains content outside its citation items")
+  { citations: citations, html: full_html }
+end
+
+def verify_mode!(pages, mode, legacy)
+  lists = PAGE_PATHS.keys.to_h do |language|
+    list = extract_publication_list(pages.fetch(language), "#{mode} #{language}")
+    fail_unless(list[:citations] == legacy,
+                "#{mode} #{language} order or visible citation text differs from legacy")
+    verify_approved_sequence!("#{mode} #{language}", list[:citations])
+    [language, list]
+  end
+
+  fail_unless(lists.fetch("English")[:citations] == lists.fetch("Chinese")[:citations],
+              "#{mode} English and Chinese citation sequences differ")
+  lists
+end
+
+def without_publication_list(page, list_html)
+  page.sub(list_html, "<!-- verified-full-publications-list -->")
+end
+
+def verify_mode_parity!(production_pages, production_lists, rollback_pages, rollback_lists)
+  PAGE_PATHS.keys.each do |language|
+    production_without_list = without_publication_list(
+      production_pages.fetch(language), production_lists.fetch(language)[:html]
+    )
+    rollback_without_list = without_publication_list(
+      rollback_pages.fetch(language), rollback_lists.fetch(language)[:html]
+    )
+    fail_unless(production_without_list == rollback_without_list,
+                "#{language} page changed outside the complete bibliography list")
+  end
+
+  fail_unless(production_pages.fetch("Detail") == rollback_pages.fetch("Detail"),
+              "scFLUENT-seq detail page differs between production and rollback modes")
 end
 
 def verify!
   verify_default_configuration!
+  verify_renderer_wiring!
 
   legacy = legacy_citations
   canonical = canonical_citations
@@ -151,21 +235,20 @@ def verify!
   fail_unless(canonical == legacy,
               "canonical citation order or visible text differs from the legacy bibliography")
 
-  pages = build_shadow_pages
-  english = extract_shadow_citations(pages.fetch("English"), "English")
-  chinese = extract_shadow_citations(pages.fetch("Chinese"), "Chinese")
+  production_pages = build_production_pages
+  production_lists = verify_mode!(production_pages, "production mode", legacy)
+  puts "PASS publications renderer production mode: enabled=true; data-driven English=52/Chinese=52; " \
+       "approved order, visible text, and checksum."
 
-  fail_unless(english == legacy,
-              "English shadow order or visible text differs from the legacy bibliography")
-  fail_unless(chinese == legacy,
-              "Chinese shadow order or visible text differs from the legacy bibliography")
-  fail_unless(english == chinese, "English and Chinese shadow sequences differ")
-  verify_approved_sequence!("English shadow output", english)
-  verify_approved_sequence!("Chinese shadow output", chinese)
+  rollback_pages = build_rollback_pages
+  rollback_lists = verify_mode!(rollback_pages, "rollback mode", legacy)
+  puts "PASS publications renderer rollback mode: enabled=false override; legacy English=52/Chinese=52; " \
+       "approved order, visible text, checksum, and URLs."
 
-  puts "PASS publications renderer: legacy=52; shadow English=52/Chinese=52; " \
-       "exact order and decoded visible-text parity; checksum=#{APPROVED_SEQUENCE_SHA256}; " \
-       "citation-only items; bilingual sequences identical."
+  verify_mode_parity!(production_pages, production_lists, rollback_pages, rollback_lists)
+  puts "PASS publications renderer mode parity: citation-only lists; bilingual sequences identical; " \
+       "page content outside the list and scFLUENT-seq detail output unchanged; " \
+       "checksum=#{APPROVED_SEQUENCE_SHA256}."
 end
 
 begin
