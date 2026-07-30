@@ -1,0 +1,24 @@
+{% assign publication = include.publication %}
+{% assign enrichment = include.enrichment %}
+{% assign localized = enrichment.localized[page.lang] | default: enrichment.localized.en %}
+<h1 id="{{ publication.title | slugify }}">{{ publication.title }}</h1>
+
+<p><strong>{{ publication.authors.display }}</strong><br>
+<em>{{ publication.venue.name }}</em> {{ publication.venue.volume }} ({{ publication.year }}): {{ publication.venue.pages }}</p>
+
+{% if enrichment.graphical_abstract.path %}
+  {% assign graphical_alt = enrichment.graphical_abstract.alt[page.lang] | default: enrichment.graphical_abstract.alt.en %}
+  <p><img src="{{ enrichment.graphical_abstract.path | relative_url }}" alt="{{ graphical_alt | escape }}"></p>
+{% endif %}
+
+{% if localized.summary %}
+  <p>{{ localized.summary }}{% for section in localized.sections %} {{ section }}{% endfor %}</p>
+{% endif %}
+
+{% if localized.metric %}
+  <blockquote>
+    <p><strong>Key measurement:</strong> {{ localized.metric }}</p>
+  </blockquote>
+{% endif %}
+
+{% include publications/actions.html publication=publication %}

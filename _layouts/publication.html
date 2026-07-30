@@ -1,0 +1,5 @@
+---
+layout: default
+---
+{% assign publication = site.data.publications.records | where: "id", page.publication_id | first %}
+{% include publications/detail.html publication=publication enrichment=page %}
