@@ -40,6 +40,46 @@ ALLOWED_PROVENANCE_STATUSES = %w[
   unparsed partially-verified verified
 ].freeze
 
+SCFLUENT_ID = "pub-2025-scfluent-seq".freeze
+SCFLUENT_STRUCTURED_FIELDS = {
+  "title" => "Single-cell nascent transcription reveals sparse genome usage and plasticity",
+  "authors" => {
+    "display" => "Shaoqian Ma, Yantao Hong, Junhan Chen, Jingzhao Xu, and Xiaohua Shen",
+    "parsed" => []
+  },
+  "venue" => {
+    "name" => "Cell",
+    "volume" => "188",
+    "issue" => nil,
+    "pages" => "6873–6891",
+    "article_number" => nil
+  },
+  "year" => 2025,
+  "date" => nil,
+  "date_precision" => "year",
+  "publication_type" => "research-article"
+}.freeze
+SCFLUENT_DATA_LINKS = [
+  {
+    "label" => "GSE278775",
+    "url" => "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE278775"
+  },
+  {
+    "label" => "GSE278776",
+    "url" => "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE278776"
+  },
+  {
+    "label" => "GSE278777",
+    "url" => "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE278777"
+  }
+].freeze
+DETAIL_ALLOWED_KEYS = %w[
+  graphical_abstract layout localized publication_id tags
+].freeze
+DETAIL_FORBIDDEN_CANONICAL_KEYS = (RECORD_KEYS + %w[
+  data doi featured image issue journal pages pdf short_title volume
+]).uniq.freeze
+
 class VerificationError < StandardError; end
 
 def fail_unless(condition, message)
@@ -107,8 +147,6 @@ def baseline_document(citations)
 end
 
 def shadow_document(citations)
-  approved_data = detail_front_matter.fetch("data")
-
   {
     "schema_version" => 2,
     "source" => {
@@ -125,22 +163,22 @@ def shadow_document(citations)
         "id" => scfluent ? "pub-2025-scfluent-seq" : format("pub-cv-%03d", order),
         "cv_order" => order,
         "citation" => citation,
-        "title" => nil,
-        "authors" => {
+        "title" => scfluent ? SCFLUENT_STRUCTURED_FIELDS.fetch("title") : nil,
+        "authors" => scfluent ? SCFLUENT_STRUCTURED_FIELDS.fetch("authors") : {
           "display" => nil,
           "parsed" => []
         },
-        "venue" => {
+        "venue" => scfluent ? SCFLUENT_STRUCTURED_FIELDS.fetch("venue") : {
           "name" => nil,
           "volume" => nil,
           "issue" => nil,
           "pages" => nil,
           "article_number" => nil
         },
-        "year" => nil,
-        "date" => nil,
-        "date_precision" => nil,
-        "publication_type" => "unknown",
+        "year" => scfluent ? SCFLUENT_STRUCTURED_FIELDS.fetch("year") : nil,
+        "date" => scfluent ? SCFLUENT_STRUCTURED_FIELDS.fetch("date") : nil,
+        "date_precision" => scfluent ? SCFLUENT_STRUCTURED_FIELDS.fetch("date_precision") : nil,
+        "publication_type" => scfluent ? SCFLUENT_STRUCTURED_FIELDS.fetch("publication_type") : "unknown",
         "identifiers" => {
           "doi" => doi,
           "pmid" => nil,
@@ -151,7 +189,7 @@ def shadow_document(citations)
         "links" => {
           "article" => doi && "https://doi.org/#{doi}",
           "pdf" => nil,
-          "data" => scfluent ? approved_data : [],
+          "data" => scfluent ? SCFLUENT_DATA_LINKS : [],
           "code" => [],
           "supplementary" => []
         },
@@ -169,6 +207,49 @@ def shadow_document(citations)
       }
     end
   }
+end
+
+def verify_detail_record!
+  detail = detail_front_matter
+  fail_unless(detail.is_a?(Hash), "scFLUENT-seq detail front matter must be a map")
+  duplicates = detail.keys & DETAIL_FORBIDDEN_CANONICAL_KEYS
+  fail_unless(duplicates.empty?,
+              "scFLUENT-seq detail record duplicates canonical keys: #{duplicates.sort.join(', ')}")
+  fail_unless(detail.keys.sort == DETAIL_ALLOWED_KEYS.sort,
+              "scFLUENT-seq detail record must contain only thin enrichment keys")
+  fail_unless(detail["layout"] == "publication",
+              "scFLUENT-seq detail record must use the shared publication layout")
+  fail_unless(detail["publication_id"] == SCFLUENT_ID,
+              "scFLUENT-seq detail record publication_id is incorrect")
+
+  graphical = detail["graphical_abstract"]
+  fail_unless(graphical.is_a?(Hash) && graphical.keys.sort == %w[alt credit path],
+              "scFLUENT-seq graphical_abstract does not match the RFC enrichment schema")
+  fail_unless(graphical["path"].is_a?(String) && graphical["path"].start_with?("/images/"),
+              "scFLUENT-seq graphical abstract path is invalid")
+  fail_unless(File.file?(File.join(ROOT, graphical["path"].delete_prefix("/"))),
+              "scFLUENT-seq graphical abstract file is missing")
+  fail_unless(graphical["alt"].is_a?(Hash) &&
+              graphical["alt"].keys.all? { |language| %w[en zh-CN].include?(language) } &&
+              graphical.dig("alt", "en").is_a?(String) && !graphical.dig("alt", "en").strip.empty?,
+              "scFLUENT-seq graphical abstract requires approved English alt text")
+
+  localized = detail["localized"]
+  fail_unless(localized.is_a?(Hash) && localized.keys.sort == %w[en zh-CN].sort,
+              "scFLUENT-seq localized enrichment must contain only en and zh-CN")
+  localized.each do |language, fields|
+    fail_unless(fields.is_a?(Hash) && fields.keys.sort == %w[metric sections short_title summary],
+                "scFLUENT-seq #{language} enrichment keys do not match the RFC")
+    fail_unless(fields["sections"].is_a?(Array),
+                "scFLUENT-seq #{language} sections must be an array")
+  end
+  fail_unless(detail["tags"].is_a?(Array) && detail["tags"].all? { |tag| tag.is_a?(String) },
+              "scFLUENT-seq tags must be approved strings")
+
+  source = File.read(DETAIL_PATH, encoding: "UTF-8")
+  body = source.match(/\A---\s*\n.*?\n---\s*\n?(.*)\z/m)&.captures&.first
+  fail_unless(body && body.strip.empty?,
+              "scFLUENT-seq detail record must not duplicate rendering content in its body")
 end
 
 def generate!
@@ -243,7 +324,7 @@ def verify_shadow!(shadow, citations)
   verify_approved_sequence!("canonical shadow dataset",
                             records.map { |record| record["citation"] })
 
-  expected_data = detail_front_matter.fetch("data")
+  verify_detail_record!
   ids = []
   dois = []
 
@@ -262,20 +343,32 @@ def verify_shadow!(shadow, citations)
                 "record #{order} has invalid id")
     ids << record["id"]
 
-    fail_unless(record["title"].nil?, "record #{order} title must remain null in Stage B")
-    fail_unless(record["authors"] == { "display" => nil, "parsed" => [] },
-                "record #{order} authors must remain unparsed in Stage B")
-    fail_unless(record["venue"] == {
-                  "name" => nil, "volume" => nil, "issue" => nil,
-                  "pages" => nil, "article_number" => nil
-                }, "record #{order} venue fields must remain null in Stage B")
-    fail_unless(record["year"].nil? && record["date"].nil? && record["date_precision"].nil?,
-                "record #{order} date fields must remain null in Stage B")
+    expected_id = scfluent ? SCFLUENT_ID : format("pub-cv-%03d", order)
+    fail_unless(record["id"] == expected_id, "record #{order} canonical ID changed")
+
+    if scfluent
+      SCFLUENT_STRUCTURED_FIELDS.each do |key, expected|
+        fail_unless(record[key] == expected,
+                    "scFLUENT-seq approved #{key} enrichment changed")
+      end
+    else
+      fail_unless(record["title"].nil?, "record #{order} title must remain unparsed")
+      fail_unless(record["authors"] == { "display" => nil, "parsed" => [] },
+                  "record #{order} authors must remain unparsed")
+      fail_unless(record["venue"] == {
+                    "name" => nil, "volume" => nil, "issue" => nil,
+                    "pages" => nil, "article_number" => nil
+                  }, "record #{order} venue fields must remain unparsed")
+      fail_unless(record["year"].nil? && record["date"].nil? && record["date_precision"].nil?,
+                  "record #{order} date fields must remain unparsed")
+    end
 
     type = record["publication_type"]
     fail_unless(ALLOWED_PUBLICATION_TYPES.include?(type),
                 "record #{order} has invalid publication_type")
-    fail_unless(type == "unknown", "record #{order} type must remain unknown in Stage B")
+    expected_type = scfluent ? "research-article" : "unknown"
+    fail_unless(type == expected_type,
+                "record #{order} publication_type is outside the approved Stage F scope")
     programs = record["research_programs"]
     fail_unless(programs.is_a?(Array) && (programs - ALLOWED_RESEARCH_PROGRAMS).empty?,
                 "record #{order} has invalid research_programs")
@@ -295,7 +388,7 @@ def verify_shadow!(shadow, citations)
     fail_unless(links["pdf"].nil?, "record #{order} must not expose a PDF action")
     fail_unless(links["code"] == [] && links["supplementary"] == [],
                 "record #{order} has unapproved Code or Supplementary links")
-    fail_unless(links["data"] == (scfluent ? expected_data : []),
+    fail_unless(links["data"] == (scfluent ? SCFLUENT_DATA_LINKS : []),
                 "record #{order} has unapproved or missing Data links")
 
     expected_presentation = {
@@ -320,11 +413,9 @@ def verify_shadow!(shadow, citations)
 
   fail_unless(ids.uniq.length == 52, "publication IDs are not unique")
   fail_unless(dois.uniq.length == dois.length, "explicit DOI values are not unique")
-  fail_unless(records.first["id"] == "pub-2025-scfluent-seq",
+  fail_unless(records.first["id"] == SCFLUENT_ID,
               "scFLUENT-seq record ID changed")
   fail_unless(File.file?(DETAIL_PATH), "scFLUENT-seq detail record is missing")
-  fail_unless(shadow == shadow_document(citations),
-              "shadow contains content outside the public legacy source and approved scFLUENT-seq metadata")
 
   {
     doi_present: dois.length,
@@ -347,7 +438,8 @@ def verify!
   puts "PASS publications shadow: 52 records; exact order/citation/hash parity; " \
        "DOI #{counts[:doi_present]} present/#{counts[:doi_missing]} missing; " \
        "status #{counts[:partially_verified]} partially-verified/#{counts[:unparsed]} unparsed; " \
-       "PDF actions 0; unpublished-title exposure 0."
+       "approved scFLUENT-seq enrichment 1/other records structurally unparsed 51; " \
+       "thin detail canonical duplicates 0; PDF actions 0; unpublished-title exposure 0."
 end
 
 begin

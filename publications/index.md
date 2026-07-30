@@ -15,23 +15,25 @@ The work below is organized around **Biological Information Flow: From Genome to
 
 <div class="publication-grid">
   {% for paper in papers %}
+    {% assign publication = site.data.publications.records | where: "id", paper.publication_id | first %}
+    {% assign enrichment = paper.localized.en %}
     <article class="publication-entry">
       <a class="publication-entry-image" href="{{ paper.url | relative_url }}">
         <img
-          src="{{ paper.image | relative_url }}"
-          alt="Graphical abstract for {{ paper.title | escape }}"
+          src="{{ paper.graphical_abstract.path | relative_url }}"
+          alt="{{ paper.graphical_abstract.alt.en | escape }}"
           loading="lazy"
         >
       </a>
 
       <div class="publication-entry-content">
-        <div class="publication-entry-meta">{{ paper.journal }} · {{ paper.year }}</div>
-        <h3><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h3>
-        <p class="publication-entry-authors">{{ paper.authors }}</p>
-        <p>{{ paper.summary }}</p>
+        <div class="publication-entry-meta">{{ publication.venue.name }} · {{ publication.year }}</div>
+        <h3><a href="{{ paper.url | relative_url }}">{{ publication.title }}</a></h3>
+        <p class="publication-entry-authors">{{ publication.authors.display }}</p>
+        <p>{{ enrichment.summary }}</p>
 
-        {% if paper.metric %}
-          <div class="publication-entry-metric">{{ paper.metric }} (cell-type dependent)</div>
+        {% if enrichment.metric %}
+          <div class="publication-entry-metric">{{ enrichment.metric }} (cell-type dependent)</div>
         {% endif %}
 
         <div class="publication-entry-tags">
@@ -42,7 +44,7 @@ The work below is organized around **Biological Information Flow: From Genome to
 
         <div class="publication-entry-actions">
           <a href="{{ paper.url | relative_url }}">Read summary</a>
-          <a href="{{ paper.doi }}">View article</a>
+          <a href="{{ publication.links.article }}">View article</a>
         </div>
       </div>
     </article>

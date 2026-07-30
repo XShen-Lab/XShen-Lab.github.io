@@ -12,21 +12,23 @@ title: 论文发表
 
 <div class="publication-grid">
   {% for paper in papers %}
+    {% assign publication = site.data.publications.records | where: "id", paper.publication_id | first %}
+    {% assign enrichment = paper.localized["zh-CN"] | default: paper.localized.en %}
     <article class="publication-entry">
       <a class="publication-entry-image" href="{{ paper.url | relative_url }}">
         <img
-          src="{{ paper.image | relative_url }}"
-          alt="{{ paper.title | escape }} 的图文摘要"
+          src="{{ paper.graphical_abstract.path | relative_url }}"
+          alt="{{ paper.graphical_abstract.alt["zh-CN"] | default: paper.graphical_abstract.alt.en | escape }}"
           loading="lazy"
         >
       </a>
       <div class="publication-entry-content">
-        <div class="publication-entry-meta">{{ paper.journal }} · {{ paper.year }}</div>
-        <h3><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h3>
-        <p class="publication-entry-authors">{{ paper.authors }}</p>
-        <p>scFLUENT-seq 揭示单细胞中稀疏且随机的基因组使用，并将转录多样性与细胞可塑性联系起来。</p>
-        {% if paper.metric %}
-          <div class="publication-entry-metric">{{ paper.metric }}（范围取决于细胞类型）</div>
+        <div class="publication-entry-meta">{{ publication.venue.name }} · {{ publication.year }}</div>
+        <h3><a href="{{ paper.url | relative_url }}">{{ publication.title }}</a></h3>
+        <p class="publication-entry-authors">{{ publication.authors.display }}</p>
+        <p>{{ enrichment.summary }}</p>
+        {% if enrichment.metric %}
+          <div class="publication-entry-metric">{{ enrichment.metric }}（范围取决于细胞类型）</div>
         {% endif %}
         <div class="publication-entry-tags">
           <span>单细胞基因组学</span>
@@ -36,7 +38,7 @@ title: 论文发表
         </div>
         <div class="publication-entry-actions">
           <a href="{{ paper.url | relative_url }}">阅读简介</a>
-          <a href="{{ paper.doi }}">查看论文</a>
+          <a href="{{ publication.links.article }}">查看论文</a>
         </div>
       </div>
     </article>

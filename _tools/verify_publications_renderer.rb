@@ -4,6 +4,7 @@
 require "cgi"
 require "date"
 require "digest"
+require "json"
 require "open3"
 require "tempfile"
 require "tmpdir"
@@ -26,6 +27,8 @@ DETAIL_PATH = File.join("publications", "2025-scfluent-seq", "index.html")
 EXPECTED_SWITCH = "{% if site.publications_v2.enabled %}{% include publications/list.html %}" \
                   "{% else %}{% include full-publications.html %}{% endif %}"
 APPROVED_SEQUENCE_SHA256 = "2526131b41eae70abd0d7e1d4509543c590e9b9246771471e193cbe6b7bcde52".freeze
+APPROVED_PRE_REFACTOR_DETAIL_SHA256 =
+  "fb5111662587f5715d0872014940ad509d15b75c6913a02212d0f05a27a4989d".freeze
 EXPECTED_COUNT = 52
 
 class RendererVerificationError < StandardError; end
@@ -201,7 +204,45 @@ def verify_mode!(pages, mode, legacy)
 
   fail_unless(lists.fetch("English")[:citations] == lists.fetch("Chinese")[:citations],
               "#{mode} English and Chinese citation sequences differ")
+  verify_detail_output!(pages.fetch("Detail"), mode)
   lists
+end
+
+def detail_signature(html)
+  main = html[/<main\b[^>]*>(.*?)<\/main>/mi, 1]
+  fail_unless(main, "scFLUENT-seq detail page has no main element")
+
+  clean = main.gsub(/<!--.*?-->/m, " ")
+              .gsub(/<script\b.*?<\/script>/mi, " ")
+              .gsub(/<style\b.*?<\/style>/mi, " ")
+  visible_text = CGI.unescapeHTML(clean.gsub(/<[^>]+>/, " ")).gsub(/\s+/, " ").strip
+  links = main.scan(/<a\b[^>]*\bhref="([^"]*)"/i).flatten.map { |href| CGI.unescapeHTML(href) }
+  images = main.scan(/<img\b[^>]*>/i).map do |tag|
+    {
+      "src" => CGI.unescapeHTML(tag[/\bsrc="([^"]*)"/i, 1].to_s),
+      "alt" => CGI.unescapeHTML(tag[/\balt="([^"]*)"/i, 1].to_s)
+    }
+  end
+  payload = {
+    "visible_text" => visible_text,
+    "links" => links,
+    "images" => images
+  }
+  [Digest::SHA256.hexdigest(JSON.generate(payload)), payload]
+end
+
+def verify_detail_output!(html, mode)
+  signature, payload = detail_signature(html)
+  fail_unless(signature == APPROVED_PRE_REFACTOR_DETAIL_SHA256,
+              "#{mode} scFLUENT-seq detail text/actions/image differ from the approved pre-refactor output")
+  fail_unless(html.include?(
+                "<title>Single-cell nascent transcription reveals sparse genome usage and plasticity | XShen Lab</title>"
+              ), "#{mode} scFLUENT-seq browser title changed")
+  fail_unless(payload.fetch("links").length == 4,
+              "#{mode} scFLUENT-seq detail must contain one DOI and three GEO links")
+  fail_unless(!html.include?("scfluent-seq-cell-2025.pdf") &&
+              html !~ /<a\b[^>]*>\s*PDF\s*<\/a>/i,
+              "#{mode} scFLUENT-seq detail exposes an unapproved PDF action")
 end
 
 def without_publication_list(page, list_html)
@@ -238,17 +279,18 @@ def verify!
   production_pages = build_production_pages
   production_lists = verify_mode!(production_pages, "production mode", legacy)
   puts "PASS publications renderer production mode: enabled=true; data-driven English=52/Chinese=52; " \
-       "approved order, visible text, and checksum."
+       "approved order, visible text, checksum, and scFLUENT-seq pre-refactor detail parity."
 
   rollback_pages = build_rollback_pages
   rollback_lists = verify_mode!(rollback_pages, "rollback mode", legacy)
   puts "PASS publications renderer rollback mode: enabled=false override; legacy English=52/Chinese=52; " \
-       "approved order, visible text, checksum, and URLs."
+       "approved order, visible text, checksum, URLs, and scFLUENT-seq pre-refactor detail parity."
 
   verify_mode_parity!(production_pages, production_lists, rollback_pages, rollback_lists)
   puts "PASS publications renderer mode parity: citation-only lists; bilingual sequences identical; " \
        "page content outside the list and scFLUENT-seq detail output unchanged; " \
-       "checksum=#{APPROVED_SEQUENCE_SHA256}."
+       "bibliography checksum=#{APPROVED_SEQUENCE_SHA256}; " \
+       "detail checksum=#{APPROVED_PRE_REFACTOR_DETAIL_SHA256}."
 end
 
 begin

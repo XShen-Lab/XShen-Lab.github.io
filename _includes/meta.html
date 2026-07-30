@@ -1,6 +1,11 @@
 {% assign filename = page.path | split: "/" | last %}
+{% if page.publication_id %}
+  {% assign canonical_publication = site.data.publications.records | where: "id", page.publication_id | first %}
+{% endif %}
 {% if page.name and page.name != filename %}
   {% assign title = page.name %}
+{% elsif canonical_publication.title %}
+  {% assign title = canonical_publication.title %}
 {% elsif page.title %}
   {% assign title = page.title %}
 {% else %}

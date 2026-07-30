@@ -10,20 +10,20 @@ records:
   citation: 'Ma S*, Hong Y, Chen J, Xu J, Shen X*. Single-cell nascent transcription
     reveals sparse genome usage and plasticity. Cell. 2025. doi: 10.1016/j.cell.2025.09.003.
     (* co-corresponding).'
-  title:
+  title: Single-cell nascent transcription reveals sparse genome usage and plasticity
   authors:
-    display:
+    display: Shaoqian Ma, Yantao Hong, Junhan Chen, Jingzhao Xu, and Xiaohua Shen
     parsed: []
   venue:
-    name:
-    volume:
+    name: Cell
+    volume: '188'
     issue:
-    pages:
+    pages: 6873–6891
     article_number:
-  year:
+  year: 2025
   date:
-  date_precision:
-  publication_type: unknown
+  date_precision: year
+  publication_type: research-article
   identifiers:
     doi: 10.1016/j.cell.2025.09.003
     pmid:
