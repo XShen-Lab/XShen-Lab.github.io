@@ -1,12 +1,18 @@
 {% assign publication = include.publication %}
+{% assign article_label = "View article" %}
+{% assign data_label = "Data" %}
+{% if page.lang == "zh-CN" %}
+  {% assign article_label = "查看论文" %}
+  {% assign data_label = "数据" %}
+{% endif %}
 {% if publication.links.article %}
   <ul>
-    <li><a href="{{ publication.links.article }}">View article</a></li>
+    <li><a href="{{ publication.links.article }}">{{ article_label }}</a></li>
   </ul>
 {% endif %}
 
 {% if publication.links.data.size > 0 %}
-  <h2 id="data">Data</h2>
+  <h2 id="data">{{ data_label }}</h2>
 
   <ul>
     {% for dataset in publication.links.data %}

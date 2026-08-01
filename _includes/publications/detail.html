@@ -1,6 +1,10 @@
 {% assign publication = include.publication %}
 {% assign enrichment = include.enrichment %}
 {% assign localized = enrichment.localized[page.lang] | default: enrichment.localized.en %}
+{% assign measurement_label = "Key measurement:" %}
+{% if page.lang == "zh-CN" %}
+  {% assign measurement_label = "关键指标：" %}
+{% endif %}
 <h1 id="{{ publication.title | slugify }}">{{ publication.title }}</h1>
 
 <p><strong>{{ publication.authors.display }}</strong><br>
@@ -17,7 +21,7 @@
 
 {% if localized.metric %}
   <blockquote>
-    <p><strong>Key measurement:</strong> {{ localized.metric }}</p>
+    <p><strong>{{ measurement_label }}</strong> {{ localized.metric }}</p>
   </blockquote>
 {% endif %}
 
