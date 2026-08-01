@@ -12,6 +12,9 @@ LEGACY_PATH = File.join(ROOT, "_includes", "full-publications.html")
 BASELINE_PATH = File.join(ROOT, "docs", "publications-v2-baseline.json")
 DATA_PATH = File.join(ROOT, "_data", "publications.yml")
 DETAIL_PATH = File.join(ROOT, "_publications", "2025-scfluent-seq.md")
+PUBLICATIONS_COLLECTION_PATH = File.join(ROOT, "_publications")
+CHINESE_DETAIL_PATH = File.join(ROOT, "zh", "publications", "2025-scfluent-seq", "index.md")
+LANGUAGE_PAIRS_PATH = File.join(ROOT, "_data", "language_pairs.yml")
 APPROVED_SEQUENCE_SHA256 = "2526131b41eae70abd0d7e1d4509543c590e9b9246771471e193cbe6b7bcde52".freeze
 
 EXPECTED_URLS = [
@@ -41,6 +44,9 @@ ALLOWED_PROVENANCE_STATUSES = %w[
 ].freeze
 
 SCFLUENT_ID = "pub-2025-scfluent-seq".freeze
+SCFLUENT_SLUG = "2025-scfluent-seq".freeze
+SCFLUENT_ENGLISH_URL = "/publications/#{SCFLUENT_SLUG}/".freeze
+SCFLUENT_CHINESE_URL = "/zh/publications/#{SCFLUENT_SLUG}/".freeze
 SCFLUENT_STRUCTURED_FIELDS = {
   "title" => "Single-cell nascent transcription reveals sparse genome usage and plasticity",
   "authors" => {
@@ -74,7 +80,7 @@ SCFLUENT_DATA_LINKS = [
   }
 ].freeze
 DETAIL_ALLOWED_KEYS = %w[
-  graphical_abstract layout localized publication_id tags
+  graphical_abstract layout localized publication_id
 ].freeze
 DETAIL_FORBIDDEN_CANONICAL_KEYS = (RECORD_KEYS + %w[
   data doi featured image issue journal pages pdf short_title volume
@@ -118,10 +124,36 @@ def explicit_doi(citation)
 end
 
 def detail_front_matter
-  source = File.read(DETAIL_PATH, encoding: "UTF-8")
+  front_matter_and_body(DETAIL_PATH, "scFLUENT-seq detail record").first
+end
+
+def front_matter_and_body(path, label)
+  source = File.read(path, encoding: "UTF-8")
   match = source.match(/\A---\s*\n(.*?)\n---\s*\n/m)
-  fail_unless(match, "scFLUENT-seq detail record has no YAML front matter")
-  YAML.safe_load(match[1], permitted_classes: [Date], aliases: false)
+  fail_unless(match, "#{label} has no YAML front matter")
+  front_matter = YAML.safe_load(match[1], permitted_classes: [Date], aliases: false)
+  body = source.delete_prefix(match[0])
+  [front_matter, body]
+rescue Errno::ENOENT, Psych::Exception => e
+  raise VerificationError, "cannot load #{path.delete_prefix(ROOT + "/")}: #{e.message}"
+end
+
+def enrichment_documents
+  paths = Dir.glob(File.join(PUBLICATIONS_COLLECTION_PATH, "**", "*.{md,markdown,html}"))
+             .select { |path| File.file?(path) }
+             .sort
+  paths.map do |path|
+    front_matter, body = front_matter_and_body(
+      path, "publication enrichment #{path.delete_prefix(ROOT + "/")}"
+    )
+    {
+      path: path,
+      relative_path: path.delete_prefix(ROOT + "/"),
+      slug: File.basename(path, File.extname(path)),
+      front_matter: front_matter,
+      body: body
+    }
+  end
 end
 
 def baseline_document(citations)
@@ -238,18 +270,110 @@ def verify_detail_record!
   fail_unless(localized.is_a?(Hash) && localized.keys.sort == %w[en zh-CN].sort,
               "scFLUENT-seq localized enrichment must contain only en and zh-CN")
   localized.each do |language, fields|
-    fail_unless(fields.is_a?(Hash) && fields.keys.sort == %w[metric sections short_title summary],
+    fail_unless(fields.is_a?(Hash) && fields.keys.sort == %w[metric sections short_title summary tags],
                 "scFLUENT-seq #{language} enrichment keys do not match the RFC")
     fail_unless(fields["sections"].is_a?(Array),
                 "scFLUENT-seq #{language} sections must be an array")
+    tags = fields["tags"]
+    fail_unless(tags.is_a?(Array) && tags.all? { |tag| tag.is_a?(String) && !tag.strip.empty? },
+                "scFLUENT-seq #{language} tags must be approved non-empty strings")
   end
-  fail_unless(detail["tags"].is_a?(Array) && detail["tags"].all? { |tag| tag.is_a?(String) },
-              "scFLUENT-seq tags must be approved strings")
 
   source = File.read(DETAIL_PATH, encoding: "UTF-8")
   body = source.match(/\A---\s*\n.*?\n---\s*\n?(.*)\z/m)&.captures&.first
   fail_unless(body && body.strip.empty?,
               "scFLUENT-seq detail record must not duplicate rendering content in its body")
+end
+
+def verify_detail_integrity!(records)
+  documents = enrichment_documents
+  fail_unless(!documents.empty?, "publication collection contains no enrichment documents")
+
+  documents.each do |document|
+    detail = document[:front_matter]
+    fail_unless(detail.is_a?(Hash),
+                "#{document[:relative_path]} front matter must be a map")
+    publication_id = detail["publication_id"]
+    fail_unless(publication_id.is_a?(String) && !publication_id.strip.empty?,
+                "#{document[:relative_path]} must define a non-empty publication_id")
+  end
+
+  enrichment_ids = documents.map { |document| document[:front_matter]["publication_id"] }
+  duplicate_ids = enrichment_ids.tally.select { |_id, count| count > 1 }.keys
+  fail_unless(duplicate_ids.empty?,
+              "duplicate publication_id values in enrichment documents: #{duplicate_ids.join(', ')}")
+
+  documents.each do |document|
+    publication_id = document[:front_matter]["publication_id"]
+    canonical_matches = records.select { |record| record["id"] == publication_id }
+    fail_unless(canonical_matches.length == 1,
+                "#{document[:relative_path]} publication_id #{publication_id.inspect} matches " \
+                "#{canonical_matches.length} canonical records, expected exactly 1")
+    canonical = canonical_matches.first
+    fail_unless(canonical["title"].is_a?(String) && !canonical["title"].strip.empty?,
+                "canonical record #{publication_id} requires a non-empty title for detail rendering")
+    slug = canonical.dig("presentation", "detail_slug")
+    fail_unless(slug.is_a?(String) && !slug.strip.empty?,
+                "canonical record #{publication_id} requires a non-empty presentation.detail_slug")
+    expected_english_url = "/publications/#{slug}/"
+    generated_english_url = "/publications/#{document[:slug]}/"
+    fail_unless(generated_english_url == expected_english_url,
+                "canonical record #{publication_id} detail_slug does not match generated English route " \
+                "#{generated_english_url}")
+  end
+
+  featured_records = records.select { |record| record.dig("presentation", "featured") == true }
+  featured_records.each do |record|
+    slug = record.dig("presentation", "detail_slug")
+    fail_unless(slug.is_a?(String) && !slug.strip.empty?,
+                "featured canonical record #{record['id']} requires presentation.detail_slug")
+    matches = documents.select { |document| document[:front_matter]["publication_id"] == record["id"] }
+    fail_unless(matches.length == 1,
+                "featured canonical record #{record['id']} has #{matches.length} enrichment documents, " \
+                "expected exactly 1")
+  end
+
+  verify_detail_record!
+
+  route, route_body = front_matter_and_body(CHINESE_DETAIL_PATH, "Chinese scFLUENT-seq detail route")
+  fail_unless(route.is_a?(Hash) && route.keys.sort == %w[layout publication_id],
+              "Chinese scFLUENT-seq detail route must contain only layout and publication_id")
+  fail_unless(route["layout"] == "publication",
+              "Chinese scFLUENT-seq detail route must use the publication layout")
+  fail_unless(route["publication_id"].is_a?(String) && !route["publication_id"].strip.empty?,
+              "Chinese scFLUENT-seq detail route must define a non-empty publication_id")
+  canonical_matches = records.select { |record| record["id"] == route["publication_id"] }
+  enrichment_matches = documents.select do |document|
+    document[:front_matter]["publication_id"] == route["publication_id"]
+  end
+  fail_unless(canonical_matches.length == 1,
+              "Chinese detail publication_id #{route['publication_id'].inspect} matches " \
+              "#{canonical_matches.length} canonical records, expected exactly 1")
+  fail_unless(enrichment_matches.length == 1,
+              "Chinese detail publication_id #{route['publication_id'].inspect} matches " \
+              "#{enrichment_matches.length} enrichment documents, expected exactly 1")
+  fail_unless(route_body.strip.empty?, "Chinese scFLUENT-seq detail route must have no body content")
+  fail_unless(route["publication_id"] == SCFLUENT_ID,
+              "Chinese scFLUENT-seq detail route publication_id changed")
+
+  language_pairs = load_yaml(LANGUAGE_PAIRS_PATH)
+  detail_pairs = language_pairs.select do |pair|
+    pair["en_page"] == SCFLUENT_ENGLISH_URL || pair["zh_page"] == SCFLUENT_CHINESE_URL
+  end
+  expected_pair = {
+    "en_page" => SCFLUENT_ENGLISH_URL,
+    "zh_page" => SCFLUENT_CHINESE_URL,
+    "en_href" => SCFLUENT_ENGLISH_URL,
+    "zh_href" => SCFLUENT_CHINESE_URL
+  }
+  fail_unless(detail_pairs == [expected_pair],
+              "scFLUENT-seq detail routes require one exact reciprocal language pair")
+
+  {
+    enrichment_count: documents.length,
+    featured_count: featured_records.length,
+    route_count: 2
+  }
 end
 
 def generate!
@@ -324,7 +448,7 @@ def verify_shadow!(shadow, citations)
   verify_approved_sequence!("canonical shadow dataset",
                             records.map { |record| record["citation"] })
 
-  verify_detail_record!
+  detail_counts = verify_detail_integrity!(records)
   ids = []
   dois = []
 
@@ -423,7 +547,10 @@ def verify_shadow!(shadow, citations)
     unparsed: records.count { |record| record.dig("provenance", "structured_fields_status") == "unparsed" },
     partially_verified: records.count do |record|
       record.dig("provenance", "structured_fields_status") == "partially-verified"
-    end
+    end,
+    enrichment_count: detail_counts[:enrichment_count],
+    featured_count: detail_counts[:featured_count],
+    detail_route_count: detail_counts[:route_count]
   }
 end
 
@@ -439,7 +566,9 @@ def verify!
        "DOI #{counts[:doi_present]} present/#{counts[:doi_missing]} missing; " \
        "status #{counts[:partially_verified]} partially-verified/#{counts[:unparsed]} unparsed; " \
        "approved scFLUENT-seq enrichment 1/other records structurally unparsed 51; " \
-       "thin detail canonical duplicates 0; PDF actions 0; unpublished-title exposure 0."
+       "featured #{counts[:featured_count]}/enrichment #{counts[:enrichment_count]}/" \
+       "detail routes #{counts[:detail_route_count]}; canonical/enrichment duplicates 0; " \
+       "PDF actions 0; unpublished-title exposure 0."
 end
 
 begin

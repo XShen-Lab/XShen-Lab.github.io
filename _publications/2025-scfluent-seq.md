@@ -16,16 +16,20 @@ localized:
     metric: 0.02–3.1% of the genome transcribed per cell
     sections:
       - The reported genome-usage range is cell-type dependent.
+    tags:
+      - Single-cell genomics
+      - Nascent RNA
+      - Transcriptional heterogeneity
+      - Cellular plasticity
   zh-CN:
     short_title:
     summary: scFLUENT-seq 揭示单细胞中稀疏且随机的基因组使用，并将转录多样性与细胞可塑性联系起来。
     metric: 0.02–3.1% of the genome transcribed per cell
     sections: []
-
-tags:
-  - Single-cell genomics
-  - Nascent RNA
-  - Transcriptional heterogeneity
-  - Cellular plasticity
+    tags:
+      - 单细胞基因组学
+      - 新生 RNA
+      - 转录异质性
+      - 细胞可塑性
 
 ---

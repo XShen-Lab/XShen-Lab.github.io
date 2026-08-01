@@ -6,42 +6,45 @@ title: 论文发表
 
 # 论文发表
 
-以下成果围绕**生物信息流：从基因组到细胞命运**组织。顶部特色卡片继续由现有论文集合驱动，并链接至 scFLUENT-seq 详情页；完整目录严格沿用简历中正式 FULL PUBLICATIONS 部分的顺序与内容。
+以下成果围绕**生物信息流：从基因组到细胞命运**组织。顶部特色卡片由规范论文数据选定，并链接至 scFLUENT-seq 中文详情页；完整目录严格沿用简历中正式 FULL PUBLICATIONS 部分的顺序与内容。
 
-{% assign papers = site.publications | sort: "date" | reverse %}
+{% assign publication_records = site.data.publications.records | sort: "cv_order" %}
 
 <div class="publication-grid">
-  {% for paper in papers %}
-    {% assign publication = site.data.publications.records | where: "id", paper.publication_id | first %}
-    {% assign enrichment = paper.localized["zh-CN"] | default: paper.localized.en %}
-    <article class="publication-entry">
-      <a class="publication-entry-image" href="{{ paper.url | relative_url }}">
-        <img
-          src="{{ paper.graphical_abstract.path | relative_url }}"
-          alt="{{ paper.graphical_abstract.alt["zh-CN"] | default: paper.graphical_abstract.alt.en | escape }}"
-          loading="lazy"
-        >
-      </a>
-      <div class="publication-entry-content">
-        <div class="publication-entry-meta">{{ publication.venue.name }} · {{ publication.year }}</div>
-        <h3><a href="{{ paper.url | relative_url }}">{{ publication.title }}</a></h3>
-        <p class="publication-entry-authors">{{ publication.authors.display }}</p>
-        <p>{{ enrichment.summary }}</p>
-        {% if enrichment.metric %}
-          <div class="publication-entry-metric">{{ enrichment.metric }}（范围取决于细胞类型）</div>
-        {% endif %}
-        <div class="publication-entry-tags">
-          <span>单细胞基因组学</span>
-          <span>新生 RNA</span>
-          <span>转录异质性</span>
-          <span>细胞可塑性</span>
+  {% for publication in publication_records %}
+    {% if publication.presentation.featured %}
+      {% assign enrichment_matches = site.publications | where: "publication_id", publication.id %}
+      {% assign paper = enrichment_matches | first %}
+      {% assign enrichment = paper.localized["zh-CN"] | default: paper.localized.en %}
+      {% assign detail_url = "/zh/publications/" | append: publication.presentation.detail_slug | append: "/" %}
+      <article class="publication-entry">
+        <a class="publication-entry-image" href="{{ detail_url | relative_url }}">
+          <img
+            src="{{ paper.graphical_abstract.path | relative_url }}"
+            alt="{{ paper.graphical_abstract.alt["zh-CN"] | default: paper.graphical_abstract.alt.en | escape }}"
+            loading="lazy"
+          >
+        </a>
+        <div class="publication-entry-content">
+          <div class="publication-entry-meta">{{ publication.venue.name }} · {{ publication.year }}</div>
+          <h3><a href="{{ detail_url | relative_url }}">{{ publication.title }}</a></h3>
+          <p class="publication-entry-authors">{{ publication.authors.display }}</p>
+          <p>{{ enrichment.summary }}</p>
+          {% if enrichment.metric %}
+            <div class="publication-entry-metric">{{ enrichment.metric }}（范围取决于细胞类型）</div>
+          {% endif %}
+          <div class="publication-entry-tags">
+            {% for tag in enrichment.tags %}
+              <span>{{ tag }}</span>
+            {% endfor %}
+          </div>
+          <div class="publication-entry-actions">
+            <a href="{{ detail_url | relative_url }}">阅读简介</a>
+            <a href="{{ publication.links.article }}">查看论文</a>
+          </div>
         </div>
-        <div class="publication-entry-actions">
-          <a href="{{ paper.url | relative_url }}">阅读简介</a>
-          <a href="{{ publication.links.article }}">查看论文</a>
-        </div>
-      </div>
-    </article>
+      </article>
+    {% endif %}
   {% endfor %}
 </div>
 

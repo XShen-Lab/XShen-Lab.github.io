@@ -9,45 +9,49 @@ nav:
 
 # Publications
 
-The work below is organized around **Biological Information Flow: From Genome to Cell Fate**. The featured card remains collection-driven and links to the existing scFLUENT-seq detail page; the complete bibliography follows the order and wording of the CV’s formal FULL PUBLICATIONS section.
+The work below is organized around **Biological Information Flow: From Genome to Cell Fate**. The featured card is selected from canonical publication data and links to the existing scFLUENT-seq detail page; the complete bibliography follows the order and wording of the CV’s formal FULL PUBLICATIONS section.
 
-{% assign papers = site.publications | sort: "date" | reverse %}
+{% assign publication_records = site.data.publications.records | sort: "cv_order" %}
 
 <div class="publication-grid">
-  {% for paper in papers %}
-    {% assign publication = site.data.publications.records | where: "id", paper.publication_id | first %}
-    {% assign enrichment = paper.localized.en %}
-    <article class="publication-entry">
-      <a class="publication-entry-image" href="{{ paper.url | relative_url }}">
-        <img
-          src="{{ paper.graphical_abstract.path | relative_url }}"
-          alt="{{ paper.graphical_abstract.alt.en | escape }}"
-          loading="lazy"
-        >
-      </a>
+  {% for publication in publication_records %}
+    {% if publication.presentation.featured %}
+      {% assign enrichment_matches = site.publications | where: "publication_id", publication.id %}
+      {% assign paper = enrichment_matches | first %}
+      {% assign enrichment = paper.localized.en %}
+      {% assign detail_url = "/publications/" | append: publication.presentation.detail_slug | append: "/" %}
+      <article class="publication-entry">
+        <a class="publication-entry-image" href="{{ detail_url | relative_url }}">
+          <img
+            src="{{ paper.graphical_abstract.path | relative_url }}"
+            alt="{{ paper.graphical_abstract.alt.en | escape }}"
+            loading="lazy"
+          >
+        </a>
 
-      <div class="publication-entry-content">
-        <div class="publication-entry-meta">{{ publication.venue.name }} · {{ publication.year }}</div>
-        <h3><a href="{{ paper.url | relative_url }}">{{ publication.title }}</a></h3>
-        <p class="publication-entry-authors">{{ publication.authors.display }}</p>
-        <p>{{ enrichment.summary }}</p>
+        <div class="publication-entry-content">
+          <div class="publication-entry-meta">{{ publication.venue.name }} · {{ publication.year }}</div>
+          <h3><a href="{{ detail_url | relative_url }}">{{ publication.title }}</a></h3>
+          <p class="publication-entry-authors">{{ publication.authors.display }}</p>
+          <p>{{ enrichment.summary }}</p>
 
-        {% if enrichment.metric %}
-          <div class="publication-entry-metric">{{ enrichment.metric }} (cell-type dependent)</div>
-        {% endif %}
+          {% if enrichment.metric %}
+            <div class="publication-entry-metric">{{ enrichment.metric }} (cell-type dependent)</div>
+          {% endif %}
 
-        <div class="publication-entry-tags">
-          {% for tag in paper.tags %}
-            <span>{{ tag }}</span>
-          {% endfor %}
+          <div class="publication-entry-tags">
+            {% for tag in enrichment.tags %}
+              <span>{{ tag }}</span>
+            {% endfor %}
+          </div>
+
+          <div class="publication-entry-actions">
+            <a href="{{ detail_url | relative_url }}">Read summary</a>
+            <a href="{{ publication.links.article }}">View article</a>
+          </div>
         </div>
-
-        <div class="publication-entry-actions">
-          <a href="{{ paper.url | relative_url }}">Read summary</a>
-          <a href="{{ publication.links.article }}">View article</a>
-        </div>
-      </div>
-    </article>
+      </article>
+    {% endif %}
   {% endfor %}
 </div>
 

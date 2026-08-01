@@ -1,5 +1,8 @@
 ---
 layout: default
 ---
-{% assign publication = site.data.publications.records | where: "id", page.publication_id | first %}
-{% include publications/detail.html publication=publication enrichment=page %}
+{% assign canonical_matches = site.data.publications.records | where: "id", page.publication_id %}
+{% assign enrichment_matches = site.publications | where: "publication_id", page.publication_id %}
+{% assign publication = canonical_matches | first %}
+{% assign enrichment = enrichment_matches | first %}
+{% include publications/detail.html publication=publication enrichment=enrichment %}
