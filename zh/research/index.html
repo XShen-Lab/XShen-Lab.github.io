@@ -49,6 +49,7 @@
 <title>研究方向 | XShen Lab</title>
 
 <link rel="icon" href="/images/icon.png">
+<link rel="canonical" href="https://xshen-lab.github.io/zh/research/">
 
 <meta name="title" content="研究方向">
 <meta name="description" content="Biological Information Flow: From Genome to Cell Fate. The XShen Lab at Tsinghua University studies how stochastic genome activity is organized, processed, selected, and stabilized into biological information and cell fate.">
@@ -56,13 +57,13 @@
 <meta property="og:title" content="研究方向">
 <meta property="og:site_title" content="XShen Lab">
 <meta property="og:description" content="Biological Information Flow: From Genome to Cell Fate. The XShen Lab at Tsinghua University studies how stochastic genome activity is organized, processed, selected, and stabilized into biological information and cell fate.">
-<meta property="og:url" content="https://xshen-lab.github.io">
+<meta property="og:url" content="https://xshen-lab.github.io/zh/research/">
 <meta property="og:image" content="/images/share.jpg">
 <meta property="og:locale" content="zh_CN">
 
 <meta property="twitter:title" content="研究方向">
 <meta property="twitter:description" content="Biological Information Flow: From Genome to Cell Fate. The XShen Lab at Tsinghua University studies how stochastic genome activity is organized, processed, selected, and stabilized into biological information and cell fate.">
-<meta property="twitter:url" content="https://xshen-lab.github.io">
+<meta property="twitter:url" content="https://xshen-lab.github.io/zh/research/">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="/images/share.jpg">
 
@@ -83,7 +84,7 @@
       "@type": "Organization",
       "logo": { "@type": "ImageObject", "url": "/images/icon.png" }
     },
-    "url": "https://xshen-lab.github.io"
+    "url": "https://xshen-lab.github.io/zh/research/"
   }
 </script>
 
@@ -106,7 +107,7 @@
 <!-- automatically get url from fonts used in theme file -->
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?display=swap&&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?display=swap&&family=Cormorant+Garamond:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=IBM+Plex%20Mono" mono:ital neue:ital rel="stylesheet">
 
 <!-- Font Awesome icons (load asynchronously due to size) -->
 
@@ -267,6 +268,8 @@
   
 
   
+
+  
     <link href="/_styles/rule.css" rel="stylesheet">
   
 
@@ -357,6 +360,9 @@
   
 
 
+<!-- brand and editorial system loads last so it can refine template defaults -->
+<link href="/_styles/rna.css" rel="stylesheet">
+
 <!-- include all css in styles folder -->
 
 
@@ -375,6 +381,8 @@
 
   <script src="/_scripts/fetch-tags.js"></script>
 
+  <script src="/_scripts/motion.js"></script>
+
   <script src="/_scripts/search.js"></script>
 
   <script src="/_scripts/site-search.js"></script>
@@ -386,7 +394,10 @@
 
 </head>
 
-  <body>
+  
+  
+  <body class="page-inner">
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     
 
 
@@ -399,13 +410,15 @@
 
 
 
+  
 
-<header class="background" style="--image: url('/images/background.jpg')" data-dark="true">
-  <a href="/zh/" class="home">
-    
-      <span class="logo">
-        
-          <svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
+  
+
+<header class="site-header" data-site-header data-dark="true">
+  <div class="site-progress" aria-hidden="true"><span data-site-progress></span></div>
+  <div class="site-header-inner">
+    <a href="/zh/" class="home" aria-label="首页">
+      <span class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
   <style>
     .bubble {
       animation: float 2s ease-out both infinite var(--delay);
@@ -424,6 +437,12 @@
       100% {
         opacity: 0;
         transform: translateY(-40px);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .bubble {
+        animation: none;
+        opacity: 0.35;
       }
     }
   </style>
@@ -462,64 +481,41 @@
       L 18 -53
     "></path>
 </svg>
+</span>
+      <span class="title-text"><span class="title">XShen Lab</span><span class="subtitle">Biological Information Flow</span></span>
+    </a>
 
-        
-      </span>
-    
-    
-      <span class="title-text" data-tooltip="首页">
-        
-          <span class="title">XShen Lab</span>
-        
-        
-          <span class="subtitle">Biological Information Flow: From Genome to Cell Fate</span>
-        
-      </span>
-    
-  </a>
+    <input id="site-nav-toggle" class="nav-toggle" type="checkbox" aria-label="打开或关闭导航" aria-controls="site-nav" aria-expanded="false">
+    <label class="nav-toggle-label" for="site-nav-toggle" aria-hidden="true"><span></span><span></span></label>
 
-  <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
-
-  <nav>
-    
+    <nav id="site-nav" class="site-nav" aria-label="主导航">
       
-        <a href="/zh/" data-tooltip="中文首页">
-          首页
-        </a>
+        
+          <a href="/zh/" data-tooltip="中文首页">首页</a>
+        
+          <a href="/zh/research/" data-tooltip="实验室研究方向" aria-current="page">研究方向</a>
+        
+          <a href="/zh/people/" data-tooltip="实验室团队成员">团队成员</a>
+        
+          <a href="/zh/publications/" data-tooltip="代表性论文与完整论文目录">论文发表</a>
+        
+          <a href="/zh/resources/" data-tooltip="分析流程、实验方案与实验室资源">资源</a>
+        
+          <a href="/zh/software/" data-tooltip="软件、实验方案与分析流程">软件与流程</a>
+        
+          <a href="/zh/join-us/" data-tooltip="加入实验室的机会">加入我们</a>
+        
+          <a href="/zh/contact/" data-tooltip="联系实验室">联系方式</a>
+        
       
-        <a href="/zh/research/" data-tooltip="实验室研究方向">
-          研究方向
-        </a>
       
-        <a href="/zh/people/" data-tooltip="实验室团队成员">
-          团队成员
-        </a>
+        <a class="language-switch" href="/research/" lang="en">EN</a>
       
-        <a href="/zh/publications/" data-tooltip="代表性论文与完整论文目录">
-          论文发表
-        </a>
-      
-        <a href="/zh/resources/" data-tooltip="分析流程、实验方案与实验室资源">
-          资源
-        </a>
-      
-        <a href="/zh/software/" data-tooltip="软件、实验方案与分析流程">
-          软件与流程
-        </a>
-      
-        <a href="/zh/join-us/" data-tooltip="加入实验室的机会">
-          加入我们
-        </a>
-      
-        <a href="/zh/contact/" data-tooltip="联系实验室">
-          联系方式
-        </a>
-      
-    
-  </nav>
+    </nav>
+  </div>
 </header>
 
-    <main>
+    <main id="main-content">
       <!--
   modify main content of page:
   - add section breaks
@@ -626,7 +622,7 @@
 
 <h2 id="研究项目">研究项目</h2>
 
-<h3 id="1-基因组组织">1. 基因组组织</h3>
+<h3 id="genome-organization">1. 基因组组织</h3>
 
 <p><strong>组织生物信息</strong></p>
 
@@ -634,7 +630,7 @@
 
 <p>我们研究基因组序列如何建立细胞核结构并影响基因调控与细胞命运。我们的工作表明，L1 与 B1/Alu 等重复元件并非单纯的基因组副产物，而是编码染色体区室化和核内定位原则。当前研究进一步探索重复元件及其 RNA 产物如何在发育、细胞周期转换和细胞命运变化过程中塑造染色质组织、细胞核结构与动态基因组重塑。</p>
 
-<h3 id="2-rna-网络">2. RNA 网络</h3>
+<h3 id="rna-networks">2. RNA 网络</h3>
 
 <p><strong>处理生物信息</strong></p>
 
@@ -642,7 +638,7 @@
 
 <p>RNA 既是遗传信息载体，也是细胞核功能的重要组织者。我们的研究确立了非编码 RNA 调控邻近基因与局部染色质状态的作用，并发现 RNA 结合蛋白可形成动态的 RNA 相关凝聚体，调控 RNA 聚合酶 II 的募集、CTD 磷酸化与转录延伸。我们进一步研究新生转录（Nascent Transcription）、RNA 结合蛋白和加工因子如何构成 RNA–RBP 网状体系，协调转录、RNA 成熟、RNA 降解与细胞核组织。</p>
 
-<h3 id="3-转录监控">3. 转录监控</h3>
+<h3 id="transcriptional-surveillance">3. 转录监控</h3>
 
 <p><strong>选择生物信息</strong></p>
 
@@ -650,7 +646,7 @@
 
 <p>真核基因组发生广泛转录，但仅有部分转录事件能够进入有效延伸并形成成熟 mRNA。我们提出，有效转录并非默认结果，而是主动建立的状态。当前工作研究 RNA 聚合酶 II CTD 与 RNA 加工和降解通路如何构成全基因组尺度的转录监控系统，清除无效转录，同时支持 RNA 成熟、有效延伸和聚合酶循环利用。此处不公开尚未发表的稿件标题。</p>
 
-<h3 id="4-细胞命运动力学">4. 细胞命运动力学</h3>
+<h3 id="cell-fate-dynamics">4. 细胞命运动力学</h3>
 
 <p><strong>稳定生物信息</strong></p>
 
@@ -710,18 +706,26 @@
     </main>
     
 
-
-<footer class="background" style="--image: url('/images/background.jpg')" data-dark="true" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+<footer class="site-footer" data-dark="true">
+  <div class="site-footer-grid">
+    <div class="site-footer-brand">
+      <span class="site-footer-kicker">XShen Lab</span>
+      <strong>生物信息流</strong>
+      <p>从基因组到细胞命运</p>
     </div>
-  -->
-
-  <div>
-    
+    <address>
+      <span>清华大学基础医学院</span>
+      <span>清华大学郑裕彤医学楼 D108</span>
+      <a href="mailto:xshen@tsinghua.edu.cn">xshen@tsinghua.edu.cn</a>
+    </address>
+    <nav class="site-footer-nav" aria-label="页脚导航">
       
+        <a href="/zh/">首页</a><a href="/zh/research/">研究方向</a><a href="/zh/people/">团队成员</a><a href="/zh/publications/">论文发表</a><a href="/zh/resources/">资源</a><a href="/zh/software/">软件与流程</a><a href="/zh/join-us/">加入我们</a><a href="/zh/contact/">联系方式</a>
       
+    </nav>
+  </div>
+  <div class="site-footer-base">
+    <div class="site-footer-social">
       
 
 
@@ -734,10 +738,6 @@
   </div>
 
 
-    
-      
-      
-      
 
 
 
@@ -749,10 +749,6 @@
   </div>
 
 
-    
-      
-      
-      
 
 
 
@@ -764,10 +760,6 @@
   </div>
 
 
-    
-      
-      
-      
 
 
 
@@ -779,19 +771,10 @@
   </div>
 
 
-    
+    </div>
+    <span>© 2026 XShen Lab</span>
+    <input type="checkbox" class="dark-toggle" data-tooltip="切换明暗模式" aria-label="切换明暗模式" oninput="onDarkToggleChange(event)">
   </div>
-
-  <div>
-    © 2026
-    XShen Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
-  </div>
-
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
 </footer>
 
   </body>

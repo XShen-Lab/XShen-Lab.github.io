@@ -49,6 +49,7 @@
 <title>中文首页 | XShen Lab</title>
 
 <link rel="icon" href="/images/icon.png">
+<link rel="canonical" href="https://xshen-lab.github.io/zh/">
 
 <meta name="title" content="中文首页">
 <meta name="description" content="Biological Information Flow: From Genome to Cell Fate. The XShen Lab at Tsinghua University studies how stochastic genome activity is organized, processed, selected, and stabilized into biological information and cell fate.">
@@ -56,13 +57,13 @@
 <meta property="og:title" content="中文首页">
 <meta property="og:site_title" content="XShen Lab">
 <meta property="og:description" content="Biological Information Flow: From Genome to Cell Fate. The XShen Lab at Tsinghua University studies how stochastic genome activity is organized, processed, selected, and stabilized into biological information and cell fate.">
-<meta property="og:url" content="https://xshen-lab.github.io">
+<meta property="og:url" content="https://xshen-lab.github.io/zh/">
 <meta property="og:image" content="/images/share.jpg">
 <meta property="og:locale" content="zh_CN">
 
 <meta property="twitter:title" content="中文首页">
 <meta property="twitter:description" content="Biological Information Flow: From Genome to Cell Fate. The XShen Lab at Tsinghua University studies how stochastic genome activity is organized, processed, selected, and stabilized into biological information and cell fate.">
-<meta property="twitter:url" content="https://xshen-lab.github.io">
+<meta property="twitter:url" content="https://xshen-lab.github.io/zh/">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="/images/share.jpg">
 
@@ -83,7 +84,7 @@
       "@type": "Organization",
       "logo": { "@type": "ImageObject", "url": "/images/icon.png" }
     },
-    "url": "https://xshen-lab.github.io"
+    "url": "https://xshen-lab.github.io/zh/"
   }
 </script>
 
@@ -104,7 +105,7 @@
 <!-- automatically get url from fonts used in theme file -->
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?display=swap&&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?display=swap&&family=Cormorant+Garamond:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=IBM+Plex%20Mono" mono:ital neue:ital rel="stylesheet">
 
 <!-- Font Awesome icons (load asynchronously due to size) -->
 
@@ -265,6 +266,8 @@
   
 
   
+
+  
     <link href="/_styles/rule.css" rel="stylesheet">
   
 
@@ -355,6 +358,9 @@
   
 
 
+<!-- brand and editorial system loads last so it can refine template defaults -->
+<link href="/_styles/rna.css" rel="stylesheet">
+
 <!-- include all css in styles folder -->
 
 
@@ -373,6 +379,8 @@
 
   <script src="/_scripts/fetch-tags.js"></script>
 
+  <script src="/_scripts/motion.js"></script>
+
   <script src="/_scripts/search.js"></script>
 
   <script src="/_scripts/site-search.js"></script>
@@ -384,7 +392,10 @@
 
 </head>
 
-  <body>
+  
+  
+  <body class="page-home">
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     
 
 
@@ -397,13 +408,13 @@
 
 
 
+  
 
-<header class="background" style="--image: url('/images/background.jpg')" data-dark="true">
-  <a href="/zh/" class="home">
-    
-      <span class="logo">
-        
-          <svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
+<header class="site-header" data-site-header data-transparent data-dark="true">
+  <div class="site-progress" aria-hidden="true"><span data-site-progress></span></div>
+  <div class="site-header-inner">
+    <a href="/zh/" class="home" aria-label="首页">
+      <span class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
   <style>
     .bubble {
       animation: float 2s ease-out both infinite var(--delay);
@@ -422,6 +433,12 @@
       100% {
         opacity: 0;
         transform: translateY(-40px);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .bubble {
+        animation: none;
+        opacity: 0.35;
       }
     }
   </style>
@@ -460,64 +477,41 @@
       L 18 -53
     "></path>
 </svg>
+</span>
+      <span class="title-text"><span class="title">XShen Lab</span><span class="subtitle">Biological Information Flow</span></span>
+    </a>
 
-        
-      </span>
-    
-    
-      <span class="title-text" data-tooltip="首页">
-        
-          <span class="title">XShen Lab</span>
-        
-        
-          <span class="subtitle">Biological Information Flow: From Genome to Cell Fate</span>
-        
-      </span>
-    
-  </a>
+    <input id="site-nav-toggle" class="nav-toggle" type="checkbox" aria-label="打开或关闭导航" aria-controls="site-nav" aria-expanded="false">
+    <label class="nav-toggle-label" for="site-nav-toggle" aria-hidden="true"><span></span><span></span></label>
 
-  <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
-
-  <nav>
-    
+    <nav id="site-nav" class="site-nav" aria-label="主导航">
       
-        <a href="/zh/" data-tooltip="中文首页">
-          首页
-        </a>
+        
+          <a href="/zh/" data-tooltip="中文首页" aria-current="page">首页</a>
+        
+          <a href="/zh/research/" data-tooltip="实验室研究方向">研究方向</a>
+        
+          <a href="/zh/people/" data-tooltip="实验室团队成员">团队成员</a>
+        
+          <a href="/zh/publications/" data-tooltip="代表性论文与完整论文目录">论文发表</a>
+        
+          <a href="/zh/resources/" data-tooltip="分析流程、实验方案与实验室资源">资源</a>
+        
+          <a href="/zh/software/" data-tooltip="软件、实验方案与分析流程">软件与流程</a>
+        
+          <a href="/zh/join-us/" data-tooltip="加入实验室的机会">加入我们</a>
+        
+          <a href="/zh/contact/" data-tooltip="联系实验室">联系方式</a>
+        
       
-        <a href="/zh/research/" data-tooltip="实验室研究方向">
-          研究方向
-        </a>
       
-        <a href="/zh/people/" data-tooltip="实验室团队成员">
-          团队成员
-        </a>
+        <a class="language-switch" href="/" lang="en">EN</a>
       
-        <a href="/zh/publications/" data-tooltip="代表性论文与完整论文目录">
-          论文发表
-        </a>
-      
-        <a href="/zh/resources/" data-tooltip="分析流程、实验方案与实验室资源">
-          资源
-        </a>
-      
-        <a href="/zh/software/" data-tooltip="软件、实验方案与分析流程">
-          软件与流程
-        </a>
-      
-        <a href="/zh/join-us/" data-tooltip="加入实验室的机会">
-          加入我们
-        </a>
-      
-        <a href="/zh/contact/" data-tooltip="联系实验室">
-          联系方式
-        </a>
-      
-    
-  </nav>
+    </nav>
+  </div>
 </header>
 
-    <main>
+    <main id="main-content">
       <!--
   modify main content of page:
   - add section breaks
@@ -535,135 +529,351 @@
   
 
   <section class="background" data-size="page">
-    <p class="right"><small><a href="/">English</a></small></p>
-
-<div class="home-hero">
-  <div>
-    <div class="home-kicker">XShen Lab · 清华大学</div>
-
-    <h1>生物信息流</h1>
-
-    <p><strong>从基因组到细胞命运</strong></p>
-
-    <p>
-      当基因组活动具有稀疏性、动态性和随机性时，稳定且多样的细胞身份如何产生？我们研究生物信息如何在基因组、细胞核与细胞层面被组织、处理、选择并稳定化。
-    </p>
-
-    <div class="home-actions">
-      <a class="home-button primary" href="/zh/research/">研究方向</a>
-      <a class="home-button" href="/zh/publications/">论文发表</a>
-      <a class="home-button" href="/zh/people/">团队成员</a>
-      <a class="home-button" href="/zh/join-us/">加入我们</a>
+    <div class="rna-home" data-rna-home="">
+  <section class="rna-hero" aria-labelledby="rna-hero-title">
+    <div class="rna-hero-field" aria-hidden="true">
+      <svg viewbox="0 0 1600 900" preserveaspectratio="xMidYMid slice" role="presentation">
+        <defs>
+          <lineargradient id="rna-gradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#35e6bf"></stop><stop offset="0.52" stop-color="#52a8ff"></stop><stop offset="1" stop-color="#e067b4"></stop>
+          </lineargradient>
+          <radialgradient id="state-gradient"><stop offset="0" stop-color="#35e6bf" stop-opacity=".75"></stop><stop offset="1" stop-color="#35e6bf" stop-opacity="0"></stop></radialgradient>
+        </defs>
+        <g class="chromatin-domains">
+          <path d="M-40,285 C110,110 220,340 390,210 S680,95 830,245 S1120,435 1640,100"></path>
+          <path d="M-20,330 C140,160 245,370 410,260 S690,150 850,292 S1145,480 1650,152"></path>
+        </g>
+        <path class="information-path" d="M-90,660 C145,630 235,390 465,420 S745,700 960,515 S1260,230 1680,315"></path>
+        <path class="nascent-path" d="M240,535 C355,470 390,625 505,560 S660,500 738,602"></path>
+        <g class="moving-signals">
+          <circle cx="365" cy="444" r="5"></circle><circle cx="640" cy="560" r="4"></circle><circle cx="880" cy="575" r="6"></circle><circle cx="1130" cy="393" r="4"></circle><circle cx="1390" cy="287" r="5"></circle>
+        </g>
+        <g class="stable-field">
+          <circle cx="1370" cy="560" r="190" fill="url(#state-gradient)"></circle>
+          <circle cx="1315" cy="535" r="5"></circle><circle cx="1375" cy="485" r="4"></circle><circle cx="1440" cy="550" r="5"></circle><circle cx="1365" cy="615" r="3"></circle><circle cx="1460" cy="640" r="4"></circle>
+        </g>
+      </svg>
+      <div class="rna-hero-annotations">
+        <span style="--annotation-order: 1">01 组织化</span><span style="--annotation-order: 2">02 处理</span><span style="--annotation-order: 3">03 选择</span><span style="--annotation-order: 4">04 稳定化</span>
+      </div>
     </div>
-  </div>
 
-  <div class="home-hero-card">
-    <h3>核心科学问题</h3>
-    <p>
-      不同细胞拥有基本相同的基因组，却能建立显著不同且长期稳定的身份。我们致力于揭示波动的分子活动如何转化为可重复的细胞状态。
-    </p>
+    <div class="rna-hero-copy">
+      <p class="rna-eyebrow" data-reveal="">XShen Lab · 清华大学</p>
+      <h1 id="rna-hero-title" data-reveal="" style="--reveal-order: 1">
+        <small>Biological Information Flow</small>生物信息流
+      </h1>
+      <p class="rna-hero-subtitle" data-reveal="" style="--reveal-order: 2">从基因组到细胞命运</p>
+      <p class="rna-hero-question" data-reveal="" style="--reveal-order: 3">稀疏且随机的基因组活动如何转化为稳定的生物信息与细胞命运？</p>
+      <p class="rna-hero-intro" data-reveal="" style="--reveal-order: 4">我们研究信息如何在基因组、细胞核与细胞层面被持续组织、处理、选择并稳定化。</p>
+      <div class="rna-hero-actions" data-reveal="" style="--reveal-order: 5">
+        <a class="rna-button primary" href="/zh/research/">研究方向 <span aria-hidden="true">↗</span></a><a class="rna-button secondary" href="/zh/publications/">论文发表 <span aria-hidden="true">↗</span></a><a class="rna-button text" href="/zh/join-us/">加入我们 <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="rna-hero-scroll" aria-hidden="true">
+<span></span>01—04</div>
+  </section>
+
+  <section class="rna-tension rna-section" aria-labelledby="rna-tension-title">
+    <div class="rna-section-head" data-reveal="">
+      <p class="rna-section-label">核心科学张力</p>
+      <h2 id="rna-tension-title">动态的基因组活动，稳定的细胞身份。</h2>
+      <p>不同细胞拥有基本相同的基因组，却能建立多样且持久的身份；与此同时，转录、RNA 代谢和染色质组织持续在时空中波动。</p>
+    </div>
+    <div class="rna-tension-grid">
+      <article class="dynamic" data-reveal=""><span>分子层面的现实</span><h3>稀疏 · 随机 · 动态</h3>
+<p>单个细胞中的基因组活动短暂且高度异质。</p>
+<div class="rna-fluctuation" aria-hidden="true">
+<i></i><i></i><i></i><i></i><i></i>
+</div></article>
+      <div class="rna-tension-arrow" aria-hidden="true"><span>→</span></div>
+      <article class="stable" data-reveal="" style="--reveal-order: 2"><span>生物学结果</span><h3>多样 · 可重复 · 稳定</h3>
+<p>细胞状态能够跨越时间并在群体中持续存在。</p>
+<div class="rna-state-field" aria-hidden="true">
+<i></i><i></i><i></i><i></i><i></i>
+</div></article>
+    </div>
+  </section>
+
+  <section class="rna-flow" data-rna-story="" aria-labelledby="rna-flow-title">
+    <div class="rna-flow-intro">
+      <p class="rna-section-label">生物信息流</p>
+      <h2 id="rna-flow-title">四个环节将波动转化为身份。</h2>
+      <p>实验室将基因组组织、RNA–RBP 网状体系、转录监控与概率性细胞状态动力学连接在一个连续框架中。</p>
+      <div class="rna-story-track" aria-hidden="true"><span></span></div>
+    </div>
+    <div class="rna-flow-stages">
+      
+        <article class="rna-flow-stage motif-domain" data-flow-stage="0" data-reveal="">
+          <span class="rna-stage-index">01</span>
+          <span class="rna-stage-label">组织化 / Organization</span>
+          <h3>基因组组织</h3>
+<p>基因组序列如何编码细胞核结构？</p>
+          <div class="rna-stage-visual" aria-hidden="true">
+<i></i><i></i><i></i><i></i>
+</div>
+        </article>
+      
+        <article class="rna-flow-stage motif-mesh" data-flow-stage="1" data-reveal="">
+          <span class="rna-stage-index">02</span>
+          <span class="rna-stage-label">处理 / Processing</span>
+          <h3>RNA 网络</h3>
+<p>RNA 如何组织细胞核环境？</p>
+          <div class="rna-stage-visual" aria-hidden="true">
+<i></i><i></i><i></i><i></i>
+</div>
+        </article>
+      
+        <article class="rna-flow-stage motif-checkpoint" data-flow-stage="2" data-reveal="">
+          <span class="rna-stage-index">03</span>
+          <span class="rna-stage-label">选择 / Selection</span>
+          <h3>转录监控</h3>
+<p>有效生物信息如何从广泛转录中产生？</p>
+          <div class="rna-stage-visual" aria-hidden="true">
+<i></i><i></i><i></i><i></i>
+</div>
+        </article>
+      
+        <article class="rna-flow-stage motif-field" data-flow-stage="3" data-reveal="">
+          <span class="rna-stage-index">04</span>
+          <span class="rna-stage-label">稳定化 / Stabilization</span>
+          <h3>细胞命运动力学</h3>
+<p>概率性基因组活动如何产生稳定的细胞身份？</p>
+          <div class="rna-stage-visual" aria-hidden="true">
+<i></i><i></i><i></i><i></i>
+</div>
+        </article>
+      
+    </div>
+  </section>
+
+  <section class="rna-section rna-featured-research" aria-labelledby="rna-research-title">
+    <div class="rna-section-head split" data-reveal="">
+      <div>
+<p class="rna-section-label">研究项目</p>
+<h2 id="rna-research-title">在同一个信息系统中回答四个问题。</h2>
+</div>
+      <a class="rna-text-link" href="/zh/research/">查看全部研究 <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="rna-research-grid">
+  
+    <a class="rna-research-card motif-domain" href="/zh/research/#genome-organization" data-reveal="" style="--reveal-order: 1">
+      <span class="rna-research-number">01</span>
+      <span class="rna-research-signal">组织化 / Organization</span>
+      <span class="rna-research-copy">
+        <span class="rna-research-title">基因组组织</span>
+        <span class="rna-research-question">基因组序列如何编码细胞核结构？</span>
+        <span class="rna-research-text">我们研究基因组序列、重复元件及其 RNA 产物如何建立细胞核结构、空间定位与基因组调控。</span>
+      </span>
+      <span class="rna-program-motif" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="rna-arrow" aria-hidden="true">探索研究项目 ↗</span>
+    </a>
+  
+    <a class="rna-research-card motif-mesh" href="/zh/research/#rna-networks" data-reveal="" style="--reveal-order: 2">
+      <span class="rna-research-number">02</span>
+      <span class="rna-research-signal">处理 / Processing</span>
+      <span class="rna-research-copy">
+        <span class="rna-research-title">RNA 网络</span>
+        <span class="rna-research-question">RNA 如何组织细胞核环境？</span>
+        <span class="rna-research-text">我们研究新生 RNA、RNA 结合蛋白与加工因子如何形成协调基因组功能的 RNA–RBP 网状体系。</span>
+      </span>
+      <span class="rna-program-motif" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="rna-arrow" aria-hidden="true">探索研究项目 ↗</span>
+    </a>
+  
+    <a class="rna-research-card motif-checkpoint" href="/zh/research/#transcriptional-surveillance" data-reveal="" style="--reveal-order: 3">
+      <span class="rna-research-number">03</span>
+      <span class="rna-research-signal">选择 / Selection</span>
+      <span class="rna-research-copy">
+        <span class="rna-research-title">转录监控</span>
+        <span class="rna-research-question">有效生物信息如何从广泛转录中产生？</span>
+        <span class="rna-research-text">我们研究 RNA 聚合酶 II、RNA 加工和降解通路如何支持有效延伸、RNA 成熟与聚合酶循环利用。</span>
+      </span>
+      <span class="rna-program-motif" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="rna-arrow" aria-hidden="true">探索研究项目 ↗</span>
+    </a>
+  
+    <a class="rna-research-card motif-field" href="/zh/research/#cell-fate-dynamics" data-reveal="" style="--reveal-order: 4">
+      <span class="rna-research-number">04</span>
+      <span class="rna-research-signal">稳定化 / Stabilization</span>
+      <span class="rna-research-copy">
+        <span class="rna-research-title">细胞命运动力学</span>
+        <span class="rna-research-question">概率性基因组活动如何产生稳定的细胞身份？</span>
+        <span class="rna-research-text">我们测量并建模稀疏、随机的基因组活动如何在单细胞间协调，并在细胞群体中得到稳定化。</span>
+      </span>
+      <span class="rna-program-motif" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="rna-arrow" aria-hidden="true">探索研究项目 ↗</span>
+    </a>
+  
+</div>
+
+  </section>
+
+  <section class="rna-methods" aria-labelledby="rna-methods-title">
+    <div class="rna-method-copy" data-reveal="">
+<p class="rna-section-label">跨尺度技术</p>
+<h2 id="rna-methods-title">从基因组到细胞命运，测量正在发生的过程。</h2>
+<p>我们整合分子、空间、细胞与理论方法；不同方法由科学问题相互连接，而非彼此孤立的平台。</p>
+</div>
+    <div class="rna-scale-track" aria-hidden="true"><span></span></div>
+    <ol class="rna-scale-list">
+      <li data-reveal="" style="--reveal-order: 1">
+<span class="rna-scale-index">01</span><strong>基因组</strong><small>CRISPR 基因组工程</small>
+</li>
+<li data-reveal="" style="--reveal-order: 2">
+<span class="rna-scale-index">02</span><strong>分子</strong><small>新生转录图谱分析 · 生化重构</small>
+</li>
+<li data-reveal="" style="--reveal-order: 3">
+<span class="rna-scale-index">03</span><strong>细胞核环境</strong><small>活细胞与超分辨成像 · 电子显微镜</small>
+</li>
+<li data-reveal="" style="--reveal-order: 4">
+<span class="rna-scale-index">04</span><strong>单细胞</strong><small>scFLUENT-seq · 单细胞基因组学</small>
+</li>
+<li data-reveal="" style="--reveal-order: 5">
+<span class="rna-scale-index">05</span><strong>细胞群体</strong><small>计算分析 · 人工智能</small>
+</li>
+<li data-reveal="" style="--reveal-order: 6">
+<span class="rna-scale-index">06</span><strong>细胞命运</strong><small>理论与动力学建模</small>
+</li>
+    </ol>
+  </section>
+
+  <section class="rna-section rna-publication" aria-labelledby="rna-publication-title">
+    <div class="rna-section-head" data-reveal="">
+<p class="rna-section-label">代表性发现</p>
+<h2 id="rna-publication-title">实时读取基因组使用。</h2>
+</div>
+    
+
+
+
+
+
+
+  <article class="rna-publication-feature" data-reveal="">
+    <a class="rna-publication-visual" href="/publications/2025-scfluent-seq/" aria-label="Single-cell nascent transcription reveals sparse genome usage and plasticity">
+      <img src="/images/publications/2025-scfluent-seq/graphical-abstract.webp" alt="Single-cell nascent transcription reveals sparse genome usage and plasticity 的图文摘要" loading="lazy">
+      <span class="rna-publication-scan" aria-hidden="true"></span>
+    </a>
+    <div class="rna-publication-copy">
+      <div class="rna-publication-meta">Cell · 2025 · 188</div>
+      <h3>Single-cell nascent transcription reveals sparse genome usage and plasticity</h3>
+      <p class="rna-publication-authors">Shaoqian Ma, Yantao Hong, Junhan Chen, Jingzhao Xu, and Xiaohua Shen</p>
+      <p>scFLUENT-seq 揭示单细胞中稀疏且随机的基因组使用，并将转录多样性与细胞可塑性联系起来。</p>
+      <div class="rna-publication-metric"><span>每个细胞转录约 0.02%–3.1% 的基因组</span></div>
+      <div class="rna-inline-actions">
+        <a class="rna-text-link" href="/publications/2025-scfluent-seq/">查看论文 <span aria-hidden="true">↗</span></a>
+        <a class="rna-text-link muted" href="/zh/publications/">全部论文</a>
+      </div>
+    </div>
+  </article>
+
+
+  </section>
+
+  <section class="rna-section rna-people" aria-labelledby="rna-people-title">
+    <div class="rna-section-head split" data-reveal="">
+<div>
+<p class="rna-section-label">团队成员</p>
+<h2 id="rna-people-title">不同学科，共同研究一个动态系统。</h2>
+<p>团队成员来自分子细胞生物学、基因组学、生物信息学、生物物理学、数学和计算生物学等领域。</p>
+</div>
+<a class="rna-text-link" href="/zh/people/">认识团队 <span aria-hidden="true">↗</span></a>
+</div>
+    
+
+
+
+
+
+
+
+<div class="rna-people-layout" data-reveal="">
+  
+    <a class="rna-pi-card" href="/zh/people/xiaohua-shen/">
+      <img src="/images/members/xiaohua-shen.jpg" alt="Xiaohua Shen 沈晓骅" loading="lazy">
+      <span class="rna-pi-overlay">
+        <span class="rna-person-role">课题组负责人</span>
+        <strong>Xiaohua Shen 沈晓骅</strong>
+        <span>School of Basic Medicine, Tsinghua University</span>
+      </span>
+    </a>
+  
+
+  <div class="rna-people-groups">
+    
+      
+      <div class="rna-people-group">
+        <div class="rna-people-group-head">
+          <h3>博士后</h3>
+          <span>05</span>
+        </div>
+        
+          <div class="rna-person-list">
+            
+              <a href="/members/Xiaowen.html" class="rna-person-row">
+                <img src="/images/members/haoxiaowen.jpg" alt="" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+                <span><strong>Hao,Xiaowen 郝晓文</strong><small>Postdoctoral Fellow</small></span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            
+              <a href="/members/Mengyuan.html" class="rna-person-row">
+                <img src="/images/members/huangmengyuan.jpg" alt="" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+                <span><strong>Huang, Mengyuan 黄梦元</strong><small>Postdoctoral Fellow</small></span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            
+          </div>
+        
+      </div>
+    
+      
+      <div class="rna-people-group">
+        <div class="rna-people-group-head">
+          <h3>学生</h3>
+          <span>05</span>
+        </div>
+        
+          <div class="rna-person-list">
+            
+              <a href="/members/Ruiqi.html" class="rna-person-row">
+                <img src="/images/members/dengruiqi.jpg" alt="" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+                <span><strong>Deng,ruiqi 邓睿琦</strong><small>Undergraduate Student</small></span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            
+              <a href="/members/Xinyun.html" class="rna-person-row">
+                <img src="/images/members/huxinyun.jpg" alt="" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+                <span><strong>Hu,Xinyun 胡昕昀</strong><small>PhD Student</small></span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            
+          </div>
+        
+      </div>
+    
   </div>
 </div>
+
   </section>
 
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="实验室使命">实验室使命</h2>
-
-<p>XShen Lab 将细胞核视为动态的信息处理系统，而非被动容纳 DNA 的容器。我们探索染色质与 RNA–蛋白质网络如何组织基因组访问，细胞核环境如何处理基因组活动，监控机制如何选择有效输出，以及这些输出如何稳定为细胞命运程序。</p>
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="四大研究方向">四大研究方向</h2>
-
-<div class="home-grid">
-  <div class="home-card">
-    <h3>基因组组织</h3>
-    <p><strong>组织化（Organization）。</strong>研究基因组序列、重复元件及其 RNA 产物如何编码细胞核结构与空间定位。</p>
-  </div>
-
-  <div class="home-card">
-    <h3>RNA 网络</h3>
-    <p><strong>处理（Processing）。</strong>研究新生 RNA、RNA 结合蛋白和 RNA 加工因子如何构成协调基因组功能的细胞核环境。</p>
-  </div>
-
-  <div class="home-card">
-    <h3>转录监控</h3>
-    <p><strong>选择（Selection）。</strong>研究 RNA 聚合酶 II 以及 RNA 加工与降解通路如何将广泛转录导向有效的生物信息。</p>
-  </div>
-
-  <div class="home-card">
-    <h3>细胞命运动力学</h3>
-    <p><strong>稳定化（Stabilization）。</strong>研究相互协调的概率性基因组活动如何在细胞群体中形成稳定身份。</p>
-  </div>
+  <section class="rna-join" aria-labelledby="rna-join-title">
+    <div class="rna-join-intro" data-reveal="">
+<p class="rna-section-label">加入实验室</p>
+<h2 id="rna-join-title">带来一种理解系统的新视角。</h2>
+<p>我们欢迎对细胞核组织、基因组调控、转录、非编码 RNA、单细胞基因组学和细胞命运感兴趣的学生与科研人员。</p>
+<div class="rna-inline-actions">
+<a class="rna-button primary" href="/zh/join-us/">申请方式 <span aria-hidden="true">↗</span></a><a class="rna-button text" href="/zh/contact/">联系实验室</a>
+</div>
+</div>
+    <div class="rna-join-grid">
+<article data-reveal="" style="--reveal-order: 1"><span>01</span><h3>研究生</h3>
+<p>欢迎具有实验、计算或定量研究背景的学生。</p></article><article data-reveal="" style="--reveal-order: 2"><span>02</span><h3>博士后</h3>
+<p>在实验室科学框架内发展独立研究问题。</p></article><article data-reveal="" style="--reveal-order: 3"><span>03</span><h3>科研助理</h3>
+<p>参与实验、计算或交叉学科研究项目。</p></article><article data-reveal="" style="--reveal-order: 4"><span>04</span><h3>科研合作</h3>
+<p>跨尺度连接互补的科学问题、生物系统与研究方法。</p></article>
 </div>
   </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="技术平台">技术平台</h2>
-
-<p>我们整合跨越分子、空间、细胞与理论尺度的多种方法：</p>
-
-<ul>
-  <li>单细胞基因组学；</li>
-  <li>活细胞成像与超分辨成像；</li>
-  <li>电子显微镜；</li>
-  <li>生化重构（Biochemical Reconstitution）；</li>
-  <li>CRISPR 基因组工程；</li>
-  <li>计算分析；</li>
-  <li>人工智能；</li>
-  <li>理论建模。</li>
-</ul>
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="近期代表性成果">近期代表性成果</h2>
-
-<div class="home-highlight">
-  <strong>scFLUENT-seq 揭示稀疏且具有概率性的基因组使用模式</strong>
-  <p>
-    scFLUENT-seq 可直接测量单个细胞的实时基因组使用。2025 年的研究发现，单个细胞在特定时刻仅转录约 0.02%–3.1% 的基因组，具体比例取决于细胞类型；而细胞群体则共同探索更广泛的基因组空间。该工作将随机性转录多样性与细胞可塑性及细胞命运稳定化联系起来。
-  </p>
-  <p><a href="/publications/2025-scfluent-seq/">查看 scFLUENT-seq 论文详情</a></p>
 </div>
   </section>
 
@@ -671,18 +881,26 @@
     </main>
     
 
-
-<footer class="background" style="--image: url('/images/background.jpg')" data-dark="true" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+<footer class="site-footer" data-dark="true">
+  <div class="site-footer-grid">
+    <div class="site-footer-brand">
+      <span class="site-footer-kicker">XShen Lab</span>
+      <strong>生物信息流</strong>
+      <p>从基因组到细胞命运</p>
     </div>
-  -->
-
-  <div>
-    
+    <address>
+      <span>清华大学基础医学院</span>
+      <span>清华大学郑裕彤医学楼 D108</span>
+      <a href="mailto:xshen@tsinghua.edu.cn">xshen@tsinghua.edu.cn</a>
+    </address>
+    <nav class="site-footer-nav" aria-label="页脚导航">
       
+        <a href="/zh/">首页</a><a href="/zh/research/">研究方向</a><a href="/zh/people/">团队成员</a><a href="/zh/publications/">论文发表</a><a href="/zh/resources/">资源</a><a href="/zh/software/">软件与流程</a><a href="/zh/join-us/">加入我们</a><a href="/zh/contact/">联系方式</a>
       
+    </nav>
+  </div>
+  <div class="site-footer-base">
+    <div class="site-footer-social">
       
 
 
@@ -695,10 +913,6 @@
   </div>
 
 
-    
-      
-      
-      
 
 
 
@@ -710,10 +924,6 @@
   </div>
 
 
-    
-      
-      
-      
 
 
 
@@ -725,10 +935,6 @@
   </div>
 
 
-    
-      
-      
-      
 
 
 
@@ -740,19 +946,10 @@
   </div>
 
 
-    
+    </div>
+    <span>© 2026 XShen Lab</span>
+    <input type="checkbox" class="dark-toggle" data-tooltip="切换明暗模式" aria-label="切换明暗模式" oninput="onDarkToggleChange(event)">
   </div>
-
-  <div>
-    © 2026
-    XShen Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
-  </div>
-
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
 </footer>
 
   </body>

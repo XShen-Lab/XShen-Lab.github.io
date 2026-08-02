@@ -49,6 +49,7 @@
 <title>团队成员 | XShen Lab</title>
 
 <link rel="icon" href="/images/icon.png">
+<link rel="canonical" href="https://xshen-lab.github.io/zh/people/">
 
 <meta name="title" content="团队成员">
 <meta name="description" content="Biological Information Flow: From Genome to Cell Fate. The XShen Lab at Tsinghua University studies how stochastic genome activity is organized, processed, selected, and stabilized into biological information and cell fate.">
@@ -56,13 +57,13 @@
 <meta property="og:title" content="团队成员">
 <meta property="og:site_title" content="XShen Lab">
 <meta property="og:description" content="Biological Information Flow: From Genome to Cell Fate. The XShen Lab at Tsinghua University studies how stochastic genome activity is organized, processed, selected, and stabilized into biological information and cell fate.">
-<meta property="og:url" content="https://xshen-lab.github.io">
+<meta property="og:url" content="https://xshen-lab.github.io/zh/people/">
 <meta property="og:image" content="/images/share.jpg">
 <meta property="og:locale" content="zh_CN">
 
 <meta property="twitter:title" content="团队成员">
 <meta property="twitter:description" content="Biological Information Flow: From Genome to Cell Fate. The XShen Lab at Tsinghua University studies how stochastic genome activity is organized, processed, selected, and stabilized into biological information and cell fate.">
-<meta property="twitter:url" content="https://xshen-lab.github.io">
+<meta property="twitter:url" content="https://xshen-lab.github.io/zh/people/">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="/images/share.jpg">
 
@@ -83,7 +84,7 @@
       "@type": "Organization",
       "logo": { "@type": "ImageObject", "url": "/images/icon.png" }
     },
-    "url": "https://xshen-lab.github.io"
+    "url": "https://xshen-lab.github.io/zh/people/"
   }
 </script>
 
@@ -108,7 +109,7 @@
 <!-- automatically get url from fonts used in theme file -->
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?display=swap&&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?display=swap&&family=Cormorant+Garamond:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=IBM+Plex%20Mono" mono:ital neue:ital rel="stylesheet">
 
 <!-- Font Awesome icons (load asynchronously due to size) -->
 
@@ -269,6 +270,8 @@
   
 
   
+
+  
     <link href="/_styles/rule.css" rel="stylesheet">
   
 
@@ -359,6 +362,9 @@
   
 
 
+<!-- brand and editorial system loads last so it can refine template defaults -->
+<link href="/_styles/rna.css" rel="stylesheet">
+
 <!-- include all css in styles folder -->
 
 
@@ -377,6 +383,8 @@
 
   <script src="/_scripts/fetch-tags.js"></script>
 
+  <script src="/_scripts/motion.js"></script>
+
   <script src="/_scripts/search.js"></script>
 
   <script src="/_scripts/site-search.js"></script>
@@ -388,7 +396,10 @@
 
 </head>
 
-  <body>
+  
+  
+  <body class="page-inner">
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
     
 
 
@@ -401,13 +412,17 @@
 
 
 
+  
 
-<header class="background" style="--image: url('/images/background.jpg')" data-dark="true">
-  <a href="/zh/" class="home">
-    
-      <span class="logo">
-        
-          <svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
+  
+
+  
+
+<header class="site-header" data-site-header data-dark="true">
+  <div class="site-progress" aria-hidden="true"><span data-site-progress></span></div>
+  <div class="site-header-inner">
+    <a href="/zh/" class="home" aria-label="首页">
+      <span class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
   <style>
     .bubble {
       animation: float 2s ease-out both infinite var(--delay);
@@ -426,6 +441,12 @@
       100% {
         opacity: 0;
         transform: translateY(-40px);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .bubble {
+        animation: none;
+        opacity: 0.35;
       }
     }
   </style>
@@ -464,64 +485,41 @@
       L 18 -53
     "></path>
 </svg>
+</span>
+      <span class="title-text"><span class="title">XShen Lab</span><span class="subtitle">Biological Information Flow</span></span>
+    </a>
 
-        
-      </span>
-    
-    
-      <span class="title-text" data-tooltip="首页">
-        
-          <span class="title">XShen Lab</span>
-        
-        
-          <span class="subtitle">Biological Information Flow: From Genome to Cell Fate</span>
-        
-      </span>
-    
-  </a>
+    <input id="site-nav-toggle" class="nav-toggle" type="checkbox" aria-label="打开或关闭导航" aria-controls="site-nav" aria-expanded="false">
+    <label class="nav-toggle-label" for="site-nav-toggle" aria-hidden="true"><span></span><span></span></label>
 
-  <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
-
-  <nav>
-    
+    <nav id="site-nav" class="site-nav" aria-label="主导航">
       
-        <a href="/zh/" data-tooltip="中文首页">
-          首页
-        </a>
+        
+          <a href="/zh/" data-tooltip="中文首页">首页</a>
+        
+          <a href="/zh/research/" data-tooltip="实验室研究方向">研究方向</a>
+        
+          <a href="/zh/people/" data-tooltip="实验室团队成员" aria-current="page">团队成员</a>
+        
+          <a href="/zh/publications/" data-tooltip="代表性论文与完整论文目录">论文发表</a>
+        
+          <a href="/zh/resources/" data-tooltip="分析流程、实验方案与实验室资源">资源</a>
+        
+          <a href="/zh/software/" data-tooltip="软件、实验方案与分析流程">软件与流程</a>
+        
+          <a href="/zh/join-us/" data-tooltip="加入实验室的机会">加入我们</a>
+        
+          <a href="/zh/contact/" data-tooltip="联系实验室">联系方式</a>
+        
       
-        <a href="/zh/research/" data-tooltip="实验室研究方向">
-          研究方向
-        </a>
       
-        <a href="/zh/people/" data-tooltip="实验室团队成员">
-          团队成员
-        </a>
+        <a class="language-switch" href="/team/" lang="en">EN</a>
       
-        <a href="/zh/publications/" data-tooltip="代表性论文与完整论文目录">
-          论文发表
-        </a>
-      
-        <a href="/zh/resources/" data-tooltip="分析流程、实验方案与实验室资源">
-          资源
-        </a>
-      
-        <a href="/zh/software/" data-tooltip="软件、实验方案与分析流程">
-          软件与流程
-        </a>
-      
-        <a href="/zh/join-us/" data-tooltip="加入实验室的机会">
-          加入我们
-        </a>
-      
-        <a href="/zh/contact/" data-tooltip="联系实验室">
-          联系方式
-        </a>
-      
-    
-  </nav>
+    </nav>
+  </div>
 </header>
 
-    <main>
+    <main id="main-content">
       <!--
   modify main content of page:
   - add section breaks
@@ -1218,18 +1216,26 @@
     </main>
     
 
-
-<footer class="background" style="--image: url('/images/background.jpg')" data-dark="true" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+<footer class="site-footer" data-dark="true">
+  <div class="site-footer-grid">
+    <div class="site-footer-brand">
+      <span class="site-footer-kicker">XShen Lab</span>
+      <strong>生物信息流</strong>
+      <p>从基因组到细胞命运</p>
     </div>
-  -->
-
-  <div>
-    
+    <address>
+      <span>清华大学基础医学院</span>
+      <span>清华大学郑裕彤医学楼 D108</span>
+      <a href="mailto:xshen@tsinghua.edu.cn">xshen@tsinghua.edu.cn</a>
+    </address>
+    <nav class="site-footer-nav" aria-label="页脚导航">
       
+        <a href="/zh/">首页</a><a href="/zh/research/">研究方向</a><a href="/zh/people/">团队成员</a><a href="/zh/publications/">论文发表</a><a href="/zh/resources/">资源</a><a href="/zh/software/">软件与流程</a><a href="/zh/join-us/">加入我们</a><a href="/zh/contact/">联系方式</a>
       
+    </nav>
+  </div>
+  <div class="site-footer-base">
+    <div class="site-footer-social">
       
 
 
@@ -1242,10 +1248,6 @@
   </div>
 
 
-    
-      
-      
-      
 
 
 
@@ -1257,10 +1259,6 @@
   </div>
 
 
-    
-      
-      
-      
 
 
 
@@ -1272,10 +1270,6 @@
   </div>
 
 
-    
-      
-      
-      
 
 
 
@@ -1287,19 +1281,10 @@
   </div>
 
 
-    
+    </div>
+    <span>© 2026 XShen Lab</span>
+    <input type="checkbox" class="dark-toggle" data-tooltip="切换明暗模式" aria-label="切换明暗模式" oninput="onDarkToggleChange(event)">
   </div>
-
-  <div>
-    © 2026
-    XShen Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
-  </div>
-
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
 </footer>
 
   </body>

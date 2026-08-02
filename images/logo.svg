@@ -19,6 +19,12 @@
         transform: translateY(-40px);
       }
     }
+    @media (prefers-reduced-motion: reduce) {
+      .bubble {
+        animation: none;
+        opacity: 0.35;
+      }
+    }
   </style>
   <g fill="currentColor" opacity="0.5">
     <circle class="bubble" cx="0" cy="-10" r="3" style="--delay: 0.1s" />

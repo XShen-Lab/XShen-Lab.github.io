@@ -49,6 +49,7 @@
 <title>Name 中文名 | XShen Lab</title>
 
 <link rel="icon" href="/images/icon.png">
+<link rel="canonical" href="https://xshen-lab.github.io/members/undergrad.html">
 
 <meta name="title" content="Name 中文名">
 <meta name="description" content="Biological Information Flow: From Genome to Cell Fate. Undergraduate Student">
@@ -56,13 +57,13 @@
 <meta property="og:title" content="Name 中文名">
 <meta property="og:site_title" content="XShen Lab">
 <meta property="og:description" content="Biological Information Flow: From Genome to Cell Fate. Undergraduate Student">
-<meta property="og:url" content="https://xshen-lab.github.io">
+<meta property="og:url" content="https://xshen-lab.github.io/members/undergrad.html">
 <meta property="og:image" content="/images/share.jpg">
 <meta property="og:locale" content="en_US">
 
 <meta property="twitter:title" content="Name 中文名">
 <meta property="twitter:description" content="Biological Information Flow: From Genome to Cell Fate. Undergraduate Student">
-<meta property="twitter:url" content="https://xshen-lab.github.io">
+<meta property="twitter:url" content="https://xshen-lab.github.io/members/undergrad.html">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="/images/share.jpg">
 
@@ -83,7 +84,7 @@
       "@type": "Organization",
       "logo": { "@type": "ImageObject", "url": "/images/icon.png" }
     },
-    "url": "https://xshen-lab.github.io"
+    "url": "https://xshen-lab.github.io/members/undergrad.html"
   }
 </script>
 
@@ -118,7 +119,7 @@
 <!-- automatically get url from fonts used in theme file -->
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?display=swap&&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?display=swap&&family=Cormorant+Garamond:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=IBM+Plex%20Mono" mono:ital neue:ital rel="stylesheet">
 
 <!-- Font Awesome icons (load asynchronously due to size) -->
 
@@ -279,6 +280,8 @@
   
 
   
+
+  
     <link href="/_styles/rule.css" rel="stylesheet">
   
 
@@ -315,6 +318,9 @@
   
 
 
+<!-- brand and editorial system loads last so it can refine template defaults -->
+<link href="/_styles/rna.css" rel="stylesheet">
+
 <!-- include all css in styles folder -->
 
 
@@ -333,6 +339,8 @@
 
   <script src="/_scripts/fetch-tags.js"></script>
 
+  <script src="/_scripts/motion.js"></script>
+
   <script src="/_scripts/search.js"></script>
 
   <script src="/_scripts/site-search.js"></script>
@@ -344,7 +352,10 @@
 
 </head>
 
-  <body>
+  
+  
+  <body class="page-inner">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     
 
 
@@ -357,13 +368,32 @@
 
 
 
+  
 
-<header class="background" style="--image: url('/images/background.jpg')" data-dark="true">
-  <a href="/" class="home">
-    
-      <span class="logo">
-        
-          <svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+<header class="site-header" data-site-header data-dark="true">
+  <div class="site-progress" aria-hidden="true"><span data-site-progress></span></div>
+  <div class="site-header-inner">
+    <a href="/" class="home" aria-label="Home">
+      <span class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
   <style>
     .bubble {
       animation: float 2s ease-out both infinite var(--delay);
@@ -382,6 +412,12 @@
       100% {
         opacity: 0;
         transform: translateY(-40px);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .bubble {
+        animation: none;
+        opacity: 0.35;
       }
     }
   </style>
@@ -420,81 +456,40 @@
       L 18 -53
     "></path>
 </svg>
+</span>
+      <span class="title-text"><span class="title">XShen Lab</span><span class="subtitle">Biological Information Flow</span></span>
+    </a>
 
-        
-      </span>
-    
-    
-      <span class="title-text" data-tooltip="Home">
-        
-          <span class="title">XShen Lab</span>
-        
-        
-          <span class="subtitle">Biological Information Flow: From Genome to Cell Fate</span>
-        
-      </span>
-    
-  </a>
+    <input id="site-nav-toggle" class="nav-toggle" type="checkbox" aria-label="Open or close navigation" aria-controls="site-nav" aria-expanded="false">
+    <label class="nav-toggle-label" for="site-nav-toggle" aria-hidden="true"><span></span><span></span></label>
 
-  <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
-
-  <nav>
-    
-      
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
       
         
-          <a href="/" data-tooltip="Home">
-            Home
-          </a>
+        
+          <a href="/" data-tooltip="Home">Home</a>
+        
+          <a href="/research/" data-tooltip="Research directions">Research</a>
+        
+          <a href="/team/" data-tooltip="Members of the XShen Lab">People</a>
+        
+          <a href="/publications/" data-tooltip="Selected and full publications">Publications</a>
+        
+          <a href="/software/" data-tooltip="Software, protocols, and workflows">Software</a>
+        
+          <a href="/Resources/" data-tooltip="Pipelines, protocols, and lab resources">Resources</a>
+        
+          <a href="/join-us/" data-tooltip="Opportunities to join the XShen Lab">Join Us</a>
+        
+          <a href="/contact/" data-tooltip="Contact the XShen Lab">Contact</a>
         
       
-        
-          <a href="/research/" data-tooltip="Research directions">
-            Research
-          </a>
-        
       
-        
-          <a href="/team/" data-tooltip="Members of the XShen Lab">
-            People
-          </a>
-        
-      
-        
-          <a href="/publications/" data-tooltip="Selected and full publications">
-            Publications
-          </a>
-        
-      
-        
-          <a href="/software/" data-tooltip="Software, protocols, and workflows">
-            Software
-          </a>
-        
-      
-        
-          <a href="/Resources/" data-tooltip="Pipelines, protocols, and lab resources">
-            Resources
-          </a>
-        
-      
-        
-          <a href="/join-us/" data-tooltip="Opportunities to join the XShen Lab">
-            Join Us
-          </a>
-        
-      
-        
-          <a href="/contact/" data-tooltip="Contact the XShen Lab">
-            Contact
-          </a>
-        
-      
-    
-  </nav>
+    </nav>
+  </div>
 </header>
 
-    <main>
+    <main id="main-content">
       <!--
   modify main content of page:
   - add section breaks
@@ -627,18 +622,27 @@
     </main>
     
 
-
-<footer class="background" style="--image: url('/images/background.jpg')" data-dark="true" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+<footer class="site-footer" data-dark="true">
+  <div class="site-footer-grid">
+    <div class="site-footer-brand">
+      <span class="site-footer-kicker">XShen Lab</span>
+      <strong>Biological Information Flow</strong>
+      <p>From Genome to Cell Fate</p>
     </div>
-  -->
-
-  <div>
-    
+    <address>
+      <span>School of Basic Medicine, Tsinghua University</span>
+      <span>Zheng Yutong Medical Building, Room D108</span>
+      <a href="mailto:xshen@tsinghua.edu.cn">xshen@tsinghua.edu.cn</a>
+    </address>
+    <nav class="site-footer-nav" aria-label="Footer navigation">
       
+        
+        <a href="/">Home</a><a href="/research/">Research</a><a href="/team/">People</a><a href="/publications/">Publications</a><a href="/software/">Software</a><a href="/Resources/">Resources</a><a href="/join-us/">Join Us</a><a href="/contact/">Contact</a>
       
+    </nav>
+  </div>
+  <div class="site-footer-base">
+    <div class="site-footer-social">
       
 
 
@@ -651,10 +655,6 @@
   </div>
 
 
-    
-      
-      
-      
 
 
 
@@ -666,10 +666,6 @@
   </div>
 
 
-    
-      
-      
-      
 
 
 
@@ -681,10 +677,6 @@
   </div>
 
 
-    
-      
-      
-      
 
 
 
@@ -696,19 +688,10 @@
   </div>
 
 
-    
+    </div>
+    <span>© 2026 XShen Lab</span>
+    <input type="checkbox" class="dark-toggle" data-tooltip="Toggle color mode" aria-label="Toggle color mode" oninput="onDarkToggleChange(event)">
   </div>
-
-  <div>
-    © 2026
-    XShen Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
-  </div>
-
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
 </footer>
 
   </body>

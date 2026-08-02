@@ -49,6 +49,7 @@
 <title>Home | XShen Lab</title>
 
 <link rel="icon" href="/images/icon.png">
+<link rel="canonical" href="https://xshen-lab.github.io/">
 
 <meta name="title" content="Home">
 <meta name="description" content="Biological Information Flow: From Genome to Cell Fate. The XShen Lab at Tsinghua University studies how stochastic genome activity is organized, processed, selected, and stabilized into biological information and cell fate.">
@@ -56,13 +57,13 @@
 <meta property="og:title" content="Home">
 <meta property="og:site_title" content="XShen Lab">
 <meta property="og:description" content="Biological Information Flow: From Genome to Cell Fate. The XShen Lab at Tsinghua University studies how stochastic genome activity is organized, processed, selected, and stabilized into biological information and cell fate.">
-<meta property="og:url" content="https://xshen-lab.github.io">
+<meta property="og:url" content="https://xshen-lab.github.io/">
 <meta property="og:image" content="/images/share.jpg">
 <meta property="og:locale" content="en_US">
 
 <meta property="twitter:title" content="Home">
 <meta property="twitter:description" content="Biological Information Flow: From Genome to Cell Fate. The XShen Lab at Tsinghua University studies how stochastic genome activity is organized, processed, selected, and stabilized into biological information and cell fate.">
-<meta property="twitter:url" content="https://xshen-lab.github.io">
+<meta property="twitter:url" content="https://xshen-lab.github.io/">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="/images/share.jpg">
 
@@ -83,7 +84,7 @@
       "@type": "Organization",
       "logo": { "@type": "ImageObject", "url": "/images/icon.png" }
     },
-    "url": "https://xshen-lab.github.io"
+    "url": "https://xshen-lab.github.io/"
   }
 </script>
 
@@ -104,7 +105,7 @@
 <!-- automatically get url from fonts used in theme file -->
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?display=swap&&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?display=swap&&family=Cormorant+Garamond:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=IBM+Plex%20Mono" mono:ital neue:ital rel="stylesheet">
 
 <!-- Font Awesome icons (load asynchronously due to size) -->
 
@@ -265,6 +266,8 @@
   
 
   
+
+  
     <link href="/_styles/rule.css" rel="stylesheet">
   
 
@@ -355,6 +358,9 @@
   
 
 
+<!-- brand and editorial system loads last so it can refine template defaults -->
+<link href="/_styles/rna.css" rel="stylesheet">
+
 <!-- include all css in styles folder -->
 
 
@@ -373,6 +379,8 @@
 
   <script src="/_scripts/fetch-tags.js"></script>
 
+  <script src="/_scripts/motion.js"></script>
+
   <script src="/_scripts/search.js"></script>
 
   <script src="/_scripts/site-search.js"></script>
@@ -384,7 +392,10 @@
 
 </head>
 
-  <body>
+  
+  
+  <body class="page-home">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     
 
 
@@ -397,13 +408,13 @@
 
 
 
+  
 
-<header class="background" style="--image: url('/images/background.jpg')" data-dark="true" data-big>
-  <a href="/" class="home">
-    
-      <span class="logo">
-        
-          <svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
+<header class="site-header" data-site-header data-transparent data-dark="true">
+  <div class="site-progress" aria-hidden="true"><span data-site-progress></span></div>
+  <div class="site-header-inner">
+    <a href="/" class="home" aria-label="Home">
+      <span class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewbox="-40 -60 80 100">
   <style>
     .bubble {
       animation: float 2s ease-out both infinite var(--delay);
@@ -422,6 +433,12 @@
       100% {
         opacity: 0;
         transform: translateY(-40px);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .bubble {
+        animation: none;
+        opacity: 0.35;
       }
     }
   </style>
@@ -460,81 +477,42 @@
       L 18 -53
     "></path>
 </svg>
+</span>
+      <span class="title-text"><span class="title">XShen Lab</span><span class="subtitle">Biological Information Flow</span></span>
+    </a>
 
-        
-      </span>
-    
-    
-      <span class="title-text" data-tooltip="Home">
-        
-          <span class="title">XShen Lab</span>
-        
-        
-          <span class="subtitle">Biological Information Flow: From Genome to Cell Fate</span>
-        
-      </span>
-    
-  </a>
+    <input id="site-nav-toggle" class="nav-toggle" type="checkbox" aria-label="Open or close navigation" aria-controls="site-nav" aria-expanded="false">
+    <label class="nav-toggle-label" for="site-nav-toggle" aria-hidden="true"><span></span><span></span></label>
 
-  <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
-
-  <nav>
-    
-      
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
       
         
-          <a href="/" data-tooltip="Home">
-            Home
-          </a>
+        
+          <a href="/" data-tooltip="Home" aria-current="page">Home</a>
+        
+          <a href="/research/" data-tooltip="Research directions">Research</a>
+        
+          <a href="/team/" data-tooltip="Members of the XShen Lab">People</a>
+        
+          <a href="/publications/" data-tooltip="Selected and full publications">Publications</a>
+        
+          <a href="/software/" data-tooltip="Software, protocols, and workflows">Software</a>
+        
+          <a href="/Resources/" data-tooltip="Pipelines, protocols, and lab resources">Resources</a>
+        
+          <a href="/join-us/" data-tooltip="Opportunities to join the XShen Lab">Join Us</a>
+        
+          <a href="/contact/" data-tooltip="Contact the XShen Lab">Contact</a>
         
       
-        
-          <a href="/research/" data-tooltip="Research directions">
-            Research
-          </a>
-        
       
-        
-          <a href="/team/" data-tooltip="Members of the XShen Lab">
-            People
-          </a>
-        
+        <a class="language-switch" href="/zh/" lang="zh-CN">中文</a>
       
-        
-          <a href="/publications/" data-tooltip="Selected and full publications">
-            Publications
-          </a>
-        
-      
-        
-          <a href="/software/" data-tooltip="Software, protocols, and workflows">
-            Software
-          </a>
-        
-      
-        
-          <a href="/Resources/" data-tooltip="Pipelines, protocols, and lab resources">
-            Resources
-          </a>
-        
-      
-        
-          <a href="/join-us/" data-tooltip="Opportunities to join the XShen Lab">
-            Join Us
-          </a>
-        
-      
-        
-          <a href="/contact/" data-tooltip="Contact the XShen Lab">
-            Contact
-          </a>
-        
-      
-    
-  </nav>
+    </nav>
+  </div>
 </header>
 
-    <main>
+    <main id="main-content">
       <!--
   modify main content of page:
   - add section breaks
@@ -552,135 +530,351 @@
   
 
   <section class="background" data-size="page">
-    <p class="right"><small><a href="/zh/">中文</a></small></p>
-
-<div class="home-hero">
-  <div>
-    <div class="home-kicker">XShen Lab · Tsinghua University</div>
-
-    <h1>Biological Information Flow</h1>
-
-    <p><strong>From Genome to Cell Fate</strong></p>
-
-    <p>
-      How do stable and diverse cell identities arise when genome activity is sparse, dynamic, and stochastic? We study how biological information is organized, processed, selected, and stabilized across the genome, nucleus, and cell.
-    </p>
-
-    <div class="home-actions">
-      <a class="home-button primary" href="/research/">Research</a>
-      <a class="home-button" href="/publications/">Publications</a>
-      <a class="home-button" href="/team/">People</a>
-      <a class="home-button" href="/join-us/">Join Us</a>
+    <div class="rna-home" data-rna-home="">
+  <section class="rna-hero" aria-labelledby="rna-hero-title">
+    <div class="rna-hero-field" aria-hidden="true">
+      <svg viewbox="0 0 1600 900" preserveaspectratio="xMidYMid slice" role="presentation">
+        <defs>
+          <lineargradient id="rna-gradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#35e6bf"></stop><stop offset="0.52" stop-color="#52a8ff"></stop><stop offset="1" stop-color="#e067b4"></stop>
+          </lineargradient>
+          <radialgradient id="state-gradient"><stop offset="0" stop-color="#35e6bf" stop-opacity=".75"></stop><stop offset="1" stop-color="#35e6bf" stop-opacity="0"></stop></radialgradient>
+        </defs>
+        <g class="chromatin-domains">
+          <path d="M-40,285 C110,110 220,340 390,210 S680,95 830,245 S1120,435 1640,100"></path>
+          <path d="M-20,330 C140,160 245,370 410,260 S690,150 850,292 S1145,480 1650,152"></path>
+        </g>
+        <path class="information-path" d="M-90,660 C145,630 235,390 465,420 S745,700 960,515 S1260,230 1680,315"></path>
+        <path class="nascent-path" d="M240,535 C355,470 390,625 505,560 S660,500 738,602"></path>
+        <g class="moving-signals">
+          <circle cx="365" cy="444" r="5"></circle><circle cx="640" cy="560" r="4"></circle><circle cx="880" cy="575" r="6"></circle><circle cx="1130" cy="393" r="4"></circle><circle cx="1390" cy="287" r="5"></circle>
+        </g>
+        <g class="stable-field">
+          <circle cx="1370" cy="560" r="190" fill="url(#state-gradient)"></circle>
+          <circle cx="1315" cy="535" r="5"></circle><circle cx="1375" cy="485" r="4"></circle><circle cx="1440" cy="550" r="5"></circle><circle cx="1365" cy="615" r="3"></circle><circle cx="1460" cy="640" r="4"></circle>
+        </g>
+      </svg>
+      <div class="rna-hero-annotations">
+        <span style="--annotation-order: 1">01 Organization</span><span style="--annotation-order: 2">02 Processing</span><span style="--annotation-order: 3">03 Selection</span><span style="--annotation-order: 4">04 Stabilization</span>
+      </div>
     </div>
-  </div>
 
-  <div class="home-hero-card">
-    <h3>Our Central Question</h3>
-    <p>
-      Cells share essentially the same genome, yet establish remarkably different and stable identities. We seek the principles that transform fluctuating molecular activity into reproducible cellular states.
-    </p>
+    <div class="rna-hero-copy">
+      <p class="rna-eyebrow" data-reveal="">XShen Lab · Tsinghua University</p>
+      <h1 id="rna-hero-title" data-reveal="" style="--reveal-order: 1">
+        Biological Information Flow
+      </h1>
+      <p class="rna-hero-subtitle" data-reveal="" style="--reveal-order: 2">From Genome to Cell Fate</p>
+      <p class="rna-hero-question" data-reveal="" style="--reveal-order: 3">How does sparse and stochastic genome activity become stable biological information and cell fate?</p>
+      <p class="rna-hero-intro" data-reveal="" style="--reveal-order: 4">We study how information is continuously organized, processed, selected and stabilized across the genome, nucleus and cell.</p>
+      <div class="rna-hero-actions" data-reveal="" style="--reveal-order: 5">
+        <a class="rna-button primary" href="/research/">Research <span aria-hidden="true">↗</span></a><a class="rna-button secondary" href="/publications/">Publications <span aria-hidden="true">↗</span></a><a class="rna-button text" href="/join-us/">Join Us <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="rna-hero-scroll" aria-hidden="true">
+<span></span>01—04</div>
+  </section>
+
+  <section class="rna-tension rna-section" aria-labelledby="rna-tension-title">
+    <div class="rna-section-head" data-reveal="">
+      <p class="rna-section-label">The central scientific tension</p>
+      <h2 id="rna-tension-title">Dynamic genome activity. Stable cellular identity.</h2>
+      <p>Cells share essentially the same genome, yet establish diverse and persistent identities while transcription, RNA metabolism and chromatin organization continually fluctuate across space and time.</p>
+    </div>
+    <div class="rna-tension-grid">
+      <article class="dynamic" data-reveal=""><span>Molecular reality</span><h3>Sparse · Stochastic · Dynamic</h3>
+<p>Genome activity is transient and heterogeneous within individual cells.</p>
+<div class="rna-fluctuation" aria-hidden="true">
+<i></i><i></i><i></i><i></i><i></i>
+</div></article>
+      <div class="rna-tension-arrow" aria-hidden="true"><span>→</span></div>
+      <article class="stable" data-reveal="" style="--reveal-order: 2"><span>Biological outcome</span><h3>Diverse · Reproducible · Stable</h3>
+<p>Cellular states persist across time and populations.</p>
+<div class="rna-state-field" aria-hidden="true">
+<i></i><i></i><i></i><i></i><i></i>
+</div></article>
+    </div>
+  </section>
+
+  <section class="rna-flow" data-rna-story="" aria-labelledby="rna-flow-title">
+    <div class="rna-flow-intro">
+      <p class="rna-section-label">Biological information flow</p>
+      <h2 id="rna-flow-title">Four operations transform fluctuation into identity.</h2>
+      <p>The laboratory connects genome organization, the RNA–RBP meshwork, transcriptional surveillance and probabilistic cell-state dynamics in one continuous framework.</p>
+      <div class="rna-story-track" aria-hidden="true"><span></span></div>
+    </div>
+    <div class="rna-flow-stages">
+      
+        <article class="rna-flow-stage motif-domain" data-flow-stage="0" data-reveal="">
+          <span class="rna-stage-index">01</span>
+          <span class="rna-stage-label">Organization</span>
+          <h3>Genome Organization</h3>
+<p>How does genome sequence encode nuclear organization?</p>
+          <div class="rna-stage-visual" aria-hidden="true">
+<i></i><i></i><i></i><i></i>
+</div>
+        </article>
+      
+        <article class="rna-flow-stage motif-mesh" data-flow-stage="1" data-reveal="">
+          <span class="rna-stage-index">02</span>
+          <span class="rna-stage-label">Processing</span>
+          <h3>RNA Networks</h3>
+<p>How does RNA organize the nuclear environment?</p>
+          <div class="rna-stage-visual" aria-hidden="true">
+<i></i><i></i><i></i><i></i>
+</div>
+        </article>
+      
+        <article class="rna-flow-stage motif-checkpoint" data-flow-stage="2" data-reveal="">
+          <span class="rna-stage-index">03</span>
+          <span class="rna-stage-label">Selection</span>
+          <h3>Transcriptional Surveillance</h3>
+<p>How does productive information emerge from pervasive transcription?</p>
+          <div class="rna-stage-visual" aria-hidden="true">
+<i></i><i></i><i></i><i></i>
+</div>
+        </article>
+      
+        <article class="rna-flow-stage motif-field" data-flow-stage="3" data-reveal="">
+          <span class="rna-stage-index">04</span>
+          <span class="rna-stage-label">Stabilization</span>
+          <h3>Cell Fate Dynamics</h3>
+<p>How do probabilistic genome activities generate stable cell identity?</p>
+          <div class="rna-stage-visual" aria-hidden="true">
+<i></i><i></i><i></i><i></i>
+</div>
+        </article>
+      
+    </div>
+  </section>
+
+  <section class="rna-section rna-featured-research" aria-labelledby="rna-research-title">
+    <div class="rna-section-head split" data-reveal="">
+      <div>
+<p class="rna-section-label">Research programs</p>
+<h2 id="rna-research-title">Four questions across one information system.</h2>
+</div>
+      <a class="rna-text-link" href="/research/">Explore all research <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="rna-research-grid">
+  
+    <a class="rna-research-card motif-domain" href="/research/#genome-organization" data-reveal="" style="--reveal-order: 1">
+      <span class="rna-research-number">01</span>
+      <span class="rna-research-signal">Organization</span>
+      <span class="rna-research-copy">
+        <span class="rna-research-title">Genome Organization</span>
+        <span class="rna-research-question">How does genome sequence encode nuclear organization?</span>
+        <span class="rna-research-text">We investigate how genome sequences, repetitive elements and their RNA products establish nuclear architecture, spatial positioning and genome regulation.</span>
+      </span>
+      <span class="rna-program-motif" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="rna-arrow" aria-hidden="true">Explore program ↗</span>
+    </a>
+  
+    <a class="rna-research-card motif-mesh" href="/research/#rna-networks" data-reveal="" style="--reveal-order: 2">
+      <span class="rna-research-number">02</span>
+      <span class="rna-research-signal">Processing</span>
+      <span class="rna-research-copy">
+        <span class="rna-research-title">RNA Networks</span>
+        <span class="rna-research-question">How does RNA organize the nuclear environment?</span>
+        <span class="rna-research-text">We study how nascent RNA, RNA-binding proteins and processing factors form an RNA–RBP meshwork that coordinates genome function.</span>
+      </span>
+      <span class="rna-program-motif" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="rna-arrow" aria-hidden="true">Explore program ↗</span>
+    </a>
+  
+    <a class="rna-research-card motif-checkpoint" href="/research/#transcriptional-surveillance" data-reveal="" style="--reveal-order: 3">
+      <span class="rna-research-number">03</span>
+      <span class="rna-research-signal">Selection</span>
+      <span class="rna-research-copy">
+        <span class="rna-research-title">Transcriptional Surveillance</span>
+        <span class="rna-research-question">How does productive information emerge from pervasive transcription?</span>
+        <span class="rna-research-text">We examine how RNA Polymerase II, RNA processing and degradation pathways support productive elongation, RNA maturation and polymerase recycling.</span>
+      </span>
+      <span class="rna-program-motif" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="rna-arrow" aria-hidden="true">Explore program ↗</span>
+    </a>
+  
+    <a class="rna-research-card motif-field" href="/research/#cell-fate-dynamics" data-reveal="" style="--reveal-order: 4">
+      <span class="rna-research-number">04</span>
+      <span class="rna-research-signal">Stabilization</span>
+      <span class="rna-research-copy">
+        <span class="rna-research-title">Cell Fate Dynamics</span>
+        <span class="rna-research-question">How do probabilistic genome activities generate stable cell identity?</span>
+        <span class="rna-research-text">We measure and model how sparse, stochastic genome activity is coordinated across individual cells and stabilized across populations.</span>
+      </span>
+      <span class="rna-program-motif" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="rna-arrow" aria-hidden="true">Explore program ↗</span>
+    </a>
+  
+</div>
+
+  </section>
+
+  <section class="rna-methods" aria-labelledby="rna-methods-title">
+    <div class="rna-method-copy" data-reveal="">
+<p class="rna-section-label">Technology across scales</p>
+<h2 id="rna-methods-title">Measure the process from genome to cell fate.</h2>
+<p>We integrate molecular, spatial, cellular and theoretical approaches. The methods are connected by the scientific question—not presented as isolated platforms.</p>
+</div>
+    <div class="rna-scale-track" aria-hidden="true"><span></span></div>
+    <ol class="rna-scale-list">
+      <li data-reveal="" style="--reveal-order: 1">
+<span class="rna-scale-index">01</span><strong>Genome</strong><small>CRISPR genome engineering</small>
+</li>
+<li data-reveal="" style="--reveal-order: 2">
+<span class="rna-scale-index">02</span><strong>Molecule</strong><small>Nascent transcription profiling · Biochemical reconstitution</small>
+</li>
+<li data-reveal="" style="--reveal-order: 3">
+<span class="rna-scale-index">03</span><strong>Nuclear environment</strong><small>Live-cell and super-resolution imaging · Electron microscopy</small>
+</li>
+<li data-reveal="" style="--reveal-order: 4">
+<span class="rna-scale-index">04</span><strong>Single cell</strong><small>scFLUENT-seq · Single-cell genomics</small>
+</li>
+<li data-reveal="" style="--reveal-order: 5">
+<span class="rna-scale-index">05</span><strong>Cell population</strong><small>Computational analysis · Artificial intelligence</small>
+</li>
+<li data-reveal="" style="--reveal-order: 6">
+<span class="rna-scale-index">06</span><strong>Cell fate</strong><small>Theoretical and kinetic modeling</small>
+</li>
+    </ol>
+  </section>
+
+  <section class="rna-section rna-publication" aria-labelledby="rna-publication-title">
+    <div class="rna-section-head" data-reveal="">
+<p class="rna-section-label">Featured discovery</p>
+<h2 id="rna-publication-title">A live readout of genome usage.</h2>
+</div>
+    
+
+
+
+
+
+
+  <article class="rna-publication-feature" data-reveal="">
+    <a class="rna-publication-visual" href="/publications/2025-scfluent-seq/" aria-label="Single-cell nascent transcription reveals sparse genome usage and plasticity">
+      <img src="/images/publications/2025-scfluent-seq/graphical-abstract.webp" alt="Graphical abstract for Single-cell nascent transcription reveals sparse genome usage and plasticity" loading="lazy">
+      <span class="rna-publication-scan" aria-hidden="true"></span>
+    </a>
+    <div class="rna-publication-copy">
+      <div class="rna-publication-meta">Cell · 2025 · 188</div>
+      <h3>Single-cell nascent transcription reveals sparse genome usage and plasticity</h3>
+      <p class="rna-publication-authors">Shaoqian Ma, Yantao Hong, Junhan Chen, Jingzhao Xu, and Xiaohua Shen</p>
+      <p>scFLUENT-seq reveals sparse and stochastic genome usage in individual cells and links transcriptional diversity to cellular plasticity.</p>
+      <div class="rna-publication-metric"><span>0.02–3.1% of the genome transcribed per cell</span></div>
+      <div class="rna-inline-actions">
+        <a class="rna-text-link" href="/publications/2025-scfluent-seq/">View publication <span aria-hidden="true">↗</span></a>
+        <a class="rna-text-link muted" href="/publications/">All publications</a>
+      </div>
+    </div>
+  </article>
+
+
+  </section>
+
+  <section class="rna-section rna-people" aria-labelledby="rna-people-title">
+    <div class="rna-section-head split" data-reveal="">
+<div>
+<p class="rna-section-label">People</p>
+<h2 id="rna-people-title">Different disciplines, one moving system.</h2>
+<p>Our team brings together molecular cell biology, genomics, bioinformatics, biophysics, mathematics and computational biology.</p>
+</div>
+<a class="rna-text-link" href="/team/">Meet the team <span aria-hidden="true">↗</span></a>
+</div>
+    
+
+
+
+
+
+
+
+<div class="rna-people-layout" data-reveal="">
+  
+    <a class="rna-pi-card" href="/members/xiaohua-shen.html">
+      <img src="/images/members/xiaohua-shen.jpg" alt="Xiaohua Shen 沈晓骅" loading="lazy">
+      <span class="rna-pi-overlay">
+        <span class="rna-person-role">Principal Investigator</span>
+        <strong>Xiaohua Shen 沈晓骅</strong>
+        <span>School of Basic Medicine, Tsinghua University</span>
+      </span>
+    </a>
+  
+
+  <div class="rna-people-groups">
+    
+      
+      <div class="rna-people-group">
+        <div class="rna-people-group-head">
+          <h3>Postdoctoral Fellows</h3>
+          <span>05</span>
+        </div>
+        
+          <div class="rna-person-list">
+            
+              <a href="/members/Xiaowen.html" class="rna-person-row">
+                <img src="/images/members/haoxiaowen.jpg" alt="" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+                <span><strong>Hao,Xiaowen 郝晓文</strong><small>Postdoctoral Fellow</small></span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            
+              <a href="/members/Mengyuan.html" class="rna-person-row">
+                <img src="/images/members/huangmengyuan.jpg" alt="" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+                <span><strong>Huang, Mengyuan 黄梦元</strong><small>Postdoctoral Fellow</small></span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            
+          </div>
+        
+      </div>
+    
+      
+      <div class="rna-people-group">
+        <div class="rna-people-group-head">
+          <h3>Students</h3>
+          <span>05</span>
+        </div>
+        
+          <div class="rna-person-list">
+            
+              <a href="/members/Ruiqi.html" class="rna-person-row">
+                <img src="/images/members/dengruiqi.jpg" alt="" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+                <span><strong>Deng,ruiqi 邓睿琦</strong><small>Undergraduate Student</small></span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            
+              <a href="/members/Xinyun.html" class="rna-person-row">
+                <img src="/images/members/huxinyun.jpg" alt="" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+                <span><strong>Hu,Xinyun 胡昕昀</strong><small>PhD Student</small></span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            
+          </div>
+        
+      </div>
+    
   </div>
 </div>
+
   </section>
 
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="laboratory-mission">Laboratory Mission</h2>
-
-<p>The XShen Lab treats the nucleus as a dynamic information-processing system rather than a passive container for DNA. We investigate how chromatin and RNA–protein networks organize access to the genome, how nuclear environments process its activity, how surveillance selects productive outputs, and how these outputs become stable cell-fate programs.</p>
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="four-research-programs">Four Research Programs</h2>
-
-<div class="home-grid">
-  <div class="home-card">
-    <h3>Genome Organization</h3>
-    <p><strong>Organization.</strong> How genome sequence, repetitive elements, and their RNA products encode nuclear architecture and spatial positioning.</p>
-  </div>
-
-  <div class="home-card">
-    <h3>RNA Networks</h3>
-    <p><strong>Processing.</strong> How nascent RNA, RNA-binding proteins, and RNA-processing factors form nuclear environments that coordinate genome function.</p>
-  </div>
-
-  <div class="home-card">
-    <h3>Transcriptional Surveillance</h3>
-    <p><strong>Selection.</strong> How RNA Polymerase II and RNA-processing and degradation pathways channel pervasive transcription toward productive biological information.</p>
-  </div>
-
-  <div class="home-card">
-    <h3>Cell Fate Dynamics</h3>
-    <p><strong>Stabilization.</strong> How coordinated, probabilistic genome activities generate stable cellular identities across populations.</p>
-  </div>
+  <section class="rna-join" aria-labelledby="rna-join-title">
+    <div class="rna-join-intro" data-reveal="">
+<p class="rna-section-label">Join the lab</p>
+<h2 id="rna-join-title">Bring a new way of seeing the system.</h2>
+<p>We welcome motivated students and researchers interested in nuclear organization, genome regulation, transcription, noncoding RNA, single-cell genomics and cell fate.</p>
+<div class="rna-inline-actions">
+<a class="rna-button primary" href="/join-us/">Application details <span aria-hidden="true">↗</span></a><a class="rna-button text" href="/contact/">Contact the lab</a>
+</div>
+</div>
+    <div class="rna-join-grid">
+<article data-reveal="" style="--reveal-order: 1"><span>01</span><h3>Graduate Students</h3>
+<p>Experimental, computational and quantitative backgrounds are welcome.</p></article><article data-reveal="" style="--reveal-order: 2"><span>02</span><h3>Postdoctoral Fellows</h3>
+<p>Develop independent questions within the laboratory’s scientific framework.</p></article><article data-reveal="" style="--reveal-order: 3"><span>03</span><h3>Research Assistants</h3>
+<p>Support experimental, computational or interdisciplinary projects.</p></article><article data-reveal="" style="--reveal-order: 4"><span>04</span><h3>Collaboration</h3>
+<p>Connect complementary questions, systems and methods across scales.</p></article>
 </div>
   </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="technology-platforms">Technology Platforms</h2>
-
-<p>We integrate complementary methods across molecular, spatial, cellular, and theoretical scales:</p>
-
-<ul>
-  <li>single-cell genomics;</li>
-  <li>live-cell and super-resolution imaging;</li>
-  <li>electron microscopy;</li>
-  <li>biochemical reconstitution;</li>
-  <li>CRISPR genome engineering;</li>
-  <li>computational analysis;</li>
-  <li>artificial intelligence;</li>
-  <li>theoretical modeling.</li>
-</ul>
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="selected-recent-highlight">Selected Recent Highlight</h2>
-
-<div class="home-highlight">
-  <strong>scFLUENT-seq reveals sparse and probabilistic genome usage</strong>
-  <p>
-    scFLUENT-seq directly measures real-time genome usage in individual cells. The 2025 study found that each cell actively transcribes a cell-type-dependent fraction of approximately 0.02%–3.1% of the genome, while cell populations collectively explore broader genomic landscapes. This work connects stochastic transcriptional diversity with cellular plasticity and the stabilization of cell fate.
-  </p>
-  <p><a href="/publications/2025-scfluent-seq/">Explore the scFLUENT-seq publication</a></p>
 </div>
   </section>
 
@@ -688,18 +882,27 @@
     </main>
     
 
-
-<footer class="background" style="--image: url('/images/background.jpg')" data-dark="true" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+<footer class="site-footer" data-dark="true">
+  <div class="site-footer-grid">
+    <div class="site-footer-brand">
+      <span class="site-footer-kicker">XShen Lab</span>
+      <strong>Biological Information Flow</strong>
+      <p>From Genome to Cell Fate</p>
     </div>
-  -->
-
-  <div>
-    
+    <address>
+      <span>School of Basic Medicine, Tsinghua University</span>
+      <span>Zheng Yutong Medical Building, Room D108</span>
+      <a href="mailto:xshen@tsinghua.edu.cn">xshen@tsinghua.edu.cn</a>
+    </address>
+    <nav class="site-footer-nav" aria-label="Footer navigation">
       
+        
+        <a href="/">Home</a><a href="/research/">Research</a><a href="/team/">People</a><a href="/publications/">Publications</a><a href="/software/">Software</a><a href="/Resources/">Resources</a><a href="/join-us/">Join Us</a><a href="/contact/">Contact</a>
       
+    </nav>
+  </div>
+  <div class="site-footer-base">
+    <div class="site-footer-social">
       
 
 
@@ -712,10 +915,6 @@
   </div>
 
 
-    
-      
-      
-      
 
 
 
@@ -727,10 +926,6 @@
   </div>
 
 
-    
-      
-      
-      
 
 
 
@@ -742,10 +937,6 @@
   </div>
 
 
-    
-      
-      
-      
 
 
 
@@ -757,19 +948,10 @@
   </div>
 
 
-    
+    </div>
+    <span>© 2026 XShen Lab</span>
+    <input type="checkbox" class="dark-toggle" data-tooltip="Toggle color mode" aria-label="Toggle color mode" oninput="onDarkToggleChange(event)">
   </div>
-
-  <div>
-    © 2026
-    XShen Lab
-      |   Built with
-    <a href="https://github.com/greenelab/lab-website-template">
-      Lab Website Template
-    </a>
-  </div>
-
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
 </footer>
 
   </body>
