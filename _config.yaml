@@ -1,5 +1,6 @@
 # site properties and page defaults
 title: XShen Lab
+url: https://xshen-lab.github.io
 subtitle: "Biological Information Flow: From Genome to Cell Fate"
 description: The XShen Lab at Tsinghua University studies how stochastic genome activity is organized, processed, selected, and stabilized into biological information and cell fate.
 header: images/background.jpg

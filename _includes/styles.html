@@ -10,13 +10,16 @@
   | where_exp: "file", "file.url contains '/_styles'"
 %}
 {% for style in styles %}
-  {% unless style.url contains ".map" %}
+  {% unless style.url contains ".map" or style.path contains "rna.scss" %}
     <link
       href="{{ style.path | replace: ".scss", ".css" | relative_url }}"
       rel="stylesheet"
     />
   {% endunless %}
 {% endfor %}
+
+<!-- brand and editorial system loads last so it can refine template defaults -->
+<link href="{{ '/_styles/rna.css' | relative_url }}" rel="stylesheet">
 
 <!-- include all css in styles folder -->
 {% assign styles = site.static_files

@@ -1,0 +1,123 @@
+{% assign home = site.data.home[page.lang] | default: site.data.home.en %}
+{% assign programs = site.data.research_programs[page.lang] | default: site.data.research_programs.en %}
+{% if page.lang == "zh-CN" %}
+  {% assign research_url = "/zh/research/" %}
+  {% assign publications_url = "/zh/publications/" %}
+  {% assign people_url = "/zh/people/" %}
+  {% assign join_url = "/zh/join-us/" %}
+  {% assign contact_url = "/zh/contact/" %}
+{% else %}
+  {% assign research_url = "/research/" %}
+  {% assign publications_url = "/publications/" %}
+  {% assign people_url = "/team/" %}
+  {% assign join_url = "/join-us/" %}
+  {% assign contact_url = "/contact/" %}
+{% endif %}
+
+<div class="rna-home" data-rna-home>
+  <section class="rna-hero" aria-labelledby="rna-hero-title">
+    <div class="rna-hero-field" aria-hidden="true">
+      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="presentation">
+        <defs>
+          <linearGradient id="rna-gradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#35e6bf"/><stop offset="0.52" stop-color="#52a8ff"/><stop offset="1" stop-color="#e067b4"/>
+          </linearGradient>
+          <radialGradient id="state-gradient"><stop offset="0" stop-color="#35e6bf" stop-opacity=".75"/><stop offset="1" stop-color="#35e6bf" stop-opacity="0"/></radialGradient>
+        </defs>
+        <g class="chromatin-domains">
+          <path d="M-40,285 C110,110 220,340 390,210 S680,95 830,245 S1120,435 1640,100"/>
+          <path d="M-20,330 C140,160 245,370 410,260 S690,150 850,292 S1145,480 1650,152"/>
+        </g>
+        <path class="information-path" d="M-90,660 C145,630 235,390 465,420 S745,700 960,515 S1260,230 1680,315"/>
+        <path class="nascent-path" d="M240,535 C355,470 390,625 505,560 S660,500 738,602"/>
+        <g class="moving-signals">
+          <circle cx="365" cy="444" r="5"/><circle cx="640" cy="560" r="4"/><circle cx="880" cy="575" r="6"/><circle cx="1130" cy="393" r="4"/><circle cx="1390" cy="287" r="5"/>
+        </g>
+        <g class="stable-field">
+          <circle cx="1370" cy="560" r="190" fill="url(#state-gradient)"/>
+          <circle cx="1315" cy="535" r="5"/><circle cx="1375" cy="485" r="4"/><circle cx="1440" cy="550" r="5"/><circle cx="1365" cy="615" r="3"/><circle cx="1460" cy="640" r="4"/>
+        </g>
+      </svg>
+      <div class="rna-hero-annotations">
+        {% for program in programs %}<span style="--annotation-order: {{ forloop.index }}">0{{ forloop.index }} {{ program.operation }}</span>{% endfor %}
+      </div>
+    </div>
+
+    <div class="rna-hero-copy">
+      <p class="rna-eyebrow" data-reveal>{{ home.eyebrow }}</p>
+      <h1 id="rna-hero-title" data-reveal style="--reveal-order: 1">
+        {% if home.hero_title_en %}<small>{{ home.hero_title_en }}</small>{% endif %}{{ home.hero_title }}
+      </h1>
+      <p class="rna-hero-subtitle" data-reveal style="--reveal-order: 2">{{ home.hero_subtitle }}</p>
+      <p class="rna-hero-question" data-reveal style="--reveal-order: 3">{{ home.hero_question }}</p>
+      <p class="rna-hero-intro" data-reveal style="--reveal-order: 4">{{ home.hero_intro }}</p>
+      <div class="rna-hero-actions" data-reveal style="--reveal-order: 5">
+        {% for action in home.actions %}<a class="rna-button {{ action.style }}" href="{{ action.url | relative_url }}">{{ action.label }} <span aria-hidden="true">↗</span></a>{% endfor %}
+      </div>
+    </div>
+    <div class="rna-hero-scroll" aria-hidden="true"><span></span>01—04</div>
+  </section>
+
+  <section class="rna-tension rna-section" aria-labelledby="rna-tension-title">
+    <div class="rna-section-head" data-reveal>
+      <p class="rna-section-label">{{ home.tension_label }}</p>
+      <h2 id="rna-tension-title">{{ home.tension_title }}</h2>
+      <p>{{ home.tension_intro }}</p>
+    </div>
+    <div class="rna-tension-grid">
+      <article class="dynamic" data-reveal><span>{{ home.tension_dynamic_label }}</span><h3>{{ home.tension_dynamic_title }}</h3><p>{{ home.tension_dynamic_text }}</p><div class="rna-fluctuation" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></article>
+      <div class="rna-tension-arrow" aria-hidden="true"><span>→</span></div>
+      <article class="stable" data-reveal style="--reveal-order: 2"><span>{{ home.tension_stable_label }}</span><h3>{{ home.tension_stable_title }}</h3><p>{{ home.tension_stable_text }}</p><div class="rna-state-field" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></article>
+    </div>
+  </section>
+
+  <section class="rna-flow" data-rna-story aria-labelledby="rna-flow-title">
+    <div class="rna-flow-intro">
+      <p class="rna-section-label">{{ home.flow_label }}</p>
+      <h2 id="rna-flow-title">{{ home.flow_title }}</h2>
+      <p>{{ home.flow_intro }}</p>
+      <div class="rna-story-track" aria-hidden="true"><span></span></div>
+    </div>
+    <div class="rna-flow-stages">
+      {% for program in programs %}
+        <article class="rna-flow-stage motif-{{ program.motif }}" data-flow-stage="{{ forloop.index0 }}" data-reveal>
+          <span class="rna-stage-index">0{{ forloop.index }}</span>
+          <span class="rna-stage-label">{{ program.operation }}{% if program.operation_en %} / {{ program.operation_en }}{% endif %}</span>
+          <h3>{{ program.title }}</h3><p>{{ program.question }}</p>
+          <div class="rna-stage-visual" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="rna-section rna-featured-research" aria-labelledby="rna-research-title">
+    <div class="rna-section-head split" data-reveal>
+      <div><p class="rna-section-label">{{ home.research_label }}</p><h2 id="rna-research-title">{{ home.research_title }}</h2></div>
+      <a class="rna-text-link" href="{{ research_url | relative_url }}">{{ home.labels.explore_research }} <span aria-hidden="true">↗</span></a>
+    </div>
+    {% include home/research.html home=home programs=programs research_url=research_url %}
+  </section>
+
+  <section class="rna-methods" aria-labelledby="rna-methods-title">
+    <div class="rna-method-copy" data-reveal><p class="rna-section-label">{{ home.methods_label }}</p><h2 id="rna-methods-title">{{ home.methods_title }}</h2><p>{{ home.methods_intro }}</p></div>
+    <div class="rna-scale-track" aria-hidden="true"><span></span></div>
+    <ol class="rna-scale-list">
+      {% for scale in home.scales %}<li data-reveal style="--reveal-order: {{ forloop.index }}"><span class="rna-scale-index">0{{ forloop.index }}</span><strong>{{ scale.label }}</strong><small>{{ scale.methods }}</small></li>{% endfor %}
+    </ol>
+  </section>
+
+  <section class="rna-section rna-publication" aria-labelledby="rna-publication-title">
+    <div class="rna-section-head" data-reveal><p class="rna-section-label">{{ home.publication_label }}</p><h2 id="rna-publication-title">{{ home.publication_title }}</h2></div>
+    {% include home/publication.html home=home publications_url=publications_url %}
+  </section>
+
+  <section class="rna-section rna-people" aria-labelledby="rna-people-title">
+    <div class="rna-section-head split" data-reveal><div><p class="rna-section-label">{{ home.people_label }}</p><h2 id="rna-people-title">{{ home.people_title }}</h2><p>{{ home.people_intro }}</p></div><a class="rna-text-link" href="{{ people_url | relative_url }}">{{ home.labels.meet_team }} <span aria-hidden="true">↗</span></a></div>
+    {% include home/people.html home=home %}
+  </section>
+
+  <section class="rna-join" aria-labelledby="rna-join-title">
+    <div class="rna-join-intro" data-reveal><p class="rna-section-label">{{ home.join_label }}</p><h2 id="rna-join-title">{{ home.join_title }}</h2><p>{{ home.join_intro }}</p><div class="rna-inline-actions"><a class="rna-button primary" href="{{ join_url | relative_url }}">{{ home.labels.application_details }} <span aria-hidden="true">↗</span></a><a class="rna-button text" href="{{ contact_url | relative_url }}">{{ home.labels.contact_lab }}</a></div></div>
+    <div class="rna-join-grid">{% for track in home.join_tracks %}<article data-reveal style="--reveal-order: {{ forloop.index }}"><span>0{{ forloop.index }}</span><h3>{{ track.title }}</h3><p>{{ track.text }}</p></article>{% endfor %}</div>
+  </section>
+</div>

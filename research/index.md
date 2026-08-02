@@ -48,7 +48,7 @@ Transcription continually introduces RNA, energy, and entropy. In this active-ma
 
 ## Research Programs
 
-### 1. Genome Organization
+### 1. Genome Organization {#genome-organization}
 
 **Organizing Biological Information**
 
@@ -56,7 +56,7 @@ Transcription continually introduces RNA, energy, and entropy. In this active-ma
 
 We investigate how genome sequences establish nuclear architecture and influence gene regulation and cell fate. Our work shows that repetitive elements—including L1 and B1/Alu sequences—are not merely genomic byproducts; they encode principles of chromosome compartmentalization and nuclear positioning. We are extending this work to understand how repetitive elements and their RNA products shape chromatin organization, nuclear structures, and genome remodeling during development, cell-cycle transitions, and cell-fate changes.
 
-### 2. RNA Networks
+### 2. RNA Networks {#rna-networks}
 
 **Processing Biological Information**
 
@@ -64,7 +64,7 @@ We investigate how genome sequences establish nuclear architecture and influence
 
 RNA is both a carrier of genetic information and an organizer of nuclear function. Our studies established that noncoding RNAs can regulate neighboring genes and local chromatin states. We also found that RNA-binding proteins form dynamic RNA-associated condensates that regulate RNA Polymerase II recruitment, CTD phosphorylation, and transcriptional elongation. We now investigate how nascent RNA, RNA-binding proteins, and processing factors form an RNA–RBP meshwork that coordinates transcription, RNA maturation, RNA degradation, and nuclear organization.
 
-### 3. Transcriptional Surveillance
+### 3. Transcriptional Surveillance {#transcriptional-surveillance}
 
 **Selecting Biological Information**
 
@@ -72,7 +72,7 @@ RNA is both a carrier of genetic information and an organizer of nuclear functio
 
 Eukaryotic genomes are extensively transcribed, yet only a fraction of transcriptional events achieve productive elongation and generate mature mRNAs. We propose that productive transcription is an actively established state. Our ongoing work examines how the RNA Polymerase II CTD together with RNA-processing and degradation pathways forms a genome-scale surveillance system that eliminates nonproductive transcription while supporting RNA maturation, productive elongation, and polymerase recycling. Unpublished manuscript titles are not presented here.
 
-### 4. Cell Fate Dynamics
+### 4. Cell Fate Dynamics {#cell-fate-dynamics}
 
 **Stabilizing Biological Information**
 

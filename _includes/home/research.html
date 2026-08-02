@@ -1,0 +1,15 @@
+<div class="rna-research-grid">
+  {% for item in include.programs %}
+    <a class="rna-research-card motif-{{ item.motif }}" href="{{ include.research_url | append: '#' | append: item.anchor | relative_url }}" data-reveal style="--reveal-order: {{ forloop.index }}">
+      <span class="rna-research-number">0{{ forloop.index }}</span>
+      <span class="rna-research-signal">{{ item.operation }}{% if item.operation_en %} / {{ item.operation_en }}{% endif %}</span>
+      <span class="rna-research-copy">
+        <span class="rna-research-title">{{ item.title }}</span>
+        <span class="rna-research-question">{{ item.question }}</span>
+        <span class="rna-research-text">{{ item.description }}</span>
+      </span>
+      <span class="rna-program-motif" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="rna-arrow" aria-hidden="true">{{ include.home.labels.explore_program }} ↗</span>
+    </a>
+  {% endfor %}
+</div>

@@ -1,0 +1,49 @@
+{% assign principal_investigators = site.members | where: "role", "principal-investigator" %}
+{% assign postdocs = site.members | where: "role", "postdoc" | where_exp: "member", "member.name != 'Name 中文名'" | sort: "name" %}
+{% assign graduate_students = site.members | where: "role", "phd" | where_exp: "member", "member.name != 'Name 中文名'" %}
+{% assign undergraduate_students = site.members | where: "role", "undergrad" | where_exp: "member", "member.name != 'Name 中文名'" %}
+{% assign students = graduate_students | concat: undergraduate_students | sort: "name" %}
+{% assign alumni = site.members | where: "role", "alumni" | where_exp: "member", "member.name != 'Name 中文名'" | sort: "name" %}
+{% assign pi = principal_investigators | first %}
+
+<div class="rna-people-layout" data-reveal>
+  {% if pi %}
+    <a class="rna-pi-card" href="{% if page.lang == 'zh-CN' %}{{ '/zh/people/xiaohua-shen/' | relative_url }}{% else %}{{ pi.url | relative_url }}{% endif %}">
+      <img src="{{ pi.image | relative_url }}" alt="{{ pi.name | escape }}" loading="lazy">
+      <span class="rna-pi-overlay">
+        <span class="rna-person-role">{{ include.home.labels.principal_investigator }}</span>
+        <strong>{{ pi.name }}</strong>
+        <span>{{ pi.affiliation }}</span>
+      </span>
+    </a>
+  {% endif %}
+
+  <div class="rna-people-groups">
+    {% for group in include.home.people_groups %}
+      {% case group.key %}
+        {% when "postdoc" %}{% assign members = postdocs %}
+        {% when "students" %}{% assign members = students %}
+        {% when "alumni" %}{% assign members = alumni %}
+      {% endcase %}
+      <div class="rna-people-group">
+        <div class="rna-people-group-head">
+          <h3>{{ group.title }}</h3>
+          {% if members.size > 0 %}<span>{{ members.size | prepend: "0" | slice: -2, 2 }}</span>{% endif %}
+        </div>
+        {% if members.size > 0 %}
+          <div class="rna-person-list">
+            {% for member in members limit: 2 %}
+              <a href="{{ member.url | relative_url }}" class="rna-person-row">
+                <img src="{{ member.image | relative_url }}" alt="" loading="lazy" {% include fallback.html %}>
+                <span><strong>{{ member.name }}</strong><small>{{ member.description }}</small></span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p class="rna-empty-small">{{ include.home.people_empty }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
