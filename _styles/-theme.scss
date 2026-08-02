@@ -3,39 +3,53 @@
 
 // colors
 [data-dark="false"] {
-  --primary: #0795d9;
-  --secondary: #7dd3fc;
-  --text: #000000;
-  --background: #ffffff;
-  --background-alt: #fafafa;
-  --light-gray: #e0e0e0;
-  --gray: #808080;
-  --dark-gray: #404040;
-  --overlay: #00000020;
+  --primary: #087f72;
+  --primary-bright: #00b78e;
+  --secondary: #5969d9;
+  --accent: #b6427f;
+  --acid: #9bcf54;
+  --text: #10201e;
+  --text-soft: #405451;
+  --background: #f5f3eb;
+  --background-alt: #ebece5;
+  --surface: #fffdf7;
+  --light-gray: #cbd1c9;
+  --gray: #75817e;
+  --dark-gray: #405451;
+  --overlay: #071b1718;
+  --line: #173d3630;
+  --glow: #00b78e22;
 }
 [data-dark="true"] {
-  --primary: #0795d9;
-  --secondary: #075985;
-  --text: #ffffff;
-  --background: #181818;
-  --background-alt: #1c1c1c;
-  --light-gray: #404040;
-  --gray: #808080;
-  --dark-gray: #b0b0b0;
-  --overlay: #ffffff10;
+  --primary: #35e6bf;
+  --primary-bright: #78f7d4;
+  --secondary: #8998ff;
+  --accent: #e067b4;
+  --acid: #b8ec6e;
+  --text: #eff8f4;
+  --text-soft: #a9bbb5;
+  --background: #07110f;
+  --background-alt: #0b1715;
+  --surface: #101f1c;
+  --light-gray: #29423c;
+  --gray: #748781;
+  --dark-gray: #a9bbb5;
+  --overlay: #00000042;
+  --line: #b7d9cf25;
+  --glow: #35e6bf2c;
 }
 
 :root {
   // font families
-  --title: "Barlow", sans-serif;
-  --heading: "Barlow", sans-serif;
-  --body: "Barlow", sans-serif;
-  --code: "Roboto Mono", monospace;
+  --title: "Cormorant Garamond", Georgia, serif;
+  --heading: "Cormorant Garamond", Georgia, serif;
+  --body: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  --code: "IBM Plex Mono", "Roboto Mono", monospace;
 
   // font sizes
-  --large: 1.2rem;
-  --xl: 1.4rem;
-  --xxl: 1.6rem;
+  --large: 1.25rem;
+  --xl: 1.55rem;
+  --xxl: 2rem;
 
   // font weights
   --thin: 200;
@@ -44,11 +58,16 @@
   --bold: 600;
 
   // text line spacing
-  --spacing: 2;
-  --compact: 1.5;
+  --spacing: 1.75;
+  --compact: 1.55;
 
   // effects
-  --rounded: 3px;
-  --shadow: 0 0 10px 0 var(--overlay);
-  --transition: 0.2s ease;
+  --rounded: 2px;
+  --radius-small: 6px;
+  --radius-medium: 14px;
+  --page: 1180px;
+  --gutter: clamp(20px, 4vw, 64px);
+  --section-space: clamp(80px, 11vw, 168px);
+  --shadow: 0 20px 70px var(--overlay);
+  --transition: 0.28s cubic-bezier(0.22, 1, 0.36, 1);
 }

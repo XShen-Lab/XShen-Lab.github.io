@@ -1,0 +1,25 @@
+{% assign publication_matches = site.data.publications.records | where: "id", include.home.publication_id %}
+{% assign publication = publication_matches | first %}
+{% assign detail_matches = site.publications | where: "publication_id", include.home.publication_id %}
+{% assign detail = detail_matches | first %}
+{% assign localized = detail.localized[page.lang] | default: detail.localized.en %}
+
+{% if publication and detail %}
+  <article class="rna-publication-feature" data-reveal>
+    <a class="rna-publication-visual" href="{{ detail.url | relative_url }}" aria-label="{{ publication.title | escape }}">
+      <img src="{{ detail.graphical_abstract.path | relative_url }}" alt="{{ detail.graphical_abstract.alt[page.lang] | default: detail.graphical_abstract.alt.en | escape }}" loading="lazy">
+      <span class="rna-publication-scan" aria-hidden="true"></span>
+    </a>
+    <div class="rna-publication-copy">
+      <div class="rna-publication-meta">{{ publication.venue.name }} · {{ publication.year }} · {{ publication.venue.volume }}</div>
+      <h3>{{ publication.title }}</h3>
+      <p class="rna-publication-authors">{{ publication.authors.display }}</p>
+      <p>{{ localized.summary }}</p>
+      <div class="rna-publication-metric"><span>{{ localized.metric }}</span></div>
+      <div class="rna-inline-actions">
+        <a class="rna-text-link" href="{{ detail.url | relative_url }}">{{ include.home.labels.view_publication }} <span aria-hidden="true">↗</span></a>
+        <a class="rna-text-link muted" href="{{ include.publications_url | relative_url }}">{{ include.home.labels.view_all_publications }}</a>
+      </div>
+    </div>
+  </article>
+{% endif %}

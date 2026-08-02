@@ -1,0 +1,158 @@
+en:
+  eyebrow: XShen Lab · Tsinghua University
+  hero_title: Biological Information Flow
+  hero_subtitle: From Genome to Cell Fate
+  hero_question: How does sparse and stochastic genome activity become stable biological information and cell fate?
+  hero_intro: We study how information is continuously organized, processed, selected and stabilized across the genome, nucleus and cell.
+  actions:
+    - label: Research
+      url: /research/
+      style: primary
+    - label: Publications
+      url: /publications/
+      style: secondary
+    - label: Join Us
+      url: /join-us/
+      style: text
+  tension_label: The central scientific tension
+  tension_title: Dynamic genome activity. Stable cellular identity.
+  tension_intro: Cells share essentially the same genome, yet establish diverse and persistent identities while transcription, RNA metabolism and chromatin organization continually fluctuate across space and time.
+  tension_dynamic_label: Molecular reality
+  tension_dynamic_title: Sparse · Stochastic · Dynamic
+  tension_dynamic_text: Genome activity is transient and heterogeneous within individual cells.
+  tension_stable_label: Biological outcome
+  tension_stable_title: Diverse · Reproducible · Stable
+  tension_stable_text: Cellular states persist across time and populations.
+  flow_label: Biological information flow
+  flow_title: Four operations transform fluctuation into identity.
+  flow_intro: The laboratory connects genome organization, the RNA–RBP meshwork, transcriptional surveillance and probabilistic cell-state dynamics in one continuous framework.
+  research_label: Research programs
+  research_title: Four questions across one information system.
+  methods_label: Technology across scales
+  methods_title: Measure the process from genome to cell fate.
+  methods_intro: We integrate molecular, spatial, cellular and theoretical approaches. The methods are connected by the scientific question—not presented as isolated platforms.
+  scales:
+    - label: Genome
+      methods: CRISPR genome engineering
+    - label: Molecule
+      methods: Nascent transcription profiling · Biochemical reconstitution
+    - label: Nuclear environment
+      methods: Live-cell and super-resolution imaging · Electron microscopy
+    - label: Single cell
+      methods: scFLUENT-seq · Single-cell genomics
+    - label: Cell population
+      methods: Computational analysis · Artificial intelligence
+    - label: Cell fate
+      methods: Theoretical and kinetic modeling
+  publication_label: Featured discovery
+  publication_title: A live readout of genome usage.
+  publication_id: pub-2025-scfluent-seq
+  people_label: People
+  people_title: Different disciplines, one moving system.
+  people_intro: Our team brings together molecular cell biology, genomics, bioinformatics, biophysics, mathematics and computational biology.
+  people_groups:
+    - key: postdoc
+      title: Postdoctoral Fellows
+    - key: students
+      title: Students
+  join_label: Join the lab
+  join_title: Bring a new way of seeing the system.
+  join_intro: We welcome motivated students and researchers interested in nuclear organization, genome regulation, transcription, noncoding RNA, single-cell genomics and cell fate.
+  join_tracks:
+    - title: Graduate Students
+      text: Experimental, computational and quantitative backgrounds are welcome.
+    - title: Postdoctoral Fellows
+      text: Develop independent questions within the laboratory’s scientific framework.
+    - title: Research Assistants
+      text: Support experimental, computational or interdisciplinary projects.
+    - title: Collaboration
+      text: Connect complementary questions, systems and methods across scales.
+  labels:
+    explore_program: Explore program
+    explore_research: Explore all research
+    view_publication: View publication
+    view_all_publications: All publications
+    meet_team: Meet the team
+    application_details: Application details
+    contact_lab: Contact the lab
+    principal_investigator: Principal Investigator
+
+zh-CN:
+  eyebrow: XShen Lab · 清华大学
+  hero_title: 生物信息流
+  hero_title_en: Biological Information Flow
+  hero_subtitle: 从基因组到细胞命运
+  hero_question: 稀疏且随机的基因组活动如何转化为稳定的生物信息与细胞命运？
+  hero_intro: 我们研究信息如何在基因组、细胞核与细胞层面被持续组织、处理、选择并稳定化。
+  actions:
+    - label: 研究方向
+      url: /zh/research/
+      style: primary
+    - label: 论文发表
+      url: /zh/publications/
+      style: secondary
+    - label: 加入我们
+      url: /zh/join-us/
+      style: text
+  tension_label: 核心科学张力
+  tension_title: 动态的基因组活动，稳定的细胞身份。
+  tension_intro: 不同细胞拥有基本相同的基因组，却能建立多样且持久的身份；与此同时，转录、RNA 代谢和染色质组织持续在时空中波动。
+  tension_dynamic_label: 分子层面的现实
+  tension_dynamic_title: 稀疏 · 随机 · 动态
+  tension_dynamic_text: 单个细胞中的基因组活动短暂且高度异质。
+  tension_stable_label: 生物学结果
+  tension_stable_title: 多样 · 可重复 · 稳定
+  tension_stable_text: 细胞状态能够跨越时间并在群体中持续存在。
+  flow_label: 生物信息流
+  flow_title: 四个环节将波动转化为身份。
+  flow_intro: 实验室将基因组组织、RNA–RBP 网状体系、转录监控与概率性细胞状态动力学连接在一个连续框架中。
+  research_label: 研究项目
+  research_title: 在同一个信息系统中回答四个问题。
+  methods_label: 跨尺度技术
+  methods_title: 从基因组到细胞命运，测量正在发生的过程。
+  methods_intro: 我们整合分子、空间、细胞与理论方法；不同方法由科学问题相互连接，而非彼此孤立的平台。
+  scales:
+    - label: 基因组
+      methods: CRISPR 基因组工程
+    - label: 分子
+      methods: 新生转录图谱分析 · 生化重构
+    - label: 细胞核环境
+      methods: 活细胞与超分辨成像 · 电子显微镜
+    - label: 单细胞
+      methods: scFLUENT-seq · 单细胞基因组学
+    - label: 细胞群体
+      methods: 计算分析 · 人工智能
+    - label: 细胞命运
+      methods: 理论与动力学建模
+  publication_label: 代表性发现
+  publication_title: 实时读取基因组使用。
+  publication_id: pub-2025-scfluent-seq
+  people_label: 团队成员
+  people_title: 不同学科，共同研究一个动态系统。
+  people_intro: 团队成员来自分子细胞生物学、基因组学、生物信息学、生物物理学、数学和计算生物学等领域。
+  people_groups:
+    - key: postdoc
+      title: 博士后
+    - key: students
+      title: 学生
+  join_label: 加入实验室
+  join_title: 带来一种理解系统的新视角。
+  join_intro: 我们欢迎对细胞核组织、基因组调控、转录、非编码 RNA、单细胞基因组学和细胞命运感兴趣的学生与科研人员。
+  join_tracks:
+    - title: 研究生
+      text: 欢迎具有实验、计算或定量研究背景的学生。
+    - title: 博士后
+      text: 在实验室科学框架内发展独立研究问题。
+    - title: 科研助理
+      text: 参与实验、计算或交叉学科研究项目。
+    - title: 科研合作
+      text: 跨尺度连接互补的科学问题、生物系统与研究方法。
+  labels:
+    explore_program: 探索研究项目
+    explore_research: 查看全部研究
+    view_publication: 查看论文
+    view_all_publications: 全部论文
+    meet_team: 认识团队
+    application_details: 申请方式
+    contact_lab: 联系实验室
+    principal_investigator: 课题组负责人

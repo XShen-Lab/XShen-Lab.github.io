@@ -24,7 +24,7 @@ localized:
   zh-CN:
     short_title:
     summary: scFLUENT-seq 揭示单细胞中稀疏且随机的基因组使用，并将转录多样性与细胞可塑性联系起来。
-    metric: 0.02–3.1% of the genome transcribed per cell
+    metric: 每个细胞转录约 0.02%–3.1% 的基因组
     sections: []
     tags:
       - 单细胞基因组学

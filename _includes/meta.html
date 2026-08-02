@@ -1,6 +1,10 @@
 {% assign filename = page.path | split: "/" | last %}
 {% if page.publication_id %}
-  {% assign canonical_publication = site.data.publications.records | where: "id", page.publication_id | first %}
+  {% assign canonical_publication_matches = site.data.publications.records | where: "id", page.publication_id %}
+  {% assign publication_enrichment_matches = site.publications | where: "publication_id", page.publication_id %}
+  {% assign canonical_publication = canonical_publication_matches | first %}
+  {% assign publication_enrichment = publication_enrichment_matches | first %}
+  {% assign publication_localized = publication_enrichment.localized[page.lang] | default: publication_enrichment.localized.en %}
 {% endif %}
 {% if page.name and page.name != filename %}
   {% assign title = page.name %}
@@ -25,15 +29,17 @@
 
 {% assign subtitle = site.subtitle %}
 
-{% assign description = page.description | default: site.description %}
-{% if site.subtitle %}
-  {% capture description -%}
-    {{ site.subtitle }}. {{ description }}
-  {%- endcapture %}
+{% if page.publication_id %}
+  {% assign description = publication_localized.summary %}
+{% else %}
+  {% assign description = page.description | default: site.description %}
+  {% if site.subtitle %}
+    {% capture description -%}
+      {{ site.subtitle }}. {{ description }}
+    {%- endcapture %}
+  {% endif %}
 {% endif %}
-{% capture url -%}
-  {{ site.url }}{{ site.baseurl }}
-{%- endcapture %}
+{% assign url = page.url | absolute_url %}
 
 {% assign description = description | xml_escape %}
 
@@ -44,6 +50,9 @@
 {% assign jpg = "images/share.jpg" | file_exists %}
 {% assign png = "images/share.png" | file_exists %}
 {% assign share = jpg | default: png | relative_url %}
+{% if page.publication_id and publication_enrichment.graphical_abstract.path %}
+  {% assign share = publication_enrichment.graphical_abstract.path | absolute_url %}
+{% endif %}
 
 {% assign published = page.date | date_to_xmlschema %}
 {% assign updated = page.last_modified_at | date_to_xmlschema %}
@@ -59,6 +68,7 @@
 <title>{{ fulltitle }}</title>
 
 <link rel="icon" href="{{ icon }}">
+<link rel="canonical" href="{{ url }}">
 
 <meta name="title" content="{{ title }}">
 <meta name="description" content="{{ description }}">
@@ -76,7 +86,9 @@
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="{{ share }}">
 
-{% if page.author %}
+{% if page.publication_id %}
+  <meta property="og:type" content="article">
+{% elsif page.author %}
   <meta name="author" content="{{ page.author | xml_escape }}">
   <meta property="og:type" content="article">
   <meta property="og:updated_time" content="{{ updated }}">
@@ -90,7 +102,9 @@
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    {% if page.author %}
+    {% if page.publication_id %}
+      "@type": "Article",
+    {% elsif page.author %}
       "@type": "BlogPosting",
       "author": { "@type": "Person", "name": "{{ title }}" },
       "datePublished": "{{ published }}",

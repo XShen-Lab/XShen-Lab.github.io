@@ -16,6 +16,7 @@ LEGACY_PATH = File.join(ROOT, "_includes", "full-publications.html")
 LIST_PATH = File.join(ROOT, "_includes", "publications", "list.html")
 DATA_PATH = File.join(ROOT, "_data", "publications.yml")
 LAYOUT_PATH = File.join(ROOT, "_layouts", "publication.html")
+META_PATH = File.join(ROOT, "_includes", "meta.html")
 ENRICHMENT_PATH = File.join(ROOT, "_publications", "2025-scfluent-seq.md")
 PAGE_PATHS = {
   "English" => File.join("publications", "index.html"),
@@ -24,6 +25,9 @@ PAGE_PATHS = {
 DETAIL_PATHS = {
   "English Detail" => File.join("publications", "2025-scfluent-seq", "index.html"),
   "Chinese Detail" => File.join("zh", "publications", "2025-scfluent-seq", "index.html")
+}.freeze
+AUXILIARY_PAGE_PATHS = {
+  "Research" => File.join("research", "index.html")
 }.freeze
 PAGE_SOURCE_PATHS = [
   File.join(ROOT, "publications", "index.md"),
@@ -38,6 +42,13 @@ EXPECTED_COUNT = 52
 SCFLUENT_ID = "pub-2025-scfluent-seq".freeze
 ENGLISH_DETAIL_URL = "/publications/2025-scfluent-seq/".freeze
 CHINESE_DETAIL_URL = "/zh/publications/2025-scfluent-seq/".freeze
+SITE_URL = "https://xshen-lab.github.io".freeze
+ENGLISH_DETAIL_ABSOLUTE_URL = "#{SITE_URL}#{ENGLISH_DETAIL_URL}".freeze
+CHINESE_DETAIL_ABSOLUTE_URL = "#{SITE_URL}#{CHINESE_DETAIL_URL}".freeze
+RESEARCH_ABSOLUTE_URL = "#{SITE_URL}/research/".freeze
+GRAPHICAL_ABSTRACT_ABSOLUTE_URL =
+  "#{SITE_URL}/images/publications/2025-scfluent-seq/graphical-abstract.webp".freeze
+CHINESE_METRIC = "每个细胞转录约 0.02%–3.1% 的基因组".freeze
 
 class RendererVerificationError < StandardError; end
 
@@ -112,6 +123,8 @@ def verify_default_configuration!
   config = load_yaml(CONFIG_PATH)
   fail_unless(config.dig("publications_v2", "enabled") == true,
               "production publications_v2.enabled must be true")
+  fail_unless(config["url"] == SITE_URL,
+              "production site.url must be #{SITE_URL} for absolute page metadata")
 end
 
 def verify_renderer_wiring!
@@ -148,6 +161,18 @@ def verify_renderer_wiring!
               "publication layout does not resolve the unique enrichment by page.publication_id")
   fail_unless(layout_source.include?("enrichment=enrichment"),
               "publication layout does not pass resolved enrichment to the detail renderer")
+
+  meta_source = File.read(META_PATH, encoding: "UTF-8")
+  fail_unless(meta_source.include?("page.url | absolute_url"),
+              "meta include does not derive URLs from the current page")
+  fail_unless(meta_source.include?('<link rel="canonical" href="{{ url }}">'),
+              "meta include does not emit the page-specific canonical URL")
+  fail_unless(meta_source.include?('site.publications | where: "publication_id", page.publication_id'),
+              "meta include does not resolve publication enrichment by publication_id")
+  fail_unless(meta_source.include?("publication_localized.summary"),
+              "meta include does not use the localized publication summary")
+  fail_unless(meta_source.include?("publication_enrichment.graphical_abstract.path | absolute_url"),
+              "meta include does not use an absolute graphical-abstract social image")
 end
 
 def read_built_pages(destination, mode)
@@ -163,6 +188,11 @@ def read_built_pages(destination, mode)
     fail_unless(File.file?(detail),
                 "#{mode} #{label} URL /#{relative_path.delete_suffix('index.html')} is missing")
     pages[label] = File.read(detail, encoding: "UTF-8")
+  end
+  AUXILIARY_PAGE_PATHS.each do |label, relative_path|
+    path = File.join(destination, relative_path)
+    fail_unless(File.file?(path), "#{mode} auxiliary page /#{relative_path.delete_suffix('index.html')} is missing")
+    pages[label] = File.read(path, encoding: "UTF-8")
   end
   pages
 end
@@ -315,6 +345,7 @@ def verify_mode!(pages, mode, legacy, records, enrichment)
 
   verify_english_detail_output!(pages.fetch("English Detail"), mode, featured.first, enrichment)
   verify_chinese_detail_output!(pages.fetch("Chinese Detail"), mode, featured.first, enrichment)
+  verify_research_metadata!(pages.fetch("Research"), mode)
   pages.each do |label, html|
     fail_unless(!html.include?("scfluent-seq-cell-2025.pdf") &&
                 html !~ /<a\b[^>]*>\s*PDF\s*<\/a>/i,
@@ -357,19 +388,85 @@ def verify_hreflang!(html, mode, label)
     tag = alternates.find { |candidate| candidate.match?(/\bhreflang="#{Regexp.escape(language)}"/i) }
     fail_unless(tag, "#{mode} #{label} is missing hreflang=#{language}")
     href = CGI.unescapeHTML(tag[/\bhref="([^"]*)"/i, 1].to_s)
-    expected_path = language == "en" ? ENGLISH_DETAIL_URL : CHINESE_DETAIL_URL
-    fail_unless(href.end_with?(expected_path),
-                "#{mode} #{label} hreflang=#{language} points to #{href.inspect}, expected #{expected_path}")
+    expected_url = language == "en" ? ENGLISH_DETAIL_ABSOLUTE_URL : CHINESE_DETAIL_ABSOLUTE_URL
+    fail_unless(href == expected_url,
+                "#{mode} #{label} hreflang=#{language} points to #{href.inspect}, expected #{expected_url}")
   end
+end
+
+def meta_content(html, attribute, value)
+  tag = html.scan(/<meta\b[^>]*>/i).find do |candidate|
+    candidate.match?(/\b#{Regexp.escape(attribute)}="#{Regexp.escape(value)}"/i)
+  end
+  tag && CGI.unescapeHTML(tag[/\bcontent="([^"]*)"/i, 1].to_s)
+end
+
+def canonical_href(html)
+  tag = html.scan(/<link\b[^>]*>/i).find { |candidate| candidate.match?(/\brel="canonical"/i) }
+  tag && CGI.unescapeHTML(tag[/\bhref="([^"]*)"/i, 1].to_s)
+end
+
+def json_ld_document(html, mode, label)
+  source = html[/<script\s+type="application\/ld\+json">\s*(.*?)\s*<\/script>/mi, 1]
+  fail_unless(source, "#{mode} #{label} has no JSON-LD document")
+  JSON.parse(source)
+rescue JSON::ParserError => e
+  raise RendererVerificationError, "#{mode} #{label} JSON-LD is invalid: #{e.message}"
+end
+
+def verify_publication_metadata!(html, mode, label, expected_url, description, locale)
+  fail_unless(canonical_href(html) == expected_url,
+              "#{mode} #{label} canonical URL is not page-specific")
+  fail_unless(meta_content(html, "property", "og:url") == expected_url,
+              "#{mode} #{label} og:url is not page-specific")
+  fail_unless(meta_content(html, "property", "twitter:url") == expected_url,
+              "#{mode} #{label} twitter:url is not page-specific")
+  fail_unless(meta_content(html, "name", "description") == description,
+              "#{mode} #{label} meta description is not the approved localized summary")
+  fail_unless(meta_content(html, "property", "og:description") == description &&
+              meta_content(html, "property", "twitter:description") == description,
+              "#{mode} #{label} Open Graph/Twitter description is not localized")
+  fail_unless(meta_content(html, "property", "og:image") == GRAPHICAL_ABSTRACT_ABSOLUTE_URL &&
+              meta_content(html, "property", "twitter:image") == GRAPHICAL_ABSTRACT_ABSOLUTE_URL,
+              "#{mode} #{label} social image is not the absolute graphical-abstract URL")
+  fail_unless(meta_content(html, "property", "og:type") == "article",
+              "#{mode} #{label} og:type must be article")
+  fail_unless(meta_content(html, "property", "og:locale") == locale,
+              "#{mode} #{label} og:locale is incorrect")
+  fail_unless(html.include?(
+                "<title>Single-cell nascent transcription reveals sparse genome usage and plasticity | XShen Lab</title>"
+              ), "#{mode} #{label} browser title changed")
+  fail_unless(meta_content(html, "name", "author").nil? &&
+              meta_content(html, "property", "article:published_time").nil?,
+              "#{mode} #{label} invents publication author or date metadata")
+
+  json_ld = json_ld_document(html, mode, label)
+  fail_unless(json_ld["url"] == expected_url,
+              "#{mode} #{label} JSON-LD URL is not page-specific")
+  fail_unless(json_ld["description"] == description,
+              "#{mode} #{label} JSON-LD description is not localized")
+end
+
+def verify_research_metadata!(html, mode)
+  config = load_yaml(CONFIG_PATH)
+  expected_description = "#{config['subtitle']}. #{config['description']}"
+  fail_unless(canonical_href(html) == RESEARCH_ABSOLUTE_URL,
+              "#{mode} Research canonical URL is not page-specific")
+  fail_unless(meta_content(html, "property", "og:url") == RESEARCH_ABSOLUTE_URL &&
+              meta_content(html, "property", "twitter:url") == RESEARCH_ABSOLUTE_URL,
+              "#{mode} Research Open Graph/Twitter URL is not page-specific")
+  fail_unless(meta_content(html, "name", "description") == expected_description,
+              "#{mode} ordinary-page description behavior changed")
+  json_ld = json_ld_document(html, mode, "Research")
+  fail_unless(json_ld["url"] == RESEARCH_ABSOLUTE_URL,
+              "#{mode} Research JSON-LD URL is not page-specific")
 end
 
 def verify_english_detail_output!(html, mode, publication, enrichment)
   signature, payload = detail_signature(html)
+  localized = enrichment.dig("localized", "en")
   fail_unless(signature == APPROVED_PRE_REFACTOR_DETAIL_SHA256,
               "#{mode} scFLUENT-seq detail text/actions/image differ from the approved pre-refactor output")
-  fail_unless(html.include?(
-                "<title>Single-cell nascent transcription reveals sparse genome usage and plasticity | XShen Lab</title>"
-              ), "#{mode} scFLUENT-seq browser title changed")
   fail_unless(payload.fetch("links") == expected_detail_links(publication),
               "#{mode} English scFLUENT-seq detail DOI/GEO links differ from canonical data")
   expected_image = {
@@ -381,12 +478,17 @@ def verify_english_detail_output!(html, mode, publication, enrichment)
   fail_unless(!html.include?("scfluent-seq-cell-2025.pdf") &&
               html !~ /<a\b[^>]*>\s*PDF\s*<\/a>/i,
               "#{mode} scFLUENT-seq detail exposes an unapproved PDF action")
+  verify_publication_metadata!(
+    html, mode, "English detail", ENGLISH_DETAIL_ABSOLUTE_URL, localized["summary"], "en_US"
+  )
   verify_hreflang!(html, mode, "English detail")
 end
 
 def verify_chinese_detail_output!(html, mode, publication, enrichment)
   signature, payload = detail_signature(html)
   localized = enrichment.dig("localized", "zh-CN")
+  fail_unless(localized["metric"] == CHINESE_METRIC,
+              "#{mode} Chinese scFLUENT-seq metric is not the approved Chinese text")
   fail_unless(html.match?(/<html\s+lang="zh-CN"/i),
               "#{mode} Chinese scFLUENT-seq detail does not declare lang=zh-CN")
   fail_unless(html.include?('<meta property="og:locale" content="zh_CN">'),
@@ -395,8 +497,7 @@ def verify_chinese_detail_output!(html, mode, publication, enrichment)
     publication["title"],
     publication.dig("authors", "display"),
     localized["summary"],
-    "关键指标：",
-    localized["metric"],
+    "关键指标： #{CHINESE_METRIC}",
     "查看论文",
     "数据",
     *publication.dig("links", "data").map { |dataset| dataset.fetch("label") }
@@ -418,6 +519,9 @@ def verify_chinese_detail_output!(html, mode, publication, enrichment)
   fail_unless(!html.include?("scfluent-seq-cell-2025.pdf") &&
               html !~ /<a\b[^>]*>\s*PDF\s*<\/a>/i,
               "#{mode} Chinese scFLUENT-seq detail exposes an unapproved PDF action")
+  verify_publication_metadata!(
+    html, mode, "Chinese detail", CHINESE_DETAIL_ABSOLUTE_URL, localized["summary"], "zh_CN"
+  )
   verify_hreflang!(html, mode, "Chinese detail")
 end
 
@@ -441,6 +545,10 @@ def verify_mode_parity!(production_pages, production_lists, rollback_pages, roll
     fail_unless(production_pages.fetch(label) == rollback_pages.fetch(label),
                 "#{label} page differs between production and rollback modes")
   end
+  AUXILIARY_PAGE_PATHS.keys.each do |label|
+    fail_unless(production_pages.fetch(label) == rollback_pages.fetch(label),
+                "#{label} page differs between production and rollback modes")
+  end
 end
 
 def verify!
@@ -460,13 +568,15 @@ def verify!
   production_lists = verify_mode!(production_pages, "production mode", legacy, records, enrichment)
   puts "PASS publications renderer production mode: enabled=true; data-driven English=52/Chinese=52; " \
        "featured cards English=1/Chinese=1; bilingual scFLUENT-seq routes and localized detail output; " \
-       "approved order, visible text, checksum, and English pre-refactor detail parity."
+       "page-specific canonical/social/JSON-LD metadata; approved order, visible text, checksum, " \
+       "and English pre-refactor detail parity."
 
   rollback_pages = build_rollback_pages
   rollback_lists = verify_mode!(rollback_pages, "rollback mode", legacy, records, enrichment)
   puts "PASS publications renderer rollback mode: enabled=false override; legacy English=52/Chinese=52; " \
        "featured cards English=1/Chinese=1; bilingual scFLUENT-seq routes and localized detail output; " \
-       "approved order, visible text, checksum, URLs, and English pre-refactor detail parity."
+       "page-specific canonical/social/JSON-LD metadata; approved order, visible text, checksum, URLs, " \
+       "and English pre-refactor detail parity."
 
   verify_mode_parity!(production_pages, production_lists, rollback_pages, rollback_lists)
   puts "PASS publications renderer mode parity: citation-only lists; bilingual sequences identical; " \
