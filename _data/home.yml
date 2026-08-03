@@ -50,6 +50,9 @@ en:
   people_label: People
   people_title: Different disciplines, one moving system.
   people_intro: Our team brings together molecular cell biology, genomics, bioinformatics, biophysics, mathematics and computational biology.
+  news_label: Lab notes
+  news_title: Ideas, updates, and perspectives.
+  news_intro: Essays and updates that show the questions, values, and life behind the research.
   people_groups:
     - key: postdoc
       title: Postdoctoral Fellows
@@ -76,6 +79,7 @@ en:
     application_details: Application details
     contact_lab: Contact the lab
     principal_investigator: Principal Investigator
+    read_all_notes: View all notes
 
 zh-CN:
   eyebrow: XShen Lab · 清华大学
@@ -130,6 +134,9 @@ zh-CN:
   people_label: 团队成员
   people_title: 不同学科，共同研究一个动态系统。
   people_intro: 团队成员来自分子细胞生物学、基因组学、生物信息学、生物物理学、数学和计算生物学等领域。
+  news_label: 实验室随笔
+  news_title: 思考、动态与个人视角。
+  news_intro: 记录科研问题背后的价值、思考与实验室生活。
   people_groups:
     - key: postdoc
       title: 博士后
@@ -156,3 +163,4 @@ zh-CN:
     application_details: 申请方式
     contact_lab: 联系实验室
     principal_investigator: 课题组负责人
+    read_all_notes: 查看全部随笔

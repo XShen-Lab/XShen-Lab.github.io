@@ -52,6 +52,8 @@
 {% assign share = jpg | default: png | relative_url %}
 {% if page.publication_id and publication_enrichment.graphical_abstract.path %}
   {% assign share = publication_enrichment.graphical_abstract.path | absolute_url %}
+{% elsif page.image %}
+  {% assign share = page.image | absolute_url %}
 {% endif %}
 
 {% assign published = page.date | date_to_xmlschema %}
@@ -106,9 +108,10 @@
       "@type": "Article",
     {% elsif page.author %}
       "@type": "BlogPosting",
-      "author": { "@type": "Person", "name": "{{ title }}" },
+      "author": { "@type": "Person", "name": "{{ page.author | xml_escape }}" },
       "datePublished": "{{ published }}",
       "dateModified": "{{ updated }}",
+      "image": "{{ share }}",
     {% else %}
       "@type": "WebSite",
     {% endif %}

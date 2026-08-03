@@ -4,12 +4,14 @@
   {% assign research_url = "/zh/research/" %}
   {% assign publications_url = "/zh/publications/" %}
   {% assign people_url = "/zh/people/" %}
+  {% assign blog_url = "/zh/blog/" %}
   {% assign join_url = "/zh/join-us/" %}
   {% assign contact_url = "/zh/contact/" %}
 {% else %}
   {% assign research_url = "/research/" %}
   {% assign publications_url = "/publications/" %}
   {% assign people_url = "/team/" %}
+  {% assign blog_url = "/blog/" %}
   {% assign join_url = "/join-us/" %}
   {% assign contact_url = "/contact/" %}
 {% endif %}
@@ -115,6 +117,17 @@
     <div class="rna-section-head split" data-reveal><div><p class="rna-section-label">{{ home.people_label }}</p><h2 id="rna-people-title">{{ home.people_title }}</h2><p>{{ home.people_intro }}</p></div><a class="rna-text-link" href="{{ people_url | relative_url }}">{{ home.labels.meet_team }} <span aria-hidden="true">↗</span></a></div>
     {% include home/people.html home=home %}
   </section>
+
+  {% assign localized_posts = site.posts | where: "lang", page.lang %}
+  {% if localized_posts.size > 0 %}
+    <section class="rna-section rna-news" aria-labelledby="rna-news-title">
+      <div class="rna-section-head split" data-reveal>
+        <div><p class="rna-section-label">{{ home.news_label }}</p><h2 id="rna-news-title">{{ home.news_title }}</h2><p>{{ home.news_intro }}</p></div>
+        <a class="rna-text-link" href="{{ blog_url | relative_url }}">{{ home.labels.read_all_notes }} <span aria-hidden="true">↗</span></a>
+      </div>
+      {% include home/news.html %}
+    </section>
+  {% endif %}
 
   <section class="rna-join" aria-labelledby="rna-join-title">
     <div class="rna-join-intro" data-reveal><p class="rna-section-label">{{ home.join_label }}</p><h2 id="rna-join-title">{{ home.join_title }}</h2><p>{{ home.join_intro }}</p><div class="rna-inline-actions"><a class="rna-button primary" href="{{ join_url | relative_url }}">{{ home.labels.application_details }} <span aria-hidden="true">↗</span></a><a class="rna-button text" href="{{ contact_url | relative_url }}">{{ home.labels.contact_lab }}</a></div></div>

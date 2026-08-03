@@ -1,0 +1,24 @@
+{% assign post = include.post %}
+{% assign card_lang = include.lang | default: post.lang | default: "en" %}
+<article class="blog-card{% if include.variant %} blog-card-{{ include.variant }}{% endif %}" data-reveal>
+  {% if post.image %}
+    <a class="blog-card-image" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+      <img src="{{ post.image | relative_url }}" alt="" loading="lazy">
+      <span aria-hidden="true"></span>
+    </a>
+  {% endif %}
+  <div class="blog-card-copy">
+    <div class="blog-card-meta">
+      {% if post.pinned %}<span class="blog-pin"><span aria-hidden="true">◆</span> {% if card_lang == "zh-CN" %}置顶{% else %}Pinned{% endif %}</span>{% endif %}
+      {% if post.eyebrow %}<span>{{ post.eyebrow }}</span>{% endif %}
+    </div>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    {% if post.excerpt %}<p>{{ post.excerpt }}</p>{% endif %}
+    <div class="blog-card-footer">
+      <span>{{ post.author }}</span>
+      <span aria-hidden="true">·</span>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{% if post.display_date %}{{ post.display_date }}{% else %}{{ post.date | date: "%B %Y" }}{% endif %}</time>
+      <a href="{{ post.url | relative_url }}" aria-label="{% if card_lang == 'zh-CN' %}阅读《{{ post.title }}》{% else %}Read {{ post.title }}{% endif %}">{% if card_lang == "zh-CN" %}阅读全文{% else %}Read essay{% endif %} <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</article>
