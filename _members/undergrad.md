@@ -1,4 +1,6 @@
 ---
+published: false
+sitemap: false
 name: Name 中文名
 role: undergrad
 image: images/fallback.svg

@@ -78,7 +78,7 @@ Eukaryotic genomes are extensively transcribed, yet only a fraction of transcrip
 
 *How do probabilistic genome activities generate stable cell identity?*
 
-Stable identities need not arise from identical transcriptional programs executed by every cell. Using scFLUENT-seq, developed in our laboratory, we measure real-time genome usage at single-cell resolution. The publication-specific result shows that individual cells actively use a cell-type-dependent fraction of approximately 0.02%–3.1% of the genome at a given moment, while populations explore broader genomic landscapes. We model cellular identity as a stable probability distribution emerging from coordinated stochastic activity.
+Stable identities need not arise from identical transcriptional programs executed by every cell. Using scFLUENT-seq, developed in our laboratory, we obtain a short-pulse snapshot of nascent genome usage at single-cell resolution. The publication-specific result shows that individual cells actively use a cell-type-dependent fraction of approximately 0.02%–3.1% of the genome at a given moment, while populations explore broader genomic landscapes. We model cellular identity as a stable probability distribution emerging from coordinated stochastic activity.
 
 {% include section.html %}
 

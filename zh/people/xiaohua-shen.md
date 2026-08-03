@@ -1,5 +1,6 @@
 ---
 title: 沈晓骅
+rich_tooltips: true
 redirect_from:
   - /zh/people/xiaohua-shen/
 ---
