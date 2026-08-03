@@ -1,0 +1,11 @@
+{% assign news_lang = page.lang | default: "en" %}
+{% assign language_posts = site.posts | where: "lang", news_lang %}
+{% assign pinned_posts = language_posts | where: "pinned", true | sort: "date" | reverse %}
+{% assign regular_posts = language_posts | where_exp: "post", "post.pinned != true" | sort: "date" | reverse %}
+{% assign ordered_posts = pinned_posts | concat: regular_posts %}
+
+<div class="rna-news-grid">
+  {% for post in ordered_posts limit: 3 %}
+    {% include blog/card.html post=post lang=news_lang variant="home" %}
+  {% endfor %}
+</div>

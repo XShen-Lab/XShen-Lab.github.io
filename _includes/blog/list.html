@@ -1,0 +1,17 @@
+{% assign blog_lang = include.lang | default: page.lang | default: "en" %}
+{% assign language_posts = site.posts | where: "lang", blog_lang %}
+{% assign pinned_posts = language_posts | where: "pinned", true | sort: "date" | reverse %}
+{% assign regular_posts = language_posts | where_exp: "post", "post.pinned != true" | sort: "date" | reverse %}
+{% assign ordered_posts = pinned_posts | concat: regular_posts %}
+
+{% if ordered_posts.size > 0 %}
+  <div class="blog-list" aria-label="{% if blog_lang == 'zh-CN' %}文章列表{% else %}Posts{% endif %}">
+    {% for post in ordered_posts %}
+      {% include blog/card.html post=post lang=blog_lang %}
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="blog-empty">
+    <p>{% if blog_lang == "zh-CN" %}新的文章与实验室动态将在这里发布。{% else %}New essays and lab updates will be published here.{% endif %}</p>
+  </div>
+{% endif %}
