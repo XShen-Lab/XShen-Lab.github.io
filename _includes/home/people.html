@@ -9,7 +9,7 @@
 <div class="rna-people-layout" data-reveal>
   {% if pi %}
     <a class="rna-pi-card" href="{% if page.lang == 'zh-CN' %}{{ '/zh/people/xiaohua-shen/' | relative_url }}{% else %}{{ pi.url | relative_url }}{% endif %}">
-      <img src="{{ pi.image | relative_url }}" alt="{{ pi.name | escape }}" loading="lazy">
+      {% include responsive-image.html image=pi.image alt=pi.name sizes="(max-width: 820px) 100vw, 50vw" %}
       <span class="rna-pi-overlay">
         <span class="rna-person-role">{{ include.home.labels.principal_investigator }}</span>
         <strong>{{ pi.name }}</strong>
@@ -34,7 +34,7 @@
           <div class="rna-person-list">
             {% for member in members limit: 2 %}
               <a href="{{ member.url | relative_url }}" class="rna-person-row">
-                <img src="{{ member.image | relative_url }}" alt="" loading="lazy" {% include fallback.html %}>
+                {% include responsive-image.html image=member.image alt="" sizes="52px" %}
                 <span><strong>{{ member.name }}</strong><small>{{ member.description }}</small></span>
                 <span aria-hidden="true">↗</span>
               </a>

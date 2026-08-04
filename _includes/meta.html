@@ -45,11 +45,13 @@
 
 {% assign png = "images/icon.png" | file_exists %}
 {% assign jpg = "images/icon.jpg" | file_exists %}
-{% assign icon = png | default: jpg | relative_url %}
+{% assign icon_path = png | default: jpg %}
+{% assign icon = icon_path | absolute_url %}
 
 {% assign jpg = "images/share.jpg" | file_exists %}
 {% assign png = "images/share.png" | file_exists %}
-{% assign share = jpg | default: png | relative_url %}
+{% assign share_path = jpg | default: png %}
+{% assign share = share_path | absolute_url %}
 {% if page.publication_id and publication_enrichment.graphical_abstract.path %}
   {% assign share = publication_enrichment.graphical_abstract.path | absolute_url %}
 {% elsif page.image %}
@@ -76,7 +78,7 @@
 <meta name="description" content="{{ description }}">
 
 <meta property="og:title" content="{{ title }}">
-<meta property="og:site_title" content="{{ site.title | xml_escape }}">
+<meta property="og:site_name" content="{{ site.title | xml_escape }}">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ url }}">
 <meta property="og:image" content="{{ share }}">

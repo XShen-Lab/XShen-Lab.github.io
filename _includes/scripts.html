@@ -1,10 +1,40 @@
-<!-- third party scripts -->
-<script src="https://unpkg.com/@popperjs/core@2" defer></script>
-<script src="https://unpkg.com/tippy.js@6" defer></script>
-<script src="https://unpkg.com/mark.js@8" defer></script>
+<!-- Apply the saved color mode before first paint; the full controller is deferred. -->
+<script>
+  try {
+    document.documentElement.dataset.dark = window.localStorage.getItem("dark-mode") || "false";
+  } catch (error) {
+    document.documentElement.dataset.dark = "false";
+  }
+</script>
 
-<!-- include all js in scripts folder -->
-{% assign scripts = site.static_files | where_exp: "file", "file.path contains '/_scripts'" %}
-{% for script in scripts %}
-  <script src="{{ script.path | relative_url }}"></script>
-{% endfor %}
+<!-- Site-wide interaction controllers. -->
+<script src="{{ '/_scripts/dark-mode.js' | relative_url }}" defer></script>
+<script src="{{ '/_scripts/motion.js' | relative_url }}" defer></script>
+
+<!-- Interior-page heading links; never loaded on the RNA homepage. -->
+{% unless page.url == "/" or page.url == "/zh/" %}
+  <script src="{{ '/_scripts/anchors.js' | relative_url }}" defer></script>
+{% endunless %}
+
+<!-- Optional features load only on pages that declare a real dependency. -->
+{% assign use_rich_tooltips = page.rich_tooltips | default: false %}
+{% if page.layout == "member" or page.layout == "publication" %}{% assign use_rich_tooltips = true %}{% endif %}
+{% if use_rich_tooltips %}
+  <script src="https://unpkg.com/@popperjs/core@2" defer></script>
+  <script src="https://unpkg.com/tippy.js@6" defer></script>
+  <script src="{{ '/_scripts/tooltip.js' | relative_url }}" defer></script>
+{% endif %}
+
+{% if page.search_filter %}
+  <script src="https://unpkg.com/mark.js@8" defer></script>
+  <script src="{{ '/_scripts/search.js' | relative_url }}" defer></script>
+  <script src="{{ '/_scripts/fetch-tags.js' | relative_url }}" defer></script>
+{% endif %}
+
+{% if page.site_search %}
+  <script src="{{ '/_scripts/site-search.js' | relative_url }}" defer></script>
+{% endif %}
+
+{% if page.has_tables %}
+  <script src="{{ '/_scripts/table-wrap.js' | relative_url }}" defer></script>
+{% endif %}

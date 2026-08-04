@@ -39,11 +39,13 @@ defaults:
       type: "members"
     values:
       layout: member
+      rich_tooltips: true
   
   - scope:
       type: "publications"
     values:
       layout: default
+      rich_tooltips: true
 
       
   # markdown files in /_posts
@@ -82,10 +84,10 @@ theme: null
 # sass settings
 sass:
   sass_dir: _styles
+  style: compressed
 
 # force jekyll to include certain files/folders
 include:
-  - _styles
   - _scripts
 
 # force jekyll to exclude certain files/folders

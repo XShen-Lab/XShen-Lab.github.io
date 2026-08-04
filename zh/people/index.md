@@ -25,7 +25,7 @@ XShen Lab 汇聚了具有分子细胞生物学、基因组学、生物信息学�
   <div class="portrait-wrapper">
     <a href="{{ '/zh/people/xiaohua-shen/' | relative_url }}" class="portrait" aria-label="沈晓骅">
       {% include icon.html icon="fa-solid fa-microscope" %}
-      <img src="{{ pi.image | relative_url }}" class="portrait-image" alt="沈晓骅" loading="lazy" {% include fallback.html %}>
+      {% include responsive-image.html image=pi.image class="portrait-image" alt="沈晓骅" sizes="(max-width: 600px) calc(100vw - 40px), 320px" %}
       <span class="portrait-name">{{ pi.name }}</span>
       <span class="portrait-description">课题组负责人</span>
       <span class="portrait-affiliation">清华大学基础医学院</span>

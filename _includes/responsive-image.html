@@ -1,0 +1,24 @@
+{% assign image_path = include.image | default: "" %}
+{% assign webp_480 = image_path | replace: ".jpg", "-480.webp" %}
+{% assign webp_960 = image_path | replace: ".jpg", "-960.webp" %}
+{% assign has_webp_480 = false %}
+{% assign has_webp_960 = false %}
+{% if webp_480 != image_path %}{% assign has_webp_480 = webp_480 | file_exists %}{% endif %}
+{% if webp_960 != image_path %}{% assign has_webp_960 = webp_960 | file_exists %}{% endif %}
+<picture class="responsive-image{% if include.picture_class %} {{ include.picture_class }}{% endif %}">
+  {% if has_webp_480 or has_webp_960 %}
+    <source
+      type="image/webp"
+      srcset="{% if has_webp_480 %}{{ webp_480 | relative_url }} 480w{% endif %}{% if has_webp_480 and has_webp_960 %}, {% endif %}{% if has_webp_960 %}{{ webp_960 | relative_url }} 960w{% endif %}"
+      sizes="{{ include.sizes | default: '(max-width: 600px) 100vw, 320px' }}"
+    >
+  {% endif %}
+  <img
+    src="{{ image_path | relative_url | uri_escape }}"
+    {% if include.class %}class="{{ include.class }}"{% endif %}
+    alt="{{ include.alt | default: '' | escape }}"
+    loading="{{ include.loading | default: 'lazy' }}"
+    decoding="async"
+    {% include fallback.html %}
+  >
+</picture>

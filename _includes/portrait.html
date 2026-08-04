@@ -20,13 +20,7 @@
       {% include icon.html icon=type.icon %}
     {% endif %}
 
-    <img
-      src="{{ member.image | relative_url | uri_escape }}"
-      class="portrait-image"
-      alt="member portrait"
-      loading="lazy"
-      {% include fallback.html %}
-    >
+    {% include responsive-image.html image=member.image class="portrait-image" alt=member.name sizes="(max-width: 600px) calc(100vw - 40px), 320px" %}
 
     {% if member.name %}
       <span class="portrait-name">

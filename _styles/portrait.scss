@@ -1,8 +1,10 @@
----
----
-
 .portrait-wrapper {
   display: contents;
+}
+
+.portrait .responsive-image {
+  display: block;
+  width: 100%;
 }
 
 .portrait {
