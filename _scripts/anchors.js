@@ -4,9 +4,12 @@
 
 {
   const onLoad = () => {
+    if (document.querySelector(".rna-home")) return;
+
     // for each heading
     const headings = document.querySelectorAll(
-      "h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]"
+      ".page-inner main h1[id], .page-inner main h2[id], .page-inner main h3[id], " +
+        ".page-inner main h4[id], .page-inner main h5[id], .page-inner main h6[id]"
     );
     for (const heading of headings) {
       // create anchor link
@@ -38,7 +41,7 @@
   };
 
   // after page loads
-  window.addEventListener("load", onLoad);
+  window.addEventListener("DOMContentLoaded", onLoad);
   window.addEventListener("load", scrollToTarget);
   window.addEventListener("tagsfetched", scrollToTarget);
 
