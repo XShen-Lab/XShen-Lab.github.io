@@ -1,8 +1,8 @@
 {% assign post = include.post %}
 {% assign card_lang = include.lang | default: post.lang | default: "en" %}
-<article class="blog-card{% if include.variant %} blog-card-{{ include.variant }}{% endif %}" data-reveal>
+<article class="blog-card{% if include.variant %} blog-card-{{ include.variant }}{% endif %}" data-reveal{% if include.index %} role="group" aria-roledescription="slide" aria-label="{% if card_lang == 'zh-CN' %}第 {{ include.index }} 篇，共 {{ include.total }} 篇{% else %}Article {{ include.index }} of {{ include.total }}{% endif %}"{% endif %}>
   {% if post.image %}
-    <a class="blog-card-image" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    <a class="blog-card-image{% if post.image_fit == 'contain' %} is-contain{% endif %}" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
       <img src="{{ post.image | relative_url }}" alt="" loading="lazy">
       <span aria-hidden="true"></span>
     </a>
@@ -12,7 +12,7 @@
       {% if post.pinned %}<span class="blog-pin"><span aria-hidden="true">◆</span> {% if card_lang == "zh-CN" %}置顶{% else %}Pinned{% endif %}</span>{% endif %}
       {% if post.eyebrow %}<span>{{ post.eyebrow }}</span>{% endif %}
     </div>
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <h2{% if post.title_layout == 'wide' %} class="blog-card-title-wide"{% endif %}><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     {% if post.excerpt %}<p>{{ post.excerpt }}</p>{% endif %}
     <div class="blog-card-footer">
       <span>{{ post.author }}</span>

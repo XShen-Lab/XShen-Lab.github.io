@@ -2,6 +2,7 @@
 title: 博客
 description: XShen Lab 的科学思考、实验室动态与个人随笔。
 permalink: /zh/blog/
+blog_flow: true
 ---
 
 <div class="blog-index">

@@ -5,10 +5,20 @@
 {% assign ordered_posts = pinned_posts | concat: regular_posts %}
 
 {% if ordered_posts.size > 0 %}
-  <div class="blog-list" aria-label="{% if blog_lang == 'zh-CN' %}文章列表{% else %}Posts{% endif %}">
-    {% for post in ordered_posts %}
-      {% include blog/card.html post=post lang=blog_lang %}
-    {% endfor %}
+  <div class="blog-flow" data-blog-flow>
+    <div class="blog-list" data-blog-flow-track tabindex="0" aria-label="{% if blog_lang == 'zh-CN' %}置顶文章轮播{% else %}Pinned article carousel{% endif %}">
+      {% for post in ordered_posts %}
+        {% include blog/card.html post=post lang=blog_lang index=forloop.index total=ordered_posts.size %}
+      {% endfor %}
+    </div>
+    <div class="blog-flow-controls" aria-label="{% if blog_lang == 'zh-CN' %}文章轮播控制{% else %}Article carousel controls{% endif %}">
+      <div class="blog-flow-rail" aria-hidden="true"><span data-blog-flow-progress></span></div>
+      <span class="blog-flow-status" data-blog-flow-status aria-live="polite">01 / {{ ordered_posts.size | prepend: '0' | slice: -2, 2 }}</span>
+      <div class="blog-flow-buttons">
+        <button type="button" data-blog-flow-previous aria-label="{% if blog_lang == 'zh-CN' %}上一篇{% else %}Previous article{% endif %}"><span aria-hidden="true">←</span></button>
+        <button type="button" data-blog-flow-next aria-label="{% if blog_lang == 'zh-CN' %}下一篇{% else %}Next article{% endif %}"><span aria-hidden="true">→</span></button>
+      </div>
+    </div>
   </div>
 {% else %}
   <div class="blog-empty">

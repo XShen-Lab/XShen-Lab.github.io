@@ -9,8 +9,12 @@ display_date: 2026 年 8 月
 lang: zh-CN
 permalink: /zh/blog/simple-rules-of-life-rotation/
 translation_url: /blog/simple-rules-of-life-rotation/
+image: /images/blog/simple-rules-of-life-rotation/rotation-invitation.jpg
+image_alt: "红色背景上的 Dr. Seuss 插画与英文引语“Everything stinks until it’s finished.”"
+image_fit: contain
 eyebrow: 轮转邀请
 pinned: true
+title_layout: wide
 tags:
   - 实验室轮转
   - 交叉学科

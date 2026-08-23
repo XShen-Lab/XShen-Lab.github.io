@@ -9,8 +9,12 @@ display_date: August 2026
 lang: en
 permalink: /blog/simple-rules-of-life-rotation/
 translation_url: /zh/blog/simple-rules-of-life-rotation/
+image: /images/blog/simple-rules-of-life-rotation/rotation-invitation.jpg
+image_alt: "A Dr. Seuss character examines a plate beside the quote: Everything stinks until it’s finished."
+image_fit: contain
 eyebrow: Rotation invitation
 pinned: true
+title_layout: wide
 tags:
   - Lab rotation
   - Interdisciplinary science
