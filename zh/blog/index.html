@@ -151,6 +151,10 @@
 <script src="/_scripts/dark-mode.js" defer></script>
 <script src="/_scripts/motion.js" defer></script>
 
+
+  <script src="/_scripts/blog-flow.js" defer></script>
+
+
 <!-- Interior-page heading links; never loaded on the RNA homepage. -->
 
   <script src="/_scripts/anchors.js" defer></script>
@@ -340,18 +344,24 @@
 
 
 
-  <div class="blog-list" aria-label="文章列表">
-    
+  <div class="blog-flow" data-blog-flow="">
+    <div class="blog-list" data-blog-flow-track="" tabindex="0" aria-label="置顶文章轮播">
       
+        
 
-<article class="blog-card" data-reveal="">
+<article class="blog-card" data-reveal="" role="group" aria-roledescription="slide" aria-label="第 1 篇，共 2 篇">
+  
+    <a class="blog-card-image is-contain" href="/zh/blog/simple-rules-of-life-rotation/" tabindex="-1" aria-hidden="true">
+      <img src="/images/blog/simple-rules-of-life-rotation/rotation-invitation.jpg" alt="" loading="lazy">
+      <span aria-hidden="true"></span>
+    </a>
   
   <div class="blog-card-copy">
     <div class="blog-card-meta">
       <span class="blog-pin"><span aria-hidden="true">◆</span> 置顶</span>
       <span>轮转邀请</span>
     </div>
-    <h2><a href="/zh/blog/simple-rules-of-life-rotation/">寻找生命的简单规则：轮转邀请</a></h2>
+    <h2 class="blog-card-title-wide"><a href="/zh/blog/simple-rules-of-life-rotation/">寻找生命的简单规则：轮转邀请</a></h2>
     <p>生命像一头看不见全貌的大象。我们常常只能触摸一个分子、一条通路或一种表型，而我更想知道：这些局部如何彼此连接？</p>
     <div class="blog-card-footer">
       <span>Xiaohua</span>
@@ -362,10 +372,10 @@
   </div>
 </article>
 
-    
       
+        
 
-<article class="blog-card" data-reveal="">
+<article class="blog-card" data-reveal="" role="group" aria-roledescription="slide" aria-label="第 2 篇，共 2 篇">
   
     <a class="blog-card-image" href="/zh/blog/who-i-am/" tabindex="-1" aria-hidden="true">
       <img src="/images/blog/who-i-am/elephant-of-life.jpg" alt="" loading="lazy">
@@ -388,7 +398,16 @@
   </div>
 </article>
 
-    
+      
+    </div>
+    <div class="blog-flow-controls" aria-label="文章轮播控制">
+      <div class="blog-flow-rail" aria-hidden="true"><span data-blog-flow-progress=""></span></div>
+      <span class="blog-flow-status" data-blog-flow-status="" aria-live="polite">01 / 02</span>
+      <div class="blog-flow-buttons">
+        <button type="button" data-blog-flow-previous="" aria-label="上一篇"><span aria-hidden="true">←</span></button>
+        <button type="button" data-blog-flow-next="" aria-label="下一篇"><span aria-hidden="true">→</span></button>
+      </div>
+    </div>
   </div>
 
 

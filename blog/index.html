@@ -151,6 +151,10 @@
 <script src="/_scripts/dark-mode.js" defer></script>
 <script src="/_scripts/motion.js" defer></script>
 
+
+  <script src="/_scripts/blog-flow.js" defer></script>
+
+
 <!-- Interior-page heading links; never loaded on the RNA homepage. -->
 
   <script src="/_scripts/anchors.js" defer></script>
@@ -341,18 +345,24 @@
 
 
 
-  <div class="blog-list" aria-label="Posts">
-    
+  <div class="blog-flow" data-blog-flow="">
+    <div class="blog-list" data-blog-flow-track="" tabindex="0" aria-label="Pinned article carousel">
       
+        
 
-<article class="blog-card" data-reveal="">
+<article class="blog-card" data-reveal="" role="group" aria-roledescription="slide" aria-label="Article 1 of 2">
+  
+    <a class="blog-card-image is-contain" href="/blog/simple-rules-of-life-rotation/" tabindex="-1" aria-hidden="true">
+      <img src="/images/blog/simple-rules-of-life-rotation/rotation-invitation.jpg" alt="" loading="lazy">
+      <span aria-hidden="true"></span>
+    </a>
   
   <div class="blog-card-copy">
     <div class="blog-card-meta">
       <span class="blog-pin"><span aria-hidden="true">◆</span> Pinned</span>
       <span>Rotation invitation</span>
     </div>
-    <h2><a href="/blog/simple-rules-of-life-rotation/">In Search of Life’s Simple Rules: An Invitation to Rotate</a></h2>
+    <h2 class="blog-card-title-wide"><a href="/blog/simple-rules-of-life-rotation/">In Search of Life’s Simple Rules: An Invitation to Rotate</a></h2>
     <p>Life is like an elephant whose whole form we cannot see. We can often touch only a single molecule, pathway, or phenotype—but how do these parts connect?</p>
     <div class="blog-card-footer">
       <span>Xiaohua</span>
@@ -363,10 +373,10 @@
   </div>
 </article>
 
-    
       
+        
 
-<article class="blog-card" data-reveal="">
+<article class="blog-card" data-reveal="" role="group" aria-roledescription="slide" aria-label="Article 2 of 2">
   
     <a class="blog-card-image" href="/blog/who-i-am/" tabindex="-1" aria-hidden="true">
       <img src="/images/blog/who-i-am/elephant-of-life.jpg" alt="" loading="lazy">
@@ -389,7 +399,16 @@
   </div>
 </article>
 
-    
+      
+    </div>
+    <div class="blog-flow-controls" aria-label="Article carousel controls">
+      <div class="blog-flow-rail" aria-hidden="true"><span data-blog-flow-progress=""></span></div>
+      <span class="blog-flow-status" data-blog-flow-status="" aria-live="polite">01 / 02</span>
+      <div class="blog-flow-buttons">
+        <button type="button" data-blog-flow-previous="" aria-label="Previous article"><span aria-hidden="true">←</span></button>
+        <button type="button" data-blog-flow-next="" aria-label="Next article"><span aria-hidden="true">→</span></button>
+      </div>
+    </div>
   </div>
 
 
