@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://xshen-lab.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://xshen-lab.github.io/" rel="alternate" type="text/html" /><updated>2026-08-23T19:11:50+00:00</updated><id>https://xshen-lab.github.io/feed.xml</id><title type="html">XShen Lab</title><subtitle>The XShen Lab at Tsinghua University studies how stochastic genome activity is organized, processed, selected, and stabilized into biological information and cell fate.</subtitle><entry xml:lang="zh-CN"><title type="html">我是谁</title><link href="https://xshen-lab.github.io/zh/blog/who-i-am/" rel="alternate" type="text/html" title="我是谁" /><published>2026-08-02T16:00:00+00:00</published><updated>2026-08-23T19:11:19+00:00</updated><id>https://xshen-lab.github.io/zh/blog/who-i-am-zh</id><content type="html" xml:base="https://xshen-lab.github.io/zh/blog/who-i-am/"><![CDATA[<p>对我而言，科学是一场孩子的严肃游戏。对大自然的敬畏与好奇，让我保有天真，甚至敢于胆大妄为；也让我谦虚谨慎，让每一个想法都接受事实、逻辑与实验的检验。我走在认知的悬崖边缘，尽可能靠近未知，却不坠入臆想。我追寻心中的微光，义无反顾，也不怕出丑——因为真正的探索，本来就发生在没有地图、也没有把握的地方。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://xshen-lab.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://xshen-lab.github.io/" rel="alternate" type="text/html" /><updated>2026-08-23T19:23:37+00:00</updated><id>https://xshen-lab.github.io/feed.xml</id><title type="html">XShen Lab</title><subtitle>The XShen Lab at Tsinghua University studies how stochastic genome activity is organized, processed, selected, and stabilized into biological information and cell fate.</subtitle><entry xml:lang="zh-CN"><title type="html">寻找生命的简单规则：轮转邀请</title><link href="https://xshen-lab.github.io/zh/blog/simple-rules-of-life-rotation/" rel="alternate" type="text/html" title="寻找生命的简单规则：轮转邀请" /><published>2026-08-23T16:00:00+00:00</published><updated>2026-08-23T19:23:16+00:00</updated><id>https://xshen-lab.github.io/zh/blog/simple-rules-of-life-rotation-zh</id><content type="html" xml:base="https://xshen-lab.github.io/zh/blog/simple-rules-of-life-rotation/"><![CDATA[<p>对我而言，科学是一场孩子的严肃游戏。</p>
+
+<p>生命像一头看不见全貌的大象。我们常常只能触摸一个分子、一条通路或一种表型，而我更想知道：这些局部如何彼此连接？生命如何将随机、低效甚至混乱的分子活动，转化为稳定的生物学信息与细胞命运？</p>
+
+<p>这正是我们实验室试图回答的问题。</p>
+
+<p>我们以“生命信息流”为框架，研究基因组序列、染色质结构、RNA网络与转录动力学如何共同组织、筛选并稳定生物学信息。我们关心重复序列如何组织三维基因组，新生RNA如何构建核内RNP网络，转录监控如何从广泛而易失败的基因组活动中筛选出生产性转录，以及随机而稀疏的单细胞基因组使用如何涌现为稳定的细胞状态。</p>
+
+<p>我们相信，生命的复杂并不意味着其基本规律必然复杂。我们希望超越不断增加的分子与箭头，从细节中看见全局，从现象中提炼原理：让想象引领实验与分析，让实验检验想象，让理论穿透现象，让计算连接不同尺度。</p>
+
+<p>如果你来自物理、数学、计算机、工程、化学或其他理工科背景，并对生命真正好奇，我尤其欢迎你来实验室轮转。你不必已经熟悉分子生物学，也不必一开始就会做实验。更重要的是，你愿意走进陌生领域，并把自己的定量思维、建模能力或工程直觉带入生命科学。</p>
+
+<p>这里的课题可能始于一张显微图像、一个不合常理的数据分布，或一个看似天真的问题。你可能需要学习单细胞组学和定量成像，也可能需要建立物理模型、写代码、使用AI，甚至亲手重构一个生命过程。</p>
+
+<p>我会深度参与你的训练，提出问题、挑战假设，推动你走出熟悉的边界。在科研训练的早期，你需要愿意信任并接受我的引领。这并不意味着服从，而是在持续的讨论、质疑与训练中，逐渐形成独立的问题意识、科学判断力与创造力。</p>
+
+<p>我欣赏有野心而不自负、有想象力又尊重证据、敢于冒险也愿意练好基本功的学生。你可以暂时不懂，但要愿意学习；可以提出不成熟的问题，但不要害怕出丑。</p>
+
+<p>轮转也是一次彼此了解。如果你只想寻找一个安全、熟悉、按部就班的课题，这里也许并不适合你。但如果你愿意追随心中的微光，进入生命科学，接受训练，并最终走出自己的道路——欢迎来找我。</p>
+
+<p>让我们不要停留在原地，反复触摸大象的同一个局部。让我们走得更远，摸得更广。</p>
+
+<p>欢迎加入这场孩子的严肃游戏。<br />
+欢迎成为一个游无穷者。</p>]]></content><author><name>Xiaohua</name></author><category term="实验室轮转" /><category term="交叉学科" /><summary type="html"><![CDATA[对我而言，科学是一场孩子的严肃游戏。]]></summary></entry><entry xml:lang="en"><title type="html">In Search of Life’s Simple Rules: An Invitation to Rotate</title><link href="https://xshen-lab.github.io/blog/simple-rules-of-life-rotation/" rel="alternate" type="text/html" title="In Search of Life’s Simple Rules: An Invitation to Rotate" /><published>2026-08-23T16:00:00+00:00</published><updated>2026-08-23T19:23:16+00:00</updated><id>https://xshen-lab.github.io/blog/simple-rules-of-life-rotation</id><content type="html" xml:base="https://xshen-lab.github.io/blog/simple-rules-of-life-rotation/"><![CDATA[<p>To me, science is a serious game played by children.</p>
+
+<p>Life is like an elephant whose whole form we cannot see. We can often touch only a single molecule, a pathway, or a phenotype, but I want to know: How are these local pieces connected? How does life transform random, inefficient, and even chaotic molecular activity into stable biological information and cell fate?</p>
+
+<p>This is precisely the question our lab is trying to answer.</p>
+
+<p>Using “Biological Information Flow” as our framework, we study how genome sequence, chromatin structure, RNA networks, and transcriptional dynamics work together to organize, select, and stabilize biological information. We ask how repetitive sequences organize the three-dimensional genome, how nascent RNA builds nuclear RNP networks, how transcriptional surveillance selects productive transcription from pervasive and failure-prone genome activity, and how stochastic and sparse genome usage in single cells emerges as stable cell states.</p>
+
+<p>We believe that the complexity of life does not necessarily mean that its fundamental rules must also be complex. We hope to move beyond ever-growing collections of molecules and arrows, to see the whole through the details and distill principles from phenomena: let imagination guide experiments and analysis, let experiments test imagination, let theory penetrate phenomena, and let computation connect different scales.</p>
+
+<p>If you come from physics, mathematics, computer science, engineering, chemistry, or another science or engineering background—and are genuinely curious about life—I especially welcome you to rotate in the lab. You do not need to be familiar with molecular biology or already know how to conduct experiments. What matters more is that you are willing to enter an unfamiliar field and bring your quantitative thinking, modeling skills, or engineering intuition into the life sciences.</p>
+
+<p>A project here might begin with a microscopy image, an unexpected data distribution, or a seemingly naïve question. You might need to learn single-cell omics and quantitative imaging; you might also need to build physical models, write code, use AI, or even reconstitute a life process with your own hands.</p>
+
+<p>I will be deeply involved in your training—posing questions, challenging assumptions, and pushing you beyond familiar boundaries. Early in your scientific training, you need to be willing to trust and accept my guidance. This does not mean obedience. It means gradually developing independent questions, scientific judgment, and creativity through sustained discussion, questioning, and training.</p>
+
+<p>I value students who are ambitious without being arrogant, imaginative while respecting evidence, willing to take risks while also mastering the fundamentals. It is fine not to understand something yet, but you must be willing to learn. It is fine to ask an immature question, but do not be afraid of looking foolish.</p>
+
+<p>A rotation is also a chance for us to get to know one another. If you are only looking for a safe, familiar, step-by-step project, this lab may not be the right fit. But if you are willing to follow the faint light within you, enter the life sciences, embrace training, and ultimately make your own path—come talk to me.</p>
+
+<p>Let us not remain in one place, repeatedly touching the same part of the elephant. Let us go farther and reach more widely.</p>
+
+<p>Welcome to this serious game played by children.<br />
+Welcome to becoming a wanderer of the infinite.</p>]]></content><author><name>Xiaohua</name></author><category term="Lab rotation" /><category term="Interdisciplinary science" /><summary type="html"><![CDATA[To me, science is a serious game played by children.]]></summary></entry><entry xml:lang="zh-CN"><title type="html">我是谁</title><link href="https://xshen-lab.github.io/zh/blog/who-i-am/" rel="alternate" type="text/html" title="我是谁" /><published>2026-08-02T16:00:00+00:00</published><updated>2026-08-23T19:23:16+00:00</updated><id>https://xshen-lab.github.io/zh/blog/who-i-am-zh</id><content type="html" xml:base="https://xshen-lab.github.io/zh/blog/who-i-am/"><![CDATA[<p>对我而言，科学是一场孩子的严肃游戏。对大自然的敬畏与好奇，让我保有天真，甚至敢于胆大妄为；也让我谦虚谨慎，让每一个想法都接受事实、逻辑与实验的检验。我走在认知的悬崖边缘，尽可能靠近未知，却不坠入臆想。我追寻心中的微光，义无反顾，也不怕出丑——因为真正的探索，本来就发生在没有地图、也没有把握的地方。</p>
 
 <p>我相信，生命的复杂并不意味着其基本规律必然复杂。纷繁的分子现象背后，或许存在少数简单而普适的规则；随机、低效甚至看似混乱的基因组活动，也能够在物理约束与持续筛选下，涌现为稳定的生物学信息和细胞命运。</p>
 
@@ -14,7 +60,7 @@
 
 <p>我不会因为一种学说被普遍接受，或得到权威的认可，就接受它。我不迎合共识，也不为反叛而反叛；我愿意怀疑一切，也随时准备被事实纠正。做科学不是为了证明自己正确，而是为了更接近自然界的真相。</p>
 
-<p>我想成为一个游无穷者：往返于生物的复杂与物理的简洁之间，从微观细节走向全局规律，从观察生命走向解释与预测，并最终尝试构建生命。</p>]]></content><author><name>Xiaohua</name></author><category term="科学思考" /><category term="科研人生" /><summary type="html"><![CDATA[对我而言，科学是一场孩子的严肃游戏。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://xshen-lab.github.io/images/blog/who-i-am/elephant-of-life.jpg" /><media:content medium="image" url="https://xshen-lab.github.io/images/blog/who-i-am/elephant-of-life.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="en"><title type="html">Who I Am</title><link href="https://xshen-lab.github.io/blog/who-i-am/" rel="alternate" type="text/html" title="Who I Am" /><published>2026-08-02T16:00:00+00:00</published><updated>2026-08-23T19:11:19+00:00</updated><id>https://xshen-lab.github.io/blog/who-i-am</id><content type="html" xml:base="https://xshen-lab.github.io/blog/who-i-am/"><![CDATA[<p>To me, science is a serious game played by children. Awe and curiosity toward nature allow me to remain naïve—even audacious—yet also humble and cautious, submitting every idea to the tests of fact, logic, and experiment. I walk along the edge of a cognitive cliff, venturing as close to the unknown as I can without falling into fantasy. I follow the faint light within me, without hesitation and without fear of looking foolish—because genuine exploration begins where there is no map and no certainty.</p>
+<p>我想成为一个游无穷者：往返于生物的复杂与物理的简洁之间，从微观细节走向全局规律，从观察生命走向解释与预测，并最终尝试构建生命。</p>]]></content><author><name>Xiaohua</name></author><category term="科学思考" /><category term="科研人生" /><summary type="html"><![CDATA[对我而言，科学是一场孩子的严肃游戏。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://xshen-lab.github.io/images/blog/who-i-am/elephant-of-life.jpg" /><media:content medium="image" url="https://xshen-lab.github.io/images/blog/who-i-am/elephant-of-life.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="en"><title type="html">Who I Am</title><link href="https://xshen-lab.github.io/blog/who-i-am/" rel="alternate" type="text/html" title="Who I Am" /><published>2026-08-02T16:00:00+00:00</published><updated>2026-08-23T19:23:16+00:00</updated><id>https://xshen-lab.github.io/blog/who-i-am</id><content type="html" xml:base="https://xshen-lab.github.io/blog/who-i-am/"><![CDATA[<p>To me, science is a serious game played by children. Awe and curiosity toward nature allow me to remain naïve—even audacious—yet also humble and cautious, submitting every idea to the tests of fact, logic, and experiment. I walk along the edge of a cognitive cliff, venturing as close to the unknown as I can without falling into fantasy. I follow the faint light within me, without hesitation and without fear of looking foolish—because genuine exploration begins where there is no map and no certainty.</p>
 
 <p>I believe that the complexity of life does not necessarily imply that its fundamental rules are equally complex. Behind the bewildering diversity of molecular phenomena, there may lie a small number of simple and universal principles. Random, inefficient, and seemingly chaotic genomic activities may, under physical constraints and continuous selection, give rise to stable biological information and cell fate.</p>
 
