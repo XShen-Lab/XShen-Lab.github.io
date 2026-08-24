@@ -139,6 +139,12 @@
 
 
 
+
+  <script src="/_scripts/member-gallery.js" defer></script>
+
+
+
+
 <!-- Interior-page heading links; never loaded on the RNA homepage. -->
 
   <script src="/_scripts/anchors.js" defer></script>
@@ -301,19 +307,19 @@
   
 
   <section class="background" data-size="page">
-    <p class="right"><small><a href="/zh/people/">中文</a></small></p>
+    <div class="people-page-intro" data-reveal="">
+  <p class="people-kicker">People / XShen Lab</p>
+  <h1>People</h1>
+  <p class="people-deck">The XShen Lab brings together researchers with backgrounds in molecular cell biology, genomics, bioinformatics, biophysics, mathematics, and computational biology.</p>
 
-<h1 id="people">People</h1>
-
-<p>The XShen Lab brings together researchers with backgrounds in molecular cell biology, genomics, bioinformatics, biophysics, mathematics, and computational biology.</p>
-
-<div class="member-nav">
-  <a href="#principal-investigator">Principal Investigator</a>
-  <a href="#administrative-assistant">Administrative Assistant</a>
-  <a href="#post-docs">Post Docs</a>
-  <a href="#graduate-students">Graduate Students</a>
-  <a href="#undergraduate-students">Undergraduate Students</a>
-  <a href="#alumni">Alumni</a>
+  <nav class="member-nav" aria-label="People sections">
+    <a href="#principal-investigator">Principal Investigator</a>
+    <a href="#administrative-assistant">Administrative Assistant</a>
+    <a href="#post-docs">Post Docs</a>
+    <a href="#graduate-students">Graduate Students</a>
+    <a href="#undergraduate-students">Undergraduate Students</a>
+    <a href="#alumni">Alumni</a>
+  </nav>
 </div>
   </section>
 
@@ -328,32 +334,21 @@
   <size></size>
 -->
 
-<h2 id="principal-investigator">Principal Investigator</h2>
-
-<div class="member-section member-grid member-grid-pi">
-
-
-
-
-
-
+<div class="people-section people-section--pi">
+  <h2 id="principal-investigator">Principal Investigator</h2>
   
 
-  
-
-  
-    
-
-    
 
 
 
-<div class="portrait-wrapper">
-  <a href="/members/xiaohua-shen.html" class="portrait" data-style="" aria-label="Xiaohua Shen 沈晓骅">
-    
-      <i class="icon fa-solid fa-microscope"></i>
-    
 
+
+
+
+
+
+<article class="people-pi-card" data-reveal="">
+  <a class="people-pi-card__visual" href="/members/xiaohua-shen.html" aria-labelledby="people-pi-name">
     
 
 
@@ -363,32 +358,58 @@
 
 <picture class="responsive-image">
   
-  <img src="/images/members/xiaohua-shen.jpg" class="portrait-image" alt="Xiaohua Shen 沈晓骅" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+  <img src="/images/members/xiaohua-shen.jpg" class="people-pi-card__photo" alt="Xiaohua Shen 沈晓骅" loading="eager" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 </picture>
 
-
-    
-      <span class="portrait-name">
-        Xiaohua Shen 沈晓骅
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        Principal Investigator
-      </span>
-    
-
-    
-      <span class="portrait-affiliation">
-        School of Basic Medicine, Tsinghua University
-      </span>
-    
+    <span class="people-pi-card__identity">
+      <span class="people-pi-card__role">Principal Investigator</span>
+      <strong id="people-pi-name">Xiaohua Shen 沈晓骅</strong>
+      <span>School of Basic Medicine, Tsinghua University</span>
+    </span>
   </a>
-</div>
 
-  
+  <div class="people-pi-card__details">
+    <section class="people-pi-card__block">
+      <p class="people-card-kicker">01</p>
+      <h3>Education</h3>
+      
+        <ul>
+          <li>
+<strong>2003</strong> Ph.D., Biological Chemistry, University of Michigan, Ann Arbor, USA (with Randal Kaufman)</li>
+          <li>
+<strong>1996</strong> B.S., Biochemistry, Nankai University, Tianjin, China</li>
+        </ul>
+      
+    </section>
 
+    <section class="people-pi-card__block people-pi-card__block--appointments">
+      <p class="people-card-kicker">02</p>
+      <h3>Appointments</h3>
+      
+        <ul>
+          <li>
+<strong>2025–present</strong> Investigator, State Key Laboratory of Membrane Biology &amp; Beijing Frontier Research Center for Biological Structure</li>
+          <li>
+<strong>2020–present</strong> Professor, Tsinghua University</li>
+          <li>
+<strong>2010–present</strong> Investigator, Tsinghua-Peking Center for Life Sciences</li>
+          <li>
+<strong>2016–2020</strong> Associate Professor (Tenured), Tsinghua University</li>
+          <li>
+<strong>2010–2016</strong> Associate Professor (Tenure-Track), Tsinghua University</li>
+          <li>
+<strong>2009–2010</strong> Instructor, Harvard Medical School</li>
+          <li>
+<strong>2004–2008</strong> Postdoctoral Fellow, Stuart H. Orkin Laboratory, Dana-Farber Cancer Institute &amp; Harvard Medical School</li>
+        </ul>
+      
+    </section>
+
+    <a class="people-profile-link" href="/members/xiaohua-shen.html">
+      View full profile <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</article>
 
 </div>
   </section>
@@ -404,14 +425,11 @@
   <size></size>
 -->
 
-<h2 id="administrative-assistant">Administrative Assistant</h2>
-
-<div class="member-section member-grid">
-  <div class="portrait-wrapper">
-    <div class="member-placeholder" aria-label="Administrative Assistant">
-      <span class="portrait-name">Administrative Assistant</span>
-      <span class="portrait-description">Information forthcoming</span>
-    </div>
+<div class="people-section people-section--placeholder">
+  <h2 id="administrative-assistant">Administrative Assistant</h2>
+  <div class="people-placeholder" aria-label="Administrative Assistant">
+    <span>Administrative Assistant</span>
+    <strong>Information forthcoming</strong>
   </div>
 </div>
   </section>
@@ -427,220 +445,43 @@
   <size></size>
 -->
 
-<h2 id="post-docs">Post Docs</h2>
-
-<div class="member-section member-grid">
-
-
-
-
-
-
+<div class="people-section">
+  <h2 id="post-docs">Post Docs</h2>
   
 
-  
 
-  
+
+
+
+
+
+
+
+<div class="member-gallery" data-member-gallery="" data-reveal="">
+  <div class="member-gallery__meta">
+    <p><span>07</span> members</p>
     
-
+      <div class="member-gallery__controls" aria-label="Gallery controls">
+        <button type="button" data-gallery-prev="" aria-label="Previous members">
+          <span aria-hidden="true">←</span>
+        </button>
+        <button class="member-gallery__auto" type="button" data-gallery-auto="" data-start-label="Auto glide" data-stop-label="Pause glide" aria-pressed="false">Auto glide</button>
+        <button type="button" data-gallery-next="" aria-label="Next members">
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
     
+  </div>
+
+  <div id="postdoc-gallery" class="member-gallery__track" data-gallery-track="" tabindex="0" role="region" aria-label="Postdoctoral fellows">
+    
+      <div class="member-gallery__slide" role="group" aria-label="Member 1 of 7">
+        
 
 
 
 <div class="portrait-wrapper">
-  <a href="/members/Bohou.html" class="portrait" data-style="" aria-label="Wu,Bohou 武博厚">
-    
-      <i class="icon fa-solid fa-glasses"></i>
-    
-
-    
-
-
-
-
-
-
-<picture class="responsive-image">
-  
-    <source type="image/webp" srcset="/images/members/wubohou-480.webp 480w, /images/members/wubohou-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
-  
-  <img src="/images/members/wubohou.jpg" class="portrait-image" alt="Wu,Bohou 武博厚" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-</picture>
-
-
-    
-      <span class="portrait-name">
-        Wu,Bohou 武博厚
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        Postdoctoral Fellow
-      </span>
-    
-
-    
-      <span class="portrait-affiliation">
-        School of Basic Medicine, Tsinghua University
-      </span>
-    
-  </a>
-</div>
-
-  
-    
-
-    
-
-
-
-<div class="portrait-wrapper">
-  <a href="/members/Jingzhao.html" class="portrait" data-style="" aria-label="Xu,Jingzhao 徐敬昭">
-    
-      <i class="icon fa-solid fa-glasses"></i>
-    
-
-    
-
-
-
-
-
-
-<picture class="responsive-image">
-  
-    <source type="image/webp" srcset="/images/members/xujingzhao-480.webp 480w, /images/members/xujingzhao-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
-  
-  <img src="/images/members/xujingzhao.jpg" class="portrait-image" alt="Xu,Jingzhao 徐敬昭" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-</picture>
-
-
-    
-      <span class="portrait-name">
-        Xu,Jingzhao 徐敬昭
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        Postdoctoral Fellow
-      </span>
-    
-
-    
-      <span class="portrait-affiliation">
-        School of Basic Medicine, Tsinghua University
-      </span>
-    
-  </a>
-</div>
-
-  
-    
-
-    
-
-
-
-<div class="portrait-wrapper">
-  <a href="/members/Mengyuan.html" class="portrait" data-style="" aria-label="Huang, Mengyuan 黄梦元">
-    
-      <i class="icon fa-solid fa-glasses"></i>
-    
-
-    
-
-
-
-
-
-
-<picture class="responsive-image">
-  
-    <source type="image/webp" srcset="/images/members/huangmengyuan-480.webp 480w, /images/members/huangmengyuan-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
-  
-  <img src="/images/members/huangmengyuan.jpg" class="portrait-image" alt="Huang, Mengyuan 黄梦元" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-</picture>
-
-
-    
-      <span class="portrait-name">
-        Huang, Mengyuan 黄梦元
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        Postdoctoral Fellow
-      </span>
-    
-
-    
-      <span class="portrait-affiliation">
-        School of Basic Medicine, Tsinghua University
-      </span>
-    
-  </a>
-</div>
-
-  
-    
-
-    
-
-
-
-<div class="portrait-wrapper">
-  <a href="/members/Siyang.html" class="portrait" data-style="" aria-label="Li, Siyang 李思扬">
-    
-      <i class="icon fa-solid fa-glasses"></i>
-    
-
-    
-
-
-
-
-
-
-<picture class="responsive-image">
-  
-    <source type="image/webp" srcset="/images/members/lisiyang-480.webp 480w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
-  
-  <img src="/images/members/lisiyang.jpg" class="portrait-image" alt="Li, Siyang 李思扬" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-</picture>
-
-
-    
-      <span class="portrait-name">
-        Li, Siyang 李思扬
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        Postdoctoral Fellow
-      </span>
-    
-
-    
-      <span class="portrait-affiliation">
-        School of Basic Medicine, Tsinghua University
-      </span>
-    
-  </a>
-</div>
-
-  
-    
-
-    
-
-
-
-<div class="portrait-wrapper">
-  <a href="/members/Xiaowen.html" class="portrait" data-style="" aria-label="Hao,Xiaowen 郝晓文">
+  <a href="/members/Xiaowen.html" class="portrait" data-style="gallery" aria-label="Hao,Xiaowen 郝晓文">
     
       <i class="icon fa-solid fa-glasses"></i>
     
@@ -680,15 +521,15 @@
   </a>
 </div>
 
-  
+      </div>
     
-
-    
+      <div class="member-gallery__slide" role="group" aria-label="Member 2 of 7">
+        
 
 
 
 <div class="portrait-wrapper">
-  <a href="/members/Yantao.html" class="portrait" data-style="" aria-label="Yantao Hong 洪彦涛">
+  <a href="/members/Mengyuan.html" class="portrait" data-style="gallery" aria-label="Huang, Mengyuan 黄梦元">
     
       <i class="icon fa-solid fa-glasses"></i>
     
@@ -702,15 +543,15 @@
 
 <picture class="responsive-image">
   
-    <source type="image/webp" srcset="/images/members/hongyantao-480.webp 480w, /images/members/hongyantao-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
+    <source type="image/webp" srcset="/images/members/huangmengyuan-480.webp 480w, /images/members/huangmengyuan-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
   
-  <img src="/images/members/hongyantao.jpg" class="portrait-image" alt="Yantao Hong 洪彦涛" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+  <img src="/images/members/huangmengyuan.jpg" class="portrait-image" alt="Huang, Mengyuan 黄梦元" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 </picture>
 
 
     
       <span class="portrait-name">
-        Yantao Hong 洪彦涛
+        Huang, Mengyuan 黄梦元
       </span>
     
 
@@ -728,15 +569,63 @@
   </a>
 </div>
 
-  
+      </div>
     
-
-    
+      <div class="member-gallery__slide" role="group" aria-label="Member 3 of 7">
+        
 
 
 
 <div class="portrait-wrapper">
-  <a href="/members/Yibing.html" class="portrait" data-style="" aria-label="Tao, Yibing">
+  <a href="/members/Siyang.html" class="portrait" data-style="gallery" aria-label="Li, Siyang 李思扬">
+    
+      <i class="icon fa-solid fa-glasses"></i>
+    
+
+    
+
+
+
+
+
+
+<picture class="responsive-image">
+  
+    <source type="image/webp" srcset="/images/members/lisiyang-480.webp 480w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
+  
+  <img src="/images/members/lisiyang.jpg" class="portrait-image" alt="Li, Siyang 李思扬" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+</picture>
+
+
+    
+      <span class="portrait-name">
+        Li, Siyang 李思扬
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Postdoctoral Fellow
+      </span>
+    
+
+    
+      <span class="portrait-affiliation">
+        School of Basic Medicine, Tsinghua University
+      </span>
+    
+  </a>
+</div>
+
+      </div>
+    
+      <div class="member-gallery__slide" role="group" aria-label="Member 4 of 7">
+        
+
+
+
+<div class="portrait-wrapper">
+  <a href="/members/Yibing.html" class="portrait" data-style="gallery" aria-label="Tao, Yibing">
     
       <i class="icon fa-solid fa-glasses"></i>
     
@@ -776,8 +665,158 @@
   </a>
 </div>
 
-  
+      </div>
+    
+      <div class="member-gallery__slide" role="group" aria-label="Member 5 of 7">
+        
 
+
+
+<div class="portrait-wrapper">
+  <a href="/members/Bohou.html" class="portrait" data-style="gallery" aria-label="Wu,Bohou 武博厚">
+    
+      <i class="icon fa-solid fa-glasses"></i>
+    
+
+    
+
+
+
+
+
+
+<picture class="responsive-image">
+  
+    <source type="image/webp" srcset="/images/members/wubohou-480.webp 480w, /images/members/wubohou-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
+  
+  <img src="/images/members/wubohou.jpg" class="portrait-image" alt="Wu,Bohou 武博厚" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+</picture>
+
+
+    
+      <span class="portrait-name">
+        Wu,Bohou 武博厚
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Postdoctoral Fellow
+      </span>
+    
+
+    
+      <span class="portrait-affiliation">
+        School of Basic Medicine, Tsinghua University
+      </span>
+    
+  </a>
+</div>
+
+      </div>
+    
+      <div class="member-gallery__slide" role="group" aria-label="Member 6 of 7">
+        
+
+
+
+<div class="portrait-wrapper">
+  <a href="/members/Jingzhao.html" class="portrait" data-style="gallery" aria-label="Xu,Jingzhao 徐敬昭">
+    
+      <i class="icon fa-solid fa-glasses"></i>
+    
+
+    
+
+
+
+
+
+
+<picture class="responsive-image">
+  
+    <source type="image/webp" srcset="/images/members/xujingzhao-480.webp 480w, /images/members/xujingzhao-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
+  
+  <img src="/images/members/xujingzhao.jpg" class="portrait-image" alt="Xu,Jingzhao 徐敬昭" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+</picture>
+
+
+    
+      <span class="portrait-name">
+        Xu,Jingzhao 徐敬昭
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Postdoctoral Fellow
+      </span>
+    
+
+    
+      <span class="portrait-affiliation">
+        School of Basic Medicine, Tsinghua University
+      </span>
+    
+  </a>
+</div>
+
+      </div>
+    
+      <div class="member-gallery__slide" role="group" aria-label="Member 7 of 7">
+        
+
+
+
+<div class="portrait-wrapper">
+  <a href="/members/Yantao.html" class="portrait" data-style="gallery" aria-label="Yantao Hong 洪彦涛">
+    
+      <i class="icon fa-solid fa-glasses"></i>
+    
+
+    
+
+
+
+
+
+
+<picture class="responsive-image">
+  
+    <source type="image/webp" srcset="/images/members/hongyantao-480.webp 480w, /images/members/hongyantao-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
+  
+  <img src="/images/members/hongyantao.jpg" class="portrait-image" alt="Yantao Hong 洪彦涛" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+</picture>
+
+
+    
+      <span class="portrait-name">
+        Yantao Hong 洪彦涛
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Postdoctoral Fellow
+      </span>
+    
+
+    
+      <span class="portrait-affiliation">
+        School of Basic Medicine, Tsinghua University
+      </span>
+    
+  </a>
+</div>
+
+      </div>
+    
+  </div>
+
+  
+    <div class="member-gallery__progress" aria-hidden="true"><span data-gallery-progress=""></span></div>
+  
+</div>
 
 </div>
   </section>
@@ -793,124 +832,43 @@
   <size></size>
 -->
 
-<h2 id="graduate-students">Graduate Students</h2>
-
-<div class="member-section member-grid">
-
-
-
-
-
-
+<div class="people-section">
+  <h2 id="graduate-students">Graduate Students</h2>
   
 
-  
 
-  
+
+
+
+
+
+
+
+<div class="member-gallery" data-member-gallery="" data-reveal="">
+  <div class="member-gallery__meta">
+    <p><span>05</span> members</p>
     
-
+      <div class="member-gallery__controls" aria-label="Gallery controls">
+        <button type="button" data-gallery-prev="" aria-label="Previous members">
+          <span aria-hidden="true">←</span>
+        </button>
+        <button class="member-gallery__auto" type="button" data-gallery-auto="" data-start-label="Auto glide" data-stop-label="Pause glide" aria-pressed="false">Auto glide</button>
+        <button type="button" data-gallery-next="" aria-label="Next members">
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
     
+  </div>
+
+  <div id="graduate-gallery" class="member-gallery__track" data-gallery-track="" tabindex="0" role="region" aria-label="Graduate students">
+    
+      <div class="member-gallery__slide" role="group" aria-label="Member 1 of 5">
+        
 
 
 
 <div class="portrait-wrapper">
-  <a href="/members/Kaiyuan.html" class="portrait" data-style="" aria-label="Yan,Kaiyuan 严开远">
-    
-      <i class="icon fa-solid fa-graduation-cap"></i>
-    
-
-    
-
-
-
-
-
-
-<picture class="responsive-image">
-  
-    <source type="image/webp" srcset="/images/members/yankaiyuan-480.webp 480w, /images/members/yankaiyuan-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
-  
-  <img src="/images/members/yankaiyuan.jpg" class="portrait-image" alt="Yan,Kaiyuan 严开远" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-</picture>
-
-
-    
-      <span class="portrait-name">
-        Yan,Kaiyuan 严开远
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        PhD Student
-      </span>
-    
-
-    
-      <span class="portrait-affiliation">
-        School of Basic Medicine, Tsinghua University
-      </span>
-    
-  </a>
-</div>
-
-  
-    
-
-    
-
-
-
-<div class="portrait-wrapper">
-  <a href="/members/Shuqin.html" class="portrait" data-style="" aria-label="Zhou, Shuqin 周淑琴">
-    
-      <i class="icon fa-solid fa-graduation-cap"></i>
-    
-
-    
-
-
-
-
-
-
-<picture class="responsive-image">
-  
-    <source type="image/webp" srcset="/images/members/shuqinzhou-480.webp 480w, /images/members/shuqinzhou-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
-  
-  <img src="/images/members/shuqinzhou.jpg" class="portrait-image" alt="Zhou, Shuqin 周淑琴" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-</picture>
-
-
-    
-      <span class="portrait-name">
-        Zhou, Shuqin 周淑琴
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        PhD Student
-      </span>
-    
-
-    
-      <span class="portrait-affiliation">
-        School of Basic Medicine, Tsinghua University
-      </span>
-    
-  </a>
-</div>
-
-  
-    
-
-    
-
-
-
-<div class="portrait-wrapper">
-  <a href="/members/Xinyun.html" class="portrait" data-style="" aria-label="Hu,Xinyun 胡昕昀">
+  <a href="/members/Xinyun.html" class="portrait" data-style="gallery" aria-label="Hu,Xinyun 胡昕昀">
     
       <i class="icon fa-solid fa-graduation-cap"></i>
     
@@ -950,63 +908,15 @@
   </a>
 </div>
 
-  
+      </div>
     
-
-    
+      <div class="member-gallery__slide" role="group" aria-label="Member 2 of 5">
+        
 
 
 
 <div class="portrait-wrapper">
-  <a href="/members/Yuxuan.html" class="portrait" data-style="" aria-label="Zhou,Yuxuan 周宇轩">
-    
-      <i class="icon fa-solid fa-graduation-cap"></i>
-    
-
-    
-
-
-
-
-
-
-<picture class="responsive-image">
-  
-    <source type="image/webp" srcset="/images/members/zhouyuxuan-480.webp 480w, /images/members/zhouyuxuan-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
-  
-  <img src="/images/members/zhouyuxuan.jpg" class="portrait-image" alt="Zhou,Yuxuan 周宇轩" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-</picture>
-
-
-    
-      <span class="portrait-name">
-        Zhou,Yuxuan 周宇轩
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        PhD Student
-      </span>
-    
-
-    
-      <span class="portrait-affiliation">
-        School of Basic Medicine, Tsinghua University
-      </span>
-    
-  </a>
-</div>
-
-  
-    
-
-    
-
-
-
-<div class="portrait-wrapper">
-  <a href="/members/Zirong.html" class="portrait" data-style="" aria-label="Wang, Zirong">
+  <a href="/members/Zirong.html" class="portrait" data-style="gallery" aria-label="Wang, Zirong">
     
       <i class="icon fa-solid fa-graduation-cap"></i>
     
@@ -1046,8 +956,158 @@
   </a>
 </div>
 
-  
+      </div>
+    
+      <div class="member-gallery__slide" role="group" aria-label="Member 3 of 5">
+        
 
+
+
+<div class="portrait-wrapper">
+  <a href="/members/Kaiyuan.html" class="portrait" data-style="gallery" aria-label="Yan,Kaiyuan 严开远">
+    
+      <i class="icon fa-solid fa-graduation-cap"></i>
+    
+
+    
+
+
+
+
+
+
+<picture class="responsive-image">
+  
+    <source type="image/webp" srcset="/images/members/yankaiyuan-480.webp 480w, /images/members/yankaiyuan-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
+  
+  <img src="/images/members/yankaiyuan.jpg" class="portrait-image" alt="Yan,Kaiyuan 严开远" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+</picture>
+
+
+    
+      <span class="portrait-name">
+        Yan,Kaiyuan 严开远
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        PhD Student
+      </span>
+    
+
+    
+      <span class="portrait-affiliation">
+        School of Basic Medicine, Tsinghua University
+      </span>
+    
+  </a>
+</div>
+
+      </div>
+    
+      <div class="member-gallery__slide" role="group" aria-label="Member 4 of 5">
+        
+
+
+
+<div class="portrait-wrapper">
+  <a href="/members/Shuqin.html" class="portrait" data-style="gallery" aria-label="Zhou, Shuqin 周淑琴">
+    
+      <i class="icon fa-solid fa-graduation-cap"></i>
+    
+
+    
+
+
+
+
+
+
+<picture class="responsive-image">
+  
+    <source type="image/webp" srcset="/images/members/shuqinzhou-480.webp 480w, /images/members/shuqinzhou-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
+  
+  <img src="/images/members/shuqinzhou.jpg" class="portrait-image" alt="Zhou, Shuqin 周淑琴" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+</picture>
+
+
+    
+      <span class="portrait-name">
+        Zhou, Shuqin 周淑琴
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        PhD Student
+      </span>
+    
+
+    
+      <span class="portrait-affiliation">
+        School of Basic Medicine, Tsinghua University
+      </span>
+    
+  </a>
+</div>
+
+      </div>
+    
+      <div class="member-gallery__slide" role="group" aria-label="Member 5 of 5">
+        
+
+
+
+<div class="portrait-wrapper">
+  <a href="/members/Yuxuan.html" class="portrait" data-style="gallery" aria-label="Zhou,Yuxuan 周宇轩">
+    
+      <i class="icon fa-solid fa-graduation-cap"></i>
+    
+
+    
+
+
+
+
+
+
+<picture class="responsive-image">
+  
+    <source type="image/webp" srcset="/images/members/zhouyuxuan-480.webp 480w, /images/members/zhouyuxuan-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
+  
+  <img src="/images/members/zhouyuxuan.jpg" class="portrait-image" alt="Zhou,Yuxuan 周宇轩" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+</picture>
+
+
+    
+      <span class="portrait-name">
+        Zhou,Yuxuan 周宇轩
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        PhD Student
+      </span>
+    
+
+    
+      <span class="portrait-affiliation">
+        School of Basic Medicine, Tsinghua University
+      </span>
+    
+  </a>
+</div>
+
+      </div>
+    
+  </div>
+
+  
+    <div class="member-gallery__progress" aria-hidden="true"><span data-gallery-progress=""></span></div>
+  
+</div>
 
 </div>
   </section>
@@ -1063,76 +1123,43 @@
   <size></size>
 -->
 
-<h2 id="undergraduate-students">Undergraduate Students</h2>
-
-<div class="member-section member-grid">
-
-
-
-
-
-
+<div class="people-section">
+  <h2 id="undergraduate-students">Undergraduate Students</h2>
   
 
-  
 
-  
+
+
+
+
+
+
+
+<div class="member-gallery" data-member-gallery="" data-reveal="">
+  <div class="member-gallery__meta">
+    <p><span>03</span> members</p>
     
-
+      <div class="member-gallery__controls" aria-label="Gallery controls">
+        <button type="button" data-gallery-prev="" aria-label="Previous members">
+          <span aria-hidden="true">←</span>
+        </button>
+        <button class="member-gallery__auto" type="button" data-gallery-auto="" data-start-label="Auto glide" data-stop-label="Pause glide" aria-pressed="false">Auto glide</button>
+        <button type="button" data-gallery-next="" aria-label="Next members">
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
     
+  </div>
+
+  <div id="undergraduate-gallery" class="member-gallery__track" data-gallery-track="" tabindex="0" role="region" aria-label="Undergraduate students">
+    
+      <div class="member-gallery__slide" role="group" aria-label="Member 1 of 3">
+        
 
 
 
 <div class="portrait-wrapper">
-  <a href="/members/Jiacheng.html" class="portrait" data-style="" aria-label="印家承">
-    
-      <i class="icon fa-solid fa-user-graduate"></i>
-    
-
-    
-
-
-
-
-
-
-<picture class="responsive-image">
-  
-    <source type="image/webp" srcset="/images/members/yinjiacheng-480.webp 480w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
-  
-  <img src="/images/members/yinjiacheng.jpg" class="portrait-image" alt="印家承" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-</picture>
-
-
-    
-      <span class="portrait-name">
-        印家承
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        Undergraduate Student
-      </span>
-    
-
-    
-      <span class="portrait-affiliation">
-        Zhili College, Tsinghua University
-      </span>
-    
-  </a>
-</div>
-
-  
-    
-
-    
-
-
-
-<div class="portrait-wrapper">
-  <a href="/members/Ruiqi.html" class="portrait" data-style="" aria-label="Deng,ruiqi 邓睿琦">
+  <a href="/members/Ruiqi.html" class="portrait" data-style="gallery" aria-label="Deng,ruiqi 邓睿琦">
     
       <i class="icon fa-solid fa-user-graduate"></i>
     
@@ -1172,15 +1199,63 @@
   </a>
 </div>
 
-  
+      </div>
     
-
-    
+      <div class="member-gallery__slide" role="group" aria-label="Member 2 of 3">
+        
 
 
 
 <div class="portrait-wrapper">
-  <a href="/members/Tianyu.html" class="portrait" data-style="" aria-label="黄天羽">
+  <a href="/members/Jiacheng.html" class="portrait" data-style="gallery" aria-label="印家承">
+    
+      <i class="icon fa-solid fa-user-graduate"></i>
+    
+
+    
+
+
+
+
+
+
+<picture class="responsive-image">
+  
+    <source type="image/webp" srcset="/images/members/yinjiacheng-480.webp 480w" sizes="(max-width: 600px) calc(100vw - 40px), 320px"></source>
+  
+  <img src="/images/members/yinjiacheng.jpg" class="portrait-image" alt="印家承" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+</picture>
+
+
+    
+      <span class="portrait-name">
+        印家承
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        Undergraduate Student
+      </span>
+    
+
+    
+      <span class="portrait-affiliation">
+        Zhili College, Tsinghua University
+      </span>
+    
+  </a>
+</div>
+
+      </div>
+    
+      <div class="member-gallery__slide" role="group" aria-label="Member 3 of 3">
+        
+
+
+
+<div class="portrait-wrapper">
+  <a href="/members/Tianyu.html" class="portrait" data-style="gallery" aria-label="黄天羽">
     
       <i class="icon fa-solid fa-user-graduate"></i>
     
@@ -1218,8 +1293,14 @@
   </a>
 </div>
 
-  
+      </div>
+    
+  </div>
 
+  
+    <div class="member-gallery__progress" aria-hidden="true"><span data-gallery-progress=""></span></div>
+  
+</div>
 
 </div>
   </section>
@@ -1235,16 +1316,12 @@
   <size></size>
 -->
 
-<h2 id="alumni">Alumni</h2>
-
-<div class="member-section member-grid">
-
-
-
-
-
-
-
+<div class="people-section people-section--placeholder">
+  <h2 id="alumni">Alumni</h2>
+  <div class="people-placeholder" aria-label="Alumni">
+    <span>Alumni</span>
+    <strong>Profiles forthcoming</strong>
+  </div>
 </div>
   </section>
 

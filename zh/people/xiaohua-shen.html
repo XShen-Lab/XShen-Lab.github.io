@@ -159,6 +159,12 @@
 
 
 
+
+
+
+  <script src="/_scripts/member-profile.js" defer></script>
+
+
 <!-- Interior-page heading links; never loaded on the RNA homepage. -->
 
   <script src="/_scripts/anchors.js" defer></script>
@@ -344,14 +350,8 @@
   
 
   <section class="background" data-size="page">
-    <p class="right"><small><a href="/members/xiaohua-shen.html">English</a></small></p>
-
-<div class="portrait-wrapper">
-  <a href="/members/xiaohua-shen.html" class="portrait" data-style="" aria-label="Xiaohua Shen 沈晓骅">
-    
-      <i class="icon fa-solid fa-microscope"></i>
-    
-
+    <article class="member-profile" data-member-profile>
+  <aside class="member-profile__visual" data-member-visual data-reveal>
     
 
 
@@ -359,37 +359,28 @@
 
 
 
-<picture class="responsive-image">
+<picture class="responsive-image member-profile__picture">
   
-  <img src="/images/members/xiaohua-shen.jpg" class="portrait-image" alt="Xiaohua Shen 沈晓骅" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+  <img src="/images/members/xiaohua-shen.jpg" class="member-profile__photo" alt="沈晓骅" loading="eager" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 </picture>
 
+    <div class="member-profile__veil" aria-hidden="true"></div>
 
-    
-      <span class="portrait-name">
-        Xiaohua Shen 沈晓骅
-      </span>
-    
+    <a class="member-profile__back" href="/zh/people/">
+      <span aria-hidden="true">←</span> 返回团队成员
+    </a>
 
-    
-      <span class="portrait-description">
-        Principal Investigator
-      </span>
-    
+    <div class="member-profile__identity">
+      <p>课题组负责人</p>
+      <h1>沈晓骅</h1>
+      <span>清华大学基础医学院</span>
 
-    
-      <span class="portrait-affiliation">
-        School of Basic Medicine, Tsinghua University
-      </span>
-    
-  </a>
-</div>
-
-<div class="center">
-  
-    
-    
-    
+      
+        <div class="member-profile__links">
+          
+            
+            
+            
 
 
 
@@ -403,10 +394,10 @@
   </div>
 
 
-  
-    
-    
-    
+          
+            
+            
+            
 
 
 
@@ -420,10 +411,16 @@
   </div>
 
 
-  
-</div>
+          
+        </div>
+      
+    </div>
+  </aside>
 
-<p>沈晓骅现任清华大学教授，任职于基础医学院、生命科学联合中心、膜生物学国家重点实验室及北京生物结构前沿研究中心。</p>
+  <div class="member-profile__content">
+    
+      <div class="member-profile__longform" data-reveal style="--reveal-order: 1">
+        <p>沈晓骅现任清华大学教授，任职于基础医学院、生命科学联合中心、膜生物学国家重点实验室及北京生物结构前沿研究中心。</p>
 
 <h2 id="个人简介">个人简介</h2>
 
@@ -536,6 +533,11 @@
 </ol>
 
 <p><a href="/zh/publications/">查看完整论文目录</a>。</p>
+
+      </div>
+    
+  </div>
+</article>
   </section>
 
 

@@ -155,6 +155,12 @@
 
 
 
+
+
+
+  <script src="/_scripts/member-profile.js" defer></script>
+
+
 <!-- Interior-page heading links; never loaded on the RNA homepage. -->
 
   <script src="/_scripts/anchors.js" defer></script>
@@ -340,53 +346,8 @@
   
 
   <section class="background" data-size="page">
-    <style>
-  .member-profile-layout {
-    display: grid;
-    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
-    gap: 3rem;
-    align-items: start;
-  }
-
-  .member-profile-sidebar {
-    text-align: center;
-  }
-
-  .member-profile-main {
-    min-width: 0;
-  }
-
-  .member-profile-main ul {
-    margin-left: 1.2rem;
-  }
-
-  @media (max-width: 800px) {
-    .member-profile-layout {
-      display: block;
-    }
-
-    .member-profile-sidebar {
-      margin-bottom: 2rem;
-    }
-  }
-</style>
-
-
-
-<div class="member-profile-layout">
-  <aside class="member-profile-sidebar">
-    
-
-
-
-
-
-<div class="portrait-wrapper">
-  <a href="/members/Tianyu.html" class="portrait" data-style="" aria-label="黄天羽">
-    
-      <i class="icon fa-solid fa-user-graduate"></i>
-    
-
+    <article class="member-profile" data-member-profile>
+  <aside class="member-profile__visual" data-member-visual data-reveal>
     
 
 
@@ -394,72 +355,52 @@
 
 
 
-<picture class="responsive-image">
+<picture class="responsive-image member-profile__picture">
   
-  <img src="/images/fallback.svg" class="portrait-image" alt="黄天羽" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+  <img src="/images/fallback.svg" class="member-profile__photo" alt="黄天羽" loading="eager" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 </picture>
 
+    <div class="member-profile__veil" aria-hidden="true"></div>
 
-    
-      <span class="portrait-name">
-        黄天羽
-      </span>
-    
+    <a class="member-profile__back" href="/team/">
+      <span aria-hidden="true">←</span> Back to People
+    </a>
 
-    
-      <span class="portrait-description">
-        Undergraduate Student
-      </span>
-    
+    <div class="member-profile__identity">
+      <p>Undergraduate Student</p>
+      <h1>黄天羽</h1>
+      <span>School of Life Sciences, Tsinghua University</span>
 
-    
-      <span class="portrait-affiliation">
-        School of Life Sciences, Tsinghua University
-      </span>
-    
-  </a>
-</div>
-
-
-<div>
-  
-</div>
-
-
+      
+    </div>
   </aside>
 
-  <main class="member-profile-main">
-    <p>Undergraduate Student in the XShen Lab.</p>
-
-<h2 id="research-interests">Research Interests</h2>
+  <div class="member-profile__content">
+    
+      <section class="member-profile__module member-profile__module--research" data-reveal style="--reveal-order: 1">
+        <p class="member-profile__index">01</p>
+        <h2>Research Interests</h2>
+        
+          
 
 <ul>
   <li>Nuclear structure</li>
   <li>Synthetic chromosome</li>
 </ul>
 
+        
+      </section>
 
+      <section class="member-profile__module member-profile__module--education" data-reveal style="--reveal-order: 2">
+        <p class="member-profile__index">02</p>
+        <h2>Education</h2>
+        
+          <p class="member-profile__empty">Education information forthcoming.</p>
+        
+      </section>
     
-
-    
-
-    <p class="center">
-      <a href="/research/?search=%22%E9%BB%84%E5%A4%A9%E7%BE%BD%22%20">
-        Search for 黄天羽's papers on the Research page
-      </a>
-    </p>
-
-    
-
-    <!--
-    <p class="center">
-      <a href="/blog/?search=%E9%BB%84%E5%A4%A9%E7%BE%BD">
-        See 黄天羽's posts on the Blog page
-      </a>
-    </p>
-    -->
-  </main>
-</div>
+  </div>
+</article>
   </section>
 
 

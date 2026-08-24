@@ -159,6 +159,12 @@
 
 
 
+
+
+
+  <script src="/_scripts/member-profile.js" defer></script>
+
+
 <!-- Interior-page heading links; never loaded on the RNA homepage. -->
 
   <script src="/_scripts/anchors.js" defer></script>
@@ -345,53 +351,8 @@
   
 
   <section class="background" data-size="page">
-    <style>
-  .member-profile-layout {
-    display: grid;
-    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
-    gap: 3rem;
-    align-items: start;
-  }
-
-  .member-profile-sidebar {
-    text-align: center;
-  }
-
-  .member-profile-main {
-    min-width: 0;
-  }
-
-  .member-profile-main ul {
-    margin-left: 1.2rem;
-  }
-
-  @media (max-width: 800px) {
-    .member-profile-layout {
-      display: block;
-    }
-
-    .member-profile-sidebar {
-      margin-bottom: 2rem;
-    }
-  }
-</style>
-
-
-
-<div class="member-profile-layout">
-  <aside class="member-profile-sidebar">
-    
-
-
-
-
-
-<div class="portrait-wrapper">
-  <a href="/members/xiaohua-shen.html" class="portrait" data-style="" aria-label="Xiaohua Shen 沈晓骅">
-    
-      <i class="icon fa-solid fa-microscope"></i>
-    
-
+    <article class="member-profile" data-member-profile>
+  <aside class="member-profile__visual" data-member-visual data-reveal>
     
 
 
@@ -399,38 +360,28 @@
 
 
 
-<picture class="responsive-image">
+<picture class="responsive-image member-profile__picture">
   
-  <img src="/images/members/xiaohua-shen.jpg" class="portrait-image" alt="Xiaohua Shen 沈晓骅" loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+  <img src="/images/members/xiaohua-shen.jpg" class="member-profile__photo" alt="Xiaohua Shen 沈晓骅" loading="eager" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 </picture>
 
+    <div class="member-profile__veil" aria-hidden="true"></div>
 
-    
-      <span class="portrait-name">
-        Xiaohua Shen 沈晓骅
-      </span>
-    
+    <a class="member-profile__back" href="/team/">
+      <span aria-hidden="true">←</span> Back to People
+    </a>
 
-    
-      <span class="portrait-description">
-        Principal Investigator
-      </span>
-    
+    <div class="member-profile__identity">
+      <p>Principal Investigator</p>
+      <h1>Xiaohua Shen 沈晓骅</h1>
+      <span>School of Basic Medicine, Tsinghua University</span>
 
-    
-      <span class="portrait-affiliation">
-        School of Basic Medicine, Tsinghua University
-      </span>
-    
-  </a>
-</div>
-
-
-<div>
-  
-    
-    
-    
+      
+        <div class="member-profile__links">
+          
+            
+            
+            
 
 
 
@@ -443,11 +394,11 @@
     </a>
   </div>
 
-<br>
-  
-    
-    
-    
+
+          
+            
+            
+            
 
 
 
@@ -460,17 +411,17 @@
     </a>
   </div>
 
-<br>
-  
-</div>
 
-
+          
+        </div>
+      
+    </div>
   </aside>
 
-  <main class="member-profile-main">
-    <p class="right"><small><a href="/zh/people/xiaohua-shen/">中文</a></small></p>
-
-<p>Xiaohua Shen is a Professor at Tsinghua University and is affiliated with the School of Basic Medicine, Center for Life Sciences, State Key Laboratory of Membrane Biology, and Beijing Frontier Research Center for Biological Structure.</p>
+  <div class="member-profile__content">
+    
+      <div class="member-profile__longform" data-reveal style="--reveal-order: 1">
+        <p>Xiaohua Shen is a Professor at Tsinghua University and is affiliated with the School of Basic Medicine, Center for Life Sciences, State Key Laboratory of Membrane Biology, and Beijing Frontier Research Center for Biological Structure.</p>
 
 <h2 id="profile">Profile</h2>
 
@@ -588,28 +539,10 @@
 
 <p><a href="/publications/">View the complete publication list</a>.</p>
 
-
+      </div>
     
-
-    
-
-    <p class="center">
-      <a href="/research/?search=%22Xiaohua%20Shen%20%E6%B2%88%E6%99%93%E9%AA%85%22%20">
-        Search for Xiaohua Shen 沈晓骅's papers on the Research page
-      </a>
-    </p>
-
-    
-
-    <!--
-    <p class="center">
-      <a href="/blog/?search=Xiaohua%20Shen%20%E6%B2%88%E6%99%93%E9%AA%85">
-        See Xiaohua Shen 沈晓骅's posts on the Blog page
-      </a>
-    </p>
-    -->
-  </main>
-</div>
+  </div>
+</article>
   </section>
 
 
