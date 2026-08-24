@@ -1,0 +1,78 @@
+{% assign pi = site.members | where: "role", "principal-investigator" | first %}
+{% assign chinese_page = false %}
+{% assign profile_url = pi.url %}
+{% assign profile_name = pi.name %}
+{% assign role_label = "Principal Investigator" %}
+{% assign affiliation_label = "School of Basic Medicine, Tsinghua University" %}
+{% assign education_label = "Education" %}
+{% assign appointments_label = "Appointments" %}
+{% assign profile_label = "View full profile" %}
+{% if page.lang == "zh-CN" %}
+  {% assign chinese_page = true %}
+  {% assign profile_url = "/zh/people/xiaohua-shen/" %}
+  {% assign profile_name = "沈晓骅" %}
+  {% assign role_label = "课题组负责人" %}
+  {% assign affiliation_label = "清华大学基础医学院" %}
+  {% assign education_label = "教育经历" %}
+  {% assign appointments_label = "工作经历" %}
+  {% assign profile_label = "查看完整个人主页" %}
+{% endif %}
+
+<article class="people-pi-card" data-reveal>
+  <a class="people-pi-card__visual" href="{{ profile_url | relative_url }}" aria-labelledby="people-pi-name">
+    {% include responsive-image.html image=pi.image class="people-pi-card__photo" alt=profile_name sizes="(max-width: 760px) calc(100vw - 40px), 390px" loading="eager" %}
+    <span class="people-pi-card__identity">
+      <span class="people-pi-card__role">{{ role_label }}</span>
+      <strong id="people-pi-name">{{ profile_name }}</strong>
+      <span>{{ affiliation_label }}</span>
+    </span>
+  </a>
+
+  <div class="people-pi-card__details">
+    <section class="people-pi-card__block">
+      <p class="people-card-kicker">01</p>
+      <h3>{{ education_label }}</h3>
+      {% if chinese_page %}
+        <ul>
+          <li><strong>2003</strong> 博士，生物化学，美国密歇根大学安娜堡分校（导师：Randal Kaufman）</li>
+          <li><strong>1996</strong> 学士，生物化学，南开大学</li>
+        </ul>
+      {% else %}
+        <ul>
+          <li><strong>2003</strong> Ph.D., Biological Chemistry, University of Michigan, Ann Arbor, USA (with Randal Kaufman)</li>
+          <li><strong>1996</strong> B.S., Biochemistry, Nankai University, Tianjin, China</li>
+        </ul>
+      {% endif %}
+    </section>
+
+    <section class="people-pi-card__block people-pi-card__block--appointments">
+      <p class="people-card-kicker">02</p>
+      <h3>{{ appointments_label }}</h3>
+      {% if chinese_page %}
+        <ul>
+          <li><strong>2025–至今</strong> 膜生物学国家重点实验室、北京生物结构前沿研究中心，研究员</li>
+          <li><strong>2020–至今</strong> 清华大学，教授</li>
+          <li><strong>2010–至今</strong> 清华大学–北京大学生命科学联合中心，研究员</li>
+          <li><strong>2016–2020</strong> 清华大学，长聘副教授</li>
+          <li><strong>2010–2016</strong> 清华大学，长聘轨副教授</li>
+          <li><strong>2009–2010</strong> 哈佛医学院，讲师</li>
+          <li><strong>2004–2008</strong> Dana-Farber 癌症研究所及哈佛医学院 Stuart H. Orkin 实验室，博士后</li>
+        </ul>
+      {% else %}
+        <ul>
+          <li><strong>2025–present</strong> Investigator, State Key Laboratory of Membrane Biology &amp; Beijing Frontier Research Center for Biological Structure</li>
+          <li><strong>2020–present</strong> Professor, Tsinghua University</li>
+          <li><strong>2010–present</strong> Investigator, Tsinghua-Peking Center for Life Sciences</li>
+          <li><strong>2016–2020</strong> Associate Professor (Tenured), Tsinghua University</li>
+          <li><strong>2010–2016</strong> Associate Professor (Tenure-Track), Tsinghua University</li>
+          <li><strong>2009–2010</strong> Instructor, Harvard Medical School</li>
+          <li><strong>2004–2008</strong> Postdoctoral Fellow, Stuart H. Orkin Laboratory, Dana-Farber Cancer Institute &amp; Harvard Medical School</li>
+        </ul>
+      {% endif %}
+    </section>
+
+    <a class="people-profile-link" href="{{ profile_url | relative_url }}">
+      {{ profile_label }} <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</article>

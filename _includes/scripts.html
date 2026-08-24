@@ -15,6 +15,14 @@
   <script src="{{ '/_scripts/blog-flow.js' | relative_url }}" defer></script>
 {% endif %}
 
+{% if page.member_gallery %}
+  <script src="{{ '/_scripts/member-gallery.js' | relative_url }}" defer></script>
+{% endif %}
+
+{% if page.layout == "member" %}
+  <script src="{{ '/_scripts/member-profile.js' | relative_url }}" defer></script>
+{% endif %}
+
 <!-- Interior-page heading links; never loaded on the RNA homepage. -->
 {% unless page.url == "/" or page.url == "/zh/" %}
   <script src="{{ '/_scripts/anchors.js' | relative_url }}" defer></script>

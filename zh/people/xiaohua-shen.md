@@ -1,22 +1,11 @@
 ---
 title: 沈晓骅
+layout: member
+member_slug: xiaohua-shen
 rich_tooltips: true
 redirect_from:
   - /zh/people/xiaohua-shen/
 ---
-
-<p class="right"><small><a href="{{ '/members/xiaohua-shen.html' | relative_url }}">English</a></small></p>
-
-{% assign pi = site.members | where_exp: "member", "member.slug == 'xiaohua-shen'" | first %}
-{% include portrait.html lookup="xiaohua-shen" %}
-
-<div class="center">
-  {% for link in pi.links %}
-    {% assign key = link[0] %}
-    {% assign value = link[1] %}
-    {% include button.html type=key link=value style="bare" %}
-  {% endfor %}
-</div>
 
 沈晓骅现任清华大学教授，任职于基础医学院、生命科学联合中心、膜生物学国家重点实验室及北京生物结构前沿研究中心。
 

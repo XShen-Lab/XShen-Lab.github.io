@@ -1,0 +1,67 @@
+{% assign gallery_members = site.members
+  | where: "role", include.role
+  | where_exp: "member", "member.name != 'Name 中文名'"
+  | sort: "name"
+%}
+{% assign gallery_count = gallery_members.size %}
+{% assign chinese_gallery = false %}
+{% assign count_label = "members" %}
+{% assign previous_label = "Previous members" %}
+{% assign next_label = "Next members" %}
+{% assign auto_start_label = "Auto glide" %}
+{% assign auto_stop_label = "Pause glide" %}
+{% if page.lang == "zh-CN" %}
+  {% assign chinese_gallery = true %}
+  {% assign count_label = "位成员" %}
+  {% assign previous_label = "上一组成员" %}
+  {% assign next_label = "下一组成员" %}
+  {% assign auto_start_label = "自动滑动" %}
+  {% assign auto_stop_label = "暂停滑动" %}
+{% endif %}
+
+<div class="member-gallery" data-member-gallery data-reveal>
+  <div class="member-gallery__meta">
+    <p><span>{{ gallery_count | prepend: "0" | slice: -2, 2 }}</span> {{ count_label }}</p>
+    {% if gallery_count > 1 %}
+      <div class="member-gallery__controls" aria-label="{% if chinese_gallery %}画廊控制{% else %}Gallery controls{% endif %}">
+        <button type="button" data-gallery-prev aria-label="{{ previous_label }}">
+          <span aria-hidden="true">←</span>
+        </button>
+        <button
+          class="member-gallery__auto"
+          type="button"
+          data-gallery-auto
+          data-start-label="{{ auto_start_label }}"
+          data-stop-label="{{ auto_stop_label }}"
+          aria-pressed="false"
+        >{{ auto_start_label }}</button>
+        <button type="button" data-gallery-next aria-label="{{ next_label }}">
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    {% endif %}
+  </div>
+
+  <div
+    id="{{ include.id }}"
+    class="member-gallery__track"
+    data-gallery-track
+    tabindex="0"
+    role="region"
+    aria-label="{{ include.label }}"
+  >
+    {% for member in gallery_members %}
+      <div
+        class="member-gallery__slide"
+        role="group"
+        aria-label="{% if chinese_gallery %}第 {{ forloop.index }} 位，共 {{ gallery_count }} 位{% else %}Member {{ forloop.index }} of {{ gallery_count }}{% endif %}"
+      >
+        {% include portrait.html lookup=member.slug style="gallery" %}
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if gallery_count > 1 %}
+    <div class="member-gallery__progress" aria-hidden="true"><span data-gallery-progress></span></div>
+  {% endif %}
+</div>
