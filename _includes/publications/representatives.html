@@ -1,0 +1,103 @@
+{% assign language = include.lang | default: "en" %}
+{% assign browser_data = site.data.publication_browser %}
+{% assign ui = browser_data.ui[language] | default: browser_data.ui.en %}
+{% assign publication_records = site.data.publications.records | sort: "cv_order" %}
+
+<div class="representative-publications">
+  {% for category in browser_data.categories %}
+    {% unless category.id == "other" %}
+      {% assign category_label = category.label[language] | default: category.label.en %}
+      {% assign category_title = category.title[language] | default: category.title.en %}
+      {% assign category_description = category.description[language] | default: category.description.en %}
+      {% assign category_representatives = browser_data.representatives | where: "category", category.id %}
+
+      <section class="representative-program" id="representative-{{ category.id }}">
+        <header class="representative-program__header">
+          <span class="representative-program__index" aria-hidden="true">0{{ forloop.index }}</span>
+          <div>
+            <p class="representative-program__label">{{ category_label }}</p>
+            <h3>{{ category_title }}</h3>
+            <p>{{ category_description }}</p>
+          </div>
+        </header>
+
+        {% if category_representatives.size > 0 %}
+          <p class="representative-program__papers">{{ ui.representative_label }}</p>
+          <div class="representative-publication-grid">
+            {% for representative in category_representatives %}
+              {% assign record_matches = publication_records | where: "id", representative.publication_id %}
+              {% assign publication = record_matches | first %}
+
+              {% if representative.publication_id == "pub-2025-scfluent-seq" %}
+                {% assign enrichment_matches = site.publications | where: "publication_id", publication.id %}
+                {% assign paper = enrichment_matches | first %}
+                {% assign enrichment = paper.localized[language] | default: paper.localized.en %}
+                {% if language == "zh-CN" %}
+                  {% assign detail_url = "/zh/publications/" | append: publication.presentation.detail_slug | append: "/" %}
+                {% else %}
+                  {% assign detail_url = "/publications/" | append: publication.presentation.detail_slug | append: "/" %}
+                {% endif %}
+                <article class="publication-entry representative-publication-card representative-publication-card--image" data-publication-id="{{ publication.id }}">
+                  <a class="publication-entry-image" href="{{ detail_url | relative_url }}">
+                    <img
+                      src="{{ paper.graphical_abstract.path | relative_url }}"
+                      alt="{{ paper.graphical_abstract.alt[language] | default: paper.graphical_abstract.alt.en | escape }}"
+                      loading="lazy"
+                    >
+                  </a>
+
+                  <div class="publication-entry-content">
+                    <div class="publication-entry-meta">{{ publication.venue.name }} · {{ publication.year }}</div>
+                    <h3><a href="{{ detail_url | relative_url }}">{{ publication.title }}</a></h3>
+                    <p class="publication-entry-authors">{{ publication.authors.display }}</p>
+                    <p>{{ enrichment.summary }}</p>
+
+                    {% if enrichment.metric %}
+                      <div class="publication-entry-metric">{{ enrichment.metric }}{% if language == "zh-CN" %}（范围取决于细胞类型）{% else %} (cell-type dependent){% endif %}</div>
+                    {% endif %}
+
+                    <div class="publication-entry-tags">
+                      {% for tag in enrichment.tags %}<span>{{ tag }}</span>{% endfor %}
+                    </div>
+
+                    <div class="publication-entry-actions">
+                      <a href="{{ detail_url | relative_url }}">{{ ui.read_summary_label }}</a>
+                      <a href="{{ publication.links.article }}">{{ ui.article_label }}</a>
+                    </div>
+                  </div>
+                </article>
+              {% elsif representative.publication_id == "pub-cv-015" %}
+                {% include publications/featured-card.html card=site.data.publication_cards.u1_snrnp lang=language %}
+              {% else %}
+                <article class="representative-publication-card" data-publication-id="{{ publication.id }}" data-research-category="{{ category.id }}">
+                  <div class="representative-publication-card__visual" data-research-category="{{ category.id }}" aria-hidden="true">
+                    <span class="representative-publication-card__year">{{ representative.year }}</span>
+                    <strong>{{ representative.venue }}</strong>
+                    <span class="representative-publication-card__signal"></span>
+                  </div>
+
+                  <div class="representative-publication-card__content">
+                    <p class="representative-publication-card__eyebrow">{{ category_label }} · {{ representative.year }}</p>
+                    <h4>{{ representative.title }}</h4>
+                    <p class="representative-publication-card__venue">{{ representative.venue }}</p>
+
+                    <details class="representative-publication-card__citation">
+                      <summary>{{ ui.citation_label }}</summary>
+                      <p>{{ publication.citation | escape }}</p>
+                    </details>
+
+                    {% if publication.links.article %}
+                      <div class="publication-entry-actions">
+                        <a href="{{ publication.links.article }}">{{ ui.article_label }}</a>
+                      </div>
+                    {% endif %}
+                  </div>
+                </article>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </section>
+    {% endunless %}
+  {% endfor %}
+</div>

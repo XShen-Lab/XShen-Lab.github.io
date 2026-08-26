@@ -1,0 +1,253 @@
+years:
+  - 2025
+  - 2024
+  - 2023
+  - 2022
+  - 2021
+  - 2020
+  - 2019
+  - 2018
+  - 2017
+  - 2016
+  - 2015
+  - 2013
+  - 2012
+  - 2011
+  - 2010
+  - 2009
+  - 2008
+  - 2006
+  - 2005
+  - 2004
+  - 2002
+  - 2001
+  - 1998
+
+ui:
+  en:
+    representative_heading: Representative Publications
+    representative_intro: Thirteen published papers identified in the laboratory’s scientific-contribution overview are presented below as the first refined collection.
+    representative_label: Representative published papers
+    citation_label: Full citation
+    read_summary_label: Read summary
+    article_label: View article
+    pdf_label: Download PDF
+    browser_heading: All Publications
+    browser_intro: Browse all 52 formal records by publication year and primary research category. The citation text and CV order remain unchanged.
+    year_label: Publication year
+    category_label: Research category
+    all_years_label: All years
+    all_categories_label: All categories
+    results_template: Showing COUNT publications
+    empty_label: No publications match this year and category.
+  zh-CN:
+    representative_heading: 代表性论文
+    representative_intro: 以下将实验室科学贡献概述中已经明确列出的 13 篇正式论文，作为第一批精修代表作集中呈现。
+    representative_label: 代表性已发表论文
+    citation_label: 完整引用
+    read_summary_label: 阅读简介
+    article_label: 查看论文
+    pdf_label: 下载 PDF
+    browser_heading: 完整论文目录
+    browser_intro: 可按照发表年份与主要研究类别交叉浏览全部 52 条正式记录；引用文字和简历顺序保持不变。
+    year_label: 发表年份
+    category_label: 研究类别
+    all_years_label: 全部年份
+    all_categories_label: 全部类别
+    results_template: 当前显示 COUNT 篇论文
+    empty_label: 该年份和类别下暂无论文。
+
+categories:
+  - id: genome-organization
+    label:
+      en: Genome Organization
+      zh-CN: 基因组组织
+    title:
+      en: Genome organization and spatial encoding of biological information
+      zh-CN: 基因组组织与生物信息的空间编码
+    description:
+      en: >-
+        Repetitive elements are not inert genomic material: their sequence identities contribute to homotypic clustering, chromatin compartmentalization, and coordinated regulation, establishing a spatial layer of biological information.
+      zh-CN: >-
+        重复元件并非惰性的基因组材料；其序列特征参与同类聚集、染色质区室化与协调调控，构成生物信息的空间层次。
+  - id: rna-networks
+    label:
+      en: RNA Networks
+      zh-CN: RNA 网络
+    title:
+      en: RNA meshwork and nuclear information-processing environments
+      zh-CN: RNA 网状体系与细胞核信息处理环境
+    description:
+      en: >-
+        The laboratory established genomic proximity as a principle of lncRNA-mediated cis regulation and revealed that nascent RNA and RNA-binding proteins organize transcriptional machinery, chromatin association, and nuclear environments through phase separation and RNA homeostasis.
+      zh-CN: >-
+        实验室确立了基因组邻近性作为 lncRNA 顺式调控原则，并揭示新生 RNA 和 RNA 结合蛋白通过相分离与 RNA 稳态组织转录机器、染色质关联和细胞核环境。
+  - id: transcriptional-surveillance
+    label:
+      en: Transcriptional Surveillance
+      zh-CN: 转录监控
+    title:
+      en: Transcriptional surveillance and selection of productive biological information
+      zh-CN: 转录监控与有效生物信息选择
+    description:
+      en: >-
+        Ongoing studies examine how RNA Polymerase II activity, RNA processing, RNA degradation, and quality control select productive outputs from pervasive genome activity. The CV identifies these studies as unpublished and does not identify a formal published paper for this contribution; their manuscript titles are therefore omitted.
+      zh-CN: >-
+        正在开展的研究关注 RNA 聚合酶 II 活性、RNA 加工、RNA 降解和质量控制如何从广泛基因组活动中选择有效输出。简历将这些研究标注为未发表，且未在该贡献项下列出正式发表论文，因此不公开相关稿件标题。
+  - id: cell-fate-dynamics
+    label:
+      en: Cell Fate Dynamics
+      zh-CN: 细胞命运动力学
+    title:
+      en: Probabilistic genome activity and stabilization of cell fate
+      zh-CN: 概率性基因组活动与细胞命运稳定化
+    description:
+      en: >-
+        scFLUENT-seq revealed that genome activity in individual cells is sparse and probabilistic. The publication reports a cell-type-dependent range of approximately 0.02%–3.1% of the genome transcribed per cell, supporting a model in which stable cellular identities emerge through statistical stabilization of stochastic transcription.
+      zh-CN: >-
+        scFLUENT-seq 揭示了单细胞基因组活动的稀疏性和概率性。论文报告每个细胞转录约 0.02%–3.1% 的基因组，范围取决于细胞类型，支持稳定细胞身份由随机转录的统计性稳定产生这一模型。
+  - id: foundations
+    label:
+      en: Foundations
+      zh-CN: 基础研究
+    title:
+      en: Foundations in stress signaling and epigenetic regulation of cell fate
+      zh-CN: 应激信号与细胞命运表观遗传调控基础
+    description:
+      en: >-
+        Earlier work defined conserved mechanisms of the unfolded protein response and identified Polycomb regulators that balance stem-cell self-renewal and differentiation, providing foundations for the laboratory’s current cell-fate questions.
+      zh-CN: >-
+        早期研究阐明了保守的未折叠蛋白反应机制，并鉴定出调控干细胞自我更新与分化平衡的 Polycomb 调控因子，为实验室当前的细胞命运问题奠定基础。
+  - id: other
+    label:
+      en: Other
+      zh-CN: 其他
+    title:
+      en: Other publications
+      zh-CN: 其他论文
+    description:
+      en: >-
+        Formal records not assigned to one of the five current research programs.
+      zh-CN: >-
+        尚未归入五个当前研究方向的正式记录。
+
+representatives:
+  - publication_id: pub-cv-013
+    category: genome-organization
+    title: Homotypic clustering of L1 and B1/Alu repeats compartmentalizes the 3D genome
+    venue: Cell Research
+    year: 2021
+  - publication_id: pub-cv-016
+    category: genome-organization
+    title: Genomic repeats categorize genes with distinct functions for orchestrated regulation
+    venue: Cell Reports
+    year: 2020
+  - publication_id: pub-cv-005
+    category: rna-networks
+    title: Nuclear RNA homeostasis promotes systems-level coordination for cell fate and vitality
+    venue: Cell Stem Cell
+    year: 2024
+  - publication_id: pub-cv-010
+    category: rna-networks
+    title: Phase separation of RNA-binding protein promotes polymerase engagement and transcription
+    venue: Nature Chemical Biology
+    year: 2022
+  - publication_id: pub-cv-015
+    category: rna-networks
+    title: U1 snRNP regulates chromatin retention of noncoding RNAs
+    venue: Nature
+    year: 2020
+  - publication_id: pub-cv-025
+    category: rna-networks
+    title: RNA targets ribosome biogenesis factor WDR43 to chromatin for transcription and pluripotency control
+    venue: Molecular Cell
+    year: 2019
+  - publication_id: pub-cv-024
+    category: rna-networks
+    title: The lncRNA Hand2os1/Uph locus orchestrates heart development through regulation of precise expression HAND2
+    venue: Development
+    year: 2019
+  - publication_id: pub-cv-031
+    category: rna-networks
+    title: Divergent lncRNAs regulate gene expression and lineage differentiation in pluripotent cells
+    venue: Cell Stem Cell
+    year: 2016
+  - publication_id: pub-cv-032
+    category: rna-networks
+    title: Opposing roles for the lncRNA Haunt and its genomic locus in regulating HOXA gene activation during embryonic stem cell differentiation
+    venue: Cell Stem Cell
+    year: 2015
+  - publication_id: pub-2025-scfluent-seq
+    category: cell-fate-dynamics
+    title: Single-cell nascent transcription reveals sparse genome usage and plasticity
+    venue: Cell
+    year: 2025
+  - publication_id: pub-cv-040
+    category: foundations
+    title: Jumonji modulates Polycomb activity and self-renewal versus differentiation of stem cells
+    venue: Cell
+    year: 2009
+  - publication_id: pub-cv-043
+    category: foundations
+    title: EZH1 mediates methylation on histone H3 lysine 27 and complements EZH2 in maintaining stem cell identity and executing pluripotency
+    venue: Molecular Cell
+    year: 2008
+  - publication_id: pub-cv-051
+    category: foundations
+    title: Complementary signaling pathways regulate the unfolded protein response and are required for C. elegans development
+    venue: Cell
+    year: 2001
+
+records:
+  pub-2025-scfluent-seq: { year: 2025, category: cell-fate-dynamics }
+  pub-cv-002: { year: 2025, category: rna-networks }
+  pub-cv-003: { year: 2025, category: rna-networks }
+  pub-cv-004: { year: 2024, category: other }
+  pub-cv-005: { year: 2024, category: rna-networks }
+  pub-cv-006: { year: 2024, category: genome-organization }
+  pub-cv-007: { year: 2024, category: genome-organization }
+  pub-cv-008: { year: 2023, category: genome-organization }
+  pub-cv-009: { year: 2023, category: rna-networks }
+  pub-cv-010: { year: 2022, category: rna-networks }
+  pub-cv-011: { year: 2022, category: rna-networks }
+  pub-cv-012: { year: 2022, category: rna-networks }
+  pub-cv-013: { year: 2021, category: genome-organization }
+  pub-cv-014: { year: 2021, category: rna-networks }
+  pub-cv-015: { year: 2020, category: rna-networks }
+  pub-cv-016: { year: 2020, category: genome-organization }
+  pub-cv-017: { year: 2020, category: genome-organization }
+  pub-cv-018: { year: 2020, category: rna-networks }
+  pub-cv-019: { year: 2020, category: rna-networks }
+  pub-cv-020: { year: 2020, category: rna-networks }
+  pub-cv-021: { year: 2020, category: genome-organization }
+  pub-cv-022: { year: 2020, category: genome-organization }
+  pub-cv-023: { year: 2019, category: rna-networks }
+  pub-cv-024: { year: 2019, category: rna-networks }
+  pub-cv-025: { year: 2019, category: rna-networks }
+  pub-cv-026: { year: 2019, category: rna-networks }
+  pub-cv-027: { year: 2018, category: genome-organization }
+  pub-cv-028: { year: 2018, category: cell-fate-dynamics }
+  pub-cv-029: { year: 2018, category: genome-organization }
+  pub-cv-030: { year: 2017, category: rna-networks }
+  pub-cv-031: { year: 2016, category: rna-networks }
+  pub-cv-032: { year: 2015, category: rna-networks }
+  pub-cv-033: { year: 2015, category: cell-fate-dynamics }
+  pub-cv-034: { year: 2015, category: foundations }
+  pub-cv-035: { year: 2013, category: genome-organization }
+  pub-cv-036: { year: 2012, category: foundations }
+  pub-cv-037: { year: 2012, category: foundations }
+  pub-cv-038: { year: 2011, category: foundations }
+  pub-cv-039: { year: 2010, category: foundations }
+  pub-cv-040: { year: 2009, category: foundations }
+  pub-cv-041: { year: 2009, category: foundations }
+  pub-cv-042: { year: 2008, category: foundations }
+  pub-cv-043: { year: 2008, category: foundations }
+  pub-cv-044: { year: 2008, category: foundations }
+  pub-cv-045: { year: 2006, category: foundations }
+  pub-cv-046: { year: 2006, category: foundations }
+  pub-cv-047: { year: 2005, category: foundations }
+  pub-cv-048: { year: 2004, category: foundations }
+  pub-cv-049: { year: 2002, category: foundations }
+  pub-cv-050: { year: 2002, category: foundations }
+  pub-cv-051: { year: 2001, category: foundations }
+  pub-cv-052: { year: 1998, category: other }

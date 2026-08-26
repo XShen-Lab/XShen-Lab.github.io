@@ -1,0 +1,57 @@
+{% assign language = include.lang | default: "en" %}
+{% assign browser_data = site.data.publication_browser %}
+{% assign ui = browser_data.ui[language] | default: browser_data.ui.en %}
+{% assign publication_records = site.data.publications.records | sort: "cv_order" %}
+
+<div
+  class="publication-browser"
+  data-publication-browser
+  data-results-template="{{ ui.results_template | escape }}"
+  data-empty-label="{{ ui.empty_label | escape }}"
+>
+  <div class="publication-browser__years">
+    <p id="publication-year-label">{{ ui.year_label }}</p>
+    <div class="publication-year-rail" role="group" aria-labelledby="publication-year-label">
+      <button type="button" data-publication-year="all" aria-pressed="true">
+        <span>{{ ui.all_years_label }}</span><small data-filter-count></small>
+      </button>
+      {% for year in browser_data.years %}
+        <button type="button" data-publication-year="{{ year }}" aria-pressed="false">
+          <span>{{ year }}</span><small data-filter-count></small>
+        </button>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="publication-browser__body">
+    <aside class="publication-category-rail" aria-labelledby="publication-category-label">
+      <p id="publication-category-label">{{ ui.category_label }}</p>
+      <button type="button" data-publication-category="all" aria-pressed="true">
+        <span>{{ ui.all_categories_label }}</span><small data-filter-count></small>
+      </button>
+      {% for category in browser_data.categories %}
+        {% assign category_label = category.label[language] | default: category.label.en %}
+        <button type="button" data-publication-category="{{ category.id }}" aria-pressed="false">
+          <span>{{ category_label }}</span><small data-filter-count></small>
+        </button>
+      {% endfor %}
+    </aside>
+
+    <div class="publication-browser__results" id="publication-results">
+      <p class="publication-browser__status" data-publication-status aria-live="polite">{{ ui.results_template | replace: "COUNT", publication_records.size }}</p>
+      {% if site.publications_v2.enabled %}{% include publications/list.html %}{% else %}{% include full-publications.html %}{% endif %}
+      <p class="publication-browser__empty" data-publication-empty hidden>{{ ui.empty_label }}</p>
+    </div>
+  </div>
+
+  <script type="application/json" data-publication-records>
+    [
+      {% for publication in publication_records %}
+        {% assign browser_record = browser_data.records[publication.id] %}
+        {"id":{{ publication.id | jsonify }},"year":{{ browser_record.year | jsonify }},"category":{{ browser_record.category | jsonify }}}{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  </script>
+</div>
+
+<script src="{{ '/_scripts/publications-browser.js' | relative_url }}" defer></script>

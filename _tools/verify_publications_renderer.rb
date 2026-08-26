@@ -15,6 +15,9 @@ CONFIG_PATH = File.join(ROOT, "_config.yaml")
 LEGACY_PATH = File.join(ROOT, "_includes", "full-publications.html")
 LIST_PATH = File.join(ROOT, "_includes", "publications", "list.html")
 DATA_PATH = File.join(ROOT, "_data", "publications.yml")
+BROWSER_DATA_PATH = File.join(ROOT, "_data", "publication_browser.yml")
+BROWSER_INCLUDE_PATH = File.join(ROOT, "_includes", "publications", "browser.html")
+REPRESENTATIVES_INCLUDE_PATH = File.join(ROOT, "_includes", "publications", "representatives.html")
 LAYOUT_PATH = File.join(ROOT, "_layouts", "publication.html")
 META_PATH = File.join(ROOT, "_includes", "meta.html")
 ENRICHMENT_PATH = File.join(ROOT, "_publications", "2025-scfluent-seq.md")
@@ -39,6 +42,21 @@ APPROVED_SEQUENCE_SHA256 = "2526131b41eae70abd0d7e1d4509543c590e9b9246771471e193
 APPROVED_PRE_REFACTOR_DETAIL_SHA256 =
   "fb5111662587f5715d0872014940ad509d15b75c6913a02212d0f05a27a4989d".freeze
 EXPECTED_COUNT = 52
+EXPECTED_REPRESENTATIVE_IDS = %w[
+  pub-cv-013
+  pub-cv-016
+  pub-cv-005
+  pub-cv-010
+  pub-cv-015
+  pub-cv-025
+  pub-cv-024
+  pub-cv-031
+  pub-cv-032
+  pub-2025-scfluent-seq
+  pub-cv-040
+  pub-cv-043
+  pub-cv-051
+].freeze
 SCFLUENT_ID = "pub-2025-scfluent-seq".freeze
 ENGLISH_DETAIL_URL = "/publications/2025-scfluent-seq/".freeze
 CHINESE_DETAIL_URL = "/zh/publications/2025-scfluent-seq/".freeze
@@ -138,16 +156,28 @@ def verify_renderer_wiring!
   fail_unless(!list_source.include?("full-publications.html"),
               "data-driven list unexpectedly delegates to the legacy include")
 
+  browser_source = File.read(BROWSER_INCLUDE_PATH, encoding: "UTF-8")
+  fail_unless(browser_source.include?(EXPECTED_SWITCH),
+              "publication browser does not preserve the verified feature-flag switch")
+  fail_unless(browser_source.include?('site.data.publications.records | sort: "cv_order"'),
+              "publication browser does not sort canonical records by cv_order")
+  fail_unless(browser_source.include?("site.data.publication_browser"),
+              "publication browser no longer reads the year/category display mapping")
+
+  representatives_source = File.read(REPRESENTATIVES_INCLUDE_PATH, encoding: "UTF-8")
+  fail_unless(representatives_source.include?('site.data.publications.records | sort: "cv_order"'),
+              "representative collection does not sort canonical records by cv_order")
+  fail_unless(representatives_source.include?('where: "id", representative.publication_id'),
+              "representative collection does not resolve canonical records by publication_id")
+  fail_unless(representatives_source.include?('site.publications | where: "publication_id", publication.id'),
+              "representative collection does not resolve scFLUENT enrichment by publication_id")
+
   PAGE_SOURCE_PATHS.each do |path|
     source = File.read(path, encoding: "UTF-8")
-    fail_unless(source.include?(EXPECTED_SWITCH),
-                "#{path.delete_prefix(ROOT + "/")} does not preserve the verified feature-flag switch")
-    fail_unless(source.include?('site.data.publications.records | sort: "cv_order"'),
-                "#{path.delete_prefix(ROOT + "/")} does not sort canonical records by cv_order")
-    fail_unless(source.include?("publication.presentation.featured"),
-                "#{path.delete_prefix(ROOT + "/")} does not select featured canonical records")
-    fail_unless(source.include?('site.publications | where: "publication_id", publication.id'),
-                "#{path.delete_prefix(ROOT + "/")} does not resolve enrichment by exact publication_id")
+    fail_unless(source.include?("publications/representatives.html"),
+                "#{path.delete_prefix(ROOT + "/")} does not render the representative collection")
+    fail_unless(source.include?("publications/browser.html"),
+                "#{path.delete_prefix(ROOT + "/")} does not render the year/category browser")
     fail_unless(!source.include?('site.publications | sort: "date"') &&
                 !source.include?("paper.url"),
                 "#{path.delete_prefix(ROOT + "/")} still depends on collection date/order or filename URL")
@@ -173,6 +203,38 @@ def verify_renderer_wiring!
               "meta include does not use the localized publication summary")
   fail_unless(meta_source.include?("publication_enrichment.graphical_abstract.path | absolute_url"),
               "meta include does not use an absolute graphical-abstract social image")
+end
+
+def verify_browser_data!(records)
+  data = load_yaml(BROWSER_DATA_PATH)
+  canonical_ids = records.map { |record| record.fetch("id") }
+  mapping = data.fetch("records")
+  category_ids = data.fetch("categories").map { |category| category.fetch("id") }
+  years = data.fetch("years")
+  representatives = data.fetch("representatives")
+
+  fail_unless(mapping.keys.sort == canonical_ids.sort,
+              "publication browser mapping must cover each canonical record exactly once")
+  fail_unless(mapping.values.all? { |entry| years.include?(entry["year"]) },
+              "publication browser contains a year outside the horizontal year rail")
+  fail_unless(mapping.values.all? { |entry| category_ids.include?(entry["category"]) },
+              "publication browser contains an unknown research category")
+
+  representative_ids = representatives.map { |entry| entry.fetch("publication_id") }
+  fail_unless(representative_ids == EXPECTED_REPRESENTATIVE_IDS,
+              "representative collection IDs/order differ from the approved 13-paper selection")
+  fail_unless(representative_ids.uniq.length == EXPECTED_REPRESENTATIVE_IDS.length,
+              "representative collection contains duplicate records")
+  representatives.each do |entry|
+    fail_unless(canonical_ids.include?(entry.fetch("publication_id")),
+                "representative collection references a non-canonical publication")
+    fail_unless(category_ids.include?(entry.fetch("category")),
+                "representative collection contains an unknown category")
+    fail_unless(entry.fetch("title").is_a?(String) && !entry.fetch("title").empty? &&
+                entry.fetch("venue").is_a?(String) && !entry.fetch("venue").empty? &&
+                entry.fetch("year").is_a?(Integer),
+                "representative collection contains incomplete display metadata")
+  end
 end
 
 def read_built_pages(destination, mode)
@@ -322,6 +384,25 @@ def verify_featured_card!(html, label, language, publication, enrichment)
               "#{label} featured card exposes a PDF action")
 end
 
+def verify_representative_collection!(html, label, records)
+  representative_ids = html.scan(/<article\b[^>]*\bdata-publication-id="([^"]+)"/i).flatten
+  fail_unless(representative_ids == EXPECTED_REPRESENTATIVE_IDS,
+              "#{label} representative card IDs/order differ from the approved 13-paper selection")
+
+  representative_ids.each do |publication_id|
+    fail_unless(records.any? { |record| record.fetch("id") == publication_id },
+                "#{label} representative card #{publication_id} is not canonical")
+  end
+
+  json_source = html[/<script\b[^>]*\bdata-publication-records(?:="")?[^>]*>(.*?)<\/script>/mi, 1]
+  fail_unless(json_source, "#{label} publication browser has no record mapping")
+  browser_records = JSON.parse(json_source)
+  fail_unless(browser_records.length == EXPECTED_COUNT,
+              "#{label} publication browser maps #{browser_records.length} records, expected #{EXPECTED_COUNT}")
+  fail_unless(browser_records.map { |record| record.fetch("id") } == records.map { |record| record.fetch("id") },
+              "#{label} publication browser mapping does not preserve canonical CV order")
+end
+
 def verify_mode!(pages, mode, legacy, records, enrichment)
   lists = PAGE_PATHS.keys.to_h do |language|
     list = extract_publication_list(pages.fetch(language), "#{mode} #{language}")
@@ -341,6 +422,7 @@ def verify_mode!(pages, mode, legacy, records, enrichment)
     verify_featured_card!(
       pages.fetch(language), "#{mode} #{language}", language, featured.first, enrichment
     )
+    verify_representative_collection!(pages.fetch(language), "#{mode} #{language}", records)
   end
 
   verify_english_detail_output!(pages.fetch("English Detail"), mode, featured.first, enrichment)
@@ -527,6 +609,7 @@ end
 
 def without_publication_list(page, list_html)
   page.sub(list_html, "<!-- verified-full-publications-list -->")
+      .gsub(/\s*<!-- verified-full-publications-list -->\s*/, "\n<!-- verified-full-publications-list -->\n")
 end
 
 def verify_mode_parity!(production_pages, production_lists, rollback_pages, rollback_lists)
@@ -557,6 +640,7 @@ def verify!
 
   legacy = legacy_citations
   records = canonical_records
+  verify_browser_data!(records)
   canonical = canonical_citations(records)
   enrichment = enrichment_document
   verify_approved_sequence!("legacy bibliography", legacy)
@@ -567,14 +651,14 @@ def verify!
   production_pages = build_production_pages
   production_lists = verify_mode!(production_pages, "production mode", legacy, records, enrichment)
   puts "PASS publications renderer production mode: enabled=true; data-driven English=52/Chinese=52; " \
-       "featured cards English=1/Chinese=1; bilingual scFLUENT-seq routes and localized detail output; " \
+       "representative cards English=13/Chinese=13; bilingual scFLUENT-seq routes and localized detail output; " \
        "page-specific canonical/social/JSON-LD metadata; approved order, visible text, checksum, " \
        "and English pre-refactor detail parity."
 
   rollback_pages = build_rollback_pages
   rollback_lists = verify_mode!(rollback_pages, "rollback mode", legacy, records, enrichment)
   puts "PASS publications renderer rollback mode: enabled=false override; legacy English=52/Chinese=52; " \
-       "featured cards English=1/Chinese=1; bilingual scFLUENT-seq routes and localized detail output; " \
+       "representative cards English=13/Chinese=13; bilingual scFLUENT-seq routes and localized detail output; " \
        "page-specific canonical/social/JSON-LD metadata; approved order, visible text, checksum, URLs, " \
        "and English pre-refactor detail parity."
 
