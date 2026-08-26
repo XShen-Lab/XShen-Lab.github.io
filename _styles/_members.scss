@@ -10,7 +10,7 @@
   margin: 0 0 18px;
   color: var(--primary);
   font-family: var(--code);
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -44,7 +44,7 @@
   border-right: 1px solid var(--line);
   color: var(--text-soft);
   font-family: var(--code);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   letter-spacing: 0.02em;
   text-decoration: none;
   transition: background var(--transition), color var(--transition);
@@ -131,14 +131,14 @@
 .people-pi-card__identity > span:last-child {
   max-width: 31ch;
   color: #c9d8d3;
-  font-size: 0.84rem;
-  line-height: 1.5;
+  font-size: 0.92rem;
+  line-height: 1.6;
 }
 
 .people-pi-card__role {
   color: #35e6bf;
   font-family: var(--code);
-  font-size: 0.67rem;
+  font-size: 0.74rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -171,8 +171,8 @@
   padding: 12px 0;
   border-top: 1px solid var(--line);
   color: var(--text-soft);
-  font-size: 0.86rem;
-  line-height: 1.62;
+  font-size: 0.95rem;
+  line-height: 1.7;
   text-align: left;
 }
 
@@ -183,7 +183,7 @@
 .people-pi-card__block li strong {
   color: var(--primary);
   font-family: var(--code);
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -197,7 +197,7 @@
   border-bottom: 1px solid currentcolor;
   color: var(--text);
   font-family: var(--code);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   letter-spacing: 0.06em;
   text-decoration: none;
   grid-column: 1 / -1;
@@ -231,7 +231,7 @@
   margin: 0;
   color: var(--text-soft);
   font-family: var(--code);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
@@ -258,7 +258,7 @@
   background: transparent;
   color: var(--text);
   font-family: var(--code);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   transition: background var(--transition), color var(--transition), opacity var(--transition);
 }
 
@@ -384,7 +384,7 @@
   margin: 0 0 5px;
   color: var(--primary);
   font-family: var(--code);
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -392,8 +392,8 @@
 
 .member-gallery .portrait-affiliation {
   color: var(--text-soft);
-  font-size: 0.76rem;
-  line-height: 1.45;
+  font-size: 0.84rem;
+  line-height: 1.55;
 }
 
 .member-gallery__progress {
@@ -437,7 +437,7 @@
 .people-placeholder span {
   color: var(--primary);
   font-family: var(--code);
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -519,7 +519,7 @@
   background: rgb(7 17 15 / 34%);
   color: #eff8f4;
   font-family: var(--code);
-  font-size: 0.66rem;
+  font-size: 0.74rem;
   letter-spacing: 0.05em;
   text-decoration: none;
   backdrop-filter: blur(10px);
@@ -534,7 +534,7 @@
   margin: 0 0 15px;
   color: #35e6bf;
   font-family: var(--code);
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -553,8 +553,8 @@
   display: block;
   max-width: 38ch;
   color: #c5d4cf;
-  font-size: 0.82rem;
-  line-height: 1.55;
+  font-size: 0.9rem;
+  line-height: 1.62;
 }
 
 .member-profile__links {
@@ -572,7 +572,7 @@
   border: 1px solid rgb(239 248 244 / 30%);
   color: #eff8f4;
   font-family: var(--code);
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   backdrop-filter: blur(10px);
 }
 
@@ -671,8 +671,8 @@
 
 .page-inner main .member-profile__longform p,
 .page-inner main .member-profile__longform li {
-  font-size: 0.94rem;
-  line-height: 1.75;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
 .js .member-profile__module[data-reveal] {

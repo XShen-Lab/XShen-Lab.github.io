@@ -6,7 +6,7 @@ title: 论文发表
 
 # 论文发表
 
-以下成果围绕**生物信息流：从基因组到细胞命运**组织。顶部特色卡片由规范论文数据选定，并链接至 scFLUENT-seq 中文详情页；完整目录严格沿用简历中正式 FULL PUBLICATIONS 部分的顺序与内容。
+以下成果围绕**生物信息流：从基因组到细胞命运**组织。顶部特色卡片结合经核对的论文信息与相应科学材料：scFLUENT-seq 卡片链接至已有中文详情页，U1 snRNP 卡片链接至正式发表页面。完整目录严格沿用简历中正式 FULL PUBLICATIONS 部分的顺序与内容。
 
 {% assign publication_records = site.data.publications.records | sort: "cv_order" %}
 
@@ -46,6 +46,7 @@ title: 论文发表
       </article>
     {% endif %}
   {% endfor %}
+  {% include publications/featured-card.html card=site.data.publication_cards.u1_snrnp lang="zh-CN" %}
 </div>
 
 <div class="pub-nav">

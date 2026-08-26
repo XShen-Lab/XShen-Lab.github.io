@@ -105,7 +105,7 @@
   min-width: 56px;
   color: var(--text-soft);
   font-family: var(--code);
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   letter-spacing: 0.12em;
 }
 
@@ -213,7 +213,7 @@
   gap: 10px 18px;
   color: var(--text-soft);
   font-family: var(--code);
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   letter-spacing: 0.12em;
   line-height: 1.5;
   text-transform: uppercase;
@@ -271,7 +271,7 @@
   gap: 8px;
   color: var(--text-soft);
   font-family: var(--code);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
 }
 
 .blog-card-footer > a {
@@ -314,7 +314,7 @@
 
 .rna-news .blog-card-copy > p,
 .rna-news .blog-card-meta,
-.rna-news .blog-card-footer { color: #a9bbb5; }
+.rna-news .blog-card-footer { color: #bdcbc6; }
 
 .rna-news .blog-pin { color: #5df1cf; }
 
@@ -344,9 +344,9 @@
 .blog-back {
   width: fit-content;
   margin-bottom: clamp(70px, 10vw, 130px);
-  color: #a9bbb5;
+  color: #bdcbc6;
   font-family: var(--code);
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   letter-spacing: 0.08em;
   text-decoration: none;
   text-transform: uppercase;
@@ -361,7 +361,7 @@
 
 .blog-back:hover span { transform: translateX(-4px); }
 
-.blog-post .blog-post-kicker { color: #a9bbb5; }
+.blog-post .blog-post-kicker { color: #bdcbc6; }
 .blog-post .blog-pin { color: #5df1cf; }
 
 .page-post .blog-post-header h1 {
@@ -405,9 +405,9 @@ html[lang="zh-CN"] .page-post .blog-post-header h1.blog-post-title-wide {
   margin-top: 36px;
   align-items: center;
   gap: 10px;
-  color: #91aaa2;
+  color: #afc0ba;
   font-family: var(--code);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   letter-spacing: 0.04em;
 }
 
@@ -494,7 +494,7 @@ html[lang="zh-CN"] .page-post .blog-post-body p {
   border: 1px solid var(--line);
   color: var(--text-soft);
   font-family: var(--code);
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   line-height: 1;
 }
 

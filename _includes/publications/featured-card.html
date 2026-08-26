@@ -1,0 +1,29 @@
+{% assign card = include.card %}
+{% assign language = include.lang | default: "en" %}
+{% assign localized = card.localized[language] | default: card.localized.en %}
+{% assign image_alt = card.image.alt[language] | default: card.image.alt.en %}
+{% assign image_credit = card.image.credit[language] | default: card.image.credit.en %}
+
+<article class="publication-paper-card" data-publication-id="{{ card.publication_id }}">
+  <figure class="publication-paper-card__figure">
+    <a class="publication-entry-image" href="{{ card.article_url }}" aria-label="{{ localized.article_label | escape }} — {{ card.title | escape }}">
+      <img src="{{ card.image.path | relative_url }}" alt="{{ image_alt | escape }}" loading="lazy">
+    </a>
+    <figcaption>{{ image_credit }}</figcaption>
+  </figure>
+
+  <div class="publication-entry-content">
+    <div class="publication-entry-meta">{{ card.venue }} · {{ card.year }}</div>
+    <h3><a href="{{ card.article_url }}">{{ card.title }}</a></h3>
+    <p class="publication-entry-authors">{{ card.authors }}</p>
+    <p>{{ localized.summary }}</p>
+
+    <div class="publication-entry-tags">
+      {% for tag in localized.tags %}<span>{{ tag }}</span>{% endfor %}
+    </div>
+
+    <div class="publication-entry-actions">
+      <a href="{{ card.article_url }}">{{ localized.article_label }}</a>
+    </div>
+  </div>
+</article>

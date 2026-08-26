@@ -9,7 +9,7 @@ nav:
 
 # Publications
 
-The work below is organized around **Biological Information Flow: From Genome to Cell Fate**. The featured card is selected from canonical publication data and links to the existing scFLUENT-seq detail page; the complete bibliography follows the order and wording of the CV’s formal FULL PUBLICATIONS section.
+The work below is organized around **Biological Information Flow: From Genome to Cell Fate**. The featured cards pair verified publication data with paper-specific scientific material: the scFLUENT-seq card links to its existing detail page, and the U1 snRNP card links to the published article. The complete bibliography follows the order and wording of the CV’s formal FULL PUBLICATIONS section.
 
 {% assign publication_records = site.data.publications.records | sort: "cv_order" %}
 
@@ -53,6 +53,7 @@ The work below is organized around **Biological Information Flow: From Genome to
       </article>
     {% endif %}
   {% endfor %}
+  {% include publications/featured-card.html card=site.data.publication_cards.u1_snrnp lang="en" %}
 </div>
 
 <div class="pub-nav">

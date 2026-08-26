@@ -1,6 +1,7 @@
 /* XShen Lab editorial system ------------------------------------------------ */
 
 html {
+  font-size: clamp(16px, calc(15px + 0.14vw), 17px);
   scroll-behavior: smooth;
   scroll-padding-top: 92px;
 }
@@ -10,6 +11,7 @@ body {
   background: var(--background);
   color: var(--text);
   font-family: var(--body);
+  line-height: 1.65;
   text-align: left;
 }
 
@@ -41,9 +43,10 @@ body {
 
 a { text-underline-offset: 0.2em; }
 
-p {
+:where(p, li) {
   color: var(--text-soft);
   text-align: left;
+  text-wrap: pretty;
 }
 
 h1,
@@ -139,9 +142,9 @@ html[lang="zh-CN"] :where(p, a, nav, span, small, address) {
 }
 
 .site-header .subtitle {
-  color: #a9bbb5;
+  color: #bdcbc6;
   font-family: var(--code);
-  font-size: 0.56rem;
+  font-size: 0.63rem;
   font-weight: 400;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -160,8 +163,8 @@ html[lang="zh-CN"] :where(p, a, nav, span, small, address) {
   position: relative;
   min-height: 44px;
   padding: 13px 0 10px;
-  color: #c8d7d2;
-  font-size: clamp(0.69rem, 0.82vw, 0.8rem);
+  color: #d6e0dd;
+  font-size: clamp(0.74rem, 0.82vw, 0.84rem);
   font-weight: 650;
   letter-spacing: 0.025em;
   white-space: nowrap;
@@ -262,9 +265,9 @@ main { padding-top: 76px; }
 
 .page-inner main p,
 .page-inner main li {
-  max-width: 82ch;
-  font-size: 1rem;
-  line-height: 1.85;
+  max-width: 72ch;
+  font-size: clamp(1rem, 0.3vw + 0.94rem, 1.075rem);
+  line-height: 1.8;
 }
 
 .page-inner main .right:first-child {
@@ -325,7 +328,7 @@ main { padding-top: 76px; }
   margin: 0 0 22px;
   color: var(--primary) !important;
   font-family: var(--code) !important;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.14em;
   line-height: 1.4 !important;
@@ -382,7 +385,7 @@ main { padding-top: 76px; }
   gap: 10px;
   border-bottom: 1px solid currentColor;
   color: var(--primary);
-  font-size: 0.84rem;
+  font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;
 }
@@ -402,7 +405,7 @@ main { padding-top: 76px; }
   border-radius: 0;
   color: #eff8f4;
   font-family: var(--body);
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   font-weight: 750;
   text-decoration: none;
   transition: color var(--transition), background var(--transition), border-color var(--transition), transform var(--transition);
@@ -459,9 +462,9 @@ main { padding-top: 76px; }
 
 .rna-hero h1 small {
   margin-bottom: 18px;
-  color: #8ea39d;
+  color: #aebeb9;
   font-family: var(--code);
-  font-size: clamp(0.65rem, 1vw, 0.85rem);
+  font-size: clamp(0.74rem, 1vw, 0.88rem);
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
@@ -486,8 +489,9 @@ main { padding-top: 76px; }
 .rna-hero-intro {
   max-width: 590px;
   margin: 20px 0 0;
-  color: #a9bbb5 !important;
-  font-size: clamp(0.92rem, 1.3vw, 1.05rem);
+  color: #bdcbc6 !important;
+  font-size: clamp(1rem, 1.3vw, 1.08rem);
+  line-height: 1.75;
 }
 
 .rna-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
@@ -552,9 +556,9 @@ main { padding-top: 76px; }
   inset: 12% 8% auto auto;
   display: grid;
   gap: 12px;
-  color: rgb(217 237 231 / 55%);
+  color: rgb(217 237 231 / 72%);
   font-family: var(--code);
-  font-size: 0.62rem;
+  font-size: 0.7rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -569,9 +573,9 @@ main { padding-top: 76px; }
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #70857f;
+  color: #91a69f;
   font-family: var(--code);
-  font-size: 0.62rem;
+  font-size: 0.7rem;
   letter-spacing: 0.12em;
 }
 
@@ -590,7 +594,7 @@ main { padding-top: 76px; }
   color: #10201e;
 }
 
-.rna-tension .rna-section-head p:last-child { color: #405451; }
+.rna-tension .rna-section-head p:last-child { color: #314945; }
 
 .rna-tension-grid {
   display: grid;
@@ -603,9 +607,9 @@ main { padding-top: 76px; }
 .rna-tension-grid article { position: relative; min-height: 330px; padding: 42px 0; overflow: hidden; }
 .rna-tension-grid article:first-child { padding-right: clamp(25px, 5vw, 80px); }
 .rna-tension-grid article:last-child { padding-left: clamp(25px, 5vw, 80px); }
-.rna-tension-grid article > span { color: #087f72; font-family: var(--code); font-size: 0.67rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.rna-tension-grid article > span { color: #087f72; font-family: var(--code); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; }
 .rna-tension-grid h3 { position: relative; z-index: 2; margin: 38px 0 10px; font-size: clamp(2rem, 3.8vw, 4rem); line-height: 1; }
-.rna-tension-grid p { position: relative; z-index: 2; max-width: 410px; color: #405451; }
+.rna-tension-grid p { position: relative; z-index: 2; max-width: 410px; color: #314945; }
 
 .rna-tension-arrow { display: grid; width: clamp(50px, 8vw, 110px); place-items: center; border-inline: 1px solid #173d3630; color: #087f72; font-size: 2rem; }
 
@@ -641,7 +645,7 @@ main { padding-top: 76px; }
   align-self: start;
 }
 
-.rna-flow-intro > p:last-of-type { max-width: 520px; color: #a9bbb5; }
+.rna-flow-intro > p:last-of-type { max-width: 520px; color: #bdcbc6; }
 
 .rna-story-track { width: 100%; height: 1px; margin-top: 46px; background: rgb(255 255 255 / 13%); overflow: hidden; }
 .rna-story-track span { display: block; width: 100%; height: 100%; background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent)); transform: scaleX(var(--story-progress, 0)); transform-origin: left; }
@@ -649,10 +653,10 @@ main { padding-top: 76px; }
 .rna-flow-stages { border-top: 1px solid rgb(255 255 255 / 14%); }
 .rna-flow-stage { position: relative; display: grid; min-height: 42vh; padding: 44px 0; border-bottom: 1px solid rgb(255 255 255 / 14%); align-content: center; grid-template-columns: 70px 1fr; column-gap: 26px; opacity: 0.48; transition: opacity 0.6s ease; }
 .rna-flow-stage.is-active { opacity: 1; }
-.rna-stage-index { grid-row: 1 / span 4; color: var(--primary); font-family: var(--code); font-size: 0.65rem; }
-.rna-stage-label { color: var(--primary); font-family: var(--code); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.rna-stage-index { grid-row: 1 / span 4; color: var(--primary); font-family: var(--code); font-size: 0.72rem; }
+.rna-stage-label { color: var(--primary); font-family: var(--code); font-size: 0.76rem; letter-spacing: 0.12em; text-transform: uppercase; }
 .rna-flow-stage h3 { margin: 18px 0 12px; font-size: clamp(2rem, 4vw, 4.2rem); line-height: 0.95; }
-.rna-flow-stage p { max-width: 480px; margin: 0; color: #a9bbb5; font-size: 1rem; }
+.rna-flow-stage p { max-width: 480px; margin: 0; color: #bdcbc6; font-size: 1.04rem; line-height: 1.75; }
 
 .rna-stage-visual { position: absolute; right: 0; bottom: 35px; width: 145px; height: 90px; opacity: 0.55; overflow: hidden; }
 .rna-stage-visual i { position: absolute; display: block; border: 1px solid var(--primary); transition: transform 0.8s ease, opacity 0.8s ease; }
@@ -679,19 +683,19 @@ main { padding-top: 76px; }
 /* Research programs -------------------------------------------------------- */
 
 .rna-home > .rna-featured-research { background: #f5f3eb; color: #10201e; }
-.rna-featured-research .rna-section-head p { color: #405451; }
+.rna-featured-research .rna-section-head p { color: #314945; }
 
 .rna-research-grid { display: grid; grid-template-columns: repeat(12, 1fr); border-top: 1px solid #173d3630; }
 .rna-research-card { position: relative; display: grid; min-height: 390px; grid-column: span 6; padding: 34px 34px 30px 0; border-bottom: 1px solid #173d3630; color: #10201e; text-decoration: none; overflow: hidden; }
 .rna-research-card:nth-child(odd) { padding-right: clamp(30px, 5vw, 80px); border-right: 1px solid #173d3630; }
 .rna-research-card:nth-child(even) { padding-left: clamp(30px, 5vw, 80px); }
-.rna-research-number { color: #75817e; font-family: var(--code); font-size: 0.64rem; }
-.rna-research-signal { margin-top: 20px; color: #087f72; font-family: var(--code); font-size: 0.67rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.rna-research-number { color: #5e716c; font-family: var(--code); font-size: 0.72rem; }
+.rna-research-signal { margin-top: 20px; color: #087f72; font-family: var(--code); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; }
 .rna-research-copy { display: grid; align-content: center; padding: 36px 0 45px; }
 .rna-research-title { font-family: var(--heading); font-size: clamp(2.2rem, 4vw, 4.2rem); line-height: 0.95; }
 .rna-research-question { max-width: 480px; margin-top: 18px; color: #10201e; font-family: var(--heading); font-size: 1.2rem; line-height: 1.25; }
-.rna-research-text { max-width: 520px; margin-top: 14px; color: #405451; font-size: 0.9rem; line-height: 1.65; }
-.rna-research-card .rna-arrow { align-self: end; color: #087f72; font-size: 0.73rem; font-weight: 700; }
+.rna-research-text { max-width: 520px; margin-top: 14px; color: #314945; font-size: 0.98rem; line-height: 1.72; }
+.rna-research-card .rna-arrow { align-self: end; color: #087f72; font-size: 0.8rem; font-weight: 700; }
 .rna-program-motif { position: absolute; right: 8%; top: 14%; width: 100px; height: 100px; opacity: 0.16; transition: opacity var(--transition), transform var(--transition); }
 .rna-research-card:hover .rna-program-motif { opacity: 0.52; transform: scale(1.08) rotate(3deg); }
 .rna-program-motif i { position: absolute; border: 1px solid #087f72; }
@@ -714,16 +718,16 @@ main { padding-top: 76px; }
 .rna-home > .rna-methods { overflow: hidden; background: linear-gradient(135deg, #0a1714, #10172a 130%); color: #eff8f4; }
 .rna-method-copy { display: grid; grid-template-columns: 1fr 1.35fr; gap: 8vw; align-items: end; }
 .rna-method-copy .rna-section-label { grid-column: 1 / -1; }
-.rna-method-copy p:last-child { max-width: 520px; margin: 0; color: #a9bbb5; }
+.rna-method-copy p:last-child { max-width: 520px; margin: 0; color: #bdcbc6; }
 .rna-scale-track { position: relative; height: 1px; margin: 80px 0 0; background: rgb(255 255 255 / 15%); }
 .rna-scale-track span { position: absolute; inset: -1px 0 auto; height: 2px; background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent), var(--acid)); transform: scaleX(var(--scale-progress, 0)); transform-origin: left; }
 .rna-scale-list { display: grid; margin: 0; padding: 0; grid-template-columns: repeat(6, 1fr); list-style: none; }
 .rna-scale-list li { position: relative; min-height: 230px; padding: 32px 22px 30px 0; border-right: 1px solid rgb(255 255 255 / 12%); }
 .rna-scale-list li:not(:first-child) { padding-left: 22px; }
 .rna-scale-list li:before { content: ""; position: absolute; left: -4px; top: -5px; width: 9px; height: 9px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 16px var(--primary); }
-.rna-scale-index { display: block; color: #71847e; font-family: var(--code); font-size: 0.61rem; }
+.rna-scale-index { display: block; color: #98aaa4; font-family: var(--code); font-size: 0.7rem; }
 .rna-scale-list strong { display: block; margin-top: 46px; font-family: var(--heading); font-size: 1.45rem; font-weight: 500; line-height: 1.05; }
-.rna-scale-list small { display: block; margin-top: 15px; color: #a9bbb5; font-size: 0.76rem; line-height: 1.55; }
+.rna-scale-list small { display: block; margin-top: 15px; color: #bdcbc6; font-size: 0.84rem; line-height: 1.62; }
 
 /* Featured publication ----------------------------------------------------- */
 
@@ -734,18 +738,18 @@ main { padding-top: 76px; }
 .rna-publication-visual:hover img { transform: scale(1.02); }
 .rna-publication-scan { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 25%, rgb(53 230 191 / 18%) 50%, transparent 75%); transform: translateY(-100%); animation: scan 9s ease-in-out infinite; pointer-events: none; }
 .rna-publication-copy { display: flex; padding: clamp(34px, 5vw, 72px); flex-direction: column; justify-content: center; border-left: 1px solid #173d3635; }
-.rna-publication-meta { color: #087f72; font-family: var(--code); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.rna-publication-meta { color: #087f72; font-family: var(--code); font-size: 0.76rem; letter-spacing: 0.1em; text-transform: uppercase; }
 .rna-publication-copy h3 { margin: 28px 0 16px; font-size: clamp(2.2rem, 4.3vw, 4.5rem); line-height: 0.96; }
-.rna-publication-copy p { color: #405451; }
-.rna-publication-authors { font-size: 0.84rem; }
-.rna-publication-metric { margin: 16px 0 24px; padding: 15px 0; border-block: 1px solid #173d3635; color: #087f72; font-family: var(--code); font-size: 0.74rem; }
+.rna-publication-copy p { color: #314945; }
+.rna-publication-authors { font-size: 0.92rem; }
+.rna-publication-metric { margin: 16px 0 24px; padding: 15px 0; border-block: 1px solid #173d3635; color: #087f72; font-family: var(--code); font-size: 0.82rem; }
 .rna-inline-actions { display: flex; flex-wrap: wrap; gap: 24px; }
 @keyframes scan { 0%, 65% { transform: translateY(-100%); opacity: 0; } 75% { opacity: 1; } 100% { transform: translateY(100%); opacity: 0; } }
 
 /* People preview ----------------------------------------------------------- */
 
 .rna-home > .rna-people { background: #0a1513; color: #eff8f4; }
-.rna-people .rna-section-head p { color: #a9bbb5; }
+.rna-people .rna-section-head p { color: #bdcbc6; }
 .rna-people-layout { display: grid; grid-template-columns: minmax(300px, 0.92fr) minmax(0, 1.08fr); gap: clamp(30px, 6vw, 90px); }
 .rna-pi-card { position: relative; min-height: 620px; color: #eff8f4; overflow: hidden; }
 .rna-pi-card .responsive-image { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
@@ -754,35 +758,35 @@ main { padding-top: 76px; }
 .rna-pi-card:hover img { transform: scale(1.025); filter: saturate(0.95); }
 .rna-pi-overlay { position: absolute; z-index: 2; inset: auto 34px 34px; display: grid; }
 .rna-pi-overlay strong { margin: 8px 0 4px; font-family: var(--heading); font-size: clamp(2.2rem, 4vw, 4rem); font-weight: 500; line-height: 1; }
-.rna-pi-overlay > span:last-child { color: #a9bbb5; font-size: 0.76rem; }
-.rna-person-role { color: var(--primary); font-family: var(--code); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.rna-pi-overlay > span:last-child { color: #bdcbc6; font-size: 0.84rem; }
+.rna-person-role { color: var(--primary); font-family: var(--code); font-size: 0.73rem; letter-spacing: 0.1em; text-transform: uppercase; }
 .rna-people-groups { display: grid; align-content: stretch; border-top: 1px solid rgb(255 255 255 / 14%); }
 .rna-people-group { display: grid; padding: 30px 0; border-bottom: 1px solid rgb(255 255 255 / 14%); grid-template-columns: minmax(150px, 0.65fr) 1fr; gap: 30px; }
 .rna-people-group-head { display: flex; flex-direction: column; justify-content: space-between; }
 .rna-people-group h3 { margin: 0; font-size: 1.8rem; }
-.rna-people-group-head > span { color: var(--primary); font-family: var(--code); font-size: 0.65rem; }
+.rna-people-group-head > span { color: var(--primary); font-family: var(--code); font-size: 0.73rem; }
 .rna-person-list { display: grid; }
 .rna-person-row { display: grid; min-height: 82px; padding: 12px 0; align-items: center; grid-template-columns: 54px 1fr auto; gap: 16px; border-bottom: 1px solid rgb(255 255 255 / 9%); color: #eff8f4; text-decoration: none; }
 .rna-person-row .responsive-image { display: block; width: 54px; height: 54px; }
 .rna-person-row:last-child { border: 0; }
 .rna-person-row img { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; filter: grayscale(0.35); }
 .rna-person-row > span { display: grid; }
-.rna-person-row strong { font-size: 0.84rem; }
-.rna-person-row small { color: #8fa39d; font-size: 0.7rem; }
+.rna-person-row strong { font-size: 0.92rem; }
+.rna-person-row small { color: #afc0ba; font-size: 0.78rem; }
 .rna-person-row > span:last-child { color: var(--primary); transition: transform var(--transition); }
 .rna-person-row:hover > span:last-child { transform: translate(3px, -3px); }
 
 /* Join --------------------------------------------------------------------- */
 
 .rna-home > .rna-join { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(60px, 10vw, 150px); background: linear-gradient(135deg, #111c29, #131221 58%, #1b1020); color: #eff8f4; }
-.rna-join-intro > p:not(.rna-section-label) { max-width: 550px; color: #b8bfca; }
+.rna-join-intro > p:not(.rna-section-label) { max-width: 550px; color: #c7ced7; }
 .rna-join-intro .rna-inline-actions { margin-top: 34px; }
 .rna-join-grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgb(255 255 255 / 16%); }
 .rna-join-grid article { min-height: 230px; padding: 28px; border-right: 1px solid rgb(255 255 255 / 16%); border-bottom: 1px solid rgb(255 255 255 / 16%); }
 .rna-join-grid article:nth-child(even) { border-right: 0; }
-.rna-join-grid article > span { color: var(--accent); font-family: var(--code); font-size: 0.63rem; }
+.rna-join-grid article > span { color: var(--accent); font-family: var(--code); font-size: 0.72rem; }
 .rna-join-grid h3 { margin: 52px 0 10px; font-size: 1.7rem; }
-.rna-join-grid p { margin: 0; color: #b8bfca; font-size: 0.82rem; }
+.rna-join-grid p { margin: 0; color: #c7ced7; font-size: 0.9rem; }
 
 /* Footer ------------------------------------------------------------------- */
 
@@ -797,19 +801,19 @@ main { padding-top: 76px; }
 .site-footer:before { display: none; }
 .site-footer-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: clamp(40px, 8vw, 120px); padding-bottom: 65px; }
 .site-footer-brand { display: grid; align-content: start; }
-.site-footer-kicker { color: var(--primary); font-family: var(--code); font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; }
+.site-footer-kicker { color: var(--primary); font-family: var(--code); font-size: 0.73rem; letter-spacing: 0.14em; text-transform: uppercase; }
 .site-footer-brand strong { margin-top: 22px; font-family: var(--heading); font-size: clamp(2.4rem, 4vw, 4.4rem); font-weight: 400; line-height: 0.9; }
-.site-footer-brand p { margin: 12px 0 0; color: #83958f; font-size: 0.8rem; }
-.site-footer address { display: grid; align-content: start; gap: 10px; color: #a9bbb5; font-size: 0.8rem; font-style: normal; line-height: 1.55; }
-.site-footer address:before { content: "Address"; margin-bottom: 12px; color: #647872; font-family: var(--code); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.site-footer-brand p { margin: 12px 0 0; color: #aebdb8; font-size: 0.88rem; }
+.site-footer address { display: grid; align-content: start; gap: 10px; color: #c1cec9; font-size: 0.88rem; font-style: normal; line-height: 1.65; }
+.site-footer address:before { content: "Address"; margin-bottom: 12px; color: #91a49e; font-family: var(--code); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; }
 html[lang="zh-CN"] .site-footer address:before { content: "地址"; }
 .site-footer address a { color: var(--primary) !important; }
 .site-footer-nav { display: grid; align-content: start; justify-content: start; gap: 5px; font-family: var(--body); text-transform: none; }
-.site-footer-nav a { padding: 2px 0; color: #a9bbb5 !important; font-size: 0.78rem; text-decoration: none; }
+.site-footer-nav a { padding: 3px 0; color: #c1cec9 !important; font-size: 0.86rem; text-decoration: none; }
 .site-footer-nav a:hover { color: var(--primary) !important; }
-.site-footer-base { display: flex; min-height: 72px; align-items: center; gap: 24px; border-top: 1px solid rgb(255 255 255 / 12%); color: #6f827c; font-family: var(--code); font-size: 0.62rem; }
+.site-footer-base { display: flex; min-height: 72px; align-items: center; gap: 24px; border-top: 1px solid rgb(255 255 255 / 12%); color: #94a6a0; font-family: var(--code); font-size: 0.72rem; }
 .site-footer-social { display: flex; margin-right: auto; }
-.site-footer-social .button { margin: 0 14px 0 0; color: #a9bbb5; }
+.site-footer-social .button { margin: 0 14px 0 0; color: #bdcbc6; }
 .site-footer .dark-toggle { width: 42px; flex: 0 0 42px; }
 
 /* Existing components, restyled ------------------------------------------- */
@@ -827,7 +831,7 @@ html[lang="zh-CN"] .site-footer address:before { content: "地址"; }
   border-radius: 0;
   background: transparent;
   color: var(--text-soft);
-  font-size: 0.77rem;
+  font-size: 0.84rem;
 }
 
 .member-grid { gap: 1px; background: var(--line); }
@@ -837,9 +841,11 @@ html[lang="zh-CN"] .site-footer address:before { content: "地址"; }
 .member-grid .member-placeholder { border: 1px dashed var(--line); border-radius: 0; box-shadow: none; }
 
 .publication-entry,
+.publication-paper-card,
 .pub-card,
 .pub-year-card { border: 1px solid var(--line); border-radius: 0; background: var(--surface); box-shadow: none; }
-.publication-entry { padding: clamp(20px, 3vw, 38px); }
+.publication-entry,
+.publication-paper-card { padding: clamp(20px, 3vw, 38px); }
 .publication-entry-image { border-radius: 0; }
 .publication-entry-actions a,
 .publication-entry-tags span,
@@ -866,6 +872,7 @@ html[data-dark="true"] .page-inner main > section { background: #07110f; }
 html[data-dark="true"] .page-inner main > section:nth-of-type(even) { background: #0b1715; }
 html[data-dark="true"] .member-grid .portrait,
 html[data-dark="true"] .publication-entry,
+html[data-dark="true"] .publication-paper-card,
 html[data-dark="true"] .pub-card,
 html[data-dark="true"] .pub-year-card { background: #101f1c; }
 
@@ -880,7 +887,7 @@ html[data-dark="true"] .rna-tension .rna-section-head p:last-child,
 html[data-dark="true"] .rna-featured-research .rna-section-head p,
 html[data-dark="true"] .rna-tension-grid p,
 html[data-dark="true"] .rna-research-text,
-html[data-dark="true"] .rna-publication-copy p { color: #a9bbb5; }
+html[data-dark="true"] .rna-publication-copy p { color: #bdcbc6; }
 
 html[data-dark="true"] .rna-tension-grid,
 html[data-dark="true"] .rna-tension-arrow,
@@ -956,7 +963,7 @@ html[data-dark="true"] .rna-publication-feature { background: #101f1c; }
   .rna-hero-field { inset: 80px -75% 37% -18%; }
   .rna-hero-scroll { display: none; }
   .rna-button { flex: 1 1 140px; }
-  .rna-hero-actions .rna-button { flex: 1 1 0; gap: 7px; padding-inline: 8px; font-size: 0.7rem; }
+  .rna-hero-actions .rna-button { flex: 1 1 0; gap: 7px; padding-inline: 8px; font-size: 0.78rem; }
   .rna-section-head h2,
   .rna-flow h2,
   .rna-methods h2,

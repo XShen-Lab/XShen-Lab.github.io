@@ -1,0 +1,35 @@
+u1_snrnp:
+  publication_id: pub-cv-015
+  title: U1 snRNP regulates chromatin retention of noncoding RNAs
+  authors: Yafei Yin, J. Yuyang Lu, Xuechun Zhang, Wen Shao, Yanhui Xu, Pan Li, Yantao Hong, Li Cui, Ge Shan, Bin Tian, Qiangfeng Cliff Zhang, and Xiaohua Shen
+  venue: Nature
+  volume: "580"
+  pages: 147–150
+  year: 2020
+  doi: 10.1038/s41586-020-2105-3
+  article_url: https://doi.org/10.1038/s41586-020-2105-3
+  image:
+    path: /images/publications/2020-u1-snrnp/figure-3e.webp
+    alt:
+      en: Model from Figure 3e showing U1 snRNP tethering and mobilizing noncoding RNAs on chromatin through RNA polymerase II
+      zh-CN: Figure 3e 机制模型，展示 U1 snRNP 通过 RNA 聚合酶 II 将非编码 RNA 锚定并动员至染色质
+    credit:
+      en: Mechanistic model from Figure 3e, cropped from Yin et al., Nature 580, 147–150 (2020).
+      zh-CN: 机制模型裁自 Yin 等发表于 Nature 580, 147–150 (2020) 的 Figure 3e。
+  localized:
+    en:
+      summary: U1 snRNP recognizes 5′ splice-site motifs and, through transcriptionally engaged RNA polymerase II, tethers and mobilizes hundreds of lncRNAs and unstable noncoding transcripts on chromatin.
+      tags:
+        - U1 snRNP
+        - lncRNA
+        - RNA–chromatin association
+        - Transcription
+      article_label: View article
+    zh-CN:
+      summary: 研究发现，U1 snRNP 识别 5′ 剪接位点基序，并通过与转录中的 RNA 聚合酶 II 相互作用，将数百种 lncRNA 和不稳定非编码转录本锚定并动员至染色质。
+      tags:
+        - U1 snRNP
+        - 长链非编码 RNA
+        - RNA–染色质关联
+        - 转录调控
+      article_label: 查看论文
