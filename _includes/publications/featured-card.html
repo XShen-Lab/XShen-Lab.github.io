@@ -24,6 +24,9 @@
 
     <div class="publication-entry-actions">
       <a href="{{ card.article_url }}">{{ localized.article_label }}</a>
+      {% if card.pdf.path %}
+        <a href="{{ card.pdf.path | relative_url }}" download="{{ card.pdf.filename }}" type="application/pdf" aria-label="{{ localized.pdf_label | escape }} — {{ card.title | escape }}">{{ localized.pdf_label }} <span aria-hidden="true">· {{ card.pdf.size }}</span></a>
+      {% endif %}
     </div>
   </div>
 </article>

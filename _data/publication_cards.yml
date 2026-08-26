@@ -8,6 +8,10 @@ u1_snrnp:
   year: 2020
   doi: 10.1038/s41586-020-2105-3
   article_url: https://doi.org/10.1038/s41586-020-2105-3
+  pdf:
+    path: /downloads/publications/yin-et-al-2020-u1-snrnp-nature.pdf
+    filename: yin-et-al-2020-u1-snrnp-nature.pdf
+    size: 12.4 MB
   image:
     path: /images/publications/2020-u1-snrnp/figure-3e.webp
     alt:
@@ -25,6 +29,7 @@ u1_snrnp:
         - RNA–chromatin association
         - Transcription
       article_label: View article
+      pdf_label: Download PDF
     zh-CN:
       summary: 研究发现，U1 snRNP 识别 5′ 剪接位点基序，并通过与转录中的 RNA 聚合酶 II 相互作用，将数百种 lncRNA 和不稳定非编码转录本锚定并动员至染色质。
       tags:
@@ -33,3 +38,4 @@ u1_snrnp:
         - RNA–染色质关联
         - 转录调控
       article_label: 查看论文
+      pdf_label: 下载 PDF
