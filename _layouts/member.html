@@ -45,7 +45,7 @@ layout: default
 {% assign education_text = education_body | regex_strip %}
 
 <article class="member-profile" data-member-profile>
-  <aside class="member-profile__visual" data-member-visual data-reveal style="--member-photo-position: {{ member.profile_position | default: '50% 50%' }};">
+  <aside class="member-profile__visual" data-member-visual data-reveal style="--member-photo-position: {{ member.profile_position | default: '50% 50%' }}; --member-photo-scale: {{ member.profile_image_scale | default: '1.055' }};">
     {% include responsive-image.html image=member.image class="member-profile__photo" picture_class="member-profile__picture" alt=member_name sizes="(max-width: 820px) calc(100vw - 40px), 42vw" loading="eager" %}
     <div class="member-profile__veil" aria-hidden="true"></div>
 

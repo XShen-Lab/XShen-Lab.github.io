@@ -355,12 +355,13 @@
   border-radius: 0;
   filter: saturate(0.78) contrast(1.02);
   object-fit: cover;
+  transform: scale(var(--portrait-image-scale, 1));
   transition: filter 0.55s ease, transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .member-gallery .portrait:hover .portrait-image {
   filter: saturate(1) contrast(1.02);
-  transform: scale(1.035);
+  transform: scale(var(--portrait-image-hover-scale, 1.035));
 }
 
 .member-gallery .portrait-name,
@@ -502,7 +503,7 @@
   filter: saturate(0.74) contrast(1.04);
   object-fit: cover;
   object-position: var(--member-photo-position, 50% 50%);
-  transform: scale(1.055) translateY(var(--member-photo-shift));
+  transform: scale(var(--member-photo-scale, 1.055)) translateY(var(--member-photo-shift));
   transition: filter 0.7s ease;
   will-change: transform;
 }

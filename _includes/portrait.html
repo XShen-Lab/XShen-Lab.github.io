@@ -12,12 +12,15 @@
 {% assign research_items = research_source | regex_scan: '<li>(.*?)</li>', true, true %}
 {% assign card_interests = research_items %}
 {% if member.card_interests %}{% assign card_interests = member.card_interests %}{% endif %}
+{% assign portrait_image_scale = member.card_image_scale | default: 1 %}
+{% assign portrait_image_hover_scale = portrait_image_scale | times: 1.035 %}
 
 <div class="portrait-wrapper">
   <a
     href="{{ member.url | relative_url | uri_escape }}"
     class="portrait"
     data-style="{{ include.style }}"
+    style="--portrait-image-scale: {{ portrait_image_scale }}; --portrait-image-hover-scale: {{ portrait_image_hover_scale }};"
     aria-label="{{ member.name | default: "member link" | regex_strip }}"
   >
     {% if type %}

@@ -4,6 +4,8 @@ role: postdoc
 image: images/members/haoxiaowen.jpg
 description: Postdoctoral Fellow
 affiliation: School of Basic Medicine, Tsinghua University
+card_image_scale: 1.12
+profile_image_scale: 1.14
 links:
   email: haoxw9206@163.com
 ---
