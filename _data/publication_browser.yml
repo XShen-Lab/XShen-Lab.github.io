@@ -137,21 +137,53 @@ representatives:
     title: Homotypic clustering of L1 and B1/Alu repeats compartmentalizes the 3D genome
     venue: Cell Research
     year: 2021
+    figure:
+      path: /images/publications/representative/2021-l1-b1-dna-fish.webp
+      alt:
+        en: DNA FISH images showing spatial segregation of B1/Alu and L1 repeats in mammalian nuclei.
+        zh-CN: DNA FISH 图像显示哺乳动物细胞核中 B1/Alu 与 L1 重复序列的空间分离。
+      source:
+        en: Figure 2 · DNA FISH reveals the spatial segregation of L1 and B1 compartments
+        zh-CN: 图 2 · DNA FISH 显示 L1 与 B1 区室的空间分离
   - publication_id: pub-cv-016
     category: genome-organization
     title: Genomic repeats categorize genes with distinct functions for orchestrated regulation
     venue: Cell Reports
     year: 2020
+    figure:
+      path: /images/publications/representative/2020-genomic-repeats-graphical-abstract.webp
+      alt:
+        en: Graphical abstract showing genomic repeats as barcodes for gene function, developmental timing, and nuclear organization.
+        zh-CN: 图形摘要展示基因组重复序列如何编码基因功能、发育时序与细胞核组织。
+      source:
+        en: Graphical abstract · Repeat classes coordinate gene function and spatial organization
+        zh-CN: 图形摘要 · 不同重复序列类别协调基因功能与空间组织
   - publication_id: pub-cv-005
     category: rna-networks
     title: Nuclear RNA homeostasis promotes systems-level coordination for cell fate and vitality
     venue: Cell Stem Cell
     year: 2024
+    figure:
+      path: /images/publications/representative/2024-nuclear-rna-homeostasis-graphical-abstract.webp
+      alt:
+        en: Graphical abstract linking RNA exosome activity, nuclear RNA homeostasis, transcription, translation, chromatin organization, and cell state.
+        zh-CN: 图形摘要连接 RNA 外切体活性、核内 RNA 稳态、转录、翻译、染色质组织与细胞状态。
+      source:
+        en: Graphical abstract · Nuclear RNA homeostasis coordinates cell fate and senescence
+        zh-CN: 图形摘要 · 核内 RNA 稳态协调细胞命运与衰老
   - publication_id: pub-cv-010
     category: rna-networks
     title: Phase separation of RNA-binding protein promotes polymerase engagement and transcription
     venue: Nature Chemical Biology
     year: 2022
+    figure:
+      path: /images/publications/representative/2022-pspc1-transcription-condensate-model.webp
+      alt:
+        en: Model showing RNA-binding proteins assembling transcription condensates that recruit and activate RNA polymerase II.
+        zh-CN: 模型展示 RNA 结合蛋白组装转录凝聚体并招募、激活 RNA 聚合酶 II。
+      source:
+        en: Figure 6e · Model of RNA-binding proteins at promoters and enhancers
+        zh-CN: 图 6e · 启动子与增强子处 RNA 结合蛋白的作用模型
   - publication_id: pub-cv-015
     category: rna-networks
     title: U1 snRNP regulates chromatin retention of noncoding RNAs
@@ -162,21 +194,53 @@ representatives:
     title: RNA targets ribosome biogenesis factor WDR43 to chromatin for transcription and pluripotency control
     venue: Molecular Cell
     year: 2019
+    figure:
+      path: /images/publications/representative/2019-wdr43-graphical-abstract.webp
+      alt:
+        en: Graphical abstract showing nascent RNA recruitment of WDR43 to chromatin and its role in transcription elongation.
+        zh-CN: 图形摘要展示新生 RNA 将 WDR43 招募至染色质并调控转录延伸。
+      source:
+        en: Graphical abstract · Nascent RNA targets WDR43 to chromatin
+        zh-CN: 图形摘要 · 新生 RNA 将 WDR43 靶向染色质
   - publication_id: pub-cv-024
     category: rna-networks
     title: The lncRNA Hand2os1/Uph locus orchestrates heart development through regulation of precise expression HAND2
     venue: Development
     year: 2019
+    figure:
+      path: /images/publications/representative/2019-hand2os1-heart-phenotype.webp
+      alt:
+        en: Developmental and cardiac phenotypes caused by deletion of the Hand2os1 locus, with embryonic heart images and molecular analyses.
+        zh-CN: Hand2os1 位点缺失导致的发育与心脏表型，包括胚胎心脏图像及分子分析。
+      source:
+        en: Figure 2 · Hand2os1 locus deletion causes congenital heart defects
+        zh-CN: 图 2 · Hand2os1 位点缺失导致先天性心脏缺陷
   - publication_id: pub-cv-031
     category: rna-networks
     title: Divergent lncRNAs regulate gene expression and lineage differentiation in pluripotent cells
     venue: Cell Stem Cell
     year: 2016
+    figure:
+      path: /images/publications/representative/2016-divergent-lncrnas-graphical-abstract.webp
+      alt:
+        en: Graphical abstract showing divergent lncRNAs acting in cis to regulate nearby coding genes and developmental processes.
+        zh-CN: 图形摘要展示双向转录 lncRNA 通过顺式作用调控邻近编码基因与发育过程。
+      source:
+        en: Graphical abstract · Divergent lncRNAs regulate adjacent genes in cis
+        zh-CN: 图形摘要 · 双向转录 lncRNA 顺式调控邻近基因
   - publication_id: pub-cv-032
     category: rna-networks
     title: Opposing roles for the lncRNA Haunt and its genomic locus in regulating HOXA gene activation during embryonic stem cell differentiation
     venue: Cell Stem Cell
     year: 2015
+    figure:
+      path: /images/publications/representative/2015-haunt-graphical-abstract.webp
+      alt:
+        en: Graphical abstract showing opposing enhancer and RNA functions at the Haunt locus during HOXA activation.
+        zh-CN: 图形摘要展示 Haunt 位点在 HOXA 激活过程中相反的增强子与 RNA 功能。
+      source:
+        en: Graphical abstract · Opposing RNA and DNA functions at the Haunt locus
+        zh-CN: 图形摘要 · Haunt 位点中 RNA 与 DNA 的相反作用
   - publication_id: pub-2025-scfluent-seq
     category: cell-fate-dynamics
     title: Single-cell nascent transcription reveals sparse genome usage and plasticity
@@ -187,16 +251,40 @@ representatives:
     title: Jumonji modulates Polycomb activity and self-renewal versus differentiation of stem cells
     venue: Cell
     year: 2009
+    figure:
+      path: /images/publications/representative/2009-jumonji-prc2-model.webp
+      alt:
+        en: Model showing Jumonji modulation of PRC2 activity and the balance between embryonic stem-cell pluripotency and differentiation.
+        zh-CN: 模型展示 Jumonji 调节 PRC2 活性以及胚胎干细胞多能性与分化之间的平衡。
+      source:
+        en: Figure 7 · Model for the interplay between JMJ and PRC2
+        zh-CN: 图 7 · JMJ 与 PRC2 相互作用模型
   - publication_id: pub-cv-043
     category: foundations
     title: EZH1 mediates methylation on histone H3 lysine 27 and complements EZH2 in maintaining stem cell identity and executing pluripotency
     venue: Molecular Cell
     year: 2008
+    figure:
+      path: /images/publications/representative/2008-ezh1-ezh2-model.webp
+      alt:
+        en: Model comparing complementary EZH1 and EZH2 functions in H3K27 methylation, stem-cell identity, and differentiation.
+        zh-CN: 模型比较 EZH1 与 EZH2 在 H3K27 甲基化、干细胞身份及分化中的互补功能。
+      source:
+        en: Figure 7 · Complementary but nonredundant roles of EZH1 and EZH2
+        zh-CN: 图 7 · EZH1 与 EZH2 互补但不冗余的作用
   - publication_id: pub-cv-051
     category: foundations
     title: Complementary signaling pathways regulate the unfolded protein response and are required for C. elegans development
     venue: Cell
     year: 2001
+    figure:
+      path: /images/publications/representative/2001-upr-pathways-model.webp
+      alt:
+        en: Model comparing unfolded protein response pathways in C. elegans and budding yeast.
+        zh-CN: 模型比较秀丽隐杆线虫与芽殖酵母中的未折叠蛋白反应通路。
+      source:
+        en: Figure 7 · Pathways that signal the unfolded protein response during development
+        zh-CN: 图 7 · 发育过程中传递未折叠蛋白反应信号的通路
 
 records:
   pub-2025-scfluent-seq: { year: 2025, category: cell-fate-dynamics }

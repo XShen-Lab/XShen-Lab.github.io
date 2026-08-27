@@ -69,12 +69,32 @@
               {% elsif representative.publication_id == "pub-cv-015" %}
                 {% include publications/featured-card.html card=site.data.publication_cards.u1_snrnp lang=language %}
               {% else %}
-                <article class="representative-publication-card" data-publication-id="{{ publication.id }}" data-research-category="{{ category.id }}">
-                  <div class="representative-publication-card__visual" data-research-category="{{ category.id }}" aria-hidden="true">
-                    <span class="representative-publication-card__year">{{ representative.year }}</span>
-                    <strong>{{ representative.venue }}</strong>
-                    <span class="representative-publication-card__signal"></span>
-                  </div>
+                <article class="representative-publication-card{% if representative.figure %} representative-publication-card--figure{% endif %}" data-publication-id="{{ publication.id }}" data-research-category="{{ category.id }}">
+                  {% if representative.figure %}
+                    {% assign figure_alt = representative.figure.alt[language] | default: representative.figure.alt.en %}
+                    {% assign figure_source = representative.figure.source[language] | default: representative.figure.source.en %}
+                    <figure class="representative-publication-card__figure">
+                      {% if publication.links.article %}
+                        <a class="representative-publication-card__media" href="{{ publication.links.article }}" aria-label="{{ ui.article_label }}: {{ publication.title | escape }}">
+                      {% else %}
+                        <div class="representative-publication-card__media">
+                      {% endif %}
+                        <img
+                          src="{{ representative.figure.path | relative_url }}"
+                          alt="{{ figure_alt | escape }}"
+                          loading="lazy"
+                          decoding="async"
+                        >
+                      {% if publication.links.article %}</a>{% else %}</div>{% endif %}
+                      <figcaption>{{ figure_source }}</figcaption>
+                    </figure>
+                  {% else %}
+                    <div class="representative-publication-card__visual" data-research-category="{{ category.id }}" aria-hidden="true">
+                      <span class="representative-publication-card__year">{{ representative.year }}</span>
+                      <strong>{{ representative.venue }}</strong>
+                      <span class="representative-publication-card__signal"></span>
+                    </div>
+                  {% endif %}
 
                   <div class="representative-publication-card__content">
                     <p class="representative-publication-card__eyebrow">{{ category_label }} · {{ representative.year }}</p>

@@ -57,6 +57,10 @@ EXPECTED_REPRESENTATIVE_IDS = %w[
   pub-cv-043
   pub-cv-051
 ].freeze
+EXPECTED_FIGURE_REPRESENTATIVE_IDS = (EXPECTED_REPRESENTATIVE_IDS - %w[
+  pub-cv-015
+  pub-2025-scfluent-seq
+]).freeze
 SCFLUENT_ID = "pub-2025-scfluent-seq".freeze
 ENGLISH_DETAIL_URL = "/publications/2025-scfluent-seq/".freeze
 CHINESE_DETAIL_URL = "/zh/publications/2025-scfluent-seq/".freeze
@@ -234,6 +238,21 @@ def verify_browser_data!(records)
                 entry.fetch("venue").is_a?(String) && !entry.fetch("venue").empty? &&
                 entry.fetch("year").is_a?(Integer),
                 "representative collection contains incomplete display metadata")
+
+    next unless EXPECTED_FIGURE_REPRESENTATIVE_IDS.include?(entry.fetch("publication_id"))
+
+    figure = entry["figure"]
+    fail_unless(figure.is_a?(Hash),
+                "representative #{entry.fetch('publication_id')} has no source figure")
+    figure_path = figure.fetch("path")
+    fail_unless(figure_path.start_with?("/images/publications/representative/") &&
+                File.file?(File.join(ROOT, figure_path.delete_prefix("/"))),
+                "representative #{entry.fetch('publication_id')} figure file is missing")
+    %w[en zh-CN].each do |language|
+      fail_unless(figure.dig("alt", language).is_a?(String) && !figure.dig("alt", language).empty? &&
+                  figure.dig("source", language).is_a?(String) && !figure.dig("source", language).empty?,
+                  "representative #{entry.fetch('publication_id')} figure lacks #{language} alt/source text")
+    end
   end
 end
 

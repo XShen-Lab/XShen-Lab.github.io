@@ -356,6 +356,52 @@
   grid-template-columns: minmax(155px, 34%) minmax(0, 1fr);
 }
 
+.representative-publication-card--figure:not(.publication-entry):not(.publication-paper-card) {
+  display: flex;
+  flex-direction: column;
+}
+
+.representative-publication-card__figure {
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.representative-publication-card__media {
+  position: relative;
+  display: grid;
+  height: clamp(260px, 29vw, 350px);
+  place-items: center;
+  overflow: hidden;
+}
+
+.page-inner main .representative-publication-card__figure img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: clamp(14px, 2vw, 24px);
+  object-fit: contain;
+  transition: transform 320ms ease;
+}
+
+.representative-publication-card__figure > a.representative-publication-card__media:hover img,
+.representative-publication-card__figure > a.representative-publication-card__media:focus-visible img {
+  transform: scale(1.018);
+}
+
+.page-inner main .representative-publication-card__figure figcaption {
+  min-height: 47px;
+  margin: 0;
+  padding: 10px 16px 11px;
+  border-top: 1px solid color-mix(in srgb, var(--line) 58%, transparent);
+  color: var(--text-soft);
+  font-family: var(--code);
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+
 .representative-publication-card__visual {
   --category-accent: var(--primary);
   position: relative;
@@ -787,6 +833,10 @@ html[data-dark="true"] .publication-browser__years {
     min-height: 190px;
   }
 
+  .representative-publication-card__media {
+    height: 270px;
+  }
+
   .page-inner main .publication-browser .full-publications > li {
     padding: 17px 12px 17px 48px;
     font-size: 0.86rem;
@@ -799,6 +849,7 @@ html[data-dark="true"] .publication-browser__years {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .representative-publication-card__figure img,
   .publication-year-rail button,
   .publication-category-rail button,
   .page-inner main .publication-browser .full-publications > li {
