@@ -4,6 +4,8 @@ role: postdoc
 image: images/members/lisiyang.jpg
 description: Postdoctoral Fellow
 affiliation: School of Basic Medicine, Tsinghua University
+card_position: 73% 50%
+profile_position: 73% 50%
 links:
   email: alex-lisiyang@gmail.com
 ---

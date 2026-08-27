@@ -355,6 +355,7 @@
   border-radius: 0;
   filter: saturate(0.78) contrast(1.02);
   object-fit: cover;
+  object-position: var(--portrait-image-position, 50% 50%);
   transform: scale(var(--portrait-image-scale, 1));
   transition: filter 0.55s ease, transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
 }
