@@ -1,5 +1,5 @@
 ---
-name: Wang, Zirong
+name: Wang, Zirong 王子榕
 role: phd
 image: images/members/zirongwang.jpg
 description: PhD, 2020

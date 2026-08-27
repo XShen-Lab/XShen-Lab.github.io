@@ -13,6 +13,7 @@ Graduate Student in the XShen Lab.
 ## Research Interests
 
 - Chromatin structure
+- Computational Biology
 
 ## Education
 
