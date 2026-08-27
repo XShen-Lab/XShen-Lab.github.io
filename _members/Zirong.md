@@ -2,7 +2,7 @@
 name: Wang, Zirong
 role: phd
 image: images/members/zirongwang.jpg
-description: PhD Student
+description: PhD, 2020
 affiliation: School of Basic Medicine, Tsinghua University
 ---
 

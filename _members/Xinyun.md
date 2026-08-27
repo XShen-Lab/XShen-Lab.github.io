@@ -2,7 +2,7 @@
 name: Hu, Xinyun 胡昕昀
 role: phd
 image: images/members/huxinyun.jpg
-description: PhD Student
+description: PhD, 2022
 affiliation: School of Basic Medicine, Tsinghua University
 links:
   email: hu-xy22@mails.tsinghua.edu.cn

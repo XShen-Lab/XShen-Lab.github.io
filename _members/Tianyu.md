@@ -2,7 +2,7 @@
 name: Huang, Tianyu 黄天羽
 role: undergrad
 image: images/fallback.svg
-description: Undergraduate Student
+description: Undergraduate, 2024
 affiliation: School of Life Sciences, Tsinghua University
 ---
 

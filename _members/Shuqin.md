@@ -2,7 +2,7 @@
 name: Zhou, Shuqin 周淑琴
 role: phd
 image: images/members/shuqinzhou.jpg
-description: PhD Student
+description: PhD, 2020
 affiliation: School of Basic Medicine, Tsinghua University
 ---
 

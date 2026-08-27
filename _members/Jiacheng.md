@@ -2,7 +2,7 @@
 name: Yin, Jiacheng 印家承
 role: undergrad
 image: images/members/yinjiacheng.jpg
-description: Undergraduate Student
+description: Undergraduate, 2023
 affiliation: Zhili College, Tsinghua University
 ---
 
