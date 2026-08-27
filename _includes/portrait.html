@@ -10,6 +10,8 @@
 {% assign type = site.data.types[member.role] %}
 {% assign research_source = member.content | split: '<h2 id="research-interests">Research Interests</h2>' | last | split: '<h2 id="education">Education</h2>' | first %}
 {% assign research_items = research_source | regex_scan: '<li>(.*?)</li>', true, true %}
+{% assign card_interests = research_items %}
+{% if member.card_interests %}{% assign card_interests = member.card_interests %}{% endif %}
 
 <div class="portrait-wrapper">
   <a
@@ -37,9 +39,9 @@
     {% endif %}
 
     {% if include.style == "gallery" %}
-      {% if research_items.size > 0 %}
+      {% if card_interests.size > 0 %}
         <span class="portrait-interests">
-          {% for interest in research_items limit: 2 %}
+          {% for interest in card_interests limit: 2 %}
             <span>{{ interest }}</span>
           {% endfor %}
         </span>

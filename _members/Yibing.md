@@ -5,6 +5,9 @@ image: images/members/yibingtao.jpg
 description: Postdoctoral Fellow
 affiliation: School of Basic Medicine, Tsinghua University
 profile_position: 67% 50%
+card_interests:
+  - Transcriptional regulation
+  - Cell cycle
 ---
 
 Postdoctoral Fellow in the XShen Lab.
