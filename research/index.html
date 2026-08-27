@@ -145,6 +145,10 @@
 
 
 
+  <script src="/_scripts/research-flow.js" defer></script>
+
+
+
 
 <!-- Interior-page heading links; never loaded on the RNA homepage. -->
 
@@ -319,174 +323,275 @@
   
   
 
-  <section class="background" data-size="page">
-    <p class="right"><small><a href="/zh/research/">中文</a></small></p>
+  <section class="background" data-size="full">
+    <!-- <size>full</size> -->
 
-<h1 id="research">Research</h1>
+<div class="research-page" data-research-page="">
+  <header class="research-hero" aria-labelledby="research-title">
+    <div class="research-hero__field" aria-hidden="true">
+      <span class="research-hero__chromatin"></span>
+      <span class="research-hero__mesh"></span>
+      <span class="research-hero__signal research-hero__signal--one"></span>
+      <span class="research-hero__signal research-hero__signal--two"></span>
+      <span class="research-hero__signal research-hero__signal--three"></span>
+    </div>
+    <div class="research-shell research-hero__copy">
+      <p class="research-kicker" data-reveal="">XShen Lab · Research</p>
+      <h1 id="research-title" data-reveal="" style="--reveal-order: 1">Biological Information Flow</h1>
+      <p class="research-hero__subtitle" data-reveal="" style="--reveal-order: 2">From Genome to Cell Fate</p>
+      <p class="research-hero__question" data-reveal="" style="--reveal-order: 3">How does sparse and stochastic genome activity become stable biological information and cell fate?</p>
+      <p class="research-hero__intro" data-reveal="" style="--reveal-order: 4">We study the nucleus as a dynamic information-processing system in which genome organization, RNA networks and transcriptional surveillance transform molecular fluctuation into stable cellular identity.</p>
+      <p class="research-hero__sequence" data-reveal="" style="--reveal-order: 5">Organization → Processing → Selection → Stabilization</p>
+    </div>
+  </header>
 
-<h2 id="scientific-vision">Scientific Vision</h2>
-
-<p>The XShen Lab studies <strong>Biological Information Flow: From Genome to Cell Fate</strong> as a unified framework for understanding how stable biological order emerges from stochastic molecular activity. Although cell types share essentially the same genome, they acquire diverse and persistent identities while transcription, RNA metabolism, and chromatin organization continually fluctuate across space and time.</p>
-
-<p>We propose that sparse and stochastic genome activity becomes stable biological information through four connected operations: organization, processing, selection, and stabilization. Our long-term goal is a predictive framework, grounded in physical principles and statistical theories, for understanding cellular states in development, aging, and disease.</p>
+  <section class="research-overview" aria-labelledby="research-overview-title">
+    <div class="research-shell research-overview__grid">
+      <div data-reveal="">
+        <p class="research-kicker">Scientific vision</p>
+        <h2 id="research-overview-title">Dynamic molecular activity. Ordered biological states.</h2>
+      </div>
+      <div class="research-overview__copy" data-reveal="" style="--reveal-order: 1">
+        <p>Although cell types share essentially the same genome, they acquire diverse and persistent identities while transcription, RNA metabolism and chromatin organization fluctuate across space and time.</p>
+<p>Biological information therefore cannot be understood as a simple DNA → RNA → protein pathway. It is continuously organized, interpreted and selected through the noncoding genome, nuclear architecture, RNA regulatory networks and transcriptional environments.</p>
+        <p class="research-overview__statement">Our long-term goal is a predictive framework, grounded in physical principles and statistical theories, for understanding cellular states in development, aging and disease.</p>
+      </div>
+    </div>
   </section>
 
-  
-  
-  
+  <section class="research-programs" aria-labelledby="research-programs-title">
+    <div class="research-shell">
+      <div class="research-programs__head" data-reveal="">
+        <div>
+          <p class="research-kicker">Four connected research programs</p>
+          <h2 id="research-programs-title">One information system, viewed in sequence.</h2>
+          <p>Move horizontally from the organization of the genome to the stabilization of cell fate. Each program asks a distinct question, but the mechanism flows continuously across the four stages.</p>
+        </div>
+        <div class="research-programs__controls">
+          <p class="research-programs__position" aria-live="polite"><span data-research-position="">01</span> / 04</p>
+          <button type="button" data-research-previous="" aria-label="Previous research program">←</button>
+          <button type="button" data-research-next="" aria-label="Next research program">→</button>
+        </div>
+      </div>
 
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
+      <nav class="research-programs__jump" aria-label="Four connected research programs">
+        
+          <a href="#genome-organization" data-research-jump="0"><span>01</span>Organization</a>
+        
+          <a href="#rna-networks" data-research-jump="1"><span>02</span>Processing</a>
+        
+          <a href="#transcriptional-surveillance" data-research-jump="2"><span>03</span>Selection</a>
+        
+          <a href="#cell-fate-dynamics" data-research-jump="3"><span>04</span>Stabilization</a>
+        
+      </nav>
+    </div>
 
-<h2 id="why-this-question-matters">Why This Question Matters</h2>
+    <div class="research-programs__rail" data-research-rail="" tabindex="0">
+      
+        <article class="research-program motif-domain" id="genome-organization" data-research-card="" data-reveal="">
+          <div class="research-program__visual research-program__visual--generated">
+            
+              <div class="research-program__motif" aria-hidden="true">
+<i></i><i></i><i></i><i></i><i></i>
+</div>
+              <p aria-hidden="true">Organization</p>
+            
+          </div>
 
-<p>Two challenges remain central to modern molecular biology. Protein-coding genes occupy only a small fraction of the mammalian genome, leaving the organizing principles of the vast noncoding genome incompletely understood. At the same time, genome activity is intrinsically stochastic, whereas cellular identity and developmental programs are highly stable.</p>
-
-<p>Biological information therefore cannot be understood as a simple DNA → RNA → protein pathway. It is continually organized, interpreted, and selected through genome organization, RNA networks, transcriptional dynamics, and surveillance. The noncoding genome contributes not only sequence context, but also nuclear architecture, RNA regulatory networks, and transcriptional environments. We ask not only which genes are expressed, but how biological systems organize, process, select, and stabilize information.</p>
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="the-nucleus-as-a-dynamic-information-processing-system">The Nucleus as a Dynamic Information-Processing System</h2>
-
-<p>The nucleus is a far-from-equilibrium polymer–electrolyte system containing two interconnected, charged, and heterogeneous polymer networks. Chromatin carries genetic information and provides the structural basis for genome folding. The RNA–RBP meshwork, composed of nascent RNA, RNA-binding proteins, and RNA-processing factors, helps determine when, where, and how genomic information is accessed.</p>
-
-<p>High-resolution imaging suggests that chromatin transitions between compact globular nanodomains and extended coils. Inactive DNA tends to reside within globular domains, whereas actively transcribed DNA is exposed at domain surfaces or extended into coils that interact with the RNA–RBP meshwork. Their interface—the <strong>perichromatin region</strong>—is a dynamic surface where transcription, RNA processing, RNP assembly, RNA degradation, and nuclear transport are spatially and functionally coupled.</p>
-
-<p>Transcription continually introduces RNA, energy, and entropy. In this active-matter view, biological information is shaped not by DNA sequence alone, but by the interplay of chromatin structure, RNA networks, and non-equilibrium dynamics.</p>
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="biological-information-flow">Biological Information Flow</h2>
-
-<h3 id="organization--processing--selection--stabilization">Organization → Processing → Selection → Stabilization</h3>
-
-<ul>
-  <li>
-<strong>Organization:</strong> genome sequence and chromatin establish spatial information.</li>
-  <li>
-<strong>Processing:</strong> RNA networks create nuclear information-processing environments.</li>
-  <li>
-<strong>Selection:</strong> transcriptional surveillance promotes productive biological outputs.</li>
-  <li>
-<strong>Stabilization:</strong> probabilistic genome activities converge on stable cell identities.</li>
+          <div class="research-program__content">
+            <div class="research-program__meta">
+              <span>01</span>
+              <span>Organization</span>
+            </div>
+            <p class="research-program__verb">Organizing Biological Information</p>
+            <h3>Genome Organization</h3>
+            <p class="research-program__question">How does genome sequence encode nuclear organization?</p>
+            <p>Genome sequence encodes more than genes. We investigate how repetitive elements—including L1 and B1/Alu sequences—establish principles of chromosome compartmentalization and nuclear positioning, and how their RNA products participate in chromatin organization.</p>
+            <p>We are extending this framework to understand genome partitioning and remodeling during development, cell-cycle transitions and changes in cell fate.</p>
+            
+            <div class="research-program__focus">
+              <p>Current focus</p>
+              <ul>
+<li>Repetitive elements and their RNA products</li>
+<li>Chromosome compartmentalization and nuclear positioning</li>
+<li>Dynamic genome remodeling across cellular transitions</li>
 </ul>
-  </section>
+            </div>
+          </div>
+        </article>
+      
+        <article class="research-program motif-mesh" id="rna-networks" data-research-card="" data-reveal="">
+          <div class="research-program__visual">
+            
+              <figure>
+                <img src="/images/research/rna-chromatin-dstorm.png" alt="Super-resolution image showing interwoven EU-labeled RNA and H3-marked chromatin in a nucleus" loading="lazy" decoding="async">
+                <figcaption>Super-resolution view of spatially interwoven RNA and chromatin.</figcaption>
+              </figure>
+            
+          </div>
 
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="research-programs">Research Programs</h2>
-
-<h3 id="genome-organization">1. Genome Organization</h3>
-
-<p><strong>Organizing Biological Information</strong></p>
-
-<p><em>How does genome sequence encode nuclear organization?</em></p>
-
-<p>We investigate how genome sequences establish nuclear architecture and influence gene regulation and cell fate. Our work shows that repetitive elements—including L1 and B1/Alu sequences—are not merely genomic byproducts; they encode principles of chromosome compartmentalization and nuclear positioning. We are extending this work to understand how repetitive elements and their RNA products shape chromatin organization, nuclear structures, and genome remodeling during development, cell-cycle transitions, and cell-fate changes.</p>
-
-<h3 id="rna-networks">2. RNA Networks</h3>
-
-<p><strong>Processing Biological Information</strong></p>
-
-<p><em>How does RNA organize the nuclear environment?</em></p>
-
-<p>RNA is both a carrier of genetic information and an organizer of nuclear function. Our studies established that noncoding RNAs can regulate neighboring genes and local chromatin states. We also found that RNA-binding proteins form dynamic RNA-associated condensates that regulate RNA Polymerase II recruitment, CTD phosphorylation, and transcriptional elongation. We now investigate how nascent RNA, RNA-binding proteins, and processing factors form an RNA–RBP meshwork that coordinates transcription, RNA maturation, RNA degradation, and nuclear organization.</p>
-
-<h3 id="transcriptional-surveillance">3. Transcriptional Surveillance</h3>
-
-<p><strong>Selecting Biological Information</strong></p>
-
-<p><em>How does productive biological information emerge from pervasive transcription?</em></p>
-
-<p>Eukaryotic genomes are extensively transcribed, yet only a fraction of transcriptional events achieve productive elongation and generate mature mRNAs. We propose that productive transcription is an actively established state. Our ongoing work examines how the RNA Polymerase II CTD together with RNA-processing and degradation pathways forms a genome-scale surveillance system that eliminates nonproductive transcription while supporting RNA maturation, productive elongation, and polymerase recycling. Unpublished manuscript titles are not presented here.</p>
-
-<h3 id="cell-fate-dynamics">4. Cell Fate Dynamics</h3>
-
-<p><strong>Stabilizing Biological Information</strong></p>
-
-<p><em>How do probabilistic genome activities generate stable cell identity?</em></p>
-
-<p>Stable identities need not arise from identical transcriptional programs executed by every cell. Using scFLUENT-seq, developed in our laboratory, we obtain a short-pulse snapshot of nascent genome usage at single-cell resolution. The publication-specific result shows that individual cells actively use a cell-type-dependent fraction of approximately 0.02%–3.1% of the genome at a given moment, while populations explore broader genomic landscapes. We model cellular identity as a stable probability distribution emerging from coordinated stochastic activity.</p>
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="technology-platforms">Technology Platforms</h2>
-
-<p>Biological Information Flow spans molecular dynamics, nuclear organization, and cellular states. We combine:</p>
-
-<ul>
-  <li>single-cell genomics;</li>
-  <li>live-cell and super-resolution imaging;</li>
-  <li>electron microscopy;</li>
-  <li>biochemical reconstitution;</li>
-  <li>CRISPR genome engineering;</li>
-  <li>computational analysis;</li>
-  <li>artificial intelligence;</li>
-  <li>theoretical modeling.</li>
+          <div class="research-program__content">
+            <div class="research-program__meta">
+              <span>02</span>
+              <span>Processing</span>
+            </div>
+            <p class="research-program__verb">Processing Biological Information</p>
+            <h3>RNA Networks</h3>
+            <p class="research-program__question">How does RNA organize the nuclear environment?</p>
+            <p>RNA is both a carrier of genetic information and a material organizer of nuclear function. Noncoding RNAs regulate neighboring genes and local chromatin states, while RNA-binding proteins form dynamic RNA-associated condensates that influence RNA Polymerase II recruitment, CTD phosphorylation and elongation.</p>
+            <p>We investigate how nascent RNA, RNA-binding proteins and processing factors assemble an RNA–RBP meshwork that coordinates transcription, RNA maturation, RNA degradation and nuclear organization.</p>
+            
+            <div class="research-program__focus">
+              <p>Current focus</p>
+              <ul>
+<li>Nascent RNA and RNA-binding proteins</li>
+<li>RNA-associated condensates and Pol II regulation</li>
+<li>Coupling of transcription, processing and nuclear architecture</li>
 </ul>
+            </div>
+          </div>
+        </article>
+      
+        <article class="research-program motif-checkpoint" id="transcriptional-surveillance" data-research-card="" data-reveal="">
+          <div class="research-program__visual research-program__visual--generated">
+            
+              <div class="research-program__motif" aria-hidden="true">
+<i></i><i></i><i></i><i></i><i></i>
+</div>
+              <p aria-hidden="true">Selection</p>
+            
+          </div>
 
-<p>Theory-driven discovery is a defining feature of this work: quantitative experiments and models are developed together to uncover general principles across scales.</p>
+          <div class="research-program__content">
+            <div class="research-program__meta">
+              <span>03</span>
+              <span>Selection</span>
+            </div>
+            <p class="research-program__verb">Selecting Biological Information</p>
+            <h3>Transcriptional Surveillance</h3>
+            <p class="research-program__question">How does productive information emerge from pervasive transcription?</p>
+            <p>Eukaryotic genomes are extensively transcribed, yet only a fraction of transcriptional events achieve productive elongation and generate mature mRNAs. We therefore treat productive transcription as an actively established state rather than a default outcome.</p>
+            <p>Our work examines how the RNA Polymerase II CTD, EIF4A3, RNA processing and degradation pathways form a genome-scale surveillance system that clears nonproductive transcription while supporting RNA maturation, productive elongation and polymerase recycling.</p>
+            
+            <div class="research-program__focus">
+              <p>Current focus</p>
+              <ul>
+<li>RNA Polymerase II CTD and EIF4A3</li>
+<li>Kinetic selection of productive elongation</li>
+<li>RNA maturation, clearance and polymerase recycling</li>
+</ul>
+            </div>
+          </div>
+        </article>
+      
+        <article class="research-program motif-field" id="cell-fate-dynamics" data-research-card="" data-reveal="">
+          <div class="research-program__visual">
+            
+              <figure>
+                <img src="/images/publications/2025-scfluent-seq/graphical-abstract.webp" alt="scFLUENT-seq graphical abstract showing nascent RNA measurement across individual cells" loading="lazy" decoding="async">
+                <figcaption>scFLUENT-seq connects short-pulse nascent RNA measurements to probabilistic genome activity.</figcaption>
+              </figure>
+            
+          </div>
+
+          <div class="research-program__content">
+            <div class="research-program__meta">
+              <span>04</span>
+              <span>Stabilization</span>
+            </div>
+            <p class="research-program__verb">Stabilizing Biological Information</p>
+            <h3>Cell Fate Dynamics</h3>
+            <p class="research-program__question">How do probabilistic genome activities generate stable cell identity?</p>
+            <p>Stable identity need not require every cell to execute an identical transcriptional program. With scFLUENT-seq, developed in our laboratory, we obtain a short-pulse snapshot of nascent genome usage at single-cell resolution.</p>
+            <p>Individual cells use a cell-type-dependent fraction of approximately 0.02%–3.1% of the genome at a given moment, while populations explore broader genomic landscapes. We model cellular identity as a stable probability distribution emerging from coordinated stochastic activity.</p>
+            
+              <div class="research-program__metric">
+<strong>0.02%–3.1%</strong><span>Cell-type-dependent fraction of the genome used by an individual cell at a given moment</span>
+</div>
+            
+            <div class="research-program__focus">
+              <p>Current focus</p>
+              <ul>
+<li>scFLUENT-seq and single-cell nascent RNA</li>
+<li>Short-pulse readout of nascent genome usage</li>
+<li>Statistical and kinetic models of stable cell states</li>
+</ul>
+            </div>
+          </div>
+        </article>
+      
+    </div>
   </section>
 
-  
-  
-  
+  <section class="research-nucleus" aria-labelledby="research-nucleus-title">
+    <div class="research-shell research-nucleus__grid">
+      <div class="research-nucleus__copy" data-reveal="">
+        <p class="research-kicker">The nucleus as a system</p>
+        <h2 id="research-nucleus-title">Two interwoven polymer networks shape information flow.</h2>
+        <p>The nucleus is a far-from-equilibrium polymer–electrolyte system. Chromatin carries genetic information and provides the structural basis for genome folding; the RNA–RBP meshwork, composed of nascent RNA, RNA-binding proteins and RNA-processing factors, helps determine when, where and how genomic information is accessed.</p>
+<p>Their interface—the Perichromatin Region—is a dynamic surface where transcription, RNA processing, RNP assembly, RNA degradation and nuclear transport are spatially and functionally coupled. Transcription continually introduces RNA, energy and entropy into this active system.</p>
+      </div>
+      <div class="research-nucleus__images">
+        
+          <figure data-reveal="" style="--reveal-order: 1">
+            <img src="/images/research/rna-rbp-mesh-em.png" alt="Electron-microscopy view of a dense nuclear domain surrounded by an RNA–RBP meshwork" loading="lazy" decoding="async">
+            <figcaption><span>01</span>Electron-microscopy view of nuclear organization and the surrounding RNA–RBP meshwork.</figcaption>
+          </figure>
+        
+          <figure data-reveal="" style="--reveal-order: 2">
+            <img src="/images/research/rna-chromatin-dstorm.png" alt="Super-resolution image showing interwoven EU-labeled RNA and H3-marked chromatin in a nucleus" loading="lazy" decoding="async">
+            <figcaption><span>02</span>Super-resolution view of RNA and chromatin nanodomains.</figcaption>
+          </figure>
+        
+      </div>
+    </div>
+  </section>
 
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
+  <section class="research-technology" aria-labelledby="research-technology-title">
+    <div class="research-shell">
+      <div class="research-technology__head" data-reveal="">
+        <p class="research-kicker">Technology across scales</p>
+        <h2 id="research-technology-title">Measure, reconstruct and model the process.</h2>
+        <p>Quantitative experiments and theory are developed together rather than treated as isolated platforms.</p>
+      </div>
+      <ol class="research-technology__list">
+        
+          <li data-reveal="" style="--reveal-order: 1">
+<span>01</span><strong>Molecular</strong><p>Nascent RNA profiling · biochemical reconstitution</p>
+</li>
+        
+          <li data-reveal="" style="--reveal-order: 2">
+<span>02</span><strong>Spatial</strong><p>Live-cell imaging · super-resolution microscopy · electron microscopy</p>
+</li>
+        
+          <li data-reveal="" style="--reveal-order: 3">
+<span>03</span><strong>Cellular</strong><p>scFLUENT-seq · single-cell genomics · multi-omics</p>
+</li>
+        
+          <li data-reveal="" style="--reveal-order: 4">
+<span>04</span><strong>Perturbational</strong><p>CRISPR genome engineering</p>
+</li>
+        
+          <li data-reveal="" style="--reveal-order: 5">
+<span>05</span><strong>Computational</strong><p>Bioinformatics · artificial intelligence · kinetic modeling</p>
+</li>
+        
+      </ol>
+    </div>
+  </section>
 
-<h2 id="future-vision">Future Vision</h2>
-
-<p>We aim to move beyond gene-centric and pathway-centric models toward a unified theory of Biological Information Flow. In this framework, DNA sequences encode genetic information and spatial organization; chromatin and RNA networks create information-processing environments; transcriptional surveillance selects productive information; and stable cellular states emerge from probabilistic genome activities.</p>
-
-<p>Ultimately, we seek physical principles, statistical theories, and predictive models that make it possible to understand, predict, and control cellular states during development, aging, and disease.</p>
+  <section class="research-future" aria-labelledby="research-future-title">
+    <div class="research-shell research-future__grid">
+      <p class="research-kicker">Future vision</p>
+      <div data-reveal="">
+        <h2 id="research-future-title">Toward a predictive theory of cell state.</h2>
+        <p>We aim to move beyond gene-centric and pathway-centric descriptions toward physical principles, statistical theories and predictive models that connect DNA sequence, nuclear organization, RNA processing, transcriptional selection and cell fate.</p>
+        <a href="/publications/">Explore our publications <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+</div>
   </section>
 
 

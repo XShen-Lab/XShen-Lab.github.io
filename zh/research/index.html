@@ -145,6 +145,10 @@
 
 
 
+  <script src="/_scripts/research-flow.js" defer></script>
+
+
+
 
 <!-- Interior-page heading links; never loaded on the RNA homepage. -->
 
@@ -318,174 +322,275 @@
   
   
 
-  <section class="background" data-size="page">
-    <p class="right"><small><a href="/research/">English</a></small></p>
+  <section class="background" data-size="full">
+    <!-- <size>full</size> -->
 
-<h1 id="研究方向">研究方向</h1>
+<div class="research-page" data-research-page="">
+  <header class="research-hero" aria-labelledby="research-title">
+    <div class="research-hero__field" aria-hidden="true">
+      <span class="research-hero__chromatin"></span>
+      <span class="research-hero__mesh"></span>
+      <span class="research-hero__signal research-hero__signal--one"></span>
+      <span class="research-hero__signal research-hero__signal--two"></span>
+      <span class="research-hero__signal research-hero__signal--three"></span>
+    </div>
+    <div class="research-shell research-hero__copy">
+      <p class="research-kicker" data-reveal="">XShen Lab · 研究方向</p>
+      <h1 id="research-title" data-reveal="" style="--reveal-order: 1">生物信息流</h1>
+      <p class="research-hero__subtitle" data-reveal="" style="--reveal-order: 2">从基因组到细胞命运</p>
+      <p class="research-hero__question" data-reveal="" style="--reveal-order: 3">稀疏且随机的基因组活动如何转化为稳定的生物信息与细胞命运？</p>
+      <p class="research-hero__intro" data-reveal="" style="--reveal-order: 4">我们将细胞核视为动态信息处理系统，研究基因组组织、RNA 网络和转录监控如何把分子波动转化为稳定的细胞身份。</p>
+      <p class="research-hero__sequence" data-reveal="" style="--reveal-order: 5">组织化 → 处理 → 选择 → 稳定化</p>
+    </div>
+  </header>
 
-<h2 id="科学愿景">科学愿景</h2>
-
-<p>XShen Lab 以<strong>生物信息流（Biological Information Flow）：从基因组到细胞命运（From Genome to Cell Fate）</strong>为统一框架，研究稳定的生物秩序如何从随机性分子活动中产生。不同细胞类型拥有基本相同的基因组，却能形成多样而持久的身份；与此同时，转录、RNA 代谢和染色质组织持续在时空中波动。</p>
-
-<p>我们提出，稀疏且随机的基因组活动通过组织化、处理、选择和稳定化四个相互连接的环节转化为稳定的生物信息。长期目标是基于物理原理与统计理论，建立能够解释发育、衰老和疾病中细胞状态的预测框架。</p>
+  <section class="research-overview" aria-labelledby="research-overview-title">
+    <div class="research-shell research-overview__grid">
+      <div data-reveal="">
+        <p class="research-kicker">科学愿景</p>
+        <h2 id="research-overview-title">动态的分子活动，有序的生物状态。</h2>
+      </div>
+      <div class="research-overview__copy" data-reveal="" style="--reveal-order: 1">
+        <p>不同细胞类型拥有基本相同的基因组，却能形成多样而持久的身份；与此同时，转录、RNA 代谢与染色质组织持续在时空中波动。</p>
+<p>因此，生物信息不能仅由 DNA → RNA → 蛋白质的线性通路来理解。它在非编码基因组、细胞核结构、RNA 调控网络与转录环境中被持续组织、解释和选择。</p>
+        <p class="research-overview__statement">我们的长期目标是基于物理原理与统计理论，建立能够解释发育、衰老和疾病中细胞状态的预测框架。</p>
+      </div>
+    </div>
   </section>
 
-  
-  
-  
+  <section class="research-programs" aria-labelledby="research-programs-title">
+    <div class="research-shell">
+      <div class="research-programs__head" data-reveal="">
+        <div>
+          <p class="research-kicker">四个相互连接的研究项目</p>
+          <h2 id="research-programs-title">同一个信息系统，沿流程依次展开。</h2>
+          <p>横向浏览从基因组组织到细胞命运稳定化的四个阶段。每个项目回答一个独立问题，但机制在四个阶段之间连续流动。</p>
+        </div>
+        <div class="research-programs__controls">
+          <p class="research-programs__position" aria-live="polite"><span data-research-position="">01</span> / 04</p>
+          <button type="button" data-research-previous="" aria-label="上一个研究项目">←</button>
+          <button type="button" data-research-next="" aria-label="下一个研究项目">→</button>
+        </div>
+      </div>
 
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
+      <nav class="research-programs__jump" aria-label="四个相互连接的研究项目">
+        
+          <a href="#genome-organization" data-research-jump="0"><span>01</span>组织化</a>
+        
+          <a href="#rna-networks" data-research-jump="1"><span>02</span>处理</a>
+        
+          <a href="#transcriptional-surveillance" data-research-jump="2"><span>03</span>选择</a>
+        
+          <a href="#cell-fate-dynamics" data-research-jump="3"><span>04</span>稳定化</a>
+        
+      </nav>
+    </div>
 
-<h2 id="这一问题为何重要">这一问题为何重要</h2>
+    <div class="research-programs__rail" data-research-rail="" tabindex="0">
+      
+        <article class="research-program motif-domain" id="genome-organization" data-research-card="" data-reveal="">
+          <div class="research-program__visual research-program__visual--generated">
+            
+              <div class="research-program__motif" aria-hidden="true">
+<i></i><i></i><i></i><i></i><i></i>
+</div>
+              <p aria-hidden="true">组织化</p>
+            
+          </div>
 
-<p>现代分子生物学仍面临两项根本挑战。其一，蛋白质编码基因仅占哺乳动物基因组的一小部分，广阔非编码基因组的组织原则仍未被充分理解。其二，基因组活动具有内在随机性，而细胞身份和发育程序却高度稳定。</p>
-
-<p>因此，生物信息不能仅由 DNA → RNA → 蛋白质的线性通路来理解。它持续受到基因组组织、RNA 网络、转录动力学与监控机制的组织、解释与选择。非编码基因组不仅提供序列背景，也参与构建细胞核结构、RNA 调控网络和转录环境。我们的关注点不仅是哪些基因得到表达，更是生物系统如何组织、处理、选择并稳定信息。</p>
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="作为动态信息处理系统的细胞核">作为动态信息处理系统的细胞核</h2>
-
-<p>细胞核是一个远离平衡态的聚合物–电解质系统，也是动态信息处理系统。其内部包含两套相互连接、带电且高度异质的聚合物网络：染色质承载遗传信息并构成基因组折叠的结构基础；RNA–RBP 网状体系（RNA–RBP Meshwork）由新生转录本、RNA 结合蛋白和 RNA 加工因子组成，共同决定基因组信息在何时、何处以及以何种方式被读取。</p>
-
-<p>高分辨率成像提示，染色质可在致密球状纳米结构域与伸展的染色质线圈之间转换。非活性 DNA 更常位于球状结构域内部，而活跃转录的 DNA 则暴露在结构域表面，或以线圈形式伸展并接触 RNA–RBP 网状体系。二者交界处的<strong>染色质周边区（Perichromatin Region）</strong>是动态界面，使转录、RNA 加工、RNP 组装、RNA 降解与细胞核转运在空间和功能上耦联。</p>
-
-<p>转录持续向系统引入 RNA、能量与熵。在这一活性物质视角下，生物信息并非仅由 DNA 序列决定，而由染色质结构、RNA 网络与<strong>非平衡系统（Non-equilibrium System）</strong>动力学共同塑造。</p>
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="生物信息流">生物信息流</h2>
-
-<h3 id="组织化--处理--选择--稳定化">组织化 → 处理 → 选择 → 稳定化</h3>
-
-<ul>
-  <li>
-<strong>组织化：</strong>基因组序列与染色质建立空间信息；</li>
-  <li>
-<strong>处理：</strong>RNA 网络构建细胞核信息处理环境；</li>
-  <li>
-<strong>选择：</strong>转录监控促进有效生物输出；</li>
-  <li>
-<strong>稳定化：</strong>概率性基因组活动汇聚为稳定的细胞身份。</li>
+          <div class="research-program__content">
+            <div class="research-program__meta">
+              <span>01</span>
+              <span>组织化 / Organization</span>
+            </div>
+            <p class="research-program__verb">组织生物信息</p>
+            <h3>基因组组织</h3>
+            <p class="research-program__question">基因组序列如何编码细胞核结构？</p>
+            <p>基因组序列编码的不只是基因。我们研究 L1 与 B1/Alu 等重复元件如何建立染色体区室化和核内定位原则，以及这些元件的 RNA 产物如何参与染色质组织。</p>
+            <p>我们正在将这一框架拓展至发育、细胞周期转换和细胞命运变化过程中的基因组分区与动态重塑。</p>
+            
+            <div class="research-program__focus">
+              <p>当前重点</p>
+              <ul>
+<li>重复元件及其 RNA 产物</li>
+<li>染色体区室化与核内定位</li>
+<li>细胞状态转换中的动态基因组重塑</li>
 </ul>
-  </section>
+            </div>
+          </div>
+        </article>
+      
+        <article class="research-program motif-mesh" id="rna-networks" data-research-card="" data-reveal="">
+          <div class="research-program__visual">
+            
+              <figure>
+                <img src="/images/research/rna-chromatin-dstorm.png" alt="超分辨成像显示细胞核内 EU 标记 RNA 与 H3 标记染色质相互交织" loading="lazy" decoding="async">
+                <figcaption>超分辨视野中的 RNA 与染色质空间交织。</figcaption>
+              </figure>
+            
+          </div>
 
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="研究项目">研究项目</h2>
-
-<h3 id="genome-organization">1. 基因组组织</h3>
-
-<p><strong>组织生物信息</strong></p>
-
-<p><em>基因组序列如何编码细胞核结构（Nuclear Architecture）？</em></p>
-
-<p>我们研究基因组序列如何建立细胞核结构并影响基因调控与细胞命运。我们的工作表明，L1 与 B1/Alu 等重复元件并非单纯的基因组副产物，而是编码染色体区室化和核内定位原则。当前研究进一步探索重复元件及其 RNA 产物如何在发育、细胞周期转换和细胞命运变化过程中塑造染色质组织、细胞核结构与动态基因组重塑。</p>
-
-<h3 id="rna-networks">2. RNA 网络</h3>
-
-<p><strong>处理生物信息</strong></p>
-
-<p><em>RNA 如何组织细胞核环境？</em></p>
-
-<p>RNA 既是遗传信息载体，也是细胞核功能的重要组织者。我们的研究确立了非编码 RNA 调控邻近基因与局部染色质状态的作用，并发现 RNA 结合蛋白可形成动态的 RNA 相关凝聚体，调控 RNA 聚合酶 II 的募集、CTD 磷酸化与转录延伸。我们进一步研究新生转录（Nascent Transcription）、RNA 结合蛋白和加工因子如何构成 RNA–RBP 网状体系，协调转录、RNA 成熟、RNA 降解与细胞核组织。</p>
-
-<h3 id="transcriptional-surveillance">3. 转录监控</h3>
-
-<p><strong>选择生物信息</strong></p>
-
-<p><em>有效生物信息如何从广泛转录中产生？</em></p>
-
-<p>真核基因组发生广泛转录，但仅有部分转录事件能够进入有效延伸并形成成熟 mRNA。我们提出，有效转录并非默认结果，而是主动建立的状态。当前工作研究 RNA 聚合酶 II CTD 与 RNA 加工和降解通路如何构成全基因组尺度的转录监控系统，清除无效转录，同时支持 RNA 成熟、有效延伸和聚合酶循环利用。此处不公开尚未发表的稿件标题。</p>
-
-<h3 id="cell-fate-dynamics">4. 细胞命运动力学</h3>
-
-<p><strong>稳定生物信息</strong></p>
-
-<p><em>概率性基因组活动如何产生稳定的细胞身份？</em></p>
-
-<p>稳定身份不必依赖每个细胞执行完全相同的转录程序。利用本实验室开发的 scFLUENT-seq，我们在单细胞分辨率下获得短时脉冲标记的新生基因组使用快照。论文结果显示，单个细胞在特定时刻仅使用约 0.02%–3.1% 的基因组，范围取决于细胞类型；细胞群体则探索更广泛的基因组空间。我们将细胞身份建模为由协调的随机活动产生的稳定概率分布。</p>
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="技术平台">技术平台</h2>
-
-<p>生物信息流跨越分子动力学、细胞核组织与细胞状态。我们综合运用：</p>
-
-<ul>
-  <li>单细胞基因组学；</li>
-  <li>活细胞成像与超分辨成像；</li>
-  <li>电子显微镜；</li>
-  <li>生化重构；</li>
-  <li>CRISPR 基因组工程；</li>
-  <li>计算分析；</li>
-  <li>人工智能；</li>
-  <li>理论建模。</li>
+          <div class="research-program__content">
+            <div class="research-program__meta">
+              <span>02</span>
+              <span>处理 / Processing</span>
+            </div>
+            <p class="research-program__verb">处理生物信息</p>
+            <h3>RNA 网络</h3>
+            <p class="research-program__question">RNA 如何组织细胞核环境？</p>
+            <p>RNA 既是遗传信息载体，也是组织细胞核功能的物质基础。非编码 RNA 能够调控邻近基因与局部染色质状态；RNA 结合蛋白形成动态的 RNA 相关凝聚体，并影响 RNA 聚合酶 II 的募集、CTD 磷酸化与转录延伸。</p>
+            <p>我们研究新生 RNA、RNA 结合蛋白与加工因子如何组装为 RNA–RBP 网状体系，并协调转录、RNA 成熟、RNA 降解与细胞核组织。</p>
+            
+            <div class="research-program__focus">
+              <p>当前重点</p>
+              <ul>
+<li>新生 RNA 与 RNA 结合蛋白</li>
+<li>RNA 相关凝聚体与 RNA 聚合酶 II 调控</li>
+<li>转录、RNA 处理与细胞核结构的耦联</li>
 </ul>
+            </div>
+          </div>
+        </article>
+      
+        <article class="research-program motif-checkpoint" id="transcriptional-surveillance" data-research-card="" data-reveal="">
+          <div class="research-program__visual research-program__visual--generated">
+            
+              <div class="research-program__motif" aria-hidden="true">
+<i></i><i></i><i></i><i></i><i></i>
+</div>
+              <p aria-hidden="true">选择</p>
+            
+          </div>
 
-<p>理论驱动的发现是本实验室研究的重要特征：定量实验与模型协同发展，用于揭示跨尺度的一般规律。</p>
+          <div class="research-program__content">
+            <div class="research-program__meta">
+              <span>03</span>
+              <span>选择 / Selection</span>
+            </div>
+            <p class="research-program__verb">选择生物信息</p>
+            <h3>转录监控</h3>
+            <p class="research-program__question">有效生物信息如何从广泛转录中产生？</p>
+            <p>真核基因组发生广泛转录，但只有部分转录事件能够进入有效延伸并形成成熟 mRNA。因此，我们将有效转录视为一种需要被主动建立的状态，而非默认结果。</p>
+            <p>我们研究 RNA 聚合酶 II CTD、EIF4A3、RNA 处理与降解通路如何构成全基因组尺度的转录监控系统：清除无效转录，同时支持 RNA 成熟、有效延伸与聚合酶循环利用。</p>
+            
+            <div class="research-program__focus">
+              <p>当前重点</p>
+              <ul>
+<li>RNA 聚合酶 II CTD 与 EIF4A3</li>
+<li>有效转录延伸的动力学选择</li>
+<li>RNA 成熟、清除与聚合酶循环利用</li>
+</ul>
+            </div>
+          </div>
+        </article>
+      
+        <article class="research-program motif-field" id="cell-fate-dynamics" data-research-card="" data-reveal="">
+          <div class="research-program__visual">
+            
+              <figure>
+                <img src="/images/publications/2025-scfluent-seq/graphical-abstract.webp" alt="scFLUENT-seq 图形摘要，展示在单细胞尺度测量新生 RNA" loading="lazy" decoding="async">
+                <figcaption>scFLUENT-seq 将短时脉冲标记的新生 RNA 测量与概率性基因组活动相连接。</figcaption>
+              </figure>
+            
+          </div>
+
+          <div class="research-program__content">
+            <div class="research-program__meta">
+              <span>04</span>
+              <span>稳定化 / Stabilization</span>
+            </div>
+            <p class="research-program__verb">稳定生物信息</p>
+            <h3>细胞命运动力学</h3>
+            <p class="research-program__question">概率性基因组活动如何产生稳定的细胞身份？</p>
+            <p>稳定的细胞身份并不要求每个细胞执行完全相同的转录程序。利用本实验室开发的 scFLUENT-seq，我们在单细胞分辨率下获得短时脉冲标记的新生基因组使用快照。</p>
+            <p>单个细胞在特定时刻使用约 0.02%–3.1% 的基因组，具体范围取决于细胞类型；细胞群体则探索更广泛的基因组空间。我们将细胞身份建模为由协调的随机活动产生的稳定概率分布。</p>
+            
+              <div class="research-program__metric">
+<strong>0.02%–3.1%</strong><span>单个细胞在特定时刻使用的基因组比例，范围取决于细胞类型</span>
+</div>
+            
+            <div class="research-program__focus">
+              <p>当前重点</p>
+              <ul>
+<li>scFLUENT-seq 与单细胞新生 RNA</li>
+<li>新生基因组使用的短时脉冲读出</li>
+<li>稳定细胞状态的统计与动力学模型</li>
+</ul>
+            </div>
+          </div>
+        </article>
+      
+    </div>
   </section>
 
-  
-  
-  
+  <section class="research-nucleus" aria-labelledby="research-nucleus-title">
+    <div class="research-shell research-nucleus__grid">
+      <div class="research-nucleus__copy" data-reveal="">
+        <p class="research-kicker">作为系统的细胞核</p>
+        <h2 id="research-nucleus-title">两套相互交织的聚合物网络塑造生物信息流。</h2>
+        <p>细胞核是一个远离平衡态的聚合物–电解质系统。染色质承载遗传信息并构成基因组折叠的结构基础；由新生 RNA、RNA 结合蛋白和 RNA 加工因子组成的 RNA–RBP 网状体系，则参与决定基因组信息在何时、何处以及以何种方式被读取。</p>
+<p>二者交界处的染色质周边区（Perichromatin Region）是动态界面，使转录、RNA 处理、RNP 组装、RNA 降解与细胞核转运在空间和功能上耦联。转录不断向这一活性系统引入 RNA、能量与熵。</p>
+      </div>
+      <div class="research-nucleus__images">
+        
+          <figure data-reveal="" style="--reveal-order: 1">
+            <img src="/images/research/rna-rbp-mesh-em.png" alt="电子显微镜显示致密核内结构域及其周围的 RNA–RBP 网状体系" loading="lazy" decoding="async">
+            <figcaption><span>01</span>电子显微镜视野中的细胞核组织与周围 RNA–RBP 网状体系。</figcaption>
+          </figure>
+        
+          <figure data-reveal="" style="--reveal-order: 2">
+            <img src="/images/research/rna-chromatin-dstorm.png" alt="超分辨成像显示细胞核内 EU 标记 RNA 与 H3 标记染色质相互交织" loading="lazy" decoding="async">
+            <figcaption><span>02</span>超分辨视野中的 RNA 与染色质纳米结构域。</figcaption>
+          </figure>
+        
+      </div>
+    </div>
+  </section>
 
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
+  <section class="research-technology" aria-labelledby="research-technology-title">
+    <div class="research-shell">
+      <div class="research-technology__head" data-reveal="">
+        <p class="research-kicker">跨尺度技术</p>
+        <h2 id="research-technology-title">测量、重构并建模正在发生的过程。</h2>
+        <p>定量实验与理论模型协同发展，而不是彼此孤立的技术平台。</p>
+      </div>
+      <ol class="research-technology__list">
+        
+          <li data-reveal="" style="--reveal-order: 1">
+<span>01</span><strong>分子</strong><p>新生 RNA 图谱分析 · 生化重构</p>
+</li>
+        
+          <li data-reveal="" style="--reveal-order: 2">
+<span>02</span><strong>空间</strong><p>活细胞成像 · 超分辨显微镜 · 电子显微镜</p>
+</li>
+        
+          <li data-reveal="" style="--reveal-order: 3">
+<span>03</span><strong>细胞</strong><p>scFLUENT-seq · 单细胞基因组学 · 多组学</p>
+</li>
+        
+          <li data-reveal="" style="--reveal-order: 4">
+<span>04</span><strong>扰动</strong><p>CRISPR 基因组工程</p>
+</li>
+        
+          <li data-reveal="" style="--reveal-order: 5">
+<span>05</span><strong>计算</strong><p>生物信息学 · 人工智能 · 动力学建模</p>
+</li>
+        
+      </ol>
+    </div>
+  </section>
 
-<h2 id="未来愿景">未来愿景</h2>
-
-<p>我们的目标是超越以基因或通路为中心的模型，建立统一的生物信息流理论。在这一框架中，DNA 序列编码遗传信息与空间组织原则；染色质和 RNA 网络构建信息处理环境；转录监控选择有效信息；稳定细胞状态则从概率性基因组活动中涌现。</p>
-
-<p>最终，我们希望发展生物信息流的物理原理、统计理论和预测模型，以理解、预测并调控发育、衰老和疾病过程中的细胞状态。</p>
+  <section class="research-future" aria-labelledby="research-future-title">
+    <div class="research-shell research-future__grid">
+      <p class="research-kicker">未来愿景</p>
+      <div data-reveal="">
+        <h2 id="research-future-title">走向可预测的细胞状态理论。</h2>
+        <p>我们希望超越以基因或通路为中心的描述，发展连接 DNA 序列、细胞核组织、RNA 处理、转录选择与细胞命运的物理原理、统计理论和预测模型。</p>
+        <a href="/zh/publications/">查看我们的论文 <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+</div>
   </section>
 
 
