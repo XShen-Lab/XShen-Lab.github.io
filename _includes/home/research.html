@@ -1,8 +1,11 @@
 <div class="rna-research-grid">
   {% for item in include.programs %}
-    <a class="rna-research-card motif-{{ item.motif }}" href="{{ include.research_url | append: '#' | append: item.anchor | relative_url }}" data-reveal style="--reveal-order: {{ forloop.index }}">
+    <a class="rna-research-card motif-{{ item.motif }}{% if item.image.home_path %} rna-research-card--image{% endif %}" href="{{ include.research_url | append: '#' | append: item.anchor | relative_url }}" data-reveal style="--reveal-order: {{ forloop.index }}">
       <span class="rna-research-number">0{{ forloop.index }}</span>
       <span class="rna-research-signal">{{ item.operation }}{% if item.operation_en %} / {{ item.operation_en }}{% endif %}</span>
+      {% if item.image.home_path %}
+        <span class="rna-research-image" aria-hidden="true"><img src="{{ item.image.home_path | relative_url }}" alt="" loading="lazy" decoding="async"></span>
+      {% endif %}
       <span class="rna-research-copy">
         <span class="rna-research-title">{{ item.title }}</span>
         <span class="rna-research-question">{{ item.question }}</span>
