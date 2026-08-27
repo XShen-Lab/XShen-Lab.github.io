@@ -729,6 +729,96 @@
   box-shadow: inset 3px 0 0 var(--primary);
 }
 
+.publication-links {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 0 0.36em;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font-family: var(--code);
+  font-size: 0.78em;
+  line-height: 1;
+  text-align: inherit;
+  vertical-align: baseline;
+}
+
+.publication-links summary {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--primary);
+  cursor: pointer;
+  list-style: none;
+  line-height: 1;
+  transition: color var(--transition);
+  white-space: nowrap;
+}
+
+.publication-links summary::-webkit-details-marker {
+  display: none;
+}
+
+.publication-links summary::before,
+.publication-links summary::after {
+  display: inline;
+  width: auto;
+  height: auto;
+  margin: 0;
+  transform: none;
+}
+
+.publication-links summary::before { content: "["; }
+.publication-links summary::after { content: "]"; }
+
+.publication-links summary:hover,
+.publication-links summary:focus-visible,
+.publication-links[open] summary {
+  background: transparent;
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  text-underline-offset: 0.2em;
+}
+
+.publication-links__menu {
+  position: absolute;
+  top: calc(100% + 9px);
+  right: 0;
+  z-index: 8;
+  display: grid;
+  width: max-content;
+  min-width: 170px;
+  max-width: min(280px, 75vw);
+  padding: 8px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: 0 18px 45px var(--overlay);
+  line-height: 1.4;
+}
+
+.page-inner main .publication-links__menu a {
+  padding: 9px 11px;
+  color: var(--text-soft);
+  font-family: var(--body);
+  font-size: 0.78rem;
+  font-weight: var(--semi-bold);
+  text-decoration: none;
+}
+
+.page-inner main .publication-links__menu a + a {
+  border-top: 1px solid var(--line);
+}
+
+.page-inner main .publication-links__menu a:hover,
+.page-inner main .publication-links__menu a:focus-visible {
+  background: var(--background-alt);
+  color: var(--primary);
+}
+
 .publication-browser .full-publications > li[hidden],
 .publication-browser .full-publications[hidden] {
   display: none;

@@ -32,6 +32,9 @@ ui:
     read_summary_label: Read summary
     article_label: View article
     pdf_label: Download PDF
+    links_aria_label: Publication links
+    article_link_label: Article
+    scholar_link_label: Google Scholar
     browser_heading: All Publications
     browser_intro: Browse all 52 formal records by publication year and primary research category. The citation text and CV order remain unchanged.
     year_label: Publication year
@@ -48,6 +51,9 @@ ui:
     read_summary_label: 阅读简介
     article_label: 查看论文
     pdf_label: 下载 PDF
+    links_aria_label: 论文链接
+    article_link_label: 论文页面
+    scholar_link_label: Google Scholar
     browser_heading: 完整论文目录
     browser_intro: 可按照发表年份与主要研究类别交叉浏览全部 52 条正式记录；引用文字和简历顺序保持不变。
     year_label: 发表年份

@@ -8,6 +8,7 @@ require "json"
 require "open3"
 require "tempfile"
 require "tmpdir"
+require "uri"
 require "yaml"
 
 ROOT = File.expand_path("..", __dir__)
@@ -309,7 +310,7 @@ def build_rollback_pages
   end
 end
 
-def extract_publication_list(html, label)
+def extract_publication_list(html, label, records)
   matches = html.to_enum(:scan, /<ol\b([^>]*)>(.*?)<\/ol>/mi).map do
     [Regexp.last_match(0), Regexp.last_match(1), Regexp.last_match(2)]
   end
@@ -322,19 +323,47 @@ def extract_publication_list(html, label)
   full_html, attributes, list_content = lists.first
   fail_unless(attributes.strip == 'class="full-publications"',
               "#{label} full-publications list has unexpected attributes or metadata")
-  fail_unless(list_content !~ /<(?:a|button|img)\b/i,
-              "#{label} list contains a link, button, or image")
+  fail_unless(list_content !~ /<(?:button|img)\b/i,
+              "#{label} list contains a button or image")
 
   items = list_content.scan(/<li\b([^>]*)>(.*?)<\/li>/mi)
   fail_unless(items.length == EXPECTED_COUNT,
               "#{label} count is #{items.length}, expected #{EXPECTED_COUNT}")
 
+  production_mode = label.include?("production mode")
   citations = items.each_with_index.map do |(item_attributes, content), index|
     fail_unless(item_attributes.strip.empty?,
                 "#{label} item #{index + 1} has attributes or metadata")
-    fail_unless(content !~ /<[^>]+>/,
-                "#{label} item #{index + 1} contains nested markup or metadata")
-    citation = CGI.unescapeHTML(content)
+
+    link_panels = content.scan(/<details\b[^>]*\bclass="publication-links"[^>]*>.*?<\/details>/mi)
+    expected_panel_count = production_mode ? 1 : 0
+    fail_unless(link_panels.length == expected_panel_count,
+                "#{label} item #{index + 1} has #{link_panels.length} link panels, expected #{expected_panel_count}")
+
+    if production_mode
+      panel = link_panels.first
+      fail_unless(visible_text(panel).start_with?("links "),
+                  "#{label} item #{index + 1} does not expose the [links] label")
+      hrefs = panel.scan(/<a\b[^>]*\bhref="([^"]*)"/i).flatten.map { |href| CGI.unescapeHTML(href) }
+      publication = records.fetch(index)
+      expected_hrefs = []
+      expected_hrefs << publication.dig("links", "article") if publication.dig("links", "article")
+      expected_hrefs.concat(Array(publication.dig("links", "data")).map { |dataset| dataset.fetch("url") })
+      fail_unless(hrefs[0, expected_hrefs.length] == expected_hrefs,
+                  "#{label} item #{index + 1} verified article/data links differ from canonical data")
+      scholar_uri = URI.parse(hrefs.last)
+      scholar_query = CGI.parse(scholar_uri.query.to_s).fetch("q", []).first
+      scholar_source = publication["title"].to_s.empty? ? publication.fetch("citation") : publication.fetch("title")
+      fail_unless(scholar_uri.host == "scholar.google.com" && scholar_query == scholar_source,
+                  "#{label} item #{index + 1} Google Scholar link does not use canonical publication text")
+      fail_unless(panel.scan(/<a\b/i).length == expected_hrefs.length + 1,
+                  "#{label} item #{index + 1} contains an unexpected publication link")
+    end
+
+    citation_html = content.sub(/ <details\b[^>]*\bclass="publication-links"[^>]*>.*?<\/details>\s*\z/mi, "")
+    fail_unless(citation_html !~ /<[^>]+>/,
+                "#{label} item #{index + 1} citation contains nested markup or metadata")
+    citation = CGI.unescapeHTML(citation_html)
     fail_unless(!citation.strip.empty?, "#{label} item #{index + 1} is empty")
     citation
   end
@@ -424,7 +453,7 @@ end
 
 def verify_mode!(pages, mode, legacy, records, enrichment)
   lists = PAGE_PATHS.keys.to_h do |language|
-    list = extract_publication_list(pages.fetch(language), "#{mode} #{language}")
+    list = extract_publication_list(pages.fetch(language), "#{mode} #{language}", records)
     fail_unless(list[:citations] == legacy,
                 "#{mode} #{language} order or visible citation text differs from legacy")
     verify_approved_sequence!("#{mode} #{language}", list[:citations])
