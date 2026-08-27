@@ -14,14 +14,17 @@ layout: default
 {% assign people_label = "Back to People" %}
 {% assign research_label = "Research Interests" %}
 {% assign education_label = "Education" %}
+{% assign positions_label = "Professional Positions" %}
 {% assign research_empty = "Research interests forthcoming." %}
 {% assign education_empty = "Education information forthcoming." %}
+{% assign positions_empty = "Professional positions forthcoming." %}
 
 {% if page.lang == "zh-CN" %}
   {% assign people_url = "/zh/people/" %}
   {% assign people_label = "返回团队成员" %}
   {% assign research_label = "研究兴趣" %}
   {% assign education_label = "教育经历" %}
+  {% assign positions_label = "职业经历" %}
   {% assign research_empty = "研究兴趣待更新。" %}
   {% assign education_empty = "教育经历待更新。" %}
   {% if member.role == "principal-investigator" %}
@@ -30,19 +33,31 @@ layout: default
   {% endif %}
 {% endif %}
 
+{% if member.role == "alumni" %}
+  {% assign research_label = "Research Areas" %}
+  {% if page.lang == "zh-CN" %}{% assign research_label = "研究领域" %}{% endif %}
+{% endif %}
+
 {% assign research_marker = '<h2 id="research-interests">Research Interests</h2>' %}
 {% assign education_marker = '<h2 id="education">Education</h2>' %}
+{% assign positions_marker = '<h2 id="professional-positions">Professional Positions</h2>' %}
 {% assign research_body = "" %}
 {% assign education_body = "" %}
+{% assign positions_body = "" %}
 {% if content contains research_marker %}
   {% assign research_tail = content | split: research_marker | last %}
   {% assign research_body = research_tail | split: education_marker | first %}
 {% endif %}
 {% if content contains education_marker %}
-  {% assign education_body = content | split: education_marker | last %}
+  {% assign education_tail = content | split: education_marker | last %}
+  {% assign education_body = education_tail | split: positions_marker | first %}
+{% endif %}
+{% if content contains positions_marker %}
+  {% assign positions_body = content | split: positions_marker | last %}
 {% endif %}
 {% assign research_text = research_body | regex_strip %}
 {% assign education_text = education_body | regex_strip %}
+{% assign positions_text = positions_body | regex_strip %}
 
 <article class="member-profile" data-member-profile>
   <aside class="member-profile__visual" data-member-visual data-reveal style="--member-photo-position: {{ member.profile_position | default: '50% 50%' }}; --member-photo-scale: {{ member.profile_image_scale | default: '1.055' }};">
@@ -117,6 +132,14 @@ layout: default
           <p class="member-profile__empty">{{ education_empty }}</p>
         {% endif %}
       </section>
+
+      {% if positions_text != "" %}
+        <section class="member-profile__module member-profile__module--positions" data-reveal style="--reveal-order: 3">
+          <p class="member-profile__index">03</p>
+          <h2>{{ positions_label }}</h2>
+          {{ positions_body }}
+        </section>
+      {% endif %}
     {% endif %}
   </div>
 </article>

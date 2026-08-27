@@ -738,7 +738,8 @@
   color: #cfddd8;
 }
 
-.page-inner main .member-profile__module--education li strong {
+.page-inner main .member-profile__module--education li strong,
+.page-inner main .member-profile__module--positions li strong {
   color: var(--text);
   font-weight: 750;
 }

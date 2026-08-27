@@ -61,10 +61,7 @@ nav:
 
 {% include section.html %}
 
-<div class="people-section people-section--placeholder">
+<div class="people-section">
   <h2 id="alumni">Alumni</h2>
-  <div class="people-placeholder" aria-label="Alumni">
-    <span>Alumni</span>
-    <strong>Profiles forthcoming</strong>
-  </div>
+  {% include people/gallery.html role="alumni" id="alumni-gallery" label="Alumni" %}
 </div>

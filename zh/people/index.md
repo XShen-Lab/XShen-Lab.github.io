@@ -58,10 +58,7 @@ member_gallery: true
 
 {% include section.html %}
 
-<div class="people-section people-section--placeholder">
+<div class="people-section">
   <h2 id="离组成员">离组成员</h2>
-  <div class="people-placeholder" aria-label="离组成员">
-    <span>离组成员</span>
-    <strong>成员资料待更新</strong>
-  </div>
+  {% include people/gallery.html role="alumni" id="zh-alumni-gallery" label="离组成员" %}
 </div>
