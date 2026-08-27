@@ -1,0 +1,113 @@
+en:
+  hero:
+    eyebrow: XShen Lab · Research
+    title: Biological Information Flow
+    subtitle: From Genome to Cell Fate
+    question: How does sparse and stochastic genome activity become stable biological information and cell fate?
+    intro: We study the nucleus as a dynamic information-processing system in which genome organization, RNA networks and transcriptional surveillance transform molecular fluctuation into stable cellular identity.
+    sequence: Organization → Processing → Selection → Stabilization
+  overview:
+    label: Scientific vision
+    title: Dynamic molecular activity. Ordered biological states.
+    paragraphs:
+      - Although cell types share essentially the same genome, they acquire diverse and persistent identities while transcription, RNA metabolism and chromatin organization fluctuate across space and time.
+      - Biological information therefore cannot be understood as a simple DNA → RNA → protein pathway. It is continuously organized, interpreted and selected through the noncoding genome, nuclear architecture, RNA regulatory networks and transcriptional environments.
+    statement: Our long-term goal is a predictive framework, grounded in physical principles and statistical theories, for understanding cellular states in development, aging and disease.
+  programs:
+    label: Four connected research programs
+    title: One information system, viewed in sequence.
+    intro: Move horizontally from the organization of the genome to the stabilization of cell fate. Each program asks a distinct question, but the mechanism flows continuously across the four stages.
+    previous: Previous research program
+    next: Next research program
+    focus_label: Current focus
+    image_label: Experimental view
+  nucleus:
+    label: The nucleus as a system
+    title: Two interwoven polymer networks shape information flow.
+    paragraphs:
+      - The nucleus is a far-from-equilibrium polymer–electrolyte system. Chromatin carries genetic information and provides the structural basis for genome folding; the RNA–RBP meshwork, composed of nascent RNA, RNA-binding proteins and RNA-processing factors, helps determine when, where and how genomic information is accessed.
+      - Their interface—the Perichromatin Region—is a dynamic surface where transcription, RNA processing, RNP assembly, RNA degradation and nuclear transport are spatially and functionally coupled. Transcription continually introduces RNA, energy and entropy into this active system.
+    images:
+      - path: /images/research/rna-rbp-mesh-em.png
+        alt: Electron-microscopy view of a dense nuclear domain surrounded by an RNA–RBP meshwork
+        caption: Electron-microscopy view of nuclear organization and the surrounding RNA–RBP meshwork.
+      - path: /images/research/rna-chromatin-dstorm.png
+        alt: Super-resolution image showing interwoven EU-labeled RNA and H3-marked chromatin in a nucleus
+        caption: Super-resolution view of RNA and chromatin nanodomains.
+  technology:
+    label: Technology across scales
+    title: Measure, reconstruct and model the process.
+    intro: Quantitative experiments and theory are developed together rather than treated as isolated platforms.
+    items:
+      - label: Molecular
+        value: Nascent RNA profiling · biochemical reconstitution
+      - label: Spatial
+        value: Live-cell imaging · super-resolution microscopy · electron microscopy
+      - label: Cellular
+        value: scFLUENT-seq · single-cell genomics · multi-omics
+      - label: Perturbational
+        value: CRISPR genome engineering
+      - label: Computational
+        value: Bioinformatics · artificial intelligence · kinetic modeling
+  future:
+    label: Future vision
+    title: Toward a predictive theory of cell state.
+    text: We aim to move beyond gene-centric and pathway-centric descriptions toward physical principles, statistical theories and predictive models that connect DNA sequence, nuclear organization, RNA processing, transcriptional selection and cell fate.
+    action: Explore our publications
+
+zh-CN:
+  hero:
+    eyebrow: XShen Lab · 研究方向
+    title: 生物信息流
+    subtitle: 从基因组到细胞命运
+    question: 稀疏且随机的基因组活动如何转化为稳定的生物信息与细胞命运？
+    intro: 我们将细胞核视为动态信息处理系统，研究基因组组织、RNA 网络和转录监控如何把分子波动转化为稳定的细胞身份。
+    sequence: 组织化 → 处理 → 选择 → 稳定化
+  overview:
+    label: 科学愿景
+    title: 动态的分子活动，有序的生物状态。
+    paragraphs:
+      - 不同细胞类型拥有基本相同的基因组，却能形成多样而持久的身份；与此同时，转录、RNA 代谢与染色质组织持续在时空中波动。
+      - 因此，生物信息不能仅由 DNA → RNA → 蛋白质的线性通路来理解。它在非编码基因组、细胞核结构、RNA 调控网络与转录环境中被持续组织、解释和选择。
+    statement: 我们的长期目标是基于物理原理与统计理论，建立能够解释发育、衰老和疾病中细胞状态的预测框架。
+  programs:
+    label: 四个相互连接的研究项目
+    title: 同一个信息系统，沿流程依次展开。
+    intro: 横向浏览从基因组组织到细胞命运稳定化的四个阶段。每个项目回答一个独立问题，但机制在四个阶段之间连续流动。
+    previous: 上一个研究项目
+    next: 下一个研究项目
+    focus_label: 当前重点
+    image_label: 实验视野
+  nucleus:
+    label: 作为系统的细胞核
+    title: 两套相互交织的聚合物网络塑造生物信息流。
+    paragraphs:
+      - 细胞核是一个远离平衡态的聚合物–电解质系统。染色质承载遗传信息并构成基因组折叠的结构基础；由新生 RNA、RNA 结合蛋白和 RNA 加工因子组成的 RNA–RBP 网状体系，则参与决定基因组信息在何时、何处以及以何种方式被读取。
+      - 二者交界处的染色质周边区（Perichromatin Region）是动态界面，使转录、RNA 处理、RNP 组装、RNA 降解与细胞核转运在空间和功能上耦联。转录不断向这一活性系统引入 RNA、能量与熵。
+    images:
+      - path: /images/research/rna-rbp-mesh-em.png
+        alt: 电子显微镜显示致密核内结构域及其周围的 RNA–RBP 网状体系
+        caption: 电子显微镜视野中的细胞核组织与周围 RNA–RBP 网状体系。
+      - path: /images/research/rna-chromatin-dstorm.png
+        alt: 超分辨成像显示细胞核内 EU 标记 RNA 与 H3 标记染色质相互交织
+        caption: 超分辨视野中的 RNA 与染色质纳米结构域。
+  technology:
+    label: 跨尺度技术
+    title: 测量、重构并建模正在发生的过程。
+    intro: 定量实验与理论模型协同发展，而不是彼此孤立的技术平台。
+    items:
+      - label: 分子
+        value: 新生 RNA 图谱分析 · 生化重构
+      - label: 空间
+        value: 活细胞成像 · 超分辨显微镜 · 电子显微镜
+      - label: 细胞
+        value: scFLUENT-seq · 单细胞基因组学 · 多组学
+      - label: 扰动
+        value: CRISPR 基因组工程
+      - label: 计算
+        value: 生物信息学 · 人工智能 · 动力学建模
+  future:
+    label: 未来愿景
+    title: 走向可预测的细胞状态理论。
+    text: 我们希望超越以基因或通路为中心的描述，发展连接 DNA 序列、细胞核组织、RNA 处理、转录选择与细胞命运的物理原理、统计理论和预测模型。
+    action: 查看我们的论文

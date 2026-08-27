@@ -695,7 +695,17 @@ main { padding-top: 76px; }
 .rna-research-title { font-family: var(--heading); font-size: clamp(2.2rem, 4vw, 4.2rem); line-height: 0.95; }
 .rna-research-question { max-width: 480px; margin-top: 18px; color: #10201e; font-family: var(--heading); font-size: 1.2rem; line-height: 1.25; }
 .rna-research-text { max-width: 520px; margin-top: 14px; color: #314945; font-size: 0.98rem; line-height: 1.72; }
+.rna-research-question,
+.rna-research-text { text-align: left; }
 .rna-research-card .rna-arrow { align-self: end; color: #087f72; font-size: 0.8rem; font-weight: 700; }
+.rna-research-card > span:not(.rna-research-image) { position: relative; z-index: 2; }
+.rna-research-image { position: absolute; z-index: 1; inset: 0 0 0 52%; overflow: hidden; opacity: 0.78; }
+.rna-research-image:after { position: absolute; inset: 0; background: linear-gradient(90deg, #f5f3eb 0%, rgb(245 243 235 / 82%) 14%, transparent 70%); content: ""; }
+.rna-research-image img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.78) contrast(1.06); transition: filter 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+.rna-research-card.motif-field .rna-research-image { background: #fff; }
+.rna-research-card.motif-field .rna-research-image img { padding: 12%; object-fit: contain; }
+.rna-research-card--image .rna-research-copy { max-width: 69%; }
+.rna-research-card--image:hover .rna-research-image img { filter: saturate(1) contrast(1.02); transform: scale(1.025); }
 .rna-program-motif { position: absolute; right: 8%; top: 14%; width: 100px; height: 100px; opacity: 0.16; transition: opacity var(--transition), transform var(--transition); }
 .rna-research-card:hover .rna-program-motif { opacity: 0.52; transform: scale(1.08) rotate(3deg); }
 .rna-program-motif i { position: absolute; border: 1px solid #087f72; }
@@ -905,6 +915,7 @@ html[data-dark="true"] .rna-research-question { color: #eff8f4; }
 html[data-dark="true"] .rna-program-motif i { border-color: var(--primary); }
 html[data-dark="true"] .motif-mesh .rna-program-motif i { background: var(--primary); }
 html[data-dark="true"] .rna-publication-feature { background: #101f1c; }
+html[data-dark="true"] .rna-research-image:after { background: linear-gradient(90deg, #101f1c 0%, rgb(16 31 28 / 82%) 14%, transparent 70%); }
 
 /* Responsive --------------------------------------------------------------- */
 
@@ -942,6 +953,7 @@ html[data-dark="true"] .rna-publication-feature { background: #101f1c; }
   .rna-flow-intro { position: static; }
   .rna-flow-stage { min-height: 330px; opacity: 1; }
   .rna-research-card { grid-column: 1 / -1; min-height: 350px; padding-inline: 0 !important; border-right: 0 !important; }
+  .rna-research-card--image .rna-research-copy { max-width: 72%; }
   .rna-method-copy { grid-template-columns: 1fr; }
   .rna-publication-feature { grid-template-columns: 1fr; }
   .rna-publication-copy { border-top: 1px solid #173d3635; border-left: 0; }
@@ -973,6 +985,8 @@ html[data-dark="true"] .rna-publication-feature { background: #101f1c; }
   .rna-flow-stage { min-height: 320px; grid-template-columns: 45px 1fr; overflow: hidden; }
   .rna-stage-visual { width: 100px; opacity: 0.35; }
   .rna-research-title { font-size: 2.7rem; }
+  .rna-research-card--image .rna-research-copy { max-width: 78%; }
+  .rna-research-image { inset-inline-start: 42%; opacity: 0.62; }
   .rna-program-motif { width: 72px; height: 72px; }
   .rna-scale-list { grid-template-columns: 1fr; }
   .rna-scale-list li { min-height: 150px; padding: 25px 0 !important; border-right: 0; }

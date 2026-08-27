@@ -1,0 +1,144 @@
+{% assign research = site.data.research_page[page.lang] | default: site.data.research_page.en %}
+{% assign programs = site.data.research_programs[page.lang] | default: site.data.research_programs.en %}
+{% if page.lang == "zh-CN" %}
+  {% assign publications_url = "/zh/publications/" %}
+{% else %}
+  {% assign publications_url = "/publications/" %}
+{% endif %}
+
+<div class="research-page" data-research-page>
+  <header class="research-hero" aria-labelledby="research-title">
+    <div class="research-hero__field" aria-hidden="true">
+      <span class="research-hero__chromatin"></span>
+      <span class="research-hero__mesh"></span>
+      <span class="research-hero__signal research-hero__signal--one"></span>
+      <span class="research-hero__signal research-hero__signal--two"></span>
+      <span class="research-hero__signal research-hero__signal--three"></span>
+    </div>
+    <div class="research-shell research-hero__copy">
+      <p class="research-kicker" data-reveal>{{ research.hero.eyebrow }}</p>
+      <h1 id="research-title" data-reveal style="--reveal-order: 1">{{ research.hero.title }}</h1>
+      <p class="research-hero__subtitle" data-reveal style="--reveal-order: 2">{{ research.hero.subtitle }}</p>
+      <p class="research-hero__question" data-reveal style="--reveal-order: 3">{{ research.hero.question }}</p>
+      <p class="research-hero__intro" data-reveal style="--reveal-order: 4">{{ research.hero.intro }}</p>
+      <p class="research-hero__sequence" data-reveal style="--reveal-order: 5">{{ research.hero.sequence }}</p>
+    </div>
+  </header>
+
+  <section class="research-overview" aria-labelledby="research-overview-title">
+    <div class="research-shell research-overview__grid">
+      <div data-reveal>
+        <p class="research-kicker">{{ research.overview.label }}</p>
+        <h2 id="research-overview-title">{{ research.overview.title }}</h2>
+      </div>
+      <div class="research-overview__copy" data-reveal style="--reveal-order: 1">
+        {% for paragraph in research.overview.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+        <p class="research-overview__statement">{{ research.overview.statement }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="research-programs" aria-labelledby="research-programs-title">
+    <div class="research-shell">
+      <div class="research-programs__head" data-reveal>
+        <div>
+          <p class="research-kicker">{{ research.programs.label }}</p>
+          <h2 id="research-programs-title">{{ research.programs.title }}</h2>
+          <p>{{ research.programs.intro }}</p>
+        </div>
+        <div class="research-programs__controls">
+          <p class="research-programs__position" aria-live="polite"><span data-research-position>01</span> / 04</p>
+          <button type="button" data-research-previous aria-label="{{ research.programs.previous | escape }}">←</button>
+          <button type="button" data-research-next aria-label="{{ research.programs.next | escape }}">→</button>
+        </div>
+      </div>
+
+      <nav class="research-programs__jump" aria-label="{{ research.programs.label }}">
+        {% for program in programs %}
+          <a href="#{{ program.anchor }}" data-research-jump="{{ forloop.index0 }}"><span>0{{ forloop.index }}</span>{{ program.operation }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+
+    <div class="research-programs__rail" data-research-rail tabindex="0">
+      {% for program in programs %}
+        <article class="research-program motif-{{ program.motif }}" id="{{ program.anchor }}" data-research-card data-reveal>
+          <div class="research-program__visual{% unless program.image %} research-program__visual--generated{% endunless %}">
+            {% if program.image %}
+              <figure>
+                <img src="{{ program.image.path | relative_url }}" alt="{{ program.image.alt | escape }}" loading="lazy" decoding="async">
+                <figcaption>{{ program.image.caption }}</figcaption>
+              </figure>
+            {% else %}
+              <div class="research-program__motif" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+              <p aria-hidden="true">{{ program.operation }}</p>
+            {% endif %}
+          </div>
+
+          <div class="research-program__content">
+            <div class="research-program__meta">
+              <span>0{{ forloop.index }}</span>
+              <span>{{ program.operation }}{% if program.operation_en %} / {{ program.operation_en }}{% endif %}</span>
+            </div>
+            <p class="research-program__verb">{{ program.operation_verb }}</p>
+            <h3>{{ program.title }}</h3>
+            <p class="research-program__question">{{ program.question }}</p>
+            <p>{{ program.overview }}</p>
+            <p>{{ program.outlook }}</p>
+            {% if program.metric %}
+              <div class="research-program__metric"><strong>{{ program.metric }}</strong><span>{{ program.metric_label }}</span></div>
+            {% endif %}
+            <div class="research-program__focus">
+              <p>{{ research.programs.focus_label }}</p>
+              <ul>{% for focus in program.focus %}<li>{{ focus }}</li>{% endfor %}</ul>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="research-nucleus" aria-labelledby="research-nucleus-title">
+    <div class="research-shell research-nucleus__grid">
+      <div class="research-nucleus__copy" data-reveal>
+        <p class="research-kicker">{{ research.nucleus.label }}</p>
+        <h2 id="research-nucleus-title">{{ research.nucleus.title }}</h2>
+        {% for paragraph in research.nucleus.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+      </div>
+      <div class="research-nucleus__images">
+        {% for image in research.nucleus.images %}
+          <figure data-reveal style="--reveal-order: {{ forloop.index }}">
+            <img src="{{ image.path | relative_url }}" alt="{{ image.alt | escape }}" loading="lazy" decoding="async">
+            <figcaption><span>0{{ forloop.index }}</span>{{ image.caption }}</figcaption>
+          </figure>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="research-technology" aria-labelledby="research-technology-title">
+    <div class="research-shell">
+      <div class="research-technology__head" data-reveal>
+        <p class="research-kicker">{{ research.technology.label }}</p>
+        <h2 id="research-technology-title">{{ research.technology.title }}</h2>
+        <p>{{ research.technology.intro }}</p>
+      </div>
+      <ol class="research-technology__list">
+        {% for item in research.technology.items %}
+          <li data-reveal style="--reveal-order: {{ forloop.index }}"><span>0{{ forloop.index }}</span><strong>{{ item.label }}</strong><p>{{ item.value }}</p></li>
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+
+  <section class="research-future" aria-labelledby="research-future-title">
+    <div class="research-shell research-future__grid">
+      <p class="research-kicker">{{ research.future.label }}</p>
+      <div data-reveal>
+        <h2 id="research-future-title">{{ research.future.title }}</h2>
+        <p>{{ research.future.text }}</p>
+        <a href="{{ publications_url | relative_url }}">{{ research.future.action }} <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+</div>
