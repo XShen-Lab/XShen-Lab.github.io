@@ -76,8 +76,18 @@ layout: default
           {% if member_name_zh != "" %}<span lang="zh-CN">{{ member_name_zh }}</span>{% endif %}
         </h1>
       </div>
-      <div class="member-profile__identity member-profile__identity--minimal">
+      <div class="member-profile__identity member-profile__identity--minimal{% if member.links %} member-profile__identity--with-links{% endif %}">
         <p>{{ member_role }}</p>
+
+        {% if member.links %}
+          <div class="member-profile__links">
+            {% for link in member.links %}
+              {% assign key = link[0] %}
+              {% assign value = link[1] %}
+              {% include button.html type=key link=value style="bare" %}
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
     {% endif %}
   </aside>

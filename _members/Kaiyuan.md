@@ -5,7 +5,7 @@ image: images/members/yankaiyuan.jpg
 description: PhD, 2023
 affiliation: School of Basic Medicine, Tsinghua University
 links:
-email: yky23@mails.tsinghua.edu.cn
+  email: yky23@mails.tsinghua.edu.cn
 ---
 
 Graduate Student in the XShen Lab.
