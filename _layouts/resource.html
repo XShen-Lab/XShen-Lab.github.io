@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+{% assign resource_chinese = false %}
+{% if page.lang == "zh-CN" %}{% assign resource_chinese = true %}{% endif %}
+
+<div class="resource-access" data-resource-access>
+  <div class="resource-gate-panel" data-resource-gate-panel aria-labelledby="resource-gate-title">
+    <div class="resource-gate-signal" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p class="resource-gate-eyebrow">{% if resource_chinese %}访问控制 / 05{% else %}Access control / 05{% endif %}</p>
+    <div class="resource-gate-icon" aria-hidden="true">🔒</div>
+    <h1 id="resource-gate-title">{% if resource_chinese %}资源模块已锁定{% else %}Resources are locked{% endif %}</h1>
+    <p class="resource-gate-intro">
+      {% if resource_chinese %}
+        请输入访问密码以查看 XShen Lab 的资源内容。本次解锁仅在当前浏览器会话中有效。
+      {% else %}
+        Enter the access password to view XShen Lab resources. Access remains unlocked only for this browser session.
+      {% endif %}
+    </p>
+
+    <form class="resource-gate-form" data-resource-form novalidate>
+      <label for="resource-password">{% if resource_chinese %}访问密码{% else %}Access password{% endif %}</label>
+      <div class="resource-gate-field">
+        <input
+          id="resource-password"
+          data-resource-password
+          type="password"
+          name="resource-password"
+          autocomplete="current-password"
+          autocapitalize="none"
+          spellcheck="false"
+          required
+          aria-describedby="resource-password-error"
+        >
+        <button type="submit" data-resource-submit>{% if resource_chinese %}解锁资源{% else %}Unlock resources{% endif %} <span aria-hidden="true">→</span></button>
+      </div>
+      <p id="resource-password-error" class="resource-gate-error" data-resource-error hidden aria-live="polite">
+        {% if resource_chinese %}密码不正确，请重试。{% else %}Incorrect password. Please try again.{% endif %}
+      </p>
+    </form>
+  </div>
+
+  <div class="resource-protected" data-resource-content hidden>
+    <div class="resource-access-status">
+      <span>
+        <span class="resource-nav-state" aria-hidden="true"><span class="resource-locked-icon">🔒</span><span class="resource-unlocked-icon">🔓</span></span>
+        <span data-resource-status-label>{% if resource_chinese %}资源已解锁{% else %}Resources unlocked{% endif %}</span>
+      </span>
+      <button type="button" data-resource-relock>{% if resource_chinese %}重新锁定{% else %}Lock again{% endif %}</button>
+    </div>
+    {{ content }}
+  </div>
+
+  <noscript>
+    <p class="resource-noscript">{% if resource_chinese %}需要启用 JavaScript 才能解锁此页面。{% else %}JavaScript is required to unlock this page.{% endif %}</p>
+  </noscript>
+</div>

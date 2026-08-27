@@ -2,6 +2,9 @@
 <script>
   try {
     document.documentElement.dataset.dark = window.localStorage.getItem("dark-mode") || "false";
+    if (window.sessionStorage.getItem("xshen-resource-access-v1") === "granted") {
+      document.documentElement.classList.add("resource-access-granted");
+    }
   } catch (error) {
     document.documentElement.dataset.dark = "false";
   }
@@ -10,6 +13,7 @@
 <!-- Site-wide interaction controllers. -->
 <script src="{{ '/_scripts/dark-mode.js' | relative_url }}" defer></script>
 <script src="{{ '/_scripts/motion.js' | relative_url }}" defer></script>
+<script src="{{ '/_scripts/resource-gate.js' | relative_url }}" defer></script>
 
 {% if page.blog_flow %}
   <script src="{{ '/_scripts/blog-flow.js' | relative_url }}" defer></script>

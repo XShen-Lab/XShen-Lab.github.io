@@ -76,6 +76,7 @@
 
 <meta name="title" content="{{ title }}">
 <meta name="description" content="{{ description }}">
+{% if page.robots %}<meta name="robots" content="{{ page.robots | xml_escape }}">{% endif %}
 
 <meta property="og:title" content="{{ title }}">
 <meta property="og:site_name" content="{{ site.title | xml_escape }}">

@@ -1,5 +1,7 @@
 ---
 title: 资源
+layout: resource
+robots: noindex, noarchive
 ---
 
 <p class="right"><small><a href="{{ '/Resources/' | relative_url }}">English</a></small></p>

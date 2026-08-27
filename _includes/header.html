@@ -31,12 +31,16 @@
     <nav id="site-nav" class="site-nav" aria-label="{% if chinese_page %}主导航{% else %}Primary navigation{% endif %}">
       {% if chinese_page %}
         {% for item in site.data.navigation.zh %}
-          <a href="{{ item.url | relative_url | uri_escape }}" data-tooltip="{{ item.tooltip | xml_escape }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+          {% assign resource_nav_item = false %}
+          {% if item.url == "/zh/resources/" %}{% assign resource_nav_item = true %}{% endif %}
+          <a href="{{ item.url | relative_url | uri_escape }}" data-tooltip="{{ item.tooltip | xml_escape }}"{% if page.url == item.url %} aria-current="page"{% endif %}{% if resource_nav_item %} class="resource-nav-link" data-resource-nav-link data-resource-label="{{ item.title }}" aria-label="{{ item.title }}，已锁定"{% endif %}>{{ item.title }}{% if resource_nav_item %}<span class="resource-nav-state" aria-hidden="true"><span class="resource-locked-icon">🔒</span><span class="resource-unlocked-icon">🔓</span></span>{% endif %}</a>
         {% endfor %}
       {% else %}
         {% assign nav_pages = site.pages | where_exp: "nav_page", "nav_page.nav" | sort: "nav.order" %}
         {% for nav_page in nav_pages %}
-          <a href="{{ nav_page.dir | relative_url | uri_escape }}" data-tooltip="{{ nav_page.nav.tooltip | xml_escape }}"{% if page.url == nav_page.url %} aria-current="page"{% endif %}>{{ nav_page.title }}</a>
+          {% assign resource_nav_page = false %}
+          {% if nav_page.url == "/Resources/" %}{% assign resource_nav_page = true %}{% endif %}
+          <a href="{{ nav_page.dir | relative_url | uri_escape }}" data-tooltip="{{ nav_page.nav.tooltip | xml_escape }}"{% if page.url == nav_page.url %} aria-current="page"{% endif %}{% if resource_nav_page %} class="resource-nav-link" data-resource-nav-link data-resource-label="{{ nav_page.title }}" aria-label="{{ nav_page.title }}, locked"{% endif %}>{{ nav_page.title }}{% if resource_nav_page %}<span class="resource-nav-state" aria-hidden="true"><span class="resource-locked-icon">🔒</span><span class="resource-unlocked-icon">🔓</span></span>{% endif %}</a>
         {% endfor %}
       {% endif %}
       {% if language_pair %}

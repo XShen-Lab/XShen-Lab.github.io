@@ -1,5 +1,7 @@
 ---
 title: Resources
+layout: resource
+robots: noindex, noarchive
 nav:
   order: 5
   tooltip: Pipelines, protocols, and lab resources
