@@ -20,5 +20,5 @@ Postdoctoral Fellow in the XShen Lab.
 
 ## Education
 
-- Ph.D., Tsinghua University, 2020-2026
-- M.S, Sichuan University, 2016-2020
+- Ph.D., **Tsinghua University**, 2020–2026
+- M.S., **Sichuan University**, 2016–2020

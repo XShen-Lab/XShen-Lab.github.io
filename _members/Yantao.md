@@ -1,5 +1,5 @@
 ---
-name: Yantao Hong 洪彦涛
+name: Hong, Yantao 洪彦涛
 role: postdoc
 image: images/members/hongyantao.jpg
 description: Postdoctoral Fellow
@@ -19,6 +19,6 @@ Postdoctoral Fellow in the XShen Lab.
 
 ## Education
 
-- Ph.D., Tsinghua University, 2015-2021
-- M.S., Chinese Academy of Agricultural Sciences, 2011-2014
-- B.S., Huazhong Agricultural University, 2007-2011
+- Ph.D., **Tsinghua University**, 2015–2021
+- M.S., **Chinese Academy of Agricultural Sciences**, 2011–2014
+- B.S., **Huazhong Agricultural University**, 2007–2011

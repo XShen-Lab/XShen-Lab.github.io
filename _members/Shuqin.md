@@ -17,6 +17,6 @@ Graduate Student in the XShen Lab.
 
 ## Education
 
-- Ph.D., Tsinghua University, 2020–present
-- Visiting Scholar, UCSF, 2018–2020
-- M.S., Tsinghua University, 2015–2020
+- Ph.D., **Tsinghua University**, 2020–present
+- Visiting Scholar, **UCSF**, 2018–2020
+- M.S., **Tsinghua University**, 2015–2020

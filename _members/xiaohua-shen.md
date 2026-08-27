@@ -17,8 +17,8 @@ Her research asks how stochastic genome activity is organized and transformed in
 
 ## Education
 
-- **2003** Ph.D., Biological Chemistry, University of Michigan, Ann Arbor, USA (with Randal Kaufman)
-- **1996** B.S., Biochemistry, Nankai University, Tianjin, China
+- **2003** Ph.D., Biological Chemistry, **University of Michigan**, Ann Arbor, USA (with Randal Kaufman)
+- **1996** B.S., Biochemistry, **Nankai University**, Tianjin, China
 
 ## Appointments
 

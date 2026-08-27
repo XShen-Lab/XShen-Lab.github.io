@@ -1,5 +1,5 @@
 ---
-name: Yan,Kaiyuan 严开远
+name: Yan, Kaiyuan 严开远
 role: phd
 image: images/members/yankaiyuan.jpg
 description: PhD Student
@@ -17,4 +17,4 @@ Graduate Student in the XShen Lab.
 
 ## Education
 
-- B.S., Wuhan University, 2019-2023
+- B.S., **Wuhan University**, 2019–2023

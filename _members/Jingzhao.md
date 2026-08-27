@@ -1,5 +1,5 @@
 ---
-name: Xu,Jingzhao 徐敬昭
+name: Xu, Jingzhao 徐敬昭
 role: postdoc
 image: images/members/xujingzhao.jpg
 description: Postdoctoral Fellow
@@ -18,4 +18,4 @@ Postdoctoral Fellow in the XShen Lab.
 
 ## Education
 
-- Ph.D., Tsinghua University, 2019-2024
+- Ph.D., **Tsinghua University**, 2019–2024

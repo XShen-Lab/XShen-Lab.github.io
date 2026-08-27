@@ -1,5 +1,5 @@
 ---
-name: Deng,ruiqi 邓睿琦
+name: Deng, Ruiqi 邓睿琦
 role: undergrad
 image: images/members/dengruiqi.jpg
 description: Undergraduate Student

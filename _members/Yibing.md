@@ -1,9 +1,10 @@
 ---
-name: Tao, Yibing
+name: Tao, Yibing 陶宜冰
 role: postdoc
 image: images/members/yibingtao.jpg
 description: Postdoctoral Fellow
 affiliation: School of Basic Medicine, Tsinghua University
+profile_position: 67% 50%
 ---
 
 Postdoctoral Fellow in the XShen Lab.
@@ -15,5 +16,5 @@ Postdoctoral Fellow in the XShen Lab.
 
 ## Education
 
-- Ph.D., Tsinghua University, 2019–2026
-- M.S., Sichuan University, 2015–2019
+- Ph.D., **Tsinghua University**, 2019–2026
+- M.S., **Sichuan University**, 2015–2019

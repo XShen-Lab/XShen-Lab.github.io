@@ -15,4 +15,4 @@ Graduate Student in the XShen Lab.
 
 ## Education
 
-- China Agricultural University, 2016–2020
+- B.S., **China Agricultural University**, 2016–2020

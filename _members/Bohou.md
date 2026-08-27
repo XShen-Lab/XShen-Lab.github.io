@@ -1,9 +1,10 @@
 ---
-name: Wu,Bohou 武博厚
+name: Wu, Bohou 武博厚
 role: postdoc
 image: images/members/wubohou.jpg
 description: Postdoctoral Fellow
 affiliation: School of Basic Medicine, Tsinghua University
+profile_position: 28% 50%
 links:
   email: bohouwu@mail.tsinghua.edu.cn
 ---
@@ -19,5 +20,5 @@ Postdoctoral Fellow in the XShen Lab.
 
 ## Education
 
-- Ph.D., the University of Chicago, 2024
-- M.D, Tsinghua University, 2017
+- Ph.D., **University of Chicago**, 2024
+- M.D., **Tsinghua University**, 2017

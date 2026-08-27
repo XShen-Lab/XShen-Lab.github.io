@@ -1,5 +1,5 @@
 ---
-name: 黄天羽
+name: Huang, Tianyu 黄天羽
 role: undergrad
 image: images/fallback.svg
 description: Undergraduate Student

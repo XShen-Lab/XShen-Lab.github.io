@@ -1,5 +1,5 @@
 ---
-name: Hao,Xiaowen 郝晓文
+name: Hao, Xiaowen 郝晓文
 role: postdoc
 image: images/members/haoxiaowen.jpg
 description: Postdoctoral Fellow
@@ -17,5 +17,5 @@ Postdoctoral Fellow in the XShen Lab.
 
 ## Education
 
-- Ph.D., School of Basic Medicine, Tsinghua University, 2020-2025
-- Bachelor's and Master's degree, College of life science and technology, Huazhong Univerisity of Science and Technology. 2013-2020
+- Ph.D., School of Basic Medicine, **Tsinghua University**, 2020–2025
+- B.S. and M.S., College of Life Science and Technology, **Huazhong University of Science and Technology**, 2013–2020

@@ -1,5 +1,5 @@
 ---
-name: 印家承
+name: Yin, Jiacheng 印家承
 role: undergrad
 image: images/members/yinjiacheng.jpg
 description: Undergraduate Student

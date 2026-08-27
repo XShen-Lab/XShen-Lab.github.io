@@ -1,9 +1,10 @@
 ---
-name: Zhou,Yuxuan 周宇轩
+name: Zhou, Yuxuan 周宇轩
 role: phd
 image: images/members/zhouyuxuan.jpg
 description: PhD Student
 affiliation: School of Basic Medicine, Tsinghua University
+profile_position: 66% 50%
 links:
   email: yx-zhou25@mails.tsinghua.edu.cn
 ---
@@ -18,4 +19,4 @@ Graduate Student in the XShen Lab.
 
 ## Education
 
-- B.S., Soochow University, 2021-2025
+- B.S., **Soochow University**, 2021–2025

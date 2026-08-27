@@ -1,5 +1,5 @@
 ---
-name: Hu,Xinyun 胡昕昀
+name: Hu, Xinyun 胡昕昀
 role: phd
 image: images/members/huxinyun.jpg
 description: PhD Student
@@ -16,4 +16,4 @@ Graduate Student in the XShen Lab.
 
 ## Education
 
-- B.S., Huazhong Agriculture University, 2018-2022
+- B.S., **Huazhong Agricultural University**, 2018–2022
