@@ -56,6 +56,7 @@
 <meta name="title" content="Tao, Yibing">
 <meta name="description" content="Biological Information Flow: From Genome to Cell Fate. Postdoctoral Fellow">
 
+
 <meta property="og:title" content="Tao, Yibing">
 <meta property="og:site_name" content="XShen Lab">
 <meta property="og:description" content="Biological Information Flow: From Genome to Cell Fate. Postdoctoral Fellow">
@@ -144,6 +145,9 @@
 <script>
   try {
     document.documentElement.dataset.dark = window.localStorage.getItem("dark-mode") || "false";
+    if (window.sessionStorage.getItem("xshen-resource-access-v1") === "granted") {
+      document.documentElement.classList.add("resource-access-granted");
+    }
   } catch (error) {
     document.documentElement.dataset.dark = "false";
   }
@@ -152,6 +156,7 @@
 <!-- Site-wide interaction controllers. -->
 <script src="/_scripts/dark-mode.js" defer></script>
 <script src="/_scripts/motion.js" defer></script>
+<script src="/_scripts/resource-gate.js" defer></script>
 
 
 
@@ -304,20 +309,36 @@
       
         
         
+          
+          
           <a href="/" data-tooltip="Home">Home</a>
         
+          
+          
           <a href="/research/" data-tooltip="Research directions">Research</a>
         
+          
+          
           <a href="/team/" data-tooltip="Members of the XShen Lab">People</a>
         
+          
+          
           <a href="/publications/" data-tooltip="Representative and full publications">Publications</a>
         
-          <a href="/Resources/" data-tooltip="Pipelines, protocols, and lab resources">Resources</a>
+          
+          
+          <a href="/Resources/" data-tooltip="Pipelines, protocols, and lab resources" class="resource-nav-link" data-resource-nav-link data-resource-label="Resources" aria-label="Resources, locked">Resources<span class="resource-nav-state" aria-hidden="true"><span class="resource-locked-icon">🔒</span><span class="resource-unlocked-icon">🔓</span></span></a>
         
+          
+          
           <a href="/blog/" data-tooltip="Essays, lab updates, and perspectives from the XShen Lab">Blog</a>
         
+          
+          
           <a href="/join-us/" data-tooltip="Opportunities to join the XShen Lab">Join Us</a>
         
+          
+          
           <a href="/contact/" data-tooltip="Contact the XShen Lab">Contact</a>
         
       

@@ -55,6 +55,7 @@
 
 <meta name="title" content="Resources">
 <meta name="description" content="Biological Information Flow: From Genome to Cell Fate. The XShen Lab at Tsinghua University studies how stochastic genome activity is organized, processed, selected, and stabilized into biological information and cell fate.">
+<meta name="robots" content="noindex, noarchive">
 
 <meta property="og:title" content="Resources">
 <meta property="og:site_name" content="XShen Lab">
@@ -134,6 +135,9 @@
 <script>
   try {
     document.documentElement.dataset.dark = window.localStorage.getItem("dark-mode") || "false";
+    if (window.sessionStorage.getItem("xshen-resource-access-v1") === "granted") {
+      document.documentElement.classList.add("resource-access-granted");
+    }
   } catch (error) {
     document.documentElement.dataset.dark = "false";
   }
@@ -142,6 +146,7 @@
 <!-- Site-wide interaction controllers. -->
 <script src="/_scripts/dark-mode.js" defer></script>
 <script src="/_scripts/motion.js" defer></script>
+<script src="/_scripts/resource-gate.js" defer></script>
 
 
 
@@ -273,20 +278,36 @@
       
         
         
+          
+          
           <a href="/" data-tooltip="Home">Home</a>
         
+          
+          
           <a href="/research/" data-tooltip="Research directions">Research</a>
         
+          
+          
           <a href="/team/" data-tooltip="Members of the XShen Lab">People</a>
         
+          
+          
           <a href="/publications/" data-tooltip="Representative and full publications">Publications</a>
         
-          <a href="/Resources/" data-tooltip="Pipelines, protocols, and lab resources" aria-current="page">Resources</a>
+          
+          
+          <a href="/Resources/" data-tooltip="Pipelines, protocols, and lab resources" aria-current="page" class="resource-nav-link" data-resource-nav-link data-resource-label="Resources" aria-label="Resources, locked">Resources<span class="resource-nav-state" aria-hidden="true"><span class="resource-locked-icon">🔒</span><span class="resource-unlocked-icon">🔓</span></span></a>
         
+          
+          
           <a href="/blog/" data-tooltip="Essays, lab updates, and perspectives from the XShen Lab">Blog</a>
         
+          
+          
           <a href="/join-us/" data-tooltip="Opportunities to join the XShen Lab">Join Us</a>
         
+          
+          
           <a href="/contact/" data-tooltip="Contact the XShen Lab">Contact</a>
         
       
@@ -315,6 +336,40 @@
   
 
   <section class="background" data-size="page">
+    <div class="resource-access" data-resource-access>
+  <div class="resource-gate-panel" data-resource-gate-panel aria-labelledby="resource-gate-title">
+    <div class="resource-gate-signal" aria-hidden="true">
+<span></span><span></span><span></span>
+</div>
+    <p class="resource-gate-eyebrow">Access control / 05</p>
+    <div class="resource-gate-icon" aria-hidden="true">🔒</div>
+    <h1 id="resource-gate-title">Resources are locked</h1>
+    <p class="resource-gate-intro">
+      
+        Enter the access password to view XShen Lab resources. Access remains unlocked only for this browser session.
+      
+    </p>
+
+    <form class="resource-gate-form" data-resource-form novalidate>
+      <label for="resource-password">Access password</label>
+      <div class="resource-gate-field">
+        <input id="resource-password" data-resource-password type="password" name="resource-password" autocomplete="current-password" autocapitalize="none" spellcheck="false" required aria-describedby="resource-password-error">
+        <button type="submit" data-resource-submit>Unlock resources <span aria-hidden="true">→</span></button>
+      </div>
+      <p id="resource-password-error" class="resource-gate-error" data-resource-error hidden aria-live="polite">
+        Incorrect password. Please try again.
+      </p>
+    </form>
+  </div>
+
+  <div class="resource-protected" data-resource-content hidden>
+    <div class="resource-access-status">
+      <span>
+        <span class="resource-nav-state" aria-hidden="true"><span class="resource-locked-icon">🔒</span><span class="resource-unlocked-icon">🔓</span></span>
+        <span data-resource-status-label>Resources unlocked</span>
+      </span>
+      <button type="button" data-resource-relock>Lock again</button>
+    </div>
     <p class="right"><small><a href="/zh/resources/">中文</a></small></p>
 
 <h1 id="resources">Resources</h1>
@@ -322,7 +377,7 @@
 <p>The XShen Lab develops and maintains analysis pipelines, experimental protocols, and documentation for studying nuclear RNA, genome organization, transcriptional regulation, and cell fate.</p>
 
 <p>Our resources focus on reproducible workflows rather than standalone software packages. Publicly available pipelines and protocols will be organized here as the lab website is updated.</p>
-  </section>
+  
 
   
   
@@ -441,6 +496,14 @@
 <h2 id="availability">Availability</h2>
 
 <p>Public resources are being organized and will be updated progressively. For questions about published-study workflows, public protocols, or collaboration-related resources, please contact the lab.</p>
+
+  </section>
+</div>
+
+  <noscript>
+    <p class="resource-noscript">JavaScript is required to unlock this page.</p>
+  </noscript>
+</div>
   </section>
 
 

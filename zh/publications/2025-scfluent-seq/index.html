@@ -56,6 +56,7 @@
 <meta name="title" content="Single-cell nascent transcription reveals sparse genome usage and plasticity">
 <meta name="description" content="scFLUENT-seq 揭示单细胞中稀疏且随机的基因组使用，并将转录多样性与细胞可塑性联系起来。">
 
+
 <meta property="og:title" content="Single-cell nascent transcription reveals sparse genome usage and plasticity">
 <meta property="og:site_name" content="XShen Lab">
 <meta property="og:description" content="scFLUENT-seq 揭示单细胞中稀疏且随机的基因组使用，并将转录多样性与细胞可塑性联系起来。">
@@ -132,6 +133,9 @@
 <script>
   try {
     document.documentElement.dataset.dark = window.localStorage.getItem("dark-mode") || "false";
+    if (window.sessionStorage.getItem("xshen-resource-access-v1") === "granted") {
+      document.documentElement.classList.add("resource-access-granted");
+    }
   } catch (error) {
     document.documentElement.dataset.dark = "false";
   }
@@ -140,6 +144,7 @@
 <!-- Site-wide interaction controllers. -->
 <script src="/_scripts/dark-mode.js" defer></script>
 <script src="/_scripts/motion.js" defer></script>
+<script src="/_scripts/resource-gate.js" defer></script>
 
 
 
@@ -272,20 +277,36 @@
     <nav id="site-nav" class="site-nav" aria-label="主导航">
       
         
+          
+          
           <a href="/zh/" data-tooltip="中文首页">首页</a>
         
+          
+          
           <a href="/zh/research/" data-tooltip="实验室研究方向">研究方向</a>
         
+          
+          
           <a href="/zh/people/" data-tooltip="实验室团队成员">团队成员</a>
         
+          
+          
           <a href="/zh/publications/" data-tooltip="代表性论文与完整论文目录">论文发表</a>
         
-          <a href="/zh/resources/" data-tooltip="分析流程、实验方案与实验室资源">资源</a>
+          
+          
+          <a href="/zh/resources/" data-tooltip="分析流程、实验方案与实验室资源" class="resource-nav-link" data-resource-nav-link data-resource-label="资源" aria-label="资源，已锁定">资源<span class="resource-nav-state" aria-hidden="true"><span class="resource-locked-icon">🔒</span><span class="resource-unlocked-icon">🔓</span></span></a>
         
+          
+          
           <a href="/zh/blog/" data-tooltip="科学思考、实验室动态与个人随笔">博客</a>
         
+          
+          
           <a href="/zh/join-us/" data-tooltip="加入实验室的机会">加入我们</a>
         
+          
+          
           <a href="/zh/contact/" data-tooltip="联系实验室">联系方式</a>
         
       
