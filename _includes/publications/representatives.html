@@ -47,7 +47,7 @@
                   </a>
 
                   <div class="publication-entry-content">
-                    <div class="publication-entry-meta">{{ publication.venue.name }} · {{ publication.year }}</div>
+                    <div class="publication-entry-meta"><strong class="publication-journal"><em>{{ publication.venue.name }}</em></strong> · {{ publication.year }}</div>
                     <h3><a href="{{ detail_url | relative_url }}">{{ publication.title }}</a></h3>
                     <p class="publication-entry-authors">{{ publication.authors.display }}</p>
                     <p>{{ enrichment.summary }}</p>
@@ -91,7 +91,7 @@
                   {% else %}
                     <div class="representative-publication-card__visual" data-research-category="{{ category.id }}" aria-hidden="true">
                       <span class="representative-publication-card__year">{{ representative.year }}</span>
-                      <strong>{{ representative.venue }}</strong>
+                      <strong class="publication-journal"><em>{{ representative.venue }}</em></strong>
                       <span class="representative-publication-card__signal"></span>
                     </div>
                   {% endif %}
@@ -99,11 +99,13 @@
                   <div class="representative-publication-card__content">
                     <p class="representative-publication-card__eyebrow">{{ category_label }} · {{ representative.year }}</p>
                     <h4>{{ representative.title }}</h4>
-                    <p class="representative-publication-card__venue">{{ representative.venue }}</p>
+                    <p class="representative-publication-card__venue"><strong class="publication-journal"><em>{{ representative.venue }}</em></strong></p>
 
                     <details class="representative-publication-card__citation">
                       <summary>{{ ui.citation_label }}</summary>
-                      <p>{{ publication.citation | escape }}</p>
+                      {% assign representative_journal = browser_data.records[publication.id].journal %}
+                      {% assign representative_citation_parts = publication.citation | split: representative_journal %}
+                      <p>{% if representative_journal and representative_citation_parts.size == 2 %}{{ representative_citation_parts[0] | escape }}<strong class="publication-journal"><em>{{ representative_journal | escape }}</em></strong>{{ representative_citation_parts[1] | escape }}{% else %}{{ publication.citation | escape }}{% endif %}</p>
                     </details>
 
                     {% if publication.links.article %}

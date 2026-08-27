@@ -293,55 +293,55 @@ representatives:
         zh-CN: 图 7 · 发育过程中传递未折叠蛋白反应信号的通路
 
 records:
-  pub-2025-scfluent-seq: { year: 2025, category: cell-fate-dynamics }
-  pub-cv-002: { year: 2025, category: rna-networks }
-  pub-cv-003: { year: 2025, category: rna-networks }
-  pub-cv-004: { year: 2024, category: other }
-  pub-cv-005: { year: 2024, category: rna-networks }
-  pub-cv-006: { year: 2024, category: genome-organization }
-  pub-cv-007: { year: 2024, category: genome-organization }
-  pub-cv-008: { year: 2023, category: genome-organization }
-  pub-cv-009: { year: 2023, category: rna-networks }
-  pub-cv-010: { year: 2022, category: rna-networks }
-  pub-cv-011: { year: 2022, category: rna-networks }
-  pub-cv-012: { year: 2022, category: rna-networks }
-  pub-cv-013: { year: 2021, category: genome-organization }
-  pub-cv-014: { year: 2021, category: rna-networks }
-  pub-cv-015: { year: 2020, category: rna-networks }
-  pub-cv-016: { year: 2020, category: genome-organization }
-  pub-cv-017: { year: 2020, category: genome-organization }
-  pub-cv-018: { year: 2020, category: rna-networks }
-  pub-cv-019: { year: 2020, category: rna-networks }
-  pub-cv-020: { year: 2020, category: rna-networks }
-  pub-cv-021: { year: 2020, category: genome-organization }
-  pub-cv-022: { year: 2020, category: genome-organization }
-  pub-cv-023: { year: 2019, category: rna-networks }
-  pub-cv-024: { year: 2019, category: rna-networks }
-  pub-cv-025: { year: 2019, category: rna-networks }
-  pub-cv-026: { year: 2019, category: rna-networks }
-  pub-cv-027: { year: 2018, category: genome-organization }
-  pub-cv-028: { year: 2018, category: cell-fate-dynamics }
-  pub-cv-029: { year: 2018, category: genome-organization }
-  pub-cv-030: { year: 2017, category: rna-networks }
-  pub-cv-031: { year: 2016, category: rna-networks }
-  pub-cv-032: { year: 2015, category: rna-networks }
-  pub-cv-033: { year: 2015, category: cell-fate-dynamics }
-  pub-cv-034: { year: 2015, category: foundations }
-  pub-cv-035: { year: 2013, category: genome-organization }
-  pub-cv-036: { year: 2012, category: foundations }
-  pub-cv-037: { year: 2012, category: foundations }
-  pub-cv-038: { year: 2011, category: foundations }
-  pub-cv-039: { year: 2010, category: foundations }
-  pub-cv-040: { year: 2009, category: foundations }
-  pub-cv-041: { year: 2009, category: foundations }
-  pub-cv-042: { year: 2008, category: foundations }
-  pub-cv-043: { year: 2008, category: foundations }
-  pub-cv-044: { year: 2008, category: foundations }
-  pub-cv-045: { year: 2006, category: foundations }
-  pub-cv-046: { year: 2006, category: foundations }
-  pub-cv-047: { year: 2005, category: foundations }
-  pub-cv-048: { year: 2004, category: foundations }
-  pub-cv-049: { year: 2002, category: foundations }
-  pub-cv-050: { year: 2002, category: foundations }
-  pub-cv-051: { year: 2001, category: foundations }
-  pub-cv-052: { year: 1998, category: other }
+  pub-2025-scfluent-seq: { year: 2025, category: cell-fate-dynamics, journal: "Cell" }
+  pub-cv-002: { year: 2025, category: rna-networks, journal: "Mol Cell" }
+  pub-cv-003: { year: 2025, category: rna-networks, journal: "Nature Structural & Molecular Biology" }
+  pub-cv-004: { year: 2024, category: other, journal: "Cell" }
+  pub-cv-005: { year: 2024, category: rna-networks, journal: "Cell Stem Cell" }
+  pub-cv-006: { year: 2024, category: genome-organization, journal: "NATURE GENETICS" }
+  pub-cv-007: { year: 2024, category: genome-organization, journal: "Molecular cell" }
+  pub-cv-008: { year: 2023, category: genome-organization, journal: "Curr Opin Genet Dev" }
+  pub-cv-009: { year: 2023, category: rna-networks, journal: "Fundamental Research" }
+  pub-cv-010: { year: 2022, category: rna-networks, journal: "Nature Chemical Biology" }
+  pub-cv-011: { year: 2022, category: rna-networks, journal: "Cell reports" }
+  pub-cv-012: { year: 2022, category: rna-networks, journal: "Protein & cell" }
+  pub-cv-013: { year: 2021, category: genome-organization, journal: "Cell Research" }
+  pub-cv-014: { year: 2021, category: rna-networks, journal: "J Mol Cell Biol" }
+  pub-cv-015: { year: 2020, category: rna-networks, journal: "Nature" }
+  pub-cv-016: { year: 2020, category: genome-organization, journal: "Cell Reports" }
+  pub-cv-017: { year: 2020, category: genome-organization, journal: "Cell Reports" }
+  pub-cv-018: { year: 2020, category: rna-networks, journal: "Methods in Molecular Biology" }
+  pub-cv-019: { year: 2020, category: rna-networks, journal: "Methods in Molecular Biology" }
+  pub-cv-020: { year: 2020, category: rna-networks, journal: "J. Vis. Exp." }
+  pub-cv-021: { year: 2020, category: genome-organization, journal: "Nat Cell Biol" }
+  pub-cv-022: { year: 2020, category: genome-organization, journal: "Journal of genetics and genomics" }
+  pub-cv-023: { year: 2019, category: rna-networks, journal: "J Mol Cell Biol" }
+  pub-cv-024: { year: 2019, category: rna-networks, journal: "Development" }
+  pub-cv-025: { year: 2019, category: rna-networks, journal: "Mol Cell" }
+  pub-cv-026: { year: 2019, category: rna-networks, journal: "Nucleic Acids Res" }
+  pub-cv-027: { year: 2018, category: genome-organization, journal: "Cell" }
+  pub-cv-028: { year: 2018, category: cell-fate-dynamics, journal: "J Mol Cell Biol" }
+  pub-cv-029: { year: 2018, category: genome-organization, journal: "Nat Genet" }
+  pub-cv-030: { year: 2017, category: rna-networks, journal: "Current Opinion in Genetics & Development" }
+  pub-cv-031: { year: 2016, category: rna-networks, journal: "Cell Stem Cell" }
+  pub-cv-032: { year: 2015, category: rna-networks, journal: "Cell Stem Cell" }
+  pub-cv-033: { year: 2015, category: cell-fate-dynamics, journal: "Cell Stem Cell" }
+  pub-cv-034: { year: 2015, category: foundations, journal: "Cell Rep" }
+  pub-cv-035: { year: 2013, category: genome-organization, journal: "J Biol Chem" }
+  pub-cv-036: { year: 2012, category: foundations, journal: "Proc Natl Acad Sci USA" }
+  pub-cv-037: { year: 2012, category: foundations, journal: "Genes & Development" }
+  pub-cv-038: { year: 2011, category: foundations, journal: "Proc Natl Acad Sci USA" }
+  pub-cv-039: { year: 2010, category: foundations, journal: "Cancer Cell" }
+  pub-cv-040: { year: 2009, category: foundations, journal: "Cell" }
+  pub-cv-041: { year: 2009, category: foundations, journal: "Cell Stem Cell" }
+  pub-cv-042: { year: 2008, category: foundations, journal: "Cold Spring Harb Symp Quant Biol" }
+  pub-cv-043: { year: 2008, category: foundations, journal: "Mol Cell" }
+  pub-cv-044: { year: 2008, category: foundations, journal: "Cell" }
+  pub-cv-045: { year: 2006, category: foundations, journal: "Nature" }
+  pub-cv-046: { year: 2006, category: foundations, journal: "Cell" }
+  pub-cv-047: { year: 2005, category: foundations, journal: "PLoS Genetics" }
+  pub-cv-048: { year: 2004, category: foundations, journal: "J Chem Neuroanat" }
+  pub-cv-049: { year: 2002, category: foundations, journal: "Genes Dev" }
+  pub-cv-050: { year: 2002, category: foundations, journal: "Nat Rev Mol Cell Biol" }
+  pub-cv-051: { year: 2001, category: foundations, journal: "Cell" }
+  pub-cv-052: { year: 1998, category: other, journal: "Plant Physiol" }

@@ -8,7 +8,7 @@
 <h1 id="{{ publication.title | slugify }}">{{ publication.title }}</h1>
 
 <p><strong>{{ publication.authors.display }}</strong><br>
-<em>{{ publication.venue.name }}</em> {{ publication.venue.volume }} ({{ publication.year }}): {{ publication.venue.pages }}</p>
+<strong class="publication-journal"><em>{{ publication.venue.name }}</em></strong> {{ publication.venue.volume }} ({{ publication.year }}): {{ publication.venue.pages }}</p>
 
 {% if enrichment.graphical_abstract.path %}
   {% assign graphical_alt = enrichment.graphical_abstract.alt[page.lang] | default: enrichment.graphical_abstract.alt.en %}

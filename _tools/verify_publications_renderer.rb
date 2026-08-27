@@ -224,6 +224,13 @@ def verify_browser_data!(records)
               "publication browser contains a year outside the horizontal year rail")
   fail_unless(mapping.values.all? { |entry| category_ids.include?(entry["category"]) },
               "publication browser contains an unknown research category")
+  records.each do |record|
+    journal = mapping.fetch(record.fetch("id"))["journal"]
+    fail_unless(journal.is_a?(String) && !journal.empty?,
+                "publication #{record.fetch('id')} has no journal display metadata")
+    fail_unless(record.fetch("citation").scan(journal).length == 1,
+                "publication #{record.fetch('id')} journal must occur exactly once in its canonical citation")
+  end
 
   representative_ids = representatives.map { |entry| entry.fetch("publication_id") }
   fail_unless(representative_ids == EXPECTED_REPRESENTATIVE_IDS,
@@ -311,6 +318,7 @@ def build_rollback_pages
 end
 
 def extract_publication_list(html, label, records)
+  browser_records = load_yaml(BROWSER_DATA_PATH).fetch("records")
   matches = html.to_enum(:scan, /<ol\b([^>]*)>(.*?)<\/ol>/mi).map do
     [Regexp.last_match(0), Regexp.last_match(1), Regexp.last_match(2)]
   end
@@ -361,9 +369,24 @@ def extract_publication_list(html, label, records)
     end
 
     citation_html = content.sub(/ <details\b[^>]*\bclass="publication-links"[^>]*>.*?<\/details>\s*\z/mi, "")
-    fail_unless(citation_html !~ /<[^>]+>/,
-                "#{label} item #{index + 1} citation contains nested markup or metadata")
-    citation = CGI.unescapeHTML(citation_html)
+    journal_markup = citation_html.scan(
+      /<strong\b[^>]*\bclass="publication-journal"[^>]*>\s*<em>(.*?)<\/em>\s*<\/strong>/mi
+    ).flatten
+    expected_journal_count = production_mode ? 1 : 0
+    fail_unless(journal_markup.length == expected_journal_count,
+                "#{label} item #{index + 1} has #{journal_markup.length} formatted journals, expected #{expected_journal_count}")
+    if production_mode
+      expected_journal = browser_records.fetch(records.fetch(index).fetch("id")).fetch("journal")
+      fail_unless(CGI.unescapeHTML(journal_markup.first) == expected_journal,
+                  "#{label} item #{index + 1} formats the wrong journal")
+    end
+    unwrapped_citation_html = citation_html.gsub(
+      /<strong\b[^>]*\bclass="publication-journal"[^>]*>\s*<em>(.*?)<\/em>\s*<\/strong>/mi,
+      '\\1'
+    )
+    fail_unless(unwrapped_citation_html !~ /<[^>]+>/,
+                "#{label} item #{index + 1} citation contains unexpected nested markup or metadata")
+    citation = CGI.unescapeHTML(unwrapped_citation_html)
     fail_unless(!citation.strip.empty?, "#{label} item #{index + 1} is empty")
     citation
   end
