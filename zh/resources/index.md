@@ -36,13 +36,7 @@ XShen Lab 开发并维护用于研究细胞核 RNA、基因组组织、转录调
 
 ## 实验方案
 
-将围绕实验室主要研究方向整理实验方案，包括：
-
-- 细胞核 RNA 与非编码 RNA 研究；
-- 单细胞与新生 RNA 测序；
-- 染色质与基因组组织分析；
-- 分子与细胞生物学工作流程；
-- 成像相关实验操作。
+- <a href="{{ '/downloads/resources/scEU-seq-protocol.docx' | relative_url }}" download="scEU-seq-protocol.docx" type="application/vnd.openxmlformats-officedocument.wordprocessingml.document" aria-label="下载 scEU-seq Word 格式实验方案">scEU-seq protocol（DOCX · 268 KB）</a>
 
 {% include section.html %}
 

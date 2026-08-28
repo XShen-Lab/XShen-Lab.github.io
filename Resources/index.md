@@ -39,13 +39,7 @@ Workflows for integrating transcriptomic, genomic, imaging, and chromatin-associ
 
 ## Experimental Protocols
 
-Protocols will be organized for major experimental directions in the lab, including:
-
-- Nuclear RNA and noncoding RNA studies
-- Single-cell and nascent RNA sequencing
-- Chromatin and genome organization assays
-- Molecular and cellular biology workflows
-- Imaging-related experimental procedures
+- <a href="{{ '/downloads/resources/scEU-seq-protocol.docx' | relative_url }}" download="scEU-seq-protocol.docx" type="application/vnd.openxmlformats-officedocument.wordprocessingml.document" aria-label="Download the scEU-seq protocol as a Word document">scEU-seq protocol (DOCX · 268 KB)</a>
 
 {% include section.html %}
 
