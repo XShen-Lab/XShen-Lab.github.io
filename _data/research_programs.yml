@@ -13,6 +13,11 @@ en:
       - Repetitive elements and their RNA products
       - Chromosome compartmentalization and nuclear positioning
       - Dynamic genome remodeling across cellular transitions
+    image:
+      path: /images/research/genome-organization/nuclear-compartment-model.png
+      home_path: /images/research/genome-organization/nuclear-compartment-model.png
+      alt: Conceptual model of L1-rich and B1-rich genome compartments positioned around the nuclear lamina, nucleolus and nuclear speckles
+      caption: Conceptual model of nuclear compartments organized around the lamina, nucleolus and nuclear speckles.
     anchor: genome-organization
     motif: domain
   - key: processing
@@ -101,6 +106,11 @@ zh-CN:
       - 重复元件及其 RNA 产物
       - 染色体区室化与核内定位
       - 细胞状态转换中的动态基因组重塑
+    image:
+      path: /images/research/genome-organization/nuclear-compartment-model.png
+      home_path: /images/research/genome-organization/nuclear-compartment-model.png
+      alt: L1 富集与 B1 富集基因组区室围绕核纤层、核仁和核斑定位的概念模型
+      caption: 围绕核纤层、核仁与核斑构建的细胞核区室概念模型。
     anchor: genome-organization
     motif: domain
   - key: processing

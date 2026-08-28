@@ -195,6 +195,7 @@
 .research-program__visual { position: relative; min-height: 100%; overflow: hidden; background: #07110f; }
 .research-program__visual figure { position: absolute; inset: 0; display: grid; margin: 0; grid-template-rows: 1fr auto; }
 .research-program__visual img { width: 100%; height: 100%; min-height: 0; object-fit: cover; }
+.research-program.motif-domain .research-program__visual img { padding: clamp(16px, 2vw, 30px); background: #fff; object-fit: contain; }
 .research-program.motif-field .research-program__visual img { padding: clamp(20px, 3vw, 42px); background: #fff; object-fit: contain; }
 .research-program.motif-checkpoint .research-program__visual img { padding: clamp(18px, 2.5vw, 36px); background: #f8f7f2; object-fit: contain; }
 .research-program__visual figcaption { padding: 18px 22px; border-top: 1px solid rgb(255 255 255 / 15%); background: #0a1513; color: #aebfba; font-size: 0.75rem; line-height: 1.55; }
