@@ -3,13 +3,18 @@
 {% assign localized = card.localized[language] | default: card.localized.en %}
 {% assign image_alt = card.image.alt[language] | default: card.image.alt.en %}
 {% assign image_credit = card.image.credit[language] | default: card.image.credit.en %}
+{% assign browser_data = site.data.publication_browser %}
+{% assign ui = browser_data.ui[language] | default: browser_data.ui.en %}
 
 <article class="publication-paper-card" data-publication-id="{{ card.publication_id }}">
   <figure class="publication-paper-card__figure">
-    <a class="publication-entry-image" href="{{ card.article_url }}" aria-label="{{ localized.article_label | escape }} — {{ card.title | escape }}">
-      <img src="{{ card.image.path | relative_url }}" alt="{{ image_alt | escape }}" loading="lazy">
+    <a class="publication-entry-image" href="{{ card.image.path | relative_url }}" target="_blank" rel="noopener" aria-label="{{ ui.figure_fullsize_label | escape }} — {{ card.title | escape }}">
+      <img src="{{ card.image.path | relative_url }}" alt="{{ image_alt | escape }}" loading="lazy" decoding="async">
     </a>
-    <figcaption>{{ image_credit }}</figcaption>
+    <figcaption>
+      <span>{{ image_credit }}</span>
+      <a class="publication-figure-fullsize" href="{{ card.image.path | relative_url }}" target="_blank" rel="noopener">{{ ui.figure_fullsize_label }} <span aria-hidden="true">↗</span></a>
+    </figcaption>
   </figure>
 
   <div class="publication-entry-content">

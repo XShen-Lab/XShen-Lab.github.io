@@ -32,6 +32,7 @@ ui:
     read_summary_label: Read summary
     article_label: View article
     pdf_label: Download PDF
+    figure_fullsize_label: View full-size figure
     links_aria_label: Publication links
     article_link_label: Article
     scholar_link_label: Google Scholar
@@ -51,6 +52,7 @@ ui:
     read_summary_label: 阅读简介
     article_label: 查看论文
     pdf_label: 下载 PDF
+    figure_fullsize_label: 查看高清大图
     links_aria_label: 论文链接
     article_link_label: 论文页面
     scholar_link_label: Google Scholar
@@ -190,8 +192,8 @@ representatives:
         en: Graphical abstract showing genomic repeats as barcodes for gene function, developmental timing, and nuclear organization.
         zh-CN: 图形摘要展示基因组重复序列如何编码基因功能、发育时序与细胞核组织。
       source:
-        en: Graphical abstract · Repeat classes coordinate gene function and spatial organization
-        zh-CN: 图形摘要 · 不同重复序列类别协调基因功能与空间组织
+        en: Mechanism · Genomic repeat classes group genes by function, developmental timing, and spatial organization
+        zh-CN: 机制 · 不同基因组重复序列类别按照基因功能、发育时序与空间组织协调基因调控
   - publication_id: pub-cv-005
     category: rna-networks
     title: Nuclear RNA homeostasis promotes systems-level coordination for cell fate and vitality
@@ -209,8 +211,8 @@ representatives:
         en: Graphical abstract linking RNA exosome activity, nuclear RNA homeostasis, transcription, translation, chromatin organization, and cell state.
         zh-CN: 图形摘要连接 RNA 外切体活性、核内 RNA 稳态、转录、翻译、染色质组织与细胞状态。
       source:
-        en: Graphical abstract · Nuclear RNA homeostasis coordinates cell fate and senescence
-        zh-CN: 图形摘要 · 核内 RNA 稳态协调细胞命运与衰老
+        en: Systems model · Nuclear RNA homeostasis coordinates transcription, translation, chromatin organization, and cell-state programs
+        zh-CN: 系统模型 · 核内 RNA 稳态协调转录、翻译、染色质组织与细胞状态程序
   - publication_id: pub-cv-010
     category: rna-networks
     title: Phase separation of RNA-binding protein promotes polymerase engagement and transcription
@@ -253,8 +255,8 @@ representatives:
         en: Graphical abstract showing nascent RNA recruitment of WDR43 to chromatin and its role in transcription elongation.
         zh-CN: 图形摘要展示新生 RNA 将 WDR43 招募至染色质并调控转录延伸。
       source:
-        en: Graphical abstract · Nascent RNA targets WDR43 to chromatin
-        zh-CN: 图形摘要 · 新生 RNA 将 WDR43 靶向染色质
+        en: Mechanism · Nascent RNA recruits WDR43 to chromatin to couple transcription elongation with pluripotency control
+        zh-CN: 机制 · 新生 RNA 将 WDR43 招募至染色质，把转录延伸与多能性调控联系起来
   - publication_id: pub-cv-024
     category: rna-networks
     title: The lncRNA Hand2os1/Uph locus orchestrates heart development through regulation of precise expression HAND2
@@ -291,8 +293,8 @@ representatives:
         en: Graphical abstract showing divergent lncRNAs acting in cis to regulate nearby coding genes and developmental processes.
         zh-CN: 图形摘要展示双向转录 lncRNA 通过顺式作用调控邻近编码基因与发育过程。
       source:
-        en: Graphical abstract · Divergent lncRNAs regulate adjacent genes in cis
-        zh-CN: 图形摘要 · 双向转录 lncRNA 顺式调控邻近基因
+        en: Mechanism · Divergent lncRNAs act in cis to regulate adjacent coding genes and lineage differentiation
+        zh-CN: 机制 · 双向转录 lncRNA 通过顺式作用调控邻近编码基因与谱系分化
   - publication_id: pub-cv-032
     category: rna-networks
     title: Opposing roles for the lncRNA Haunt and its genomic locus in regulating HOXA gene activation during embryonic stem cell differentiation
@@ -310,8 +312,8 @@ representatives:
         en: Graphical abstract showing opposing enhancer and RNA functions at the Haunt locus during HOXA activation.
         zh-CN: 图形摘要展示 Haunt 位点在 HOXA 激活过程中相反的增强子与 RNA 功能。
       source:
-        en: Graphical abstract · Opposing RNA and DNA functions at the Haunt locus
-        zh-CN: 图形摘要 · Haunt 位点中 RNA 与 DNA 的相反作用
+        en: Mechanism · The Haunt RNA and its genomic locus exert opposing effects on HOXA activation
+        zh-CN: 机制 · Haunt RNA 与其基因组位点对 HOXA 激活产生相反作用
   - publication_id: pub-2025-scfluent-seq
     category: cell-fate-dynamics
     title: Single-cell nascent transcription reveals sparse genome usage and plasticity
@@ -334,8 +336,8 @@ representatives:
         en: Model showing Jumonji modulation of PRC2 activity and the balance between embryonic stem-cell pluripotency and differentiation.
         zh-CN: 模型展示 Jumonji 调节 PRC2 活性以及胚胎干细胞多能性与分化之间的平衡。
       source:
-        en: Figure 7 · Model for the interplay between JMJ and PRC2
-        zh-CN: 图 7 · JMJ 与 PRC2 相互作用模型
+        en: Mechanism · Jumonji modulates PRC2 activity to balance embryonic stem-cell self-renewal and differentiation
+        zh-CN: 机制 · Jumonji 调节 PRC2 活性，平衡胚胎干细胞的自我更新与分化
   - publication_id: pub-cv-043
     category: foundations
     title: EZH1 mediates methylation on histone H3 lysine 27 and complements EZH2 in maintaining stem cell identity and executing pluripotency
@@ -353,8 +355,8 @@ representatives:
         en: Model comparing complementary EZH1 and EZH2 functions in H3K27 methylation, stem-cell identity, and differentiation.
         zh-CN: 模型比较 EZH1 与 EZH2 在 H3K27 甲基化、干细胞身份及分化中的互补功能。
       source:
-        en: Figure 7 · Complementary but nonredundant roles of EZH1 and EZH2
-        zh-CN: 图 7 · EZH1 与 EZH2 互补但不冗余的作用
+        en: Mechanism · EZH1 and EZH2 provide complementary H3K27 methylation activities that support stem-cell identity and differentiation
+        zh-CN: 机制 · EZH1 与 EZH2 提供互补的 H3K27 甲基化活性，共同维持干细胞身份并支持分化
   - publication_id: pub-cv-051
     category: foundations
     title: Complementary signaling pathways regulate the unfolded protein response and are required for C. elegans development
@@ -372,8 +374,8 @@ representatives:
         en: Model comparing unfolded protein response pathways in C. elegans and budding yeast.
         zh-CN: 模型比较秀丽隐杆线虫与芽殖酵母中的未折叠蛋白反应通路。
       source:
-        en: Figure 7 · Pathways that signal the unfolded protein response during development
-        zh-CN: 图 7 · 发育过程中传递未折叠蛋白反应信号的通路
+        en: Pathway model · Complementary unfolded protein response branches jointly support C. elegans development
+        zh-CN: 通路模型 · 互补的未折叠蛋白反应分支共同保障秀丽隐杆线虫发育
 
 records:
   pub-2025-scfluent-seq: { year: 2025, category: cell-fate-dynamics, journal: "Cell" }

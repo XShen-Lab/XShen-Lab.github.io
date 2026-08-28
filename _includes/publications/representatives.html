@@ -35,19 +35,27 @@
         {% assign enrichment_matches = site.publications | where: "publication_id", publication.id %}
         {% assign paper = enrichment_matches | first %}
         {% assign enrichment = paper.localized[language] | default: paper.localized.en %}
+        {% assign graphical_credit = paper.graphical_abstract.credit[language] | default: paper.graphical_abstract.credit.en %}
         {% if language == "zh-CN" %}
           {% assign detail_url = "/zh/publications/" | append: publication.presentation.detail_slug | append: "/" %}
         {% else %}
           {% assign detail_url = "/publications/" | append: publication.presentation.detail_slug | append: "/" %}
         {% endif %}
         <article class="publication-entry representative-publication-card representative-publication-card--image" data-publication-id="{{ publication.id }}" data-research-category="{{ representative.category }}">
-          <a class="publication-entry-image" href="{{ detail_url | relative_url }}">
-            <img
-              src="{{ paper.graphical_abstract.path | relative_url }}"
-              alt="{{ paper.graphical_abstract.alt[language] | default: paper.graphical_abstract.alt.en | escape }}"
-              loading="lazy"
-            >
-          </a>
+          <figure class="publication-paper-card__figure">
+            <a class="publication-entry-image" href="{{ paper.graphical_abstract.path | relative_url }}" target="_blank" rel="noopener" aria-label="{{ ui.figure_fullsize_label | escape }} — {{ publication.title | escape }}">
+              <img
+                src="{{ paper.graphical_abstract.path | relative_url }}"
+                alt="{{ paper.graphical_abstract.alt[language] | default: paper.graphical_abstract.alt.en | escape }}"
+                loading="lazy"
+                decoding="async"
+              >
+            </a>
+            <figcaption>
+              <span>{{ graphical_credit }}</span>
+              <a class="publication-figure-fullsize" href="{{ paper.graphical_abstract.path | relative_url }}" target="_blank" rel="noopener">{{ ui.figure_fullsize_label }} <span aria-hidden="true">↗</span></a>
+            </figcaption>
+          </figure>
 
           <div class="publication-entry-content">
             <div class="publication-entry-meta"><strong class="publication-journal"><em>{{ publication.venue.name }}</em></strong> · {{ publication.year }} · {{ category_label }}</div>
@@ -92,7 +100,7 @@
 
         <article class="publication-paper-card representative-publication-card" data-publication-id="{{ publication.id }}" data-research-category="{{ representative.category }}">
           <figure class="publication-paper-card__figure">
-            <a class="publication-entry-image" href="{{ representative_url }}" aria-label="{{ representative_action_label | escape }} — {{ representative.title | escape }}">
+            <a class="publication-entry-image" href="{{ representative.figure.path | relative_url }}" target="_blank" rel="noopener" aria-label="{{ ui.figure_fullsize_label | escape }} — {{ representative.title | escape }}">
               <span class="publication-entry-image-frame">
                 <img
                   src="{{ representative.figure.path | relative_url }}"
@@ -103,7 +111,10 @@
                 {% if representative.figure.panel_label_mask %}<span class="publication-panel-label-mask publication-panel-label-mask--{{ representative.figure.panel_label_mask }}" aria-hidden="true"></span>{% endif %}
               </span>
             </a>
-            <figcaption>{{ figure_source }}</figcaption>
+            <figcaption>
+              <span>{{ figure_source }}</span>
+              <a class="publication-figure-fullsize" href="{{ representative.figure.path | relative_url }}" target="_blank" rel="noopener">{{ ui.figure_fullsize_label }} <span aria-hidden="true">↗</span></a>
+            </figcaption>
           </figure>
 
           <div class="publication-entry-content">

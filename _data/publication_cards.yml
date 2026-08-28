@@ -18,8 +18,8 @@ u1_snrnp:
       en: Model from Figure 3e showing U1 snRNP tethering and mobilizing noncoding RNAs on chromatin through RNA polymerase II
       zh-CN: Figure 3e 机制模型，展示 U1 snRNP 通过 RNA 聚合酶 II 将非编码 RNA 锚定并动员至染色质
     credit:
-      en: Mechanistic model from Figure 3e, cropped from Yin et al., Nature 580, 147–150 (2020).
-      zh-CN: 机制模型裁自 Yin 等发表于 Nature 580, 147–150 (2020) 的 Figure 3e。
+      en: Mechanism · U1 snRNP tethers and mobilizes noncoding RNAs on chromatin through transcriptionally engaged RNA polymerase II
+      zh-CN: 机制 · U1 snRNP 通过转录中的 RNA 聚合酶 II 将非编码 RNA 锚定并动员至染色质
   localized:
     en:
       summary: U1 snRNP recognizes 5′ splice-site motifs and, through transcriptionally engaged RNA polymerase II, tethers and mobilizes hundreds of lncRNAs and unstable noncoding transcripts on chromatin.
