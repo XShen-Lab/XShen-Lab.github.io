@@ -4,15 +4,32 @@
 {% assign publication_records = site.data.publications.records | sort: "cv_order" %}
 
 <div class="representative-publications">
-  <div class="representative-publication-grid">
-    {% for representative_id in browser_data.representative_order %}
-      {% assign representative_matches = browser_data.representatives | where: "publication_id", representative_id %}
-      {% assign representative = representative_matches | first %}
-      {% assign record_matches = publication_records | where: "id", representative.publication_id %}
-      {% assign publication = record_matches | first %}
-      {% assign category_matches = browser_data.categories | where: "id", representative.category %}
-      {% assign category = category_matches | first %}
+  {% for category in browser_data.categories %}
+    {% unless category.id == "other" %}
       {% assign category_label = category.label[language] | default: category.label.en %}
+      {% assign category_title = category.title[language] | default: category.title.en %}
+      {% assign category_description = category.description[language] | default: category.description.en %}
+      {% assign category_representatives = browser_data.representatives | where: "category", category.id %}
+
+      <section class="representative-program" id="representative-{{ category.id }}">
+        <header class="representative-program__header">
+          <span class="representative-program__index" aria-hidden="true">0{{ forloop.index }}</span>
+          <div>
+            <p class="representative-program__label">{{ category_label }}</p>
+            <h3>{{ category_title }}</h3>
+            <p>{{ category_description }}</p>
+          </div>
+        </header>
+
+        {% if category_representatives.size > 0 %}
+          <p class="representative-program__papers">{{ ui.representative_label }}</p>
+          <div class="representative-publication-grid">
+            {% for representative_id in browser_data.representative_order %}
+              {% assign representative_matches = browser_data.representatives | where: "publication_id", representative_id %}
+              {% assign representative = representative_matches | first %}
+              {% if representative.category == category.id %}
+                {% assign record_matches = publication_records | where: "id", representative.publication_id %}
+                {% assign publication = record_matches | first %}
 
       {% if representative.publication_id == "pub-2025-scfluent-seq" %}
         {% assign enrichment_matches = site.publications | where: "publication_id", publication.id %}
@@ -101,7 +118,12 @@
             </div>
           </div>
         </article>
-      {% endif %}
-    {% endfor %}
-  </div>
+              {% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </section>
+    {% endunless %}
+  {% endfor %}
 </div>

@@ -26,7 +26,7 @@ years:
 ui:
   en:
     representative_heading: Representative Publications
-    representative_intro: Thirteen representative papers are presented as full-width cards, with Nature and Cell papers first and research categories retained as context.
+    representative_intro: Thirteen representative papers are organized across five scientific modules. Within each module, Nature and Cell papers are presented first.
     representative_label: Representative published papers
     citation_label: Full citation
     read_summary_label: Read summary
@@ -45,7 +45,7 @@ ui:
     empty_label: No publications match this year and category.
   zh-CN:
     representative_heading: 代表性论文
-    representative_intro: 以下以横向精修卡片呈现 13 篇代表性论文，Nature 与 Cell 正刊论文优先排列，并保留研究方向作为背景信息。
+    representative_intro: 以下按照五个科学模块呈现 13 篇代表性论文；在每个模块内部，Nature 与 Cell 正刊论文优先排列。
     representative_label: 代表性已发表论文
     citation_label: 完整引用
     read_summary_label: 阅读简介
@@ -138,19 +138,19 @@ categories:
         尚未归入五个当前研究方向的正式记录。
 
 representative_order:
+  - pub-cv-013
+  - pub-cv-016
   - pub-cv-015
+  - pub-cv-005
+  - pub-cv-010
+  - pub-cv-025
+  - pub-cv-024
+  - pub-cv-031
+  - pub-cv-032
   - pub-2025-scfluent-seq
   - pub-cv-040
   - pub-cv-051
-  - pub-cv-005
-  - pub-cv-010
-  - pub-cv-013
-  - pub-cv-016
-  - pub-cv-031
-  - pub-cv-032
-  - pub-cv-025
   - pub-cv-043
-  - pub-cv-024
 
 representatives:
   - publication_id: pub-cv-013

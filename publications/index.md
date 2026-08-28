@@ -9,7 +9,7 @@ nav:
 
 # Publications
 
-The work below is organized around **Biological Information Flow: From Genome to Cell Fate**. Representative papers are presented as refined full-width cards, with Nature and Cell papers first and their research categories retained as context. A complete bibliography follows and can be explored across publication year and primary research category.
+The work below is organized around **Biological Information Flow: From Genome to Cell Fate**. Representative papers are presented as refined full-width cards across five scientific modules; within each module, Nature and Cell papers appear first. A complete bibliography follows and can be explored across publication year and primary research category.
 
 {% assign publications_ui = site.data.publication_browser.ui.en %}
 

@@ -44,19 +44,26 @@ APPROVED_PRE_REFACTOR_DETAIL_SHA256 =
   "fb5111662587f5715d0872014940ad509d15b75c6913a02212d0f05a27a4989d".freeze
 EXPECTED_COUNT = 52
 EXPECTED_REPRESENTATIVE_IDS = %w[
+  pub-cv-013
+  pub-cv-016
   pub-cv-015
+  pub-cv-005
+  pub-cv-010
+  pub-cv-025
+  pub-cv-024
+  pub-cv-031
+  pub-cv-032
   pub-2025-scfluent-seq
   pub-cv-040
   pub-cv-051
-  pub-cv-005
-  pub-cv-010
-  pub-cv-013
-  pub-cv-016
-  pub-cv-031
-  pub-cv-032
-  pub-cv-025
   pub-cv-043
-  pub-cv-024
+].freeze
+EXPECTED_REPRESENTATIVE_MODULE_IDS = %w[
+  genome-organization
+  rna-networks
+  transcriptional-surveillance
+  cell-fate-dynamics
+  foundations
 ].freeze
 EXPECTED_FIGURE_REPRESENTATIVE_IDS = (EXPECTED_REPRESENTATIVE_IDS - %w[
   pub-cv-015
@@ -176,6 +183,9 @@ def verify_renderer_wiring!
               "representative collection does not resolve canonical records by publication_id")
   fail_unless(representatives_source.include?('site.publications | where: "publication_id", publication.id'),
               "representative collection does not resolve scFLUENT enrichment by publication_id")
+  fail_unless(representatives_source.include?('for category in browser_data.categories') &&
+              representatives_source.include?('where: "category", category.id'),
+              "representative collection no longer renders the five scientific modules")
 
   PAGE_SOURCE_PATHS.each do |path|
     source = File.read(path, encoding: "UTF-8")
@@ -235,7 +245,7 @@ def verify_browser_data!(records)
 
   representative_ids = representatives.map { |entry| entry.fetch("publication_id") }
   fail_unless(representative_order == EXPECTED_REPRESENTATIVE_IDS,
-              "representative display order differs from the approved Nature/Cell-first sequence")
+              "representative display order differs from the approved within-module journal priority")
   fail_unless(representative_ids.sort == EXPECTED_REPRESENTATIVE_IDS.sort,
               "representative collection IDs differ from the approved 13-paper selection")
   fail_unless(representative_ids.uniq.length == EXPECTED_REPRESENTATIVE_IDS.length,
@@ -471,6 +481,10 @@ def verify_featured_card!(html, label, language, publication, enrichment)
 end
 
 def verify_representative_collection!(html, label, records)
+  module_ids = html.scan(/<section\b[^>]*\bclass="representative-program"[^>]*\bid="representative-([^"]+)"/i).flatten
+  fail_unless(module_ids == EXPECTED_REPRESENTATIVE_MODULE_IDS,
+              "#{label} representative modules are #{module_ids.inspect}, expected #{EXPECTED_REPRESENTATIVE_MODULE_IDS.inspect}")
+
   representative_cards = html.to_enum(:scan, /<article\b([^>]*)\bdata-publication-id="([^"]+)"([^>]*)>(.*?)<\/article>/mi).map do
     [Regexp.last_match(2), Regexp.last_match(4)]
   end
