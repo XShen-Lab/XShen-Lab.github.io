@@ -185,10 +185,26 @@
 }
 
 .publication-paper-card__figure figcaption {
+  display: grid;
+  gap: 0.55rem;
   padding: 0 1rem 1rem;
   color: #405451;
   font-size: 0.82rem;
   line-height: 1.55;
+}
+
+.publication-figure-fullsize {
+  width: fit-content;
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: var(--semi-bold);
+  text-decoration: none;
+}
+
+.publication-figure-fullsize:hover,
+.publication-figure-fullsize:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .publication-entry-image {
@@ -596,6 +612,22 @@
 
 .representative-publication-grid .publication-paper-card__figure figcaption {
   font-size: 0.74rem;
+}
+
+@media (min-width: 821px) {
+  .representative-publication-grid .publication-entry,
+  .representative-publication-grid .publication-paper-card {
+    grid-template-columns: minmax(0, 46%) minmax(0, 1fr);
+  }
+
+  .representative-publication-grid .publication-entry-image {
+    min-height: 280px;
+  }
+
+  .representative-publication-grid .publication-entry-image img,
+  .representative-publication-grid .publication-entry-image .publication-entry-image-frame img {
+    max-height: 500px;
+  }
 }
 
 /* Year × category browser -------------------------------------------------- */

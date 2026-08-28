@@ -452,12 +452,16 @@ def verify_featured_card!(html, label, language, publication, enrichment)
   tags = localized["tags"]
   detail_url = chinese ? CHINESE_DETAIL_URL : ENGLISH_DETAIL_URL
   action_labels = chinese ? ["阅读简介", "查看论文"] : ["Read summary", "View article"]
+  fullsize_label = chinese ? "查看高清大图" : "View full-size figure"
   metric_suffix = chinese ? "（范围取决于细胞类型）" : " (cell-type dependent)"
   browser_data = load_yaml(BROWSER_DATA_PATH)
   category_id = browser_data.fetch("records").fetch(publication.fetch("id")).fetch("category")
   category = browser_data.fetch("categories").find { |entry| entry.fetch("id") == category_id }
   category_label = category.fetch("label").fetch(chinese ? "zh-CN" : "en")
+  graphical_credit = enrichment.dig("graphical_abstract", "credit", chinese ? "zh-CN" : "en")
   expected_text = [
+    graphical_credit,
+    "#{fullsize_label} ↗",
     "#{publication.dig('venue', 'name')} · #{publication['year']} · #{category_label}",
     publication["title"],
     publication.dig("authors", "display"),
@@ -470,15 +474,16 @@ def verify_featured_card!(html, label, language, publication, enrichment)
               "#{label} visible featured-card content differs from approved canonical/enrichment content")
 
   hrefs = card.scan(/<a\b[^>]*\bhref="([^"]*)"/i).flatten.map { |href| CGI.unescapeHTML(href) }
-  expected_hrefs = [detail_url, detail_url, detail_url, publication.dig("links", "article")]
+  image_path = enrichment.dig("graphical_abstract", "path")
+  expected_hrefs = [image_path, image_path, detail_url, detail_url, publication.dig("links", "article")]
   fail_unless(hrefs == expected_hrefs,
               "#{label} featured-card links are #{hrefs.inspect}, expected #{expected_hrefs.inspect}")
 
   images = card.scan(/<img\b[^>]*>/i)
   fail_unless(images.length == 1, "#{label} featured card must contain exactly one image")
   image = images.first
-  image_src = CGI.unescapeHTML(image[/\bsrc="([^"]*)"/i, 1].to_s)
-  image_alt = CGI.unescapeHTML(image[/\balt="([^"]*)"/i, 1].to_s)
+    image_src = CGI.unescapeHTML(image[/\bsrc="([^"]*)"/i, 1].to_s)
+    image_alt = CGI.unescapeHTML(image[/\balt="([^"]*)"/i, 1].to_s)
   expected_alt = enrichment.dig("graphical_abstract", "alt", chinese ? "zh-CN" : "en")
   fail_unless(image_src == enrichment.dig("graphical_abstract", "path") && image_alt == expected_alt,
               "#{label} featured-card graphical abstract source or alt text changed")
@@ -509,6 +514,10 @@ def verify_representative_collection!(html, label, records)
                 "#{label} representative card #{publication_id} has fewer than four keywords")
     fail_unless(card.scan(/<img\b/i).length == 1,
                 "#{label} representative card #{publication_id} must contain exactly one image")
+    image_src = CGI.unescapeHTML(card[/<img\b[^>]*\bsrc="([^"]*)"/i, 1].to_s)
+    fullsize_links = card.scan(/<a\b[^>]*\bhref="#{Regexp.escape(image_src)}"[^>]*>/i)
+    fail_unless(fullsize_links.length == 2,
+                "#{label} representative card #{publication_id} must link its image and caption to the full-size figure")
     rendered_mask = card[/\bpublication-panel-label-mask--([a-z])\b/i, 1]
     fail_unless(rendered_mask == EXPECTED_PANEL_LABEL_MASKS[publication_id],
                 "#{label} representative card #{publication_id} panel-label mask is incorrect")

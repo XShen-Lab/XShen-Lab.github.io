@@ -8,6 +8,8 @@ graphical_abstract:
     en: Graphical abstract for Single-cell nascent transcription reveals sparse genome usage and plasticity
     zh-CN: Single-cell nascent transcription reveals sparse genome usage and plasticity 的图文摘要
   credit:
+    en: Graphical abstract · scFLUENT-seq reveals sparse, stochastic genome usage and links transcriptional diversity to cellular plasticity
+    zh-CN: 图形摘要 · scFLUENT-seq 揭示稀疏且随机的基因组使用，并将转录多样性与细胞可塑性联系起来
 
 localized:
   en:
