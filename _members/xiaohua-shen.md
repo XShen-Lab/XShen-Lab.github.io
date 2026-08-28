@@ -9,6 +9,7 @@ profile_image_scale: 1.01
 links:
   email: xshen@tsinghua.edu.cn
   google-scholar: qvzcBRcAAAAJ
+  xiaohongshu: https://www.xiaohongshu.com/user/profile/62fad0f300000000120013ab
 ---
 
 Xiaohua Shen is a Professor at Tsinghua University and is affiliated with the School of Basic Medicine, Center for Life Sciences, State Key Laboratory of Membrane Biology, and Beijing Frontier Research Center for Biological Structure.
