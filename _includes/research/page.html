@@ -136,7 +136,14 @@
         {% for item in research.surveillance.evidence %}
           <figure data-reveal style="--reveal-order: {{ forloop.index }}">
             <div><img src="{{ item.path | relative_url }}" alt="{{ item.alt | escape }}" loading="lazy" decoding="async"></div>
-            <figcaption><span>0{{ forloop.index | plus: 1 }}</span><strong>{{ item.title }}</strong><p>{{ item.caption }}</p></figcaption>
+            <figcaption>
+              <span>0{{ forloop.index | plus: 1 }}</span><strong>{{ item.title }}</strong><p>{{ item.caption }}</p>
+              {% if item.guide %}
+                <dl class="research-surveillance__guide">
+                  {% for guide in item.guide %}<div><dt>{{ guide.label }}</dt><dd>{{ guide.value }}</dd></div>{% endfor %}
+                </dl>
+              {% endif %}
+            </figcaption>
           </figure>
         {% endfor %}
       </div>

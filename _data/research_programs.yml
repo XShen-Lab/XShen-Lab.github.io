@@ -68,9 +68,9 @@ en:
       - path: /images/research/transcriptional-surveillance/mechanism-model.png
         alt: Working model comparing basal and processive transcriptional domains connected through kinetic selection and transcriptional surveillance
         label: Mechanism model
-      - path: /images/research/transcriptional-surveillance/ctd-response-heatmap.png
-        alt: Heatmap of short-timescale transcriptional responses following acute CTD perturbation
-        label: Acute CTD perturbation
+      - path: /images/research/transcriptional-surveillance/ctd-perturbation-timecourse.png
+        alt: EU-seq time course after acute CTD perturbation and wash-off, grouped by productive and basal transcriptional domains
+        label: CTD perturbation time course
       - path: /images/research/transcriptional-surveillance/zga-pol-ii-ser2p.png
         alt: EU-RNA and RNA Polymerase II Ser2P imaging across stages of zygotic genome activation
         label: ZGA imaging
@@ -173,9 +173,9 @@ zh-CN:
       - path: /images/research/transcriptional-surveillance/mechanism-model.png
         alt: 基础转录结构域与持续延伸结构域通过动力学选择和转录监控相连接的工作模型
         label: 机制模型
-      - path: /images/research/transcriptional-surveillance/ctd-response-heatmap.png
-        alt: 急性 CTD 扰动后的短时间尺度转录响应热图
-        label: 急性 CTD 扰动
+      - path: /images/research/transcriptional-surveillance/ctd-perturbation-timecourse.png
+        alt: 急性 CTD 扰动与 wash-off 后按有效和基础转录结构域分组的 EU-seq 时间序列
+        label: CTD 扰动时间序列
       - path: /images/research/transcriptional-surveillance/zga-pol-ii-ser2p.png
         alt: 合子基因组激活不同阶段的 EU-RNA 与 RNA 聚合酶 II Ser2P 成像
         label: ZGA 成像
