@@ -501,7 +501,7 @@
   width: 100%;
   height: 100%;
   border-radius: 0;
-  filter: saturate(0.74) contrast(1.04);
+  filter: var(--member-photo-filter, saturate(0.74) contrast(1.04));
   object-fit: cover;
   object-position: var(--member-photo-position, 50% 50%);
   transform: scale(var(--member-photo-scale, 1.055)) translateY(var(--member-photo-shift));
@@ -510,7 +510,12 @@
 }
 
 .member-profile__visual:hover .member-profile__photo {
-  filter: saturate(0.94) contrast(1.04);
+  filter: var(--member-photo-filter-hover, saturate(0.94) contrast(1.04));
+}
+
+.member-profile__visual--principal-investigator {
+  --member-photo-filter: saturate(0.9) contrast(1.02) brightness(1.03);
+  --member-photo-filter-hover: saturate(1) contrast(1.02) brightness(1.04);
 }
 
 .member-profile__veil {
@@ -521,6 +526,13 @@
     linear-gradient(180deg, rgb(3 12 10 / 48%), transparent 30%),
     linear-gradient(180deg, transparent 38%, rgb(2 14 11 / 94%) 100%),
     linear-gradient(90deg, rgb(2 16 12 / 12%), rgb(2 16 12 / 42%));
+}
+
+.member-profile__visual--principal-investigator .member-profile__veil {
+  background:
+    linear-gradient(180deg, rgb(3 12 10 / 34%), transparent 32%),
+    linear-gradient(180deg, transparent 48%, rgb(2 14 11 / 88%) 100%),
+    linear-gradient(90deg, rgb(2 16 12 / 8%), rgb(2 16 12 / 30%));
 }
 
 .member-profile__back {
@@ -544,10 +556,6 @@
 
 .member-profile__identity {
   position: absolute;
-}
-
-.member-profile__identity--pi {
-  inset: auto clamp(22px, 4vw, 48px) clamp(28px, 5vw, 58px);
 }
 
 .member-profile__identity--minimal {
@@ -633,23 +641,6 @@
   margin-top: 3px;
   font-size: 0.94em;
   font-weight: 700;
-}
-
-.page-inner main .member-profile__identity h1 {
-  max-width: 100%;
-  margin: 0 0 18px;
-  color: #eff8f4;
-  font-size: clamp(2.7rem, 5vw, 5.5rem);
-  line-height: 0.88;
-  overflow-wrap: anywhere;
-}
-
-.member-profile__identity > span {
-  display: block;
-  max-width: 38ch;
-  color: #c5d4cf;
-  font-size: 0.9rem;
-  line-height: 1.62;
 }
 
 .member-profile__links {
@@ -767,9 +758,49 @@
   min-width: 0;
 }
 
+.member-profile__longform--pi {
+  counter-reset: pi-profile-section;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--surface) 94%, var(--primary) 6%), var(--surface) 260px);
+}
+
+.page-inner main .member-profile__longform--pi > p:first-child {
+  max-width: 58ch;
+  margin: 0 0 clamp(46px, 6vw, 72px);
+  padding: clamp(22px, 3vw, 32px);
+  border-left: 3px solid var(--primary);
+  background: color-mix(in srgb, var(--surface) 82%, var(--primary) 18%);
+  color: var(--text);
+  font-family: var(--heading);
+  font-size: clamp(1.12rem, 1.7vw, 1.38rem);
+  line-height: 1.65;
+}
+
 .page-inner main .member-profile__longform h2 {
   margin-top: clamp(54px, 7vw, 82px);
   font-size: clamp(2rem, 3.4vw, 3.5rem);
+}
+
+.page-inner main .member-profile__longform--pi h2 {
+  counter-increment: pi-profile-section;
+  position: relative;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.page-inner main .member-profile__longform--pi h2::before {
+  content: counter(pi-profile-section, decimal-leading-zero);
+  display: block;
+  width: auto;
+  height: auto;
+  margin-bottom: 14px;
+  background: none;
+  color: var(--primary);
+  font-family: var(--code);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1;
 }
 
 .page-inner main .member-profile__longform h2:first-of-type {
@@ -785,6 +816,11 @@
 .page-inner main .member-profile__longform li {
   font-size: 1rem;
   line-height: 1.8;
+}
+
+.page-inner main .member-profile__longform--pi li strong {
+  color: var(--text);
+  font-weight: 760;
 }
 
 .js .member-profile__visual[data-reveal],

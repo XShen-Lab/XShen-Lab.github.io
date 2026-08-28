@@ -4,6 +4,8 @@ role: principal-investigator
 image: images/members/xiaohua-shen.jpg
 description: Principal Investigator
 affiliation: School of Basic Medicine, Tsinghua University
+profile_position: 50% 44%
+profile_image_scale: 1.01
 links:
   email: xshen@tsinghua.edu.cn
   google-scholar: qvzcBRcAAAAJ
