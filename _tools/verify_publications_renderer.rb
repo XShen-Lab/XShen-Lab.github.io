@@ -44,19 +44,19 @@ APPROVED_PRE_REFACTOR_DETAIL_SHA256 =
   "fb5111662587f5715d0872014940ad509d15b75c6913a02212d0f05a27a4989d".freeze
 EXPECTED_COUNT = 52
 EXPECTED_REPRESENTATIVE_IDS = %w[
-  pub-cv-013
-  pub-cv-016
-  pub-cv-005
-  pub-cv-010
   pub-cv-015
-  pub-cv-025
-  pub-cv-024
-  pub-cv-031
-  pub-cv-032
   pub-2025-scfluent-seq
   pub-cv-040
-  pub-cv-043
   pub-cv-051
+  pub-cv-005
+  pub-cv-010
+  pub-cv-013
+  pub-cv-016
+  pub-cv-031
+  pub-cv-032
+  pub-cv-025
+  pub-cv-043
+  pub-cv-024
 ].freeze
 EXPECTED_FIGURE_REPRESENTATIVE_IDS = (EXPECTED_REPRESENTATIVE_IDS - %w[
   pub-cv-015
@@ -217,6 +217,7 @@ def verify_browser_data!(records)
   category_ids = data.fetch("categories").map { |category| category.fetch("id") }
   years = data.fetch("years")
   representatives = data.fetch("representatives")
+  representative_order = data.fetch("representative_order")
 
   fail_unless(mapping.keys.sort == canonical_ids.sort,
               "publication browser mapping must cover each canonical record exactly once")
@@ -233,8 +234,10 @@ def verify_browser_data!(records)
   end
 
   representative_ids = representatives.map { |entry| entry.fetch("publication_id") }
-  fail_unless(representative_ids == EXPECTED_REPRESENTATIVE_IDS,
-              "representative collection IDs/order differ from the approved 13-paper selection")
+  fail_unless(representative_order == EXPECTED_REPRESENTATIVE_IDS,
+              "representative display order differs from the approved Nature/Cell-first sequence")
+  fail_unless(representative_ids.sort == EXPECTED_REPRESENTATIVE_IDS.sort,
+              "representative collection IDs differ from the approved 13-paper selection")
   fail_unless(representative_ids.uniq.length == EXPECTED_REPRESENTATIVE_IDS.length,
               "representative collection contains duplicate records")
   representatives.each do |entry|
@@ -246,6 +249,10 @@ def verify_browser_data!(records)
                 entry.fetch("venue").is_a?(String) && !entry.fetch("venue").empty? &&
                 entry.fetch("year").is_a?(Integer),
                 "representative collection contains incomplete display metadata")
+
+    canonical = records.find { |record| record.fetch("id") == entry.fetch("publication_id") }
+    fail_unless(canonical.fetch("citation").scan(entry.fetch("title")).length == 1,
+                "representative #{entry.fetch('publication_id')} title must occur exactly once in its canonical citation")
 
     next unless EXPECTED_FIGURE_REPRESENTATIVE_IDS.include?(entry.fetch("publication_id"))
 
@@ -260,6 +267,10 @@ def verify_browser_data!(records)
       fail_unless(figure.dig("alt", language).is_a?(String) && !figure.dig("alt", language).empty? &&
                   figure.dig("source", language).is_a?(String) && !figure.dig("source", language).empty?,
                   "representative #{entry.fetch('publication_id')} figure lacks #{language} alt/source text")
+      fail_unless(entry.dig("summary", language).is_a?(String) && !entry.dig("summary", language).empty?,
+                  "representative #{entry.fetch('publication_id')} lacks a #{language} card summary")
+      fail_unless(entry.dig("tags", language).is_a?(Array) && entry.dig("tags", language).length >= 4,
+                  "representative #{entry.fetch('publication_id')} lacks four #{language} keywords")
     end
   end
 end
@@ -426,8 +437,12 @@ def verify_featured_card!(html, label, language, publication, enrichment)
   detail_url = chinese ? CHINESE_DETAIL_URL : ENGLISH_DETAIL_URL
   action_labels = chinese ? ["阅读简介", "查看论文"] : ["Read summary", "View article"]
   metric_suffix = chinese ? "（范围取决于细胞类型）" : " (cell-type dependent)"
+  browser_data = load_yaml(BROWSER_DATA_PATH)
+  category_id = browser_data.fetch("records").fetch(publication.fetch("id")).fetch("category")
+  category = browser_data.fetch("categories").find { |entry| entry.fetch("id") == category_id }
+  category_label = category.fetch("label").fetch(chinese ? "zh-CN" : "en")
   expected_text = [
-    "#{publication.dig('venue', 'name')} · #{publication['year']}",
+    "#{publication.dig('venue', 'name')} · #{publication['year']} · #{category_label}",
     publication["title"],
     publication.dig("authors", "display"),
     localized["summary"],
@@ -456,13 +471,26 @@ def verify_featured_card!(html, label, language, publication, enrichment)
 end
 
 def verify_representative_collection!(html, label, records)
-  representative_ids = html.scan(/<article\b[^>]*\bdata-publication-id="([^"]+)"/i).flatten
+  representative_cards = html.to_enum(:scan, /<article\b([^>]*)\bdata-publication-id="([^"]+)"([^>]*)>(.*?)<\/article>/mi).map do
+    [Regexp.last_match(2), Regexp.last_match(4)]
+  end
+  representative_ids = representative_cards.map(&:first)
   fail_unless(representative_ids == EXPECTED_REPRESENTATIVE_IDS,
               "#{label} representative card IDs/order differ from the approved 13-paper selection")
 
-  representative_ids.each do |publication_id|
+  representative_cards.each do |publication_id, card|
     fail_unless(records.any? { |record| record.fetch("id") == publication_id },
                 "#{label} representative card #{publication_id} is not canonical")
+    authors = card[/<p\b[^>]*\bclass="publication-entry-authors"[^>]*>(.*?)<\/p>/mi, 1]
+    fail_unless(authors && !visible_text(authors).empty?,
+                "#{label} representative card #{publication_id} has no visible authors")
+    tags = card[/<div\b[^>]*\bclass="publication-entry-tags"[^>]*>(.*?)<\/div>/mi, 1]
+    fail_unless(tags && tags.scan(/<span\b/i).length >= 4,
+                "#{label} representative card #{publication_id} has fewer than four keywords")
+    fail_unless(card.scan(/<img\b/i).length == 1,
+                "#{label} representative card #{publication_id} must contain exactly one image")
+    fail_unless(card.match?(/<div\b[^>]*\bclass="publication-entry-actions"/i),
+                "#{label} representative card #{publication_id} has no action links")
   end
 
   json_source = html[/<script\b[^>]*\bdata-publication-records(?:="")?[^>]*>(.*?)<\/script>/mi, 1]

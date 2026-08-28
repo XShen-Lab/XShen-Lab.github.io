@@ -345,9 +345,9 @@
 .representative-publication-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 1px;
-  padding: 1px;
-  background: var(--line);
+  gap: clamp(18px, 2.4vw, 30px);
+  padding: 0;
+  background: transparent;
 }
 
 .representative-publication-grid > article {
@@ -858,6 +858,7 @@ html[data-dark="true"] .publication-browser__years {
     grid-template-columns: none;
     grid-auto-flow: column;
     grid-auto-columns: min(82vw, 540px);
+    gap: 16px;
     align-items: start;
     padding-bottom: 10px;
     overflow-x: auto;
@@ -871,6 +872,11 @@ html[data-dark="true"] .publication-browser__years {
   .representative-publication-grid > .publication-paper-card {
     grid-column: auto;
     scroll-snap-align: start;
+  }
+
+  .representative-publication-grid > .publication-entry,
+  .representative-publication-grid > .publication-paper-card {
+    grid-template-columns: 1fr;
   }
 
   .representative-publication-card--figure:not(.publication-entry):not(.publication-paper-card) {

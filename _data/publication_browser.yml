@@ -26,7 +26,7 @@ years:
 ui:
   en:
     representative_heading: Representative Publications
-    representative_intro: Thirteen published papers identified in the laboratory’s scientific-contribution overview are presented below as the first refined collection.
+    representative_intro: Thirteen representative papers are presented as full-width cards, with Nature and Cell papers first and research categories retained as context.
     representative_label: Representative published papers
     citation_label: Full citation
     read_summary_label: Read summary
@@ -45,7 +45,7 @@ ui:
     empty_label: No publications match this year and category.
   zh-CN:
     representative_heading: 代表性论文
-    representative_intro: 以下将实验室科学贡献概述中已经明确列出的 13 篇正式论文，作为第一批精修代表作集中呈现。
+    representative_intro: 以下以横向精修卡片呈现 13 篇代表性论文，Nature 与 Cell 正刊论文优先排列，并保留研究方向作为背景信息。
     representative_label: 代表性已发表论文
     citation_label: 完整引用
     read_summary_label: 阅读简介
@@ -137,12 +137,33 @@ categories:
       zh-CN: >-
         尚未归入五个当前研究方向的正式记录。
 
+representative_order:
+  - pub-cv-015
+  - pub-2025-scfluent-seq
+  - pub-cv-040
+  - pub-cv-051
+  - pub-cv-005
+  - pub-cv-010
+  - pub-cv-013
+  - pub-cv-016
+  - pub-cv-031
+  - pub-cv-032
+  - pub-cv-025
+  - pub-cv-043
+  - pub-cv-024
+
 representatives:
   - publication_id: pub-cv-013
     category: genome-organization
     title: Homotypic clustering of L1 and B1/Alu repeats compartmentalizes the 3D genome
     venue: Cell Research
     year: 2021
+    summary:
+      en: L1 and B1/Alu repeats form homotypic nuclear compartments that partition the 3D genome and coordinate gene regulation.
+      zh-CN: L1 与 B1/Alu 重复序列形成同类聚集的核内区室，从而划分三维基因组并协调基因调控。
+    tags:
+      en: [L1 repeats, B1/Alu repeats, 3D genome, Genome compartmentalization]
+      zh-CN: [L1 重复序列, B1/Alu 重复序列, 三维基因组, 基因组区室化]
     figure:
       path: /images/publications/representative/2021-l1-b1-dna-fish.webp
       alt:
@@ -156,6 +177,12 @@ representatives:
     title: Genomic repeats categorize genes with distinct functions for orchestrated regulation
     venue: Cell Reports
     year: 2020
+    summary:
+      en: Repeat classes act as genomic barcodes that group genes by function, developmental timing, and spatial organization.
+      zh-CN: 不同重复序列类别如同基因组条形码，按照功能、发育时序与空间组织对基因进行分组。
+    tags:
+      en: [Genomic repeats, Gene regulation, Nuclear organization, Developmental timing]
+      zh-CN: [基因组重复序列, 基因调控, 细胞核组织, 发育时序]
     figure:
       path: /images/publications/representative/2020-genomic-repeats-graphical-abstract.webp
       alt:
@@ -169,6 +196,12 @@ representatives:
     title: Nuclear RNA homeostasis promotes systems-level coordination for cell fate and vitality
     venue: Cell Stem Cell
     year: 2024
+    summary:
+      en: Nuclear RNA homeostasis coordinates transcription, translation, chromatin organization, and cell-state programs, linking RNA exosome activity to cell fate and vitality.
+      zh-CN: 核内 RNA 稳态协调转录、翻译、染色质组织与细胞状态程序，将 RNA 外切体活性与细胞命运及活力联系起来。
+    tags:
+      en: [Nuclear RNA homeostasis, RNA exosome, Chromatin organization, Cell fate]
+      zh-CN: [核内 RNA 稳态, RNA 外切体, 染色质组织, 细胞命运]
     figure:
       path: /images/publications/representative/2024-nuclear-rna-homeostasis-graphical-abstract.webp
       alt:
@@ -182,6 +215,12 @@ representatives:
     title: Phase separation of RNA-binding protein promotes polymerase engagement and transcription
     venue: Nature Chemical Biology
     year: 2022
+    summary:
+      en: RNA-binding proteins assemble transcriptional condensates at promoters and enhancers, promoting RNA polymerase II engagement and transcription.
+      zh-CN: RNA 结合蛋白在启动子与增强子处组装转录凝聚体，促进 RNA 聚合酶 II 的招募与转录。
+    tags:
+      en: [Phase separation, RNA-binding proteins, RNA polymerase II, Transcription]
+      zh-CN: [相分离, RNA 结合蛋白, RNA 聚合酶 II, 转录]
     figure:
       path: /images/publications/representative/2022-pspc1-transcription-condensate-model.webp
       alt:
@@ -200,6 +239,12 @@ representatives:
     title: RNA targets ribosome biogenesis factor WDR43 to chromatin for transcription and pluripotency control
     venue: Molecular Cell
     year: 2019
+    summary:
+      en: Nascent RNA recruits WDR43 to chromatin, coupling ribosome-biogenesis machinery to transcription elongation and pluripotency control.
+      zh-CN: 新生 RNA 将 WDR43 招募至染色质，把核糖体生物发生机器与转录延伸及多能性调控联系起来。
+    tags:
+      en: [WDR43, Nascent RNA, Ribosome biogenesis, Pluripotency]
+      zh-CN: [WDR43, 新生 RNA, 核糖体生物发生, 多能性]
     figure:
       path: /images/publications/representative/2019-wdr43-graphical-abstract.webp
       alt:
@@ -213,6 +258,12 @@ representatives:
     title: The lncRNA Hand2os1/Uph locus orchestrates heart development through regulation of precise expression HAND2
     venue: Development
     year: 2019
+    summary:
+      en: The Hand2os1/Uph locus controls precise HAND2 expression; its deletion disrupts embryonic heart development and causes congenital cardiac defects.
+      zh-CN: Hand2os1/Uph 位点精确调控 HAND2 表达；该位点缺失会扰乱胚胎心脏发育并导致先天性心脏缺陷。
+    tags:
+      en: [Hand2os1/Uph, lncRNA, Heart development, HAND2]
+      zh-CN: [Hand2os1/Uph, lncRNA, 心脏发育, HAND2]
     figure:
       path: /images/publications/representative/2019-hand2os1-heart-phenotype.webp
       alt:
@@ -226,6 +277,12 @@ representatives:
     title: Divergent lncRNAs regulate gene expression and lineage differentiation in pluripotent cells
     venue: Cell Stem Cell
     year: 2016
+    summary:
+      en: Divergent lncRNAs act in cis to tune neighboring coding genes and influence lineage differentiation in pluripotent cells.
+      zh-CN: 双向转录 lncRNA 通过顺式作用调节邻近编码基因，并影响多能细胞的谱系分化。
+    tags:
+      en: [Divergent lncRNAs, Cis regulation, Pluripotency, Lineage differentiation]
+      zh-CN: [双向转录 lncRNA, 顺式调控, 多能性, 谱系分化]
     figure:
       path: /images/publications/representative/2016-divergent-lncrnas-graphical-abstract.webp
       alt:
@@ -239,6 +296,12 @@ representatives:
     title: Opposing roles for the lncRNA Haunt and its genomic locus in regulating HOXA gene activation during embryonic stem cell differentiation
     venue: Cell Stem Cell
     year: 2015
+    summary:
+      en: The Haunt RNA and its genomic locus exert opposing effects on HOXA activation during embryonic stem-cell differentiation.
+      zh-CN: Haunt RNA 与其基因组位点在胚胎干细胞分化过程中对 HOXA 激活产生相反作用。
+    tags:
+      en: [Haunt, HOXA, lncRNA, Stem-cell differentiation]
+      zh-CN: [Haunt, HOXA, lncRNA, 干细胞分化]
     figure:
       path: /images/publications/representative/2015-haunt-graphical-abstract.webp
       alt:
@@ -257,6 +320,12 @@ representatives:
     title: Jumonji modulates Polycomb activity and self-renewal versus differentiation of stem cells
     venue: Cell
     year: 2009
+    summary:
+      en: Jumonji modulates PRC2 activity to balance embryonic stem-cell self-renewal and differentiation.
+      zh-CN: Jumonji 调节 PRC2 活性，从而平衡胚胎干细胞的自我更新与分化。
+    tags:
+      en: [Jumonji, PRC2, Polycomb, Stem-cell fate]
+      zh-CN: [Jumonji, PRC2, Polycomb, 干细胞命运]
     figure:
       path: /images/publications/representative/2009-jumonji-prc2-model.webp
       alt:
@@ -270,6 +339,12 @@ representatives:
     title: EZH1 mediates methylation on histone H3 lysine 27 and complements EZH2 in maintaining stem cell identity and executing pluripotency
     venue: Molecular Cell
     year: 2008
+    summary:
+      en: EZH1 and EZH2 provide complementary but nonredundant H3K27 methylation activities that support stem-cell identity and differentiation.
+      zh-CN: EZH1 与 EZH2 提供互补但不冗余的 H3K27 甲基化活性，共同维持干细胞身份并支持分化。
+    tags:
+      en: [EZH1, EZH2, H3K27 methylation, Pluripotency]
+      zh-CN: [EZH1, EZH2, H3K27 甲基化, 多能性]
     figure:
       path: /images/publications/representative/2008-ezh1-ezh2-model.webp
       alt:
@@ -283,6 +358,12 @@ representatives:
     title: Complementary signaling pathways regulate the unfolded protein response and are required for C. elegans development
     venue: Cell
     year: 2001
+    summary:
+      en: Complementary unfolded protein response pathways are jointly required for C. elegans development, defining conserved logic in endoplasmic-reticulum stress signaling.
+      zh-CN: 互补的未折叠蛋白反应通路共同保障秀丽隐杆线虫发育，揭示内质网应激信号的保守逻辑。
+    tags:
+      en: [Unfolded protein response, ER stress, C. elegans, Development]
+      zh-CN: [未折叠蛋白反应, 内质网应激, 秀丽隐杆线虫, 发育]
     figure:
       path: /images/publications/representative/2001-upr-pathways-model.webp
       alt:
