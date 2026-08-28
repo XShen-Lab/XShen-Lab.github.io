@@ -92,9 +92,45 @@
               <p>{{ research.programs.focus_label }}</p>
               <ul>{% for focus in program.focus %}<li>{{ focus }}</li>{% endfor %}</ul>
             </div>
+            {% if program.key == "selection" %}
+              <a class="research-program__deep-link" href="#transcriptional-surveillance-mechanism">{{ research.surveillance.action }} <span aria-hidden="true">↓</span></a>
+            {% endif %}
           </div>
         </article>
       {% endfor %}
+    </div>
+  </section>
+
+  <section class="research-surveillance" id="transcriptional-surveillance-mechanism" aria-labelledby="research-surveillance-title">
+    <div class="research-shell">
+      <div class="research-surveillance__head">
+        <div data-reveal>
+          <p class="research-kicker">{{ research.surveillance.label }}</p>
+          <p class="research-surveillance__status">{{ research.surveillance.status }}</p>
+        </div>
+        <div data-reveal style="--reveal-order: 1">
+          <h2 id="research-surveillance-title">{{ research.surveillance.title }}</h2>
+          <p>{{ research.surveillance.intro }}</p>
+        </div>
+      </div>
+
+      <figure class="research-surveillance__model" data-reveal>
+        <img src="{{ research.surveillance.mechanism.path | relative_url }}" alt="{{ research.surveillance.mechanism.alt | escape }}" loading="lazy" decoding="async">
+        <figcaption><span>01 · {{ research.surveillance.model_label }}</span>{{ research.surveillance.mechanism.caption }}</figcaption>
+      </figure>
+
+      <div class="research-surveillance__evidence-head" data-reveal>
+        <p class="research-kicker">{{ research.surveillance.evidence_label }}</p>
+        <span aria-hidden="true">CTD → RNP → Pol II fate</span>
+      </div>
+      <div class="research-surveillance__evidence">
+        {% for item in research.surveillance.evidence %}
+          <figure data-reveal style="--reveal-order: {{ forloop.index }}">
+            <div><img src="{{ item.path | relative_url }}" alt="{{ item.alt | escape }}" loading="lazy" decoding="async"></div>
+            <figcaption><span>0{{ forloop.index | plus: 1 }}</span><strong>{{ item.title }}</strong><p>{{ item.caption }}</p></figcaption>
+          </figure>
+        {% endfor %}
+      </div>
     </div>
   </section>
 
