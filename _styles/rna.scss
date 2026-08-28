@@ -702,6 +702,8 @@ main { padding-top: 76px; }
 .rna-research-image { position: absolute; z-index: 1; inset: 0 0 0 52%; overflow: hidden; opacity: 0.78; }
 .rna-research-image:after { position: absolute; inset: 0; background: linear-gradient(90deg, #f5f3eb 0%, rgb(245 243 235 / 82%) 14%, transparent 70%); content: ""; }
 .rna-research-image img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.78) contrast(1.06); transition: filter 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+.rna-research-card.motif-domain .rna-research-image { background: #fff; }
+.rna-research-card.motif-domain .rna-research-image img { object-position: 48% center; }
 .rna-research-card.motif-field .rna-research-image { background: #fff; }
 .rna-research-card.motif-field .rna-research-image img { padding: 12%; object-fit: contain; }
 .rna-research-card.motif-checkpoint .rna-research-image { background: #f8f7f2; }
