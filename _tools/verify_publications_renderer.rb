@@ -69,6 +69,10 @@ EXPECTED_FIGURE_REPRESENTATIVE_IDS = (EXPECTED_REPRESENTATIVE_IDS - %w[
   pub-cv-015
   pub-2025-scfluent-seq
 ]).freeze
+EXPECTED_PANEL_LABEL_MASKS = {
+  "pub-cv-013" => "g",
+  "pub-cv-010" => "e"
+}.freeze
 SCFLUENT_ID = "pub-2025-scfluent-seq".freeze
 ENGLISH_DETAIL_URL = "/publications/2025-scfluent-seq/".freeze
 CHINESE_DETAIL_URL = "/zh/publications/2025-scfluent-seq/".freeze
@@ -273,6 +277,8 @@ def verify_browser_data!(records)
     fail_unless(figure_path.start_with?("/images/publications/representative/") &&
                 File.file?(File.join(ROOT, figure_path.delete_prefix("/"))),
                 "representative #{entry.fetch('publication_id')} figure file is missing")
+    fail_unless(figure["panel_label_mask"] == EXPECTED_PANEL_LABEL_MASKS[entry.fetch("publication_id")],
+                "representative #{entry.fetch('publication_id')} panel-label mask is incorrect")
     %w[en zh-CN].each do |language|
       fail_unless(figure.dig("alt", language).is_a?(String) && !figure.dig("alt", language).empty? &&
                   figure.dig("source", language).is_a?(String) && !figure.dig("source", language).empty?,
@@ -503,6 +509,9 @@ def verify_representative_collection!(html, label, records)
                 "#{label} representative card #{publication_id} has fewer than four keywords")
     fail_unless(card.scan(/<img\b/i).length == 1,
                 "#{label} representative card #{publication_id} must contain exactly one image")
+    rendered_mask = card[/\bpublication-panel-label-mask--([a-z])\b/i, 1]
+    fail_unless(rendered_mask == EXPECTED_PANEL_LABEL_MASKS[publication_id],
+                "#{label} representative card #{publication_id} panel-label mask is incorrect")
     fail_unless(card.match?(/<div\b[^>]*\bclass="publication-entry-actions"/i),
                 "#{label} representative card #{publication_id} has no action links")
   end

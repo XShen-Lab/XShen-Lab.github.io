@@ -165,13 +165,14 @@ representatives:
       en: [L1 repeats, B1/Alu repeats, 3D genome, Genome compartmentalization]
       zh-CN: [L1 重复序列, B1/Alu 重复序列, 三维基因组, 基因组区室化]
     figure:
-      path: /images/publications/representative/2021-l1-b1-dna-fish.webp
+      path: /images/publications/representative/2021-l1-b1-compartment-model-v2.png
+      panel_label_mask: g
       alt:
-        en: DNA FISH images showing spatial segregation of B1/Alu and L1 repeats in mammalian nuclei.
-        zh-CN: DNA FISH 图像显示哺乳动物细胞核中 B1/Alu 与 L1 重复序列的空间分离。
+        en: Model showing L1-rich compartments at the nuclear lamina and nucleolus and B1-rich compartments around nuclear speckles.
+        zh-CN: 模型展示核纤层与核仁周围的 L1 富集区室，以及核斑周围的 B1 富集区室。
       source:
-        en: Figure 2 · DNA FISH reveals the spatial segregation of L1 and B1 compartments
-        zh-CN: 图 2 · DNA FISH 显示 L1 与 B1 区室的空间分离
+        en: Model · Homotypic L1 and B1/Alu repeat clustering organizes compartments around the nuclear lamina, nucleolus, and nuclear speckles
+        zh-CN: 模型 · L1 与 B1/Alu 重复序列的同类聚集在核纤层、核仁和核斑周围组织不同区室
   - publication_id: pub-cv-016
     category: genome-organization
     title: Genomic repeats categorize genes with distinct functions for orchestrated regulation
@@ -222,13 +223,14 @@ representatives:
       en: [Phase separation, RNA-binding proteins, RNA polymerase II, Transcription]
       zh-CN: [相分离, RNA 结合蛋白, RNA 聚合酶 II, 转录]
     figure:
-      path: /images/publications/representative/2022-pspc1-transcription-condensate-model.webp
+      path: /images/publications/representative/2022-rbp-transcription-condensate-model-v2.png
+      panel_label_mask: e
       alt:
-        en: Model showing RNA-binding proteins assembling transcription condensates that recruit and activate RNA polymerase II.
-        zh-CN: 模型展示 RNA 结合蛋白组装转录凝聚体并招募、激活 RNA 聚合酶 II。
+        en: Model showing RBP-rich condensates compartmentalizing RNA polymerase II and regulatory enzymes from transcription initiation to elongation.
+        zh-CN: 模型展示富含 RNA 结合蛋白的凝聚体如何从转录起始到延伸阶段组织 RNA 聚合酶 II 与调控酶。
       source:
-        en: Figure 6e · Model of RNA-binding proteins at promoters and enhancers
-        zh-CN: 图 6e · 启动子与增强子处 RNA 结合蛋白的作用模型
+        en: Model · RBP-rich condensates promote RNA polymerase II phosphorylation, productive elongation, and transcriptional bursting
+        zh-CN: 模型 · 富含 RNA 结合蛋白的凝聚体促进 RNA 聚合酶 II 磷酸化、有效延伸与转录爆发
   - publication_id: pub-cv-015
     category: rna-networks
     title: U1 snRNP regulates chromatin retention of noncoding RNAs
@@ -265,13 +267,13 @@ representatives:
       en: [Hand2os1/Uph, lncRNA, Heart development, HAND2]
       zh-CN: [Hand2os1/Uph, lncRNA, 心脏发育, HAND2]
     figure:
-      path: /images/publications/representative/2019-hand2os1-heart-phenotype.webp
+      path: /images/publications/representative/2019-hand2os1-3c-regulatory-landscape-v2.png
       alt:
-        en: Developmental and cardiac phenotypes caused by deletion of the Hand2os1 locus, with embryonic heart images and molecular analyses.
-        zh-CN: Hand2os1 位点缺失导致的发育与心脏表型，包括胚胎心脏图像及分子分析。
+        en: Heart 3C and chromatin profiles across the Hand2os1 locus showing contacts between the HAND2 promoter and distal regulatory elements.
+        zh-CN: Hand2os1 位点的心脏 3C 与染色质图谱，展示 HAND2 启动子与远端调控元件之间的接触。
       source:
-        en: Figure 2 · Hand2os1 locus deletion causes congenital heart defects
-        zh-CN: 图 2 · Hand2os1 位点缺失导致先天性心脏缺陷
+        en: Heart 3C and chromatin profiles · The HAND2 promoter contacts distal regulatory elements across the Hand2os1 locus
+        zh-CN: 心脏 3C 与染色质图谱 · HAND2 启动子与 Hand2os1 位点内的远端调控元件发生接触
   - publication_id: pub-cv-031
     category: rna-networks
     title: Divergent lncRNAs regulate gene expression and lineage differentiation in pluripotent cells

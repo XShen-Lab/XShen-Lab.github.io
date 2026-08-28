@@ -93,12 +93,15 @@
         <article class="publication-paper-card representative-publication-card" data-publication-id="{{ publication.id }}" data-research-category="{{ representative.category }}">
           <figure class="publication-paper-card__figure">
             <a class="publication-entry-image" href="{{ representative_url }}" aria-label="{{ representative_action_label | escape }} — {{ representative.title | escape }}">
-              <img
-                src="{{ representative.figure.path | relative_url }}"
-                alt="{{ figure_alt | escape }}"
-                loading="lazy"
-                decoding="async"
-              >
+              <span class="publication-entry-image-frame">
+                <img
+                  src="{{ representative.figure.path | relative_url }}"
+                  alt="{{ figure_alt | escape }}"
+                  loading="lazy"
+                  decoding="async"
+                >
+                {% if representative.figure.panel_label_mask %}<span class="publication-panel-label-mask publication-panel-label-mask--{{ representative.figure.panel_label_mask }}" aria-hidden="true"></span>{% endif %}
+              </span>
             </a>
             <figcaption>{{ figure_source }}</figcaption>
           </figure>
