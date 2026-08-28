@@ -267,6 +267,10 @@
 .research-surveillance__evidence figcaption > span { grid-row: 1 / span 2; color: #b74c17; font-family: var(--code); font-size: 0.7rem; }
 .research-surveillance__evidence figcaption strong { font-family: var(--heading); font-size: 1.4rem; font-weight: 500; }
 .research-surveillance__evidence figcaption p { margin: 9px 0 0; color: #40534f; font-size: 0.8rem; line-height: 1.6; }
+.research-surveillance__guide { display: grid; margin: 18px 0 0; padding: 17px 0 0; grid-column: 2; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; border-top: 1px solid rgb(14 32 29 / 14%); }
+.research-surveillance__guide div { min-width: 0; }
+.research-surveillance__guide dt { color: #b74c17; font-family: var(--code); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.research-surveillance__guide dd { margin: 7px 0 0; color: #40534f; font-size: 0.72rem; line-height: 1.5; }
 
 .research-nucleus { padding: clamp(100px, 12vw, 180px) 0; background: #e7e9df; }
 .research-nucleus__grid { display: grid; grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr); gap: clamp(55px, 8vw, 120px); }
@@ -349,6 +353,7 @@
   .research-surveillance__evidence figure:first-child { grid-column: auto; }
   .research-surveillance__evidence figure > div,
   .research-surveillance__evidence figure:first-child > div { min-height: 250px; padding: 15px; }
+  .research-surveillance__guide { grid-template-columns: 1fr; gap: 12px; }
   .research-technology__head { grid-template-columns: 1fr; }
   .research-technology__head .research-kicker { grid-column: auto; }
   .research-technology__list { margin-top: 50px; grid-template-columns: 1fr; }

@@ -35,10 +35,17 @@ en:
       caption: Basal and processive elongation states are connected through kinetic selection, nascent RNP assembly and RNA Polymerase II fate.
     evidence_label: Three views of the same transition
     evidence:
-      - path: /images/research/transcriptional-surveillance/ctd-response-heatmap.png
-        alt: Heatmap of short-timescale transcriptional responses following acute CTD perturbation
-        title: Perturb the CTD
-        caption: Short-timescale transcriptional responses following acute CTD perturbation, organized across productive and basal transcriptional domains.
+      - path: /images/research/transcriptional-surveillance/ctd-perturbation-timecourse.png
+        alt: EU-seq time course after acute CTD perturbation and wash-off, separating high- and low-output genes from proximal and distal intergenic bins
+        title: Read the CTD response over time
+        caption: EU-seq responses across IAA treatment and wash-off, separating genes in productive domains from intergenic bins in basal domains.
+        guide:
+          - label: Rows
+            value: High- and low-output genes; proximal and distal intergenic bins
+          - label: Columns
+            value: IAA treatment and wash-off time points in hours
+          - label: Color
+            value: Spike-in-normalized EU-seq signal
       - path: /images/research/transcriptional-surveillance/zga-pol-ii-ser2p.png
         alt: EU-RNA and RNA Polymerase II Ser2P imaging across pre-ZGA, minor-ZGA and major-ZGA stages
         title: Watch surveillance emerge
@@ -118,10 +125,17 @@ zh-CN:
       caption: 基础态与持续延伸态通过动力学选择、新生 RNP 组装和 RNA 聚合酶 II 命运相互连接。
     evidence_label: 同一转换过程的三个观察层面
     evidence:
-      - path: /images/research/transcriptional-surveillance/ctd-response-heatmap.png
-        alt: 急性 CTD 扰动后的短时间尺度转录响应热图
-        title: 扰动 CTD
-        caption: 急性 CTD 扰动后的短时间尺度转录响应，并按有效与基础转录结构域组织展示。
+      - path: /images/research/transcriptional-surveillance/ctd-perturbation-timecourse.png
+        alt: 急性 CTD 扰动与 wash-off 后的 EU-seq 时间序列，区分高低输出基因以及近端和远端基因间区间
+        title: 追踪 CTD 扰动后的时间响应
+        caption: IAA 处理和 wash-off 期间的 EU-seq 响应，区分有效转录结构域中的基因与基础转录结构域中的基因间区间。
+        guide:
+          - label: 行
+            value: 高、低输出基因；近端、远端基因间区间
+          - label: 列
+            value: IAA 处理与 wash-off 时间点（小时）
+          - label: 颜色
+            value: spike-in 归一化 EU-seq 信号
       - path: /images/research/transcriptional-surveillance/zga-pol-ii-ser2p.png
         alt: 在合子基因组激活前、次级激活和主要激活阶段的 EU-RNA 与 RNA 聚合酶 II Ser2P 成像
         title: 观察监控体系的建立
