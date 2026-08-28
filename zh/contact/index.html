@@ -349,56 +349,127 @@
   
 
   <section class="background" data-size="page">
-    <p class="right"><small><a href="/contact/">English</a></small></p>
+    <div class="contact-page">
+  <header class="contact-hero">
+    <div class="contact-hero__copy" data-reveal="">
+      <p class="contact-kicker">XShen Lab / 清华大学</p>
+      <h1>联系我们</h1>
+      <p>欢迎前往清华大学基础医学院实验室，或通过电子邮箱及电话与我们联系。</p>
+    </div>
+    
 
-<h1 id="联系方式">
-<i class="icon fa-regular fa-envelope"></i>联系方式</h1>
 
-<p><strong>XShen Lab</strong><br>
-清华大学基础医学院<br>
-清华大学郑裕彤医学楼 D108<br>
-中国北京市海淀区</p>
 
-<p>电子邮箱：<a href="mailto:xshen@tsinghua.edu.cn">xshen@tsinghua.edu.cn</a></p>
-  </section>
+<a class="contact-map" href="https://uri.amap.com/search?keyword=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E9%83%91%E8%A3%95%E5%BD%A4%E5%8C%BB%E5%AD%A6%E6%A5%BC&city=%E5%8C%97%E4%BA%AC%E5%B8%82&callnative=0" target="_blank" rel="noopener" data-reveal="" style="--reveal-order: 1" aria-label="在地图中查看清华大学郑裕彤医学楼">
+  <div class="contact-map__canvas">
+    <svg viewbox="0 0 720 500" role="img" aria-labelledby="contact-map-title contact-map-description">
+      <title id="contact-map-title">郑裕彤医学楼位置示意图</title>
+      <desc id="contact-map-description">清华大学校园内基础医学院郑裕彤医学楼的位置标记。</desc>
+      <defs>
+        <pattern id="contact-map-grid" width="26" height="26" patternunits="userSpaceOnUse">
+          <path d="M 26 0 L 0 0 0 26" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.11"></path>
+        </pattern>
+        <lineargradient id="contact-map-glow" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#35e6bf" stop-opacity="0.2"></stop>
+          <stop offset="1" stop-color="#5969d9" stop-opacity="0.06"></stop>
+        </lineargradient>
+        <filter id="contact-marker-glow" x="-100%" y="-100%" width="300%" height="300%">
+          <fegaussianblur stddeviation="8" result="blur"></fegaussianblur>
+          <femerge><femergenode in="blur"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge>
+        </filter>
+      </defs>
 
-  
-  
-  
+      <rect width="720" height="500" fill="#071411"></rect>
+      <rect width="720" height="500" fill="url(#contact-map-grid)" color="#7eaaa0"></rect>
+      <ellipse cx="490" cy="220" rx="235" ry="190" fill="url(#contact-map-glow)"></ellipse>
 
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
+      <g class="contact-map__roads" fill="none" stroke-linecap="round">
+        <path d="M-20 382 C130 334 218 350 350 310 S600 238 750 285" stroke="#9ab0aa" stroke-width="30" opacity="0.11"></path>
+        <path d="M-20 382 C130 334 218 350 350 310 S600 238 750 285" stroke="#a9c2bb" stroke-width="2" opacity="0.46"></path>
+        <path d="M138 -30 C168 102 190 184 256 262 S342 414 342 540" stroke="#9ab0aa" stroke-width="24" opacity="0.1"></path>
+        <path d="M138 -30 C168 102 190 184 256 262 S342 414 342 540" stroke="#a9c2bb" stroke-width="2" opacity="0.4"></path>
+        <path d="M392 -30 C386 84 412 142 478 205 S564 360 548 540" stroke="#35e6bf" stroke-width="2" stroke-dasharray="8 12" opacity="0.43"></path>
+      </g>
 
-<h2 id="地址">地址</h2>
+      <g class="contact-map__blocks" fill="#102720" stroke="#4d6e65" stroke-width="1">
+        <rect x="42" y="72" width="132" height="70"></rect>
+        <rect x="207" y="52" width="102" height="102"></rect>
+        <rect x="64" y="184" width="106" height="85"></rect>
+        <rect x="214" y="188" width="132" height="62"></rect>
+        <rect x="420" y="76" width="104" height="66"></rect>
+        <rect x="558" y="72" width="112" height="86"></rect>
+        <rect x="558" y="332" width="104" height="86"></rect>
+        <rect x="401" y="360" width="111" height="68"></rect>
+        <rect x="95" y="405" width="142" height="55"></rect>
+      </g>
 
-<p>中国北京市海淀区清华大学<br>
-清华大学基础医学院<br>
-清华大学郑裕彤医学楼 D108<br>
-邮编：100084</p>
-  </section>
+      <g class="contact-map__target">
+        <circle cx="480" cy="235" r="42" fill="#35e6bf" opacity="0.12" filter="url(#contact-marker-glow)"></circle>
+        <circle cx="480" cy="235" r="17" fill="#071411" stroke="#35e6bf" stroke-width="3"></circle>
+        <circle cx="480" cy="235" r="5" fill="#35e6bf"></circle>
+        <path d="M480 254 L466 277 L494 277 Z" fill="#35e6bf"></path>
+      </g>
 
-  
-  
-  
+      <g class="contact-map__labels">
+        <text x="42" y="42" class="contact-map__campus">清华大学校园</text>
+        <text x="503" y="218" class="contact-map__building">郑裕彤医学楼</text>
+        <text x="503" y="239" class="contact-map__building contact-map__building--sub">基础医学院 · D108</text>
+        <text x="663" y="459" class="contact-map__north">N</text>
+        <path d="M668 421 L658 444 L668 439 L678 444 Z" fill="#35e6bf"></path>
+      </g>
+    </svg>
+  </div>
+  <div class="contact-map__caption">
+    <div>
+      <span>实验室位置</span>
+      <strong>清华大学郑裕彤医学楼</strong>
+      <small>基础医学院 · D108</small>
+    </div>
+    <em>打开地图 <span aria-hidden="true">↗</span></em>
+  </div>
+</a>
 
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
+  </header>
 
-<h2 id="相关链接">相关链接</h2>
+  <div class="contact-grid">
+    <section class="contact-card contact-card--direct" data-reveal="" style="--reveal-order: 1">
+      <p class="contact-card__index">01 / 直接联系</p>
+      <h2>XShen Lab</h2>
+      <address>
+        中国北京市海淀区清华大学<br>
+        清华大学基础医学院<br>
+        郑裕彤医学楼 D108，邮编 100084
+      </address>
+      <dl class="contact-list">
+        <div>
+          <dt>电子邮箱</dt>
+          <dd><a href="mailto:xshen@tsinghua.edu.cn">xshen@tsinghua.edu.cn <span aria-hidden="true">↗</span></a></dd>
+        </div>
+        <div>
+          <dt>电话</dt>
+          <dd><a href="tel:+861062798513">+86-10-62798513 <span aria-hidden="true">↗</span></a></dd>
+        </div>
+      </dl>
+    </section>
 
-<ul>
-  <li>清华大学基础医学院</li>
-  <li>清华大学</li>
-  <li>XShen Lab GitHub 组织</li>
-</ul>
+    <section class="contact-card contact-card--profiles" data-reveal="" style="--reveal-order: 2">
+      <p class="contact-card__index">02 / 教师主页</p>
+      <h2>官方主页</h2>
+      <div class="contact-profile-links">
+        <a href="https://www.bms.tsinghua.edu.cn/info/1352/1442.htm">
+          <span>清华大学基础医学院</span>
+          <strong>沈晓骅</strong>
+          <i aria-hidden="true">↗</i>
+        </a>
+        <a href="http://www.cls.edu.cn/info/1263/1098.htm" data-proofer-ignore="">
+          <span>清华大学生命科学联合中心</span>
+          <strong>沈晓骅</strong>
+          <i aria-hidden="true">↗</i>
+        </a>
+      </div>
+    </section>
+  </div>
+</div>
   </section>
 
 
