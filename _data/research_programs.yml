@@ -50,6 +50,15 @@ en:
       - RNA Polymerase II CTD and EIF4A3
       - Kinetic selection of productive elongation
       - RNA maturation, clearance and polymerase recycling
+    home_flow:
+      - Basal
+      - Kinetic selection
+      - Processive
+    image:
+      path: /images/research/transcriptional-surveillance/surveillance-core.png
+      home_path: /images/research/transcriptional-surveillance/surveillance-core.png
+      alt: Working model in which CTD- and EIF4A3-linked transcriptional surveillance couples nascent RNP assembly to RNA Polymerase II fate
+      caption: A working model places transcriptional surveillance between basal priming and processive elongation.
     anchor: transcriptional-surveillance
     motif: checkpoint
   - key: stabilization
@@ -131,6 +140,15 @@ zh-CN:
       - RNA 聚合酶 II CTD 与 EIF4A3
       - 有效转录延伸的动力学选择
       - RNA 成熟、清除与聚合酶循环利用
+    home_flow:
+      - 基础态
+      - 动力学选择
+      - 持续延伸态
+    image:
+      path: /images/research/transcriptional-surveillance/surveillance-core.png
+      home_path: /images/research/transcriptional-surveillance/surveillance-core.png
+      alt: 工作模型展示与 CTD、EIF4A3 相关的转录监控如何将新生 RNP 组装与 RNA 聚合酶 II 命运相连接
+      caption: 工作模型将转录监控置于基础启动与持续延伸之间。
     anchor: transcriptional-surveillance
     motif: checkpoint
   - key: stabilization

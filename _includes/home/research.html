@@ -10,6 +10,11 @@
         <span class="rna-research-title">{{ item.title }}</span>
         <span class="rna-research-question">{{ item.question }}</span>
         <span class="rna-research-text">{{ item.description }}</span>
+        {% if item.home_flow %}
+          <span class="rna-research-flow" aria-hidden="true">
+            {% for state in item.home_flow %}<span>{{ state }}</span>{% unless forloop.last %}<i>→</i>{% endunless %}{% endfor %}
+          </span>
+        {% endif %}
       </span>
       <span class="rna-program-motif" aria-hidden="true"><i></i><i></i><i></i></span>
       <span class="rna-arrow" aria-hidden="true">{{ include.home.labels.explore_program }} ↗</span>

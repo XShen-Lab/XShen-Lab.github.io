@@ -21,6 +21,32 @@ en:
     next: Next research program
     focus_label: Current focus
     image_label: Experimental view
+  surveillance:
+    label: Transcriptional Surveillance · Mechanism in focus
+    status: Working models and ongoing research
+    action: Explore the mechanism
+    model_label: Model
+    title: Kinetic selection turns pervasive transcription into productive output.
+    intro: >-
+      We distinguish a widespread basal state, in which elongation complexes frequently drop off, from a processive state that supports proper nascent RNP assembly and productive elongation. Transcriptional surveillance links RNA Polymerase II CTD state, EIF4A3 and RNA-processing pathways to this kinetic transition.
+    mechanism:
+      path: /images/research/transcriptional-surveillance/mechanism-model.png
+      alt: Working model comparing basal transcriptional domains with productive domains and showing kinetic selection through CTD- and EIF4A3-linked transcriptional surveillance
+      caption: Basal and processive elongation states are connected through kinetic selection, nascent RNP assembly and RNA Polymerase II fate.
+    evidence_label: Three views of the same transition
+    evidence:
+      - path: /images/research/transcriptional-surveillance/ctd-response-heatmap.png
+        alt: Heatmap of short-timescale transcriptional responses following acute CTD perturbation
+        title: Perturb the CTD
+        caption: Short-timescale transcriptional responses following acute CTD perturbation, organized across productive and basal transcriptional domains.
+      - path: /images/research/transcriptional-surveillance/zga-pol-ii-ser2p.png
+        alt: EU-RNA and RNA Polymerase II Ser2P imaging across pre-ZGA, minor-ZGA and major-ZGA stages
+        title: Watch surveillance emerge
+        caption: EU-RNA and Pol II Ser2P imaging across pre-, minor- and major-ZGA stages.
+      - path: /images/research/transcriptional-surveillance/zga-activity-model.png
+        alt: Working model connecting CTD maturation with the transition from basal to productive transcription during zygotic genome activation
+        title: Connect mechanism to state
+        caption: A working model links CTD maturation and zygotic genome activation to the transition from basal- to productive-domain activity.
   nucleus:
     label: The nucleus as a system
     title: Two interwoven polymer networks shape information flow.
@@ -78,6 +104,32 @@ zh-CN:
     next: 下一个研究项目
     focus_label: 当前重点
     image_label: 实验视野
+  surveillance:
+    label: 转录监控 · 机制聚焦
+    status: 工作模型与进行中的研究
+    action: 查看机制模型
+    model_label: 模型
+    title: 动力学选择将广泛转录转化为有效生物输出。
+    intro: >-
+      我们区分两种转录状态：在广泛存在的基础态中，延伸复合体频繁脱落；持续延伸态则支持正确的新生 RNP 组装与有效转录延伸。转录监控将 RNA 聚合酶 II CTD 状态、EIF4A3 和 RNA 处理通路连接到这一动力学转换。
+    mechanism:
+      path: /images/research/transcriptional-surveillance/mechanism-model.png
+      alt: 工作模型比较基础转录结构域与有效转录结构域，并展示 CTD、EIF4A3 相关转录监控所介导的动力学选择
+      caption: 基础态与持续延伸态通过动力学选择、新生 RNP 组装和 RNA 聚合酶 II 命运相互连接。
+    evidence_label: 同一转换过程的三个观察层面
+    evidence:
+      - path: /images/research/transcriptional-surveillance/ctd-response-heatmap.png
+        alt: 急性 CTD 扰动后的短时间尺度转录响应热图
+        title: 扰动 CTD
+        caption: 急性 CTD 扰动后的短时间尺度转录响应，并按有效与基础转录结构域组织展示。
+      - path: /images/research/transcriptional-surveillance/zga-pol-ii-ser2p.png
+        alt: 在合子基因组激活前、次级激活和主要激活阶段的 EU-RNA 与 RNA 聚合酶 II Ser2P 成像
+        title: 观察监控体系的建立
+        caption: 合子基因组激活前、次级激活和主要激活阶段的 EU-RNA 与 Pol II Ser2P 成像。
+      - path: /images/research/transcriptional-surveillance/zga-activity-model.png
+        alt: 工作模型连接 CTD 成熟与合子基因组激活过程中基础态向有效转录态的转换
+        title: 连接机制与状态
+        caption: 工作模型将 CTD 成熟、合子基因组激活与基础结构域向有效转录结构域的转换相连接。
   nucleus:
     label: 作为系统的细胞核
     title: 两套相互交织的聚合物网络塑造生物信息流。
