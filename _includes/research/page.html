@@ -62,9 +62,18 @@
 
     <div class="research-programs__rail" data-research-rail tabindex="0">
       {% for program in programs %}
-        <article class="research-program motif-{{ program.motif }}" id="{{ program.anchor }}" data-research-card data-reveal>
-          <div class="research-program__visual{% unless program.image %} research-program__visual--generated{% endunless %}">
-            {% if program.image %}
+        <article class="research-program motif-{{ program.motif }}{% if program.gallery %} research-program--gallery{% endif %}" id="{{ program.anchor }}" data-research-card data-reveal>
+          <div class="research-program__visual{% if program.gallery %} research-program__visual--gallery{% elsif program.image == nil %} research-program__visual--generated{% endif %}">
+            {% if program.gallery %}
+              <div class="research-program__gallery">
+                {% for item in program.gallery %}
+                  <figure>
+                    <img src="{{ item.path | relative_url }}" alt="{{ item.alt | escape }}" loading="lazy" decoding="async">
+                    <figcaption><span>0{{ forloop.index }}</span>{{ item.label }}</figcaption>
+                  </figure>
+                {% endfor %}
+              </div>
+            {% elsif program.image %}
               <figure>
                 <img src="{{ program.image.path | relative_url }}" alt="{{ program.image.alt | escape }}" loading="lazy" decoding="async">
                 <figcaption>{{ program.image.caption }}</figcaption>

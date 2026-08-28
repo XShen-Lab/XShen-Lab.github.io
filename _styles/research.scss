@@ -191,6 +191,7 @@
   scroll-margin-inline: max(var(--gutter, 40px), calc((100vw - 1380px) / 2));
   scroll-snap-align: start;
 }
+.research-program--gallery { grid-template-columns: minmax(390px, 1fr) minmax(0, 1fr); }
 
 .research-program__visual { position: relative; min-height: 100%; overflow: hidden; background: #07110f; }
 .research-program__visual figure { position: absolute; inset: 0; display: grid; margin: 0; grid-template-rows: 1fr auto; }
@@ -199,6 +200,12 @@
 .research-program.motif-field .research-program__visual img { padding: clamp(20px, 3vw, 42px); background: #fff; object-fit: contain; }
 .research-program.motif-checkpoint .research-program__visual img { padding: clamp(18px, 2.5vw, 36px); background: #f8f7f2; object-fit: contain; }
 .research-program__visual figcaption { padding: 18px 22px; border-top: 1px solid rgb(255 255 255 / 15%); background: #0a1513; color: #aebfba; font-size: 0.75rem; line-height: 1.55; }
+.research-program__visual--gallery { padding: 3px; background: rgb(255 255 255 / 18%); }
+.research-program__gallery { display: grid; height: 100%; grid-template-rows: minmax(0, 1.2fr) minmax(0, 0.82fr) minmax(0, 0.9fr); gap: 3px; }
+.research-program__gallery figure { position: relative; inset: auto; min-width: 0; min-height: 0; overflow: hidden; grid-template-rows: minmax(0, 1fr) auto; background: #fff; }
+.research-program.motif-checkpoint .research-program__gallery img { min-height: 0; padding: clamp(8px, 1.2vw, 16px); background: #fff; object-fit: contain; }
+.research-program__gallery figcaption { display: flex; padding: 9px 13px; align-items: center; gap: 12px; border-top-color: rgb(255 255 255 / 20%); color: #d3ded9; font-family: var(--code); font-size: 0.63rem; letter-spacing: 0.08em; line-height: 1.4; text-transform: uppercase; }
+.research-program__gallery figcaption span { color: var(--research-mint); }
 .research-program__visual--generated { display: grid; min-height: 520px; padding: 36px; align-items: end; background:
   radial-gradient(circle at 65% 38%, rgb(53 230 191 / 15%), transparent 28%),
   linear-gradient(145deg, #07110f, #101a2a); }
@@ -325,9 +332,12 @@
   .research-programs__rail { padding-inline: 20px; grid-auto-columns: calc(100vw - 40px); scroll-padding-inline: 20px; }
   .research-program { grid-template-columns: 1fr; }
   .research-program__visual { min-height: 300px; }
+  .research-program__visual--gallery { min-height: 760px; }
   .research-program__visual--generated { min-height: 300px; }
   .research-program__visual figure { position: relative; min-height: 340px; }
   .research-program__visual figure img { min-height: 280px; }
+  .research-program__visual .research-program__gallery figure { min-height: 0; }
+  .research-program__visual .research-program__gallery figure img { min-height: 0; }
   .research-program__content { padding: 35px 24px 42px; }
   .research-program__content h3 { font-size: clamp(2.7rem, 13vw, 4rem); }
   .research-program__meta { margin-bottom: 30px; }
