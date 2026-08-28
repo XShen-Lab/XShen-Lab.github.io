@@ -5,109 +5,188 @@ nav:
   tooltip: Opportunities to join the XShen Lab
 ---
 
-<p class="right"><small><a href="{{ '/zh/join-us/' | relative_url }}">中文</a></small></p>
+<div class="join-page">
+  <header class="join-hero" data-reveal>
+    <div class="join-hero__meta">
+      <span>Opportunities / 2026</span>
+      <a href="{{ '/zh/join-us/' | relative_url }}">中文 <span aria-hidden="true">↗</span></a>
+    </div>
+    <h1>Join Us</h1>
+    <p>Work across experiment, computation, and theory to uncover how biological information becomes cell fate.</p>
+  </header>
 
-# Join Us
+  <article class="join-feature" data-reveal style="--reveal-order: 1">
+    <a class="join-feature__image" href="{{ '/blog/simple-rules-of-life-rotation/' | relative_url }}" aria-label="Read the rotation invitation">
+      <img src="{{ '/images/blog/simple-rules-of-life-rotation/rotation-invitation.jpg' | relative_url }}" alt="A Dr. Seuss character beside the quote: Everything stinks until it’s finished." loading="eager">
+      <span aria-hidden="true"></span>
+    </a>
+    <div class="join-feature__copy">
+      <div class="join-entry-meta">
+        <span class="join-pin"><i aria-hidden="true"></i> Pinned</span>
+        <time datetime="2026-08">2026—08</time>
+        <span>Rotation invitation</span>
+      </div>
+      <h2><a href="{{ '/blog/simple-rules-of-life-rotation/' | relative_url }}">In Search of Life’s Simple Rules</a></h2>
+      <p>For students willing to cross disciplinary boundaries, bring quantitative thinking into the life sciences, and search for principles beneath biological complexity.</p>
+      <div class="join-feature__footer">
+        <p><span>Written by</span><strong>Xiaohua Shen</strong></p>
+        <a href="{{ '/blog/simple-rules-of-life-rotation/' | relative_url }}">Read invitation <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </article>
 
-The XShen Lab welcomes motivated students and researchers interested in nuclear organization, genome regulation, transcription, noncoding RNA, single-cell genomics, and cell fate.
+  <article class="join-posting" id="recruitment-2026-06">
+    <header class="join-posting__header" data-reveal style="--reveal-order: 2">
+      <div class="join-entry-meta">
+        <time datetime="2026-06">2026—06</time>
+        <span>Recruitment</span>
+        <span class="join-status">Open</span>
+      </div>
+      <h2>Research Technician &amp;<br>Undergraduate Research Intern</h2>
+      <p>We welcome applicants from experimental biology, bioinformatics, mathematics, physics, computer science, statistics, and related fields.</p>
+    </header>
 
-Our research investigates the physics of nuclear structure and function, genome organization, transcription, ncRNA, and cell fate, using molecular and cellular biology, single-cell genomics, imaging, biochemical approaches, computational analysis, and theoretical modeling.
+    <div class="join-posting__body">
+      {% capture overview %}
+## Laboratory Overview
 
-{% include section.html %}
+The Xiaohua Shen Laboratory is based in the School of Basic Medicine at Tsinghua University. Our long-term research focuses on noncoding-RNA-mediated transcriptional and chromatin regulation in cell-fate determination, with particular interest in the functions and mechanisms of noncoding RNA, RNA-binding proteins, and chromatin regulators in stem-cell fate transitions, development, disease, and aging.
 
-## Graduate Students
+Current research directions include, but are not limited to:
 
-We welcome graduate students with interests in molecular cell biology, genomics, epigenetics, RNA biology, single-cell technologies, computational biology, or quantitative biology.
+1. **Noncoding RNA and chromatin regulation:** Define how noncoding RNA, RNA-binding proteins, and chromatin regulators control cell-fate decisions.
+2. **Aging and regeneration:** Explore cellular senescence, tissue regeneration, stem-cell maintenance, and reprogramming.
+3. **Immune regulation and disease mechanisms:** Investigate the roles of noncoding RNA and noncanonical translation in immune regulation and disease.
+4. **Multi-omics and bioinformatics:** Integrate transcriptomic, epigenomic, proteomic, and single-cell datasets for mechanistic analysis and model building.
+5. **Mathematical and physical modeling:** We welcome students with backgrounds in mathematics, physics, computer science, and related disciplines to develop models of living systems, analyze complex data, and create theoretical methods.
 
-Potential research directions include:
+The laboratory provides comprehensive research platforms and academic support. Through Tsinghua’s Center for Life Sciences, Beijing Advanced Innovation Center for Structural Biology, and related platforms, lab members have access to a strong research environment and opportunities for scientific growth. More information is available on the [XShen Lab website](https://www.xshenlab.com/).
+      {% endcapture %}
+      <section class="join-posting__section join-posting__section--overview" data-reveal style="--reveal-order: 3">
+        {{ overview | markdownify }}
+      </section>
 
-- Nuclear RNA and noncoding RNA regulation
-- Genome organization and chromatin architecture
-- Transcriptional regulation and phase separation
-- Single-cell nascent transcription
-- Cell fate determination and cellular identity
+      {% capture technician %}
+### Responsibilities
 
-Students with either experimental or computational backgrounds are encouraged to contact us.
+1. Support the team’s research projects and participate in experimental design, optimization, and execution.
+2. Independently perform routine molecular biology, biochemistry, and cell-culture experiments while maintaining standardized workflows and reliable data.
+3. Contribute, as needed, to RNA experiments, sequencing-library preparation, protein assays, and cellular functional studies.
+4. Organize, document, archive, and report preliminary experimental data.
+5. Depending on background and interests, participate in projects involving aging and regeneration, immunology, bioinformatics, or physical modeling.
 
-{% include section.html %}
+### Qualifications
 
-## Postdoctoral Fellows
+**Education and background**
 
-We welcome postdoctoral researchers with strong training in one or more of the following areas:
+- Bachelor’s degree or above in biology, basic medicine, bioinformatics, or a related field.
+- Applicants from mathematics, physics, computer science, or statistics with a strong interest in life-science research are also welcome.
+- For applicants with at least one year of research-laboratory experience, degree requirements may be considered flexibly.
 
-- Molecular and cellular biology
-- Stem cell biology and developmental biology
-- RNA biology and transcription regulation
-- Chromatin biology and nuclear organization
-- Single-cell genomics and multi-omics
-- Imaging, biophysics, or theoretical modeling
-- Computational genomics and bioinformatics
+**Preferred experimental or analytical experience**
 
-Postdoctoral candidates are encouraged to propose independent research questions that align with the lab's broader interest in genome information flow and nuclear function.
+- PCR, qPCR, Western blotting, and cell culture.
+- RNA experiments or next-generation sequencing library preparation.
+- Mammalian or primary cell culture, flow cytometry, or immunofluorescence.
+- Biochemical assays, protein purification, or RNA–protein interaction studies.
+- Model-organism work, particularly mouse experiments.
+- Transcriptomic, single-cell, epigenomic, or mass-spectrometry data analysis.
 
-{% include section.html %}
+**Priority areas**
 
-## Research Assistants
+- Aging, regeneration, stem cells, or cellular reprogramming.
+- Immunology, inflammation, or immune-cell function.
+- RNA biology or chromatin regulation.
+- Bioinformatics, multi-omics, or single-cell data analysis.
+- Mathematical, physical, statistical, or computer-science training with modeling, algorithm-development, or data-analysis skills.
+- Availability to start soon and commit to stable, long-term work, normally for at least one year.
 
-We welcome research assistants interested in supporting experimental, computational, or interdisciplinary projects in the lab.
+**Personal qualities**
 
-Relevant experience may include:
+- Genuine enthusiasm for research and strong learning and hands-on abilities.
+- Careful, responsible, dependable, and persistent work habits.
+- Good teamwork, communication, and execution.
+- Willingness to advance projects collaboratively and continue learning in an interdisciplinary environment.
 
-- Molecular cloning and cell culture
-- Sequencing library preparation
-- Imaging and microscopy
-- Genomic data analysis
-- Pipeline development and data management
-- Lab organization and project coordination
+### Compensation and Development
 
-{% include section.html %}
+1. Employment follows Tsinghua University’s contract-staff policies, including statutory social insurance, housing fund, and university contract-staff benefits.
+2. Competitive compensation will be determined according to education, experience, technical skills, and fit with the position.
+3. Lab members may participate in academic exchanges, technical training, lab meetings, and collaborative research.
+4. Outstanding team members may receive long-term development support, including opportunities to contribute to projects and publications and recommendations for further study.
+      {% endcapture %}
+      <section class="join-role" data-reveal style="--reveal-order: 4">
+        <div class="join-role__label"><span>Position 01</span><strong>Research Technician</strong></div>
+        <div class="join-role__content">{{ technician | markdownify }}</div>
+      </section>
 
-## Undergraduate Students
+      {% capture intern %}
+### Who Should Apply
 
-Undergraduate students interested in research training are welcome to contact the lab.
+Undergraduate students from Tsinghua University and other institutions are welcome to apply for research internships. The program is especially suitable for students who:
 
-Students may participate in projects related to molecular biology, genomics, RNA biology, single-cell analysis, computational biology, or quantitative modeling, depending on their interests and background.
+1. Have a background in mathematics, physics, computer science, statistics, biology, medicine, or a related field.
+2. Want to experience an active research environment and gain experimental or data-analysis experience.
+3. Intend to pursue graduate or doctoral training or a future career in life-science research.
 
-{% include section.html %}
+### Internship Directions
 
-## Computational and Quantitative Biology
+**Bioinformatics**
 
-We are particularly interested in students and researchers who can bridge biology and computation.
+- Transcriptomic, single-cell, proteomic, and related data analysis.
+- Training in foundational R or Python analysis workflows.
+- Data visualization, literature organization, and public-database mining.
 
-Relevant backgrounds include:
+**Mathematical and physical modeling**
 
-- Bioinformatics
-- Computational genomics
-- Statistics and data science
-- Machine learning
-- Mathematical modeling
-- Physics or quantitative biology
-- Software and pipeline development
+- Pattern recognition, network analysis, and model construction using multi-omics data.
+- Quantitative exploration of living systems through integration with experimental data.
 
-{% include section.html %}
+### Requirements
 
+1. Genuine interest in research and willingness to learn and follow laboratory practices.
+2. Long-term, consistent participation is preferred; a continuous commitment of at least one year is generally recommended.
+3. Prior biological experimentation or data-analysis experience is preferred but not required.
+
+### Training and Support
+
+1. The internship focuses on research training and skill development. The laboratory provides scientific guidance, experimental training, and opportunities for academic exchange.
+2. Depending on the project, time commitment, and laboratory policies, appropriate support or a stipend may be discussed.
+3. Students who participate consistently and perform well may receive further support with research training, graduate-school applications, and recommendation letters.
+      {% endcapture %}
+      <section class="join-role" data-reveal style="--reveal-order: 5">
+        <div class="join-role__label"><span>Position 02</span><strong>Undergraduate Research Intern</strong></div>
+        <div class="join-role__content">{{ intern | markdownify }}</div>
+      </section>
+
+      {% capture application %}
 ## How to Apply
 
-Interested applicants should email Prof. Xiaohua Shen at [xshen@tsinghua.edu.cn](mailto:xshen@tsinghua.edu.cn).
+Please send the materials below to [xshen@tsinghua.edu.cn](mailto:xshen@tsinghua.edu.cn), according to the position for which you are applying.
 
-Please include:
+### Research Technician Applicants
 
-- A brief statement of research interests
-- Curriculum vitae
-- Academic transcript, if applicable
-- A short description of previous research experience
-- Representative publications, preprints, thesis work, code, or project materials, if available
-- Contact information for references, if applicable
+1. Curriculum vitae, including education, employment or research experience, technical skills, and contact information.
+2. Relevant supporting materials, such as degree certificates, technical certificates, publications, experimental reports, or other evidence of research accomplishments, if available.
+3. Please indicate your earliest available start date in the CV.
 
-Potential applicants are encouraged to briefly explain why they are interested in the XShen Lab and how their background connects to the lab's research directions.
+**Email subject:** `Research Technician Application_Name`
 
-{% include section.html %}
+### Undergraduate Research Internship Applicants
 
-## Contact
+1. Curriculum vitae, including university, department, year, major, and contact information.
+2. A brief description of your availability, such as days per week in the laboratory and expected internship duration.
+3. Course projects, research training, programming experience, experimental work, or modeling experience may be included if available.
 
-**XShen Lab**  
-School of Basic Medicine, Tsinghua University  
-Zheng Yutong Medical Building, Room D108<br>
-Beijing 100084, China  
+**Email subject:** `Undergraduate Internship_Name_University/Major`
 
-Email: [xshen@tsinghua.edu.cn](mailto:xshen@tsinghua.edu.cn)
+Applicants who pass the initial review will be contacted by phone or email to arrange an interview or discussion. Applicants not selected for interview will not receive a separate notice. Please prepare relevant supporting materials for the interview.
+
+The Xiaohua Shen Laboratory welcomes applicants who are curious, diligent, and genuinely excited about research. Whether your strengths are in molecular and cellular experiments, immunology, bioinformatics, or mathematical and physical modeling, we look forward to exploring the frontiers of **noncoding RNA, cell-fate regulation, aging and regeneration, immune regulation, and interdisciplinary quantitative life science** with you.
+      {% endcapture %}
+      <section class="join-posting__section join-posting__section--apply" data-reveal style="--reveal-order: 6">
+        {{ application | markdownify }}
+      </section>
+    </div>
+  </article>
+</div>
