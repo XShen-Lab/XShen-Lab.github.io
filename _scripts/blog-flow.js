@@ -1,16 +1,20 @@
-/* Accessible horizontal flow for the bilingual Blog index. */
+/* Manual, accessible story galleries for Blog and the homepage. */
 window.addEventListener("DOMContentLoaded", () => {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   document.querySelectorAll("[data-blog-flow]").forEach((flow) => {
     const track = flow.querySelector("[data-blog-flow-track]");
-    const slides = [...track.querySelectorAll(".blog-card")];
+    const allSlides = track ? [...track.querySelectorAll(".blog-card")] : [];
+    const filters = [...flow.querySelectorAll("[data-blog-filter]")];
+    const empty = flow.querySelector("[data-blog-filter-empty]");
     const previous = flow.querySelector("[data-blog-flow-previous]");
     const next = flow.querySelector("[data-blog-flow-next]");
     const progress = flow.querySelector("[data-blog-flow-progress]");
     const status = flow.querySelector("[data-blog-flow-status]");
-    if (!track || slides.length === 0) return;
+    if (!track || allSlides.length === 0 || !previous || !next || !progress || !status) return;
+    flow.classList.add("is-ready");
 
+    let visibleSlides = [...allSlides];
     let activeIndex = 0;
     let frame = 0;
     let pointerId = null;
@@ -20,21 +24,30 @@ window.addEventListener("DOMContentLoaded", () => {
     let suppressClick = false;
 
     const format = (value) => String(value).padStart(2, "0");
-    const slideLeft = (index) => slides[index].offsetLeft - track.offsetLeft;
+    const slideLeft = (index) => visibleSlides[index].offsetLeft - track.offsetLeft;
 
-    const nearestSlideIndex = () => slides.reduce((closest, slide, index) => {
-      const currentDistance = Math.abs(track.scrollLeft - slideLeft(index));
-      const closestDistance = Math.abs(track.scrollLeft - slideLeft(closest));
-      return currentDistance < closestDistance ? index : closest;
-    }, 0);
+    const nearestSlideIndex = () => {
+      if (visibleSlides.length === 0) return 0;
+      return visibleSlides.reduce((closest, slide, index) => {
+        const currentDistance = Math.abs(track.scrollLeft - slideLeft(index));
+        const closestDistance = Math.abs(track.scrollLeft - slideLeft(closest));
+        return currentDistance < closestDistance ? index : closest;
+      }, 0);
+    };
 
     const render = () => {
       activeIndex = nearestSlideIndex();
-      status.textContent = `${format(activeIndex + 1)} / ${format(slides.length)}`;
-      progress.style.transform = `scaleX(${(activeIndex + 1) / slides.length})`;
-      previous.disabled = activeIndex === 0;
-      next.disabled = activeIndex === slides.length - 1;
-      slides.forEach((slide, index) => slide.setAttribute("aria-current", String(index === activeIndex)));
+      const total = visibleSlides.length;
+      status.textContent = total ? `${format(activeIndex + 1)} / ${format(total)}` : "00 / 00";
+      progress.style.transform = `scaleX(${total ? (activeIndex + 1) / total : 0})`;
+      previous.disabled = total < 2 || activeIndex === 0;
+      next.disabled = total < 2 || activeIndex === total - 1;
+      flow.classList.toggle("has-single-slide", total < 2);
+      allSlides.forEach((slide) => slide.removeAttribute("aria-current"));
+      visibleSlides.forEach((slide, index) => {
+        slide.setAttribute("aria-current", String(index === activeIndex));
+        slide.setAttribute("aria-label", `${format(index + 1)} / ${format(total)}`);
+      });
       frame = 0;
     };
 
@@ -44,12 +57,34 @@ window.addEventListener("DOMContentLoaded", () => {
     };
 
     const goTo = (index) => {
-      const destination = Math.max(0, Math.min(slides.length - 1, index));
+      if (visibleSlides.length === 0) return;
+      const destination = Math.max(0, Math.min(visibleSlides.length - 1, index));
       track.scrollTo({
         left: slideLeft(destination),
         behavior: reducedMotion.matches ? "auto" : "smooth",
       });
     };
+
+    const applyFilter = (filter, updateAddress = false) => {
+      allSlides.forEach((slide) => {
+        slide.hidden = filter !== "all" && slide.dataset.blogCategory !== filter;
+      });
+      visibleSlides = allSlides.filter((slide) => !slide.hidden);
+      filters.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.blogFilter === filter)));
+      if (empty) empty.hidden = visibleSlides.length !== 0;
+      track.scrollLeft = 0;
+      activeIndex = 0;
+      render();
+
+      if (updateAddress && window.history.replaceState) {
+        const suffix = filter === "all" ? `${window.location.pathname}${window.location.search}` : `#category-${filter}`;
+        window.history.replaceState(null, "", suffix);
+      }
+    };
+
+    filters.forEach((button) => {
+      button.addEventListener("click", () => applyFilter(button.dataset.blogFilter, true));
+    });
 
     previous.addEventListener("click", () => goTo(activeIndex - 1));
     next.addEventListener("click", () => goTo(activeIndex + 1));
@@ -65,6 +100,14 @@ window.addEventListener("DOMContentLoaded", () => {
       if (event.key === "ArrowRight") {
         event.preventDefault();
         goTo(activeIndex + 1);
+      }
+      if (event.key === "Home") {
+        event.preventDefault();
+        goTo(0);
+      }
+      if (event.key === "End") {
+        event.preventDefault();
+        goTo(visibleSlides.length - 1);
       }
     });
 
@@ -111,6 +154,10 @@ window.addEventListener("DOMContentLoaded", () => {
       event.stopPropagation();
     }, true);
 
-    render();
+    const initialFilter = window.location.hash.startsWith("#category-")
+      ? window.location.hash.replace("#category-", "")
+      : "all";
+    const matchingFilter = filters.find((button) => button.dataset.blogFilter === initialFilter);
+    applyFilter(matchingFilter ? initialFilter : "all");
   });
 });
