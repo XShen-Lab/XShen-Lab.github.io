@@ -5,6 +5,7 @@ image: images/fallback.svg
 description: Postdoctoral Fellow
 description_zh: 博士后
 affiliation: School of Basic Medicine, Tsinghua University
+affiliation_zh: 清华大学基础医学院
 zh_url: /zh/people/yao-yuqi/
 links:
   email: yaoyq@tsinghua.edu.cn

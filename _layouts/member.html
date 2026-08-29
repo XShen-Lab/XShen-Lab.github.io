@@ -28,6 +28,7 @@ layout: default
   {% assign research_empty = "研究兴趣待更新。" %}
   {% assign education_empty = "教育经历待更新。" %}
   {% if member.description_zh %}{% assign member_role = member.description_zh %}{% endif %}
+  {% if member.affiliation_zh %}{% assign member_affiliation = member.affiliation_zh %}{% endif %}
   {% if member.role == "principal-investigator" %}
     {% assign member_role = "课题组负责人" %}
     {% assign member_affiliation = "清华大学基础医学院" %}

@@ -4,9 +4,15 @@ role: phd
 cohort: 2023
 image: images/members/yankaiyuan.jpg
 description: PhD Candidate, 2023
+description_zh: 2023级博士研究生
 affiliation: School of Basic Medicine, Tsinghua University
+affiliation_zh: 清华大学基础医学院
+zh_url: /zh/people/kaiyuan/
+card_interests_zh:
+  - RNA-RBP 网状体系的结构
+  - RNA 单分子动力学
 links:
-  email: yky23@mails.tsinghua.edu.cn
+  email: kaiyuanyan@whu.edu.cn
 ---
 
 Graduate Student in the XShen Lab.

@@ -6,6 +6,7 @@ image: images/fallback.svg
 description: PhD Candidate, 2025
 description_zh: 2025级博士研究生
 affiliation: School of Basic Medicine, Tsinghua University
+affiliation_zh: 清华大学基础医学院
 zh_url: /zh/people/liu-ying/
 links:
   email: ying-liu25@mails.tsinghua.edu.cn
