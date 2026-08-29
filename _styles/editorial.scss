@@ -1454,6 +1454,694 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
   text-wrap: pretty;
 }
 
+/* Unified site typography -------------------------------------------------
+   One restrained scale for every route: readable metadata, comfortable
+   scientific prose, and display headings that stay subordinate to content. */
+
+:root {
+  --type-label: clamp(0.8rem, calc(0.77rem + 0.08vw), 0.87rem);
+  --type-ui: clamp(0.88rem, calc(0.84rem + 0.1vw), 0.96rem);
+  --type-caption: clamp(0.9rem, calc(0.86rem + 0.12vw), 1rem);
+  --type-body: clamp(1.06rem, calc(1rem + 0.16vw), 1.17rem);
+  --type-lead: clamp(1.25rem, calc(1.12rem + 0.4vw), 1.55rem);
+}
+
+html {
+  font-size: clamp(17.5px, calc(16.9px + 0.16vw), 19px);
+}
+
+body {
+  line-height: 1.72;
+}
+
+.page-inner main :where(h1, h2, h3, h4, h5, h6) {
+  max-width: 100%;
+  font-weight: 500;
+  text-align: left;
+  text-transform: none;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
+.page-inner main h1 {
+  max-width: 22ch;
+  font-size: clamp(3rem, 5.2vw, 4.9rem);
+  line-height: 1.05;
+  letter-spacing: -0.028em;
+}
+
+.page-inner main h2 {
+  font-size: clamp(2.05rem, 3.4vw, 3.25rem);
+  line-height: 1.12;
+  letter-spacing: -0.018em;
+}
+
+.page-inner main h3 {
+  font-size: clamp(1.5rem, 2.2vw, 2.1rem);
+  line-height: 1.23;
+  letter-spacing: -0.01em;
+}
+
+.page-inner main h4 {
+  font-size: clamp(1.25rem, 1.65vw, 1.6rem);
+  line-height: 1.32;
+  letter-spacing: -0.006em;
+}
+
+.page-inner main :where(p, li, dd, address) {
+  font-size: var(--type-body);
+  line-height: 1.84;
+  text-align: left;
+}
+
+.rna-home :where(p, li, dd, address) {
+  font-size: var(--type-body);
+  line-height: 1.84;
+  text-align: left;
+}
+
+.rna-home :where(h1, h2, h3, h4, h5, h6) {
+  max-width: 100%;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
+.page-inner main :where(figcaption, .figure-caption) {
+  font-size: var(--type-caption) !important;
+  line-height: 1.65 !important;
+  letter-spacing: 0;
+  text-transform: none;
+  overflow-wrap: anywhere;
+}
+
+.page-inner main small {
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.page-inner main :where(button, input, textarea, select) {
+  font-size: var(--type-ui);
+  line-height: 1.5;
+}
+
+.page-inner main :where(th, td) {
+  font-size: clamp(0.98rem, 1.05vw, 1.08rem);
+  line-height: 1.65;
+}
+
+.page-inner main blockquote {
+  font-size: var(--type-lead);
+  line-height: 1.7;
+}
+
+.page-inner main :where(.tag, .post-info, .search-info) {
+  font-size: var(--type-ui);
+  line-height: 1.55;
+}
+
+.page-inner main .post-info > span {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+:where(
+  .blog-card-copy,
+  .blog-post-header,
+  .blog-post-body,
+  .join-feature__copy,
+  .join-posting__header,
+  .join-posting__section,
+  .join-role__content,
+  .research-hero__copy,
+  .research-program__content,
+  .research-surveillance__head,
+  .research-technology__head,
+  .people-pi-card__details,
+  .member-profile__content,
+  .member-profile__module,
+  .representative-program__header,
+  .representative-publication-card__content,
+  .publication-entry-content,
+  .publication-browser__results,
+  .contact-hero__copy,
+  .contact-card,
+  .rna-section-head,
+  .rna-method-copy,
+  .rna-publication-copy
+) {
+  min-width: 0;
+}
+
+/* Navigation and footer */
+
+.site-header .title {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.site-header .subtitle {
+  font-size: 0.72rem;
+  line-height: 1.35;
+  letter-spacing: 0.065em;
+}
+
+.site-nav > a {
+  font-size: var(--type-ui);
+  line-height: 1.35;
+}
+
+.site-footer-kicker,
+.site-footer address::before {
+  font-size: var(--type-label);
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+}
+
+.site-footer-brand strong {
+  font-size: clamp(2.35rem, 3.2vw, 3.3rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.site-footer-brand p,
+.site-footer address,
+.site-footer-nav a {
+  font-size: var(--type-ui);
+  line-height: 1.7;
+}
+
+.site-footer-base {
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+/* Shared labels, controls, and compact information */
+
+:where(
+  .rna-eyebrow,
+  .rna-section-label,
+  .rna-hero-index span,
+  .rna-stage-index,
+  .rna-stage-label,
+  .rna-research-number,
+  .rna-research-signal,
+  .rna-scale-index,
+  .rna-publication-meta,
+  .rna-person-role,
+  .rna-people-group-head > span,
+  .rna-join-grid article > span,
+  .research-kicker,
+  .research-programs__position,
+  .research-program__meta,
+  .research-program__verb,
+  .research-program__focus > p,
+  .research-surveillance__status,
+  .research-surveillance__evidence-head > span,
+  .research-surveillance__guide dt,
+  .research-technology__list span,
+  .people-kicker,
+  .people-card-kicker,
+  .member-profile__index,
+  .member-profile__identity p,
+  .people-pi-card__role,
+  .member-gallery__meta p,
+  .member-gallery .portrait-description,
+  .join-hero__meta,
+  .join-entry-meta,
+  .join-status,
+  .join-feature__footer p span,
+  .join-posting__section--overview > ol > li::before,
+  .contact-kicker,
+  .contact-card__index,
+  .contact-list dt,
+  .contact-profile-links a span,
+  .resource-gate-eyebrow,
+  .resource-gate-form label,
+  .resource-access-status,
+  .representative-program__index,
+  .representative-program__label,
+  .representative-program__papers,
+  .representative-publication-card__year,
+  .representative-publication-card__eyebrow,
+  .publication-browser__years > p,
+  .publication-category-rail > p,
+  .publication-browser__status,
+  .blog-card-meta,
+  .blog-post-kicker,
+  .blog-flow-status
+) {
+  font-size: var(--type-label) !important;
+  line-height: 1.55 !important;
+  letter-spacing: 0.075em;
+}
+
+:where(
+  .rna-button,
+  .rna-text-link,
+  .member-nav a,
+  .people-profile-link,
+  .member-gallery__controls button,
+  .member-profile__back,
+  .member-profile__links .button,
+  .publication-entry-actions a,
+  .publication-entry-tags span,
+  .publication-year-rail button,
+  .publication-category-rail button,
+  .publication-links,
+  .publication-links__menu a,
+  .publication-figure-fullsize,
+  .blog-card-footer,
+  .blog-back,
+  .blog-post-byline,
+  .blog-post-tags li,
+  .blog-category-nav button,
+  .research-programs__jump a,
+  .research-program__deep-link,
+  .contact-map__links a,
+  .resource-gate-field button,
+  .resource-access-status button
+) {
+  font-size: var(--type-ui) !important;
+  line-height: 1.45;
+}
+
+/* Home */
+
+.rna-hero h1,
+html[lang="zh-CN"] .rna-hero h1 {
+  max-width: 950px;
+  font-size: clamp(3.6rem, 6.4vw, 5.9rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.rna-hero-question {
+  max-width: 760px;
+  font-size: clamp(1.45rem, 2.05vw, 1.95rem);
+  line-height: 1.4 !important;
+}
+
+.rna-hero-intro {
+  font-size: var(--type-body);
+  line-height: 1.84;
+}
+
+.rna-section-head h2,
+.rna-flow h2,
+.rna-methods h2,
+.rna-join h2 {
+  font-size: clamp(2.5rem, 4vw, 4.05rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.rna-tension-grid h3,
+.rna-flow-stage h3,
+.rna-research-title,
+.rna-publication-copy h3 {
+  font-size: clamp(1.95rem, 2.9vw, 2.9rem);
+  line-height: 1.12;
+  letter-spacing: -0.018em;
+}
+
+.rna-tension-grid article > p,
+.rna-flow-stage > p,
+.rna-research-text,
+.rna-publication-copy > p,
+.rna-join-grid p {
+  font-size: var(--type-body);
+  line-height: 1.8;
+}
+
+.rna-research-question {
+  font-size: clamp(1.2rem, 1.5vw, 1.42rem);
+  line-height: 1.42;
+}
+
+.rna-research-flow {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+
+.rna-scale-list strong,
+.rna-join-grid h3,
+.rna-people-group h3 {
+  font-size: clamp(1.45rem, 2vw, 1.85rem);
+  line-height: 1.2;
+}
+
+.rna-scale-list small,
+.rna-publication-authors,
+.rna-publication-metric,
+.rna-pi-overlay > span:last-child,
+.rna-person-row strong,
+.rna-person-row small {
+  font-size: var(--type-ui);
+  line-height: 1.6;
+}
+
+.rna-pi-overlay strong {
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.08;
+}
+
+/* Blog */
+
+.page-inner .blog-index-hero h1 {
+  max-width: 15ch;
+  font-size: clamp(3.2rem, 5.4vw, 4.9rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.page-inner .blog-card h2,
+.rna-home .blog-card h2 {
+  max-width: 20ch;
+  font-size: clamp(1.95rem, 2.9vw, 2.75rem);
+  line-height: 1.14;
+  letter-spacing: -0.018em;
+}
+
+.page-inner .blog-card h2.blog-card-title-wide,
+.rna-home .blog-card h2.blog-card-title-wide {
+  max-width: 22ch;
+  font-size: clamp(1.85rem, 2.55vw, 2.45rem);
+  line-height: 1.17;
+}
+
+.page-inner .blog-card-copy > p,
+.rna-home .blog-card-copy > p {
+  font-size: var(--type-body);
+  line-height: 1.82;
+}
+
+.page-post .blog-post-header h1,
+html[lang="zh-CN"] .page-post .blog-post-header h1 {
+  max-width: 16ch;
+  font-size: clamp(3.2rem, 5.8vw, 5.25rem);
+  line-height: 1.04;
+  letter-spacing: -0.032em;
+}
+
+.page-post .blog-post-header h1.blog-post-title-wide,
+html[lang="zh-CN"] .page-post .blog-post-header h1.blog-post-title-wide {
+  max-width: 21ch;
+  font-size: clamp(2.75rem, 4.1vw, 3.9rem);
+  line-height: 1.1;
+  letter-spacing: -0.022em;
+}
+
+.page-post .blog-post-deck {
+  font-size: var(--type-lead);
+  line-height: 1.65;
+}
+
+.page-post .blog-post-body p,
+html[lang="zh-CN"] .page-post .blog-post-body p {
+  max-width: 72ch;
+  font-size: clamp(1.12rem, 1.3vw, 1.25rem);
+  line-height: 1.92;
+}
+
+.page-post .blog-post-body p:first-child::first-letter,
+html[lang="zh-CN"] .page-post .blog-post-body p:first-child::first-letter {
+  font-size: 3.35em;
+  line-height: 0.82;
+}
+
+.page-inner .blog-contribute h2,
+.page-inner .contribute-section-head h2 {
+  max-width: 18ch;
+  font-size: clamp(2.25rem, 3.4vw, 3.35rem);
+  line-height: 1.12;
+}
+
+.page-inner .contribute-hero h1 {
+  max-width: 17ch;
+  font-size: clamp(3.1rem, 5.2vw, 4.75rem);
+  line-height: 1.06;
+}
+
+/* Research */
+
+.research-hero h1,
+html[lang="zh-CN"] .research-hero h1 {
+  max-width: 1050px;
+  font-size: clamp(3.5rem, 6.2vw, 5.7rem);
+  line-height: 1.02;
+  letter-spacing: -0.032em;
+}
+
+.research-hero__question {
+  font-size: clamp(1.5rem, 2.3vw, 2.25rem);
+  line-height: 1.32;
+}
+
+.research-hero__intro,
+.research-overview__copy > p,
+.research-programs__head > div > p:last-child,
+.research-surveillance__head div:last-child > p,
+.research-nucleus__copy > p:not(.research-kicker),
+.research-technology__head > p:last-child,
+.research-future__grid div > p {
+  font-size: var(--type-body);
+  line-height: 1.84;
+}
+
+.research-overview h2,
+.research-programs__head h2,
+.research-surveillance__head h2,
+.research-nucleus h2,
+.research-technology h2,
+.research-future h2 {
+  font-size: clamp(2.5rem, 4vw, 4.05rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.research-program__content h3 {
+  font-size: clamp(2.15rem, 3.35vw, 3.35rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.research-program__question {
+  font-size: clamp(1.3rem, 1.65vw, 1.58rem) !important;
+  line-height: 1.46 !important;
+}
+
+.research-program__content > p,
+.research-technology__list p,
+.research-surveillance__guide dd,
+.research-surveillance__evidence figcaption p {
+  font-size: var(--type-body);
+  line-height: 1.82;
+}
+
+.research-program__metric strong {
+  font-size: clamp(2.15rem, 3vw, 3.15rem);
+  line-height: 1.08;
+}
+
+.research-program__metric span,
+.research-program__focus li {
+  font-size: var(--type-ui);
+  line-height: 1.58;
+}
+
+.research-technology__list strong {
+  font-size: clamp(1.4rem, 1.8vw, 1.72rem);
+  line-height: 1.25;
+}
+
+/* People */
+
+.page-inner main .people-deck {
+  font-size: var(--type-lead);
+  line-height: 1.72;
+}
+
+.people-pi-card__identity strong {
+  font-size: clamp(2.05rem, 2.9vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.people-pi-card__identity > span:last-child,
+.member-gallery .portrait-affiliation,
+.member-gallery .portrait-description,
+.member-gallery .portrait-interests,
+.page-inner main .people-pi-card__block li,
+.page-inner main .member-profile__module li,
+.page-inner main .member-profile__longform p,
+.page-inner main .member-profile__longform li {
+  font-size: var(--type-body);
+  line-height: 1.78;
+}
+
+.page-inner main .people-pi-card__block h3 {
+  font-size: clamp(1.55rem, 1.9vw, 1.9rem);
+  line-height: 1.2;
+}
+
+.member-gallery .portrait-name {
+  font-size: clamp(1.3rem, 1.65vw, 1.55rem);
+  line-height: 1.2;
+}
+
+.member-gallery .portrait-description {
+  font-size: var(--type-label);
+  line-height: 1.5;
+}
+
+.page-inner main .member-profile__module h2 {
+  font-size: clamp(2.15rem, 3.2vw, 3.2rem);
+  line-height: 1.12;
+}
+
+.page-inner main .member-profile__longform h2 {
+  font-size: clamp(1.95rem, 2.8vw, 2.75rem);
+  line-height: 1.14;
+}
+
+/* Publications */
+
+.page-inner main .representative-program__header h3 {
+  font-size: clamp(1.85rem, 2.7vw, 2.65rem);
+  line-height: 1.16;
+}
+
+.page-inner main .publication-entry-content h3,
+.representative-publication-grid .publication-entry-content h3 {
+  font-size: clamp(1.45rem, 1.9vw, 1.85rem);
+  line-height: 1.32;
+}
+
+.page-inner main .publication-entry-content > p,
+.representative-publication-grid .publication-entry-content > p,
+.publication-entry-authors,
+.publication-entry-metric,
+.representative-publication-card__venue,
+.representative-publication-card__citation p {
+  font-size: clamp(1rem, 1.08vw, 1.08rem);
+  line-height: 1.72;
+}
+
+.page-inner main .representative-publication-card__content h4,
+.representative-publication-card__visual strong {
+  font-size: clamp(1.35rem, 1.8vw, 1.75rem);
+  line-height: 1.23;
+}
+
+.page-inner main .publication-browser .full-publications > li {
+  padding-block: 21px;
+  font-size: clamp(1rem, 1.08vw, 1.1rem);
+  line-height: 1.76;
+}
+
+.publication-browser .full-publications > li::before,
+.publication-year-rail small,
+.publication-category-rail small {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.publication-category-rail button {
+  font-size: var(--type-ui) !important;
+  line-height: 1.5;
+}
+
+.representative-publication-card__citation summary {
+  font-size: var(--type-ui);
+  line-height: 1.5;
+}
+
+/* Join, contact, and resources */
+
+.page-inner main .join-hero h1 {
+  font-size: clamp(3.2rem, 5.5vw, 5.15rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+}
+
+.page-inner main .join-hero > p,
+.page-inner main .contact-hero__copy > p:last-child,
+.page-inner .resource-gate-intro {
+  font-size: var(--type-lead);
+  line-height: 1.68;
+}
+
+.page-inner main .join-feature h2,
+.page-inner main .join-posting__header h2,
+.page-inner main .join-posting__section h2 {
+  max-width: 20ch;
+  font-size: clamp(2.3rem, 3.65vw, 3.65rem);
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+}
+
+.join-role__label strong {
+  font-size: clamp(1.7rem, 2vw, 2.25rem);
+  line-height: 1.18;
+  letter-spacing: -0.012em;
+}
+
+.page-inner main .join-role__content h3,
+.page-inner main .join-posting__section--apply h3 {
+  font-size: clamp(1.5rem, 1.85vw, 1.9rem);
+  line-height: 1.24;
+}
+
+.page-inner main .join-feature__copy > p,
+.page-inner main .join-role__content p,
+.page-inner main .join-role__content li,
+.page-inner main .join-posting__section p,
+.page-inner main .join-posting__section li {
+  font-size: var(--type-body);
+  line-height: 1.84;
+}
+
+.page-inner main .contact-hero h1,
+html[lang="zh-CN"] .page-inner main .contact-hero h1 {
+  font-size: clamp(3.2rem, 5.4vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.page-inner main .contact-card h2 {
+  font-size: clamp(2.2rem, 3.3vw, 3.25rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.contact-card address,
+.contact-list dd,
+.contact-map__links a {
+  font-size: var(--type-body);
+  line-height: 1.76;
+}
+
+.contact-map__caption span,
+.contact-map__caption small {
+  font-size: var(--type-label);
+  line-height: 1.55;
+  letter-spacing: 0.06em;
+}
+
+.page-inner .resource-gate-panel h1 {
+  font-size: clamp(3rem, 5vw, 4.75rem);
+  line-height: 1.06;
+  letter-spacing: -0.028em;
+}
+
+.resource-gate-error {
+  font-size: var(--type-ui) !important;
+  line-height: 1.55;
+}
+
 @media (max-width: 900px) {
   .blog-flow-home .blog-card,
   .blog-card {
@@ -1490,6 +2178,26 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
 }
 
 @media (max-width: 700px) {
+  .page-inner main h1 {
+    font-size: clamp(2.7rem, 11vw, 4rem);
+    line-height: 1.08;
+  }
+
+  .page-inner main h2 {
+    font-size: clamp(2rem, 8.5vw, 3rem);
+    line-height: 1.14;
+  }
+
+  .page-inner main h3 {
+    font-size: clamp(1.5rem, 6.5vw, 2rem);
+    line-height: 1.24;
+  }
+
+  .site-nav > a {
+    font-size: 1.12rem;
+    line-height: 1.45;
+  }
+
   .blog-flow.is-ready .blog-category-nav {
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -1522,8 +2230,8 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
 
   .rna-hero h1,
   html[lang="zh-CN"] .rna-hero h1 {
-    font-size: clamp(3.3rem, 15vw, 5rem);
-    line-height: 0.98;
+    font-size: clamp(3rem, 13vw, 4.3rem);
+    line-height: 1.04;
   }
 
   .rna-section-head h2,
@@ -1536,28 +2244,31 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
   .research-nucleus h2,
   .research-technology h2,
   .research-future h2 {
-    font-size: clamp(2.45rem, 11vw, 3.7rem);
-    line-height: 1.05;
+    font-size: clamp(2.3rem, 9.5vw, 3.25rem);
+    line-height: 1.1;
   }
 
   .page-inner main .join-hero h1,
   .page-inner .blog-index-hero h1,
-  .page-inner .contribute-hero h1 {
-    font-size: clamp(3.2rem, 15vw, 4.8rem);
-    line-height: 1;
+  .page-inner .contribute-hero h1,
+  .page-inner main .contact-hero h1,
+  html[lang="zh-CN"] .page-inner main .contact-hero h1,
+  .page-inner .resource-gate-panel h1 {
+    font-size: clamp(2.9rem, 12.5vw, 4.1rem);
+    line-height: 1.06;
   }
 
   .page-post .blog-post-header h1,
   html[lang="zh-CN"] .page-post .blog-post-header h1,
   .page-post .blog-post-header h1.blog-post-title-wide,
   html[lang="zh-CN"] .page-post .blog-post-header h1.blog-post-title-wide {
-    font-size: clamp(2.8rem, 12vw, 4.25rem);
-    line-height: 1.06;
+    font-size: clamp(2.55rem, 10.5vw, 3.65rem);
+    line-height: 1.1;
   }
 
   .join-role__label strong {
-    font-size: clamp(2rem, 9vw, 2.8rem);
-    line-height: 1.12;
+    font-size: clamp(1.7rem, 7.5vw, 2.3rem);
+    line-height: 1.18;
   }
 }
 
