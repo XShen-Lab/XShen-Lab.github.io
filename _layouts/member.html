@@ -72,8 +72,11 @@ layout: default
 
     <div class="member-profile__name">
       <h1>
-        <span>{{ member_name_en }}</span>
-        {% if member_name_zh != "" %}<span lang="zh-CN">{{ member_name_zh }}</span>{% endif %}
+        {% if page.lang == "zh-CN" and member_name_zh != "" %}
+          <span lang="zh-CN">{{ member_name_zh }}</span>
+        {% else %}
+          <span>{{ member_name_en }}</span>
+        {% endif %}
       </h1>
     </div>
     <div class="member-profile__identity member-profile__identity--minimal{% if member.links %} member-profile__identity--with-links{% endif %}">
