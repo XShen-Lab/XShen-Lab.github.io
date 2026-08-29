@@ -13,4 +13,5 @@ blog_flow: true
   </header>
 
   {% include blog/list.html lang="zh-CN" %}
+  {% include blog/contribute.html lang="zh-CN" %}
 </div>

@@ -1,11 +1,13 @@
 {% assign news_lang = page.lang | default: "en" %}
 {% assign language_posts = site.posts | where: "lang", news_lang %}
-{% assign pinned_posts = language_posts | where: "pinned", true | sort: "date" | reverse %}
-{% assign regular_posts = language_posts | where_exp: "post", "post.pinned != true" | sort: "date" | reverse %}
-{% assign ordered_posts = pinned_posts | concat: regular_posts %}
+{% assign featured_posts = language_posts | where: "home_featured", true | where_exp: "post", "post.image" | sort: "home_order" %}
+{% if featured_posts.size == 0 %}
+  {% assign featured_posts = language_posts | where_exp: "post", "post.image" | sort: "date" | reverse %}
+{% endif %}
 
-<div class="rna-news-grid">
-  {% for post in ordered_posts limit: 3 %}
-    {% include blog/card.html post=post lang=news_lang variant="home" %}
-  {% endfor %}
+<div class="blog-flow blog-flow-home" data-blog-flow>
+  <div class="blog-list" data-blog-flow-track tabindex="0" aria-label="{% if news_lang == 'zh-CN' %}首页精选新闻展览{% else %}Featured news gallery{% endif %}">
+    {% for post in featured_posts limit: 5 %}{% include blog/card.html post=post lang=news_lang variant="home" index=forloop.index total=featured_posts.size %}{% endfor %}
+  </div>
+  {% include blog/controls.html lang=news_lang total=featured_posts.size %}
 </div>

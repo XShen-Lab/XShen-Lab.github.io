@@ -16,4 +16,5 @@ nav:
   </header>
 
   {% include blog/list.html lang="en" %}
+  {% include blog/contribute.html lang="en" %}
 </div>

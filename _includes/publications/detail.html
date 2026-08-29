@@ -16,7 +16,7 @@
 {% endif %}
 
 {% if localized.summary %}
-  <p>{{ localized.summary }}{% for section in localized.sections %} {{ section }}{% endfor %}</p>
+  <p class="publication-detail__summary">{{ localized.summary }}{% for section in localized.sections %} {{ section }}{% endfor %}</p>
 {% endif %}
 
 {% if localized.metric %}

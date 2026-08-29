@@ -1,15 +1,20 @@
 {% assign post = include.post %}
 {% assign card_lang = include.lang | default: post.lang | default: "en" %}
-<article class="blog-card{% if include.variant %} blog-card-{{ include.variant }}{% endif %}" data-reveal{% if include.index %} role="group" aria-roledescription="slide" aria-label="{% if card_lang == 'zh-CN' %}第 {{ include.index }} 篇，共 {{ include.total }} 篇{% else %}Article {{ include.index }} of {{ include.total }}{% endif %}"{% endif %}>
+{% assign category_id = post.category_id | default: "perspectives" %}
+{% assign category = site.data.blog_categories | where: "id", category_id | first %}
+{% assign category_label = category.labels[card_lang] | default: category.labels.en %}
+{% if card_lang == "zh-CN" %}{% assign category_url = "/zh/blog/" %}{% else %}{% assign category_url = "/blog/" %}{% endif %}
+<article class="blog-card{% if include.variant %} blog-card-{{ include.variant }}{% endif %}" data-blog-category="{{ category_id }}" data-reveal{% if include.index %} role="group" aria-roledescription="slide" aria-label="{% if card_lang == 'zh-CN' %}第 {{ include.index }} 篇，共 {{ include.total }} 篇{% else %}Article {{ include.index }} of {{ include.total }}{% endif %}"{% endif %}>
   {% if post.image %}
-    <a class="blog-card-image{% if post.image_fit == 'contain' %} is-contain{% endif %}" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    <a class="blog-card-image{% if post.image_fit == 'contain' %} is-contain{% endif %}" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"{% if post.image_position %} style="--blog-image-position: {{ post.image_position }}"{% endif %}>
       <img src="{{ post.image | relative_url }}" alt="" loading="lazy">
-      <span aria-hidden="true"></span>
+      <span class="blog-card-number" aria-hidden="true">{{ include.index | default: 1 | prepend: '0' | slice: -2, 2 }}</span>
     </a>
   {% endif %}
   <div class="blog-card-copy">
     <div class="blog-card-meta">
-      {% if post.pinned %}<span class="blog-pin"><span aria-hidden="true">◆</span> {% if card_lang == "zh-CN" %}置顶{% else %}Pinned{% endif %}</span>{% endif %}
+      {% if post.pinned and include.variant != "home" %}<span class="blog-pin"><span aria-hidden="true">◆</span> {% if card_lang == "zh-CN" %}置顶{% else %}Pinned{% endif %}</span>{% endif %}
+      {% if category_label %}<a class="blog-category-label" href="{{ category_url | relative_url }}#category-{{ category_id }}">{{ category_label }}</a>{% endif %}
       {% if post.eyebrow %}<span>{{ post.eyebrow }}</span>{% endif %}
     </div>
     <h2{% if post.title_layout == 'wide' %} class="blog-card-title-wide"{% endif %}><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
@@ -18,7 +23,7 @@
       <span>{{ post.author }}</span>
       <span aria-hidden="true">·</span>
       <time datetime="{{ post.date | date_to_xmlschema }}">{% if post.display_date %}{{ post.display_date }}{% else %}{{ post.date | date: "%B %Y" }}{% endif %}</time>
-      <a href="{{ post.url | relative_url }}" aria-label="{% if card_lang == 'zh-CN' %}阅读《{{ post.title }}》{% else %}Read {{ post.title }}{% endif %}">{% if card_lang == "zh-CN" %}阅读全文{% else %}Read essay{% endif %} <span aria-hidden="true">↗</span></a>
+      <a href="{{ post.url | relative_url }}" aria-label="{% if card_lang == 'zh-CN' %}阅读《{{ post.title }}》{% else %}Read {{ post.title }}{% endif %}">{% if card_lang == "zh-CN" %}阅读全文{% else %}Read story{% endif %} <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </article>

@@ -16,6 +16,12 @@
 {% for pair in site.data.language_pairs %}
   {% if pair.en_page == page.url or pair.zh_page == page.url %}{% assign language_pair = pair %}{% break %}{% endif %}
 {% endfor %}
+{% assign language_switch_href = nil %}
+{% if page.translation_url %}
+  {% assign language_switch_href = page.translation_url %}
+{% elsif language_pair %}
+  {% if chinese_page %}{% assign language_switch_href = language_pair.en_href %}{% else %}{% assign language_switch_href = language_pair.zh_href %}{% endif %}
+{% endif %}
 
 <header class="site-header" data-site-header{% if is_home %} data-transparent{% endif %} data-dark="true">
   <div class="site-progress" aria-hidden="true"><span data-site-progress></span></div>
@@ -43,8 +49,8 @@
           <a href="{{ nav_page.dir | relative_url | uri_escape }}" data-tooltip="{{ nav_page.nav.tooltip | xml_escape }}"{% if page.url == nav_page.url %} aria-current="page"{% endif %}{% if resource_nav_page %} class="resource-nav-link" data-resource-nav-link data-resource-label="{{ nav_page.title }}" aria-label="{{ nav_page.title }}, locked"{% endif %}>{{ nav_page.title }}{% if resource_nav_page %}<span class="resource-nav-state" aria-hidden="true"><span class="resource-locked-icon">🔒</span><span class="resource-unlocked-icon">🔓</span></span>{% endif %}</a>
         {% endfor %}
       {% endif %}
-      {% if language_pair %}
-        {% if chinese_page %}<a class="language-switch" href="{{ language_pair.en_href | relative_url }}" lang="en">EN</a>{% else %}<a class="language-switch" href="{{ language_pair.zh_href | relative_url }}" lang="zh-CN">中文</a>{% endif %}
+      {% if language_switch_href %}
+        {% if chinese_page %}<a class="language-switch" href="{{ language_switch_href | relative_url }}" lang="en">EN</a>{% else %}<a class="language-switch" href="{{ language_switch_href | relative_url }}" lang="zh-CN">中文</a>{% endif %}
       {% endif %}
     </nav>
   </div>

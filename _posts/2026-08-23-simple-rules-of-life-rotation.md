@@ -4,6 +4,8 @@ description: "To me, science is a serious game played by children."
 excerpt: "Life is like an elephant whose whole form we cannot see. We can often touch only a single molecule, pathway, or phenotype—but how do these parts connect?"
 author: Xiaohua
 author_id: xiaohua-shen
+story_id: 2026-simple-rules-of-life-rotation
+category_id: lab-news
 date: 2026-08-23 12:00:00 -0400
 display_date: August 2026
 lang: en
@@ -14,6 +16,8 @@ image_alt: "A Dr. Seuss character examines a plate beside the quote: Everything 
 image_fit: contain
 eyebrow: Rotation invitation
 pinned: true
+home_featured: true
+home_order: 10
 title_layout: wide
 tags:
   - Lab rotation

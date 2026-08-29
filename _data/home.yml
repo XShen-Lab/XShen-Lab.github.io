@@ -4,6 +4,11 @@ en:
   hero_subtitle: From Genome to Cell Fate
   hero_question: How does sparse and stochastic genome activity become stable biological information and cell fate?
   hero_intro: We study how information is continuously organized, processed, selected and stabilized across the genome, nucleus and cell.
+  hero_index:
+    - Genome
+    - Nucleus
+    - RNA
+    - Cell fate
   actions:
     - label: Research
       url: /research/
@@ -88,6 +93,11 @@ zh-CN:
   hero_subtitle: 从基因组到细胞命运
   hero_question: 稀疏且随机的基因组活动如何转化为稳定的生物信息与细胞命运？
   hero_intro: 我们研究信息如何在基因组、细胞核与细胞层面被持续组织、处理、选择并稳定化。
+  hero_index:
+    - 基因组
+    - 细胞核
+    - RNA
+    - 细胞命运
   actions:
     - label: 研究方向
       url: /zh/research/

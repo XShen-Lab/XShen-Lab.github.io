@@ -6,6 +6,10 @@
   {% assign publication_enrichment = publication_enrichment_matches | first %}
   {% assign publication_localized = publication_enrichment.localized[page.lang] | default: publication_enrichment.localized.en %}
 {% endif %}
+{% if page.category_id %}
+  {% assign meta_category = site.data.blog_categories | where: "id", page.category_id | first %}
+  {% assign meta_category_label = meta_category.labels[page.lang] | default: meta_category.labels.en %}
+{% endif %}
 {% if page.name and page.name != filename %}
   {% assign title = page.name %}
 {% elsif canonical_publication.title %}
@@ -100,6 +104,7 @@
   <meta property="article:published_time" content="{{ published }}">
   <meta property="article:modified_time" content="{{ updated }}">
   <meta name="revised" content="{{ updated }}">
+  {% if meta_category_label %}<meta property="article:section" content="{{ meta_category_label | xml_escape }}">{% endif %}
 {% else %}
   <meta property="og:type" content="website">
 {% endif %}
@@ -115,6 +120,7 @@
       "datePublished": "{{ published }}",
       "dateModified": "{{ updated }}",
       "image": "{{ share }}",
+      {% if meta_category_label %}"articleSection": "{{ meta_category_label | xml_escape }}",{% endif %}
     {% else %}
       "@type": "WebSite",
     {% endif %}

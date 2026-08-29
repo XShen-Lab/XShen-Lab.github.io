@@ -1,0 +1,39 @@
+- id: lab-news
+  labels:
+    en: Lab News
+    zh-CN: 实验室动态
+  descriptions:
+    en: People, visits, awards, recruitment, and milestones from the lab.
+    zh-CN: 记录成员、来访、获奖、招生与实验室阶段性动态。
+
+- id: publication-news
+  labels:
+    en: Publication News
+    zh-CN: 论文发表
+  descriptions:
+    en: New papers, datasets, protocols, and the stories behind them.
+    zh-CN: 新论文、数据与实验方案，以及研究背后的故事。
+
+- id: conferences
+  labels:
+    en: Conferences & Talks
+    zh-CN: 学术会议
+  descriptions:
+    en: Talks, posters, workshops, and scientific meetings attended or hosted by the lab.
+    zh-CN: 实验室成员参加或组织的报告、海报、研讨会与学术会议。
+
+- id: lab-life
+  labels:
+    en: Lab Life
+    zh-CN: 实验室生活
+  descriptions:
+    en: Retreats, outings, celebrations, and moments beyond the bench.
+    zh-CN: 团建、出游、庆祝以及实验台之外的日常。
+
+- id: perspectives
+  labels:
+    en: Perspectives
+    zh-CN: 科学随笔
+  descriptions:
+    en: Essays on science, mentoring, and research life.
+    zh-CN: 关于科学、培养与科研生活的思考。

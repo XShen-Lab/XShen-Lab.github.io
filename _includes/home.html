@@ -18,32 +18,9 @@
 
 <div class="rna-home" data-rna-home>
   <section class="rna-hero" aria-labelledby="rna-hero-title">
-    <div class="rna-hero-field" aria-hidden="true">
-      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="presentation">
-        <defs>
-          <linearGradient id="rna-gradient" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#35e6bf"/><stop offset="0.52" stop-color="#52a8ff"/><stop offset="1" stop-color="#e067b4"/>
-          </linearGradient>
-          <radialGradient id="state-gradient"><stop offset="0" stop-color="#35e6bf" stop-opacity=".75"/><stop offset="1" stop-color="#35e6bf" stop-opacity="0"/></radialGradient>
-        </defs>
-        <g class="chromatin-domains">
-          <path d="M-40,285 C110,110 220,340 390,210 S680,95 830,245 S1120,435 1640,100"/>
-          <path d="M-20,330 C140,160 245,370 410,260 S690,150 850,292 S1145,480 1650,152"/>
-        </g>
-        <path class="information-path" d="M-90,660 C145,630 235,390 465,420 S745,700 960,515 S1260,230 1680,315"/>
-        <path class="nascent-path" d="M240,535 C355,470 390,625 505,560 S660,500 738,602"/>
-        <g class="moving-signals">
-          <circle cx="365" cy="444" r="5"/><circle cx="640" cy="560" r="4"/><circle cx="880" cy="575" r="6"/><circle cx="1130" cy="393" r="4"/><circle cx="1390" cy="287" r="5"/>
-        </g>
-        <g class="stable-field">
-          <circle cx="1370" cy="560" r="190" fill="url(#state-gradient)"/>
-          <circle cx="1315" cy="535" r="5"/><circle cx="1375" cy="485" r="4"/><circle cx="1440" cy="550" r="5"/><circle cx="1365" cy="615" r="3"/><circle cx="1460" cy="640" r="4"/>
-        </g>
-      </svg>
-      <div class="rna-hero-annotations">
-        {% for program in programs %}<span style="--annotation-order: {{ forloop.index }}">0{{ forloop.index }} {{ program.operation }}</span>{% endfor %}
-      </div>
-    </div>
+    <aside class="rna-hero-index" aria-hidden="true">
+      {% for item in home.hero_index %}<span>{{ item }}</span>{% endfor %}
+    </aside>
 
     <div class="rna-hero-copy">
       <p class="rna-eyebrow" data-reveal>{{ home.eyebrow }}</p>
@@ -59,6 +36,17 @@
     </div>
     <div class="rna-hero-scroll" aria-hidden="true"><span></span>01—04</div>
   </section>
+
+  {% assign localized_posts = site.posts | where: "lang", page.lang %}
+  {% if localized_posts.size > 0 %}
+    <section class="rna-section rna-news" aria-labelledby="rna-news-title">
+      <div class="rna-section-head split" data-reveal>
+        <div><p class="rna-section-label">{{ home.news_label }}</p><h2 id="rna-news-title">{{ home.news_title }}</h2><p>{{ home.news_intro }}</p></div>
+        <a class="rna-text-link" href="{{ blog_url | relative_url }}">{{ home.labels.read_all_notes }} <span aria-hidden="true">↗</span></a>
+      </div>
+      {% include home/news.html %}
+    </section>
+  {% endif %}
 
   <section class="rna-tension rna-section" aria-labelledby="rna-tension-title">
     <div class="rna-section-head" data-reveal>
@@ -117,17 +105,6 @@
     <div class="rna-section-head split" data-reveal><div><p class="rna-section-label">{{ home.people_label }}</p><h2 id="rna-people-title">{{ home.people_title }}</h2><p>{{ home.people_intro }}</p></div><a class="rna-text-link" href="{{ people_url | relative_url }}">{{ home.labels.meet_team }} <span aria-hidden="true">↗</span></a></div>
     {% include home/people.html home=home %}
   </section>
-
-  {% assign localized_posts = site.posts | where: "lang", page.lang %}
-  {% if localized_posts.size > 0 %}
-    <section class="rna-section rna-news" aria-labelledby="rna-news-title">
-      <div class="rna-section-head split" data-reveal>
-        <div><p class="rna-section-label">{{ home.news_label }}</p><h2 id="rna-news-title">{{ home.news_title }}</h2><p>{{ home.news_intro }}</p></div>
-        <a class="rna-text-link" href="{{ blog_url | relative_url }}">{{ home.labels.read_all_notes }} <span aria-hidden="true">↗</span></a>
-      </div>
-      {% include home/news.html %}
-    </section>
-  {% endif %}
 
   <section class="rna-join" aria-labelledby="rna-join-title">
     <div class="rna-join-intro" data-reveal><p class="rna-section-label">{{ home.join_label }}</p><h2 id="rna-join-title">{{ home.join_title }}</h2><p>{{ home.join_intro }}</p><div class="rna-inline-actions"><a class="rna-button primary" href="{{ join_url | relative_url }}">{{ home.labels.application_details }} <span aria-hidden="true">↗</span></a><a class="rna-button text" href="{{ contact_url | relative_url }}">{{ home.labels.contact_lab }}</a></div></div>

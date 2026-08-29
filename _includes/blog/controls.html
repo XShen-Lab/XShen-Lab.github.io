@@ -1,0 +1,8 @@
+<div class="blog-flow-controls" aria-label="{% if include.lang == 'zh-CN' %}文章展览控制{% else %}Story gallery controls{% endif %}">
+  <div class="blog-flow-rail" aria-hidden="true"><span data-blog-flow-progress></span></div>
+  <span class="blog-flow-status" data-blog-flow-status aria-live="polite">01 / {{ include.total | prepend: '0' | slice: -2, 2 }}</span>
+  <div class="blog-flow-buttons">
+    <button type="button" data-blog-flow-previous aria-label="{% if include.lang == 'zh-CN' %}上一篇{% else %}Previous story{% endif %}"><span aria-hidden="true">←</span></button>
+    <button type="button" data-blog-flow-next aria-label="{% if include.lang == 'zh-CN' %}下一篇{% else %}Next story{% endif %}"><span aria-hidden="true">→</span></button>
+  </div>
+</div>

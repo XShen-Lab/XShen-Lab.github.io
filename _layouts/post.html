@@ -13,6 +13,9 @@ layout: default
   {% assign pinned_label = "置顶文章" %}
 {% endif %}
 {% assign author_member = site.members | where: "slug", page.author_id | first %}
+{% assign category_id = page.category_id | default: "perspectives" %}
+{% assign post_category = site.data.blog_categories | where: "id", category_id | first %}
+{% assign category_label = post_category.labels[page.lang] | default: post_category.labels.en %}
 {% assign author_url = author_member.url %}
 {% if chinese_post and author_url %}
   {% for pair in site.data.language_pairs %}
@@ -25,6 +28,7 @@ layout: default
     <a class="blog-back" href="{{ blog_url | relative_url }}"><span aria-hidden="true">←</span> {{ blog_label }}</a>
     <div class="blog-post-kicker">
       {% if page.pinned %}<span class="blog-pin"><span aria-hidden="true">◆</span> {{ pinned_label }}</span>{% endif %}
+      {% if category_label %}<a href="{{ blog_url | relative_url }}#category-{{ category_id }}">{{ category_label }}</a>{% endif %}
       {% if page.eyebrow %}<span>{{ page.eyebrow }}</span>{% endif %}
     </div>
     <h1{% if page.title_layout == "wide" %} class="blog-post-title-wide"{% endif %}>{{ page.title }}</h1>
@@ -41,8 +45,9 @@ layout: default
   </header>
 
   {% if page.image %}
-    <figure class="blog-post-figure{% if page.image_fit == 'contain' %} is-contain{% endif %}">
+    <figure class="blog-post-figure{% if page.image_fit == 'contain' %} is-contain{% endif %}"{% if page.image_position %} style="--blog-image-position: {{ page.image_position }}"{% endif %}>
       <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | xml_escape }}">
+      {% if page.image_caption or page.image_credit %}<figcaption>{% if page.image_caption %}{{ page.image_caption }}{% endif %}{% if page.image_credit %}<span>{{ page.image_credit }}</span>{% endif %}</figcaption>{% endif %}
     </figure>
   {% endif %}
 

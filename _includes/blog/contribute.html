@@ -1,0 +1,22 @@
+{% assign contribute_lang = include.lang | default: page.lang | default: "en" %}
+{% if contribute_lang == "zh-CN" %}
+  {% assign contribute_url = "/zh/blog/contribute/" %}
+  {% assign contribute_label = "提交实验室动态" %}
+  {% assign contribute_title = "把实验室里的故事留存下来。" %}
+  {% assign contribute_text = "欢迎成员提交论文发表、学术会议、实验室动态与生活记录。所有内容都会先经过事实、图片授权与中英文编辑审核，再公开发布。" %}
+  {% assign contribute_action = "查看投稿方式" %}
+{% else %}
+  {% assign contribute_url = "/blog/contribute/" %}
+  {% assign contribute_label = "Contribute" %}
+  {% assign contribute_title = "Help preserve the life of the lab." %}
+  {% assign contribute_text = "Lab members may submit publication stories, conference notes, milestones, and lab-life updates. Every contribution is reviewed for accuracy, image permission, and bilingual publication before it goes live." %}
+  {% assign contribute_action = "How to contribute" %}
+{% endif %}
+<aside class="blog-contribute" aria-labelledby="blog-contribute-title">
+  <p class="rna-section-label">{{ contribute_label }}</p>
+  <div>
+    <h2 id="blog-contribute-title">{{ contribute_title }}</h2>
+    <p>{{ contribute_text }}</p>
+  </div>
+  <a class="rna-button secondary" href="{{ contribute_url | relative_url }}">{{ contribute_action }} <span aria-hidden="true">↗</span></a>
+</aside>

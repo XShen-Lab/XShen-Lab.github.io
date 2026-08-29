@@ -4,6 +4,8 @@ description: "对我而言，科学是一场孩子的严肃游戏。"
 excerpt: "生命像一头看不见全貌的大象。我们常常只能触摸一个分子、一条通路或一种表型，而我更想知道：这些局部如何彼此连接？"
 author: Xiaohua
 author_id: xiaohua-shen
+story_id: 2026-simple-rules-of-life-rotation
+category_id: lab-news
 date: 2026-08-23 12:00:00 -0400
 display_date: 2026 年 8 月
 lang: zh-CN
@@ -14,6 +16,8 @@ image_alt: "红色背景上的 Dr. Seuss 插画与英文引语“Everything stin
 image_fit: contain
 eyebrow: 轮转邀请
 pinned: true
+home_featured: true
+home_order: 10
 title_layout: wide
 tags:
   - 实验室轮转

@@ -1,0 +1,1115 @@
+/* Scientific editorial refresh -------------------------------------------
+   Source Serif 4 carries long-form reading; Source Sans 3 is reserved for
+   navigation, controls and metadata. The palette uses paper, ink and oxide
+   tones rather than luminous gradients. */
+
+html {
+  font-size: clamp(16px, calc(15.5px + 0.14vw), 17.5px);
+}
+
+body {
+  font-family: var(--body);
+  font-kerning: normal;
+  font-optical-sizing: auto;
+}
+
+:where(button, input, textarea, select),
+.site-header,
+.site-footer,
+.rna-button,
+.rna-text-link,
+.publication-entry-actions,
+.publication-entry-tags,
+.pub-nav,
+.pub-year-nav,
+.member-nav {
+  font-family: var(--sans);
+}
+
+:where(p, li) {
+  text-wrap: pretty;
+}
+
+.site-header {
+  background: rgb(31 34 30 / 96%);
+  background: color-mix(in srgb, #1f221e 94%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+.site-header[data-transparent]:not(.is-scrolled) {
+  background: linear-gradient(to bottom, rgb(31 34 30 / 94%), rgb(31 34 30 / 68%) 72%, transparent);
+}
+
+.site-header .title-text,
+.site-nav,
+.site-nav > a {
+  font-family: var(--sans);
+}
+
+.site-progress span {
+  background: var(--primary);
+}
+
+.page-home,
+.page-home main,
+.page-home main > section,
+.rna-home {
+  background: var(--background);
+}
+
+.rna-home {
+  color: var(--text);
+}
+
+.rna-home > .rna-hero {
+  min-height: min(880px, 100svh);
+  padding-top: clamp(150px, 18vh, 220px);
+  padding-bottom: clamp(74px, 10vh, 120px);
+  align-items: end;
+  background: var(--background);
+  color: var(--text);
+}
+
+.rna-hero:after {
+  inset: auto max(var(--gutter), calc((100% - var(--page)) / 2)) 0;
+  height: 1px;
+  background: var(--line);
+  mask-image: none;
+}
+
+.rna-hero-copy {
+  width: min(1020px, 82%);
+}
+
+.rna-hero h1 {
+  max-width: 950px;
+  font-size: clamp(4.7rem, 9.5vw, 9.2rem);
+  font-weight: 500;
+  letter-spacing: -0.058em;
+  line-height: 0.82;
+}
+
+.rna-hero h1 small,
+.rna-eyebrow,
+.rna-section-label {
+  font-family: var(--sans) !important;
+}
+
+.rna-hero h1 small {
+  color: var(--text-soft);
+}
+
+.rna-eyebrow,
+.rna-section-label {
+  color: var(--primary) !important;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.105em;
+}
+
+.rna-section-label:before,
+.rna-eyebrow:before {
+  width: 24px;
+  background: currentColor;
+}
+
+.rna-hero-subtitle {
+  color: var(--secondary) !important;
+  font-family: var(--sans) !important;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.rna-hero-question {
+  max-width: 720px;
+  color: var(--text) !important;
+  font-size: clamp(1.45rem, 2.5vw, 2.35rem);
+  line-height: 1.22 !important;
+}
+
+.rna-hero-intro {
+  max-width: 640px;
+  color: var(--text-soft) !important;
+  font-size: clamp(1.02rem, 1.25vw, 1.12rem);
+}
+
+.rna-hero-actions {
+  margin-top: 38px;
+}
+
+.rna-hero .rna-button {
+  border-color: var(--text);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.rna-hero .rna-button.primary {
+  border-color: var(--text);
+  background: var(--text);
+  color: var(--background);
+}
+
+.rna-hero .rna-button.primary:hover {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fffaf1;
+}
+
+.rna-hero .rna-button.text {
+  border-color: transparent;
+  border-bottom-color: var(--line);
+}
+
+.rna-hero-index {
+  position: absolute;
+  right: max(var(--gutter), calc((100% - var(--page)) / 2));
+  bottom: clamp(92px, 13vh, 150px);
+  display: grid;
+  width: min(270px, 23vw);
+  border-top: 1px solid var(--text);
+}
+
+.rna-hero-index span {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-soft);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.rna-hero-index span:before {
+  display: inline-block;
+  width: 38px;
+  color: var(--primary);
+  content: "0" counter(hero-index);
+  counter-increment: hero-index;
+  font-family: var(--code);
+}
+
+.rna-hero-index {
+  counter-reset: hero-index;
+}
+
+.rna-hero-scroll {
+  color: var(--gray);
+  font-family: var(--sans);
+}
+
+.rna-hero-scroll span {
+  background: var(--primary);
+}
+
+.js [data-reveal] {
+  filter: none;
+  transform: translateY(14px);
+  transition: opacity 0.65s ease calc(var(--reveal-order, 0) * 55ms), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) calc(var(--reveal-order, 0) * 55ms);
+}
+
+@media (max-width: 820px) {
+  .rna-hero-copy { width: 100%; }
+  .rna-hero-index { display: none; }
+}
+
+@media (max-width: 600px) {
+  .rna-home > .rna-hero {
+    min-height: 760px;
+    padding-top: 128px;
+  }
+
+  .rna-hero h1 {
+    font-size: clamp(3.8rem, 18vw, 5.7rem);
+    line-height: 0.86;
+  }
+}
+
+/* Editorial typography --------------------------------------------------- */
+
+:where(h1, h2, h3) {
+  font-family: var(--heading);
+  font-optical-sizing: auto;
+  text-wrap: balance;
+}
+
+:where(
+  .research-overview__copy,
+  .research-hero__intro,
+  .blog-post-body,
+  .publication-detail__summary,
+  .member-profile__longform,
+  .join-posting__section,
+  .contact-hero__copy
+) p {
+  font-family: var(--reading);
+}
+
+:where(
+  .rna-section-label,
+  .rna-eyebrow,
+  .research-kicker,
+  .research-program__meta,
+  .research-program__verb,
+  .research-program__gallery figcaption,
+  .blog-card-meta,
+  .blog-post-kicker,
+  .blog-post-byline,
+  .blog-card-footer,
+  .publication-entry-meta,
+  .member-profile__index,
+  .join-hero__meta,
+  .join-entry-meta,
+  .contact-kicker,
+  .contact-card__index,
+  .resource-gate-eyebrow
+) {
+  font-family: var(--sans) !important;
+}
+
+html[lang="en"] :where(
+  .research-overview__copy > p:first-child,
+  .blog-post-body > p:first-child,
+  .publication-detail__summary,
+  .member-profile__longform--pi > p:first-child
+)::first-letter {
+  float: left;
+  margin: 0.08em 0.1em 0 0;
+  color: var(--primary);
+  font-family: var(--heading);
+  font-size: 4.25em;
+  font-weight: 550;
+  line-height: 0.76;
+}
+
+html[lang="zh-CN"] .page-post .blog-post-body p:first-child::first-letter {
+  float: none;
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Restrained site chrome ------------------------------------------------- */
+
+.site-header,
+.site-header[data-transparent]:not(.is-scrolled) {
+  border-bottom-color: rgb(245 241 229 / 14%);
+  background: rgb(34 34 30 / 97%);
+  backdrop-filter: none;
+}
+
+.site-header .subtitle,
+.site-nav > a,
+.site-header .title-text {
+  letter-spacing: 0.025em;
+}
+
+.site-progress span,
+.rna-story-track span,
+.rna-scale-track span,
+.blog-flow-rail span,
+.member-gallery__progress span {
+  background: var(--primary) !important;
+  box-shadow: none !important;
+}
+
+.site-footer {
+  background: #22221e;
+}
+
+/* Homepage: a journal sequence, not a synthetic dashboard --------------- */
+
+.rna-home > :where(.rna-tension, .rna-featured-research, .rna-publication) {
+  background: var(--background);
+}
+
+.rna-home > :where(.rna-flow, .rna-people) {
+  background: #23231f;
+  color: #f2eee3;
+}
+
+.rna-home > .rna-methods {
+  background: #4d5f61;
+  color: #f7f3e8;
+}
+
+.rna-home > .rna-join {
+  background: #573128;
+  color: #fbf4e9;
+}
+
+.rna-home > :where(.rna-flow, .rna-methods, .rna-people, .rna-join) p {
+  color: rgb(247 243 232 / 78%);
+}
+
+.rna-tension-grid article,
+.rna-research-card,
+.rna-publication-feature,
+.rna-join-grid article {
+  box-shadow: none;
+}
+
+.rna-tension-grid article > span,
+.rna-research-signal,
+.rna-research-flow,
+.rna-publication-meta,
+.rna-publication-metric {
+  color: var(--primary) !important;
+  font-family: var(--sans);
+}
+
+.rna-state-field {
+  border-color: var(--line);
+  background: transparent;
+}
+
+.rna-state-field i,
+.rna-fluctuation i {
+  background: var(--primary);
+}
+
+.rna-flow-stage,
+.rna-join-grid article {
+  border-color: rgb(247 243 232 / 17%);
+}
+
+.rna-stage-visual i,
+.rna-program-motif i {
+  border-color: currentcolor;
+  box-shadow: none;
+}
+
+.rna-research-image::after {
+  background: linear-gradient(90deg, var(--background) 0%, rgb(244 241 232 / 72%) 18%, transparent 70%);
+}
+
+.rna-scale-list li::before {
+  box-shadow: none;
+}
+
+.rna-publication-scan {
+  display: none;
+}
+
+.rna-pi-card::after {
+  background: linear-gradient(to top, rgb(27 28 24 / 92%), transparent 68%);
+}
+
+.rna-person-row img {
+  border-radius: 0;
+  filter: saturate(0.8);
+}
+
+/* Blog archive and homepage exhibition ---------------------------------- */
+
+.blog-index-hero {
+  min-height: 380px;
+  padding-bottom: clamp(62px, 8vw, 100px);
+}
+
+.page-inner .blog-index-hero h1 {
+  max-width: 11ch;
+  font-size: clamp(4rem, 8.6vw, 7.7rem);
+  line-height: 0.9;
+  letter-spacing: -0.048em;
+}
+
+.blog-category-nav {
+  display: none;
+}
+
+.js .blog-flow-controls {
+  display: none;
+}
+
+.blog-flow.is-ready .blog-category-nav {
+  display: flex;
+  min-height: 74px;
+  align-items: stretch;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.blog-flow.is-ready .blog-flow-controls {
+  display: grid;
+}
+
+.blog-category-nav button {
+  min-height: 48px;
+  padding: 0 20px;
+  border: 0;
+  border-right: 1px solid var(--line);
+  background: transparent;
+  color: var(--text-soft);
+  font: 650 0.78rem var(--sans);
+  letter-spacing: 0.035em;
+  cursor: pointer;
+}
+
+.blog-category-nav button:first-child {
+  padding-left: 0;
+}
+
+.blog-category-nav button[aria-pressed="true"],
+.blog-category-nav button:hover,
+.blog-category-nav button:focus-visible {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+}
+
+.blog-card[hidden] {
+  display: none !important;
+}
+
+.blog-filter-empty {
+  margin: 0;
+  padding: 70px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-soft);
+  font-family: var(--reading);
+  font-size: 1.2rem;
+}
+
+.blog-flow-rail span {
+  transition-duration: 360ms;
+}
+
+.blog-flow-buttons button,
+.research-programs__controls button,
+.member-gallery__controls button {
+  border-radius: 0;
+}
+
+.blog-flow-buttons button:hover:not(:disabled),
+.blog-flow-buttons button:focus-visible {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff8ee;
+  transform: none;
+}
+
+.blog-card {
+  min-height: 490px;
+  grid-template-columns: minmax(320px, 0.94fr) minmax(0, 1.06fr);
+  background: var(--surface);
+}
+
+.blog-card-image {
+  min-height: 490px;
+  background: #d9d5ca;
+}
+
+.blog-card-image img {
+  filter: saturate(0.82) contrast(1.02);
+  object-position: var(--blog-image-position, 50% 50%);
+  transform: scale(1.001);
+}
+
+.blog-card-image.is-contain {
+  background: #b5412f;
+}
+
+.blog-card-image > .blog-card-number {
+  position: absolute;
+  inset: auto auto 18px 18px;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 48%);
+  background: rgb(31 31 27 / 86%);
+  color: #fffaf0;
+  font: 650 0.72rem var(--sans);
+  mix-blend-mode: normal;
+  opacity: 1;
+}
+
+.blog-card-copy {
+  padding: clamp(38px, 5.5vw, 74px);
+}
+
+.blog-card-meta,
+.blog-card-footer {
+  font-family: var(--sans);
+  letter-spacing: 0.035em;
+  text-transform: none;
+}
+
+.blog-category-label,
+.blog-pin {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.blog-category-label {
+  text-decoration-color: currentcolor;
+  text-underline-offset: 4px;
+}
+
+.page-inner .blog-card h2,
+.rna-home .blog-card h2 {
+  margin: 24px 0 20px;
+  font-size: clamp(2.4rem, 4.2vw, 4.3rem);
+  line-height: 0.98;
+}
+
+.page-inner .blog-card h2.blog-card-title-wide,
+.rna-home .blog-card h2.blog-card-title-wide {
+  font-size: clamp(2.1rem, 3.2vw, 3.45rem);
+  line-height: 1.03;
+}
+
+.rna-home > .rna-news {
+  background: #ded9cd;
+  color: #20221f;
+}
+
+.rna-news .rna-section-head > :where(div, p),
+.rna-news .rna-section-head > div > p,
+.rna-news .rna-section-head h2,
+.rna-news .rna-text-link {
+  color: #20221f;
+}
+
+.blog-flow-home {
+  border-top: 1px solid rgb(32 34 31 / 28%);
+  border-bottom-color: rgb(32 34 31 / 28%);
+}
+
+.blog-flow-home .blog-card {
+  min-height: clamp(510px, 55vw, 680px);
+  grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.8fr);
+  background: #f5f1e7;
+  color: #20221f;
+}
+
+.blog-flow-home .blog-card-image {
+  min-height: clamp(510px, 55vw, 680px);
+}
+
+.rna-news .blog-card-copy > p,
+.rna-news .blog-card-meta,
+.rna-news .blog-card-footer {
+  color: #5a5a53;
+}
+
+.rna-news .blog-pin,
+.rna-news .blog-category-label {
+  color: #a3412f;
+}
+
+.blog-flow.has-single-slide .blog-flow-buttons {
+  visibility: hidden;
+}
+
+/* Long-form stories ------------------------------------------------------ */
+
+.blog-post-header {
+  min-height: 590px;
+  background: #24241f;
+  color: #f4f0e6;
+}
+
+.blog-post .blog-post-kicker,
+.blog-post .blog-post-kicker a,
+.blog-post-byline {
+  color: #c9c4b8;
+}
+
+.blog-post .blog-post-kicker a {
+  text-decoration-color: var(--primary);
+  text-underline-offset: 5px;
+}
+
+.page-post .blog-post-header h1 {
+  max-width: 12ch;
+  font-size: clamp(4.6rem, 10vw, 8.7rem);
+  line-height: 0.84;
+}
+
+.blog-post-figure img {
+  box-shadow: 0 18px 44px rgb(30 28 24 / 18%);
+  object-position: var(--blog-image-position, 50% 50%);
+}
+
+.blog-post-figure figcaption {
+  display: flex;
+  padding: 13px 0;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-soft);
+  font: 0.76rem/1.5 var(--sans);
+}
+
+.page-post .blog-post-body p {
+  font-family: var(--reading);
+  line-height: 1.82;
+}
+
+.page-post .blog-post-tags li {
+  font-family: var(--sans);
+}
+
+/* A lightweight editorial contribution desk ----------------------------- */
+
+.blog-contribute {
+  display: grid;
+  padding: clamp(62px, 9vw, 120px) 0;
+  grid-template-columns: minmax(150px, 0.38fr) minmax(0, 1fr) auto;
+  align-items: end;
+  gap: clamp(28px, 5vw, 70px);
+  border-bottom: 1px solid var(--line);
+}
+
+.blog-contribute .rna-section-label {
+  align-self: start;
+}
+
+.page-inner .blog-contribute h2 {
+  max-width: 10ch;
+  margin: 0 0 22px;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 0.95;
+}
+
+.page-inner .blog-contribute h2::before {
+  display: none;
+}
+
+.blog-contribute > div > p {
+  max-width: 650px;
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.7;
+}
+
+.contribute-page {
+  width: 100%;
+}
+
+.contribute-hero {
+  display: grid;
+  min-height: 520px;
+  padding-bottom: clamp(70px, 10vw, 130px);
+  align-content: end;
+  border-bottom: 1px solid var(--line);
+}
+
+.page-inner .contribute-hero h1 {
+  max-width: 12ch;
+  margin: 28px 0;
+  font-size: clamp(4rem, 8vw, 7.5rem);
+  line-height: 0.88;
+}
+
+.page-inner .contribute-hero > p:last-child {
+  max-width: 720px;
+  margin: 0;
+  color: var(--text-soft);
+  font-family: var(--reading);
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.contribute-page > section {
+  padding: clamp(64px, 9vw, 120px) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.contribute-section-head {
+  display: grid;
+  grid-template-columns: minmax(80px, 0.25fr) minmax(0, 1fr);
+  gap: 30px;
+}
+
+.contribute-section-head > span,
+.contribute-categories li > span {
+  color: var(--primary);
+  font: 700 0.76rem var(--sans);
+  letter-spacing: 0.08em;
+}
+
+.page-inner .contribute-section-head h2 {
+  margin: 0 0 18px;
+  font-size: clamp(2.7rem, 5vw, 5rem);
+  line-height: 0.94;
+}
+
+.page-inner .contribute-section-head h2::before {
+  display: none;
+}
+
+.contribute-section-head p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--text-soft);
+  font-family: var(--reading);
+  line-height: 1.7;
+}
+
+.contribute-categories ol,
+.contribute-checklist ul {
+  display: grid;
+  margin: 56px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.contribute-categories li,
+.contribute-checklist li {
+  display: grid;
+  margin: 0;
+  padding: 22px 0;
+  grid-template-columns: minmax(80px, 0.25fr) minmax(180px, 0.55fr) minmax(0, 1fr);
+  gap: 30px;
+  border-bottom: 1px solid var(--line);
+}
+
+.contribute-categories li strong,
+.contribute-checklist li strong {
+  font-family: var(--heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.contribute-categories li p,
+.contribute-checklist li span:last-child {
+  margin: 0;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+.contribute-review .rna-button {
+  margin: 48px 0 0 calc(25% + 30px);
+}
+
+.page-inner .contribute-note {
+  max-width: 720px;
+  margin: 26px 0 0 calc(25% + 30px);
+  color: var(--text-soft);
+  font-size: 0.86rem;
+  line-height: 1.65;
+}
+
+/* Research exhibition --------------------------------------------------- */
+
+.research-page {
+  --research-ink: #20221f;
+  --research-paper: #f4f1e8;
+  --research-mint: #d8755d;
+  --research-blue: #9cb0b2;
+  --research-violet: #c4a26d;
+}
+
+.research-hero {
+  background: #24241f;
+  color: #f3efe5;
+}
+
+.research-hero::after {
+  background: var(--research-mint);
+  opacity: 0.8;
+}
+
+.research-hero__subtitle,
+.research-hero__sequence,
+.research-hero .research-kicker {
+  color: var(--research-mint);
+  font-family: var(--sans);
+}
+
+.research-hero__intro {
+  color: #cac6bb;
+}
+
+.research-hero__field {
+  opacity: 0.24;
+}
+
+.research-hero__signal {
+  background: var(--research-mint);
+  box-shadow: none;
+  animation: none;
+}
+
+.research-overview,
+.research-surveillance,
+.research-future {
+  background: var(--research-paper);
+}
+
+.research-overview__copy > p {
+  color: #454944;
+}
+
+.research-programs,
+.research-technology {
+  background: #252520;
+}
+
+.research-program {
+  border-color: rgb(243 239 229 / 18%);
+  background: #30302a;
+}
+
+.research-program__visual,
+.research-program__visual--generated {
+  background: #1c1d1a;
+}
+
+.research-program__visual--generated {
+  background-image: none;
+}
+
+.research-program__visual figcaption,
+.research-program__gallery figcaption {
+  background: #252520;
+  color: #d4d0c5;
+}
+
+.research-program__content {
+  background: transparent;
+}
+
+.research-program__question {
+  color: #f3efe5 !important;
+}
+
+.research-programs__controls button:hover,
+.research-programs__controls button:focus-visible {
+  border-color: var(--research-mint);
+  background: var(--research-mint);
+  color: #252520;
+}
+
+.research-programs__jump a:hover,
+.research-programs__jump a:focus-visible,
+.research-programs__jump a.is-active {
+  background: rgb(216 117 93 / 10%);
+}
+
+/* People, Join, Contact and Resources share the same material language --- */
+
+.people-pi-card,
+.member-gallery__slide,
+.member-profile__module,
+.member-profile__longform,
+.join-feature,
+.join-posting,
+.contact-map,
+.contact-card {
+  box-shadow: none;
+}
+
+.member-gallery__slide,
+.people-placeholder {
+  background: var(--surface);
+}
+
+.member-profile__module--research,
+.contact-card--profiles,
+.join-posting__header,
+.resource-gate-panel {
+  background: #252520;
+  color: #f3efe5;
+}
+
+.member-profile__name {
+  border-color: rgb(243 239 229 / 42%);
+  background: rgb(37 37 32 / 90%);
+  box-shadow: 6px 6px 0 rgb(216 117 93 / 38%);
+  text-shadow: none;
+  backdrop-filter: none;
+}
+
+.member-profile__name::before {
+  background: var(--primary);
+  box-shadow: none;
+}
+
+.member-profile__name::after {
+  display: none;
+}
+
+.page-inner main .member-profile__identity p,
+.member-profile__links .button:hover,
+.member-profile__module--research li::marker {
+  color: var(--primary);
+}
+
+.people-pi-card__role,
+.page-inner main .member-profile__identity p,
+.member-profile__links .button {
+  font-family: var(--sans);
+}
+
+.people-pi-card__role {
+  color: var(--primary);
+}
+
+.member-profile__links .button:hover {
+  border-color: var(--primary);
+}
+
+.member-profile__back,
+.member-profile__links .button {
+  background: rgb(37 37 32 / 76%);
+  backdrop-filter: none;
+}
+
+.member-profile__identity--minimal .member-profile__links .button {
+  box-shadow: none;
+}
+
+.member-profile__longform--pi {
+  background: var(--surface);
+}
+
+.page-inner main .member-profile__longform--pi > p:first-child {
+  padding: 0 0 30px;
+  border-left: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  font-family: var(--reading);
+}
+
+.join-hero::after {
+  background: var(--primary);
+  box-shadow: none;
+}
+
+.join-feature,
+.join-posting,
+.join-posting__section--apply {
+  background: var(--surface);
+}
+
+.join-feature__image {
+  background: #b5412f;
+}
+
+.join-feature__copy > p,
+.join-role__content p,
+.join-posting__section p {
+  font-family: var(--reading);
+}
+
+.join-posting__header::after {
+  border-color: rgb(216 117 93 / 34%);
+  box-shadow: none;
+}
+
+.join-status {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.contact-card--profiles .contact-card__index {
+  color: var(--primary) !important;
+}
+
+.contact-profile-links a:hover {
+  background: rgb(216 117 93 / 7%);
+}
+
+.contact-profile-links a span {
+  font-family: var(--sans);
+}
+
+.contact-profile-links a i {
+  color: var(--primary);
+}
+
+.resource-gate-panel {
+  border-color: rgb(243 239 229 / 18%);
+  background-image: none;
+  box-shadow: none;
+}
+
+.resource-gate-signal span {
+  background: var(--primary);
+  box-shadow: none;
+  animation: none;
+}
+
+.resource-gate-eyebrow,
+.resource-gate-field button:hover,
+.resource-gate-field button:focus-visible {
+  color: var(--primary);
+}
+
+.resource-gate-icon {
+  border-color: rgb(216 117 93 / 42%);
+  background: rgb(216 117 93 / 9%);
+  box-shadow: none;
+}
+
+.resource-gate-field input:focus,
+.resource-gate-field button {
+  border-color: var(--primary);
+  box-shadow: none;
+}
+
+.resource-gate-field button {
+  background: var(--primary);
+  color: #fff8ed;
+}
+
+@media (max-width: 900px) {
+  .blog-flow-home .blog-card,
+  .blog-card {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-flow-home .blog-card-image,
+  .blog-card-image {
+    min-height: min(64vw, 520px);
+  }
+
+  .blog-contribute {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .blog-contribute .rna-section-label {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .blog-flow.is-ready .blog-category-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .blog-category-nav button {
+    flex: 0 0 auto;
+  }
+
+  .contribute-section-head,
+  .contribute-categories li,
+  .contribute-checklist li {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .contribute-review .rna-button,
+  .page-inner .contribute-note {
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blog-card-image img,
+  .member-profile__photo,
+  .research-hero__signal {
+    transition: none !important;
+    animation: none !important;
+  }
+}
