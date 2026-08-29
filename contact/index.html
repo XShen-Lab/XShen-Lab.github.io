@@ -361,64 +361,12 @@
 
 
 
-<a class="contact-map" href="https://uri.amap.com/search?keyword=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E9%83%91%E8%A3%95%E5%BD%A4%E5%8C%BB%E5%AD%A6%E6%A5%BC&city=%E5%8C%97%E4%BA%AC%E5%B8%82&callnative=0" target="_blank" rel="noopener" data-reveal="" style="--reveal-order: 1" aria-label="View Zheng Yutong Medical Building on the map">
+
+
+<div class="contact-map" data-reveal="" style="--reveal-order: 1">
   <div class="contact-map__canvas">
-    <svg viewbox="0 0 720 500" role="img" aria-labelledby="contact-map-title contact-map-description">
-      <title id="contact-map-title">Location map for Zheng Yutong Medical Building</title>
-      <desc id="contact-map-description">A schematic showing the Zheng Yutong Medical Building within the Tsinghua University campus.</desc>
-      <defs>
-        <pattern id="contact-map-grid" width="26" height="26" patternunits="userSpaceOnUse">
-          <path d="M 26 0 L 0 0 0 26" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.11"></path>
-        </pattern>
-        <lineargradient id="contact-map-glow" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#35e6bf" stop-opacity="0.2"></stop>
-          <stop offset="1" stop-color="#5969d9" stop-opacity="0.06"></stop>
-        </lineargradient>
-        <filter id="contact-marker-glow" x="-100%" y="-100%" width="300%" height="300%">
-          <fegaussianblur stddeviation="8" result="blur"></fegaussianblur>
-          <femerge><femergenode in="blur"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge>
-        </filter>
-      </defs>
-
-      <rect width="720" height="500" fill="#071411"></rect>
-      <rect width="720" height="500" fill="url(#contact-map-grid)" color="#7eaaa0"></rect>
-      <ellipse cx="490" cy="220" rx="235" ry="190" fill="url(#contact-map-glow)"></ellipse>
-
-      <g class="contact-map__roads" fill="none" stroke-linecap="round">
-        <path d="M-20 382 C130 334 218 350 350 310 S600 238 750 285" stroke="#9ab0aa" stroke-width="30" opacity="0.11"></path>
-        <path d="M-20 382 C130 334 218 350 350 310 S600 238 750 285" stroke="#a9c2bb" stroke-width="2" opacity="0.46"></path>
-        <path d="M138 -30 C168 102 190 184 256 262 S342 414 342 540" stroke="#9ab0aa" stroke-width="24" opacity="0.1"></path>
-        <path d="M138 -30 C168 102 190 184 256 262 S342 414 342 540" stroke="#a9c2bb" stroke-width="2" opacity="0.4"></path>
-        <path d="M392 -30 C386 84 412 142 478 205 S564 360 548 540" stroke="#35e6bf" stroke-width="2" stroke-dasharray="8 12" opacity="0.43"></path>
-      </g>
-
-      <g class="contact-map__blocks" fill="#102720" stroke="#4d6e65" stroke-width="1">
-        <rect x="42" y="72" width="132" height="70"></rect>
-        <rect x="207" y="52" width="102" height="102"></rect>
-        <rect x="64" y="184" width="106" height="85"></rect>
-        <rect x="214" y="188" width="132" height="62"></rect>
-        <rect x="420" y="76" width="104" height="66"></rect>
-        <rect x="558" y="72" width="112" height="86"></rect>
-        <rect x="558" y="332" width="104" height="86"></rect>
-        <rect x="401" y="360" width="111" height="68"></rect>
-        <rect x="95" y="405" width="142" height="55"></rect>
-      </g>
-
-      <g class="contact-map__target">
-        <circle cx="480" cy="235" r="42" fill="#35e6bf" opacity="0.12" filter="url(#contact-marker-glow)"></circle>
-        <circle cx="480" cy="235" r="17" fill="#071411" stroke="#35e6bf" stroke-width="3"></circle>
-        <circle cx="480" cy="235" r="5" fill="#35e6bf"></circle>
-        <path d="M480 254 L466 277 L494 277 Z" fill="#35e6bf"></path>
-      </g>
-
-      <g class="contact-map__labels">
-        <text x="42" y="42" class="contact-map__campus">TSINGHUA UNIVERSITY CAMPUS</text>
-        <text x="503" y="218" class="contact-map__building">ZHENG YUTONG</text>
-        <text x="503" y="239" class="contact-map__building contact-map__building--sub">MEDICAL BUILDING · D108</text>
-        <text x="663" y="459" class="contact-map__north">N</text>
-        <path d="M668 421 L658 444 L668 439 L678 444 Z" fill="#35e6bf"></path>
-      </g>
-    </svg>
+    <iframe src="https://maps.google.com/maps?hl=en&q=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E9%83%91%E8%A3%95%E5%BD%A4%E5%8C%BB%E5%AD%A6%E6%A5%BC&z=17&output=embed" title="Google Map of Zheng Yutong Medical Building" aria-label="Map showing Zheng Yutong Medical Building and nearby landmarks" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="">
+    </iframe>
   </div>
   <div class="contact-map__caption">
     <div>
@@ -426,9 +374,12 @@
       <strong>Zheng Yutong Medical Building</strong>
       <small>School of Basic Medicine · D108</small>
     </div>
-    <em>Open map <span aria-hidden="true">↗</span></em>
+    <nav class="contact-map__links" aria-label="Map links">
+      <a href="https://www.google.com/maps/search/?api=1&query=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E9%83%91%E8%A3%95%E5%BD%A4%E5%8C%BB%E5%AD%A6%E6%A5%BC" target="_blank" rel="noopener">Google Maps <span aria-hidden="true">↗</span></a>
+      <a href="https://uri.amap.com/search?keyword=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E9%83%91%E8%A3%95%E5%BD%A4%E5%8C%BB%E5%AD%A6%E6%A5%BC&city=%E5%8C%97%E4%BA%AC%E5%B8%82&callnative=0" target="_blank" rel="noopener">Amap <span aria-hidden="true">↗</span></a>
+    </nav>
   </div>
-</a>
+</div>
 
   </header>
 
