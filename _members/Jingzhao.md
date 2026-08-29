@@ -24,4 +24,5 @@ Postdoctoral Fellow in the XShen Lab.
 
 ## Education
 
+- B.S., **Shandong Agricultural University**, 2015–2019
 - Ph.D., **Tsinghua University**, 2019–2024
