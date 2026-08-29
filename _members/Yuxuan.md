@@ -1,8 +1,9 @@
 ---
 name: Zhou, Yuxuan 周宇轩
 role: phd
+cohort: 2025
 image: images/members/zhouyuxuan.jpg
-description: PhD, 2025
+description: PhD Candidate, 2025
 affiliation: School of Basic Medicine, Tsinghua University
 profile_position: 66% 50%
 links:
