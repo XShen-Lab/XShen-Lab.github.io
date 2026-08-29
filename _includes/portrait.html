@@ -18,10 +18,15 @@
 {% assign portrait_image_position = member.card_position | default: '50% 50%' %}
 {% assign portrait_url = member.url %}
 {% assign portrait_description = member.description | default: type.description %}
+{% assign portrait_name_en = member.name | regex_replace: '\s*[\p{Han}]+\s*$', '' | strip %}
+{% assign portrait_name_zh = member.name | regex_scan: '([\p{Han}]+)$' %}
+{% assign portrait_name = portrait_name_en | default: member.name %}
 {% if page.lang == "zh-CN" %}
   {% if member.zh_url %}{% assign portrait_url = member.zh_url %}{% endif %}
   {% if member.description_zh %}{% assign portrait_description = member.description_zh %}{% endif %}
+  {% if portrait_name_zh != "" %}{% assign portrait_name = portrait_name_zh %}{% endif %}
 {% endif %}
+{% assign portrait_name_length = portrait_name | size %}
 
 <div class="portrait-wrapper">
   <a
@@ -29,17 +34,17 @@
     class="portrait"
     data-style="{{ include.style }}"
     style="--portrait-image-scale: {{ portrait_image_scale }}; --portrait-image-hover-scale: {{ portrait_image_hover_scale }}; --portrait-image-position: {{ portrait_image_position }};"
-    aria-label="{{ member.name | default: "member link" | regex_strip }}"
+    aria-label="{{ portrait_name | default: "member link" | regex_strip }}"
   >
     {% if type %}
       {% include icon.html icon=type.icon %}
     {% endif %}
 
-    {% include responsive-image.html image=member.image class="portrait-image" alt=member.name sizes="(max-width: 600px) calc(100vw - 40px), 320px" %}
+    {% include responsive-image.html image=member.image class="portrait-image" alt=portrait_name sizes="(max-width: 600px) calc(100vw - 40px), 320px" %}
 
     {% if member.name %}
-      <span class="portrait-name">
-        {{ member.name }}
+      <span class="portrait-name{% if portrait_name_length > 14 %} portrait-name--long{% endif %}">
+        {{ portrait_name }}
       </span>
     {% endif %}
 

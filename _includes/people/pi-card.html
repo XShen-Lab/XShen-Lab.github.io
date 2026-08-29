@@ -1,7 +1,7 @@
 {% assign pi = site.members | where: "role", "principal-investigator" | first %}
 {% assign chinese_page = false %}
 {% assign profile_url = pi.url %}
-{% assign profile_name = pi.name %}
+{% assign profile_name = pi.name | regex_replace: '\s*[\p{Han}]+\s*$', '' | strip %}
 {% assign role_label = "Principal Investigator" %}
 {% assign affiliation_label = "School of Basic Medicine, Tsinghua University" %}
 {% assign education_label = "Education" %}

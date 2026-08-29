@@ -6,15 +6,19 @@
 {% assign alumni = site.members | where: "role", "alumni" | where_exp: "member", "member.name != 'Name 中文名'" | sort: "name" %}
 {% assign pi = principal_investigators | first %}
 {% assign pi_affiliation = pi.affiliation %}
+{% assign pi_name_en = pi.name | regex_replace: '\s*[\p{Han}]+\s*$', '' | strip %}
+{% assign pi_name_zh = pi.name | regex_scan: '([\p{Han}]+)$' %}
+{% assign pi_name = pi_name_en | default: pi.name %}
 {% if page.lang == "zh-CN" and pi.affiliation_zh %}{% assign pi_affiliation = pi.affiliation_zh %}{% endif %}
+{% if page.lang == "zh-CN" and pi_name_zh != "" %}{% assign pi_name = pi_name_zh %}{% endif %}
 
 <div class="rna-people-layout" data-reveal>
   {% if pi %}
     <a class="rna-pi-card" href="{% if page.lang == 'zh-CN' %}{{ '/zh/people/xiaohua-shen/' | relative_url }}{% else %}{{ pi.url | relative_url }}{% endif %}">
-      {% include responsive-image.html image=pi.image alt=pi.name sizes="(max-width: 820px) 100vw, 50vw" %}
+      {% include responsive-image.html image=pi.image alt=pi_name sizes="(max-width: 820px) 100vw, 50vw" %}
       <span class="rna-pi-overlay">
         <span class="rna-person-role">{{ include.home.labels.principal_investigator }}</span>
-        <strong>{{ pi.name }}</strong>
+        <strong>{{ pi_name }}</strong>
         <span>{{ pi_affiliation }}</span>
       </span>
     </a>
@@ -37,13 +41,17 @@
             {% for member in members limit: 2 %}
               {% assign person_url = member.url %}
               {% assign person_description = member.description %}
+              {% assign person_name_en = member.name | regex_replace: '\s*[\p{Han}]+\s*$', '' | strip %}
+              {% assign person_name_zh = member.name | regex_scan: '([\p{Han}]+)$' %}
+              {% assign person_name = person_name_en | default: member.name %}
               {% if page.lang == "zh-CN" %}
                 {% if member.zh_url %}{% assign person_url = member.zh_url %}{% endif %}
                 {% if member.description_zh %}{% assign person_description = member.description_zh %}{% endif %}
+                {% if person_name_zh != "" %}{% assign person_name = person_name_zh %}{% endif %}
               {% endif %}
               <a href="{{ person_url | relative_url }}" class="rna-person-row">
                 {% include responsive-image.html image=member.image alt="" sizes="52px" %}
-                <span><strong>{{ member.name }}</strong><small>{{ person_description }}</small></span>
+                <span><strong>{{ person_name }}</strong><small>{{ person_description }}</small></span>
                 <span aria-hidden="true">↗</span>
               </a>
             {% endfor %}
