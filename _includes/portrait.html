@@ -15,10 +15,16 @@
 {% assign portrait_image_scale = member.card_image_scale | default: 1 %}
 {% assign portrait_image_hover_scale = portrait_image_scale | times: 1.035 %}
 {% assign portrait_image_position = member.card_position | default: '50% 50%' %}
+{% assign portrait_url = member.url %}
+{% assign portrait_description = member.description | default: type.description %}
+{% if page.lang == "zh-CN" %}
+  {% if member.zh_url %}{% assign portrait_url = member.zh_url %}{% endif %}
+  {% if member.description_zh %}{% assign portrait_description = member.description_zh %}{% endif %}
+{% endif %}
 
 <div class="portrait-wrapper">
   <a
-    href="{{ member.url | relative_url | uri_escape }}"
+    href="{{ portrait_url | relative_url | uri_escape }}"
     class="portrait"
     data-style="{{ include.style }}"
     style="--portrait-image-scale: {{ portrait_image_scale }}; --portrait-image-hover-scale: {{ portrait_image_hover_scale }}; --portrait-image-position: {{ portrait_image_position }};"
@@ -38,7 +44,7 @@
 
     {% if member.description or type %}
       <span class="portrait-description">
-        {{ member.description | default: type.description }}
+        {{ portrait_description }}
       </span>
     {% endif %}
 
