@@ -59,36 +59,10 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
   min-height: 600px;
   grid-template-rows: minmax(0, 1fr) auto;
   overflow: hidden;
-  border: 1px solid rgb(140 171 162 / 35%);
-  background: #071411;
-  box-shadow: 0 34px 90px rgb(5 28 22 / 18%);
-  color: #eff8f4;
-  text-decoration: none;
-}
-
-.contact-map::before,
-.contact-map::after {
-  position: absolute;
-  z-index: 2;
-  width: 28px;
-  height: 28px;
-  border-color: #35e6bf;
-  content: "";
-  pointer-events: none;
-}
-
-.contact-map::before {
-  top: 16px;
-  left: 16px;
-  border-top: 1px solid;
-  border-left: 1px solid;
-}
-
-.contact-map::after {
-  right: 16px;
-  bottom: 126px;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
+  border: 1px solid var(--line);
+  background: #e7e4db;
+  box-shadow: 0 30px 70px rgb(22 38 33 / 13%);
+  color: var(--text);
 }
 
 .contact-map__canvas {
@@ -96,48 +70,13 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
   overflow: hidden;
 }
 
-.contact-map__canvas svg {
+.contact-map__canvas iframe {
   display: block;
   width: 100%;
   height: 100%;
   min-height: 430px;
-  color: #7eaaa0;
-  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.contact-map:hover .contact-map__canvas svg {
-  transform: scale(1.025);
-}
-
-.contact-map__labels text {
-  fill: #eff8f4;
-  font-family: var(--code);
-}
-
-.contact-map__campus {
-  font-size: 14px;
-  font-weight: 650;
-  letter-spacing: 0.12em;
-}
-
-.contact-map__building {
-  fill: #35e6bf !important;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-}
-
-.contact-map__building--sub {
-  fill: #b8cbc5 !important;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-}
-
-.contact-map__north {
-  font-size: 12px;
-  font-weight: 700;
-  text-anchor: middle;
+  border: 0;
+  background: #e7e4db;
 }
 
 .contact-map__caption {
@@ -146,12 +85,11 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
   display: flex;
   min-height: 118px;
   padding: 24px 28px;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 22px;
-  border-top: 1px solid rgb(183 217 207 / 18%);
-  background: rgb(5 18 15 / 88%);
-  backdrop-filter: blur(16px);
+  border-top: 1px solid var(--line);
+  background: var(--surface);
 }
 
 .contact-map__caption div {
@@ -161,7 +99,7 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
 
 .contact-map__caption span,
 .contact-map__caption small {
-  color: #9fb3ad;
+  color: var(--text-soft);
   font-family: var(--code);
   font-size: 0.67rem;
   letter-spacing: 0.08em;
@@ -176,22 +114,29 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
   line-height: 1.15;
 }
 
-.contact-map__caption em {
+.contact-map__links {
+  display: grid;
   flex: 0 0 auto;
-  color: #eff8f4;
-  font-family: var(--body);
-  font-size: 0.78rem;
-  font-style: normal;
-  font-weight: 750;
+  justify-items: end;
+  gap: 8px;
 }
 
-.contact-map__caption em span {
+.contact-map__links a {
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 0.76rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.contact-map__links a span {
   display: inline-block;
-  color: #35e6bf;
+  margin-left: 3px;
+  color: var(--primary);
   transition: transform var(--transition);
 }
 
-.contact-map:hover .contact-map__caption em span {
+.contact-map__links a:hover span {
   transform: translate(3px, -3px);
 }
 
@@ -371,19 +316,14 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
     min-height: 500px;
   }
 
-  .contact-map__canvas svg {
-    min-width: 0;
-    transform: none;
-  }
-
-  .contact-map:hover .contact-map__canvas svg {
-    transform: scale(1.015);
-  }
-
   .contact-map__caption {
     padding: 20px;
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .contact-map__links {
+    justify-items: start;
   }
 
   .contact-card {
@@ -393,12 +333,5 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
   .contact-list > div {
     grid-template-columns: 1fr;
     gap: 8px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .contact-map__canvas svg,
-  .contact-map:hover .contact-map__canvas svg {
-    transition: none;
   }
 }

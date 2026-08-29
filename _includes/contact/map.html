@@ -1,65 +1,19 @@
 {% assign map_zh = false %}
 {% if include.lang == "zh-CN" %}{% assign map_zh = true %}{% endif %}
-{% assign map_url = "https://uri.amap.com/search?keyword=%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E9%83%91%E8%A3%95%E5%BD%A4%E5%8C%BB%E5%AD%A6%E6%A5%BC&city=%E5%8C%97%E4%BA%AC%E5%B8%82&callnative=0" %}
+{% assign map_query = "%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E9%83%91%E8%A3%95%E5%BD%A4%E5%8C%BB%E5%AD%A6%E6%A5%BC" %}
+{% assign google_map_url = "https://www.google.com/maps/search/?api=1&query=" | append: map_query %}
+{% assign amap_url = "https://uri.amap.com/search?keyword=" | append: map_query | append: "&city=%E5%8C%97%E4%BA%AC%E5%B8%82&callnative=0" %}
 
-<a class="contact-map" href="{{ map_url }}" target="_blank" rel="noopener" data-reveal style="--reveal-order: 1" aria-label="{% if map_zh %}在地图中查看清华大学郑裕彤医学楼{% else %}View Zheng Yutong Medical Building on the map{% endif %}">
+<div class="contact-map" data-reveal style="--reveal-order: 1">
   <div class="contact-map__canvas">
-    <svg viewBox="0 0 720 500" role="img" aria-labelledby="contact-map-title contact-map-description">
-      <title id="contact-map-title">{% if map_zh %}郑裕彤医学楼位置示意图{% else %}Location map for Zheng Yutong Medical Building{% endif %}</title>
-      <desc id="contact-map-description">{% if map_zh %}清华大学校园内基础医学院郑裕彤医学楼的位置标记。{% else %}A schematic showing the Zheng Yutong Medical Building within the Tsinghua University campus.{% endif %}</desc>
-      <defs>
-        <pattern id="contact-map-grid" width="26" height="26" patternUnits="userSpaceOnUse">
-          <path d="M 26 0 L 0 0 0 26" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.11"/>
-        </pattern>
-        <linearGradient id="contact-map-glow" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#35e6bf" stop-opacity="0.2"/>
-          <stop offset="1" stop-color="#5969d9" stop-opacity="0.06"/>
-        </linearGradient>
-        <filter id="contact-marker-glow" x="-100%" y="-100%" width="300%" height="300%">
-          <feGaussianBlur stdDeviation="8" result="blur"/>
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-      </defs>
-
-      <rect width="720" height="500" fill="#071411"/>
-      <rect width="720" height="500" fill="url(#contact-map-grid)" color="#7eaaa0"/>
-      <ellipse cx="490" cy="220" rx="235" ry="190" fill="url(#contact-map-glow)"/>
-
-      <g class="contact-map__roads" fill="none" stroke-linecap="round">
-        <path d="M-20 382 C130 334 218 350 350 310 S600 238 750 285" stroke="#9ab0aa" stroke-width="30" opacity="0.11"/>
-        <path d="M-20 382 C130 334 218 350 350 310 S600 238 750 285" stroke="#a9c2bb" stroke-width="2" opacity="0.46"/>
-        <path d="M138 -30 C168 102 190 184 256 262 S342 414 342 540" stroke="#9ab0aa" stroke-width="24" opacity="0.1"/>
-        <path d="M138 -30 C168 102 190 184 256 262 S342 414 342 540" stroke="#a9c2bb" stroke-width="2" opacity="0.4"/>
-        <path d="M392 -30 C386 84 412 142 478 205 S564 360 548 540" stroke="#35e6bf" stroke-width="2" stroke-dasharray="8 12" opacity="0.43"/>
-      </g>
-
-      <g class="contact-map__blocks" fill="#102720" stroke="#4d6e65" stroke-width="1">
-        <rect x="42" y="72" width="132" height="70"/>
-        <rect x="207" y="52" width="102" height="102"/>
-        <rect x="64" y="184" width="106" height="85"/>
-        <rect x="214" y="188" width="132" height="62"/>
-        <rect x="420" y="76" width="104" height="66"/>
-        <rect x="558" y="72" width="112" height="86"/>
-        <rect x="558" y="332" width="104" height="86"/>
-        <rect x="401" y="360" width="111" height="68"/>
-        <rect x="95" y="405" width="142" height="55"/>
-      </g>
-
-      <g class="contact-map__target">
-        <circle cx="480" cy="235" r="42" fill="#35e6bf" opacity="0.12" filter="url(#contact-marker-glow)"/>
-        <circle cx="480" cy="235" r="17" fill="#071411" stroke="#35e6bf" stroke-width="3"/>
-        <circle cx="480" cy="235" r="5" fill="#35e6bf"/>
-        <path d="M480 254 L466 277 L494 277 Z" fill="#35e6bf"/>
-      </g>
-
-      <g class="contact-map__labels">
-        <text x="42" y="42" class="contact-map__campus">{% if map_zh %}清华大学校园{% else %}TSINGHUA UNIVERSITY CAMPUS{% endif %}</text>
-        <text x="503" y="218" class="contact-map__building">{% if map_zh %}郑裕彤医学楼{% else %}ZHENG YUTONG{% endif %}</text>
-        <text x="503" y="239" class="contact-map__building contact-map__building--sub">{% if map_zh %}基础医学院 · D108{% else %}MEDICAL BUILDING · D108{% endif %}</text>
-        <text x="663" y="459" class="contact-map__north">N</text>
-        <path d="M668 421 L658 444 L668 439 L678 444 Z" fill="#35e6bf"/>
-      </g>
-    </svg>
+    <iframe
+      src="https://maps.google.com/maps?hl={% if map_zh %}zh-CN{% else %}en{% endif %}&amp;q={{ map_query }}&amp;z=17&amp;output=embed"
+      title="{% if map_zh %}清华大学郑裕彤医学楼 Google 地图{% else %}Google Map of Zheng Yutong Medical Building{% endif %}"
+      aria-label="{% if map_zh %}清华大学郑裕彤医学楼及周边道路地图{% else %}Map showing Zheng Yutong Medical Building and nearby landmarks{% endif %}"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen>
+    </iframe>
   </div>
   <div class="contact-map__caption">
     <div>
@@ -67,6 +21,9 @@
       <strong>{% if map_zh %}清华大学郑裕彤医学楼{% else %}Zheng Yutong Medical Building{% endif %}</strong>
       <small>{% if map_zh %}基础医学院 · D108{% else %}School of Basic Medicine · D108{% endif %}</small>
     </div>
-    <em>{% if map_zh %}打开地图{% else %}Open map{% endif %} <span aria-hidden="true">↗</span></em>
+    <nav class="contact-map__links" aria-label="{% if map_zh %}地图链接{% else %}Map links{% endif %}">
+      <a href="{{ google_map_url }}" target="_blank" rel="noopener">Google Maps <span aria-hidden="true">↗</span></a>
+      <a href="{{ amap_url }}" target="_blank" rel="noopener">{% if map_zh %}高德地图{% else %}Amap{% endif %} <span aria-hidden="true">↗</span></a>
+    </nav>
   </div>
-</a>
+</div>
