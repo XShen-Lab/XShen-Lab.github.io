@@ -18,6 +18,16 @@ en:
       home_path: /images/research/genome-organization/nuclear-compartment-model.png
       alt: Conceptual model of L1-rich and B1-rich genome compartments positioned around the nuclear lamina, nucleolus and nuclear speckles
       caption: Conceptual model of nuclear compartments organized around the lamina, nucleolus and nuclear speckles.
+    gallery:
+      - path: /images/research/genome-organization/nuclear-compartment-model.png
+        alt: Conceptual model of L1-rich and B1-rich genome compartments positioned around the nuclear lamina, nucleolus and nuclear speckles
+        label: Nuclear compartment model
+      - path: /images/research/genome-organization/nuclear-architecture-dstorm.webp
+        alt: dSTORM image of a nucleus showing EU-labeled RNA in green and H3-marked chromatin in red
+        label: Nuclear architecture by dSTORM
+      - path: /images/research/genome-organization/chromatin-rnp-nanodomains.webp
+        alt: Magnified view of spatially interwoven EU-labeled RNA and H3-marked chromatin nanodomains
+        label: Chromatin–RNP nanodomains
     anchor: genome-organization
     motif: domain
   - key: processing
@@ -121,6 +131,16 @@ zh-CN:
       home_path: /images/research/genome-organization/nuclear-compartment-model.png
       alt: L1 富集与 B1 富集基因组区室围绕核纤层、核仁和核斑定位的概念模型
       caption: 围绕核纤层、核仁与核斑构建的细胞核区室概念模型。
+    gallery:
+      - path: /images/research/genome-organization/nuclear-compartment-model.png
+        alt: L1 富集与 B1 富集基因组区室围绕核纤层、核仁和核斑定位的概念模型
+        label: 细胞核区室模型
+      - path: /images/research/genome-organization/nuclear-architecture-dstorm.webp
+        alt: dSTORM 成像显示细胞核内绿色 EU 标记 RNA 与红色 H3 标记染色质
+        label: dSTORM 细胞核结构
+      - path: /images/research/genome-organization/chromatin-rnp-nanodomains.webp
+        alt: 放大视野显示 EU 标记 RNA 与 H3 标记染色质纳米结构的空间交织
+        label: 染色质–RNP 纳米结构
     anchor: genome-organization
     motif: domain
   - key: processing
