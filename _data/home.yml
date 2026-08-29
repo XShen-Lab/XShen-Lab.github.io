@@ -88,7 +88,7 @@ en:
 
 zh-CN:
   eyebrow: XShen Lab · 清华大学
-  hero_title: 生物信息流
+  hero_title: 生命信息流
   hero_title_en: Biological Information Flow
   hero_subtitle: 从基因组到细胞命运
   hero_question: 稀疏且随机的基因组活动如何转化为稳定的生物信息与细胞命运？
@@ -117,7 +117,7 @@ zh-CN:
   tension_stable_label: 生物学结果
   tension_stable_title: 多样 · 可重复 · 稳定
   tension_stable_text: 细胞状态能够跨越时间并在群体中持续存在。
-  flow_label: 生物信息流
+  flow_label: 生命信息流
   flow_title: 四个环节将波动转化为身份。
   flow_intro: 实验室将基因组组织、RNA–RBP 网状体系、转录监控与概率性细胞状态动力学连接在一个连续框架中。
   research_label: 研究项目
