@@ -3,6 +3,9 @@
   | where_exp: "member", "member.name != 'Name 中文名'"
   | sort: "name"
 %}
+{% if include.role == "phd" %}
+  {% assign gallery_members = gallery_members | sort: "cohort" %}
+{% endif %}
 {% assign gallery_count = gallery_members.size %}
 {% assign chinese_gallery = false %}
 {% assign count_label = "members" %}
