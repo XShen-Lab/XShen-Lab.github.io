@@ -39,7 +39,7 @@ title: 加入我们
         <span>招聘信息</span>
         <span class="join-status">开放申请</span>
       </div>
-      <h2>科研技术员与<br>本科生科研实习生</h2>
+      <h2>科研助理与<br>本科生科研实习生</h2>
       <p>欢迎具有实验生物学、生物信息学、数学、物理、计算机、统计学等背景的申请者加入。</p>
     </header>
 
@@ -63,7 +63,7 @@ title: 加入我们
         {{ overview | markdownify }}
       </section>
 
-      {% capture technician %}
+      {% capture assistant %}
 ### 岗位职责
 
 1. 协助团队推进相关科研项目，参与实验方案设计、优化及具体执行；
@@ -112,8 +112,8 @@ title: 加入我们
 4. 表现优秀者可获得长期发展支持，包括参与课题、论文工作及后续深造推荐等机会。
       {% endcapture %}
       <section class="join-role" data-reveal style="--reveal-order: 4">
-        <div class="join-role__label"><span>岗位 01</span><strong>科研技术员</strong></div>
-        <div class="join-role__content">{{ technician | markdownify }}</div>
+        <div class="join-role__label"><span>岗位 01</span><strong>科研助理</strong></div>
+        <div class="join-role__content">{{ assistant | markdownify }}</div>
       </section>
 
       {% capture intern %}
@@ -162,13 +162,13 @@ title: 加入我们
 
 有意申请者请根据申请岗位，将以下材料发送至招聘邮箱：[xshen@tsinghua.edu.cn](mailto:xshen@tsinghua.edu.cn)。
 
-### 申请技术员岗位者请提交
+### 申请科研助理岗位者请提交
 
 1. 个人简历，包括教育经历、工作/科研经历、掌握的实验技能、联系方式等；
 2. 相关证明材料，如学历学位证书、技能证书、论文、实验报告或其他科研成果证明（如有）；
 3. 建议在简历中简要说明可入职时间。
 
-**邮件标题格式：**`应聘技术员_姓名`
+**邮件标题格式：**`应聘科研助理_姓名`
 
 ### 申请本科生科研实习者请提交
 

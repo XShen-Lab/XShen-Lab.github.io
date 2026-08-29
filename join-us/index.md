@@ -42,7 +42,7 @@ nav:
         <span>Recruitment</span>
         <span class="join-status">Open</span>
       </div>
-      <h2>Research Technician &amp;<br>Undergraduate Research Intern</h2>
+      <h2>Research Assistant &amp;<br>Undergraduate Research Intern</h2>
       <p>We welcome applicants from experimental biology, bioinformatics, mathematics, physics, computer science, statistics, and related fields.</p>
     </header>
 
@@ -66,7 +66,7 @@ The laboratory provides comprehensive research platforms and academic support. T
         {{ overview | markdownify }}
       </section>
 
-      {% capture technician %}
+      {% capture assistant %}
 ### Responsibilities
 
 1. Support the team’s research projects and participate in experimental design, optimization, and execution.
@@ -116,8 +116,8 @@ The laboratory provides comprehensive research platforms and academic support. T
 4. Outstanding team members may receive long-term development support, including opportunities to contribute to projects and publications and recommendations for further study.
       {% endcapture %}
       <section class="join-role" data-reveal style="--reveal-order: 4">
-        <div class="join-role__label"><span>Position 01</span><strong>Research Technician</strong></div>
-        <div class="join-role__content">{{ technician | markdownify }}</div>
+        <div class="join-role__label"><span>Position 01</span><strong>Research Assistant</strong></div>
+        <div class="join-role__content">{{ assistant | markdownify }}</div>
       </section>
 
       {% capture intern %}
@@ -164,13 +164,13 @@ Undergraduate students from Tsinghua University and other institutions are welco
 
 Please send the materials below to [xshen@tsinghua.edu.cn](mailto:xshen@tsinghua.edu.cn), according to the position for which you are applying.
 
-### Research Technician Applicants
+### Research Assistant Applicants
 
 1. Curriculum vitae, including education, employment or research experience, technical skills, and contact information.
 2. Relevant supporting materials, such as degree certificates, technical certificates, publications, experimental reports, or other evidence of research accomplishments, if available.
 3. Please indicate your earliest available start date in the CV.
 
-**Email subject:** `Research Technician Application_Name`
+**Email subject:** `Research Assistant Application_Name`
 
 ### Undergraduate Research Internship Applicants
 
