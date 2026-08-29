@@ -6,6 +6,7 @@ image: images/fallback.svg
 description: PhD Candidate, 2020
 description_zh: 2020级博士研究生
 affiliation: School of Basic Medicine, Tsinghua University
+affiliation_zh: 清华大学基础医学院
 zh_url: /zh/people/zheng-zheng/
 links:
   email: zhengz20@mails.tsinghua.edu.cn

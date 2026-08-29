@@ -3,8 +3,14 @@ name: Luo, Sai 罗赛
 role: alumni
 image: images/members/luo-sai.jpg
 description: Alumni · Assistant Professor
+description_zh: 离组成员 · 助理教授
 affiliation: Center for Infection Biology, School of Basic Medical Sciences, Tsinghua University
+affiliation_zh: 清华大学基础医学院感染生物学中心
+zh_url: /zh/people/sai/
 profile_position: 50% 42%
+card_interests_zh:
+  - 疫苗与治疗性抗体开发
+  - B 细胞受体多样化的分子机制
 links:
   email: sailuo@tsinghua.edu.cn
   website: https://www.med.tsinghua.edu.cn/en/info/1141/2996.htm

@@ -3,9 +3,15 @@ name: Xu, Jingzhao 徐敬昭
 role: postdoc
 image: images/members/xujingzhao.jpg
 description: Postdoctoral Fellow
+description_zh: 博士后
 affiliation: School of Basic Medicine, Tsinghua University
+affiliation_zh: 清华大学基础医学院
+zh_url: /zh/people/jingzhao/
+card_interests_zh:
+  - 干细胞重编程
+  - 细胞命运决定
 links:
-  email: xujz_88@mail.tsinghua.edu.cn
+  email: 18854890631@163.com
 ---
 
 Postdoctoral Fellow in the XShen Lab.

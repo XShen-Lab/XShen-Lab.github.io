@@ -12,6 +12,7 @@
 {% assign research_items = research_source | regex_scan: '<li>(.*?)</li>', true, true %}
 {% assign card_interests = research_items %}
 {% if member.card_interests %}{% assign card_interests = member.card_interests %}{% endif %}
+{% if page.lang == "zh-CN" and member.card_interests_zh %}{% assign card_interests = member.card_interests_zh %}{% endif %}
 {% assign portrait_image_scale = member.card_image_scale | default: 1 %}
 {% assign portrait_image_hover_scale = portrait_image_scale | times: 1.035 %}
 {% assign portrait_image_position = member.card_position | default: '50% 50%' %}
@@ -57,8 +58,10 @@
         </span>
       {% endif %}
     {% elsif member.affiliation %}
+      {% assign portrait_affiliation = member.affiliation %}
+      {% if page.lang == "zh-CN" and member.affiliation_zh %}{% assign portrait_affiliation = member.affiliation_zh %}{% endif %}
       <span class="portrait-affiliation">
-        {{ member.affiliation }}
+        {{ portrait_affiliation }}
       </span>
     {% endif %}
   </a>

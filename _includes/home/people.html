@@ -5,6 +5,8 @@
 {% assign students = graduate_students | concat: undergraduate_students | sort: "name" %}
 {% assign alumni = site.members | where: "role", "alumni" | where_exp: "member", "member.name != 'Name 中文名'" | sort: "name" %}
 {% assign pi = principal_investigators | first %}
+{% assign pi_affiliation = pi.affiliation %}
+{% if page.lang == "zh-CN" and pi.affiliation_zh %}{% assign pi_affiliation = pi.affiliation_zh %}{% endif %}
 
 <div class="rna-people-layout" data-reveal>
   {% if pi %}
@@ -13,7 +15,7 @@
       <span class="rna-pi-overlay">
         <span class="rna-person-role">{{ include.home.labels.principal_investigator }}</span>
         <strong>{{ pi.name }}</strong>
-        <span>{{ pi.affiliation }}</span>
+        <span>{{ pi_affiliation }}</span>
       </span>
     </a>
   {% endif %}
@@ -33,9 +35,15 @@
         {% if members.size > 0 %}
           <div class="rna-person-list">
             {% for member in members limit: 2 %}
-              <a href="{{ member.url | relative_url }}" class="rna-person-row">
+              {% assign person_url = member.url %}
+              {% assign person_description = member.description %}
+              {% if page.lang == "zh-CN" %}
+                {% if member.zh_url %}{% assign person_url = member.zh_url %}{% endif %}
+                {% if member.description_zh %}{% assign person_description = member.description_zh %}{% endif %}
+              {% endif %}
+              <a href="{{ person_url | relative_url }}" class="rna-person-row">
                 {% include responsive-image.html image=member.image alt="" sizes="52px" %}
-                <span><strong>{{ member.name }}</strong><small>{{ member.description }}</small></span>
+                <span><strong>{{ member.name }}</strong><small>{{ person_description }}</small></span>
                 <span aria-hidden="true">↗</span>
               </a>
             {% endfor %}
