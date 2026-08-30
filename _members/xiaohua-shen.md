@@ -1,7 +1,7 @@
 ---
 name: Xiaohua Shen 沈晓骅
 role: principal-investigator
-image: images/members/xiaohua-shen.jpg
+image: images/members/xiaohua-shen-2026.jpg
 description: Principal Investigator
 description_zh: 课题组负责人
 affiliation: School of Basic Medicine, Tsinghua University
