@@ -352,8 +352,10 @@
 
 <picture class="responsive-image member-profile__picture">
   
-  <img src="/images/fallback.svg" class="member-profile__photo" alt="刘颖" loading="eager" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-</picture>
+    <source type="image/webp" srcset="/images/members/liuying-480.webp 480w, /images/members/liuying-960.webp 960w" sizes="(max-width: 820px) calc(100vw - 40px), 42vw">
+  
+  <img src="/images/members/liuying.jpg" class="member-profile__photo" alt="刘颖" loading="eager" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+</source></picture>
 
     <div class="member-profile__veil" aria-hidden="true"></div>
 

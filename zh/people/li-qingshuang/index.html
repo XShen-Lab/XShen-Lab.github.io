@@ -432,8 +432,10 @@
 
 <picture class="responsive-image member-profile__picture">
   
-  <img src="/images/fallback.svg" class="member-profile__photo" alt="李庆双" loading="eager" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-</picture>
+    <source type="image/webp" srcset="/images/members/liqingshuang-480.webp 480w, /images/members/liqingshuang-960.webp 960w" sizes="(max-width: 820px) calc(100vw - 40px), 42vw">
+  
+  <img src="/images/members/liqingshuang.jpg" class="member-profile__photo" alt="李庆双" loading="eager" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+</source></picture>
 
     <div class="member-profile__veil" aria-hidden="true"></div>
 
@@ -461,7 +463,14 @@
         <p class="member-profile__index">01</p>
         <h2>研究兴趣</h2>
         
-          <p class="member-profile__empty">研究兴趣待更新。</p>
+          
+
+<ul>
+  <li>转录调控</li>
+  <li>细胞核结构</li>
+</ul>
+
+
         
       </section>
 
