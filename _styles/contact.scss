@@ -246,7 +246,7 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
 .contact-profile-links a {
   position: relative;
   display: grid;
-  min-height: 138px;
+  min-height: 188px;
   padding: 24px 52px 24px 0;
   align-content: center;
   gap: 8px;
@@ -254,6 +254,30 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
   color: #eff8f4;
   text-decoration: none;
   transition: padding-left var(--transition), background var(--transition);
+}
+
+.contact-profile-links a .contact-profile-logo {
+  display: flex;
+  width: 100%;
+  max-width: 440px;
+  height: 64px;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid rgb(183 217 207 / 22%);
+  background: #fff;
+}
+
+.contact-profile-logo img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  border-radius: 0 !important;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .contact-profile-links a:hover {
@@ -278,10 +302,12 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
 
 .contact-profile-links a i {
   position: absolute;
+  top: 50%;
   right: 10px;
   color: #35e6bf;
   font-size: 1rem;
   font-style: normal;
+  translate: 0 -50%;
   transition: transform var(--transition);
 }
 
@@ -298,9 +324,7 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
   .contact-map {
     min-height: 560px;
   }
-}
 
-@media (max-width: 700px) {
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -328,6 +352,14 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
 
   .contact-card {
     padding: 34px 22px 40px;
+  }
+
+  .contact-profile-links a {
+    min-height: 172px;
+  }
+
+  .contact-profile-links a .contact-profile-logo {
+    height: 58px;
   }
 
   .contact-list > div {
