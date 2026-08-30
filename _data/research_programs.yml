@@ -107,16 +107,22 @@ en:
       home_path: /images/publications/2025-scfluent-seq/graphical-abstract.webp
       alt: scFLUENT-seq graphical abstract showing nascent RNA measurement across individual cells
       caption: scFLUENT-seq connects short-pulse nascent RNA measurements to probabilistic genome activity.
+    home_gallery:
+      - path: /images/research/cell-fate-dynamics/sparse-genome-usage.webp
+      - path: /images/research/cell-fate-dynamics/state-transition-trajectories.webp
     gallery:
       - path: /images/publications/2025-scfluent-seq/graphical-abstract.webp
         alt: scFLUENT-seq graphical abstract connecting sparse single-cell nascent transcription with developmental plasticity and cell-state progression
         label: scFLUENT-seq graphical abstract
-      - path: /images/research/cell-fate-dynamics/scfluent-workflow.webp
-        alt: scFLUENT-seq workflow with EU labeling, barcoded gel beads, template switching, biotin pull-down and separate new and old RNA libraries
-        label: scFLUENT-seq workflow · Figure 1A
-      - path: /images/research/cell-fate-dynamics/transition-cell-rna-dynamics.webp
-        alt: UMAP maps of RNA synthesis and decay rates highlighting transition cells
-        label: Transition-cell RNA dynamics · Figure 5E
+      - path: /images/research/cell-fate-dynamics/sparse-genome-usage.webp
+        alt: Single-cell genome coverage distributions and cumulative genome coverage across increasing numbers of cells
+        label: Sparse single-cell genome usage · Figure 2E–F
+      - path: /images/research/cell-fate-dynamics/cellular-plasticity.webp
+        alt: CytoTRACE-inferred cellular plasticity across acute perturbation and wash-off states
+        label: Nascent transcriptional diversity · Figure 7Diii
+      - path: /images/research/cell-fate-dynamics/state-transition-trajectories.webp
+        alt: Genic and intergenic nascent RNA pseudotime trajectories colored by CytoTRACE-inferred cellular plasticity
+        label: Cell-state transition trajectories · Figure 7C
     anchor: cell-fate-dynamics
     motif: field
 
@@ -233,15 +239,21 @@ zh-CN:
       home_path: /images/publications/2025-scfluent-seq/graphical-abstract.webp
       alt: scFLUENT-seq 图形摘要，展示在单细胞尺度测量新生 RNA
       caption: scFLUENT-seq 将短时脉冲标记的新生 RNA 测量与概率性基因组活动相连接。
+    home_gallery:
+      - path: /images/research/cell-fate-dynamics/sparse-genome-usage.webp
+      - path: /images/research/cell-fate-dynamics/state-transition-trajectories.webp
     gallery:
       - path: /images/publications/2025-scfluent-seq/graphical-abstract.webp
         alt: scFLUENT-seq 图形摘要，将稀疏的单细胞新生转录与发育可塑性和细胞状态进程相连接
         label: scFLUENT-seq 图形摘要
-      - path: /images/research/cell-fate-dynamics/scfluent-workflow.webp
-        alt: scFLUENT-seq 工作流程，包括 EU 标记、带条形码凝胶珠、模板转换、生物素富集以及新旧 RNA 文库分离
-        label: scFLUENT-seq 工作流程 · 图 1A
-      - path: /images/research/cell-fate-dynamics/transition-cell-rna-dynamics.webp
-        alt: RNA 合成速率与降解速率的 UMAP 图，标示过渡状态细胞
-        label: 过渡状态细胞 RNA 动力学 · 图 5E
+      - path: /images/research/cell-fate-dynamics/sparse-genome-usage.webp
+        alt: 单细胞基因组覆盖率分布，以及随细胞数量增加而累积扩展的基因组覆盖率
+        label: 稀疏的单细胞基因组使用 · 图 2E–F
+      - path: /images/research/cell-fate-dynamics/cellular-plasticity.webp
+        alt: 急性扰动与洗脱状态下由 CytoTRACE 推断的细胞可塑性
+        label: 新生转录多样性 · 图 7Diii
+      - path: /images/research/cell-fate-dynamics/state-transition-trajectories.webp
+        alt: 由 CytoTRACE 推断的细胞可塑性着色的基因区与基因间区新生 RNA 拟时序轨迹
+        label: 细胞状态转换轨迹 · 图 7C
     anchor: cell-fate-dynamics
     motif: field

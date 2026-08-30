@@ -706,9 +706,22 @@ main { padding-top: 76px; }
 .rna-research-card.motif-domain .rna-research-image img { object-position: 48% center; }
 .rna-research-card.motif-field .rna-research-image { background: #fff; }
 .rna-research-card.motif-field .rna-research-image img { padding: 12%; object-fit: contain; }
+.rna-research-card.motif-field .rna-research-image--gallery {
+  inset-inline-start: 50%;
+  display: grid;
+  padding: clamp(10px, 1.2vw, 16px) clamp(5px, 0.7vw, 10px);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 2px;
+  background: #d7ddd8;
+  opacity: 0.94;
+}
+.rna-research-image--gallery > span { display: grid; min-height: 0; overflow: hidden; background: #fff; }
+.rna-research-card.motif-field .rna-research-image--gallery img { min-height: 0; padding: clamp(4px, 0.5vw, 7px); object-fit: contain; filter: none; }
+.rna-research-image--gallery:after { background: linear-gradient(90deg, #f5f3eb 0%, rgb(245 243 235 / 65%) 10%, transparent 30%); }
 .rna-research-card.motif-checkpoint .rna-research-image { background: #f8f7f2; }
 .rna-research-card.motif-checkpoint .rna-research-image img { object-position: center 48%; }
 .rna-research-card--image .rna-research-copy { max-width: 69%; }
+.rna-research-card--image-gallery .rna-research-copy { max-width: 62%; }
 .rna-research-card--image:hover .rna-research-image img { filter: saturate(1) contrast(1.02); transform: scale(1.025); }
 .rna-research-flow { display: flex; max-width: 460px; margin-top: 24px; align-items: center; gap: 7px; color: #087f72; font-family: var(--code); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.07em; line-height: 1.35; text-transform: uppercase; }
 .rna-research-flow > span { padding: 5px 7px; border: 1px solid rgb(8 127 114 / 24%); background: rgb(245 243 235 / 82%); }
@@ -923,6 +936,7 @@ html[data-dark="true"] .rna-program-motif i { border-color: var(--primary); }
 html[data-dark="true"] .motif-mesh .rna-program-motif i { background: var(--primary); }
 html[data-dark="true"] .rna-publication-feature { background: #101f1c; }
 html[data-dark="true"] .rna-research-image:after { background: linear-gradient(90deg, #101f1c 0%, rgb(16 31 28 / 82%) 14%, transparent 70%); }
+html[data-dark="true"] .rna-research-image--gallery:after { background: linear-gradient(90deg, #101f1c 0%, rgb(16 31 28 / 68%) 10%, transparent 30%); }
 html[data-dark="true"] .rna-research-flow > span { background: rgb(16 31 28 / 82%); }
 
 /* Responsive --------------------------------------------------------------- */
@@ -962,6 +976,7 @@ html[data-dark="true"] .rna-research-flow > span { background: rgb(16 31 28 / 82
   .rna-flow-stage { min-height: 330px; opacity: 1; }
   .rna-research-card { grid-column: 1 / -1; min-height: 350px; padding-inline: 0 !important; border-right: 0 !important; }
   .rna-research-card--image .rna-research-copy { max-width: 72%; }
+  .rna-research-card--image-gallery .rna-research-copy { max-width: 64%; }
   .rna-method-copy { grid-template-columns: 1fr; }
   .rna-publication-feature { grid-template-columns: 1fr; }
   .rna-publication-copy { border-top: 1px solid #173d3635; border-left: 0; }
@@ -994,7 +1009,11 @@ html[data-dark="true"] .rna-research-flow > span { background: rgb(16 31 28 / 82
   .rna-stage-visual { width: 100px; opacity: 0.35; }
   .rna-research-title { font-size: 2.7rem; }
   .rna-research-card--image .rna-research-copy { max-width: 78%; }
+  .rna-research-card--image-gallery { min-height: 720px; }
+  .rna-research-card--image-gallery .rna-research-copy { max-width: 100%; padding-bottom: 280px; }
   .rna-research-image { inset-inline-start: 42%; opacity: 0.62; }
+  .rna-research-card.motif-field .rna-research-image--gallery { inset: auto 0 46px; height: 235px; padding: 6px; opacity: 0.94; }
+  .rna-research-image--gallery:after { display: none; }
   .rna-research-flow { max-width: 100%; flex-wrap: wrap; }
   .rna-program-motif { width: 72px; height: 72px; }
   .rna-scale-list { grid-template-columns: 1fr; }

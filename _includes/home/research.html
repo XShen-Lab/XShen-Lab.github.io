@@ -1,9 +1,13 @@
 <div class="rna-research-grid">
   {% for item in include.programs %}
-    <a class="rna-research-card motif-{{ item.motif }}{% if item.image.home_path %} rna-research-card--image{% endif %}" href="{{ include.research_url | append: '#' | append: item.anchor | relative_url }}" data-reveal style="--reveal-order: {{ forloop.index }}">
+    <a class="rna-research-card motif-{{ item.motif }}{% if item.home_gallery or item.image.home_path %} rna-research-card--image{% endif %}{% if item.home_gallery %} rna-research-card--image-gallery{% endif %}" href="{{ include.research_url | append: '#' | append: item.anchor | relative_url }}" data-reveal style="--reveal-order: {{ forloop.index }}">
       <span class="rna-research-number">0{{ forloop.index }}</span>
       <span class="rna-research-signal">{{ item.operation }}{% if item.operation_en %} / {{ item.operation_en }}{% endif %}</span>
-      {% if item.image.home_path %}
+      {% if item.home_gallery %}
+        <span class="rna-research-image rna-research-image--gallery" aria-hidden="true">
+          {% for image in item.home_gallery %}<span><img src="{{ image.path | relative_url }}" alt="" loading="lazy" decoding="async"></span>{% endfor %}
+        </span>
+      {% elsif item.image.home_path %}
         <span class="rna-research-image" aria-hidden="true"><img src="{{ item.image.home_path | relative_url }}" alt="" loading="lazy" decoding="async"></span>
       {% endif %}
       <span class="rna-research-copy">
