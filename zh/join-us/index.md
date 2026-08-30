@@ -111,9 +111,9 @@ title: 加入我们
 3. 支持参与实验室学术交流、技能培训、组会讨论及合作研究，为个人科研能力提升提供平台；
 4. 表现优秀者可获得长期发展支持，包括参与课题、论文工作及后续深造推荐等机会。
       {% endcapture %}
-      <section class="join-role" data-reveal style="--reveal-order: 4">
-        <div class="join-role__label"><span>岗位 01</span><strong>科研助理</strong></div>
-        <div class="join-role__content">{{ assistant | markdownify }}</div>
+      <section class="join-role" aria-labelledby="join-role-assistant-title" data-reveal style="--reveal-order: 4">
+        <div class="join-role__label"><span>岗位 01</span></div>
+        <div class="join-role__content"><h2 class="join-role__title" id="join-role-assistant-title">科研助理</h2>{{ assistant | markdownify }}</div>
       </section>
 
       {% capture intern %}
@@ -152,9 +152,9 @@ title: 加入我们
 2. 根据实习内容、投入时间及实验室相关规定，可视情况提供适当补贴或支持，具体面议；
 3. 对长期稳定参与且表现突出的同学，实验室可在后续科研训练、研究生申请、推荐信等方面提供支持。
       {% endcapture %}
-      <section class="join-role" data-reveal style="--reveal-order: 5">
-        <div class="join-role__label"><span>岗位 02</span><strong>本科生科研实习生</strong></div>
-        <div class="join-role__content">{{ intern | markdownify }}</div>
+      <section class="join-role" aria-labelledby="join-role-intern-title" data-reveal style="--reveal-order: 5">
+        <div class="join-role__label"><span>岗位 02</span></div>
+        <div class="join-role__content"><h2 class="join-role__title" id="join-role-intern-title">本科生科研实习生</h2>{{ intern | markdownify }}</div>
       </section>
 
       {% capture application %}

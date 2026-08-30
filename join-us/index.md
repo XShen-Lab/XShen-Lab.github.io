@@ -115,9 +115,9 @@ The laboratory provides comprehensive research platforms and academic support. T
 3. Lab members may participate in academic exchanges, technical training, lab meetings, and collaborative research.
 4. Outstanding team members may receive long-term development support, including opportunities to contribute to projects and publications and recommendations for further study.
       {% endcapture %}
-      <section class="join-role" data-reveal style="--reveal-order: 4">
-        <div class="join-role__label"><span>Position 01</span><strong>Research Assistant</strong></div>
-        <div class="join-role__content">{{ assistant | markdownify }}</div>
+      <section class="join-role" aria-labelledby="join-role-assistant-title" data-reveal style="--reveal-order: 4">
+        <div class="join-role__label"><span>Position 01</span></div>
+        <div class="join-role__content"><h2 class="join-role__title" id="join-role-assistant-title">Research Assistant</h2>{{ assistant | markdownify }}</div>
       </section>
 
       {% capture intern %}
@@ -154,9 +154,9 @@ Undergraduate students from Tsinghua University and other institutions are welco
 2. Depending on the project, time commitment, and laboratory policies, appropriate support or a stipend may be discussed.
 3. Students who participate consistently and perform well may receive further support with research training, graduate-school applications, and recommendation letters.
       {% endcapture %}
-      <section class="join-role" data-reveal style="--reveal-order: 5">
-        <div class="join-role__label"><span>Position 02</span><strong>Undergraduate Research Intern</strong></div>
-        <div class="join-role__content">{{ intern | markdownify }}</div>
+      <section class="join-role" aria-labelledby="join-role-intern-title" data-reveal style="--reveal-order: 5">
+        <div class="join-role__label"><span>Position 02</span></div>
+        <div class="join-role__content"><h2 class="join-role__title" id="join-role-intern-title">Undergraduate Research Intern</h2>{{ intern | markdownify }}</div>
       </section>
 
       {% capture application %}

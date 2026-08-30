@@ -1587,7 +1587,7 @@ html[lang="zh-CN"] .page-inner main .join-posting__header h2 {
 }
 
 .join-role {
-  grid-template-columns: minmax(250px, 0.31fr) minmax(0, 1fr);
+  grid-template-columns: minmax(150px, 0.2fr) minmax(0, 1fr);
 }
 
 .join-role__label {
@@ -1596,16 +1596,14 @@ html[lang="zh-CN"] .page-inner main .join-posting__header h2 {
   padding: clamp(30px, 4vw, 52px);
 }
 
-.join-role__label strong {
-  position: sticky;
-  top: 126px;
-  max-width: 100%;
-  font-size: clamp(1.85rem, 2.45vw, 2.65rem);
-  line-height: 1.12;
-  letter-spacing: -0.025em;
-  hyphens: auto;
-  overflow-wrap: anywhere;
-  text-wrap: pretty;
+.page-inner main .join-role__title {
+  max-width: 16ch;
+  margin: 0 0 clamp(34px, 5vw, 58px);
+  font-size: clamp(2.5rem, 4.2vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  overflow-wrap: normal;
+  text-wrap: balance;
 }
 
 .page-inner main .join-role__content h3,
@@ -2316,10 +2314,10 @@ html[lang="zh-CN"] .research-hero h1 {
   letter-spacing: -0.022em;
 }
 
-.join-role__label strong {
-  font-size: clamp(1.7rem, 2vw, 2.25rem);
-  line-height: 1.18;
-  letter-spacing: -0.012em;
+.page-inner main .join-role__title {
+  font-size: clamp(2.4rem, 3.9vw, 4.15rem);
+  line-height: 1.06;
+  letter-spacing: -0.025em;
 }
 
 .page-inner main .join-role__content h3,
@@ -2404,9 +2402,8 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
     border-bottom: 1px solid var(--line);
   }
 
-  .join-role__label strong {
+  .join-role__label span {
     position: static;
-    margin-top: 20px;
   }
 }
 
@@ -2499,9 +2496,10 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
     line-height: 1.1;
   }
 
-  .join-role__label strong {
-    font-size: clamp(1.7rem, 7.5vw, 2.3rem);
-    line-height: 1.18;
+  .page-inner main .join-role__title {
+    margin-bottom: 32px;
+    font-size: clamp(2.35rem, 10vw, 3.2rem);
+    line-height: 1.08;
   }
 }
 

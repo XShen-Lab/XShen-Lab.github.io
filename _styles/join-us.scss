@@ -326,7 +326,8 @@ html[lang="zh-CN"] .page-inner main .join-posting__header h2 {
 
 .join-role {
   display: grid;
-  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  grid-template-columns: minmax(150px, 0.2fr) minmax(0, 1fr);
+  padding: 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -336,12 +337,13 @@ html[lang="zh-CN"] .page-inner main .join-posting__header h2 {
   background: var(--background-alt);
 }
 
-.join-role__label span,
-.join-role__label strong {
+.join-role__label span {
   display: block;
 }
 
 .join-role__label span {
+  position: sticky;
+  top: 126px;
   color: var(--primary);
   font-family: var(--code);
   font-size: 0.72rem;
@@ -350,15 +352,16 @@ html[lang="zh-CN"] .page-inner main .join-posting__header h2 {
   text-transform: uppercase;
 }
 
-.join-role__label strong {
-  position: sticky;
-  top: 116px;
-  margin-top: 46px;
+.page-inner main .join-role__title {
+  max-width: 16ch;
+  margin: 0 0 clamp(34px, 5vw, 58px);
   font-family: var(--heading);
-  font-size: clamp(2rem, 3.2vw, 3.6rem);
+  font-size: clamp(2.5rem, 4.8vw, 5rem);
   font-weight: 500;
   letter-spacing: -0.035em;
-  line-height: 0.96;
+  line-height: 1.02;
+  overflow-wrap: normal;
+  text-wrap: balance;
 }
 
 .join-role__content {
@@ -416,6 +419,8 @@ html[lang="zh-CN"] .page-inner main .join-posting__header h2 {
   border: 1px solid var(--line);
   background: var(--background);
   color: var(--text);
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 @media (max-width: 860px) {
@@ -433,9 +438,8 @@ html[lang="zh-CN"] .page-inner main .join-posting__header h2 {
     border-bottom: 1px solid var(--line);
   }
 
-  .join-role__label strong {
+  .join-role__label span {
     position: static;
-    margin-top: 20px;
   }
 }
 
