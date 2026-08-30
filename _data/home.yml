@@ -13,8 +13,6 @@ en:
     label: Biological information flow image carousel
     previous: Previous image
     next: Next image
-    pause: Pause carousel
-    play: Resume carousel
     slides:
       - image: /images/home/information-flow/molecular-crowding.webp
         width: 598
@@ -134,8 +132,6 @@ zh-CN:
     label: 生命信息流图像轮播
     previous: 上一张图片
     next: 下一张图片
-    pause: 暂停轮播
-    play: 继续轮播
     slides:
       - image: /images/home/information-flow/molecular-crowding.webp
         width: 598

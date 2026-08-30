@@ -169,7 +169,7 @@ body {
   z-index: 3;
   top: clamp(148px, 17vh, 184px);
   right: max(var(--gutter), calc((100% - var(--page)) / 2));
-  width: min(430px, 31vw);
+  width: min(480px, 34vw);
   border: 1px solid var(--line);
   background: var(--surface);
   box-shadow: 0 24px 70px rgb(25 32 28 / 10%);
@@ -181,6 +181,7 @@ body {
 }
 
 .rna-hero-carousel__viewport {
+  position: relative;
   overflow: hidden;
   background: #fff;
   cursor: grab;
@@ -202,7 +203,7 @@ body {
   display: grid;
   flex: 0 0 100%;
   grid-template-rows: minmax(0, 1fr) auto;
-  height: clamp(310px, 38vh, 360px);
+  height: clamp(440px, 52vh, 480px);
   margin: 0;
   background: #fff;
 }
@@ -250,71 +251,51 @@ body {
   font-family: var(--code);
 }
 
-.rna-hero-carousel__controls {
+.rna-hero-carousel__arrow {
+  position: absolute;
+  z-index: 3;
+  top: calc((100% - 42px) / 2);
   display: grid;
-  min-height: 46px;
-  grid-template-columns: 44px auto minmax(28px, 1fr) 44px 44px;
-  align-items: center;
-  border-top: 1px solid var(--line);
-  background: var(--background);
-}
-
-.rna-hero-carousel__controls button {
-  display: grid;
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   padding: 0;
-  border: 0;
-  background: transparent;
+  border: 1px solid rgb(31 34 30 / 16%);
+  border-radius: 50%;
+  background: rgb(249 247 239 / 68%);
+  box-shadow: 0 6px 18px rgb(31 34 30 / 8%);
   color: var(--text);
   cursor: pointer;
   font-family: var(--sans);
-  font-size: 1rem;
+  font-size: 1.05rem;
+  opacity: 0.72;
   place-items: center;
+  translate: 0 -50%;
+  backdrop-filter: blur(8px);
+  transition: opacity var(--transition), background var(--transition), transform var(--transition);
 }
 
-.rna-hero-carousel__controls button:hover,
-.rna-hero-carousel__controls button:focus-visible {
-  background: var(--text);
-  color: var(--background);
-  outline: 0;
+.rna-hero-carousel__arrow--previous {
+  left: 14px;
 }
 
-.rna-hero-carousel__controls [data-hero-carousel-toggle],
-.rna-hero-carousel__controls [data-hero-carousel-next] {
-  border-left: 1px solid var(--line);
+.rna-hero-carousel__arrow--next {
+  right: 14px;
 }
 
-.rna-hero-carousel__controls p {
-  min-width: 58px;
-  margin: 0;
-  color: var(--text-soft);
-  font-family: var(--code);
-  font-size: 0.68rem;
-  letter-spacing: 0.04em;
-  text-align: center;
+.rna-hero-carousel__arrow:hover,
+.rna-hero-carousel__arrow:focus-visible {
+  background: rgb(249 247 239 / 88%);
+  opacity: 1;
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
-.rna-hero-carousel__controls p [data-hero-carousel-current] {
-  color: var(--primary);
-  font-weight: 700;
+.rna-hero-carousel__arrow--previous:hover {
+  transform: translateX(-3px);
 }
 
-.rna-hero-carousel__progress {
-  height: 1px;
-  margin: 0 10px;
-  overflow: hidden;
-  background: var(--line);
-}
-
-.rna-hero-carousel__progress i {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: var(--primary);
-  transform: scaleX(0.2);
-  transform-origin: left center;
-  transition: transform 0.55s ease;
+.rna-hero-carousel__arrow--next:hover {
+  transform: translateX(3px);
 }
 
 .rna-hero-carousel .visually-hidden {
@@ -331,7 +312,7 @@ body {
 .rna-hero-index {
   position: absolute;
   right: max(var(--gutter), calc((100% - var(--page)) / 2));
-  bottom: clamp(78px, 10vh, 112px);
+  bottom: clamp(20px, 3vh, 32px);
   display: grid;
   width: min(270px, 23vw);
   border-top: 1px solid var(--text);
@@ -415,12 +396,9 @@ body {
     height: clamp(330px, 104vw, 440px);
   }
 
-  .rna-hero-carousel__controls {
-    grid-template-columns: 42px auto minmax(18px, 1fr) 42px 42px;
-  }
-
-  .rna-hero-carousel__controls button {
+  .rna-hero-carousel__arrow {
     width: 42px;
+    height: 42px;
   }
 
   .rna-hero-actions {
@@ -2505,7 +2483,6 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
 
 @media (prefers-reduced-motion: reduce) {
   .rna-hero-carousel__track,
-  .rna-hero-carousel__progress i,
   .blog-card-image img,
   .member-profile__photo,
   .research-hero__signal {

@@ -38,8 +38,6 @@
       <div
         class="rna-hero-carousel"
         data-hero-carousel
-        data-pause-label="{{ home.hero_carousel.pause | escape }}"
-        data-play-label="{{ home.hero_carousel.play | escape }}"
         role="region"
         aria-roledescription="carousel"
         aria-label="{{ home.hero_carousel.label | escape }}"
@@ -58,13 +56,9 @@
               </figure>
             {% endfor %}
           </div>
-        </div>
-        <div class="rna-hero-carousel__controls">
-          <button type="button" data-hero-carousel-previous aria-label="{{ home.hero_carousel.previous | escape }}"><span aria-hidden="true">←</span></button>
-          <p data-hero-carousel-status aria-live="off"><span data-hero-carousel-current>01</span><span aria-hidden="true"> / </span><span>0{{ home.hero_carousel.slides.size }}</span><span class="visually-hidden" data-hero-carousel-title>{{ home.hero_carousel.slides.first.title }}</span></p>
-          <span class="rna-hero-carousel__progress" aria-hidden="true"><i data-hero-carousel-progress></i></span>
-          <button type="button" data-hero-carousel-toggle aria-label="{{ home.hero_carousel.pause | escape }}"><span aria-hidden="true">Ⅱ</span></button>
-          <button type="button" data-hero-carousel-next aria-label="{{ home.hero_carousel.next | escape }}"><span aria-hidden="true">→</span></button>
+          <button class="rna-hero-carousel__arrow rna-hero-carousel__arrow--previous" type="button" data-hero-carousel-previous aria-label="{{ home.hero_carousel.previous | escape }}"><span aria-hidden="true">←</span></button>
+          <button class="rna-hero-carousel__arrow rna-hero-carousel__arrow--next" type="button" data-hero-carousel-next aria-label="{{ home.hero_carousel.next | escape }}"><span aria-hidden="true">→</span></button>
+          <p class="visually-hidden" data-hero-carousel-status aria-live="polite"><span data-hero-carousel-current>01</span><span aria-hidden="true"> / </span><span>0{{ home.hero_carousel.slides.size }}</span><span data-hero-carousel-title> — {{ home.hero_carousel.slides.first.title }}</span></p>
         </div>
       </div>
     {% endif %}
