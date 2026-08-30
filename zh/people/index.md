@@ -14,6 +14,7 @@ member_gallery: true
     <a href="#博士后">博士后</a>
     <a href="#研究生">研究生</a>
     <a href="#本科生">本科生</a>
+    <a href="#科研助理">科研助理</a>
     <a href="#离组成员">离组成员</a>
   </nav>
 </div>
@@ -54,6 +55,16 @@ member_gallery: true
 <div class="people-section">
   <h2 id="本科生">本科生</h2>
   {% include people/gallery.html role="undergrad" id="zh-undergraduate-gallery" label="本科生成员" %}
+</div>
+
+{% include section.html %}
+
+<div class="people-section people-section--placeholder">
+  <h2 id="科研助理">科研助理</h2>
+  <div class="people-placeholder" aria-label="科研助理">
+    <span>科研助理</span>
+    <strong>信息待更新</strong>
+  </div>
 </div>
 
 {% include section.html %}

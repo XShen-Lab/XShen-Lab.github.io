@@ -17,6 +17,7 @@ nav:
     <a href="#post-docs">Post Docs</a>
     <a href="#graduate-students">Graduate Students</a>
     <a href="#undergraduate-students">Undergraduate Students</a>
+    <a href="#research-assistants">Research Assistants</a>
     <a href="#alumni">Alumni</a>
   </nav>
 </div>
@@ -57,6 +58,16 @@ nav:
 <div class="people-section">
   <h2 id="undergraduate-students">Undergraduate Students</h2>
   {% include people/gallery.html role="undergrad" id="undergraduate-gallery" label="Undergraduate students" %}
+</div>
+
+{% include section.html %}
+
+<div class="people-section people-section--placeholder">
+  <h2 id="research-assistants">Research Assistants</h2>
+  <div class="people-placeholder" aria-label="Research Assistants">
+    <span>Research Assistant</span>
+    <strong>Information forthcoming</strong>
+  </div>
 </div>
 
 {% include section.html %}
