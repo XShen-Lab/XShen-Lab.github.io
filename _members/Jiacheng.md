@@ -1,6 +1,7 @@
 ---
 name: Yin, Jiacheng 印家承
 role: undergrad
+cohort: 2023
 image: images/members/yinjiacheng.jpg
 description: Undergraduate, 2023
 description_zh: 2023级本科生

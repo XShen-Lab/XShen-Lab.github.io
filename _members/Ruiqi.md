@@ -1,6 +1,7 @@
 ---
 name: Deng, Ruiqi 邓睿琦
 role: undergrad
+cohort: 2023
 image: images/members/dengruiqi.jpg
 description: Undergraduate, 2023
 description_zh: 2023级本科生
