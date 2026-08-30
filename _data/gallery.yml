@@ -1,0 +1,248 @@
+ui:
+  en:
+    eyebrow: XShen Lab Gallery
+    title: Ways of seeing.
+    intro: A collection of scientific models, conceptual maps, and visual prompts that shape how we think about biological information flow.
+    invitation: Enter the collection
+    collection_label: Three halls · Twelve works
+    hall_label: Hall
+    view_work: View work
+    close: Close
+    previous: Previous work
+    next: Next work
+    counter_label: Work
+  zh-CN:
+    eyebrow: XShen Lab 展廊
+    title: 观看的方式。
+    intro: 一组塑造我们对生物信息流思考方式的科学模型、概念图景与视觉提示。
+    invitation: 进入展廊
+    collection_label: 三座展厅 · 十二件展品
+    hall_label: 展厅
+    view_work: 查看展品
+    close: 关闭
+    previous: 上一件展品
+    next: 下一件展品
+    counter_label: 展品
+
+halls:
+  - id: molecular-landscapes
+    number: "01"
+    title:
+      en: Molecular Landscapes
+      zh-CN: 分子景观
+    intro:
+      en: From crowded molecular space to the nuclear RNA meshwork, these views make invisible organization tangible.
+      zh-CN: 从拥挤的分子空间到核内 RNA 网状体系，这些图景让不可见的组织关系变得可感知。
+    works:
+      - id: molecular-landscape
+        image: /images/gallery/molecular-landscape.jpg
+        format: square
+        frame: amber
+        title:
+          en: Molecular Landscape
+          zh-CN: 分子景观
+        caption:
+          en: A crowded molecular scene in which structure, proximity, and interaction coexist at cellular scale.
+          zh-CN: 拥挤的分子场景：结构、邻近关系与相互作用在细胞尺度上同时发生。
+        alt:
+          en: Illustrated crowded molecular environment with many interacting cellular components.
+          zh-CN: 由众多相互作用的细胞组分构成的拥挤分子环境示意图。
+        source:
+          en: Lab collection
+          zh-CN: 实验室收藏
+      - id: chromatin-rnp-mesh
+        image: /images/gallery/chromatin-rnp-mesh.jpg
+        format: compact
+        frame: paper
+        title:
+          en: Chromatin–RNA–RNP Mesh
+          zh-CN: 染色质–RNA–RNP 网状体系
+        caption:
+          en: A compact conceptual link between chromatin, transcription, RNA, and the nuclear RNP meshwork.
+          zh-CN: 以概念图连接染色质、转录、RNA 与核内 RNP 网状体系。
+        alt:
+          en: Concept diagram linking chromatin, transcription, RNA, and the RNP mesh.
+          zh-CN: 连接染色质、转录、RNA 与 RNP 网状体系的概念图。
+        source:
+          en: Lab collection
+          zh-CN: 实验室收藏
+      - id: rna-as-matter
+        image: /images/gallery/rna-as-matter.jpg
+        format: wide
+        frame: paper
+        title:
+          en: RNA as Nuclear Matter
+          zh-CN: 作为核内物质的 RNA
+        caption:
+          en: RNA carries information, but its abundance, charge, and multivalent interactions also contribute to the physical state of the nucleus.
+          zh-CN: RNA 不仅携带信息；其丰度、电荷与多价相互作用也参与塑造细胞核的物理状态。
+        alt:
+          en: Scientific slide presenting RNA as both information and material of the nucleus.
+          zh-CN: 展示 RNA 既是信息载体也是细胞核物质组成的科学幻灯片。
+        source:
+          en: Lab talk · slide 18
+          zh-CN: 实验室报告 · 第 18 页
+      - id: nuclear-rna-systems-model
+        image: /images/gallery/nuclear-rna-systems-model.jpg
+        format: wide
+        frame: silver
+        title:
+          en: A Systems View of Nuclear RNA
+          zh-CN: 核内 RNA 的系统视图
+        caption:
+          en: An extracted model connecting chromatin folding, transcription, RNP assembly, RNA processing, and translation.
+          zh-CN: 提取自报告的模型，连接染色质折叠、转录、RNP 组装、RNA 处理与翻译。
+        alt:
+          en: Systems model linking chromatin folding, transcription, nuclear RNPs, messenger RNPs, the exosome, and translation.
+          zh-CN: 连接染色质折叠、转录、核内 RNP、信使 RNP、外泌体复合物与翻译的系统模型。
+        source:
+          en: Lab talk · slide 21 · left model
+          zh-CN: 实验室报告 · 第 21 页左侧模型
+
+  - id: biological-information
+    number: "02"
+    title:
+      en: Models of Biological Information
+      zh-CN: 生物信息模型
+    intro:
+      en: Working diagrams trace a path from pervasive transcription toward productive genome usage and stable biological outcomes.
+      zh-CN: 这些工作模型勾勒出从广泛转录到生产性基因组使用及稳定生物学结果的路径。
+    works:
+      - id: two-paradoxes
+        image: /images/gallery/two-paradoxes.jpg
+        format: wide
+        frame: paper
+        title:
+          en: Two Paradoxes of Genome Regulation
+          zh-CN: 基因组调控的两个悖论
+        caption:
+          en: One genome gives rise to many stable cell types, while pervasive transcription yields a highly selective mature-mRNA output.
+          zh-CN: 同一基因组产生多种稳定细胞类型，而广泛转录最终形成高度选择性的成熟 mRNA 输出。
+        alt:
+          en: Scientific slide contrasting one genome with many stable cell types and pervasive transcription with selective mRNA output.
+          zh-CN: 对比同一基因组与多种稳定细胞类型，以及广泛转录与选择性 mRNA 输出的科学幻灯片。
+        source:
+          en: Lab talk · slide 3
+          zh-CN: 实验室报告 · 第 3 页
+      - id: noise-to-order
+        image: /images/gallery/noise-to-order.jpg
+        format: wide
+        frame: silver
+        title:
+          en: From Noise to Order
+          zh-CN: 从噪声到秩序
+        caption:
+          en: A conceptual progression from transcriptional noise to surveillance, ordered RNA output, and diverse cell states.
+          zh-CN: 从转录噪声出发，经由转录监控形成有序 RNA 输出与多样细胞状态的概念路径。
+        alt:
+          en: Scientific slide showing transcriptional surveillance imposing order on genome-wide transcriptional noise.
+          zh-CN: 展示转录监控如何在全基因组转录噪声中建立秩序的科学幻灯片。
+        source:
+          en: Lab talk · slide 12
+          zh-CN: 实验室报告 · 第 12 页
+      - id: productive-genome-usage
+        image: /images/gallery/productive-genome-usage.jpg
+        format: wide
+        frame: paper
+        title:
+          en: Productive Genome Usage
+          zh-CN: 生产性基因组使用
+        caption:
+          en: A working theory linking genome partition, polymerase selection, transcriptional surveillance, and nuclear feedback.
+          zh-CN: 一个连接基因组分区、聚合酶选择、转录监控与细胞核反馈的工作理论。
+        alt:
+          en: Scientific slide outlining a theory of productive genome usage and cell identity.
+          zh-CN: 概述生产性基因组使用与细胞身份理论的科学幻灯片。
+        source:
+          en: Lab talk · slide 23
+          zh-CN: 实验室报告 · 第 23 页
+      - id: dynamics-in-time
+        image: /images/gallery/dynamics-in-time.jpg
+        format: wide
+        frame: amber
+        title:
+          en: Biology = Dynamics in Time
+          zh-CN: 生物学即时间中的动力学
+        caption:
+          en: The same molecules can support different biological lives; timing is part of the mechanism.
+          zh-CN: 相同的分子可以支撑不同的生命历程；时间本身就是机制的一部分。
+        alt:
+          en: Slide with Barbara McClintock and a quotation about timing gene action, ending with Biology equals Dynamics in time.
+          zh-CN: 包含芭芭拉·麦克林托克及基因作用时序引文，并以“生物学即时间中的动力学”作结的幻灯片。
+        source:
+          en: Lab talk · slide 25
+          zh-CN: 实验室报告 · 第 25 页
+
+  - id: ways-of-seeing
+    number: "03"
+    title:
+      en: Ways of Seeing
+      zh-CN: 观看与思考
+    intro:
+      en: Science advances by changing viewpoints, testing ideas in conversation, and allowing evidence to change our minds.
+      zh-CN: 科学通过转换视角、在讨论中检验想法，并允许证据改变我们的认识而向前推进。
+    works:
+      - id: many-views-one-object
+        image: /images/gallery/many-views-one-object.jpg
+        format: tall
+        frame: midnight
+        title:
+          en: Many Views, One Object
+          zh-CN: 多重视角，同一对象
+        caption:
+          en: Each perspective can be valid within its own view, yet no single projection captures the whole object.
+          zh-CN: 每个视角都可能在其观察范围内成立，但任何单一投影都无法呈现对象的全貌。
+        alt:
+          en: Three-panel illustration showing how different three-dimensional objects cast different partial projections.
+          zh-CN: 三联画示意不同三维物体如何形成不同而局部的投影。
+        source:
+          en: Lab collection
+          zh-CN: 实验室收藏
+      - id: discussion-over-argument
+        image: /images/gallery/discussion-over-argument.jpg
+        format: square
+        frame: paper
+        title:
+          en: Discussion over Argument
+          zh-CN: 讨论，而非争胜
+        caption:
+          en: The goal is not to establish who is right, but to discover what is right.
+          zh-CN: 目标不是证明谁是对的，而是共同发现什么是对的。
+        alt:
+          en: Illustrated quotation contrasting arguments that find who is right with discussions that find what is right.
+          zh-CN: 对比“争论谁对”与“讨论什么是对”的插画引文。
+        source:
+          en: Lab collection
+          zh-CN: 实验室收藏
+      - id: truth-changes-minds
+        image: /images/gallery/truth-changes-minds.jpg
+        format: square
+        frame: paper
+        title:
+          en: Truth Changes Minds
+          zh-CN: 真相改变认知
+        caption:
+          en: Good science is a willingness to test assumptions and let new evidence revise what we believe.
+          zh-CN: 好的科学意味着愿意检验假设，并让新的证据修正我们的认识。
+        alt:
+          en: Illustrated quotation saying good science is about discovering what is right and that truth changes minds.
+          zh-CN: 表达“好的科学在于发现什么是对的，真相会改变认知”的插画引文。
+        source:
+          en: Lab collection
+          zh-CN: 实验室收藏
+      - id: where-do-we-come-from
+        image: /images/gallery/where-do-we-come-from.jpg
+        format: panorama
+        frame: gold
+        title:
+          en: Where Do We Come From? What Are We? Where Are We Going?
+          zh-CN: 我们从哪里来？我们是谁？我们到哪里去？
+        caption:
+          en: A final, panoramic question about origins, identity, and direction—questions shared by art and science.
+          zh-CN: 关于起源、身份与方向的全景式追问，也是艺术与科学共同面对的问题。
+        alt:
+          en: Panoramic painting of human figures in a tropical landscape, presented as the closing image of the lab talk.
+          zh-CN: 描绘热带景观中多个人物的横幅画作，作为实验室报告的结尾图像。
+        source:
+          en: Lab talk · slide 27 · artwork
+          zh-CN: 实验室报告 · 第 27 页画作

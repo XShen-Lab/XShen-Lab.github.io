@@ -27,12 +27,16 @@
   <script src="{{ '/_scripts/research-flow.js' | relative_url }}" defer></script>
 {% endif %}
 
+{% if page.gallery_flow %}
+  <script src="{{ '/_scripts/gallery.js' | relative_url }}" defer></script>
+{% endif %}
+
 {% if page.layout == "member" %}
   <script src="{{ '/_scripts/member-profile.js' | relative_url }}" defer></script>
 {% endif %}
 
 <!-- Interior-page heading links; never loaded on the RNA homepage. -->
-{% unless page.url == "/" or page.url == "/zh/" %}
+{% unless page.url == "/" or page.url == "/zh/" or page.disable_heading_anchors %}
   <script src="{{ '/_scripts/anchors.js' | relative_url }}" defer></script>
 {% endunless %}
 

@@ -3,7 +3,7 @@
   {% include head.html %}
   {% assign is_home = false %}
   {% if page.url == "/" or page.url == "/zh/" %}{% assign is_home = true %}{% endif %}
-  <body class="{% if is_home %}page-home{% elsif page.layout == 'post' %}page-inner page-post{% else %}page-inner{% endif %}">
+  <body class="{% if is_home %}page-home{% elsif page.layout == 'post' %}page-inner page-post{% else %}page-inner{% endif %}{% if page.gallery_flow %} page-gallery{% endif %}">
     <a class="skip-link" href="#main-content">{% if page.lang == "zh-CN" %}跳到主要内容{% else %}Skip to main content{% endif %}</a>
     {% include header.html %}
     <main id="main-content">

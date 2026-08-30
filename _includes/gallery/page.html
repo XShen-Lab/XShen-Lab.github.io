@@ -1,0 +1,95 @@
+{% assign locale = page.lang | default: "en" %}
+{% assign ui = site.data.gallery.ui[locale] %}
+
+<div class="gallery-page" data-gallery-page>
+  <header class="gallery-hero">
+    <div class="gallery-hero__glow" aria-hidden="true"></div>
+    <div class="gallery-shell gallery-hero__inner">
+      <p class="gallery-eyebrow" data-reveal>{{ ui.eyebrow }}</p>
+      <h1 data-reveal style="--reveal-order: 1">{{ ui.title }}</h1>
+      <p class="gallery-hero__intro" data-reveal style="--reveal-order: 2">{{ ui.intro }}</p>
+      <div class="gallery-hero__threshold" data-reveal style="--reveal-order: 3">
+        <a href="#gallery-collection">{{ ui.invitation }} <span aria-hidden="true">↓</span></a>
+        <span>{{ ui.collection_label }}</span>
+      </div>
+    </div>
+    <div class="gallery-hero__door" aria-hidden="true"><span></span></div>
+  </header>
+
+  <nav class="gallery-index" aria-label="{{ ui.collection_label }}">
+    <div class="gallery-shell">
+      {% for hall in site.data.gallery.halls %}
+        <a href="#{{ hall.id }}">
+          <span>{{ hall.number }}</span>
+          {{ hall.title[locale] }}
+        </a>
+      {% endfor %}
+    </div>
+  </nav>
+
+  <div id="gallery-collection" class="gallery-collection">
+    {% for hall in site.data.gallery.halls %}
+      <section id="{{ hall.id }}" class="gallery-hall gallery-hall--{{ forloop.index }}" aria-labelledby="{{ hall.id }}-title">
+        <header class="gallery-shell gallery-hall__header" data-reveal>
+          <p><span>{{ ui.hall_label }}</span> {{ hall.number }}</p>
+          <div>
+            <h2 id="{{ hall.id }}-title">{{ hall.title[locale] }}</h2>
+            <p>{{ hall.intro[locale] }}</p>
+          </div>
+        </header>
+
+        <div class="gallery-shell gallery-wall gallery-wall--{{ forloop.index }}">
+          {% for work in hall.works %}
+            {% assign work_alt = work.alt[locale] %}
+            <article class="gallery-work gallery-work--{{ work.format }} gallery-frame--{{ work.frame }}" data-reveal style="--reveal-order: {{ forloop.index0 }}">
+              <button
+                class="gallery-work__open"
+                type="button"
+                data-gallery-item
+                data-image="{{ work.image | relative_url }}"
+                data-title="{{ work.title[locale] | escape }}"
+                data-caption="{{ work.caption[locale] | escape }}"
+                data-source="{{ work.source[locale] | escape }}"
+                data-alt="{{ work.alt[locale] | escape }}"
+                aria-label="{{ ui.view_work }}: {{ work.title[locale] | escape }}"
+              >
+                <span class="gallery-work__frame">
+                  {% include responsive-image.html image=work.image alt=work_alt sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1100px) 50vw, 42vw" picture_class="gallery-work__picture" %}
+                  <span class="gallery-work__spotlight" aria-hidden="true"></span>
+                </span>
+              </button>
+              <div class="gallery-work__label">
+                <p>{{ work.source[locale] }}</p>
+                <h3>{{ work.title[locale] }}</h3>
+                <p>{{ work.caption[locale] }}</p>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+  </div>
+
+  <dialog class="gallery-viewer" data-gallery-dialog aria-labelledby="gallery-dialog-title">
+    <div class="gallery-viewer__stage">
+      <button class="gallery-viewer__close" type="button" data-gallery-close aria-label="{{ ui.close }}">
+        <span aria-hidden="true">×</span>
+      </button>
+      <button class="gallery-viewer__nav gallery-viewer__nav--previous" type="button" data-gallery-previous aria-label="{{ ui.previous }}">
+        <span aria-hidden="true">←</span>
+      </button>
+      <figure>
+        <img src="{{ '/images/gallery/molecular-landscape-480.webp' | relative_url }}" alt="" data-gallery-dialog-image>
+        <figcaption>
+          <p class="gallery-viewer__source" data-gallery-dialog-source></p>
+          <h2 id="gallery-dialog-title" data-gallery-dialog-title></h2>
+          <p data-gallery-dialog-caption></p>
+          <p class="gallery-viewer__count"><span class="visually-hidden">{{ ui.counter_label }}</span><span data-gallery-dialog-count></span></p>
+        </figcaption>
+      </figure>
+      <button class="gallery-viewer__nav gallery-viewer__nav--next" type="button" data-gallery-next aria-label="{{ ui.next }}">
+        <span aria-hidden="true">→</span>
+      </button>
+    </div>
+  </dialog>
+</div>

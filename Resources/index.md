@@ -3,7 +3,7 @@ title: Resources
 layout: resource
 robots: noindex, noarchive
 nav:
-  order: 5
+  order: 6
   tooltip: Pipelines, protocols, and lab resources
 ---
 

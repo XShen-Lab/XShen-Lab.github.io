@@ -11,6 +11,9 @@ zh:
   - title: 论文发表
     url: /zh/publications/
     tooltip: 代表性论文与完整论文目录
+  - title: 展廊
+    url: /zh/gallery/
+    tooltip: 探索实验室科学展廊
   - title: 资源
     url: /zh/resources/
     tooltip: 分析流程、实验方案与实验室资源

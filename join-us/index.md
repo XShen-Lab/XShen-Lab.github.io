@@ -1,7 +1,7 @@
 ---
 title: Join Us
 nav:
-  order: 7
+  order: 8
   tooltip: Opportunities to join the XShen Lab
 ---
 

@@ -4,7 +4,7 @@ description: Essays, lab updates, and perspectives from the XShen Lab.
 permalink: /blog/
 blog_flow: true
 nav:
-  order: 6
+  order: 7
   tooltip: Essays, lab updates, and perspectives from the XShen Lab
 ---
 
