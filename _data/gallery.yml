@@ -80,8 +80,8 @@ halls:
           en: Scientific slide presenting RNA as both information and material of the nucleus.
           zh-CN: 展示 RNA 既是信息载体也是细胞核物质组成的科学幻灯片。
         source:
-          en: Lab talk · slide 18
-          zh-CN: 实验室报告 · 第 18 页
+          en: Lab talk
+          zh-CN: 实验室报告
       - id: nuclear-rna-systems-model
         image: /images/gallery/nuclear-rna-systems-model.jpg
         format: wide
@@ -96,8 +96,8 @@ halls:
           en: Systems model linking chromatin folding, transcription, nuclear RNPs, messenger RNPs, the exosome, and translation.
           zh-CN: 连接染色质折叠、转录、核内 RNP、信使 RNP、外泌体复合物与翻译的系统模型。
         source:
-          en: Lab talk · slide 21 · left model
-          zh-CN: 实验室报告 · 第 21 页左侧模型
+          en: Lab talk · left model
+          zh-CN: 实验室报告 · 左侧模型
 
   - id: biological-information
     number: "02"
@@ -122,8 +122,8 @@ halls:
           en: Scientific slide contrasting one genome with many stable cell types and pervasive transcription with selective mRNA output.
           zh-CN: 对比同一基因组与多种稳定细胞类型，以及广泛转录与选择性 mRNA 输出的科学幻灯片。
         source:
-          en: Lab talk · slide 3
-          zh-CN: 实验室报告 · 第 3 页
+          en: Lab talk
+          zh-CN: 实验室报告
       - id: noise-to-order
         image: /images/gallery/noise-to-order.jpg
         format: wide
@@ -138,8 +138,8 @@ halls:
           en: Scientific slide showing transcriptional surveillance imposing order on genome-wide transcriptional noise.
           zh-CN: 展示转录监控如何在全基因组转录噪声中建立秩序的科学幻灯片。
         source:
-          en: Lab talk · slide 12
-          zh-CN: 实验室报告 · 第 12 页
+          en: Lab talk
+          zh-CN: 实验室报告
       - id: productive-genome-usage
         image: /images/gallery/productive-genome-usage.jpg
         format: wide
@@ -154,8 +154,8 @@ halls:
           en: Scientific slide outlining a theory of productive genome usage and cell identity.
           zh-CN: 概述生产性基因组使用与细胞身份理论的科学幻灯片。
         source:
-          en: Lab talk · slide 23
-          zh-CN: 实验室报告 · 第 23 页
+          en: Lab talk
+          zh-CN: 实验室报告
       - id: dynamics-in-time
         image: /images/gallery/dynamics-in-time.jpg
         format: wide
@@ -170,8 +170,8 @@ halls:
           en: Slide with Barbara McClintock and a quotation about timing gene action, ending with Biology equals Dynamics in time.
           zh-CN: 包含芭芭拉·麦克林托克及基因作用时序引文，并以“生物学即时间中的动力学”作结的幻灯片。
         source:
-          en: Lab talk · slide 25
-          zh-CN: 实验室报告 · 第 25 页
+          en: Lab talk
+          zh-CN: 实验室报告
 
   - id: ways-of-seeing
     number: "03"
@@ -244,5 +244,5 @@ halls:
           en: Panoramic painting of human figures in a tropical landscape, presented as the closing image of the lab talk.
           zh-CN: 描绘热带景观中多个人物的横幅画作，作为实验室报告的结尾图像。
         source:
-          en: Lab talk · slide 27 · artwork
-          zh-CN: 实验室报告 · 第 27 页画作
+          en: Lab talk · artwork
+          zh-CN: 实验室报告 · 画作
