@@ -2003,6 +2003,15 @@ html[lang="zh-CN"] .research-hero h1 {
   line-height: 1.5;
 }
 
+.member-gallery .portrait-interests {
+  font-size: clamp(0.72rem, 0.82vw, 0.8rem);
+  line-height: 1.45;
+}
+
+.member-gallery .portrait-interests > span {
+  white-space: nowrap;
+}
+
 .page-inner main .member-profile__module h2 {
   font-size: clamp(2.15rem, 3.2vw, 3.2rem);
   line-height: 1.12;

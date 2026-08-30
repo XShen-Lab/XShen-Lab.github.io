@@ -8,9 +8,12 @@ affiliation: Center for Infection Biology, School of Basic Medical Sciences, Tsi
 affiliation_zh: 清华大学基础医学院感染生物学中心
 zh_url: /zh/people/sai/
 profile_position: 50% 42%
+card_interests:
+  - Vaccine & antibody development
+  - B-cell receptor diversification
 card_interests_zh:
-  - 疫苗与治疗性抗体开发
-  - B 细胞受体多样化的分子机制
+  - 疫苗与抗体开发
+  - B 细胞受体多样化
 links:
   email: sailuo@tsinghua.edu.cn
   website: https://www.med.tsinghua.edu.cn/en/info/1141/2996.htm
