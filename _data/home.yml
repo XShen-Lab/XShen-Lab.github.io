@@ -9,6 +9,38 @@ en:
     - Nucleus
     - RNA
     - Cell fate
+  hero_carousel:
+    label: Biological information flow image carousel
+    previous: Previous image
+    next: Next image
+    pause: Pause carousel
+    play: Resume carousel
+    slides:
+      - image: /images/home/information-flow/molecular-crowding.webp
+        width: 598
+        height: 513
+        title: Molecular crowding
+        alt: Dense illustrated molecular landscape with many interacting cellular components.
+      - image: /images/home/information-flow/noncoding-genome.webp
+        width: 518
+        height: 540
+        title: The noncoding genome
+        alt: Red apple-shaped diagram labeled Noncoding 98 percent.
+      - image: /images/home/information-flow/transcription-dichotomy.webp
+        width: 396
+        height: 472
+        title: Transcription dichotomy
+        alt: Yin-yang diagram connecting silent genome, noisy noncoding RNA, ordered messenger RNA and cell states.
+      - image: /images/home/information-flow/information-flow-framework.webp
+        width: 607
+        height: 551
+        title: From one genome to many cell states
+        alt: Conceptual framework connecting one genome, the noncoding and messenger RNA dichotomy, transcriptional surveillance and cell potency.
+      - image: /images/home/information-flow/complicated-questions.webp
+        width: 751
+        height: 572
+        title: Questions and answers
+        alt: Quotation attributed to Dr. Seuss saying that sometimes the questions are complicated and the answers are simple.
   actions:
     - label: Research
       url: /research/
@@ -98,6 +130,38 @@ zh-CN:
     - 细胞核
     - RNA
     - 细胞命运
+  hero_carousel:
+    label: 生命信息流图像轮播
+    previous: 上一张图片
+    next: 下一张图片
+    pause: 暂停轮播
+    play: 继续轮播
+    slides:
+      - image: /images/home/information-flow/molecular-crowding.webp
+        width: 598
+        height: 513
+        title: 分子拥挤
+        alt: 由众多相互作用的细胞组分构成的拥挤分子环境插图。
+      - image: /images/home/information-flow/noncoding-genome.webp
+        width: 518
+        height: 540
+        title: 非编码基因组
+        alt: 标有 Noncoding 98 percent 字样的红色苹果形示意图。
+      - image: /images/home/information-flow/transcription-dichotomy.webp
+        width: 396
+        height: 472
+        title: 转录二分
+        alt: 连接沉默基因组、噪声性非编码 RNA、有序信使 RNA 与细胞状态的阴阳概念图。
+      - image: /images/home/information-flow/information-flow-framework.webp
+        width: 607
+        height: 551
+        title: 从同一基因组到多样细胞状态
+        alt: 连接同一基因组、非编码与信使 RNA 二分、转录监控和细胞潜能的概念框架。
+      - image: /images/home/information-flow/complicated-questions.webp
+        width: 751
+        height: 572
+        title: 问题与答案
+        alt: 引自 Dr. Seuss 的文字图片，表达有时问题很复杂而答案很简单。
   actions:
     - label: 研究方向
       url: /zh/research/

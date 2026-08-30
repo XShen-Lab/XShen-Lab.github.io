@@ -15,6 +15,10 @@
 <script src="{{ '/_scripts/motion.js' | relative_url }}" defer></script>
 <script src="{{ '/_scripts/resource-gate.js' | relative_url }}" defer></script>
 
+{% if page.hero_carousel %}
+  <script src="{{ '/_scripts/hero-carousel.js' | relative_url }}" defer></script>
+{% endif %}
+
 {% if page.blog_flow %}
   <script src="{{ '/_scripts/blog-flow.js' | relative_url }}" defer></script>
 {% endif %}

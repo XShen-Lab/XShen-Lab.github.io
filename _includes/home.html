@@ -34,6 +34,40 @@
         {% for action in home.actions %}<a class="rna-button {{ action.style }}" href="{{ action.url | relative_url }}">{{ action.label }} <span aria-hidden="true">↗</span></a>{% endfor %}
       </div>
     </div>
+    {% if home.hero_carousel.slides %}
+      <div
+        class="rna-hero-carousel"
+        data-hero-carousel
+        data-pause-label="{{ home.hero_carousel.pause | escape }}"
+        data-play-label="{{ home.hero_carousel.play | escape }}"
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="{{ home.hero_carousel.label | escape }}"
+        tabindex="0"
+        data-reveal
+        style="--reveal-order: 6"
+      >
+        <div class="rna-hero-carousel__viewport" data-hero-carousel-viewport>
+          <div class="rna-hero-carousel__track" data-hero-carousel-track>
+            {% for slide in home.hero_carousel.slides %}
+              <figure class="rna-hero-carousel__slide" data-hero-carousel-slide data-title="{{ slide.title | escape }}" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}">
+                <div class="rna-hero-carousel__image">
+                  <img src="{{ slide.image | relative_url }}" alt="{{ slide.alt | escape }}" width="{{ slide.width }}" height="{{ slide.height }}" {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} decoding="async">
+                </div>
+                <figcaption><span>0{{ forloop.index }}</span>{{ slide.title }}</figcaption>
+              </figure>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="rna-hero-carousel__controls">
+          <button type="button" data-hero-carousel-previous aria-label="{{ home.hero_carousel.previous | escape }}"><span aria-hidden="true">←</span></button>
+          <p data-hero-carousel-status aria-live="off"><span data-hero-carousel-current>01</span><span aria-hidden="true"> / </span><span>0{{ home.hero_carousel.slides.size }}</span><span class="visually-hidden" data-hero-carousel-title>{{ home.hero_carousel.slides.first.title }}</span></p>
+          <span class="rna-hero-carousel__progress" aria-hidden="true"><i data-hero-carousel-progress></i></span>
+          <button type="button" data-hero-carousel-toggle aria-label="{{ home.hero_carousel.pause | escape }}"><span aria-hidden="true">Ⅱ</span></button>
+          <button type="button" data-hero-carousel-next aria-label="{{ home.hero_carousel.next | escape }}"><span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+    {% endif %}
     <div class="rna-hero-scroll" aria-hidden="true"><span></span>01—04</div>
   </section>
 
