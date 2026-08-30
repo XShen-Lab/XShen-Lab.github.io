@@ -107,6 +107,16 @@ en:
       home_path: /images/publications/2025-scfluent-seq/graphical-abstract.webp
       alt: scFLUENT-seq graphical abstract showing nascent RNA measurement across individual cells
       caption: scFLUENT-seq connects short-pulse nascent RNA measurements to probabilistic genome activity.
+    gallery:
+      - path: /images/publications/2025-scfluent-seq/graphical-abstract.webp
+        alt: scFLUENT-seq graphical abstract connecting sparse single-cell nascent transcription with developmental plasticity and cell-state progression
+        label: scFLUENT-seq graphical abstract
+      - path: /images/research/cell-fate-dynamics/scfluent-workflow.webp
+        alt: scFLUENT-seq workflow with EU labeling, barcoded gel beads, template switching, biotin pull-down and separate new and old RNA libraries
+        label: scFLUENT-seq workflow · Figure 1A
+      - path: /images/research/cell-fate-dynamics/transition-cell-rna-dynamics.webp
+        alt: UMAP maps of RNA synthesis and decay rates highlighting transition cells
+        label: Transition-cell RNA dynamics · Figure 5E
     anchor: cell-fate-dynamics
     motif: field
 
@@ -223,5 +233,15 @@ zh-CN:
       home_path: /images/publications/2025-scfluent-seq/graphical-abstract.webp
       alt: scFLUENT-seq 图形摘要，展示在单细胞尺度测量新生 RNA
       caption: scFLUENT-seq 将短时脉冲标记的新生 RNA 测量与概率性基因组活动相连接。
+    gallery:
+      - path: /images/publications/2025-scfluent-seq/graphical-abstract.webp
+        alt: scFLUENT-seq 图形摘要，将稀疏的单细胞新生转录与发育可塑性和细胞状态进程相连接
+        label: scFLUENT-seq 图形摘要
+      - path: /images/research/cell-fate-dynamics/scfluent-workflow.webp
+        alt: scFLUENT-seq 工作流程，包括 EU 标记、带条形码凝胶珠、模板转换、生物素富集以及新旧 RNA 文库分离
+        label: scFLUENT-seq 工作流程 · 图 1A
+      - path: /images/research/cell-fate-dynamics/transition-cell-rna-dynamics.webp
+        alt: RNA 合成速率与降解速率的 UMAP 图，标示过渡状态细胞
+        label: 过渡状态细胞 RNA 动力学 · 图 5E
     anchor: cell-fate-dynamics
     motif: field
