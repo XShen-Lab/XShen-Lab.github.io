@@ -2,7 +2,7 @@
 name: Liu, Ying 刘颖
 role: phd
 cohort: 2025
-image: images/fallback.svg
+image: images/members/liuying.jpg
 description: PhD Candidate, 2025
 description_zh: 2025级博士研究生
 affiliation: School of Basic Medicine, Tsinghua University
