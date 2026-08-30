@@ -2,7 +2,7 @@
 name: Huang, Tianyu 黄天羽
 role: undergrad
 cohort: 2024
-image: images/fallback.svg
+image: images/members/huangtianyu.jpg
 description: Undergraduate, 2024
 description_zh: 2024级本科生
 affiliation: School of Life Sciences, Tsinghua University

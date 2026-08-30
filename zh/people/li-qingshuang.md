@@ -8,4 +8,7 @@ rich_tooltips: true
 
 ## Research Interests
 
+- 转录调控
+- 细胞核结构
+
 ## Education
