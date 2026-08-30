@@ -5,7 +5,7 @@ excerpt: "Life is like an elephant whose whole form we cannot see. We can often 
 author: Xiaohua
 author_id: xiaohua-shen
 story_id: 2026-simple-rules-of-life-rotation
-category_id: lab-news
+category_id: recruitment
 date: 2026-08-23 12:00:00 -0400
 display_date: August 2026
 lang: en

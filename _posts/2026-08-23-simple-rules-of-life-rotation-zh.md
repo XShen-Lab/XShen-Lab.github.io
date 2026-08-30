@@ -5,7 +5,7 @@ excerpt: "生命像一头看不见全貌的大象。我们常常只能触摸一�
 author: Xiaohua
 author_id: xiaohua-shen
 story_id: 2026-simple-rules-of-life-rotation
-category_id: lab-news
+category_id: recruitment
 date: 2026-08-23 12:00:00 -0400
 display_date: 2026 年 8 月
 lang: zh-CN

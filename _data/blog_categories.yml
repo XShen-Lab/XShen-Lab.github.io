@@ -3,8 +3,8 @@
     en: Lab News
     zh-CN: 实验室动态
   descriptions:
-    en: People, visits, awards, recruitment, and milestones from the lab.
-    zh-CN: 记录成员、来访、获奖、招生与实验室阶段性动态。
+    en: People, visits, awards, and milestones from the lab.
+    zh-CN: 记录成员、来访、获奖与实验室阶段性动态。
 
 - id: publication-news
   labels:
@@ -29,6 +29,14 @@
   descriptions:
     en: Retreats, outings, celebrations, and moments beyond the bench.
     zh-CN: 团建、出游、庆祝以及实验台之外的日常。
+
+- id: recruitment
+  labels:
+    en: Recruitment
+    zh-CN: 招生招聘
+  descriptions:
+    en: Open positions, rotation opportunities, and invitations to join the lab.
+    zh-CN: 实验室开放岗位、轮转机会与成员招募信息。
 
 - id: perspectives
   labels:
