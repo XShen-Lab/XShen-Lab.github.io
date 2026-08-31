@@ -9,11 +9,21 @@ affiliation_zh: 清华大学基础医学院
 zh_url: /zh/people/yao-yuqi/
 links:
   email: yaoyq@tsinghua.edu.cn
+card_interests_zh:
+  - RNA 生物学
+  - RNA 结构
+  - RNA 世界
+  - RNA 疗法与应用
 ---
 
 Postdoctoral Fellow in the XShen Lab.
 
 ## Research Interests
+
+- RNA biology
+- RNA structures
+- RNA world
+- RNA therapeutics and harnessing
 
 ## Education
 

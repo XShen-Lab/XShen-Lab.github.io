@@ -8,6 +8,11 @@ rich_tooltips: true
 
 ## Research Interests
 
+- RNA 生物学
+- RNA 结构
+- RNA 世界
+- RNA 疗法与应用
+
 ## Education
 
 - 硕士，**[东华大学](https://english.dhu.edu.cn/)**，2016–2020
