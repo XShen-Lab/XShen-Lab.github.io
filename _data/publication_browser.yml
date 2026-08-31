@@ -26,7 +26,7 @@ years:
 ui:
   en:
     representative_heading: Representative Publications
-    representative_intro: Thirteen representative papers are organized across five scientific modules. Within each module, Nature and Cell papers are presented first.
+    representative_intro: Thirteen representative papers highlight contributions to genome organization, RNA networks, transcriptional regulation, cell-fate dynamics, and foundational mechanisms of stress signaling and epigenetic control.
     representative_label: Representative published papers
     citation_label: Full citation
     read_summary_label: Read summary
@@ -37,7 +37,7 @@ ui:
     article_link_label: Article
     scholar_link_label: Google Scholar
     browser_heading: All Publications
-    browser_intro: Browse all 52 formal records by publication year and primary research category. The citation text and CV order remain unchanged.
+    browser_intro: The complete bibliography contains 52 formal publication records spanning 1998 to 2025.
     year_label: Publication year
     category_label: Research category
     all_years_label: All years
@@ -46,7 +46,7 @@ ui:
     empty_label: No publications match this year and category.
   zh-CN:
     representative_heading: 代表性论文
-    representative_intro: 以下按照五个科学模块呈现 13 篇代表性论文；在每个模块内部，Nature 与 Cell 正刊论文优先排列。
+    representative_intro: 以下 13 篇代表性论文集中展示实验室在基因组组织、RNA 网络、转录调控、细胞命运动力学，以及应激信号与表观遗传调控基础机制方面的研究贡献。
     representative_label: 代表性已发表论文
     citation_label: 完整引用
     read_summary_label: 阅读简介
@@ -57,7 +57,7 @@ ui:
     article_link_label: 论文页面
     scholar_link_label: Google Scholar
     browser_heading: 完整论文目录
-    browser_intro: 可按照发表年份与主要研究类别交叉浏览全部 52 条正式记录；引用文字和简历顺序保持不变。
+    browser_intro: 完整论文目录收录 1998 至 2025 年间的 52 条正式发表记录。
     year_label: 发表年份
     category_label: 研究类别
     all_years_label: 全部年份
