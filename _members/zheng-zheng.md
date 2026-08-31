@@ -2,7 +2,7 @@
 name: Zheng, Zheng 郑铮
 role: phd
 cohort: 2020
-image: images/fallback.svg
+image: images/members/zhengzheng.png
 description: PhD Candidate, 2020
 description_zh: 2020级博士研究生
 affiliation: School of Basic Medicine, Tsinghua University
