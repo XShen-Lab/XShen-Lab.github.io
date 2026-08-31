@@ -27,4 +27,4 @@ Postdoctoral Fellow in the XShen Lab.
 ## Education
 
 - Ph.D., **Tsinghua University**, 2019–2025
-- M.S., **Peking University**, 2015–2019
+- B.S., **Peking University**, 2015–2019
