@@ -10,11 +10,21 @@ affiliation_zh: 清华大学基础医学院
 zh_url: /zh/people/zheng-zheng/
 links:
   email: zhengz20@mails.tsinghua.edu.cn
+card_interests_zh:
+  - 干细胞与细胞命运
+  - 转录凝聚体
+  - 翻译诱导的 RNA 周转
+  - RNP 处理
 ---
 
 Graduate Student in the XShen Lab.
 
 ## Research Interests
+
+- Stem cell and cell fate
+- Transcriptional condensate
+- Translation induced RNA turnover
+- RNP processing
 
 ## Education
 
