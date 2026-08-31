@@ -10,11 +10,21 @@ affiliation_zh: 清华大学基础医学院
 zh_url: /zh/people/liu-ying/
 links:
   email: ying-liu25@mails.tsinghua.edu.cn
+card_interests_zh:
+  - RNP 网状体系
+  - RNA 动力学
+  - 细胞核组织
+  - 定量生物学
 ---
 
 Graduate Student in the XShen Lab.
 
 ## Research Interests
+
+- RNP meshwork
+- RNA dynamics
+- Nuclear organization
+- Quantitative biology
 
 ## Education
 
