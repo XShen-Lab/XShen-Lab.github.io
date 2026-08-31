@@ -224,23 +224,41 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
   transform: translate(3px, -3px);
 }
 
-.contact-card--profiles {
-  background: #0a1915;
-  color: #eff8f4;
+.contact-card--direct {
+  background: #252520;
+  color: #f3efe5;
 }
 
-.contact-card--profiles .contact-card__index {
-  color: #35e6bf !important;
+.page-inner main .contact-card--direct h2 {
+  color: #f3efe5;
+}
+
+.contact-card--direct address,
+.contact-card--direct .contact-list dt {
+  color: #c9c8bf;
+}
+
+.contact-card--direct .contact-list > div {
+  border-color: rgb(243 239 229 / 20%);
+}
+
+.contact-card--direct .contact-list a {
+  color: #f3efe5;
+}
+
+.contact-card--profiles {
+  background: var(--surface);
+  color: var(--text);
 }
 
 .page-inner main .contact-card--profiles h2 {
-  color: #eff8f4;
+  color: var(--text);
 }
 
 .contact-profile-links {
   display: grid;
   margin-top: clamp(40px, 6vw, 68px);
-  border-top: 1px solid rgb(183 217 207 / 18%);
+  border-top: 1px solid var(--line);
 }
 
 .contact-profile-links a {
@@ -250,8 +268,8 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
   padding: 24px 52px 24px 0;
   align-content: center;
   gap: 8px;
-  border-bottom: 1px solid rgb(183 217 207 / 18%);
-  color: #eff8f4;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
   text-decoration: none;
   transition: padding-left var(--transition), background var(--transition);
 }
@@ -265,7 +283,7 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
   padding: 5px 10px;
   align-items: center;
   overflow: hidden;
-  border: 1px solid rgb(183 217 207 / 22%);
+  border: 1px solid var(--line);
   background: #fff;
 }
 
@@ -282,11 +300,11 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
 
 .contact-profile-links a:hover {
   padding-left: 16px;
-  background: rgb(53 230 191 / 5%);
+  background: rgb(216 117 93 / 7%);
 }
 
 .contact-profile-links a span {
-  color: #a7bab4;
+  color: var(--text-soft);
   font-family: var(--code);
   font-size: 0.69rem;
   letter-spacing: 0.09em;
@@ -304,7 +322,7 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
   position: absolute;
   top: 50%;
   right: 10px;
-  color: #35e6bf;
+  color: var(--primary);
   font-size: 1rem;
   font-style: normal;
   translate: 0 -50%;
