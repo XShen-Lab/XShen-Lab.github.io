@@ -50,6 +50,7 @@
 .research-technology__list { margin-top: 38px; }
 .research-technology__list li { padding: 22px 18px; }
 .research-technology__list strong { margin-top: 28px; overflow-wrap: normal; hyphens: auto; }
+.page-inner main .research-technology__list strong, .rna-home .rna-scale-list strong { color: #f3efe5; }
 .rna-scale-list { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .rna-scale-list strong { overflow-wrap: normal; hyphens: auto; }
 
