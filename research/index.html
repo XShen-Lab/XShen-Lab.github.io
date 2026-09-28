@@ -140,6 +140,10 @@
 <script src="/_scripts/dark-mode.js" defer></script>
 <script src="/_scripts/motion.js" defer></script>
 <script src="/_scripts/resource-gate.js" defer></script>
+<script src="/_scripts/research-menu.js" defer></script>
+
+  <script src="/_scripts/exhibit-autoplay.js" defer></script>
+
 
 
 
@@ -175,7 +179,7 @@
 
   
   
-  <body class="page-inner">
+  <body class="page-inner page-research">
     <a class="skip-link" href="#main-content">Skip to main content</a>
     
 
@@ -212,36 +216,51 @@
         
           
           
+          
           <a href="/" data-tooltip="Home">Home</a>
         
           
+
+
+<details class="research-menu" data-research-menu>
+  <summary>Research<span aria-hidden="true">⌄</span></summary>
+  <div class="research-menu__links">
+    <a href="/research/">Research overview</a>
+    <a href="/research/#genome-organization"><span>01</span>Genome Organization</a><a href="/research/#rna-networks"><span>02</span>RNA Networks</a><a href="/research/#transcriptional-surveillance"><span>03</span>Transcriptional Surveillance</a><a href="/research/#cell-fate-dynamics"><span>04</span>Cell Fate Dynamics</a>
+  </div>
+</details>
+
           
-          <a href="/research/" data-tooltip="Research directions" aria-current="page">Research</a>
-        
           
           
           <a href="/team/" data-tooltip="Members of the XShen Lab">People</a>
         
           
           
+          
           <a href="/publications/" data-tooltip="Representative and full publications">Publications</a>
         
+          
           
           
           <a href="/gallery/" data-tooltip="Explore the XShen Lab gallery">Gallery</a>
         
           
           
+          
           <a href="/Resources/" data-tooltip="Pipelines, protocols, and lab resources" class="resource-nav-link" data-resource-nav-link data-resource-label="Resources" aria-label="Resources, locked">Resources<span class="resource-nav-state" aria-hidden="true"><span class="resource-locked-icon">🔒</span><span class="resource-unlocked-icon">🔓</span></span></a>
         
+          
           
           
           <a href="/blog/" data-tooltip="Essays, lab updates, and perspectives from the XShen Lab">Blog</a>
         
           
           
+          
           <a href="/join-us/" data-tooltip="Opportunities to join the XShen Lab">Join Us</a>
         
+          
           
           
           <a href="/contact/" data-tooltip="Contact the XShen Lab">Contact</a>
@@ -287,7 +306,7 @@
       <p class="research-kicker" data-reveal="">XShen Lab · Research</p>
       <h1 id="research-title" data-reveal="" style="--reveal-order: 1">Biological Information Flow</h1>
       <p class="research-hero__subtitle" data-reveal="" style="--reveal-order: 2">From Genome to Cell Fate</p>
-      <p class="research-hero__question" data-reveal="" style="--reveal-order: 3">How does sparse and stochastic genome activity become stable biological information and cell fate?</p>
+      <p class="research-hero__question" data-reveal="" style="--reveal-order: 3">How does sparse and stochastic genome activity become stable biological information and cell fate</p>
       <p class="research-hero__intro" data-reveal="" style="--reveal-order: 4">We study the nucleus as a dynamic information-processing system in which genome organization, RNA networks and transcriptional surveillance transform molecular fluctuation into stable cellular identity.</p>
       <p class="research-hero__sequence" data-reveal="" style="--reveal-order: 5">Organization → Processing → Selection → Stabilization</p>
     </div>
@@ -297,7 +316,7 @@
     <div class="research-shell research-overview__grid">
       <div data-reveal="">
         <p class="research-kicker">Scientific vision</p>
-        <h2 id="research-overview-title">Dynamic molecular activity. Ordered biological states.</h2>
+        <h2 id="research-overview-title">Dynamic molecular activity Ordered biological states</h2>
       </div>
       <div class="research-overview__copy" data-reveal="" style="--reveal-order: 1">
         <p>Although cell types share essentially the same genome, they acquire diverse and persistent identities while transcription, RNA metabolism and chromatin organization fluctuate across space and time.</p>
@@ -312,7 +331,7 @@
       <div class="research-programs__head" data-reveal="">
         <div>
           <p class="research-kicker">Four connected research programs</p>
-          <h2 id="research-programs-title">One information system, viewed in sequence.</h2>
+          <h2 id="research-programs-title">One information system viewed in sequence</h2>
           <p>Move horizontally from the organization of the genome to the stabilization of cell fate. Each program asks a distinct question, but the mechanism flows continuously across the four stages.</p>
         </div>
         <div class="research-programs__controls">
@@ -344,17 +363,20 @@
                 
                   <figure>
                     <img src="/images/research/genome-organization/nuclear-compartment-model.png" alt="Conceptual model of L1-rich and B1-rich genome compartments positioned around the nuclear lamina, nucleolus and nuclear speckles" loading="lazy" decoding="async">
-                    <figcaption><span>01</span>Nuclear compartment model</figcaption>
+                    <figcaption><span>01</span><div>Nuclear compartment model<small class="figure-source"><a href="https://doi.org/10.1038/s41422-020-00466-6" title="Homotypic clustering of L1 and B1/Alu repeats compartmentalizes the 3D genome">Lu et al. · Cell Research · 2021</a></small>
+</div></figcaption>
                   </figure>
                 
                   <figure>
-                    <img src="/images/research/genome-organization/nuclear-architecture-dstorm.webp" alt="dSTORM image of a nucleus showing EU-labeled RNA in green and H3-marked chromatin in red" loading="lazy" decoding="async">
-                    <figcaption><span>02</span>Nuclear architecture by dSTORM</figcaption>
+                    <img src="/images/research/genome-organization/nuclear-architecture-dstorm-watermarked.webp" alt="dSTORM image of a nucleus showing EU-labeled RNA in green and H3-marked chromatin in red" loading="lazy" decoding="async">
+                    <figcaption><span>02</span><div>Nuclear architecture by dSTORM<small class="figure-source">XShen Lab · Unpublished</small>
+</div></figcaption>
                   </figure>
                 
                   <figure>
-                    <img src="/images/research/genome-organization/chromatin-rnp-nanodomains.webp" alt="Magnified view of spatially interwoven EU-labeled RNA and H3-marked chromatin nanodomains" loading="lazy" decoding="async">
-                    <figcaption><span>03</span>Chromatin–RNP nanodomains</figcaption>
+                    <img src="/images/research/genome-organization/chromatin-rnp-nanodomains-watermarked.webp" alt="Magnified view of spatially interwoven EU-labeled RNA and H3-marked chromatin nanodomains" loading="lazy" decoding="async">
+                    <figcaption><span>03</span><div>Chromatin–RNP nanodomains<small class="figure-source">XShen Lab · Unpublished</small>
+</div></figcaption>
                   </figure>
                 
               </div>
@@ -368,7 +390,7 @@
             </div>
             <p class="research-program__verb">Organizing Biological Information</p>
             <h3>Genome Organization</h3>
-            <p class="research-program__question">How does genome sequence encode nuclear organization?</p>
+            <p class="research-program__question">How does genome sequence encode nuclear organization</p>
             <p>Genome sequence encodes more than genes. We investigate how repetitive elements—including L1 and B1/Alu sequences—establish principles of chromosome compartmentalization and nuclear positioning, and how their RNA products participate in chromatin organization.</p>
             <p>We are extending this framework to understand genome partitioning and remodeling during development, cell-cycle transitions and changes in cell fate.</p>
             
@@ -381,6 +403,10 @@
 </ul>
             </div>
             
+            
+            
+              <p class="research-program__citation"><a href="https://doi.org/10.1038/s41422-020-00466-6">Homotypic clustering of L1 and B1/Alu repeats compartmentalizes the 3D genome</a><small>Lu et al. · Cell Research · 2021</small></p>
+            
           </div>
         </article>
       
@@ -388,8 +414,8 @@
           <div class="research-program__visual">
             
               <figure>
-                <img src="/images/research/rna-chromatin-dstorm.png" alt="Super-resolution image showing interwoven EU-labeled RNA and H3-marked chromatin in a nucleus" loading="lazy" decoding="async">
-                <figcaption>Super-resolution view of spatially interwoven RNA and chromatin.</figcaption>
+                <img src="/images/research/rna-chromatin-dstorm-watermarked.png" alt="Super-resolution image showing interwoven EU-labeled RNA and H3-marked chromatin in a nucleus" loading="lazy" decoding="async">
+                <figcaption>Super-resolution view of spatially interwoven RNA and chromatin.<small class="figure-source">XShen Lab · Unpublished</small></figcaption>
               </figure>
             
           </div>
@@ -401,7 +427,7 @@
             </div>
             <p class="research-program__verb">Processing Biological Information</p>
             <h3>RNA Networks</h3>
-            <p class="research-program__question">How does RNA organize the nuclear environment?</p>
+            <p class="research-program__question">How does RNA organize the nuclear environment</p>
             <p>RNA is both a carrier of genetic information and a material organizer of nuclear function. Noncoding RNAs regulate neighboring genes and local chromatin states, while RNA-binding proteins form dynamic RNA-associated condensates that influence RNA Polymerase II recruitment, CTD phosphorylation and elongation.</p>
             <p>We investigate how nascent RNA, RNA-binding proteins and processing factors assemble an RNA–RBP meshwork that coordinates transcription, RNA maturation, RNA degradation and nuclear organization.</p>
             
@@ -414,6 +440,8 @@
 </ul>
             </div>
             
+            
+            
           </div>
         </article>
       
@@ -423,18 +451,21 @@
               <div class="research-program__gallery">
                 
                   <figure>
-                    <img src="/images/research/transcriptional-surveillance/mechanism-model.png" alt="Working model comparing basal and processive transcriptional domains connected through kinetic selection and transcriptional surveillance" loading="lazy" decoding="async">
-                    <figcaption><span>01</span>Mechanism model</figcaption>
+                    <img src="/images/research/transcriptional-surveillance/mechanism-model-watermarked.png" alt="Working model comparing basal and processive transcriptional domains connected through kinetic selection and transcriptional surveillance" loading="lazy" decoding="async">
+                    <figcaption><span>01</span><div>Mechanism model<small class="figure-source">XShen Lab · Unpublished</small>
+</div></figcaption>
                   </figure>
                 
                   <figure>
-                    <img src="/images/research/transcriptional-surveillance/ctd-perturbation-timecourse.png" alt="EU-seq time course after acute CTD perturbation and wash-off, grouped by productive and basal transcriptional domains" loading="lazy" decoding="async">
-                    <figcaption><span>02</span>CTD perturbation time course</figcaption>
+                    <img src="/images/research/transcriptional-surveillance/ctd-perturbation-timecourse-watermarked.png" alt="EU-seq time course after acute CTD perturbation and wash-off, grouped by productive and basal transcriptional domains" loading="lazy" decoding="async">
+                    <figcaption><span>02</span><div>CTD perturbation time course<small class="figure-source">XShen Lab · Unpublished</small>
+</div></figcaption>
                   </figure>
                 
                   <figure>
-                    <img src="/images/research/transcriptional-surveillance/zga-pol-ii-ser2p.png" alt="EU-RNA and RNA Polymerase II Ser2P imaging across stages of zygotic genome activation" loading="lazy" decoding="async">
-                    <figcaption><span>03</span>ZGA imaging</figcaption>
+                    <img src="/images/research/transcriptional-surveillance/zga-pol-ii-ser2p-watermarked.png" alt="EU-RNA and RNA Polymerase II Ser2P imaging across stages of zygotic genome activation" loading="lazy" decoding="async">
+                    <figcaption><span>03</span><div>ZGA imaging<small class="figure-source">XShen Lab · Unpublished</small>
+</div></figcaption>
                   </figure>
                 
               </div>
@@ -448,7 +479,7 @@
             </div>
             <p class="research-program__verb">Selecting Biological Information</p>
             <h3>Transcriptional Surveillance</h3>
-            <p class="research-program__question">How does productive information emerge from pervasive transcription?</p>
+            <p class="research-program__question">How does productive information emerge from pervasive transcription</p>
             <p>Eukaryotic genomes are extensively transcribed, yet only a fraction of transcriptional events achieve productive elongation and generate mature mRNAs. We therefore treat productive transcription as an actively established state rather than a default outcome.</p>
             <p>Our work examines how the RNA Polymerase II CTD, EIF4A3, RNA processing and degradation pathways form a genome-scale surveillance system that clears nonproductive transcription while supporting RNA maturation, productive elongation and polymerase recycling.</p>
             
@@ -463,6 +494,8 @@
             
               <a class="research-program__deep-link" href="#transcriptional-surveillance-mechanism">Explore the mechanism <span aria-hidden="true">↓</span></a>
             
+            
+            
           </div>
         </article>
       
@@ -473,22 +506,26 @@
                 
                   <figure>
                     <img src="/images/publications/2025-scfluent-seq/graphical-abstract.webp" alt="scFLUENT-seq graphical abstract connecting sparse single-cell nascent transcription with developmental plasticity and cell-state progression" loading="lazy" decoding="async">
-                    <figcaption><span>01</span>scFLUENT-seq graphical abstract</figcaption>
+                    <figcaption><span>01</span><div>scFLUENT-seq graphical abstract<small class="figure-source"><a href="https://doi.org/10.1016/j.cell.2025.09.003" title="Single-cell nascent transcription reveals sparse genome usage and plasticity">Ma et al. · Cell · 2025 · Graphical abstract</a></small>
+</div></figcaption>
                   </figure>
                 
                   <figure>
                     <img src="/images/research/cell-fate-dynamics/sparse-genome-usage.webp" alt="Single-cell genome coverage distributions and cumulative genome coverage across increasing numbers of cells" loading="lazy" decoding="async">
-                    <figcaption><span>02</span>Sparse single-cell genome usage · Figure 2E–F</figcaption>
+                    <figcaption><span>02</span><div>Sparse single-cell genome usage · Figure 2E–F<small class="figure-source"><a href="https://doi.org/10.1016/j.cell.2025.09.003" title="Single-cell nascent transcription reveals sparse genome usage and plasticity">Ma et al. · Cell · 2025 · Fig. 2E–F</a></small>
+</div></figcaption>
                   </figure>
                 
                   <figure>
                     <img src="/images/research/cell-fate-dynamics/cellular-plasticity.webp" alt="CytoTRACE-inferred cellular plasticity across acute perturbation and wash-off states" loading="lazy" decoding="async">
-                    <figcaption><span>03</span>Nascent transcriptional diversity · Figure 7Diii</figcaption>
+                    <figcaption><span>03</span><div>Nascent transcriptional diversity · Figure 7Diii<small class="figure-source"><a href="https://doi.org/10.1016/j.cell.2025.09.003" title="Single-cell nascent transcription reveals sparse genome usage and plasticity">Ma et al. · Cell · 2025 · Fig. 7Diii</a></small>
+</div></figcaption>
                   </figure>
                 
                   <figure>
                     <img src="/images/research/cell-fate-dynamics/state-transition-trajectories.webp" alt="Genic and intergenic nascent RNA pseudotime trajectories colored by CytoTRACE-inferred cellular plasticity" loading="lazy" decoding="async">
-                    <figcaption><span>04</span>Cell-state transition trajectories · Figure 7C</figcaption>
+                    <figcaption><span>04</span><div>Cell-state transition trajectories · Figure 7C<small class="figure-source"><a href="https://doi.org/10.1016/j.cell.2025.09.003" title="Single-cell nascent transcription reveals sparse genome usage and plasticity">Ma et al. · Cell · 2025 · Fig. 7C</a></small>
+</div></figcaption>
                   </figure>
                 
               </div>
@@ -502,7 +539,7 @@
             </div>
             <p class="research-program__verb">Stabilizing Biological Information</p>
             <h3>Cell Fate Dynamics</h3>
-            <p class="research-program__question">How do probabilistic genome activities generate stable cell identity?</p>
+            <p class="research-program__question">How do probabilistic genome activities generate stable cell identity</p>
             <p>Stable identity need not require every cell to execute an identical transcriptional program. With scFLUENT-seq, developed in our laboratory, we obtain a short-pulse snapshot of nascent genome usage at single-cell resolution.</p>
             <p>Individual cells use a cell-type-dependent fraction of approximately 0.02%–3.1% of the genome at a given moment, while populations explore broader genomic landscapes. We model cellular identity as a stable probability distribution emerging from coordinated stochastic activity.</p>
             
@@ -519,6 +556,10 @@
 </ul>
             </div>
             
+            
+            
+              <p class="research-program__citation"><a href="https://doi.org/10.1016/j.cell.2025.09.003">Single-cell nascent transcription reveals sparse genome usage and plasticity</a><small>Ma et al. · Cell · 2025 · Graphical abstract</small></p>
+            
           </div>
         </article>
       
@@ -533,14 +574,15 @@
           <p class="research-surveillance__status">Working models and ongoing research</p>
         </div>
         <div data-reveal="" style="--reveal-order: 1">
-          <h2 id="research-surveillance-title">Kinetic selection turns pervasive transcription into productive output.</h2>
+          <h2 id="research-surveillance-title">Kinetic selection turns pervasive transcription into productive output</h2>
           <p>We distinguish a widespread basal state, in which elongation complexes frequently drop off, from a processive state that supports proper nascent RNP assembly and productive elongation. Transcriptional surveillance links RNA Polymerase II CTD state, EIF4A3 and RNA-processing pathways to this kinetic transition.</p>
         </div>
       </div>
 
       <figure class="research-surveillance__model" data-reveal="">
-        <img src="/images/research/transcriptional-surveillance/mechanism-model.png" alt="Working model comparing basal transcriptional domains with productive domains and showing kinetic selection through CTD- and EIF4A3-linked transcriptional surveillance" loading="lazy" decoding="async">
-        <figcaption><span>01 · Model</span>Basal and processive elongation states are connected through kinetic selection, nascent RNP assembly and RNA Polymerase II fate.</figcaption>
+        <img src="/images/research/transcriptional-surveillance/mechanism-model-watermarked.png" alt="Working model comparing basal transcriptional domains with productive domains and showing kinetic selection through CTD- and EIF4A3-linked transcriptional surveillance" loading="lazy" decoding="async">
+        <figcaption><span>01 · Model</span><div>Basal and processive elongation states are connected through kinetic selection, nascent RNP assembly and RNA Polymerase II fate.<small class="figure-source">XShen Lab · Unpublished</small>
+</div></figcaption>
       </figure>
 
       <div class="research-surveillance__evidence-head" data-reveal="">
@@ -550,9 +592,10 @@
       <div class="research-surveillance__evidence">
         
           <figure data-reveal="" style="--reveal-order: 1">
-            <div><img src="/images/research/transcriptional-surveillance/ctd-perturbation-timecourse.png" alt="EU-seq time course after acute CTD perturbation and wash-off, separating high- and low-output genes from proximal and distal intergenic bins" loading="lazy" decoding="async"></div>
+            <div><img src="/images/research/transcriptional-surveillance/ctd-perturbation-timecourse-watermarked.png" alt="EU-seq time course after acute CTD perturbation and wash-off, separating high- and low-output genes from proximal and distal intergenic bins" loading="lazy" decoding="async"></div>
             <figcaption>
               <span>02</span><strong>Read the CTD response over time</strong><p>EU-seq responses across IAA treatment and wash-off, separating genes in productive domains from intergenic bins in basal domains.</p>
+              <small class="figure-source">XShen Lab · Unpublished</small>
               
                 <dl class="research-surveillance__guide">
                   <div>
@@ -573,17 +616,19 @@
           </figure>
         
           <figure data-reveal="" style="--reveal-order: 2">
-            <div><img src="/images/research/transcriptional-surveillance/zga-pol-ii-ser2p.png" alt="EU-RNA and RNA Polymerase II Ser2P imaging across pre-ZGA, minor-ZGA and major-ZGA stages" loading="lazy" decoding="async"></div>
+            <div><img src="/images/research/transcriptional-surveillance/zga-pol-ii-ser2p-watermarked.png" alt="EU-RNA and RNA Polymerase II Ser2P imaging across pre-ZGA, minor-ZGA and major-ZGA stages" loading="lazy" decoding="async"></div>
             <figcaption>
               <span>03</span><strong>Watch surveillance emerge</strong><p>EU-RNA and Pol II Ser2P imaging across pre-, minor- and major-ZGA stages.</p>
+              <small class="figure-source">XShen Lab · Unpublished</small>
               
             </figcaption>
           </figure>
         
           <figure data-reveal="" style="--reveal-order: 3">
-            <div><img src="/images/research/transcriptional-surveillance/zga-activity-model.png" alt="Working model connecting CTD maturation with the transition from basal to productive transcription during zygotic genome activation" loading="lazy" decoding="async"></div>
+            <div><img src="/images/research/transcriptional-surveillance/zga-activity-model-watermarked.png" alt="Working model connecting CTD maturation with the transition from basal to productive transcription during zygotic genome activation" loading="lazy" decoding="async"></div>
             <figcaption>
               <span>04</span><strong>Connect mechanism to state</strong><p>A working model links CTD maturation and zygotic genome activation to the transition from basal- to productive-domain activity.</p>
+              <small class="figure-source">XShen Lab · Unpublished</small>
               
             </figcaption>
           </figure>
@@ -596,20 +641,22 @@
     <div class="research-shell research-nucleus__grid">
       <div class="research-nucleus__copy" data-reveal="">
         <p class="research-kicker">The nucleus as a system</p>
-        <h2 id="research-nucleus-title">Two interwoven polymer networks shape information flow.</h2>
+        <h2 id="research-nucleus-title">Two interwoven polymer networks shape information flow</h2>
         <p>The nucleus is a far-from-equilibrium polymer–electrolyte system. Chromatin carries genetic information and provides the structural basis for genome folding; the RNA–RBP meshwork, composed of nascent RNA, RNA-binding proteins and RNA-processing factors, helps determine when, where and how genomic information is accessed.</p>
 <p>Their interface—the Perichromatin Region—is a dynamic surface where transcription, RNA processing, RNP assembly, RNA degradation and nuclear transport are spatially and functionally coupled. Transcription continually introduces RNA, energy and entropy into this active system.</p>
       </div>
       <div class="research-nucleus__images">
         
           <figure data-reveal="" style="--reveal-order: 1">
-            <img src="/images/research/rna-rbp-mesh-em.png" alt="Electron-microscopy view of a dense nuclear domain surrounded by an RNA–RBP meshwork" loading="lazy" decoding="async">
-            <figcaption><span>01</span>Electron-microscopy view of nuclear organization and the surrounding RNA–RBP meshwork.</figcaption>
+            <img src="/images/research/rna-rbp-mesh-em-watermarked.png" alt="Electron-microscopy view of a dense nuclear domain surrounded by an RNA–RBP meshwork" loading="lazy" decoding="async">
+            <figcaption><span>01</span><div>Electron-microscopy view of nuclear organization and the surrounding RNA–RBP meshwork.<small class="figure-source">XShen Lab · Unpublished</small>
+</div></figcaption>
           </figure>
         
           <figure data-reveal="" style="--reveal-order: 2">
-            <img src="/images/research/rna-chromatin-dstorm.png" alt="Super-resolution image showing interwoven EU-labeled RNA and H3-marked chromatin in a nucleus" loading="lazy" decoding="async">
-            <figcaption><span>02</span>Super-resolution view of RNA and chromatin nanodomains.</figcaption>
+            <img src="/images/research/rna-chromatin-dstorm-watermarked.png" alt="Super-resolution image showing interwoven EU-labeled RNA and H3-marked chromatin in a nucleus" loading="lazy" decoding="async">
+            <figcaption><span>02</span><div>Super-resolution view of RNA and chromatin nanodomains.<small class="figure-source">XShen Lab · Unpublished</small>
+</div></figcaption>
           </figure>
         
       </div>
@@ -620,13 +667,13 @@
     <div class="research-shell">
       <div class="research-technology__head" data-reveal="">
         <p class="research-kicker">Technology across scales</p>
-        <h2 id="research-technology-title">Measure, reconstruct and model the process.</h2>
+        <h2 id="research-technology-title">Measure reconstruct and model the process</h2>
         <p>Quantitative experiments and theory are developed together rather than treated as isolated platforms.</p>
       </div>
       <ol class="research-technology__list">
         
           <li data-reveal="" style="--reveal-order: 1">
-<span>01</span><strong>Molecular</strong><p>Nascent RNA profiling · biochemical reconstitution</p>
+<span>01</span><strong>Molecular</strong><p>Single-cell genomics · nascent transcriptomics</p>
 </li>
         
           <li data-reveal="" style="--reveal-order: 2">
@@ -634,15 +681,15 @@
 </li>
         
           <li data-reveal="" style="--reveal-order: 3">
-<span>03</span><strong>Cellular</strong><p>scFLUENT-seq · single-cell genomics · multi-omics</p>
+<span>03</span><strong>Perturbation</strong><p>Auxin-inducible degron (AID) for acute protein depletion and recovery after auxin washout</p>
 </li>
         
           <li data-reveal="" style="--reveal-order: 4">
-<span>04</span><strong>Perturbational</strong><p>CRISPR genome engineering</p>
+<span>04</span><strong>Biochemical reconstitution</strong><p>Reconstituting molecular interactions and activities with defined components</p>
 </li>
         
           <li data-reveal="" style="--reveal-order: 5">
-<span>05</span><strong>Computational</strong><p>Bioinformatics · artificial intelligence · kinetic modeling</p>
+<span>05</span><strong>Modeling</strong><p>Statistical and kinetic models of transcription and cell-state dynamics</p>
 </li>
         
       </ol>
@@ -653,7 +700,7 @@
     <div class="research-shell research-future__grid">
       <p class="research-kicker">Future vision</p>
       <div data-reveal="">
-        <h2 id="research-future-title">Toward a predictive theory of cell state.</h2>
+        <h2 id="research-future-title">Toward a predictive theory of cell state</h2>
         <p>We aim to move beyond gene-centric and pathway-centric descriptions toward physical principles, statistical theories and predictive models that connect DNA sequence, nuclear organization, RNA processing, transcriptional selection and cell fate.</p>
         <a href="/publications/">Explore our publications <span aria-hidden="true">↗</span></a>
       </div>

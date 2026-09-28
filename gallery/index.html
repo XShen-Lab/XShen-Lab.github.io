@@ -148,6 +148,10 @@
 <script src="/_scripts/dark-mode.js" defer></script>
 <script src="/_scripts/motion.js" defer></script>
 <script src="/_scripts/resource-gate.js" defer></script>
+<script src="/_scripts/research-menu.js" defer></script>
+
+  <script src="/_scripts/exhibit-autoplay.js" defer></script>
+
 
 
 
@@ -226,36 +230,51 @@
         
           
           
+          
           <a href="/" data-tooltip="Home">Home</a>
         
           
+
+
+<details class="research-menu" data-research-menu>
+  <summary>Research<span aria-hidden="true">⌄</span></summary>
+  <div class="research-menu__links">
+    <a href="/research/">Research overview</a>
+    <a href="/research/#genome-organization"><span>01</span>Genome Organization</a><a href="/research/#rna-networks"><span>02</span>RNA Networks</a><a href="/research/#transcriptional-surveillance"><span>03</span>Transcriptional Surveillance</a><a href="/research/#cell-fate-dynamics"><span>04</span>Cell Fate Dynamics</a>
+  </div>
+</details>
+
           
-          <a href="/research/" data-tooltip="Research directions">Research</a>
-        
           
           
           <a href="/team/" data-tooltip="Members of the XShen Lab">People</a>
         
           
           
+          
           <a href="/publications/" data-tooltip="Representative and full publications">Publications</a>
         
+          
           
           
           <a href="/gallery/" data-tooltip="Explore the XShen Lab gallery" aria-current="page">Gallery</a>
         
           
           
+          
           <a href="/Resources/" data-tooltip="Pipelines, protocols, and lab resources" class="resource-nav-link" data-resource-nav-link data-resource-label="Resources" aria-label="Resources, locked">Resources<span class="resource-nav-state" aria-hidden="true"><span class="resource-locked-icon">🔒</span><span class="resource-unlocked-icon">🔓</span></span></a>
         
+          
           
           
           <a href="/blog/" data-tooltip="Essays, lab updates, and perspectives from the XShen Lab">Blog</a>
         
           
           
+          
           <a href="/join-us/" data-tooltip="Opportunities to join the XShen Lab">Join Us</a>
         
+          
           
           
           <a href="/contact/" data-tooltip="Contact the XShen Lab">Contact</a>
@@ -293,14 +312,19 @@
     <div class="gallery-hero__glow" aria-hidden="true"></div>
     <div class="gallery-shell gallery-hero__inner">
       <p class="gallery-eyebrow" data-reveal="">XShen Lab Gallery</p>
-      <h1 data-reveal="" style="--reveal-order: 1">Ways of seeing.</h1>
+      <h1 data-reveal="" style="--reveal-order: 1">Ways of seeing</h1>
       <p class="gallery-hero__intro" data-reveal="" style="--reveal-order: 2">A collection of scientific models, conceptual maps, and visual prompts that shape how we think about biological information flow.</p>
       <div class="gallery-hero__threshold" data-reveal="" style="--reveal-order: 3">
         <a href="#gallery-collection">Enter the collection <span aria-hidden="true">↓</span></a>
         <span>Three halls · Twelve works</span>
       </div>
     </div>
-    <div class="gallery-hero__door" aria-hidden="true"><span></span></div>
+    <button class="gallery-wardrobe" type="button" data-gallery-door="" aria-label="Enter the collection">
+      <span class="gallery-wardrobe__world" aria-hidden="true"></span>
+      <span class="gallery-wardrobe__leaf gallery-wardrobe__leaf--left" aria-hidden="true"><i></i></span>
+      <span class="gallery-wardrobe__leaf gallery-wardrobe__leaf--right" aria-hidden="true"><i></i></span>
+      <span class="gallery-wardrobe__invitation">Enter the collection <span aria-hidden="true">↗</span></span>
+    </button>
   </header>
 
   <nav class="gallery-index" aria-label="Three halls · Twelve works">
@@ -338,8 +362,10 @@
         <div class="gallery-shell gallery-wall gallery-wall--1">
           
             
+            
+            
             <article class="gallery-work gallery-work--square gallery-frame--amber" data-reveal="" style="--reveal-order: 0">
-              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/molecular-landscape.jpg" data-title="Molecular Landscape" data-caption="A crowded molecular scene in which structure, proximity, and interaction coexist at cellular scale." data-source="Lab collection" data-alt="Illustrated crowded molecular environment with many interacting cellular components." aria-label="View work: Molecular Landscape">
+              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/home/information-flow/pol-ii-subunits.webp" data-title="RNA Polymerase II" data-caption="A conceptual illustration of the twelve Pol II subunits RPB1–RPB12, informed by published structural studies. This is a schematic, not an atomic structure." data-source="Original illustration · Armache et al. · J Biol Chem · 2005 · PDB 1WCM" data-citation-url="https://doi.org/10.1074/jbc.M413038200" data-citation-title="Structures of Complete RNA Polymerase II and its Subcomplex, Rpb4/7" data-alt="Twelve labeled subunits of RNA polymerase II in an original conceptual illustration." aria-label="View work: RNA Polymerase II">
                 <span class="gallery-work__frame">
                   
 
@@ -350,24 +376,25 @@
 
 <picture class="responsive-image gallery-work__picture">
   
-    <source type="image/webp" srcset="/images/gallery/molecular-landscape-480.webp 480w, /images/gallery/molecular-landscape-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1100px) 50vw, 42vw"></source>
-  
-  <img src="/images/gallery/molecular-landscape.jpg" alt="Illustrated crowded molecular environment with many interacting cellular components." loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+  <img src="/images/home/information-flow/pol-ii-subunits.webp" alt="Twelve labeled subunits of RNA polymerase II in an original conceptual illustration." loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 </picture>
 
                   <span class="gallery-work__spotlight" aria-hidden="true"></span>
                 </span>
               </button>
               <div class="gallery-work__label">
-                <p>Lab collection</p>
-                <h3>Molecular Landscape</h3>
-                <p>A crowded molecular scene in which structure, proximity, and interaction coexist at cellular scale.</p>
+                <p>Original illustration · Armache et al. · J Biol Chem · 2005 · PDB 1WCM</p>
+                <h3>RNA Polymerase II</h3>
+                <p>A conceptual illustration of the twelve Pol II subunits RPB1–RPB12, informed by published structural studies. This is a schematic, not an atomic structure.</p>
+                <small class="figure-source"><a href="https://doi.org/10.1074/jbc.M413038200" title="Structures of Complete RNA Polymerase II and its Subcomplex, Rpb4/7">Armache et al. · J Biol Chem · 2005 · PDB 1WCM</a></small>
               </div>
             </article>
           
             
+            
+            
             <article class="gallery-work gallery-work--compact gallery-frame--paper" data-reveal="" style="--reveal-order: 1">
-              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/chromatin-rnp-mesh.jpg" data-title="Chromatin–RNA–RNP Mesh" data-caption="A compact conceptual link between chromatin, transcription, RNA, and the nuclear RNP meshwork." data-source="Lab collection" data-alt="Concept diagram linking chromatin, transcription, RNA, and the RNP mesh." aria-label="View work: Chromatin–RNA–RNP Mesh">
+              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/chromatin-rnp-mesh-watermarked.jpg" data-title="Chromatin–RNA–RNP Mesh" data-caption="A compact conceptual link between chromatin, transcription, RNA, and the nuclear RNP meshwork." data-source="Lab collection" data-citation-url="" data-citation-title="" data-alt="Concept diagram linking chromatin, transcription, RNA, and the RNP mesh." aria-label="View work: Chromatin–RNA–RNP Mesh">
                 <span class="gallery-work__frame">
                   
 
@@ -378,9 +405,7 @@
 
 <picture class="responsive-image gallery-work__picture">
   
-    <source type="image/webp" srcset="/images/gallery/chromatin-rnp-mesh-480.webp 480w, /images/gallery/chromatin-rnp-mesh-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1100px) 50vw, 42vw"></source>
-  
-  <img src="/images/gallery/chromatin-rnp-mesh.jpg" alt="Concept diagram linking chromatin, transcription, RNA, and the RNP mesh." loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+  <img src="/images/gallery/chromatin-rnp-mesh-watermarked.jpg" alt="Concept diagram linking chromatin, transcription, RNA, and the RNP mesh." loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 </picture>
 
                   <span class="gallery-work__spotlight" aria-hidden="true"></span>
@@ -390,12 +415,15 @@
                 <p>Lab collection</p>
                 <h3>Chromatin–RNA–RNP Mesh</h3>
                 <p>A compact conceptual link between chromatin, transcription, RNA, and the nuclear RNP meshwork.</p>
+                <small class="figure-source">XShen Lab · Unpublished</small>
               </div>
             </article>
           
             
+            
+            
             <article class="gallery-work gallery-work--wide gallery-frame--paper" data-reveal="" style="--reveal-order: 2">
-              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/rna-as-matter.jpg" data-title="RNA as Nuclear Matter" data-caption="RNA carries information, but its abundance, charge, and multivalent interactions also contribute to the physical state of the nucleus." data-source="Lab talk" data-alt="Scientific slide presenting RNA as both information and material of the nucleus." aria-label="View work: RNA as Nuclear Matter">
+              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/rna-as-matter-watermarked.jpg" data-title="RNA as Nuclear Matter" data-caption="RNA carries information and acts as nuclear matter, with its abundance, charge, and multivalent interactions contributing to the physical state of the nucleus." data-source="Lab talk" data-citation-url="" data-citation-title="" data-alt="Scientific slide presenting RNA as both information and material of the nucleus." aria-label="View work: RNA as Nuclear Matter">
                 <span class="gallery-work__frame">
                   
 
@@ -406,9 +434,9 @@
 
 <picture class="responsive-image gallery-work__picture">
   
-    <source type="image/webp" srcset="/images/gallery/rna-as-matter-480.webp 480w, /images/gallery/rna-as-matter-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1100px) 50vw, 42vw"></source>
+    <source type="image/webp" srcset="/images/gallery/rna-as-matter-watermarked-480.webp 480w, /images/gallery/rna-as-matter-watermarked-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1100px) 50vw, 42vw"></source>
   
-  <img src="/images/gallery/rna-as-matter.jpg" alt="Scientific slide presenting RNA as both information and material of the nucleus." loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+  <img src="/images/gallery/rna-as-matter-watermarked.jpg" alt="Scientific slide presenting RNA as both information and material of the nucleus." loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 </picture>
 
                   <span class="gallery-work__spotlight" aria-hidden="true"></span>
@@ -417,13 +445,16 @@
               <div class="gallery-work__label">
                 <p>Lab talk</p>
                 <h3>RNA as Nuclear Matter</h3>
-                <p>RNA carries information, but its abundance, charge, and multivalent interactions also contribute to the physical state of the nucleus.</p>
+                <p>RNA carries information and acts as nuclear matter, with its abundance, charge, and multivalent interactions contributing to the physical state of the nucleus.</p>
+                <small class="figure-source">XShen Lab · Unpublished</small>
               </div>
             </article>
           
             
+            
+            
             <article class="gallery-work gallery-work--wide gallery-frame--silver" data-reveal="" style="--reveal-order: 3">
-              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/nuclear-rna-systems-model.jpg" data-title="A Systems View of Nuclear RNA" data-caption="An extracted model connecting chromatin folding, transcription, RNP assembly, RNA processing, and translation." data-source="Lab talk · left model" data-alt="Systems model linking chromatin folding, transcription, nuclear RNPs, messenger RNPs, the exosome, and translation." aria-label="View work: A Systems View of Nuclear RNA">
+              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/nuclear-rna-systems-model-watermarked.jpg" data-title="A Systems View of Nuclear RNA" data-caption="An extracted model connecting chromatin folding, transcription, RNP assembly, RNA processing, and translation." data-source="Lab talk · left model" data-citation-url="" data-citation-title="" data-alt="Systems model linking chromatin folding, transcription, nuclear RNPs, messenger RNPs, the exosome, and translation." aria-label="View work: A Systems View of Nuclear RNA">
                 <span class="gallery-work__frame">
                   
 
@@ -434,9 +465,9 @@
 
 <picture class="responsive-image gallery-work__picture">
   
-    <source type="image/webp" srcset="/images/gallery/nuclear-rna-systems-model-480.webp 480w, /images/gallery/nuclear-rna-systems-model-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1100px) 50vw, 42vw"></source>
+    <source type="image/webp" srcset="/images/gallery/nuclear-rna-systems-model-watermarked-480.webp 480w" sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1100px) 50vw, 42vw"></source>
   
-  <img src="/images/gallery/nuclear-rna-systems-model.jpg" alt="Systems model linking chromatin folding, transcription, nuclear RNPs, messenger RNPs, the exosome, and translation." loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+  <img src="/images/gallery/nuclear-rna-systems-model-watermarked.jpg" alt="Systems model linking chromatin folding, transcription, nuclear RNPs, messenger RNPs, the exosome, and translation." loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 </picture>
 
                   <span class="gallery-work__spotlight" aria-hidden="true"></span>
@@ -446,6 +477,7 @@
                 <p>Lab talk · left model</p>
                 <h3>A Systems View of Nuclear RNA</h3>
                 <p>An extracted model connecting chromatin folding, transcription, RNP assembly, RNA processing, and translation.</p>
+                <small class="figure-source">XShen Lab · Unpublished</small>
               </div>
             </article>
           
@@ -464,8 +496,10 @@
         <div class="gallery-shell gallery-wall gallery-wall--2">
           
             
+            
+            
             <article class="gallery-work gallery-work--wide gallery-frame--paper" data-reveal="" style="--reveal-order: 0">
-              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/two-paradoxes.jpg" data-title="Two Paradoxes of Genome Regulation" data-caption="One genome gives rise to many stable cell types, while pervasive transcription yields a highly selective mature-mRNA output." data-source="Lab talk" data-alt="Scientific slide contrasting one genome with many stable cell types and pervasive transcription with selective mRNA output." aria-label="View work: Two Paradoxes of Genome Regulation">
+              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/two-paradoxes-watermarked.jpg" data-title="Two Paradoxes of Genome Regulation" data-caption="One genome gives rise to many stable cell types, while pervasive transcription yields a highly selective mature-mRNA output." data-source="Lab talk" data-citation-url="" data-citation-title="" data-alt="Scientific slide contrasting one genome with many stable cell types and pervasive transcription with selective mRNA output." aria-label="View work: Two Paradoxes of Genome Regulation">
                 <span class="gallery-work__frame">
                   
 
@@ -476,9 +510,9 @@
 
 <picture class="responsive-image gallery-work__picture">
   
-    <source type="image/webp" srcset="/images/gallery/two-paradoxes-480.webp 480w, /images/gallery/two-paradoxes-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1100px) 50vw, 42vw"></source>
+    <source type="image/webp" srcset="/images/gallery/two-paradoxes-watermarked-480.webp 480w, /images/gallery/two-paradoxes-watermarked-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1100px) 50vw, 42vw"></source>
   
-  <img src="/images/gallery/two-paradoxes.jpg" alt="Scientific slide contrasting one genome with many stable cell types and pervasive transcription with selective mRNA output." loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+  <img src="/images/gallery/two-paradoxes-watermarked.jpg" alt="Scientific slide contrasting one genome with many stable cell types and pervasive transcription with selective mRNA output." loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 </picture>
 
                   <span class="gallery-work__spotlight" aria-hidden="true"></span>
@@ -488,12 +522,15 @@
                 <p>Lab talk</p>
                 <h3>Two Paradoxes of Genome Regulation</h3>
                 <p>One genome gives rise to many stable cell types, while pervasive transcription yields a highly selective mature-mRNA output.</p>
+                <small class="figure-source">XShen Lab · Unpublished</small>
               </div>
             </article>
           
             
+            
+            
             <article class="gallery-work gallery-work--wide gallery-frame--silver" data-reveal="" style="--reveal-order: 1">
-              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/noise-to-order.jpg" data-title="From Noise to Order" data-caption="A conceptual progression from transcriptional noise to surveillance, ordered RNA output, and diverse cell states." data-source="Lab talk" data-alt="Scientific slide showing transcriptional surveillance imposing order on genome-wide transcriptional noise." aria-label="View work: From Noise to Order">
+              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/noise-to-order-watermarked.jpg" data-title="From Noise to Order" data-caption="A conceptual progression from transcriptional noise to surveillance, ordered RNA output, and diverse cell states." data-source="Lab talk" data-citation-url="" data-citation-title="" data-alt="Scientific slide showing transcriptional surveillance imposing order on genome-wide transcriptional noise." aria-label="View work: From Noise to Order">
                 <span class="gallery-work__frame">
                   
 
@@ -504,9 +541,9 @@
 
 <picture class="responsive-image gallery-work__picture">
   
-    <source type="image/webp" srcset="/images/gallery/noise-to-order-480.webp 480w, /images/gallery/noise-to-order-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1100px) 50vw, 42vw"></source>
+    <source type="image/webp" srcset="/images/gallery/noise-to-order-watermarked-480.webp 480w, /images/gallery/noise-to-order-watermarked-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1100px) 50vw, 42vw"></source>
   
-  <img src="/images/gallery/noise-to-order.jpg" alt="Scientific slide showing transcriptional surveillance imposing order on genome-wide transcriptional noise." loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+  <img src="/images/gallery/noise-to-order-watermarked.jpg" alt="Scientific slide showing transcriptional surveillance imposing order on genome-wide transcriptional noise." loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 </picture>
 
                   <span class="gallery-work__spotlight" aria-hidden="true"></span>
@@ -516,12 +553,15 @@
                 <p>Lab talk</p>
                 <h3>From Noise to Order</h3>
                 <p>A conceptual progression from transcriptional noise to surveillance, ordered RNA output, and diverse cell states.</p>
+                <small class="figure-source">XShen Lab · Unpublished</small>
               </div>
             </article>
           
             
+            
+            
             <article class="gallery-work gallery-work--wide gallery-frame--paper" data-reveal="" style="--reveal-order: 2">
-              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/productive-genome-usage.jpg" data-title="Productive Genome Usage" data-caption="A working theory linking genome partition, polymerase selection, transcriptional surveillance, and nuclear feedback." data-source="Lab talk" data-alt="Scientific slide outlining a theory of productive genome usage and cell identity." aria-label="View work: Productive Genome Usage">
+              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/productive-genome-usage-watermarked.jpg" data-title="Productive Genome Usage" data-caption="A working theory linking genome partition, polymerase selection, transcriptional surveillance, and nuclear feedback." data-source="Lab talk" data-citation-url="" data-citation-title="" data-alt="Scientific slide outlining a theory of productive genome usage and cell identity." aria-label="View work: Productive Genome Usage">
                 <span class="gallery-work__frame">
                   
 
@@ -532,9 +572,9 @@
 
 <picture class="responsive-image gallery-work__picture">
   
-    <source type="image/webp" srcset="/images/gallery/productive-genome-usage-480.webp 480w, /images/gallery/productive-genome-usage-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1100px) 50vw, 42vw"></source>
+    <source type="image/webp" srcset="/images/gallery/productive-genome-usage-watermarked-480.webp 480w, /images/gallery/productive-genome-usage-watermarked-960.webp 960w" sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1100px) 50vw, 42vw"></source>
   
-  <img src="/images/gallery/productive-genome-usage.jpg" alt="Scientific slide outlining a theory of productive genome usage and cell identity." loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+  <img src="/images/gallery/productive-genome-usage-watermarked.jpg" alt="Scientific slide outlining a theory of productive genome usage and cell identity." loading="lazy" decoding="async" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 </picture>
 
                   <span class="gallery-work__spotlight" aria-hidden="true"></span>
@@ -544,12 +584,15 @@
                 <p>Lab talk</p>
                 <h3>Productive Genome Usage</h3>
                 <p>A working theory linking genome partition, polymerase selection, transcriptional surveillance, and nuclear feedback.</p>
+                <small class="figure-source">XShen Lab · Unpublished</small>
               </div>
             </article>
           
             
+            
+            
             <article class="gallery-work gallery-work--wide gallery-frame--amber" data-reveal="" style="--reveal-order: 3">
-              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/dynamics-in-time.jpg" data-title="Biology = Dynamics in Time" data-caption="The same molecules can support different biological lives; timing is part of the mechanism." data-source="Lab talk" data-alt="Slide with Barbara McClintock and a quotation about timing gene action, ending with Biology equals Dynamics in time." aria-label="View work: Biology = Dynamics in Time">
+              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/dynamics-in-time.jpg" data-title="Biology as Dynamics in Time" data-caption="The same molecules can support different biological lives; timing is part of the mechanism." data-source="Lab talk" data-citation-url="" data-citation-title="" data-alt="Slide with Barbara McClintock and a quotation about timing gene action, ending with Biology equals Dynamics in time." aria-label="View work: Biology as Dynamics in Time">
                 <span class="gallery-work__frame">
                   
 
@@ -570,8 +613,9 @@
               </button>
               <div class="gallery-work__label">
                 <p>Lab talk</p>
-                <h3>Biology = Dynamics in Time</h3>
+                <h3>Biology as Dynamics in Time</h3>
                 <p>The same molecules can support different biological lives; timing is part of the mechanism.</p>
+                
               </div>
             </article>
           
@@ -590,8 +634,10 @@
         <div class="gallery-shell gallery-wall gallery-wall--3">
           
             
+            
+            
             <article class="gallery-work gallery-work--tall gallery-frame--midnight" data-reveal="" style="--reveal-order: 0">
-              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/many-views-one-object.jpg" data-title="Many Views, One Object" data-caption="Each perspective can be valid within its own view, yet no single projection captures the whole object." data-source="Lab collection" data-alt="Three-panel illustration showing how different three-dimensional objects cast different partial projections." aria-label="View work: Many Views, One Object">
+              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/many-views-one-object.jpg" data-title="Many Views One Object" data-caption="Each perspective can be valid within its own view, yet no single projection captures the whole object." data-source="Lab collection" data-citation-url="" data-citation-title="" data-alt="Three-panel illustration showing how different three-dimensional objects cast different partial projections." aria-label="View work: Many Views One Object">
                 <span class="gallery-work__frame">
                   
 
@@ -612,14 +658,17 @@
               </button>
               <div class="gallery-work__label">
                 <p>Lab collection</p>
-                <h3>Many Views, One Object</h3>
+                <h3>Many Views One Object</h3>
                 <p>Each perspective can be valid within its own view, yet no single projection captures the whole object.</p>
+                
               </div>
             </article>
           
             
+            
+            
             <article class="gallery-work gallery-work--square gallery-frame--paper" data-reveal="" style="--reveal-order: 1">
-              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/discussion-over-argument.jpg" data-title="Discussion over Argument" data-caption="The goal is not to establish who is right, but to discover what is right." data-source="Lab collection" data-alt="Illustrated quotation contrasting arguments that find who is right with discussions that find what is right." aria-label="View work: Discussion over Argument">
+              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/discussion-over-argument.jpg" data-title="Discussion over Argument" data-caption="The goal is not to establish who is right, but to discover what is right." data-source="Lab collection" data-citation-url="" data-citation-title="" data-alt="Illustrated quotation contrasting arguments that find who is right with discussions that find what is right." aria-label="View work: Discussion over Argument">
                 <span class="gallery-work__frame">
                   
 
@@ -642,12 +691,15 @@
                 <p>Lab collection</p>
                 <h3>Discussion over Argument</h3>
                 <p>The goal is not to establish who is right, but to discover what is right.</p>
+                
               </div>
             </article>
           
             
+            
+            
             <article class="gallery-work gallery-work--square gallery-frame--paper" data-reveal="" style="--reveal-order: 2">
-              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/truth-changes-minds.jpg" data-title="Truth Changes Minds" data-caption="Good science is a willingness to test assumptions and let new evidence revise what we believe." data-source="Lab collection" data-alt="Illustrated quotation saying good science is about discovering what is right and that truth changes minds." aria-label="View work: Truth Changes Minds">
+              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/truth-changes-minds.jpg" data-title="Truth Changes Minds" data-caption="Good science is a willingness to test assumptions and let new evidence revise what we believe." data-source="Lab collection" data-citation-url="" data-citation-title="" data-alt="Illustrated quotation saying good science is about discovering what is right and that truth changes minds." aria-label="View work: Truth Changes Minds">
                 <span class="gallery-work__frame">
                   
 
@@ -670,12 +722,15 @@
                 <p>Lab collection</p>
                 <h3>Truth Changes Minds</h3>
                 <p>Good science is a willingness to test assumptions and let new evidence revise what we believe.</p>
+                
               </div>
             </article>
           
             
+            
+            
             <article class="gallery-work gallery-work--panorama gallery-frame--gold" data-reveal="" style="--reveal-order: 3">
-              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/where-do-we-come-from.jpg" data-title="Where Do We Come From? What Are We? Where Are We Going?" data-caption="A final, panoramic question about origins, identity, and direction—questions shared by art and science." data-source="Lab talk · artwork" data-alt="Panoramic painting of human figures in a tropical landscape, presented as the closing image of the lab talk." aria-label="View work: Where Do We Come From? What Are We? Where Are We Going?">
+              <button class="gallery-work__open" type="button" data-gallery-item="" data-image="/images/gallery/where-do-we-come-from.jpg" data-title="Where Do We Come From What Are We Where Are We Going" data-caption="A final, panoramic question about origins, identity, and direction—questions shared by art and science." data-source="Lab talk · artwork" data-citation-url="" data-citation-title="" data-alt="Panoramic painting of human figures in a tropical landscape, presented as the closing image of the lab talk." aria-label="View work: Where Do We Come From What Are We Where Are We Going">
                 <span class="gallery-work__frame">
                   
 
@@ -696,8 +751,9 @@
               </button>
               <div class="gallery-work__label">
                 <p>Lab talk · artwork</p>
-                <h3>Where Do We Come From? What Are We? Where Are We Going?</h3>
+                <h3>Where Do We Come From What Are We Where Are We Going</h3>
                 <p>A final, panoramic question about origins, identity, and direction—questions shared by art and science.</p>
+                
               </div>
             </article>
           
@@ -715,11 +771,12 @@
         <span aria-hidden="true">←</span>
       </button>
       <figure>
-        <img src="/images/gallery/molecular-landscape-480.webp" alt="" data-gallery-dialog-image="">
+        <img src="/images/home/information-flow/pol-ii-subunits.webp" alt="" data-gallery-dialog-image="">
         <figcaption>
           <p class="gallery-viewer__source" data-gallery-dialog-source=""></p>
           <h2 id="gallery-dialog-title" data-gallery-dialog-title=""></h2>
           <p data-gallery-dialog-caption=""></p>
+          <a class="figure-source" href="https://doi.org/10.1074/jbc.M413038200" data-gallery-dialog-citation="" hidden=""></a>
           <p class="gallery-viewer__count"><span class="visually-hidden">Work</span><span data-gallery-dialog-count=""></span></p>
         </figcaption>
       </figure>

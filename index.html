@@ -138,6 +138,10 @@
 <script src="/_scripts/dark-mode.js" defer></script>
 <script src="/_scripts/motion.js" defer></script>
 <script src="/_scripts/resource-gate.js" defer></script>
+<script src="/_scripts/research-menu.js" defer></script>
+
+  <script src="/_scripts/exhibit-autoplay.js" defer></script>
+
 
 
   <script src="/_scripts/hero-carousel.js" defer></script>
@@ -208,36 +212,51 @@
         
           
           
+          
           <a href="/" data-tooltip="Home" aria-current="page">Home</a>
         
           
+
+
+<details class="research-menu" data-research-menu>
+  <summary>Research<span aria-hidden="true">⌄</span></summary>
+  <div class="research-menu__links">
+    <a href="/research/">Research overview</a>
+    <a href="/research/#genome-organization"><span>01</span>Genome Organization</a><a href="/research/#rna-networks"><span>02</span>RNA Networks</a><a href="/research/#transcriptional-surveillance"><span>03</span>Transcriptional Surveillance</a><a href="/research/#cell-fate-dynamics"><span>04</span>Cell Fate Dynamics</a>
+  </div>
+</details>
+
           
-          <a href="/research/" data-tooltip="Research directions">Research</a>
-        
           
           
           <a href="/team/" data-tooltip="Members of the XShen Lab">People</a>
         
           
           
+          
           <a href="/publications/" data-tooltip="Representative and full publications">Publications</a>
         
+          
           
           
           <a href="/gallery/" data-tooltip="Explore the XShen Lab gallery">Gallery</a>
         
           
           
+          
           <a href="/Resources/" data-tooltip="Pipelines, protocols, and lab resources" class="resource-nav-link" data-resource-nav-link data-resource-label="Resources" aria-label="Resources, locked">Resources<span class="resource-nav-state" aria-hidden="true"><span class="resource-locked-icon">🔒</span><span class="resource-unlocked-icon">🔓</span></span></a>
         
+          
           
           
           <a href="/blog/" data-tooltip="Essays, lab updates, and perspectives from the XShen Lab">Blog</a>
         
           
           
+          
           <a href="/join-us/" data-tooltip="Opportunities to join the XShen Lab">Join Us</a>
         
+          
           
           
           <a href="/contact/" data-tooltip="Contact the XShen Lab">Contact</a>
@@ -270,9 +289,9 @@
   <section class="background" data-size="page">
     <div class="rna-home" data-rna-home="">
   <section class="rna-hero" aria-labelledby="rna-hero-title">
-    <aside class="rna-hero-index" aria-hidden="true">
-      <span>Genome</span><span>Nucleus</span><span>RNA</span><span>Cell fate</span>
-    </aside>
+    <nav class="rna-hero-index" aria-label="Research programs">
+      <a href="/research/#genome-organization">Genome</a><a href="/research/#rna-networks">Nucleus</a><a href="/research/#transcriptional-surveillance">RNA</a><a href="/research/#cell-fate-dynamics">Cell fate</a>
+    </nav>
 
     <div class="rna-hero-copy">
       <p class="rna-eyebrow" data-reveal="">XShen Lab · Tsinghua University</p>
@@ -280,7 +299,7 @@
         Biological Information Flow
       </h1>
       <p class="rna-hero-subtitle" data-reveal="" style="--reveal-order: 2">From Genome to Cell Fate</p>
-      <p class="rna-hero-question" data-reveal="" style="--reveal-order: 3">How does sparse and stochastic genome activity become stable biological information and cell fate?</p>
+      <p class="rna-hero-question" data-reveal="" style="--reveal-order: 3">How does sparse and stochastic genome activity become stable biological information and cell fate</p>
       <p class="rna-hero-intro" data-reveal="" style="--reveal-order: 4">We study how information is continuously organized, processed, selected and stabilized across the genome, nucleus and cell.</p>
       <div class="rna-hero-actions" data-reveal="" style="--reveal-order: 5">
         <a class="rna-button primary" href="/research/">Research <span aria-hidden="true">↗</span></a><a class="rna-button secondary" href="/publications/">Publications <span aria-hidden="true">↗</span></a><a class="rna-button text" href="/join-us/">Join Us <span aria-hidden="true">↗</span></a>
@@ -291,45 +310,48 @@
         <div class="rna-hero-carousel__viewport" data-hero-carousel-viewport="">
           <div class="rna-hero-carousel__track" data-hero-carousel-track="">
             
-              <figure class="rna-hero-carousel__slide" data-hero-carousel-slide="" data-title="Molecular crowding" aria-hidden="false">
+              <figure class="rna-hero-carousel__slide" data-hero-carousel-slide="" data-title="RNA polymerase II" aria-hidden="false">
                 <div class="rna-hero-carousel__image">
-                  <img src="/images/home/information-flow/molecular-crowding.webp" alt="Dense illustrated molecular landscape with many interacting cellular components." width="598" height="513" loading="eager" fetchpriority="high" decoding="async">
+                  <img src="/images/home/information-flow/pol-ii-subunits.webp" alt="Conceptual illustration of twelve RNA polymerase II subunits labeled RPB1 through RPB12." width="1254" height="1254" loading="eager" fetchpriority="high" decoding="async">
                 </div>
-                <figcaption><span>01</span>Molecular crowding</figcaption>
+                <figcaption><span>01</span><div>RNA polymerase II<small class="figure-source"><a href="https://doi.org/10.1074/jbc.M413038200" title="Structures of Complete RNA Polymerase II and its Subcomplex, Rpb4/7">Armache et al. · J Biol Chem · 2005 · PDB 1WCM</a></small>
+</div></figcaption>
               </figure>
             
               <figure class="rna-hero-carousel__slide" data-hero-carousel-slide="" data-title="The noncoding genome" aria-hidden="true">
                 <div class="rna-hero-carousel__image">
-                  <img src="/images/home/information-flow/noncoding-genome.webp" alt="Red apple-shaped diagram labeled Noncoding 98 percent." width="518" height="540" loading="lazy" decoding="async">
+                  <img src="/images/home/information-flow/noncoding-genome-art.webp" alt="Geometric apple artwork labeled 98 percent noncoding DNA." width="1196" height="1082" loading="lazy" decoding="async">
                 </div>
-                <figcaption><span>02</span>The noncoding genome</figcaption>
+                <figcaption><span>02</span><div>The noncoding genome</div></figcaption>
               </figure>
             
               <figure class="rna-hero-carousel__slide" data-hero-carousel-slide="" data-title="Transcription dichotomy" aria-hidden="true">
                 <div class="rna-hero-carousel__image">
-                  <img src="/images/home/information-flow/transcription-dichotomy.webp" alt="Yin-yang diagram connecting silent genome, noisy noncoding RNA, ordered messenger RNA and cell states." width="396" height="472" loading="lazy" decoding="async">
+                  <img src="/images/home/information-flow/transcription-dichotomy-watermarked.webp" alt="Yin-yang diagram connecting silent genome, noisy noncoding RNA, ordered messenger RNA and cell states." width="396" height="472" loading="lazy" decoding="async">
                 </div>
-                <figcaption><span>03</span>Transcription dichotomy</figcaption>
+                <figcaption><span>03</span><div>Transcription dichotomy<small class="figure-source">XShen Lab · Unpublished</small>
+</div></figcaption>
               </figure>
             
               <figure class="rna-hero-carousel__slide" data-hero-carousel-slide="" data-title="From one genome to many cell states" aria-hidden="true">
                 <div class="rna-hero-carousel__image">
-                  <img src="/images/home/information-flow/information-flow-framework.webp" alt="Conceptual framework connecting one genome, the noncoding and messenger RNA dichotomy, transcriptional surveillance and cell potency." width="607" height="551" loading="lazy" decoding="async">
+                  <img src="/images/home/information-flow/information-flow-framework-watermarked.webp" alt="Conceptual framework connecting one genome, the noncoding and messenger RNA dichotomy, transcriptional surveillance and cell potency." width="607" height="551" loading="lazy" decoding="async">
                 </div>
-                <figcaption><span>04</span>From one genome to many cell states</figcaption>
+                <figcaption><span>04</span><div>From one genome to many cell states<small class="figure-source">XShen Lab · Unpublished</small>
+</div></figcaption>
               </figure>
             
               <figure class="rna-hero-carousel__slide" data-hero-carousel-slide="" data-title="Questions and answers" aria-hidden="true">
                 <div class="rna-hero-carousel__image">
                   <img src="/images/home/information-flow/complicated-questions.webp" alt="Quotation attributed to Dr. Seuss saying that sometimes the questions are complicated and the answers are simple." width="751" height="572" loading="lazy" decoding="async">
                 </div>
-                <figcaption><span>05</span>Questions and answers</figcaption>
+                <figcaption><span>05</span><div>Questions and answers</div></figcaption>
               </figure>
             
           </div>
           <button class="rna-hero-carousel__arrow rna-hero-carousel__arrow--previous" type="button" data-hero-carousel-previous="" aria-label="Previous image"><span aria-hidden="true">←</span></button>
           <button class="rna-hero-carousel__arrow rna-hero-carousel__arrow--next" type="button" data-hero-carousel-next="" aria-label="Next image"><span aria-hidden="true">→</span></button>
-          <p class="visually-hidden" data-hero-carousel-status="" aria-live="polite"><span data-hero-carousel-current="">01</span><span aria-hidden="true"> / </span><span>05</span><span data-hero-carousel-title=""> — Molecular crowding</span></p>
+          <p class="visually-hidden" data-hero-carousel-status="" aria-live="off"><span data-hero-carousel-current="">01</span><span aria-hidden="true"> / </span><span>05</span><span data-hero-carousel-title=""> — RNA polymerase II</span></p>
         </div>
       </div>
     
@@ -343,7 +365,7 @@
       <div class="rna-section-head split" data-reveal="">
         <div>
 <p class="rna-section-label">Lab notes</p>
-<h2 id="rna-news-title">Ideas, updates, and perspectives.</h2>
+<h2 id="rna-news-title">Ideas updates and perspectives</h2>
 <p>Essays and updates that show the questions, values, and life behind the research.</p>
 </div>
         <a class="rna-text-link" href="/blog/">View all notes <span aria-hidden="true">↗</span></a>
@@ -374,13 +396,13 @@
       <a class="blog-category-label" href="/blog/#category-recruitment">Recruitment</a>
       <span>Rotation invitation</span>
     </div>
-    <h2 class="blog-card-title-wide"><a href="/blog/simple-rules-of-life-rotation/">In Search of Life’s Simple Rules: An Invitation to Rotate</a></h2>
+    <h2 class="blog-card-title-wide"><a href="/blog/simple-rules-of-life-rotation/">In Search of Life’s Simple Rules An Invitation to Rotate</a></h2>
     <p>Life is like an elephant whose whole form we cannot see. We can often touch only a single molecule, pathway, or phenotype—but how do these parts connect?</p>
     <div class="blog-card-footer">
       <span>Xiaohua</span>
       <span aria-hidden="true">·</span>
       <time datetime="2026-08-23T16:00:00+00:00">August 2026</time>
-      <a href="/blog/simple-rules-of-life-rotation/" aria-label="Read In Search of Life’s Simple Rules: An Invitation to Rotate">Read story <span aria-hidden="true">↗</span></a>
+      <a href="/blog/simple-rules-of-life-rotation/" aria-label="Read In Search of Life’s Simple Rules An Invitation to Rotate">Read story <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </article>
@@ -417,7 +439,7 @@
   </div>
   <div class="blog-flow-controls" aria-label="Story gallery controls">
   <div class="blog-flow-rail" aria-hidden="true"><span data-blog-flow-progress=""></span></div>
-  <span class="blog-flow-status" data-blog-flow-status="" aria-live="polite">01 / 02</span>
+  <span class="blog-flow-status" data-blog-flow-status="" aria-live="off">01 / 02</span>
   <div class="blog-flow-buttons">
     <button type="button" data-blog-flow-previous="" aria-label="Previous story"><span aria-hidden="true">←</span></button>
     <button type="button" data-blog-flow-next="" aria-label="Next story"><span aria-hidden="true">→</span></button>
@@ -432,17 +454,17 @@
   <section class="rna-tension rna-section" aria-labelledby="rna-tension-title">
     <div class="rna-section-head" data-reveal="">
       <p class="rna-section-label">The central scientific tension</p>
-      <h2 id="rna-tension-title">Dynamic genome activity. Stable cellular identity.</h2>
+      <h2 id="rna-tension-title">Dynamic genome activity Stable cellular identity</h2>
       <p>Cells share essentially the same genome, yet establish diverse and persistent identities while transcription, RNA metabolism and chromatin organization continually fluctuate across space and time.</p>
     </div>
     <div class="rna-tension-grid">
-      <article class="dynamic" data-reveal=""><span>Molecular reality</span><h3>Sparse · Stochastic · Dynamic</h3>
+      <article class="dynamic" data-reveal=""><span>Molecular reality</span><h3>Sparse Stochastic Dynamic</h3>
 <p>Genome activity is transient and heterogeneous within individual cells.</p>
 <div class="rna-fluctuation" aria-hidden="true">
 <i></i><i></i><i></i><i></i><i></i>
 </div></article>
       <div class="rna-tension-arrow" aria-hidden="true"><span>→</span></div>
-      <article class="stable" data-reveal="" style="--reveal-order: 2"><span>Biological outcome</span><h3>Diverse · Reproducible · Stable</h3>
+      <article class="stable" data-reveal="" style="--reveal-order: 2"><span>Biological outcome</span><h3>Diverse Reproducible Stable</h3>
 <p>Cellular states persist across time and populations.</p>
 <div class="rna-state-field" aria-hidden="true">
 <i></i><i></i><i></i><i></i><i></i>
@@ -453,7 +475,7 @@
   <section class="rna-flow" data-rna-story="" aria-labelledby="rna-flow-title">
     <div class="rna-flow-intro">
       <p class="rna-section-label">Biological information flow</p>
-      <h2 id="rna-flow-title">Four operations transform fluctuation into identity.</h2>
+      <h2 id="rna-flow-title">Four operations transform fluctuation into identity</h2>
       <p>The laboratory connects genome organization, the RNA–RBP meshwork, transcriptional surveillance and probabilistic cell-state dynamics in one continuous framework.</p>
       <div class="rna-story-track" aria-hidden="true"><span></span></div>
     </div>
@@ -463,7 +485,7 @@
           <span class="rna-stage-index">01</span>
           <span class="rna-stage-label">Organization</span>
           <h3>Genome Organization</h3>
-<p>How does genome sequence encode nuclear organization?</p>
+<p>How does genome sequence encode nuclear organization</p>
           <div class="rna-stage-visual" aria-hidden="true">
 <i></i><i></i><i></i><i></i>
 </div>
@@ -473,7 +495,7 @@
           <span class="rna-stage-index">02</span>
           <span class="rna-stage-label">Processing</span>
           <h3>RNA Networks</h3>
-<p>How does RNA organize the nuclear environment?</p>
+<p>How does RNA organize the nuclear environment</p>
           <div class="rna-stage-visual" aria-hidden="true">
 <i></i><i></i><i></i><i></i>
 </div>
@@ -483,7 +505,7 @@
           <span class="rna-stage-index">03</span>
           <span class="rna-stage-label">Selection</span>
           <h3>Transcriptional Surveillance</h3>
-<p>How does productive information emerge from pervasive transcription?</p>
+<p>How does productive information emerge from pervasive transcription</p>
           <div class="rna-stage-visual" aria-hidden="true">
 <i></i><i></i><i></i><i></i>
 </div>
@@ -493,7 +515,7 @@
           <span class="rna-stage-index">04</span>
           <span class="rna-stage-label">Stabilization</span>
           <h3>Cell Fate Dynamics</h3>
-<p>How do probabilistic genome activities generate stable cell identity?</p>
+<p>How do probabilistic genome activities generate stable cell identity</p>
           <div class="rna-stage-visual" aria-hidden="true">
 <i></i><i></i><i></i><i></i>
 </div>
@@ -506,7 +528,7 @@
     <div class="rna-section-head split" data-reveal="">
       <div>
 <p class="rna-section-label">Research programs</p>
-<h2 id="rna-research-title">Four questions across one information system.</h2>
+<h2 id="rna-research-title">Four questions across one information system</h2>
 </div>
       <a class="rna-text-link" href="/research/">Explore all research <span aria-hidden="true">↗</span></a>
     </div>
@@ -520,7 +542,7 @@
       
       <span class="rna-research-copy">
         <span class="rna-research-title">Genome Organization</span>
-        <span class="rna-research-question">How does genome sequence encode nuclear organization?</span>
+        <span class="rna-research-question">How does genome sequence encode nuclear organization</span>
         <span class="rna-research-text">We investigate how genome sequences, repetitive elements and their RNA products establish nuclear architecture, spatial positioning and genome regulation.</span>
         
       </span>
@@ -532,11 +554,11 @@
       <span class="rna-research-number">02</span>
       <span class="rna-research-signal">Processing</span>
       
-        <span class="rna-research-image" aria-hidden="true"><img src="/images/research/rna-chromatin-dstorm-thumb.png" alt="" loading="lazy" decoding="async"></span>
+        <span class="rna-research-image" aria-hidden="true"><img src="/images/research/rna-chromatin-dstorm-thumb-watermarked.png" alt="" loading="lazy" decoding="async"></span>
       
       <span class="rna-research-copy">
         <span class="rna-research-title">RNA Networks</span>
-        <span class="rna-research-question">How does RNA organize the nuclear environment?</span>
+        <span class="rna-research-question">How does RNA organize the nuclear environment</span>
         <span class="rna-research-text">We study how nascent RNA, RNA-binding proteins and processing factors form an RNA–RBP meshwork that coordinates genome function.</span>
         
       </span>
@@ -548,11 +570,11 @@
       <span class="rna-research-number">03</span>
       <span class="rna-research-signal">Selection</span>
       
-        <span class="rna-research-image" aria-hidden="true"><img src="/images/research/transcriptional-surveillance/surveillance-core.png" alt="" loading="lazy" decoding="async"></span>
+        <span class="rna-research-image" aria-hidden="true"><img src="/images/research/transcriptional-surveillance/surveillance-core-watermarked.png" alt="" loading="lazy" decoding="async"></span>
       
       <span class="rna-research-copy">
         <span class="rna-research-title">Transcriptional Surveillance</span>
-        <span class="rna-research-question">How does productive information emerge from pervasive transcription?</span>
+        <span class="rna-research-question">How does productive information emerge from pervasive transcription</span>
         <span class="rna-research-text">We examine how RNA Polymerase II, RNA processing and degradation pathways support productive elongation, RNA maturation and polymerase recycling.</span>
         
           <span class="rna-research-flow" aria-hidden="true">
@@ -574,7 +596,7 @@
       
       <span class="rna-research-copy">
         <span class="rna-research-title">Cell Fate Dynamics</span>
-        <span class="rna-research-question">How do probabilistic genome activities generate stable cell identity?</span>
+        <span class="rna-research-question">How do probabilistic genome activities generate stable cell identity</span>
         <span class="rna-research-text">We measure and model how sparse, stochastic genome activity is coordinated across individual cells and stabilized across populations.</span>
         
       </span>
@@ -589,28 +611,25 @@
   <section class="rna-methods" aria-labelledby="rna-methods-title">
     <div class="rna-method-copy" data-reveal="">
 <p class="rna-section-label">Technology across scales</p>
-<h2 id="rna-methods-title">Measure the process from genome to cell fate.</h2>
+<h2 id="rna-methods-title">Measure the process from genome to cell fate</h2>
 <p>We integrate molecular, spatial, cellular and theoretical approaches. The methods are connected by the scientific question—not presented as isolated platforms.</p>
 </div>
     <div class="rna-scale-track" aria-hidden="true"><span></span></div>
     <ol class="rna-scale-list">
       <li data-reveal="" style="--reveal-order: 1">
-<span class="rna-scale-index">01</span><strong>Genome</strong><small>CRISPR genome engineering</small>
+<span class="rna-scale-index">01</span><strong>Molecule</strong><small>Single-cell genomics · Nascent transcriptomics</small>
 </li>
 <li data-reveal="" style="--reveal-order: 2">
-<span class="rna-scale-index">02</span><strong>Molecule</strong><small>Nascent transcription profiling · Biochemical reconstitution</small>
+<span class="rna-scale-index">02</span><strong>Spatial</strong><small>Live-cell and super-resolution imaging · Electron microscopy</small>
 </li>
 <li data-reveal="" style="--reveal-order: 3">
-<span class="rna-scale-index">03</span><strong>Nuclear environment</strong><small>Live-cell and super-resolution imaging · Electron microscopy</small>
+<span class="rna-scale-index">03</span><strong>Perturbation</strong><small>Auxin-inducible degron (AID) · Acute protein depletion and recovery</small>
 </li>
 <li data-reveal="" style="--reveal-order: 4">
-<span class="rna-scale-index">04</span><strong>Single cell</strong><small>scFLUENT-seq · Single-cell genomics</small>
+<span class="rna-scale-index">04</span><strong>Biochemical reconstitution</strong><small>Molecular interactions and activities with defined components</small>
 </li>
 <li data-reveal="" style="--reveal-order: 5">
-<span class="rna-scale-index">05</span><strong>Cell population</strong><small>Computational analysis · Artificial intelligence</small>
-</li>
-<li data-reveal="" style="--reveal-order: 6">
-<span class="rna-scale-index">06</span><strong>Cell fate</strong><small>Theoretical and kinetic modeling</small>
+<span class="rna-scale-index">05</span><strong>Modeling</strong><small>Statistical and kinetic models of transcription and cell states</small>
 </li>
     </ol>
   </section>
@@ -618,7 +637,7 @@
   <section class="rna-section rna-publication" aria-labelledby="rna-publication-title">
     <div class="rna-section-head" data-reveal="">
 <p class="rna-section-label">Featured discovery</p>
-<h2 id="rna-publication-title">A direct snapshot of nascent genome usage.</h2>
+<h2 id="rna-publication-title">A direct snapshot of nascent genome usage</h2>
 </div>
     
 
@@ -653,7 +672,7 @@
     <div class="rna-section-head split" data-reveal="">
 <div>
 <p class="rna-section-label">People</p>
-<h2 id="rna-people-title">Different disciplines, one moving system.</h2>
+<h2 id="rna-people-title">Different disciplines one moving system</h2>
 <p>Our team brings together molecular cell biology, genomics, bioinformatics, biophysics, mathematics and computational biology.</p>
 </div>
 <a class="rna-text-link" href="/team/">Meet the team <span aria-hidden="true">↗</span></a>
@@ -833,7 +852,7 @@
   <section class="rna-join" aria-labelledby="rna-join-title">
     <div class="rna-join-intro" data-reveal="">
 <p class="rna-section-label">Join the lab</p>
-<h2 id="rna-join-title">Bring a new way of seeing the system.</h2>
+<h2 id="rna-join-title">Bring a new way of seeing the system</h2>
 <p>We welcome motivated students and researchers interested in nuclear organization, genome regulation, transcription, noncoding RNA, single-cell genomics and cell fate.</p>
 <div class="rna-inline-actions">
 <a class="rna-button primary" href="/join-us/">Application details <span aria-hidden="true">↗</span></a><a class="rna-button text" href="/contact/">Contact the lab</a>

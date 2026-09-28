@@ -158,6 +158,10 @@
 <script src="/_scripts/dark-mode.js" defer></script>
 <script src="/_scripts/motion.js" defer></script>
 <script src="/_scripts/resource-gate.js" defer></script>
+<script src="/_scripts/research-menu.js" defer></script>
+
+  <script src="/_scripts/exhibit-autoplay.js" defer></script>
+
 
 
 
@@ -247,36 +251,51 @@
         
           
           
+          
           <a href="/zh/" data-tooltip="中文首页">首页</a>
         
           
+
+
+<details class="research-menu" data-research-menu>
+  <summary>研究方向<span aria-hidden="true">⌄</span></summary>
+  <div class="research-menu__links">
+    <a href="/zh/research/">研究概览</a>
+    <a href="/zh/research/#genome-organization"><span>01</span>基因组组织</a><a href="/zh/research/#rna-networks"><span>02</span>RNA 网络</a><a href="/zh/research/#transcriptional-surveillance"><span>03</span>转录监控</a><a href="/zh/research/#cell-fate-dynamics"><span>04</span>细胞命运动力学</a>
+  </div>
+</details>
+
           
-          <a href="/zh/research/" data-tooltip="实验室研究方向">研究方向</a>
-        
           
           
           <a href="/zh/people/" data-tooltip="实验室团队成员">团队成员</a>
         
           
           
+          
           <a href="/zh/publications/" data-tooltip="代表性论文与完整论文目录">论文发表</a>
         
+          
           
           
           <a href="/zh/gallery/" data-tooltip="探索实验室科学展廊">展廊</a>
         
           
           
+          
           <a href="/zh/resources/" data-tooltip="分析流程、实验方案与实验室资源" class="resource-nav-link" data-resource-nav-link data-resource-label="资源" aria-label="资源，已锁定">资源<span class="resource-nav-state" aria-hidden="true"><span class="resource-locked-icon">🔒</span><span class="resource-unlocked-icon">🔓</span></span></a>
         
+          
           
           
           <a href="/zh/blog/" data-tooltip="科学思考、实验室动态与个人随笔" aria-current="page">博客</a>
         
           
           
+          
           <a href="/zh/join-us/" data-tooltip="加入实验室的机会">加入我们</a>
         
+          
           
           
           <a href="/zh/contact/" data-tooltip="联系实验室">联系方式</a>
@@ -310,7 +329,7 @@
     <div class="blog-index">
   <header class="blog-index-hero" data-reveal="">
     <p class="rna-section-label">实验室随笔</p>
-    <h1>思考，也在流动。</h1>
+    <h1>思考也在流动</h1>
     <p>记录 XShen Lab 的科学思考、实验室动态，以及研究与生活中的个人视角。</p>
   </header>
 
@@ -359,13 +378,13 @@
       <a class="blog-category-label" href="/zh/blog/#category-recruitment">招生招聘</a>
       <span>轮转邀请</span>
     </div>
-    <h2 class="blog-card-title-wide"><a href="/zh/blog/simple-rules-of-life-rotation/">寻找生命的简单规则：轮转邀请</a></h2>
+    <h2 class="blog-card-title-wide"><a href="/zh/blog/simple-rules-of-life-rotation/">寻找生命的简单规则 轮转邀请</a></h2>
     <p>生命像一头看不见全貌的大象。我们常常只能触摸一个分子、一条通路或一种表型，而我更想知道：这些局部如何彼此连接？</p>
     <div class="blog-card-footer">
       <span>Xiaohua</span>
       <span aria-hidden="true">·</span>
       <time datetime="2026-08-23T16:00:00+00:00">2026 年 8 月</time>
-      <a href="/zh/blog/simple-rules-of-life-rotation/" aria-label="阅读《寻找生命的简单规则：轮转邀请》">阅读全文 <span aria-hidden="true">↗</span></a>
+      <a href="/zh/blog/simple-rules-of-life-rotation/" aria-label="阅读《寻找生命的简单规则 轮转邀请》">阅读全文 <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </article>
@@ -406,7 +425,7 @@
     <p class="blog-filter-empty" data-blog-filter-empty="" hidden="">这个分类的内容正在准备中。</p>
     <div class="blog-flow-controls" aria-label="文章展览控制">
   <div class="blog-flow-rail" aria-hidden="true"><span data-blog-flow-progress=""></span></div>
-  <span class="blog-flow-status" data-blog-flow-status="" aria-live="polite">01 / 02</span>
+  <span class="blog-flow-status" data-blog-flow-status="" aria-live="off">01 / 02</span>
   <div class="blog-flow-buttons">
     <button type="button" data-blog-flow-previous="" aria-label="上一篇"><span aria-hidden="true">←</span></button>
     <button type="button" data-blog-flow-next="" aria-label="下一篇"><span aria-hidden="true">→</span></button>
@@ -421,7 +440,7 @@
 <aside class="blog-contribute" aria-labelledby="blog-contribute-title">
   <p class="rna-section-label">提交实验室动态</p>
   <div>
-    <h2 id="blog-contribute-title">把实验室里的故事留存下来。</h2>
+    <h2 id="blog-contribute-title">把实验室里的故事留存下来</h2>
     <p>欢迎成员提交论文发表、学术会议、实验室动态与生活记录。所有内容都会先经过事实、图片授权与中英文编辑审核，再公开发布。</p>
   </div>
   <a class="rna-button secondary" href="/zh/blog/contribute/">查看投稿方式 <span aria-hidden="true">↗</span></a>

@@ -64,4 +64,9 @@ window.addEventListener("DOMContentLoaded", () => {
   const hashIndex = cards.findIndex((card) => `#${card.id}` === window.location.hash);
   setActive(hashIndex >= 0 ? hashIndex : 0);
   if (hashIndex >= 0) window.requestAnimationFrame(() => goTo(hashIndex));
+  window.createExhibitAutoplay(root.querySelector(".research-programs"), () => {
+    const index = (activeIndex + 1) % cards.length;
+    rail.scrollTo({ left: cards[index].offsetLeft - cards[0].offsetLeft, behavior: "smooth" });
+    setActive(index);
+  });
 });
