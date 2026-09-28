@@ -48,10 +48,10 @@ halls:
           en: Twelve labeled subunits of RNA polymerase II in an original conceptual illustration.
           zh-CN: 原创概念插图中标注的 RNA 聚合酶 II 十二个亚基。
         source:
-          en: Original illustration · Armache et al. · J Biol Chem · 2005 · PDB 1WCM
-          zh-CN: 原创示意图 · Armache et al. · J Biol Chem · 2005 · PDB 1WCM
+          en: Original conceptual illustration
+          zh-CN: 原创概念示意图
       - id: chromatin-rnp-mesh
-        image: /images/gallery/chromatin-rnp-mesh-watermarked.jpg
+        image: /images/gallery/chromatin-rnp-mesh.jpg
         format: compact
         frame: paper
         title:

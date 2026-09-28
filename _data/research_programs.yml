@@ -70,8 +70,8 @@ en:
       - Kinetic selection
       - Processive
     image:
-      path: /images/research/transcriptional-surveillance/surveillance-core-watermarked.png
-      home_path: /images/research/transcriptional-surveillance/surveillance-core-watermarked.png
+      path: /images/research/transcriptional-surveillance/surveillance-core.png
+      home_path: /images/research/transcriptional-surveillance/surveillance-core.png
       alt: Working model in which CTD- and EIF4A3-linked transcriptional surveillance couples nascent RNP assembly to RNA Polymerase II fate
       caption: A working model places transcriptional surveillance between basal priming and processive elongation.
     gallery:
@@ -201,8 +201,8 @@ zh-CN:
       - 动力学选择
       - 持续延伸态
     image:
-      path: /images/research/transcriptional-surveillance/surveillance-core-watermarked.png
-      home_path: /images/research/transcriptional-surveillance/surveillance-core-watermarked.png
+      path: /images/research/transcriptional-surveillance/surveillance-core.png
+      home_path: /images/research/transcriptional-surveillance/surveillance-core.png
       alt: 工作模型展示与 CTD、EIF4A3 相关的转录监控如何将新生 RNP 组装与 RNA 聚合酶 II 命运相连接
       caption: 工作模型将转录监控置于基础启动与持续延伸之间。
     gallery:

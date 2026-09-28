@@ -38,6 +38,24 @@ en:
       - path: /images/research/transcriptional-surveillance/ctd-perturbation-timecourse-watermarked.png
         alt: EU-seq time course after acute CTD perturbation and wash-off, separating high- and low-output genes from proximal and distal intergenic bins
         title: Read the CTD response over time
+        conditions: IAA 0 / 3 / 6 / 12 / 24 h → Wash-off 3 / 6 / 12 / 24 / 36 h
+        panels:
+          - path: /images/research/transcriptional-surveillance/ctd-high-output-watermarked.png
+            label: High-output genes
+            count: n = 7,501
+            alt: High-output genes — EU-seq
+          - path: /images/research/transcriptional-surveillance/ctd-low-output-watermarked.png
+            label: Low-output genes
+            count: n = 14,757
+            alt: Low-output genes — EU-seq
+          - path: /images/research/transcriptional-surveillance/ctd-proximal-intergenic-watermarked.png
+            label: Proximal intergenic regions
+            count: n = 35,553
+            alt: Proximal intergenic regions — EU-seq
+          - path: /images/research/transcriptional-surveillance/ctd-distal-intergenic-watermarked.png
+            label: Distal intergenic regions
+            count: n = 11,418
+            alt: Distal intergenic regions — EU-seq
         caption: EU-seq responses across IAA treatment and wash-off, separating genes in productive domains from intergenic bins in basal domains.
         guide:
           - label: Rows
@@ -128,6 +146,24 @@ zh-CN:
       - path: /images/research/transcriptional-surveillance/ctd-perturbation-timecourse-watermarked.png
         alt: 急性 CTD 扰动与 wash-off 后的 EU-seq 时间序列，区分高低输出基因以及近端和远端基因间区间
         title: 追踪 CTD 扰动后的时间响应
+        conditions: IAA 处理 0 / 3 / 6 / 12 / 24 h → 洗脱后 3 / 6 / 12 / 24 / 36 h
+        panels:
+          - path: /images/research/transcriptional-surveillance/ctd-high-output-watermarked.png
+            label: 高输出基因
+            count: n = 7,501
+            alt: 高输出基因 — EU-seq
+          - path: /images/research/transcriptional-surveillance/ctd-low-output-watermarked.png
+            label: 低输出基因
+            count: n = 14,757
+            alt: 低输出基因 — EU-seq
+          - path: /images/research/transcriptional-surveillance/ctd-proximal-intergenic-watermarked.png
+            label: 近端基因间区
+            count: n = 35,553
+            alt: 近端基因间区 — EU-seq
+          - path: /images/research/transcriptional-surveillance/ctd-distal-intergenic-watermarked.png
+            label: 远端基因间区
+            count: n = 11,418
+            alt: 远端基因间区 — EU-seq
         caption: IAA 处理和 wash-off 期间的 EU-seq 响应，区分有效转录结构域中的基因与基础转录结构域中的基因间区间。
         guide:
           - label: 行

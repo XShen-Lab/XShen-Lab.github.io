@@ -24,12 +24,12 @@ en:
         height: 1082
         title: The noncoding genome
         alt: Geometric apple artwork labeled 98 percent noncoding DNA.
-      - image: /images/home/information-flow/transcription-dichotomy-watermarked.webp
+      - image: /images/home/information-flow/transcription-dichotomy.webp
         width: 396
         height: 472
         title: Transcription dichotomy
         alt: Yin-yang diagram connecting silent genome, noisy noncoding RNA, ordered messenger RNA and cell states.
-      - image: /images/home/information-flow/information-flow-framework-watermarked.webp
+      - image: /images/home/information-flow/information-flow-framework.webp
         width: 607
         height: 551
         title: From one genome to many cell states
@@ -141,12 +141,12 @@ zh-CN:
         height: 1082
         title: 非编码基因组
         alt: 标注 98% 非编码 DNA 的几何风格苹果画作。
-      - image: /images/home/information-flow/transcription-dichotomy-watermarked.webp
+      - image: /images/home/information-flow/transcription-dichotomy.webp
         width: 396
         height: 472
         title: 转录二分
         alt: 连接沉默基因组、噪声性非编码 RNA、有序信使 RNA 与细胞状态的阴阳概念图。
-      - image: /images/home/information-flow/information-flow-framework-watermarked.webp
+      - image: /images/home/information-flow/information-flow-framework.webp
         width: 607
         height: 551
         title: 从同一基因组到多样细胞状态

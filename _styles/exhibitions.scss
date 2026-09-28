@@ -1,4 +1,26 @@
 /* Exhibition controls and the wardrobe threshold. */
+.research-shell, .gallery-shell { width: min(var(--page), calc(100% - 2 * var(--gutter))); }
+.research-programs__rail { padding-inline: max(var(--gutter), calc((100vw - var(--page)) / 2)); scroll-padding-inline: max(var(--gutter), calc((100vw - var(--page)) / 2)); }
+.rna-research-card.motif-checkpoint .rna-research-image img { object-fit: contain; padding: 16px 6px; }
+
+/* A complete CTD panel set replaces the narrow figure on a wide blank canvas. */
+.research-surveillance__evidence figure > .research-ctd-panels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  min-height: 0;
+  padding: 20px;
+  align-items: start;
+}
+.research-ctd-panels__conditions { grid-column: 1 / -1; margin: 0 !important; color: #40534f; font-family: Arial, sans-serif; font-size: 1rem !important; }
+.research-ctd-panel { width: 100%; min-width: 0; }
+.research-ctd-panel > p { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 0 0 10px !important; justify-content: space-between; font-family: Arial, sans-serif; font-size: .95rem !important; }
+.research-ctd-panel > p strong { color: #20221f; }
+.research-ctd-panel > p span { color: #555851; }
+.research-ctd-panel > a { display: block; }
+.research-surveillance__evidence .research-ctd-panel img { width: 100%; height: auto; max-height: none; }
+.research-ctd-panel a:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+
 .exhibit-autoplay {
   position: absolute;
   z-index: 5;
@@ -140,6 +162,22 @@
   .gallery-wardrobe { right: 5vw; width: 35vw; min-height: 320px; height: 54vh; }
 }
 @media (max-width: 700px) {
+  .page-inner main .people-section > h2 { font-size: clamp(1.7rem, 7vw, 2.2rem); overflow-wrap: break-word; }
+  .rna-home > .rna-hero { padding-top: 112px; padding-bottom: 42px; }
+  .rna-hero-carousel { margin-top: 28px; }
+  .rna-home .rna-research-grid { grid-template-columns: 1fr; }
+  .rna-home .rna-research-card { display: flex; flex-direction: column; grid-column: auto; min-height: 0; padding: 24px 0; border-right: 0; }
+  .rna-home .rna-research-card .rna-research-copy { order: 1; max-width: 100%; padding: 22px 0; }
+  .rna-home .rna-research-card .rna-research-image { position: relative; inset: auto; order: 2; width: 100%; height: 320px; margin-bottom: 20px; opacity: 1; }
+  .rna-home .rna-research-card .rna-research-image:after { display: none; }
+  .rna-home .rna-research-card .rna-research-image img { object-fit: contain; filter: none; }
+  .rna-home .rna-research-card .rna-research-image--gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: 1fr; height: 240px; padding: 8px; gap: 8px; }
+  .rna-home .rna-research-card .rna-program-motif { display: none; }
+  .rna-home .rna-research-card .rna-arrow { order: 3; align-self: start; }
+  .research-programs__rail { grid-auto-columns: calc(100vw - 2 * var(--gutter)); }
+  .research-program__content { order: -1; }
+  .research-surveillance__evidence figure > .research-ctd-panels { grid-template-columns: 1fr; padding: 12px; gap: 24px; }
+  .research-ctd-panels__conditions { font-size: .9rem !important; }
   .gallery-hero { padding: 120px 0 55px; display: flex; flex-direction: column; align-items: stretch; gap: 62px; }
   .page-inner main .gallery-hero__intro, .gallery-hero__threshold { max-width: 100%; }
   .gallery-wardrobe { position: relative; bottom: auto; right: auto; width: min(300px, 74vw); height: 410px; min-height: 0; margin: 0 auto 34px; flex-shrink: 0; }

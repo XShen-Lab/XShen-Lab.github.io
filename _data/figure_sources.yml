@@ -27,6 +27,7 @@
   url: https://doi.org/10.1016/j.cell.2025.09.003
 /images/home/information-flow/pol-ii-subunits.webp:
   status: illustration
+  display_citation: false
   citation: Armache et al. · J Biol Chem · 2005 · PDB 1WCM
   title: Structures of Complete RNA Polymerase II and its Subcomplex, Rpb4/7
   url: https://doi.org/10.1074/jbc.M413038200
@@ -41,7 +42,10 @@
 /images/research/rna-rbp-mesh-em.png:
   status: unpublished
 /images/research/transcriptional-surveillance/surveillance-core.png:
-  status: unpublished
+  status: concept
+  source_kind: presentation
+  source_deck: 2026.7.15 天大.pptx
+  source_slide: 17
 /images/research/transcriptional-surveillance/mechanism-model.png:
   status: unpublished
 /images/research/transcriptional-surveillance/ctd-perturbation-timecourse.png:
@@ -51,11 +55,16 @@
 /images/research/transcriptional-surveillance/zga-activity-model.png:
   status: unpublished
 /images/home/information-flow/transcription-dichotomy.webp:
-  status: unpublished
+  status: concept
+  source_kind: supplied_concept_image
 /images/home/information-flow/information-flow-framework.webp:
-  status: unpublished
+  status: concept
+  source_kind: presentation
+  source_deck: 2026.7.15 天大.pptx
+  source_slide: 12
 /images/gallery/chromatin-rnp-mesh.jpg:
-  status: unpublished
+  status: concept
+  source_kind: supplied_concept_image
 /images/gallery/rna-as-matter.jpg:
   status: unpublished
 /images/gallery/nuclear-rna-systems-model.jpg:
@@ -66,3 +75,31 @@
   status: unpublished
 /images/gallery/productive-genome-usage.jpg:
   status: unpublished
+/images/research/transcriptional-surveillance/ctd-high-output.png:
+  status: unpublished
+  source_kind: presentation
+  source_deck: 2026.7.15 天大.pptx
+  source_slide: 13
+  source_media: image19.png
+  watermark: footer
+/images/research/transcriptional-surveillance/ctd-low-output.png:
+  status: unpublished
+  source_kind: presentation
+  source_deck: 2026.7.15 天大.pptx
+  source_slide: 13
+  source_media: image16.png
+  watermark: footer
+/images/research/transcriptional-surveillance/ctd-proximal-intergenic.png:
+  status: unpublished
+  source_kind: presentation
+  source_deck: 2026.7.15 天大.pptx
+  source_slide: 13
+  source_media: image17.png
+  watermark: footer
+/images/research/transcriptional-surveillance/ctd-distal-intergenic.png:
+  status: unpublished
+  source_kind: presentation
+  source_deck: 2026.7.15 天大.pptx
+  source_slide: 13
+  source_media: image18.png
+  watermark: footer

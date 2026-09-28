@@ -28,13 +28,13 @@ window.addEventListener("DOMContentLoaded", () => {
     title.textContent = work.title;
     caption.textContent = work.caption;
     source.textContent = work.source;
-    citation.hidden = !work.citationUrl;
+    citation.replaceChildren();
     if (work.citationUrl) {
-      citation.href = work.citationUrl;
-      citation.textContent = work.citationTitle;
-    } else {
-      citation.removeAttribute("href");
-      citation.textContent = "";
+      const link = document.createElement("a");
+      link.className = "figure-source";
+      link.href = work.citationUrl;
+      link.textContent = work.citationTitle;
+      citation.append(link);
     }
     count.textContent = `${String(currentIndex + 1).padStart(2, "0")} / ${String(works.length).padStart(2, "0")}`;
     const upcoming = new Image();

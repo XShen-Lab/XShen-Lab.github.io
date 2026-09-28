@@ -987,7 +987,7 @@ html[data-dark="true"] .rna-research-flow > span { background: rgb(16 31 28 / 82
 }
 
 @media (max-width: 600px) {
-  :root { --gutter: 20px; }
+  :root { --gutter: 16px; }
   .site-header .logo { width: 27px; height: 27px; }
   .rna-home > .rna-hero { min-height: 820px; padding-top: 130px; }
   .rna-hero h1 { font-size: clamp(4rem, 20vw, 6rem); }

@@ -57,8 +57,8 @@
                 data-title="{{ work.title[locale] | escape }}"
                 data-caption="{{ work.caption[locale] | escape }}"
                 data-source="{{ work.source[locale] | escape }}"
-                data-citation-url="{{ work_reference.url | escape }}"
-                data-citation-title="{{ work_reference.title | escape }}"
+                data-citation-url="{% unless work_reference.display_citation == false %}{{ work_reference.url | escape }}{% endunless %}"
+                data-citation-title="{% unless work_reference.display_citation == false %}{{ work_reference.title | escape }}{% endunless %}"
                 data-alt="{{ work.alt[locale] | escape }}"
                 aria-label="{{ ui.view_work }}: {{ work.title[locale] | escape }}"
               >
@@ -94,7 +94,7 @@
           <p class="gallery-viewer__source" data-gallery-dialog-source></p>
           <h2 id="gallery-dialog-title" data-gallery-dialog-title></h2>
           <p data-gallery-dialog-caption></p>
-          <a class="figure-source" href="https://doi.org/10.1074/jbc.M413038200" data-gallery-dialog-citation hidden></a>
+          <span data-gallery-dialog-citation></span>
           <p class="gallery-viewer__count"><span class="visually-hidden">{{ ui.counter_label }}</span><span data-gallery-dialog-count></span></p>
         </figcaption>
       </figure>
