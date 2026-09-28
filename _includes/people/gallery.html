@@ -12,14 +12,12 @@
 {% assign previous_label = "Previous members" %}
 {% assign next_label = "Next members" %}
 {% assign auto_start_label = "Auto glide" %}
-{% assign auto_stop_label = "Pause glide" %}
 {% if page.lang == "zh-CN" %}
   {% assign chinese_gallery = true %}
   {% assign count_label = "位成员" %}
   {% assign previous_label = "上一组成员" %}
   {% assign next_label = "下一组成员" %}
   {% assign auto_start_label = "自动滑动" %}
-  {% assign auto_stop_label = "暂停滑动" %}
 {% endif %}
 
 <div class="member-gallery" data-member-gallery data-reveal>
@@ -34,8 +32,6 @@
           class="member-gallery__auto"
           type="button"
           data-gallery-auto
-          data-start-label="{{ auto_start_label }}"
-          data-stop-label="{{ auto_stop_label }}"
           aria-pressed="false"
         >{{ auto_start_label }}</button>
         <button type="button" data-gallery-next aria-label="{{ next_label }}">

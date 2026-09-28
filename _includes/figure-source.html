@@ -1,0 +1,7 @@
+{%- assign figure_key = include.image | replace: '-watermarked', '' -%}
+{%- assign figure_source = site.data.figure_sources[figure_key] -%}
+{%- if figure_source.url -%}
+  <small class="figure-source"><a href="{{ figure_source.url }}" title="{{ figure_source.title | escape }}">{{ figure_source.citation }}</a></small>
+{%- elsif figure_source.status == 'unpublished' -%}
+  <small class="figure-source">XShen Lab · Unpublished</small>
+{%- endif -%}

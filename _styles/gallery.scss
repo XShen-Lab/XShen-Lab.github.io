@@ -143,52 +143,6 @@
 
 .gallery-hero__threshold > span { color: var(--gallery-muted); }
 
-.gallery-hero__door {
-  position: absolute;
-  z-index: -1;
-  right: clamp(-80px, 6vw, 120px);
-  bottom: -12px;
-  width: clamp(330px, 36vw, 570px);
-  height: min(74vh, 690px);
-  border: 1px solid rgb(182 155 100 / 72%);
-  border-bottom: 0;
-  border-radius: 48% 48% 0 0 / 30% 30% 0 0;
-  box-shadow: inset 0 0 0 13px rgb(13 19 17 / 58%), inset 0 0 0 14px rgb(182 155 100 / 28%), 0 0 90px rgb(182 155 100 / 8%);
-  opacity: 0.84;
-}
-
-.gallery-hero__door::before,
-.gallery-hero__door::after,
-.gallery-hero__door span {
-  position: absolute;
-  content: "";
-}
-
-.gallery-hero__door::before {
-  inset: 36px;
-  border: 1px solid rgb(182 155 100 / 32%);
-  border-bottom: 0;
-  border-radius: inherit;
-}
-
-.gallery-hero__door::after {
-  left: 50%;
-  top: 17%;
-  bottom: 0;
-  width: 1px;
-  background: linear-gradient(transparent, rgb(182 155 100 / 38%) 22%, rgb(182 155 100 / 38%) 82%, transparent);
-}
-
-.gallery-hero__door span {
-  left: 50%;
-  top: 47%;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--gallery-brass);
-  box-shadow: 0 0 22px 5px rgb(182 155 100 / 32%);
-}
-
 .gallery-index {
   position: sticky;
   z-index: 20;
@@ -543,7 +497,7 @@
 
 @media (max-width: 1000px) {
   .gallery-hero { min-height: 780px; }
-  .gallery-hero__door { right: -140px; opacity: 0.54; }
+
   .gallery-hall__header { grid-template-columns: 110px minmax(0, 1fr); gap: 38px; }
   .gallery-wall { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 74px 32px; }
   .gallery-wall .gallery-work { grid-column: auto !important; grid-row: auto !important; margin-top: 0 !important; }
@@ -575,7 +529,7 @@
   .page-inner main .gallery-hero h1 { font-size: clamp(4rem, 20vw, 6.8rem); line-height: 0.88; }
   .gallery-hero__intro { max-width: 92%; }
   .gallery-hero__threshold { align-items: flex-start; flex-direction: column; }
-  .gallery-hero__door { right: -160px; width: 400px; height: 520px; opacity: 0.28; }
+
   .gallery-index a { min-height: 56px; }
   .gallery-hall { padding: 84px 0 120px; }
   .gallery-hall__header { margin-bottom: 70px; grid-template-columns: 1fr; gap: 24px; }

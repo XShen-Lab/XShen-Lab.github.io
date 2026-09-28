@@ -1,7 +1,7 @@
 ui:
   en:
     eyebrow: XShen Lab Gallery
-    title: Ways of seeing.
+    title: Ways of seeing
     intro: A collection of scientific models, conceptual maps, and visual prompts that shape how we think about biological information flow.
     invitation: Enter the collection
     collection_label: Three halls · Twelve works
@@ -13,7 +13,7 @@ ui:
     counter_label: Work
   zh-CN:
     eyebrow: XShen Lab 展廊
-    title: 观看的方式。
+    title: 观看的方式
     intro: 一组塑造我们对生物信息流思考方式的科学模型、概念图景与视觉提示。
     invitation: 进入展廊
     collection_label: 三座展厅 · 十二件展品
@@ -35,23 +35,23 @@ halls:
       zh-CN: 从拥挤的分子空间到核内 RNA 网状体系，这些图景让不可见的组织关系变得可感知。
     works:
       - id: molecular-landscape
-        image: /images/gallery/molecular-landscape.jpg
+        image: /images/home/information-flow/pol-ii-subunits.webp
         format: square
         frame: amber
         title:
-          en: Molecular Landscape
-          zh-CN: 分子景观
+          en: RNA Polymerase II
+          zh-CN: RNA 聚合酶 II
         caption:
-          en: A crowded molecular scene in which structure, proximity, and interaction coexist at cellular scale.
-          zh-CN: 拥挤的分子场景：结构、邻近关系与相互作用在细胞尺度上同时发生。
+          en: A conceptual illustration of the twelve Pol II subunits RPB1–RPB12, informed by published structural studies. This is a schematic, not an atomic structure.
+          zh-CN: 依据已发表结构研究绘制的 Pol II 十二亚基概念示意图，展示 RPB1–RPB12。此图为示意图，并非原子结构。
         alt:
-          en: Illustrated crowded molecular environment with many interacting cellular components.
-          zh-CN: 由众多相互作用的细胞组分构成的拥挤分子环境示意图。
+          en: Twelve labeled subunits of RNA polymerase II in an original conceptual illustration.
+          zh-CN: 原创概念插图中标注的 RNA 聚合酶 II 十二个亚基。
         source:
-          en: Lab collection
-          zh-CN: 实验室收藏
+          en: Original illustration · Armache et al. · J Biol Chem · 2005 · PDB 1WCM
+          zh-CN: 原创示意图 · Armache et al. · J Biol Chem · 2005 · PDB 1WCM
       - id: chromatin-rnp-mesh
-        image: /images/gallery/chromatin-rnp-mesh.jpg
+        image: /images/gallery/chromatin-rnp-mesh-watermarked.jpg
         format: compact
         frame: paper
         title:
@@ -67,15 +67,15 @@ halls:
           en: Lab collection
           zh-CN: 实验室收藏
       - id: rna-as-matter
-        image: /images/gallery/rna-as-matter.jpg
+        image: /images/gallery/rna-as-matter-watermarked.jpg
         format: wide
         frame: paper
         title:
           en: RNA as Nuclear Matter
           zh-CN: 作为核内物质的 RNA
         caption:
-          en: RNA carries information, but its abundance, charge, and multivalent interactions also contribute to the physical state of the nucleus.
-          zh-CN: RNA 不仅携带信息；其丰度、电荷与多价相互作用也参与塑造细胞核的物理状态。
+          en: RNA carries information and acts as nuclear matter, with its abundance, charge, and multivalent interactions contributing to the physical state of the nucleus.
+          zh-CN: RNA 既携带信息，也是核内物质；其丰度、电荷与多价相互作用进一步参与塑造细胞核的物理状态。
         alt:
           en: Scientific slide presenting RNA as both information and material of the nucleus.
           zh-CN: 展示 RNA 既是信息载体也是细胞核物质组成的科学幻灯片。
@@ -83,7 +83,7 @@ halls:
           en: Lab talk
           zh-CN: 实验室报告
       - id: nuclear-rna-systems-model
-        image: /images/gallery/nuclear-rna-systems-model.jpg
+        image: /images/gallery/nuclear-rna-systems-model-watermarked.jpg
         format: wide
         frame: silver
         title:
@@ -109,7 +109,7 @@ halls:
       zh-CN: 这些工作模型勾勒出从广泛转录到生产性基因组使用及稳定生物学结果的路径。
     works:
       - id: two-paradoxes
-        image: /images/gallery/two-paradoxes.jpg
+        image: /images/gallery/two-paradoxes-watermarked.jpg
         format: wide
         frame: paper
         title:
@@ -125,7 +125,7 @@ halls:
           en: Lab talk
           zh-CN: 实验室报告
       - id: noise-to-order
-        image: /images/gallery/noise-to-order.jpg
+        image: /images/gallery/noise-to-order-watermarked.jpg
         format: wide
         frame: silver
         title:
@@ -141,7 +141,7 @@ halls:
           en: Lab talk
           zh-CN: 实验室报告
       - id: productive-genome-usage
-        image: /images/gallery/productive-genome-usage.jpg
+        image: /images/gallery/productive-genome-usage-watermarked.jpg
         format: wide
         frame: paper
         title:
@@ -161,7 +161,7 @@ halls:
         format: wide
         frame: amber
         title:
-          en: Biology = Dynamics in Time
+          en: Biology as Dynamics in Time
           zh-CN: 生物学即时间中的动力学
         caption:
           en: The same molecules can support different biological lives; timing is part of the mechanism.
@@ -187,8 +187,8 @@ halls:
         format: tall
         frame: midnight
         title:
-          en: Many Views, One Object
-          zh-CN: 多重视角，同一对象
+          en: Many Views One Object
+          zh-CN: 多重视角 同一对象
         caption:
           en: Each perspective can be valid within its own view, yet no single projection captures the whole object.
           zh-CN: 每个视角都可能在其观察范围内成立，但任何单一投影都无法呈现对象的全貌。
@@ -204,7 +204,7 @@ halls:
         frame: paper
         title:
           en: Discussion over Argument
-          zh-CN: 讨论，而非争胜
+          zh-CN: 讨论 而非争胜
         caption:
           en: The goal is not to establish who is right, but to discover what is right.
           zh-CN: 目标不是证明谁是对的，而是共同发现什么是对的。
@@ -235,8 +235,8 @@ halls:
         format: panorama
         frame: gold
         title:
-          en: Where Do We Come From? What Are We? Where Are We Going?
-          zh-CN: 我们从哪里来？我们是谁？我们到哪里去？
+          en: Where Do We Come From What Are We Where Are We Going
+          zh-CN: 我们从哪里来 我们是谁 我们到哪里去
         caption:
           en: A final, panoramic question about origins, identity, and direction—questions shared by art and science.
           zh-CN: 关于起源、身份与方向的全景式追问，也是艺术与科学共同面对的问题。

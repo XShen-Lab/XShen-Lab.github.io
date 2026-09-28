@@ -1,0 +1,10 @@
+{% assign menu_programs = site.data.research_programs[page.lang] | default: site.data.research_programs.en %}
+{% assign menu_url = '/research/' %}
+{% if page.lang == 'zh-CN' %}{% assign menu_url = '/zh/research/' %}{% endif %}
+<details class="research-menu" data-research-menu>
+  <summary>{% if page.lang == 'zh-CN' %}研究方向{% else %}Research{% endif %}<span aria-hidden="true">⌄</span></summary>
+  <div class="research-menu__links">
+    <a href="{{ menu_url | relative_url }}">{% if page.lang == 'zh-CN' %}研究概览{% else %}Research overview{% endif %}</a>
+    {% for program in menu_programs %}<a href="{{ menu_url | append: '#' | append: program.anchor | relative_url }}"><span>0{{ forloop.index }}</span>{{ program.title }}</a>{% endfor %}
+  </div>
+</details>

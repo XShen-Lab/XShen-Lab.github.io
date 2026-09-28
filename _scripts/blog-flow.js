@@ -1,4 +1,4 @@
-/* Manual, accessible story galleries for Blog and the homepage. */
+/* Filterable story galleries with shared automatic-tour controls. */
 window.addEventListener("DOMContentLoaded", () => {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -22,6 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
     let scrollStart = 0;
     let dragged = false;
     let suppressClick = false;
+    let tour;
 
     const format = (value) => String(value).padStart(2, "0");
     const slideLeft = (index) => visibleSlides[index].offsetLeft - track.offsetLeft;
@@ -75,6 +76,7 @@ window.addEventListener("DOMContentLoaded", () => {
       track.scrollLeft = 0;
       activeIndex = 0;
       render();
+      tour?.refresh();
 
       if (updateAddress && window.history.replaceState) {
         const suffix = filter === "all" ? `${window.location.pathname}${window.location.search}` : `#category-${filter}`;
@@ -159,5 +161,8 @@ window.addEventListener("DOMContentLoaded", () => {
       : "all";
     const matchingFilter = filters.find((button) => button.dataset.blogFilter === initialFilter);
     applyFilter(matchingFilter ? initialFilter : "all");
+    tour = window.createExhibitAutoplay(flow, () => goTo((activeIndex + 1) % visibleSlides.length), {
+      canAdvance: () => visibleSlides.length > 1,
+    });
   });
 });

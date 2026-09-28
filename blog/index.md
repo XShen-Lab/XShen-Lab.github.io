@@ -11,7 +11,7 @@ nav:
 <div class="blog-index">
   <header class="blog-index-hero" data-reveal>
     <p class="rna-section-label">Lab notes</p>
-    <h1>Ideas in motion.</h1>
+    <h1>Ideas in motion</h1>
     <p>Essays, lab updates, and perspectives on science, research, and life in the XShen Lab.</p>
   </header>
 

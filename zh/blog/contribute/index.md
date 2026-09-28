@@ -8,7 +8,7 @@ translation_url: /blog/contribute/
 <div class="contribute-page">
   <header class="contribute-hero">
     <p class="rna-section-label">编辑台</p>
-    <h1>提交实验室动态。</h1>
+    <h1>提交实验室动态</h1>
     <p>欢迎成员帮助我们记录 XShen Lab 的科学、成员与共同生活。本入口用于实验室官网内容，不是期刊论文投稿系统。</p>
   </header>
 

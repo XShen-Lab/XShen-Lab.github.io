@@ -8,7 +8,7 @@ translation_url: /zh/blog/contribute/
 <div class="contribute-page">
   <header class="contribute-hero">
     <p class="rna-section-label">Editorial desk</p>
-    <h1>Contribute a lab update.</h1>
+    <h1>Contribute a lab update</h1>
     <p>Help us document the science, people, and shared life of the XShen Lab. This route is for lab website stories—not journal manuscript submission.</p>
   </header>
 

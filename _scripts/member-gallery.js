@@ -1,4 +1,4 @@
-/* Accessible, opt-in motion for the People page galleries. */
+/* Member cards share the exhibition's five-second pacing. */
 window.addEventListener("DOMContentLoaded", () => {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -10,7 +10,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const progress = gallery.querySelector("[data-gallery-progress]");
     if (!track || !previous || !next) return;
 
-    let autoplay = null;
     let scheduled = false;
 
     const maximumScroll = () => Math.max(0, track.scrollWidth - track.clientWidth);
@@ -30,7 +29,6 @@ window.addEventListener("DOMContentLoaded", () => {
       previous.disabled = position <= 2;
       next.disabled = position >= maximum - 2;
       if (auto) auto.disabled = !hasOverflow;
-      if (!hasOverflow && autoplay) stopAutoplay();
       if (progress) {
         const ratio = maximum > 0 ? position / maximum : 1;
         progress.style.transform = `scaleX(${ratio})`;
@@ -51,48 +49,16 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     };
 
-    const stopAutoplay = (preserveButton = false) => {
-      if (autoplay) window.clearInterval(autoplay);
-      autoplay = null;
-      if (auto && !preserveButton) {
-        auto.setAttribute("aria-pressed", "false");
-        auto.textContent = auto.dataset.startLabel;
-      }
-    };
-
-    const startAutoplay = () => {
-      if (!auto || reducedMotion.matches) return;
-      stopAutoplay(true);
-      auto.setAttribute("aria-pressed", "true");
-      auto.textContent = auto.dataset.stopLabel;
-      autoplay = window.setInterval(() => {
-        if (document.hidden || gallery.matches(":hover") || gallery.contains(document.activeElement)) return;
-        if (track.scrollLeft >= maximumScroll() - 2) {
-          track.scrollTo({ left: 0, behavior: "smooth" });
-        } else {
-          scrollByCard(1);
-        }
-      }, 4600);
-    };
-
     previous.addEventListener("click", () => scrollByCard(-1));
     next.addEventListener("click", () => scrollByCard(1));
     track.addEventListener("scroll", scheduleUpdate, { passive: true });
     window.addEventListener("resize", scheduleUpdate, { passive: true });
 
-    if (auto) {
-      if (reducedMotion.matches) auto.hidden = true;
-      auto.addEventListener("click", () => {
-        if (auto.getAttribute("aria-pressed") === "true") stopAutoplay();
-        else startAutoplay();
-      });
-    }
-
-    reducedMotion.addEventListener("change", () => {
-      stopAutoplay();
-      if (auto) auto.hidden = reducedMotion.matches;
-    });
-
     update();
+    const tour = window.createExhibitAutoplay(gallery, () => {
+      if (track.scrollLeft >= maximumScroll() - 2) track.scrollTo({ left: 0, behavior: "smooth" });
+      else scrollByCard(1);
+    }, { button: auto, canAdvance: () => maximumScroll() > 2 });
+    window.addEventListener("resize", tour.refresh, { passive: true });
   });
 });

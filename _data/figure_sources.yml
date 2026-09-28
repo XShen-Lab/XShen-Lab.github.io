@@ -1,0 +1,68 @@
+# Publication status confirmed by the lab on 2026-09-28.
+# Keys refer to original assets; public derivatives append -watermarked.
+/images/research/genome-organization/nuclear-compartment-model.png:
+  status: published
+  citation: Lu et al. · Cell Research · 2021
+  title: Homotypic clustering of L1 and B1/Alu repeats compartmentalizes the 3D genome
+  url: https://doi.org/10.1038/s41422-020-00466-6
+/images/publications/2025-scfluent-seq/graphical-abstract.webp:
+  status: published
+  citation: Ma et al. · Cell · 2025 · Graphical abstract
+  title: Single-cell nascent transcription reveals sparse genome usage and plasticity
+  url: https://doi.org/10.1016/j.cell.2025.09.003
+/images/research/cell-fate-dynamics/sparse-genome-usage.webp:
+  status: published
+  citation: Ma et al. · Cell · 2025 · Fig. 2E–F
+  title: Single-cell nascent transcription reveals sparse genome usage and plasticity
+  url: https://doi.org/10.1016/j.cell.2025.09.003
+/images/research/cell-fate-dynamics/cellular-plasticity.webp:
+  status: published
+  citation: Ma et al. · Cell · 2025 · Fig. 7Diii
+  title: Single-cell nascent transcription reveals sparse genome usage and plasticity
+  url: https://doi.org/10.1016/j.cell.2025.09.003
+/images/research/cell-fate-dynamics/state-transition-trajectories.webp:
+  status: published
+  citation: Ma et al. · Cell · 2025 · Fig. 7C
+  title: Single-cell nascent transcription reveals sparse genome usage and plasticity
+  url: https://doi.org/10.1016/j.cell.2025.09.003
+/images/home/information-flow/pol-ii-subunits.webp:
+  status: illustration
+  citation: Armache et al. · J Biol Chem · 2005 · PDB 1WCM
+  title: Structures of Complete RNA Polymerase II and its Subcomplex, Rpb4/7
+  url: https://doi.org/10.1074/jbc.M413038200
+/images/research/genome-organization/nuclear-architecture-dstorm.webp:
+  status: unpublished
+/images/research/genome-organization/chromatin-rnp-nanodomains.webp:
+  status: unpublished
+/images/research/rna-chromatin-dstorm.png:
+  status: unpublished
+/images/research/rna-chromatin-dstorm-thumb.png:
+  status: unpublished
+/images/research/rna-rbp-mesh-em.png:
+  status: unpublished
+/images/research/transcriptional-surveillance/surveillance-core.png:
+  status: unpublished
+/images/research/transcriptional-surveillance/mechanism-model.png:
+  status: unpublished
+/images/research/transcriptional-surveillance/ctd-perturbation-timecourse.png:
+  status: unpublished
+/images/research/transcriptional-surveillance/zga-pol-ii-ser2p.png:
+  status: unpublished
+/images/research/transcriptional-surveillance/zga-activity-model.png:
+  status: unpublished
+/images/home/information-flow/transcription-dichotomy.webp:
+  status: unpublished
+/images/home/information-flow/information-flow-framework.webp:
+  status: unpublished
+/images/gallery/chromatin-rnp-mesh.jpg:
+  status: unpublished
+/images/gallery/rna-as-matter.jpg:
+  status: unpublished
+/images/gallery/nuclear-rna-systems-model.jpg:
+  status: unpublished
+/images/gallery/two-paradoxes.jpg:
+  status: unpublished
+/images/gallery/noise-to-order.jpg:
+  status: unpublished
+/images/gallery/productive-genome-usage.jpg:
+  status: unpublished

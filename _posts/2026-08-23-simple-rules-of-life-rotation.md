@@ -1,5 +1,5 @@
 ---
-title: "In Search of Life’s Simple Rules: An Invitation to Rotate"
+title: "In Search of Life’s Simple Rules An Invitation to Rotate"
 description: "To me, science is a serious game played by children."
 excerpt: "Life is like an elephant whose whole form we cannot see. We can often touch only a single molecule, pathway, or phenotype—but how do these parts connect?"
 author: Xiaohua

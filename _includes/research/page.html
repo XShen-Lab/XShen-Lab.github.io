@@ -69,14 +69,14 @@
                 {% for item in program.gallery %}
                   <figure>
                     <img src="{{ item.path | relative_url }}" alt="{{ item.alt | escape }}" loading="lazy" decoding="async">
-                    <figcaption><span>0{{ forloop.index }}</span>{{ item.label }}</figcaption>
+                    <figcaption><span>0{{ forloop.index }}</span><div>{{ item.label }}{% include figure-source.html image=item.path %}</div></figcaption>
                   </figure>
                 {% endfor %}
               </div>
             {% elsif program.image %}
               <figure>
                 <img src="{{ program.image.path | relative_url }}" alt="{{ program.image.alt | escape }}" loading="lazy" decoding="async">
-                <figcaption>{{ program.image.caption }}</figcaption>
+                <figcaption>{{ program.image.caption }}{% include figure-source.html image=program.image.path %}</figcaption>
               </figure>
             {% else %}
               <div class="research-program__motif" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
@@ -104,6 +104,10 @@
             {% if program.key == "selection" %}
               <a class="research-program__deep-link" href="#transcriptional-surveillance-mechanism">{{ research.surveillance.action }} <span aria-hidden="true">↓</span></a>
             {% endif %}
+            {% assign program_reference = site.data.figure_sources[program.image.path] %}
+            {% if program_reference.status == 'published' %}
+              <p class="research-program__citation"><a href="{{ program_reference.url }}">{{ program_reference.title }}</a><small>{{ program_reference.citation }}</small></p>
+            {% endif %}
           </div>
         </article>
       {% endfor %}
@@ -125,7 +129,7 @@
 
       <figure class="research-surveillance__model" data-reveal>
         <img src="{{ research.surveillance.mechanism.path | relative_url }}" alt="{{ research.surveillance.mechanism.alt | escape }}" loading="lazy" decoding="async">
-        <figcaption><span>01 · {{ research.surveillance.model_label }}</span>{{ research.surveillance.mechanism.caption }}</figcaption>
+        <figcaption><span>01 · {{ research.surveillance.model_label }}</span><div>{{ research.surveillance.mechanism.caption }}{% include figure-source.html image=research.surveillance.mechanism.path %}</div></figcaption>
       </figure>
 
       <div class="research-surveillance__evidence-head" data-reveal>
@@ -138,6 +142,7 @@
             <div><img src="{{ item.path | relative_url }}" alt="{{ item.alt | escape }}" loading="lazy" decoding="async"></div>
             <figcaption>
               <span>0{{ forloop.index | plus: 1 }}</span><strong>{{ item.title }}</strong><p>{{ item.caption }}</p>
+              {% include figure-source.html image=item.path %}
               {% if item.guide %}
                 <dl class="research-surveillance__guide">
                   {% for guide in item.guide %}<div><dt>{{ guide.label }}</dt><dd>{{ guide.value }}</dd></div>{% endfor %}
@@ -161,7 +166,7 @@
         {% for image in research.nucleus.images %}
           <figure data-reveal style="--reveal-order: {{ forloop.index }}">
             <img src="{{ image.path | relative_url }}" alt="{{ image.alt | escape }}" loading="lazy" decoding="async">
-            <figcaption><span>0{{ forloop.index }}</span>{{ image.caption }}</figcaption>
+            <figcaption><span>0{{ forloop.index }}</span><div>{{ image.caption }}{% include figure-source.html image=image.path %}</div></figcaption>
           </figure>
         {% endfor %}
       </div>

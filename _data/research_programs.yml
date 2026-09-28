@@ -3,7 +3,7 @@ en:
     operation: Organization
     operation_verb: Organizing Biological Information
     title: Genome Organization
-    question: How does genome sequence encode nuclear organization?
+    question: How does genome sequence encode nuclear organization
     description: We investigate how genome sequences, repetitive elements and their RNA products establish nuclear architecture, spatial positioning and genome regulation.
     overview: >-
       Genome sequence encodes more than genes. We investigate how repetitive elements—including L1 and B1/Alu sequences—establish principles of chromosome compartmentalization and nuclear positioning, and how their RNA products participate in chromatin organization.
@@ -22,10 +22,10 @@ en:
       - path: /images/research/genome-organization/nuclear-compartment-model.png
         alt: Conceptual model of L1-rich and B1-rich genome compartments positioned around the nuclear lamina, nucleolus and nuclear speckles
         label: Nuclear compartment model
-      - path: /images/research/genome-organization/nuclear-architecture-dstorm.webp
+      - path: /images/research/genome-organization/nuclear-architecture-dstorm-watermarked.webp
         alt: dSTORM image of a nucleus showing EU-labeled RNA in green and H3-marked chromatin in red
         label: Nuclear architecture by dSTORM
-      - path: /images/research/genome-organization/chromatin-rnp-nanodomains.webp
+      - path: /images/research/genome-organization/chromatin-rnp-nanodomains-watermarked.webp
         alt: Magnified view of spatially interwoven EU-labeled RNA and H3-marked chromatin nanodomains
         label: Chromatin–RNP nanodomains
     anchor: genome-organization
@@ -34,7 +34,7 @@ en:
     operation: Processing
     operation_verb: Processing Biological Information
     title: RNA Networks
-    question: How does RNA organize the nuclear environment?
+    question: How does RNA organize the nuclear environment
     description: We study how nascent RNA, RNA-binding proteins and processing factors form an RNA–RBP meshwork that coordinates genome function.
     overview: >-
       RNA is both a carrier of genetic information and a material organizer of nuclear function. Noncoding RNAs regulate neighboring genes and local chromatin states, while RNA-binding proteins form dynamic RNA-associated condensates that influence RNA Polymerase II recruitment, CTD phosphorylation and elongation.
@@ -45,8 +45,8 @@ en:
       - RNA-associated condensates and Pol II regulation
       - Coupling of transcription, processing and nuclear architecture
     image:
-      path: /images/research/rna-chromatin-dstorm.png
-      home_path: /images/research/rna-chromatin-dstorm-thumb.png
+      path: /images/research/rna-chromatin-dstorm-watermarked.png
+      home_path: /images/research/rna-chromatin-dstorm-thumb-watermarked.png
       alt: Super-resolution image showing interwoven EU-labeled RNA and H3-marked chromatin in a nucleus
       caption: Super-resolution view of spatially interwoven RNA and chromatin.
     anchor: rna-networks
@@ -55,7 +55,7 @@ en:
     operation: Selection
     operation_verb: Selecting Biological Information
     title: Transcriptional Surveillance
-    question: How does productive information emerge from pervasive transcription?
+    question: How does productive information emerge from pervasive transcription
     description: We examine how RNA Polymerase II, RNA processing and degradation pathways support productive elongation, RNA maturation and polymerase recycling.
     overview: >-
       Eukaryotic genomes are extensively transcribed, yet only a fraction of transcriptional events achieve productive elongation and generate mature mRNAs. We therefore treat productive transcription as an actively established state rather than a default outcome.
@@ -70,18 +70,18 @@ en:
       - Kinetic selection
       - Processive
     image:
-      path: /images/research/transcriptional-surveillance/surveillance-core.png
-      home_path: /images/research/transcriptional-surveillance/surveillance-core.png
+      path: /images/research/transcriptional-surveillance/surveillance-core-watermarked.png
+      home_path: /images/research/transcriptional-surveillance/surveillance-core-watermarked.png
       alt: Working model in which CTD- and EIF4A3-linked transcriptional surveillance couples nascent RNP assembly to RNA Polymerase II fate
       caption: A working model places transcriptional surveillance between basal priming and processive elongation.
     gallery:
-      - path: /images/research/transcriptional-surveillance/mechanism-model.png
+      - path: /images/research/transcriptional-surveillance/mechanism-model-watermarked.png
         alt: Working model comparing basal and processive transcriptional domains connected through kinetic selection and transcriptional surveillance
         label: Mechanism model
-      - path: /images/research/transcriptional-surveillance/ctd-perturbation-timecourse.png
+      - path: /images/research/transcriptional-surveillance/ctd-perturbation-timecourse-watermarked.png
         alt: EU-seq time course after acute CTD perturbation and wash-off, grouped by productive and basal transcriptional domains
         label: CTD perturbation time course
-      - path: /images/research/transcriptional-surveillance/zga-pol-ii-ser2p.png
+      - path: /images/research/transcriptional-surveillance/zga-pol-ii-ser2p-watermarked.png
         alt: EU-RNA and RNA Polymerase II Ser2P imaging across stages of zygotic genome activation
         label: ZGA imaging
     anchor: transcriptional-surveillance
@@ -90,7 +90,7 @@ en:
     operation: Stabilization
     operation_verb: Stabilizing Biological Information
     title: Cell Fate Dynamics
-    question: How do probabilistic genome activities generate stable cell identity?
+    question: How do probabilistic genome activities generate stable cell identity
     description: We measure and model how sparse, stochastic genome activity is coordinated across individual cells and stabilized across populations.
     overview: >-
       Stable identity need not require every cell to execute an identical transcriptional program. With scFLUENT-seq, developed in our laboratory, we obtain a short-pulse snapshot of nascent genome usage at single-cell resolution.
@@ -132,7 +132,7 @@ zh-CN:
     operation_en: Organization
     operation_verb: 组织生物信息
     title: 基因组组织
-    question: 基因组序列如何编码细胞核结构？
+    question: 基因组序列如何编码细胞核结构
     description: 我们研究基因组序列、重复元件及其 RNA 产物如何建立细胞核结构、空间定位与基因组调控。
     overview: >-
       基因组序列编码的不只是基因。我们研究 L1 与 B1/Alu 等重复元件如何建立染色体区室化和核内定位原则，以及这些元件的 RNA 产物如何参与染色质组织。
@@ -151,10 +151,10 @@ zh-CN:
       - path: /images/research/genome-organization/nuclear-compartment-model.png
         alt: L1 富集与 B1 富集基因组区室围绕核纤层、核仁和核斑定位的概念模型
         label: 细胞核区室模型
-      - path: /images/research/genome-organization/nuclear-architecture-dstorm.webp
+      - path: /images/research/genome-organization/nuclear-architecture-dstorm-watermarked.webp
         alt: dSTORM 成像显示细胞核内绿色 EU 标记 RNA 与红色 H3 标记染色质
         label: dSTORM 细胞核结构
-      - path: /images/research/genome-organization/chromatin-rnp-nanodomains.webp
+      - path: /images/research/genome-organization/chromatin-rnp-nanodomains-watermarked.webp
         alt: 放大视野显示 EU 标记 RNA 与 H3 标记染色质纳米结构的空间交织
         label: 染色质–RNP 纳米结构
     anchor: genome-organization
@@ -164,7 +164,7 @@ zh-CN:
     operation_en: Processing
     operation_verb: 处理生物信息
     title: RNA 网络
-    question: RNA 如何组织细胞核环境？
+    question: RNA 如何组织细胞核环境
     description: 我们研究新生 RNA、RNA 结合蛋白与加工因子如何形成协调基因组功能的 RNA–RBP 网状体系。
     overview: >-
       RNA 既是遗传信息载体，也是组织细胞核功能的物质基础。非编码 RNA 能够调控邻近基因与局部染色质状态；RNA 结合蛋白形成动态的 RNA 相关凝聚体，并影响 RNA 聚合酶 II 的募集、CTD 磷酸化与转录延伸。
@@ -175,8 +175,8 @@ zh-CN:
       - RNA 相关凝聚体与 RNA 聚合酶 II 调控
       - 转录、RNA 处理与细胞核结构的耦联
     image:
-      path: /images/research/rna-chromatin-dstorm.png
-      home_path: /images/research/rna-chromatin-dstorm-thumb.png
+      path: /images/research/rna-chromatin-dstorm-watermarked.png
+      home_path: /images/research/rna-chromatin-dstorm-thumb-watermarked.png
       alt: 超分辨成像显示细胞核内 EU 标记 RNA 与 H3 标记染色质相互交织
       caption: 超分辨视野中的 RNA 与染色质空间交织。
     anchor: rna-networks
@@ -186,7 +186,7 @@ zh-CN:
     operation_en: Selection
     operation_verb: 选择生物信息
     title: 转录监控
-    question: 有效生物信息如何从广泛转录中产生？
+    question: 有效生物信息如何从广泛转录中产生
     description: 我们研究 RNA 聚合酶 II、RNA 加工和降解通路如何支持有效延伸、RNA 成熟与聚合酶循环利用。
     overview: >-
       真核基因组发生广泛转录，但只有部分转录事件能够进入有效延伸并形成成熟 mRNA。因此，我们将有效转录视为一种需要被主动建立的状态，而非默认结果。
@@ -201,18 +201,18 @@ zh-CN:
       - 动力学选择
       - 持续延伸态
     image:
-      path: /images/research/transcriptional-surveillance/surveillance-core.png
-      home_path: /images/research/transcriptional-surveillance/surveillance-core.png
+      path: /images/research/transcriptional-surveillance/surveillance-core-watermarked.png
+      home_path: /images/research/transcriptional-surveillance/surveillance-core-watermarked.png
       alt: 工作模型展示与 CTD、EIF4A3 相关的转录监控如何将新生 RNP 组装与 RNA 聚合酶 II 命运相连接
       caption: 工作模型将转录监控置于基础启动与持续延伸之间。
     gallery:
-      - path: /images/research/transcriptional-surveillance/mechanism-model.png
+      - path: /images/research/transcriptional-surveillance/mechanism-model-watermarked.png
         alt: 基础转录结构域与持续延伸结构域通过动力学选择和转录监控相连接的工作模型
         label: 机制模型
-      - path: /images/research/transcriptional-surveillance/ctd-perturbation-timecourse.png
+      - path: /images/research/transcriptional-surveillance/ctd-perturbation-timecourse-watermarked.png
         alt: 急性 CTD 扰动与 wash-off 后按有效和基础转录结构域分组的 EU-seq 时间序列
         label: CTD 扰动时间序列
-      - path: /images/research/transcriptional-surveillance/zga-pol-ii-ser2p.png
+      - path: /images/research/transcriptional-surveillance/zga-pol-ii-ser2p-watermarked.png
         alt: 合子基因组激活不同阶段的 EU-RNA 与 RNA 聚合酶 II Ser2P 成像
         label: ZGA 成像
     anchor: transcriptional-surveillance
@@ -222,7 +222,7 @@ zh-CN:
     operation_en: Stabilization
     operation_verb: 稳定生物信息
     title: 细胞命运动力学
-    question: 概率性基因组活动如何产生稳定的细胞身份？
+    question: 概率性基因组活动如何产生稳定的细胞身份
     description: 我们测量并建模稀疏、随机的基因组活动如何在单细胞间协调，并在细胞群体中得到稳定化。
     overview: >-
       稳定的细胞身份并不要求每个细胞执行完全相同的转录程序。利用本实验室开发的 scFLUENT-seq，我们在单细胞分辨率下获得短时脉冲标记的新生基因组使用快照。

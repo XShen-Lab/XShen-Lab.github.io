@@ -20,7 +20,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const render = () => {
     track.style.transform = `translate3d(-${activeIndex * 100}%, 0, 0)`;
-    slides.forEach((slide, index) => slide.setAttribute("aria-hidden", String(index !== activeIndex)));
+    slides.forEach((slide, index) => {
+      slide.setAttribute("aria-hidden", String(index !== activeIndex));
+      slide.inert = index !== activeIndex;
+    });
     if (current) current.textContent = formatIndex(activeIndex);
     if (currentTitle) currentTitle.textContent = ` — ${slides[activeIndex].dataset.title || ""}`;
   };
@@ -63,4 +66,5 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   render();
+  window.createExhibitAutoplay(carousel, () => goTo(activeIndex + 1));
 });

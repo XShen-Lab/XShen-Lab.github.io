@@ -1,0 +1,153 @@
+/* Exhibition controls and the wardrobe threshold. */
+.exhibit-autoplay {
+  position: absolute;
+  z-index: 5;
+  right: 14px;
+  top: 14px;
+  display: grid;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid #857a6355;
+  border-radius: 50%;
+  background: #f7f3e8cc;
+  color: #252520;
+  cursor: pointer;
+  font-size: 17px !important;
+  backdrop-filter: blur(8px);
+}
+.exhibit-autoplay:hover, .exhibit-autoplay:focus-visible { background: #f7f3e8; }
+[data-blog-flow], .research-programs { position: relative; }
+.research-programs > .exhibit-autoplay { top: 18px; right: var(--gutter); }
+.gallery-viewer__stage > .exhibit-autoplay { right: 76px; top: 18px; }
+.member-gallery__auto { min-width: 42px; }
+
+.rna-hero-carousel__track { transition: transform 850ms cubic-bezier(.22, 1, .36, 1); }
+.rna-hero-carousel__slide { grid-template-rows: minmax(0, 1fr) auto; }
+.rna-hero-carousel__slide figcaption { padding: 10px 14px; align-items: start; }
+.rna-hero-carousel__slide figcaption > div { min-width: 0; }
+.figure-source { display: block; margin-top: 5px; font-family: var(--sans); font-size: .84rem !important; font-weight: 400; line-height: 1.4; letter-spacing: 0; text-transform: none; }
+.figure-source a { color: inherit; text-underline-offset: 3px; }
+.research-surveillance__evidence figcaption > .figure-source { grid-column: 2; }
+.research-program__gallery figcaption { align-items: start; letter-spacing: 0; text-transform: none; }
+.research-program__gallery figcaption > div { min-width: 0; }
+.research-program__citation { margin-top: 22px !important; padding-top: 16px; border-top: 1px solid #ffffff29; }
+.research-program__citation a { color: #e9dcc7; text-underline-offset: 3px; }
+.research-program__citation small { display: block; margin-top: 5px; }
+.research-program__content { padding: clamp(24px, 3.2vw, 46px); }
+.research-program__meta { margin-bottom: 22px; }
+.research-program__content h3 { margin-block: 14px 16px; }
+.research-program__content > p { margin-bottom: 14px; }
+.research-program__question { margin-bottom: 20px !important; }
+.research-program__focus { margin-top: 22px; padding-top: 16px; }
+.research-page > section { padding-block: clamp(52px, 6vw, 88px); }
+.research-hero { min-height: 640px; padding-block: 120px 64px; }
+.research-overview__copy { padding-top: 18px; }
+.research-surveillance__model { margin-top: 36px; }
+.research-surveillance__evidence-head { margin-top: 44px; }
+.research-technology__head { row-gap: 14px; }
+.research-technology__list { margin-top: 38px; }
+.research-technology__list li { padding: 22px 18px; }
+.research-technology__list strong { margin-top: 28px; overflow-wrap: normal; hyphens: auto; }
+.rna-scale-list { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.rna-scale-list strong { overflow-wrap: normal; hyphens: auto; }
+
+.research-menu { position: relative; margin: 0; padding: 0; border: 0; background: none; overflow: visible; }
+.research-menu > summary { display: flex; align-items: center; gap: 4px; min-height: 44px; margin: 0; padding: 13px 0 10px; color: #d6e0dd; font: inherit; font-size: var(--type-ui); line-height: 1.35; font-weight: 650; cursor: pointer; list-style: none; white-space: nowrap; }
+.research-menu > summary::before { display: none; }
+.research-menu[open] > summary, .research-menu > summary:hover { background: none; color: white; }
+.research-menu > summary::-webkit-details-marker { display: none; }
+.research-menu > summary span { font-size: .78em; }
+.research-menu[open] > summary span { transform: rotate(180deg); }
+.research-menu__links { position: absolute; z-index: 70; top: calc(100% + 22px); left: -18px; width: min(340px, 85vw); padding: 12px; border: 1px solid #d4cbb640; background: #252520; box-shadow: 0 16px 40px #0005; }
+.research-menu__links a { display: flex; gap: 12px; padding: 11px 12px; color: #f3efe5; font-size: .94rem; text-decoration: none; white-space: normal; }
+.research-menu__links a:hover, .research-menu__links a:focus-visible { background: #ffffff12; }
+.research-menu__links a span { color: #e09c81; font-family: var(--code); }
+.rna-hero-index a { padding: 9px 0; border-bottom: 1px solid var(--line); color: var(--text-soft); font-family: var(--sans); font-size: .86rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; }
+.rna-hero-index a::before { display: inline-block; width: 38px; color: var(--primary); content: "0" counter(hero-index); counter-increment: hero-index; font-family: var(--code); }
+.rna-hero-index a:hover { color: var(--primary); }
+
+.gallery-hero__inner { pointer-events: none; }
+.gallery-hero__inner a { pointer-events: auto; }
+.page-inner main .gallery-hero h1 { max-width: 11ch; font-size: clamp(3.3rem, 6vw, 5.6rem); line-height: 1.04; }
+.page-inner main .gallery-hero__intro, .gallery-hero__threshold { max-width: min(590px, 48%); }
+.gallery-hero__intro { margin-top: 26px !important; font-size: var(--type-body); line-height: 1.65; }
+.gallery-hero__threshold { flex-wrap: wrap; margin-top: 28px; font-size: .86rem; }
+.gallery-wardrobe {
+  position: absolute;
+  z-index: 1;
+  right: max(6vw, 32px);
+  bottom: 60px;
+  width: clamp(280px, 34vw, 500px);
+  height: min(66vh, 620px);
+  min-height: 380px;
+  padding: 0;
+  border: 17px ridge #654229;
+  border-top: 28px ridge #795335;
+  border-radius: 42px 42px 6px 6px;
+  background: #dce9e6;
+  box-shadow: 0 30px 80px #000b, 0 0 45px #c1dcd329;
+  perspective: 1300px;
+  cursor: pointer;
+}
+.gallery-wardrobe::before { position: absolute; content: ""; inset: -42px -24px auto; height: 28px; border: 5px ridge #906342; border-radius: 50% 50% 0 0; background: #493021; }
+.gallery-wardrobe__world { position: absolute; inset: 0; overflow: hidden; background: radial-gradient(ellipse at 50% 80%, #fff 0, #e6ece6 15%, #91b0ac 55%, #243f3c 100%); }
+.gallery-wardrobe__world::before, .gallery-wardrobe__world::after { content: ""; position: absolute; inset: 15% -15% 8%; background: repeating-conic-gradient(from 170deg at 50% 0, transparent 0deg 12deg, #183c3544 13deg 19deg, transparent 20deg 34deg); }
+.gallery-wardrobe__world::after { inset: 35% -10% -5%; transform: scaleX(-1); opacity: .65; }
+.gallery-wardrobe__leaf { position: absolute; inset-block: 0; width: 50%; border: 5px ridge #845b38; background: repeating-linear-gradient(92deg, #694328 0, #795134 3px, #573820 6px, #80593b 9px, #66442c 14px); box-shadow: inset 0 0 35px #24170e; transition: transform 1.1s cubic-bezier(.22, 1, .36, 1); backface-visibility: hidden; }
+.gallery-wardrobe__leaf::before, .gallery-wardrobe__leaf::after { content: ""; position: absolute; left: 12%; right: 12%; height: 34%; border: 8px ridge #835a39; border-radius: 42% 42% 4px 4px; box-shadow: inset 0 2px 12px #2b1b13; background: linear-gradient(110deg, #92694122, #39231177); }
+.gallery-wardrobe__leaf::before { top: 8%; }
+.gallery-wardrobe__leaf::after { bottom: 8%; border-radius: 4px; }
+.gallery-wardrobe__leaf i { position: absolute; top: 49%; width: 10px; height: 24px; border: 2px solid #e1bd73; border-radius: 50%; background: #745322; box-shadow: 2px 3px 5px #0007; }
+.gallery-wardrobe__leaf--left { left: 0; transform-origin: left; transform: rotateY(-12deg); }
+.gallery-wardrobe__leaf--right { right: 0; transform-origin: right; transform: rotateY(12deg); }
+.gallery-wardrobe__leaf--left i { right: 7%; }
+.gallery-wardrobe__leaf--right i { left: 7%; }
+.gallery-wardrobe:hover .gallery-wardrobe__leaf--left, .gallery-wardrobe:focus-visible .gallery-wardrobe__leaf--left { transform: rotateY(-28deg); }
+.gallery-wardrobe:hover .gallery-wardrobe__leaf--right, .gallery-wardrobe:focus-visible .gallery-wardrobe__leaf--right { transform: rotateY(28deg); }
+.gallery-wardrobe.is-open .gallery-wardrobe__leaf--left { transform: rotateY(-100deg); }
+.gallery-wardrobe.is-open .gallery-wardrobe__leaf--right { transform: rotateY(100deg); }
+.gallery-wardrobe__invitation { position: absolute; left: 50%; bottom: -50px; transform: translateX(-50%); color: #e8dbc2; font-family: var(--sans); font-size: .88rem; letter-spacing: .04em; white-space: nowrap; }
+.gallery-work__label { width: min(94%, 660px); }
+.gallery-work__label > p:first-child, .gallery-viewer__source { font-size: .85rem; line-height: 1.5; letter-spacing: .03em; }
+.gallery-work__label > p:last-child { font-size: 1rem; line-height: 1.6; }
+.page-inner main .gallery-viewer h2 { font-size: clamp(1.7rem, 2.7vw, 2.8rem); line-height: 1.16; }
+.gallery-viewer figcaption > p:not(.gallery-viewer__source, .gallery-viewer__count) { font-size: 1.06rem; }
+
+/* Override the generic interior-page rhythm within the research exhibition. */
+.page-research main > section, .page-research main > section:first-of-type { padding: 0; }
+.page-inner main .research-hero h1 { margin: 0 0 22px; }
+.page-inner main .research-hero__subtitle { margin: 0; color: var(--research-mint); font-size: 1rem; line-height: 1.4; }
+.page-inner main .research-hero__question { margin: 32px 0 18px; color: #f3efe5; font-size: clamp(1.3rem, 2vw, 1.7rem); line-height: 1.45; }
+.page-inner main .research-hero__intro { margin: 0; color: #dedacf; font-size: var(--type-body); line-height: 1.65; }
+.page-inner main .research-hero__sequence { margin-top: 26px; font-size: .95rem; }
+.page-inner main .research-page h2 { margin: 0 0 20px; }
+.page-inner main .research-page p { line-height: 1.65; }
+.page-inner main .research-program__content > p { color: #ddd9cf; font-size: var(--type-body); }
+.page-inner main .research-program__content > .research-program__verb { color: #cad7d6; font-size: .9rem !important; }
+.page-inner main .research-program__content > .research-program__question { color: #f3efe5; font-size: 1.26rem !important; }
+.page-inner main .research-overview__copy > p { margin: 0 0 16px; }
+.page-inner main .research-programs__head > div > p:last-child,
+.page-inner main .research-technology__head > p:last-child,
+.page-inner main .research-technology__list p { color: #ddd9cf; }
+
+@media (max-width: 1000px) {
+  .rna-scale-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .research-menu > summary { font-size: 1.12rem; line-height: 1.45; }
+  .research-menu__links { position: static; width: 100%; margin-top: 12px; box-shadow: none; }
+  .gallery-wardrobe { right: 5vw; width: 35vw; min-height: 320px; height: 54vh; }
+}
+@media (max-width: 700px) {
+  .gallery-hero { padding: 120px 0 55px; display: flex; flex-direction: column; align-items: stretch; gap: 62px; }
+  .page-inner main .gallery-hero__intro, .gallery-hero__threshold { max-width: 100%; }
+  .gallery-wardrobe { position: relative; bottom: auto; right: auto; width: min(300px, 74vw); height: 410px; min-height: 0; margin: 0 auto 34px; flex-shrink: 0; }
+  .rna-scale-list, .research-technology__list { grid-template-columns: 1fr; }
+  .research-technology__list li { min-height: 0; padding: 22px 0; }
+  .research-technology__list strong { margin-top: 12px; }
+  .research-program__visual--gallery { min-height: 600px; }
+  .research-hero { min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rna-hero-carousel__track, .gallery-wardrobe__leaf { transition: none; }
+}

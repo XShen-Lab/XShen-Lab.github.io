@@ -318,26 +318,6 @@ body {
   border-top: 1px solid var(--text);
 }
 
-.rna-hero-index span {
-  padding: 12px 0;
-  border-bottom: 1px solid var(--line);
-  color: var(--text-soft);
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.rna-hero-index span:before {
-  display: inline-block;
-  width: 38px;
-  color: var(--primary);
-  content: "0" counter(hero-index);
-  counter-increment: hero-index;
-  font-family: var(--code);
-}
-
 .rna-hero-index {
   counter-reset: hero-index;
 }
@@ -1669,10 +1649,10 @@ html[lang="zh-CN"] .page-inner main .contact-hero h1 {
    scientific prose, and display headings that stay subordinate to content. */
 
 :root {
-  --type-label: clamp(0.8rem, calc(0.77rem + 0.08vw), 0.87rem);
-  --type-ui: clamp(0.88rem, calc(0.84rem + 0.1vw), 0.96rem);
-  --type-caption: clamp(0.9rem, calc(0.86rem + 0.12vw), 1rem);
-  --type-body: clamp(1.06rem, calc(1rem + 0.16vw), 1.17rem);
+  --type-label: clamp(0.86rem, calc(0.83rem + 0.08vw), 0.94rem);
+  --type-ui: clamp(0.94rem, calc(0.9rem + 0.1vw), 1.02rem);
+  --type-caption: clamp(0.98rem, calc(0.94rem + 0.12vw), 1.08rem);
+  --type-body: clamp(1.12rem, calc(1.06rem + 0.16vw), 1.22rem);
   --type-lead: clamp(1.25rem, calc(1.12rem + 0.4vw), 1.55rem);
 }
 
@@ -1720,13 +1700,13 @@ body {
 
 .page-inner main :where(p, li, dd, address) {
   font-size: var(--type-body);
-  line-height: 1.84;
+  line-height: 1.64;
   text-align: left;
 }
 
 .rna-home :where(p, li, dd, address) {
   font-size: var(--type-body);
-  line-height: 1.84;
+  line-height: 1.64;
   text-align: left;
 }
 
@@ -2097,11 +2077,11 @@ html[lang="zh-CN"] .page-post .blog-post-body p:first-child::first-letter {
 
 /* Research */
 
-.research-hero h1,
-html[lang="zh-CN"] .research-hero h1 {
+.page-inner main .research-hero h1,
+html[lang="zh-CN"] .page-inner main .research-hero h1 {
   max-width: 1050px;
-  font-size: clamp(3.5rem, 6.2vw, 5.7rem);
-  line-height: 1.02;
+  font-size: clamp(2.6rem, 4.3vw, 4rem);
+  line-height: 1.12;
   letter-spacing: -0.032em;
 }
 
@@ -2118,23 +2098,18 @@ html[lang="zh-CN"] .research-hero h1 {
 .research-technology__head > p:last-child,
 .research-future__grid div > p {
   font-size: var(--type-body);
-  line-height: 1.84;
+  line-height: 1.65;
 }
 
-.research-overview h2,
-.research-programs__head h2,
-.research-surveillance__head h2,
-.research-nucleus h2,
-.research-technology h2,
-.research-future h2 {
-  font-size: clamp(2.5rem, 4vw, 4.05rem);
-  line-height: 1.08;
+.page-inner main .research-page h2 {
+  font-size: clamp(1.95rem, 2.7vw, 2.75rem);
+  line-height: 1.17;
   letter-spacing: -0.025em;
 }
 
-.research-program__content h3 {
-  font-size: clamp(2.15rem, 3.35vw, 3.35rem);
-  line-height: 1.1;
+.page-inner main .research-program__content h3 {
+  font-size: clamp(1.85rem, 2.5vw, 2.6rem);
+  line-height: 1.18;
   letter-spacing: -0.02em;
 }
 
@@ -2148,7 +2123,7 @@ html[lang="zh-CN"] .research-hero h1 {
 .research-surveillance__guide dd,
 .research-surveillance__evidence figcaption p {
   font-size: var(--type-body);
-  line-height: 1.82;
+  line-height: 1.65;
 }
 
 .research-program__metric strong {
