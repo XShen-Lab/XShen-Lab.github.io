@@ -1,12 +1,16 @@
 ---
 title: 马绍骞
 layout: member
+lang: zh-CN
 member_slug: ma-shaoqian
 permalink: /zh/people/ma-shaoqian/
 rich_tooltips: true
 ---
 
 ## Research Interests
+
+- 单细胞新生转录组
+- 细胞命运
 
 ## Education
 

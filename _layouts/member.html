@@ -100,6 +100,7 @@ layout: default
         {{ content }}
       </div>
     {% else %}
+      {% if member.role != "admin" or research_text != "" %}
       <section class="member-profile__module member-profile__module--research" data-reveal style="--reveal-order: 1">
         <p class="member-profile__index">01</p>
         <h2>{{ research_label }}</h2>
@@ -109,9 +110,10 @@ layout: default
           <p class="member-profile__empty">{{ research_empty }}</p>
         {% endif %}
       </section>
+      {% endif %}
 
       <section class="member-profile__module member-profile__module--education" data-reveal style="--reveal-order: 2">
-        <p class="member-profile__index">02</p>
+        <p class="member-profile__index">{% if member.role == "admin" and research_text == "" %}01{% else %}02{% endif %}</p>
         <h2>{{ education_label }}</h2>
         {% if education_text != "" %}
           {{ education_body }}

@@ -10,7 +10,7 @@ member_gallery: true
 
   <nav class="member-nav" aria-label="团队成员分类">
     <a href="#课题组负责人">课题组负责人</a>
-    <a href="#行政助理">行政助理</a>
+    <a href="#行政助理">实验室管理员（Lab Manager）</a>
     <a href="#博士后">博士后</a>
     <a href="#研究生">研究生</a>
     <a href="#本科生">本科生</a>
@@ -28,12 +28,9 @@ member_gallery: true
 
 {% include section.html %}
 
-<div class="people-section people-section--placeholder">
-  <h2 id="行政助理">行政助理</h2>
-  <div class="people-placeholder" aria-label="行政助理">
-    <span>行政助理</span>
-    <strong>信息待更新</strong>
-  </div>
+<div class="people-section">
+  <h2 id="行政助理">实验室管理员（Lab Manager）</h2>
+  {% include people/gallery.html role="admin" id="zh-lab-manager-gallery" label="实验室管理员" %}
 </div>
 
 {% include section.html %}

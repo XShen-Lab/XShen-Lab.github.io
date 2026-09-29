@@ -13,7 +13,7 @@ nav:
 
   <nav class="member-nav" aria-label="People sections">
     <a href="#principal-investigator">Principal Investigator</a>
-    <a href="#administrative-assistant">Administrative Assistant</a>
+    <a href="#administrative-assistant">Lab Manager</a>
     <a href="#post-docs">Post Docs</a>
     <a href="#graduate-students">Graduate Students</a>
     <a href="#undergraduate-students">Undergraduate Students</a>
@@ -31,12 +31,9 @@ nav:
 
 {% include section.html %}
 
-<div class="people-section people-section--placeholder">
-  <h2 id="administrative-assistant">Administrative Assistant</h2>
-  <div class="people-placeholder" aria-label="Administrative Assistant">
-    <span>Administrative Assistant</span>
-    <strong>Information forthcoming</strong>
-  </div>
+<div class="people-section">
+  <h2 id="administrative-assistant">Lab Manager</h2>
+  {% include people/gallery.html role="admin" id="lab-manager-gallery" label="Lab Manager" %}
 </div>
 
 {% include section.html %}

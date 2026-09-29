@@ -20,7 +20,7 @@ undergrad:
 
 admin:
   icon: fa-solid fa-user-tie
-  description: Administrative Assistant
+  description: Lab Manager
 
 alumni:
   icon: fa-solid fa-user-group

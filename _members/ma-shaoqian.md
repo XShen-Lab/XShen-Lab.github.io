@@ -1,7 +1,14 @@
 ---
 name: Ma, Shaoqian 马绍骞
 role: postdoc
-image: images/fallback.svg
+image: images/members/mashaoqian.jpg
+lang: en
+card_interests:
+  - Single-cell nascent transcriptomics
+  - Cell fate
+card_interests_zh:
+  - 单细胞新生转录组
+  - 细胞命运
 description: Postdoctoral Fellow
 description_zh: 博士后
 affiliation: School of Basic Medicine, Tsinghua University
@@ -14,6 +21,9 @@ links:
 Postdoctoral Fellow in the XShen Lab.
 
 ## Research Interests
+
+- Single-cell nascent transcriptomics
+- Cell fate
 
 ## Education
 
